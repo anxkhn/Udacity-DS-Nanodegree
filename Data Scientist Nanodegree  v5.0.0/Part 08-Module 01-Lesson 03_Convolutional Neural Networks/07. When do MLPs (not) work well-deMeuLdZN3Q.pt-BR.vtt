@@ -1,0 +1,213 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:02.100
+Agora que treinamos
+o modelo,
+
+00:00:02.133 --> 00:00:06.234
+podemos carregar os pesos
+com maior precisão de validação.
+
+00:00:06.267 --> 00:00:09.501
+Ao testarmos o modelo
+nas imagens do conjunto de teste,
+
+00:00:09.534 --> 00:00:14.133
+vimos que o modelo
+tem mais de 98% de precisão.
+
+00:00:14.167 --> 00:00:15.467
+Isso não é ruim.
+
+00:00:15.501 --> 00:00:19.167
+As MLPs são uma boa solução.
+
+00:00:19.200 --> 00:00:22.868
+Outras soluções
+para classificar o MNIST
+
+00:00:22.901 --> 00:00:25.100
+e os erros no conjunto
+de teste
+
+00:00:25.133 --> 00:00:28.534
+podem ser exploradas
+no link abaixo.
+
+00:00:28.567 --> 00:00:30.667
+Você verá que os melhores
+algoritmos,
+
+00:00:30.701 --> 00:00:33.467
+ou os que possuem
+menos erros de teste
+
+00:00:33.501 --> 00:00:37.567
+são as abordagens que usam
+as redes neurais convolucionais.
+
+00:00:38.234 --> 00:00:41.767
+Tipicamente no domínio
+de muitos problemas
+
+00:00:41.801 --> 00:00:46.334
+CNNs e MLPs não mostram
+resultados comparáveis.
+
+00:00:46.367 --> 00:00:48.634
+O banco de dados MNIST
+é especial,
+
+00:00:48.667 --> 00:00:51.634
+pois é limpo
+e pré-processado.
+
+00:00:51.667 --> 00:00:54.634
+todas as imagens de dígitos
+possuem o mesmo tamanho
+
+00:00:54.667 --> 00:00:58.601
+e estão centralizadas
+em uma grade de 28x28.
+
+00:00:58.634 --> 00:01:02.367
+Se em vez de termos
+que classificar o dígito
+
+00:01:02.400 --> 00:01:04.467
+em imagens nítidas,
+
+00:01:04.501 --> 00:01:06.167
+tivéssemos que usar imagens
+
+00:01:06.200 --> 00:01:07.901
+nas quais os dígitos
+aparecessem
+
+00:01:07.934 --> 00:01:09.367
+em qualquer lugar
+
+00:01:09.400 --> 00:01:12.567
+ou de qualquer tamanho,
+
+00:01:12.601 --> 00:01:15.534
+essa seria uma tarefa
+bem mais difícil.
+
+00:01:15.567 --> 00:01:19.133
+Para imagens reais
+que não são nítidas,
+
+00:01:19.167 --> 00:01:23.367
+as CNNs funcionariam
+melhor do que as MLPs.
+
+00:01:23.400 --> 00:01:26.300
+Caso este seja o caso,
+
+00:01:26.334 --> 00:01:29.801
+em vez de fornecer
+uma imagem para uma MLP,
+
+00:01:29.834 --> 00:01:33.234
+você deve convertê-la
+em um vetor.
+
+00:01:33.267 --> 00:01:36.367
+A MLP trata
+a imagem convertida
+
+00:01:36.400 --> 00:01:40.501
+como um vetor numérico
+sem estrutura especial.
+
+00:01:40.534 --> 00:01:44.300
+Ele não sabe que os números
+estavam originariamente
+
+00:01:44.334 --> 00:01:47.334
+organizados espacialmente
+em uma grade.
+
+00:01:47.367 --> 00:01:49.434
+As CNNs, por outro lado,
+
+00:01:49.467 --> 00:01:54.033
+foram construídas para trabalhar
+ou elucidar padrões
+
+00:01:54.067 --> 00:01:55.901
+em dados multidimensionais.
+
+00:01:56.534 --> 00:01:58.000
+Diferente das MLPs,
+
+00:01:58.033 --> 00:02:01.868
+CNNs entendem o fato
+de que os pixels da imagem
+
+00:02:01.901 --> 00:02:04.100
+que estão próximos
+um do outro
+
+00:02:04.133 --> 00:02:05.968
+estão mais relacionados
+
+00:02:06.000 --> 00:02:08.067
+do que os que estão longe.
+
+00:02:08.801 --> 00:02:14.133
+Mas MLPs e CNNs
+possuem coisas em comum.
+
+00:02:14.167 --> 00:02:17.801
+Por exemplo, os modelos
+perceptrons multicamadas
+
+00:02:17.834 --> 00:02:20.133
+são compostos pelo
+empilhamento de camadas,
+
+00:02:20.167 --> 00:02:23.167
+assim como as redes
+neurais convolucionais.
+
+00:02:23.200 --> 00:02:25.167
+Nós também
+precisamos apresentar
+
+00:02:25.200 --> 00:02:26.801
+as novas funções de perda,
+
+00:02:26.834 --> 00:02:28.968
+e você usará os mesmos
+otimizadores
+
+00:02:29.000 --> 00:02:31.834
+para minimizar a função
+de perda escolhida.
+
+00:02:31.868 --> 00:02:36.367
+CNNs são diferentes das MLPs
+nos tipos de camadas ocultas
+
+00:02:36.400 --> 00:02:38.701
+que podem ser incluídas
+no modelo.
+
+00:02:38.734 --> 00:02:40.934
+Nos próximos vídeos
+
+00:02:40.968 --> 00:02:43.133
+apresentaremos
+os tipos de camadas
+
+00:02:43.167 --> 00:02:45.934
+e forneceremos alguma intuição
+sobre os papéis delas
+
+00:02:45.968 --> 00:02:47.534
+na rede profunda.
+

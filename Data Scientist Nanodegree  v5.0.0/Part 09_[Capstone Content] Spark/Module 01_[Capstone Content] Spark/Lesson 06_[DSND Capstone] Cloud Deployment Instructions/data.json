@@ -1,0 +1,1108 @@
+{
+  "data": {
+    "lesson": {
+      "id": 478325,
+      "key": "ddbf749e-6536-4081-bf9f-9c20e59aee8c",
+      "title": "[DSND Capstone] Cloud Deployment Instructions",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "AWS Best Practices Guide",
+            "uri": "https://video.udacity-data.com/topher/2020/December/5fd9acd6_aws-best-practices-guide/aws-best-practices-guide.pdf"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "08004df4-bae6-416e-946b-b5ffae01bdb1",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 50400,
+        "semantic_type": "Project",
+        "title": "Capstone Project",
+        "description": "### Before you submit:\n\nYour project needs to **Meet Specifications** in all categories of the [Project Rubric](https://review.udacity.com/#!/rubrics/2345/view) in order to pass. So before you submit, do a self-assessment of your work using the rubric, and you'll probably find some revisions you want to make first. \n\nIf you submit a web application, you only need to submit a link to your Github repository. In this case, since you won't be writing up a separate report, you need to make sure to address the Project Definition, Analysis, and Conclusion sections of the rubric in your README file, or in your Jupyter Notebook if you provide one.\n\nIf you submit a blog post, you will need to submit two links - one for your GitHub repo and one for your blog post. The audience for your blog post should be that of a **technical audience member**. Your GitHub repo should contain your code (if possible), dataset (unless you chose the Spark project option), and README.md files. \n\nIt can take us up to a week to grade the project, but in most cases it is much faster. You will get an email once your submission has been reviewed. In the meantime, you should feel free to proceed with your learning journey by continuing on to the next module in the program.",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "2345",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 796768,
+          "key": "0e48cf84-e77f-4ce0-854f-232ba5f8fa06",
+          "title": "Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0e48cf84-e77f-4ce0-854f-232ba5f8fa06",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 796788,
+              "key": "5feac0e0-96f1-49e9-bd96-623ca28e9f79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cloud Deployment Instructions for DSND Capstone Project\nThis course taught you the basics of Spark to prepare you for *Sparkify*, one of the [Capstone Project](https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059) options available in the Data Scientist Nanodegree. Here's the link to the [Sparkify Project Overview page](https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059/modules/80c955ce-72f2-403a-9bf5-cc58636dab9d/lessons/d6285247-6bc0-4783-b118-6f41981b9469/concepts/47d96c80-82da-4640-9fff-54415f2a21df).\n\nThis deployment is an optional part of the capstone project. Here, you'll find instructions to do this with Amazon Web Services (AWS) or IBM Cloud. If you choose to use AWS, you can use the full 12GB dataset hosted on our public S3 bucket, and expect to use about $30 dollars to run this cluster while you build your project for a week. If you choose to use IBM Cloud, you'll use a medium-sized 23 MB dataset we provide for you to download here. You will still deploy your application on a Spark cluster, but this will not cost you any money.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 796787,
+              "key": "94c829cf-3d31-4e6a-ae7a-0f4d4be52f45",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c136c19_amazon-emr/amazon-emr.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/94c829cf-3d31-4e6a-ae7a-0f4d4be52f45",
+              "caption": "",
+              "alt": "",
+              "width": 1015,
+              "height": 231,
+              "instructor_notes": null
+            },
+            {
+              "id": 797631,
+              "key": "36b270ec-047a-4056-b439-59c1e72d58da",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5695_watson-studio/watson-studio.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/36b270ec-047a-4056-b439-59c1e72d58da",
+              "caption": "",
+              "alt": "",
+              "width": 817,
+              "height": 324,
+              "instructor_notes": null
+            },
+            {
+              "id": 796770,
+              "key": "801cd8fe-91b9-47a8-af67-e7c6e125cac2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We will provide instructions for using [Amazon EMR](https://aws.amazon.com/emr/) (Amazon Elastic MapReduce) and [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio) to set up our Spark cluster and notebook. Both are great options for data scientists who want to spin up Spark clusters for projects without going through the complicated steps of setting them up manually, which would require some data engineering. With these tools, you'll be able to quickly create a Jupyter notebook, attach it to a Spark cluster, and open the notebook directly from the console.\n\nGo to the \"Create an account\" page either for the AWS or the IBM option.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 796779,
+          "key": "28c36c65-466e-4b4e-af99-1fc86f90e02f",
+          "title": "[AWS] Launch EMR Cluster and Notebook",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28c36c65-466e-4b4e-af99-1fc86f90e02f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 796780,
+              "key": "8c718d43-a5e0-4637-92f3-82f1600fd108",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Launch EMR Cluster and Notebook\nFollow the instructions below to launch your EMR cluster and notebook.\n\n* Open a regular AWS account (if you don't already have one) following the instructions via the [Amazon Web Service Help Center](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)\n* Go to the [Amazon EMR Console](https://console.aws.amazon.com/elasticmapreduce/)\n* Select \"Clusters\" in the menu on the left, and click the \"Create cluster\" button.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797285,
+              "key": "902766e6-58d1-4f65-8cbf-e529fa75ac87",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a2242_create-cluster-button/create-cluster-button.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/902766e6-58d1-4f65-8cbf-e529fa75ac87",
+              "caption": "",
+              "alt": "",
+              "width": 480,
+              "height": 182,
+              "instructor_notes": null
+            },
+            {
+              "id": 796790,
+              "key": "eeac6119-fb6e-4604-ae6b-7b67aff869ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 1: Configure your cluster with the following settings:\n- Release: `emr-5.20.0` or later\n- Applications: `Spark`: Spark 2.4.0 on Hadoop 2.8.5 YARN with Ganglia 3.7.2 and Zeppelin 0.8.0\n- Instance type: `m3.xlarge`\n- Number of instance: `3`\n- EC2 key pair: `Proceed without an EC2 key pair` or feel free to use one if you'd like\n\nYou can keep the remaining default setting and click \"Create cluster\" on the bottom right.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797305,
+              "key": "eb68fa5a-55b2-48aa-8479-1c6fa8caeb2e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a2f1a_configure-cluster/configure-cluster.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eb68fa5a-55b2-48aa-8479-1c6fa8caeb2e",
+              "caption": "",
+              "alt": "",
+              "width": 660,
+              "height": 833,
+              "instructor_notes": null
+            },
+            {
+              "id": 797287,
+              "key": "54a29fac-c72f-496a-a5b7-ae3864fd4aae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 2: Wait for Cluster  \"Waiting\" Status\nOnce you create the cluster, you'll see a status next to your cluster name that says *Starting*. Wait a short time for this status to change to *Waiting* before moving on to the next step.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797288,
+              "key": "ff714288-d912-4e73-a08d-2d4bd31522be",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a25e5_cluster-waiting/cluster-waiting.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ff714288-d912-4e73-a08d-2d4bd31522be",
+              "caption": "",
+              "alt": "",
+              "width": 1111,
+              "height": 312,
+              "instructor_notes": null
+            },
+            {
+              "id": 797289,
+              "key": "4c02305a-8da3-4702-a793-a22d9d3a2928",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 3: Create Notebook\nNow that you launched your cluster successfully, let's create a notebook to run Spark on that cluster.\n\nSelect \"Notebooks\" in the menu on the left, and click the \"Create notebook\" button.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797290,
+              "key": "2566a661-6791-40d3-80c2-492a30980976",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a265e_create-notebook-button/create-notebook-button.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2566a661-6791-40d3-80c2-492a30980976",
+              "caption": "",
+              "alt": "",
+              "width": 585,
+              "height": 214,
+              "instructor_notes": null
+            },
+            {
+              "id": 797292,
+              "key": "34f62ac9-c4be-4161-88c1-3c2375a4022e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 4: Configure your notebook\n- Enter a name for your notebook\n- Select \"Choose an existing cluster\" and choose the cluster you just created\n- Use the default setting for \"AWS service role\" - this should be \"EMR_Notebooks_DefaultRole\" or \"Create default role\" if you haven't done this before.\n\nYou can keep the remaining default settings and click \"Create notebook\" on the bottom right.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797291,
+              "key": "8e7c015c-2526-421c-b281-e5b1949a72ef",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a26f1_configure-notebook/configure-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8e7c015c-2526-421c-b281-e5b1949a72ef",
+              "caption": "",
+              "alt": "",
+              "width": 952,
+              "height": 723,
+              "instructor_notes": null
+            },
+            {
+              "id": 796792,
+              "key": "df772552-aac8-4af5-aaaa-1019c958f4d5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 5: Wait for Notebook  \"Ready\" Status, Then Open\nOnce you create an EMR notebook, you'll need to wait a short time before the notebook status changes from *Starting* or *Pending* to *Ready.* Once your notebook status is *Ready*, click the \"Open\" button to open the notebook.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797293,
+              "key": "5658f263-6c86-417b-b402-41c0b64acf8f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a28e2_notebook-ready/notebook-ready.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5658f263-6c86-417b-b402-41c0b64acf8f",
+              "caption": "",
+              "alt": "",
+              "width": 786,
+              "height": 219,
+              "instructor_notes": null
+            },
+            {
+              "id": 797310,
+              "key": "c295457e-9388-42d4-ae4e-d977e051dc89",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Start Coding!\nNow you can run Spark code for your project in this notebook, which EMR will run on your cluster. In the next page, you'll find starter code to create a spark session and read in the full 12GB dataset for the DSND Capstone project.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797309,
+              "key": "fe065e77-665b-46e1-9da0-84f627def11f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a30d3_empty-notebook/empty-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fe065e77-665b-46e1-9da0-84f627def11f",
+              "caption": "",
+              "alt": "",
+              "width": 1195,
+              "height": 234,
+              "instructor_notes": null
+            },
+            {
+              "id": 797312,
+              "key": "9ff7c443-df62-483d-a75f-b008e09f77ee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Download Notebook\nWhen you are finished with your notebook, click `File` > `Download as` > `Notebook` to download it to your computer. On your local computer, create a git repository including this notebook and a README file. Submit the URL to your github repository to submit this project. See more details in the [Sparkify Project Overview page](https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059/modules/80c955ce-72f2-403a-9bf5-cc58636dab9d/lessons/d6285247-6bc0-4783-b118-6f41981b9469/concepts/47d96c80-82da-4640-9fff-54415f2a21df).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797313,
+              "key": "233943cf-d1ea-4b7e-88be-9577060f7597",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1a3858_download-notebook/download-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/233943cf-d1ea-4b7e-88be-9577060f7597",
+              "caption": "",
+              "alt": "",
+              "width": 869,
+              "height": 265,
+              "instructor_notes": null
+            },
+            {
+              "id": 797632,
+              "key": "df97c639-b520-4bbb-89f9-24fc5b0e2c26",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For more information on EMR notebooks, click [here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 796783,
+              "key": "8eb6f61f-e2d9-4b94-b01a-c3b77ff0190c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pricing - Be Careful!\n\nFrom this point on, AWS will charge you for running your EMR cluster. See details on this and how to manage your resources to avoid unexpected costs in the \"Managing Resources\" section at the end of this lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 797274,
+          "key": "b24a7cbd-652f-4ac9-9b9b-66f2e1b82a81",
+          "title": "[AWS] Starter Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b24a7cbd-652f-4ac9-9b9b-66f2e1b82a81",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 797275,
+              "key": "1f9d724a-4fad-4dff-8633-f01dfdf34edf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Starter Code\nBelow, you'll find starter code to create a spark session and read in the full 12 GB dataset for the DSND Capstone Project, Sparkify. You can use the following link to access the public dataset:\n\n### Full Sparkify Dataset: `s3n://udacity-dsnd/sparkify/sparkify_event_data.json`\n\nYou can also use the link below to access the mini 123MB dataset:\n\n##### Mini Sparkify Dataset: `s3n://udacity-dsnd/sparkify/mini_sparkify_event_data.json`\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 817290,
+              "key": "b9794e4b-f823-4412-a1cb-21c9e388cd42",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/February/5c560884_spark-notebook-1/spark-notebook-1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b9794e4b-f823-4412-a1cb-21c9e388cd42",
+              "caption": "",
+              "alt": "",
+              "width": 1764,
+              "height": 615,
+              "instructor_notes": null
+            },
+            {
+              "id": 797311,
+              "key": "40c33be4-9cad-4d84-b909-90d1a8d766e1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "And here is the code repeated below, which you can copy from and paste easily into your notebook.\n```python\n# Starter code\nfrom pyspark.sql import SparkSession\n\n# Create spark session\nspark = SparkSession \\\n    .builder \\\n    .appName(\"Sparkify\") \\\n    .getOrCreate()\n\n# Read in full sparkify dataset\nevent_data = \"s3n://udacity-dsnd/sparkify/sparkify_event_data.json\"\ndf = spark.read.json(event_data)\ndf.head()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797277,
+              "key": "3cbf4cc5-b078-4a5e-b5e9-ae470b212a4a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "When you run the last cell, you'll see a box appear that says \"Spark Job Progress.\" Click on the arrow in that box to view your cluster's progress as it reads the full 12GB dataset! (Screenshot of this is shown below.)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 817291,
+              "key": "9abc051c-a7d8-49e9-a80d-0089171044e2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/February/5c56089e_spark-notebook-2/spark-notebook-2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9abc051c-a7d8-49e9-a80d-0089171044e2",
+              "caption": "",
+              "alt": "",
+              "width": 1525,
+              "height": 1043,
+              "instructor_notes": null
+            },
+            {
+              "id": 817292,
+              "key": "b03b9e45-24a6-4344-80f9-a4b7464ee21b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/February/5c5608ae_spark-notebook-3/spark-notebook-3.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b03b9e45-24a6-4344-80f9-a4b7464ee21b",
+              "caption": "",
+              "alt": "",
+              "width": 1510,
+              "height": 912,
+              "instructor_notes": null
+            },
+            {
+              "id": 797279,
+              "key": "9f11b2cf-3d35-42af-a5bc-c185764dc56c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Now, you're ready to start analyzing this data with Spark! Remember, you can still use the mini dataset to work faster while you explore your data and develop your model: \n#### Mini Sparkify Dataset: `s3n://udacity-dsnd/sparkify/mini_sparkify_event_data.json`",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797281,
+              "key": "58f9e5ac-ab94-4485-94b3-b4e972a82e29",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### ATTENTION: As mentioned in the previous page, remember to terminate your cluster and delete your resources when you're finished working on your project to avoid unexpected costs. See the next page for details.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1027937,
+          "key": "a55de3a4-1b3c-4c27-a453-7dbf7159568f",
+          "title": "Monitor your AWS Costs and Credits",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a55de3a4-1b3c-4c27-a453-7dbf7159568f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1027960,
+              "key": "ef2790e2-be1e-40b1-bca3-b55d273c95e0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Monitoring your AWS Costs and Credits\nAll AWS services are a pay-as-you-go service, so we urge our students to closely monitor their usage costs and if they have adequate credits available to complete their project/task.  Follow the instructions below to do that:\n\n### Step 1. Log into your [AWS account](https://console.aws.amazon.com/).\n\n### Step 2.  Examine your costs \nGo to https://console.aws.amazon.com/billing/\n\nYou should see the following billing dashboard where it will show your costs.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1027965,
+              "key": "e91352f8-4800-465e-bfb6-02939fcaec79",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/May/5ec71862_screen-shot-2020-05-21-at-5.07.48-pm/screen-shot-2020-05-21-at-5.07.48-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e91352f8-4800-465e-bfb6-02939fcaec79",
+              "caption": "Snapshot: [AWS Billing Dashboard](https://console.aws.amazon.com/billing/home#/)",
+              "alt": "",
+              "width": 700,
+              "height": 1366,
+              "instructor_notes": null
+            },
+            {
+              "id": 1103097,
+              "key": "0d7bfb12-e471-40da-a0fa-ba95da6e5965",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If your account has been created within one year from the current date, your [AWS Billing Dashboard](https://console.aws.amazon.com/billing/home#/) will also show the resource usage statistics for the free tier services. See the snapshot below: ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1103098,
+              "key": "3166f33e-f5c1-4ca8-8986-c60e65dda28e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/November/5fbb70d9_screenshot-2020-11-23-at-12.54.53-pm/screenshot-2020-11-23-at-12.54.53-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3166f33e-f5c1-4ca8-8986-c60e65dda28e",
+              "caption": "Snapshot: Resource usage statistics for top-free tier services.",
+              "alt": "",
+              "width": 500,
+              "height": 1056,
+              "instructor_notes": null
+            },
+            {
+              "id": 1027966,
+              "key": "10b55d99-ee91-4201-845d-84aae7b96772",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 3 (optional). Check the value of your credits. \nClick on the \"Credits\" from the left navigation menu, and the following screen will show your available credits.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1027967,
+              "key": "e7c50a8b-c962-4666-b6a4-8404ba736bff",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/May/5ec71a62_screen-shot-2020-05-21-at-5.13.56-pm/screen-shot-2020-05-21-at-5.13.56-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e7c50a8b-c962-4666-b6a4-8404ba736bff",
+              "caption": "Snapshot: Track credit (promo-code) balance",
+              "alt": "",
+              "width": 1000,
+              "height": 1092,
+              "instructor_notes": null
+            },
+            {
+              "id": 1027968,
+              "key": "ec0bafd3-5b49-474a-9bc8-c6a8d504b67e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<em>**Note:  For student learning, Udacity has partnered with Amazon to provide nominal credits for the student to complete their course work.  Please understand that these credits are limited and available for you to use judiciously. You are responsible for any additional costs beyond the given credits.**</em>\n\n## When will I be charged?\nThere are no tools to limit usage to what’s covered by the AWS Free Tier. This means that you are responsible for the services that you launch. You will be charged standard [pay-as-you-go service rates](https://aws.amazon.com/pricing/) for using AWS resources that exceed the AWS Free Tier limits and the credits provided by Udacity.\n\n\n## <font color=\"red\"> Shut Down your Resources, if not in use </font>\nThe Free Tier benefits and the credit amount provided by the Udacity Support team will be sufficient for you to complete your Nanodegree program.\n\n>####  <span>Note: <font color=\"red\">We recommend you shut down every resource (e.g., EC2 instances, or any other hosted service) on the AWS cloud immediately after the usage, otherwise you will run out of your free promo credits. </font></span>\n\nRemember, even if you are in the middle of the project and need to step away, PLEASE SHUT DOWN YOUR RESOURCES. You can re-instantiate later.\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 797602,
+          "key": "41e6d6eb-2ed9-44bb-b64b-8e9cf910bbf3",
+          "title": "[IBM] Create an IBM Watson account and Watson project",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "41e6d6eb-2ed9-44bb-b64b-8e9cf910bbf3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 797603,
+              "key": "641f9247-bb2b-45a5-837f-78828e1a8166",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Create an IBM Cloud Account and Watson Project\nCreate an IBM Cloud account to use the IBM Watson Studio service.\n\nVisit [cloud.ibm.com](https://cloud.ibm.com/) and click on the \"Create an IBM account\" button.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797605,
+              "key": "a1705ba4-adea-4f55-8ec6-39694bceed17",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d4e98_create-ibm-account/create-ibm-account.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a1705ba4-adea-4f55-8ec6-39694bceed17",
+              "caption": "",
+              "alt": "",
+              "width": 682,
+              "height": 367,
+              "instructor_notes": null
+            },
+            {
+              "id": 797604,
+              "key": "f677fcd7-8933-4785-abd0-e2d3565738c2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you have an IBM Cloud account already, sign in.\n\nIf you do not have an account, sign up. \n \nOnce you finish signing up, wait a few minutes to receive your IBM Cloud account confirmation email. Then return to [cloud.ibm.com](https://cloud.ibm.com/)  and sign in.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797606,
+              "key": "7cb965c8-9813-461b-8d54-a59705a904a8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Register for IBM Watson Studio\nClick on the menu icon on the top left and select \"Watson.\" Or just click [here](https://cloud.ibm.com/developer/watson/dashboard). Scroll down and select \"Try Watson Studio.\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797607,
+              "key": "d469b383-e14e-4060-aab9-946a445d40a9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d507f_try-watson-studio/try-watson-studio.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d469b383-e14e-4060-aab9-946a445d40a9",
+              "caption": "",
+              "alt": "",
+              "width": 667,
+              "height": 410,
+              "instructor_notes": null
+            },
+            {
+              "id": 797608,
+              "key": "be49ec6f-3c65-455d-ac2c-6694752c9eba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Next, select \"Create Project.\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797610,
+              "key": "f41d0014-278d-45fa-85cf-376044b532af",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d50de_create-project/create-project.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f41d0014-278d-45fa-85cf-376044b532af",
+              "caption": "",
+              "alt": "",
+              "width": 785,
+              "height": 319,
+              "instructor_notes": null
+            },
+            {
+              "id": 797609,
+              "key": "6a125430-a597-4971-aea5-9937b5b8c70c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Hover over \"Data Science\" and click \"Create Project\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797611,
+              "key": "e156badf-6e26-45d5-91df-d2f8fbebc698",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d50eb_project-data-science/project-data-science.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e156badf-6e26-45d5-91df-d2f8fbebc698",
+              "caption": "",
+              "alt": "",
+              "width": 1066,
+              "height": 624,
+              "instructor_notes": null
+            },
+            {
+              "id": 797612,
+              "key": "212e2f04-35e0-460f-b639-1787a195e80b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Enter a name for your project and click \"Create\" on the bottom right.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797613,
+              "key": "33bfb0b9-f442-44f8-9c44-4b6d93ed7739",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d515d_new-project/new-project.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/33bfb0b9-f442-44f8-9c44-4b6d93ed7739",
+              "caption": "",
+              "alt": "",
+              "width": 1055,
+              "height": 449,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 797614,
+          "key": "710e47dc-e695-45f3-9f34-e6e4f1db7813",
+          "title": "[IBM] Launch IBM Cluster and Notebook",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "710e47dc-e695-45f3-9f34-e6e4f1db7813",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 797616,
+              "key": "b53f514a-a29d-4d0c-bdad-af1fec8da221",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Launch IBM Cluster and Notebook\nClick \"Add to project\" on the top and select \"Notebook\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797615,
+              "key": "9244c0ce-3790-46b8-b1a6-906c0b817eff",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d51e1_add-notebook/add-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9244c0ce-3790-46b8-b1a6-906c0b817eff",
+              "caption": "",
+              "alt": "",
+              "width": 1179,
+              "height": 386,
+              "instructor_notes": null
+            },
+            {
+              "id": 797618,
+              "key": "45b7ecb5-ff0c-4d5a-a1ba-f2cadf14864e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Enter a name for your notebook and select \"Default Spark Python 3.5 XS\" under runtime and click \"Create Notebook\" on the bottom right.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797617,
+              "key": "d8826e74-9846-4f32-ba5c-6c3140be967e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d525c_new-notebook/new-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d8826e74-9846-4f32-ba5c-6c3140be967e",
+              "caption": "",
+              "alt": "",
+              "width": 1404,
+              "height": 517,
+              "instructor_notes": null
+            },
+            {
+              "id": 797619,
+              "key": "f4d4aac2-e5fc-465a-8ba6-d9c76c6e79bd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Start Coding!\nNow you can run Spark code for your project in this notebook, which IBM will run on your cluster. In the next page, you'll find starter code to create a Spark session and read your uploaded dataset for the DSND Capstone project.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797620,
+              "key": "5ab12699-0dd7-4a76-a485-709bfc98cea8",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5306_ibm-notebook/ibm-notebook.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5ab12699-0dd7-4a76-a485-709bfc98cea8",
+              "caption": "",
+              "alt": "",
+              "width": 1485,
+              "height": 343,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 797621,
+          "key": "373ea389-9540-42dc-916d-fcaa63359d53",
+          "title": "[IBM] Starter Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "373ea389-9540-42dc-916d-fcaa63359d53",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Medium Sparkify Event Data",
+                "uri": "https://video.udacity-data.com/topher/2018/December/5c1d6681_medium-sparkify-event-data/medium-sparkify-event-data.json"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 797622,
+              "key": "3363065f-b104-4e60-9508-3c5119895e01",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Starter Code\nBelow, you'll generate starter code to create a Spark session and read in the dataset for the DSND Capstone Project, Sparkify. First, download the dataset \"medium_sparkify_event_data.json\" attached at the bottom of this page in the classroom. Then, click on the Data icon on the top right of your IBM notebook and upload your file.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797623,
+              "key": "2efcec80-6b2d-4282-b8c4-e38cef32c3f9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5346_ibm-files/ibm-files.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2efcec80-6b2d-4282-b8c4-e38cef32c3f9",
+              "caption": "",
+              "alt": "",
+              "width": 672,
+              "height": 364,
+              "instructor_notes": null
+            },
+            {
+              "id": 797626,
+              "key": "b642c018-e953-4b3b-b283-88f3c4329ac8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Select the arrow next to \"Insert to code\" and select \"Insert SparkSession DataFrame.\"  This will generate code in the first cell of your notebook.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797624,
+              "key": "a362c3e7-793f-49e5-9e7c-cd79a6d95634",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5470_insert-spark-session-dataframe/insert-spark-session-dataframe.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a362c3e7-793f-49e5-9e7c-cd79a6d95634",
+              "caption": "",
+              "alt": "",
+              "width": 619,
+              "height": 532,
+              "instructor_notes": null
+            },
+            {
+              "id": 797627,
+              "key": "07d19f50-3983-4122-85d2-e7c9321acc36",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Comment out the last two lines of the code generated, and run this cell to read in your data!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797625,
+              "key": "a9482b3c-534d-4837-b852-fa5a4357eb1b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5481_run-starter-cell/run-starter-cell.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a9482b3c-534d-4837-b852-fa5a4357eb1b",
+              "caption": "",
+              "alt": "",
+              "width": 1140,
+              "height": 629,
+              "instructor_notes": null
+            },
+            {
+              "id": 797629,
+              "key": "c5b29cf2-443b-4ecb-a09d-a5fc196b8df8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You're ready to get started building your model on IBM Cloud!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797628,
+              "key": "15186bb8-5cf5-462f-90f3-a0afcc607dc5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d54ef_starter-cell-output/starter-cell-output.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/15186bb8-5cf5-462f-90f3-a0afcc607dc5",
+              "caption": "",
+              "alt": "",
+              "width": 1485,
+              "height": 892,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 797633,
+          "key": "f11bf426-57f9-4b66-a9c5-10dee0156cea",
+          "title": "[IBM] Avoid Paying Unexpected Costs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f11bf426-57f9-4b66-a9c5-10dee0156cea",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 797634,
+              "key": "aed3bf41-3aa1-4feb-bc61-751549a898e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Avoid Paying Unexpected Costs\nRemember to delete your notebook and data files once you are finished with your project.\n\nTo do this, first click on the \"Assets\" tab on the top of your project page.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797635,
+              "key": "0264ed07-6a03-4842-b86b-d3b1e279ca18",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5a9e_project-assets/project-assets.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0264ed07-6a03-4842-b86b-d3b1e279ca18",
+              "caption": "",
+              "alt": "",
+              "width": 1493,
+              "height": 606,
+              "instructor_notes": null
+            },
+            {
+              "id": 797637,
+              "key": "3eab0da2-c3f9-4a1a-bf55-51b3f7db7b74",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Click on the three dots on the right of both the notebook and data file and select \"Remove\"",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797636,
+              "key": "4aebf05a-897a-4e36-aefb-7a46422cbf5a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5aeb_remove-asset/remove-asset.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4aebf05a-897a-4e36-aefb-7a46422cbf5a",
+              "caption": "",
+              "alt": "",
+              "width": 668,
+              "height": 334,
+              "instructor_notes": null
+            },
+            {
+              "id": 797639,
+              "key": "3010ae06-0d19-4154-8b0f-330da971e223",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Select \"Manage\" and then \"Billing and usage\" in your menu bar at anytime for information on billing. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797638,
+              "key": "c9bb8dbe-d6e8-44ff-a277-d3723bce9875",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5b52_ibm-billing/ibm-billing.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c9bb8dbe-d6e8-44ff-a277-d3723bce9875",
+              "caption": "",
+              "alt": "",
+              "width": 1492,
+              "height": 426,
+              "instructor_notes": null
+            },
+            {
+              "id": 797642,
+              "key": "d4d21ace-3efc-465e-b611-1dbd1b4230d2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Your account type should be \"Lite\" by default, and you should not be charged anything. You can confirm that your account type is \"Lite\" on the top right corner of the Usage page (make sure you are on the \"Usage\" section on the menu on the right).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 797641,
+              "key": "1ae2ad4c-4557-4d41-907a-818939955812",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c1d5c30_usage-lite/usage-lite.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1ae2ad4c-4557-4d41-907a-818939955812",
+              "caption": "",
+              "alt": "",
+              "width": 1493,
+              "height": 423,
+              "instructor_notes": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

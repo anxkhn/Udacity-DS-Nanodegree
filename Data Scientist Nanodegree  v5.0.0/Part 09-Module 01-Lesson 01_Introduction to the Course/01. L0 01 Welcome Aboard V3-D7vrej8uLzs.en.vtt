@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.589 --> 00:00:06.044
+Hi. I'm David.
+
+00:00:06.044 --> 00:00:08.865
+And I am Judith. Welcome to our Spark course.
+
+00:00:08.865 --> 00:00:11.039
+We are really excited to get started.
+
+00:00:11.039 --> 00:00:15.224
+Data is everywhere and it's growing every second of every day.
+
+00:00:15.224 --> 00:00:20.504
+Imagine 2.5 quintillion bytes of data is created every single day.
+
+00:00:20.504 --> 00:00:23.564
+That's a lot of zeros, 18 to be exact.
+
+00:00:23.565 --> 00:00:25.995
+According to a recent IBM report,
+
+00:00:25.995 --> 00:00:30.615
+90 percent of the world's data has been created in the last two years alone.
+
+00:00:30.614 --> 00:00:32.684
+This data comes from all of us.
+
+00:00:32.685 --> 00:00:35.655
+Our apps, social media, and connected devices,
+
+00:00:35.655 --> 00:00:37.939
+all generate massive amounts of data that
+
+00:00:37.939 --> 00:00:40.884
+tells about ourselves and how we interact with each other.
+
+00:00:40.884 --> 00:00:44.659
+This data contains valuable information and has changed
+
+00:00:44.659 --> 00:00:48.214
+how businesses think about building and developing products.
+
+00:00:48.215 --> 00:00:51.845
+Our own data drives the technology we use every day.
+
+00:00:51.844 --> 00:00:55.369
+Analyzing data at such a large scale is challenging.
+
+00:00:55.369 --> 00:00:58.129
+Data sets no longer fit on a single computer.
+
+00:00:58.130 --> 00:01:03.275
+Instead, we have to divide data across a network of distributed computers.
+
+00:01:03.274 --> 00:01:05.959
+New technologies like Spark were invented to
+
+00:01:05.959 --> 00:01:09.009
+solve this problem and have become the industry standard.
+
+00:01:09.010 --> 00:01:11.810
+Spark has grown from an academic project in
+
+00:01:11.810 --> 00:01:16.085
+Berkeley's Amp lab to a top open source project in just a few years.
+
+00:01:16.084 --> 00:01:18.979
+Now it's used by the largest companies and fast
+
+00:01:18.980 --> 00:01:23.875
+growing startups all over the world to efficiently analyze messy data sets.
+
+00:01:23.875 --> 00:01:26.989
+In this course, you'll learn how to use Spark to work with
+
+00:01:26.989 --> 00:01:31.199
+big data and build machine learning models at scale.
+

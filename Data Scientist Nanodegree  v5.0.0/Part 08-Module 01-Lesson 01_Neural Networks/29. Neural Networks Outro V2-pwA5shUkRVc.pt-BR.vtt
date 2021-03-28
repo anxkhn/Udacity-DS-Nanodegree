@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.103 --> 00:00:01.208
+Ótimo trabalho!
+
+00:00:01.242 --> 00:00:04.561
+Nesta seção, você aprendeu sobre
+os dois pilares das redes neurais:
+
+00:00:04.595 --> 00:00:07.081
+o algoritmo perceptron
+e a regressão logística.
+
+00:00:07.115 --> 00:00:09.738
+Você também aprendeu
+que eles são muito parecidos.
+
+00:00:09.772 --> 00:00:13.810
+Ambos nos ajudam a achar uma linha
+que divide os dados em 2 conjuntos.
+
+00:00:13.844 --> 00:00:15.517
+Mas e se os dados forem
+complexos
+
+00:00:15.551 --> 00:00:17.681
+e não puderem ser divididos
+por uma linha?
+
+00:00:17.715 --> 00:00:19.936
+É aí que entram
+as redes neurais profundas.
+
+00:00:19.970 --> 00:00:22.955
+Este é o assunto da próxima seção.
+Até logo!
+

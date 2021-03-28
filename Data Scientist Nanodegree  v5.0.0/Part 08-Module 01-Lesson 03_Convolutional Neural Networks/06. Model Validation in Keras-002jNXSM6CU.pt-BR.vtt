@@ -1,0 +1,330 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:02.100
+Agora que compilamos
+o modelo,
+
+00:00:02.133 --> 00:00:03.934
+estamos prontos
+para o treinamento.
+
+00:00:03.968 --> 00:00:07.901
+Os passos devem ser parecidos
+com os da última lição.
+
+00:00:07.934 --> 00:00:09.968
+Para entender
+as modificações,
+
+00:00:10.000 --> 00:00:14.267
+nós precisamos falar
+sobre a validação do modelo.
+
+00:00:14.300 --> 00:00:17.100
+Nós vimos
+o desempenho dos modelos
+
+00:00:17.133 --> 00:00:20.968
+baseado na alteração da perda
+e da precisão com a epoch.
+
+00:00:21.000 --> 00:00:22.801
+Se você desenvolveu
+seus modelos,
+
+00:00:22.834 --> 00:00:25.868
+viu que nem sempre fica
+claro quantas camadas
+
+00:00:25.901 --> 00:00:27.300
+uma rede deve ter,
+
+00:00:27.334 --> 00:00:30.000
+quantos nós inserir
+em cada camada
+
+00:00:30.033 --> 00:00:32.100
+ou quantas epochs
+você deve utilizar.
+
+00:00:32.133 --> 00:00:35.033
+São muitas decisões
+a serem tomadas
+
+00:00:35.067 --> 00:00:37.033
+ao desenvolver
+uma arquitetura.
+
+00:00:37.701 --> 00:00:39.567
+Um método utilizado
+
+00:00:39.601 --> 00:00:42.834
+é dividir os dados
+em três conjuntos
+
+00:00:42.868 --> 00:00:46.501
+chamados de treinamento,
+validação e de teste.
+
+00:00:46.534 --> 00:00:49.567
+Cada um é tratado separadamente
+pelo modelo.
+
+00:00:49.601 --> 00:00:51.868
+O modelo usa
+os dados de treinamento
+
+00:00:51.901 --> 00:00:54.734
+ao decidir como modificar
+os pesos.
+
+00:00:54.767 --> 00:00:57.934
+Em cada epoch, o modelo
+confere o desempenho
+
+00:00:57.968 --> 00:01:01.167
+observando a precisão
+no conjunto de validação.
+
+00:01:01.200 --> 00:01:02.634
+Mas é importante notar
+
+00:01:02.667 --> 00:01:06.334
+que ele não utiliza nenhuma parte
+do conjunto de validação
+
+00:01:06.367 --> 00:01:09.167
+para o passo
+de propagação de retorno.
+
+00:01:09.200 --> 00:01:10.467
+O conjunto de treinamento
+
+00:01:10.501 --> 00:01:12.434
+encontra todos
+os padrões possíveis,
+
+00:01:12.467 --> 00:01:15.100
+e o conjunto de validação
+nos informa
+
+00:01:15.133 --> 00:01:18.100
+se o modelo escolhido
+tem um bom desempenho.
+
+00:01:18.133 --> 00:01:20.367
+Como o modelo não utiliza
+a validação
+
+00:01:20.400 --> 00:01:22.267
+para decidir os pesos,
+
+00:01:22.300 --> 00:01:26.601
+ele mostra se há um superajuste
+no conjunto de treinamento.
+
+00:01:26.634 --> 00:01:31.067
+Digamos que o modelo
+irá treinar 200 epochs,
+
+00:01:31.100 --> 00:01:33.000
+mas próximo da epoch 100
+
+00:01:33.033 --> 00:01:35.767
+você nota evidências
+de superajuste,
+
+00:01:35.801 --> 00:01:38.601
+na qual a perda de treinamento
+começa a cair,
+
+00:01:38.634 --> 00:01:41.834
+mas a perda de validação
+começa a subir.
+
+00:01:41.868 --> 00:01:45.801
+Você quer manter os pesos
+próximo da epoch 100
+
+00:01:45.834 --> 00:01:49.667
+e ignorar ou descartar os pesos
+das epochs posteriores.
+
+00:01:49.701 --> 00:01:53.434
+É isso que fazemos
+no bloco de anotações.
+
+00:01:53.467 --> 00:01:56.133
+Este tipo de processo
+também pode ser útil
+
+00:01:56.167 --> 00:01:58.767
+se tivermos arquiteturas
+de potencial múltiplo
+
+00:01:58.801 --> 00:02:00.167
+para escolher.
+
+00:02:00.200 --> 00:02:04.334
+Quando você está decidindo
+quantas camadas usar no modelo,
+
+00:02:04.367 --> 00:02:08.100
+você deve salvar os pesos
+de cada arquitetura em potencial
+
+00:02:08.133 --> 00:02:10.067
+para futuras comparações.
+
+00:02:10.100 --> 00:02:15.067
+Você sempre escolhe o modelo
+com a menor perda de validação.
+
+00:02:15.100 --> 00:02:16.701
+Você deve estar
+se perguntando
+
+00:02:16.734 --> 00:02:19.734
+por que criar um terceiro
+conjunto de dados.
+
+00:02:19.767 --> 00:02:23.200
+Nós não poderíamos usar
+o conjunto de teste?
+
+00:02:23.234 --> 00:02:26.033
+Quando testamos o modelo,
+
+00:02:26.067 --> 00:02:30.000
+ele observa os dados
+que ainda não foram vistos.
+
+00:02:30.033 --> 00:02:32.801
+Mesmo que o modelo não utilize
+o conjunto de validação
+
+00:02:32.834 --> 00:02:34.801
+para atualizar os pesos,
+
+00:02:34.834 --> 00:02:36.567
+o processo de seleção
+do modelo
+
+00:02:36.601 --> 00:02:40.167
+é voltado em favor
+do conjunto de validação.
+
+00:02:40.200 --> 00:02:44.167
+Assim nós precisamos
+de três conjuntos de dados.
+
+00:02:44.200 --> 00:02:45.901
+De volta ao código,
+
+00:02:45.934 --> 00:02:49.234
+perceba que o método de ajuste
+usa a divisão de validação
+
+00:02:49.267 --> 00:02:50.834
+como argumento.
+
+00:02:50.868 --> 00:02:53.968
+Neste caso,
+nós fornecemos 0,2.
+
+00:02:54.000 --> 00:02:58.767
+Então 20% dos dados
+tidos como de treinamento
+
+00:02:58.801 --> 00:03:01.367
+serão removidos
+do conjunto de treinamento
+
+00:03:01.400 --> 00:03:04.501
+e serão utilizados
+como conjunto de validação.
+
+00:03:04.534 --> 00:03:08.133
+O ponto de checagem do modelo
+nos permite salvar os pesos
+
+00:03:08.167 --> 00:03:10.133
+após cada epoch.
+
+00:03:10.167 --> 00:03:12.033
+Os parâmetros
+do caminho do arquivo
+
+00:03:12.067 --> 00:03:15.701
+especificam a localização onde
+queremos salvar os pesos.
+
+00:03:15.734 --> 00:03:18.200
+Configurando o parâmetro
+"save_best_only"
+
+00:03:18.234 --> 00:03:19.567
+como "True",
+
+00:03:19.601 --> 00:03:22.367
+você pode dizer ao modelo
+para salvar somente os pesos
+
+00:03:22.400 --> 00:03:26.200
+para obter a melhor precisão
+no conjunto de validação.
+
+00:03:26.234 --> 00:03:28.234
+Ao configurar
+a verbose como um,
+
+00:03:28.267 --> 00:03:30.767
+a saída de texto
+durante o treinamento
+
+00:03:30.801 --> 00:03:34.367
+informará quando
+o arquivo de peso for atualizado.
+
+00:03:34.400 --> 00:03:36.434
+Após criar
+este ponto de checagem,
+
+00:03:36.467 --> 00:03:38.234
+você passa isso
+como um parâmetro
+
+00:03:38.267 --> 00:03:40.100
+quando você ajustar o modelo.
+
+00:03:40.133 --> 00:03:41.667
+Agora é a sua vez.
+
+00:03:41.701 --> 00:03:44.200
+Rode o modelo no bloco
+de anotações do Jupyter
+
+00:03:44.234 --> 00:03:46.901
+e veja o resultado
+do treinamento.
+
+00:03:46.934 --> 00:03:49.100
+Na maioria das epochs
+
+00:03:49.133 --> 00:03:51.701
+a perda de validação diminui.
+
+00:03:51.734 --> 00:03:54.467
+Este é um sinal de que criamos
+um bom modelo
+
+00:03:54.501 --> 00:03:58.133
+e teremos um bom desempenho
+no conjunto de dados de teste.
+
+00:03:58.167 --> 00:04:00.667
+Nós veremos isso
+no próximo vídeo.
+

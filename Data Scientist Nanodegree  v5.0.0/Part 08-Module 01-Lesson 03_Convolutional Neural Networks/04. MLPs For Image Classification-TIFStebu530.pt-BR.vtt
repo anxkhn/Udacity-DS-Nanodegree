@@ -1,0 +1,222 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.133
+Nós criaremos
+uma rede neural
+
+00:00:03.167 --> 00:00:05.968
+para descobrir os padrões
+dos dados.
+
+00:00:06.000 --> 00:00:09.033
+Após treinar, nós poderemos
+utilizar a rede
+
+00:00:09.067 --> 00:00:13.067
+para classificar os dígitos
+das novas imagens.
+
+00:00:13.100 --> 00:00:17.767
+Como nossos pontos de dados
+são vetores com 784 entradas,
+
+00:00:17.801 --> 00:00:21.634
+a camada de entrada
+terá 784 nós.
+
+00:00:21.667 --> 00:00:24.133
+Vamos começar com duas
+camadas ocultas,
+
+00:00:24.167 --> 00:00:27.367
+cada uma com 512 nós.
+
+00:00:27.400 --> 00:00:29.968
+Nossa camada de saída
+precisa distinguir
+
+00:00:30.000 --> 00:00:32.234
+dez dígitos diferentes
+
+00:00:32.267 --> 00:00:34.868
+e fornecer dez nós.
+
+00:00:34.901 --> 00:00:36.901
+Nesta lição, nós sempre
+adicionaremos
+
+00:00:36.934 --> 00:00:38.868
+uma função
+de ativação softmax
+
+00:00:38.901 --> 00:00:41.400
+à última camada
+totalmente conectada.
+
+00:00:41.434 --> 00:00:44.334
+Isso garante que a rede
+gere uma estimativa
+
+00:00:44.367 --> 00:00:46.868
+de probabilidade de que cada
+dígito em potencial
+
+00:00:46.901 --> 00:00:49.001
+seja representado
+na imagem.
+
+00:00:49.033 --> 00:00:53.100
+Nós especificaremos
+este modelo no Keras.
+
+00:00:53.133 --> 00:00:55.801
+Se você se lembra de como
+especificamos redes neurais
+
+00:00:55.834 --> 00:01:00.267
+na última lição, este código
+não será muito diferente.
+
+00:01:00.300 --> 00:01:02.634
+Eu só adicionei uma coisa:
+
+00:01:02.667 --> 00:01:04.767
+a camada de nivelamento.
+
+00:01:04.801 --> 00:01:08.767
+Ela aparece antes
+de especificarmos o MLP.
+
+00:01:08.801 --> 00:01:13.300
+Ela pega a entrada da imagem
+matriz e a converte em um vetor.
+
+00:01:13.334 --> 00:01:16.634
+No sumário do modelo,
+vemos que as saídas são vetores
+
+00:01:16.667 --> 00:01:19.567
+com 784 entradas.
+
+00:01:19.601 --> 00:01:22.734
+Este modelo funciona
+como um primeiro esboço,
+
+00:01:22.767 --> 00:01:25.567
+mas vamos melhorá-lo
+usando as ferramentas
+
+00:01:25.601 --> 00:01:28.267
+da lição anterior.
+
+00:01:28.300 --> 00:01:31.334
+Começamos adicionando
+uma função de ativação ReLU
+
+00:01:31.367 --> 00:01:33.634
+a todas as camadas ocultas.
+
+00:01:33.667 --> 00:01:37.334
+Esta função ignora
+os valores positivos
+
+00:01:37.367 --> 00:01:40.367
+e envia os valores negativos
+para o zero.
+
+00:01:40.400 --> 00:01:46.001
+A função ReLU ajuda no problema
+da dissipação do gradiente.
+
+00:01:46.033 --> 00:01:50.367
+Ao adicionar a função ReLU,
+o modelo poderá ter
+
+00:01:50.400 --> 00:01:52.534
+uma precisão muito maior.
+
+00:01:52.567 --> 00:01:56.367
+Esta função de ativação
+será muito utilizada
+
+00:01:56.400 --> 00:01:59.300
+nas redes neurais
+convolucionais.
+
+00:01:59.334 --> 00:02:00.968
+Ao treinar este novo modelo,
+
+00:02:01.000 --> 00:02:04.067
+você perceberá
+um superajuste,
+
+00:02:04.100 --> 00:02:07.400
+no qual o modelo consegue
+prever os dígitos
+
+00:02:07.434 --> 00:02:09.267
+e o conjunto de dados
+de treinamento,
+
+00:02:09.300 --> 00:02:12.067
+mas ele não se sai bem
+com as imagens teste.
+
+00:02:12.100 --> 00:02:15.567
+Você poderá ver isso
+em breve.
+
+00:02:15.601 --> 00:02:19.133
+Enquanto isso,
+para minimizar o superajuste,
+
+00:02:19.167 --> 00:02:21.067
+nós vimos na última lição
+
+00:02:21.100 --> 00:02:23.567
+que podemos adicionar
+camadas dropout.
+
+00:02:23.601 --> 00:02:26.400
+Nós adicionaremos algumas
+a este modelo.
+
+00:02:26.434 --> 00:02:29.767
+As camadas dropout
+devem conter
+
+00:02:29.801 --> 00:02:32.000
+um parâmetro entre 0 e 1.
+
+00:02:32.901 --> 00:02:35.901
+O valor corresponde
+à probabilidade
+
+00:02:35.934 --> 00:02:37.667
+de que qualquer nó da rede
+
+00:02:37.701 --> 00:02:40.267
+seja removido
+durante o treinamento.
+
+00:02:40.300 --> 00:02:43.667
+Ao decidir o valor, recomenda-se
+começar por um pequeno
+
+00:02:43.701 --> 00:02:46.200
+para ver como a rede reage.
+
+00:02:46.234 --> 00:02:50.267
+Então você pode aumentar
+se for necessário.
+
+00:02:50.300 --> 00:02:54.434
+Nós decidimos configurar
+o parâmetro como 0,2.
+
+00:02:54.467 --> 00:02:57.567
+No próximo vídeo,
+nós continuaremos com o modelo.
+

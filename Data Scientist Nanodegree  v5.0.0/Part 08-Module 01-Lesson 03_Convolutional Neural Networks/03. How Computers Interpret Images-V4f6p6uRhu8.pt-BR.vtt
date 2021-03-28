@@ -1,0 +1,316 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.434 --> 00:00:04.234
+Vamos ver como o Deep Learning
+pode ser utilizado
+
+00:00:04.267 --> 00:00:07.400
+para reconhecer dígitos
+escritos manualmente.
+
+00:00:07.434 --> 00:00:10.534
+Nós desenvolvemos
+um algoritmo de classificação
+
+00:00:10.567 --> 00:00:13.234
+que pega imagens
+de números escritos à mão
+
+00:00:13.267 --> 00:00:17.234
+e identifica os números
+representados nas imagens.
+
+00:00:17.267 --> 00:00:20.167
+Para isso, nós usamos
+o banco de dados MNIST,
+
+00:00:20.200 --> 00:00:23.200
+que contém 7.000 imagens
+em escala de cinza
+
+00:00:23.234 --> 00:00:25.067
+de dígitos escritos à mão.
+
+00:00:25.100 --> 00:00:28.868
+Cada um representa
+os números de zero a nove.
+
+00:00:28.901 --> 00:00:32.267
+Este banco de dados
+é um dos mais famosos
+
+00:00:32.300 --> 00:00:34.801
+no campo
+de aprendizado de máquina.
+
+00:00:34.834 --> 00:00:38.067
+Nós trabalharemos com ele
+nos próximos vídeos.
+
+00:00:38.100 --> 00:00:43.767
+Acompanhe no bloco de anotações
+do Jupyter no link abaixo.
+
+00:00:43.801 --> 00:00:47.834
+É simples baixar o MNIST
+no Keras.
+
+00:00:47.868 --> 00:00:50.667
+Após importar
+o módulo Python necessário,
+
+00:00:50.701 --> 00:00:52.300
+com uma linha de código
+
+00:00:52.334 --> 00:00:54.667
+você terá as imagens
+de treinamento e de teste
+
+00:00:54.701 --> 00:00:56.734
+e os rótulos
+correspondentes.
+
+00:00:56.767 --> 00:00:59.701
+Ao observarmos as seis
+primeiras imagens de treinamento,
+
+00:00:59.734 --> 00:01:04.334
+nós percebemos que alguns dígitos
+são mais legíveis que outros.
+
+00:01:04.367 --> 00:01:07.901
+Dependendo de como você olha,
+o 9 pode parecer um 4
+
+00:01:07.934 --> 00:01:11.334
+e o conjunto de dados
+pode conter alguns números 3
+
+00:01:11.367 --> 00:01:12.934
+que parecem um 8.
+
+00:01:12.968 --> 00:01:16.534
+O nosso algoritmo deve
+superar estas dificuldades.
+
+00:01:16.567 --> 00:01:19.667
+Para a tarefa, nós precisamos
+treinar um algoritmo
+
+00:01:19.701 --> 00:01:23.534
+que possa examinar as imagens
+e descobrir padrões.
+
+00:01:23.567 --> 00:01:26.834
+Ele deve ter algum nível
+de entendimento
+
+00:01:26.868 --> 00:01:29.798
+sobre como se constitui
+o número 1
+
+00:01:29.831 --> 00:01:34.400
+e como as imagens de 1
+são diferentes das de 2 ou 3.
+
+00:01:34.434 --> 00:01:37.133
+Estes padrões
+podem ser utilizados
+
+00:01:37.167 --> 00:01:39.334
+para decifrar os dígitos
+das imagens
+
+00:01:39.367 --> 00:01:41.501
+que ele não viu antes.
+
+00:01:41.534 --> 00:01:46.467
+Vejamos o que o computador vê
+ao colocarmos uma das imagens.
+
+00:01:47.100 --> 00:01:50.334
+Qualquer imagem em escala
+de cinza será interpretado
+
+00:01:50.367 --> 00:01:54.501
+como uma matriz com uma entrada
+para cada pixel de imagem.
+
+00:01:54.534 --> 00:01:56.634
+Cada imagem no banco
+de dados MNIST
+
+00:01:56.667 --> 00:02:00.234
+tem 28 pixels de altura
+e 28 pixels de largura.
+
+00:02:00.267 --> 00:02:04.934
+Isso é entendido
+como uma matriz de 28x28.
+
+00:02:05.918 --> 00:02:09.734
+Os pixels brancos
+são codificados como 255,
+
+00:02:09.767 --> 00:02:12.801
+os pretos, como 0,
+
+00:02:12.834 --> 00:02:16.567
+e os cinzas aparecem na matriz
+como um número
+
+00:02:16.601 --> 00:02:18.634
+que fica entre os dois.
+
+00:02:18.667 --> 00:02:22.701
+Como um pré-processamento,
+nós alteramos a escala da imagem
+
+00:02:22.734 --> 00:02:27.300
+para que tenham valores
+entre 0 e 1.
+
+00:02:27.334 --> 00:02:31.467
+Para isso, nós dividimos
+cada pixel de cada imagem
+
+00:02:31.501 --> 00:02:34.100
+por 255.
+
+00:02:34.133 --> 00:02:38.701
+Antes de fornecer os dados
+para uma rede profunda no Keras,
+
+00:02:38.734 --> 00:02:42.400
+nós precisamos preparar
+os rótulos.
+
+00:02:42.434 --> 00:02:45.467
+Atualmente cada imagem
+possui um rótulo
+
+00:02:45.501 --> 00:02:47.667
+que possui um valor inteiro.
+
+00:02:47.701 --> 00:02:51.667
+Nós precisamos converter isso
+para um código one-hot.
+
+00:02:51.701 --> 00:02:56.634
+Cada rótulo será transformado
+em um vetor com zeros.
+
+00:02:56.667 --> 00:02:59.100
+Se o rótulo fosse um 7,
+
+00:02:59.133 --> 00:03:03.033
+nós colocaríamos o número 1
+na sétima entrada do vetor.
+
+00:03:03.067 --> 00:03:05.701
+A segunda imagem
+representa o 3,
+
+00:03:05.734 --> 00:03:10.033
+então o 1 estará na terceira
+entrada do vetor de rótulo.
+
+00:03:10.067 --> 00:03:11.834
+E assim por diante.
+
+00:03:11.868 --> 00:03:15.801
+Nós fazemos isso na célula cinco
+do bloco de anotações do Jupyter.
+
+00:03:15.834 --> 00:03:19.667
+Agora que os dados parecem
+estar pré-processados,
+
+00:03:19.701 --> 00:03:23.767
+nós podemos utilizar as redes
+neurais da lição anterior?
+
+00:03:23.801 --> 00:03:26.968
+Nós podemos entrar os dados
+desta imagem em um MPL
+
+00:03:27.000 --> 00:03:31.133
+e operar como fizemos antes
+na classificação?
+
+00:03:31.167 --> 00:03:32.567
+Não exatamente.
+
+00:03:32.601 --> 00:03:37.000
+Fazer o recall dos MPLs
+só usará vetores como entrada.
+
+00:03:37.033 --> 00:03:40.267
+Para utilizar os MPLs
+com imagens,
+
+00:03:40.300 --> 00:03:43.033
+que foram codificadas
+como matrizes,
+
+00:03:43.067 --> 00:03:47.167
+nós precisamos converter
+as matrizes em vetores.
+
+00:03:47.200 --> 00:03:49.400
+Nós ilustraremos
+o processo de conversão
+
+00:03:49.434 --> 00:03:52.234
+no exemplo do brinquedo
+demonstrado aqui.
+
+00:03:52.267 --> 00:03:54.701
+No caso de uma imagem 4x4,
+
+00:03:54.734 --> 00:03:58.701
+nós podemos construir um vetor
+com 16 entradas.
+
+00:03:58.734 --> 00:04:01.033
+As primeiras quatro entradas
+do vetor
+
+00:04:01.067 --> 00:04:04.100
+correspondem à primeira fileira
+da antiga matriz.
+
+00:04:04.133 --> 00:04:07.901
+As segundas quatro entradas,
+à segunda fileira
+
+00:04:07.934 --> 00:04:09.434
+e assim por diante.
+
+00:04:09.467 --> 00:04:13.167
+No caso das matrizes
+de 28x28,
+
+00:04:13.200 --> 00:04:15.534
+nós as achatamos em um vetor
+
+00:04:15.567 --> 00:04:18.667
+com 784 entradas.
+
+00:04:18.701 --> 00:04:21.200
+Após codificar as imagens
+como vetores,
+
+00:04:21.234 --> 00:04:23.567
+elas podem seguir
+para a camada de entrada
+
+00:04:23.601 --> 00:04:25.100
+de um MPL.
+
+00:04:25.133 --> 00:04:27.667
+Nós faremos isso
+no próximo vídeo.
+
