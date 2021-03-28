@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.039
+Imagine you are working
+
+00:00:08.039 --> 00:00:13.570
+on the data team for a popular digital music service similar to Spotify or Pandora.
+
+00:00:13.570 --> 00:00:19.320
+Menus of users stream their favorite songs to your service every day either using
+
+00:00:19.320 --> 00:00:22.170
+the free tier that place advertisements between
+
+00:00:22.170 --> 00:00:25.440
+the songs or using the premium subscription model,
+
+00:00:25.440 --> 00:00:29.580
+where they stream music as free but pay a monthly flat rate.
+
+00:00:29.579 --> 00:00:32.274
+Users can upgrade, downgrade,
+
+00:00:32.274 --> 00:00:34.379
+or cancel their service at any time.
+
+00:00:34.380 --> 00:00:38.825
+So, it's crucial to make sure your users love the service.
+
+00:00:38.825 --> 00:00:43.755
+Every time a user interacts with the service while they're playing songs, logging out,
+
+00:00:43.755 --> 00:00:46.425
+like in a song with a thumbs up, hearing an ad,
+
+00:00:46.424 --> 00:00:49.599
+or downgrading their service, it generates data.
+
+00:00:49.600 --> 00:00:52.219
+All this data contains the key insights for
+
+00:00:52.219 --> 00:00:55.369
+keeping your users happy and helping your business thrive.
+
+00:00:55.369 --> 00:00:59.269
+It's your job on the data team to predict which users are at risk to
+
+00:00:59.270 --> 00:01:01.775
+churn either downgrading from premium
+
+00:01:01.774 --> 00:01:04.855
+to free tier or cancelling their service altogether.
+
+00:01:04.855 --> 00:01:08.780
+If you can accurately identify these users before they leave,
+
+00:01:08.780 --> 00:01:11.570
+your business can offer them discounts and incentives,
+
+00:01:11.569 --> 00:01:14.689
+potentially saving your business millions in revenue.
+
+00:01:14.689 --> 00:01:16.620
+To tackle this project,
+
+00:01:16.620 --> 00:01:21.725
+we have provided you with a large dataset that contains the events David just described.
+
+00:01:21.724 --> 00:01:23.234
+You will need to load,
+
+00:01:23.234 --> 00:01:26.015
+explorer, and clean this dataset with Spark.
+
+00:01:26.015 --> 00:01:27.709
+Based on your explanation,
+
+00:01:27.709 --> 00:01:30.559
+you will create features and build models with Spark to
+
+00:01:30.560 --> 00:01:34.870
+predict which users were churn from your digital music service.
+
+00:01:34.870 --> 00:01:37.939
+This project is all about demonstrating mastery of
+
+00:01:37.939 --> 00:01:41.174
+Spark scalable data manipulation and machine learning.
+
+00:01:41.174 --> 00:01:43.039
+After completing this project,
+
+00:01:43.040 --> 00:01:46.310
+you'll have built a useful model with a massive dataset.
+
+00:01:46.310 --> 00:01:49.460
+You'll be able to apply the same skills with Spark to
+
+00:01:49.459 --> 00:01:53.569
+wrangle data and build models in your role as a data scientist.
+

@@ -1,0 +1,381 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recommendations with IBM</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Recommendation Engines</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Project Workspace.html">03. Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Recommendations with IBM.html">Project Description - Recommendations with IBM</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Recommendations with IBM.html">Project Rubric - Recommendations with IBM</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Recommendations with IBM</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Code Functionality &amp; Readability</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Code is functional and passes all tests.</p>
+        </td>
+        <td>
+          <p>All the project code is contained in a Jupyter notebook or script.  If you use a notebook, it demonstrates successful execution and output of the code.  All tests have passing remarks.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Write code that is well documented and uses functions and classes as necessary.</p>
+        </td>
+        <td>
+          <p>Code is well documented and uses functions and classes as necessary. All functions include document strings. DRY principles are implemented.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Data Exploration</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Explore the data.</p>
+        </td>
+        <td>
+          <p>Explore the data to understand the number of users, articles, and information about the interactions that take place.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Create Rank Based Recommendations</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Create ranked based recommendation model.</p>
+        </td>
+        <td>
+          <p>Tests will ensure that your functions will correctly pull the top articles.  The two functions should pull the top ids and the top names.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Collaborative Filtering</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Create the user item matrix.</p>
+        </td>
+        <td>
+          <p>Create a matrix with users on the rows and articles on the columns.  There should be a 1 if a user-article interacted with one another and a zero otherwise.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Find similar users needed for user-user collaborative filtering model.</p>
+        </td>
+        <td>
+          <p>Find similar users needed for user-user collaborative filtering model.  Write a function that finds similar users.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Make recommendations using user-user based collaborative filtering.</p>
+        </td>
+        <td>
+          <p>Make recommendations using user-user based collaborative filtering. Complete the functions needed to make recommendations for each user.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Improve recommendations using user-user based collaborative filtering.</p>
+        </td>
+        <td>
+          <p>Improve your original method of using collaborative filtering to make recommendations by ranking the collaborative filtering results by users who have the most article interactions first and then by articles with the most interactions.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Provide recommendations for new users.</p>
+        </td>
+        <td>
+          <p>Provide recommendations for new users, which will not be able to receive recommendations using our user-user based collaborative filtering method.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Matrix Factorization</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Perform SVD on user-item matrix.</p>
+        </td>
+        <td>
+          <p>Perform SVD on user-item matrix. Provides U, Sigma, and V-transpose matrices, as well as an explanation of why this technique works in this case.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Perform split of training and testing datasets.</p>
+        </td>
+        <td>
+          <p>Split the user-item matrix into training and testing segments.  Identify the users in the test set that are also in the training.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Perform assessment of results.</p>
+        </td>
+        <td>
+          <p>Perform assessment of the predicted vs. the actual values.  </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Results discussion.</p>
+        </td>
+        <td>
+          <p>Provide a discussion about the results, as well as a method by which you could test how well your recommendation engine is working in practice.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><p>Ways to stand out are to move your notebook into a web application, and blend your code into a class that can be easily used with a web application.  You could package your recommendation engine code to be pip installed by others.  You could also build out a content based recommendation system using your NLP skills.  There are lots of ways to go beyond the rubric for this project!</p></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Recommendations with IBM')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

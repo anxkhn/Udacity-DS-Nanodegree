@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.129
+We're actually partnering with IBM to build
+
+00:00:02.129 --> 00:00:06.245
+this really great project for everyone to sort of utilize in the classroom.
+
+00:00:06.245 --> 00:00:09.750
+Can you give us a little insight into the platform that they'll
+
+00:00:09.750 --> 00:00:12.960
+be using and sort of the data that they'll be getting out of it?
+
+00:00:12.960 --> 00:00:15.455
+Right. Yeah, so the project is cool.
+
+00:00:15.455 --> 00:00:16.920
+I like the project,
+
+00:00:16.920 --> 00:00:21.210
+I thought it was a great idea when we got started working on it. So what is the project?
+
+00:00:21.210 --> 00:00:22.730
+Well on Watson studio,
+
+00:00:22.730 --> 00:00:26.670
+an important component as we discussed was is the community and
+
+00:00:26.670 --> 00:00:31.585
+the community is this collaborative ecosystem of a curated datasets,
+
+00:00:31.585 --> 00:00:34.469
+articles, notebooks or other kinds
+
+00:00:34.469 --> 00:00:37.140
+of assets that are out there in the world of data science,
+
+00:00:37.140 --> 00:00:39.399
+machine learning and artificial intelligence.
+
+00:00:39.399 --> 00:00:44.384
+Our users on the platform interact with these assets.
+
+00:00:44.384 --> 00:00:48.119
+So what the students are building and what we've built is
+
+00:00:48.119 --> 00:00:52.489
+a recommendation system for these assets in the community.
+
+00:00:52.490 --> 00:00:57.060
+So one thing is that what we do is we go out there ourselves
+
+00:00:57.060 --> 00:01:01.765
+and we curate also with models that we developed here at IBM,
+
+00:01:01.765 --> 00:01:04.515
+all this kind of all these assets that are out there.
+
+00:01:04.515 --> 00:01:09.079
+What the students will be doing is building in that part where it makes it personal for
+
+00:01:09.079 --> 00:01:10.909
+an individual user and providing
+
+00:01:10.909 --> 00:01:14.659
+that personalized recommendation experience with a web app.
+
+00:01:14.659 --> 00:01:17.479
+Cool. So it sounds like this is actually something that isn't
+
+00:01:17.480 --> 00:01:20.750
+on your platform but could be really useful to people on your plan.
+
+00:01:20.750 --> 00:01:22.224
+Yeah, that's right.
+
+00:01:22.224 --> 00:01:26.030
+Now that's very cool. So, students will be working on a recommendation system to
+
+00:01:26.030 --> 00:01:30.125
+sort of like personalize recommendations for people who are already in the community?
+
+00:01:30.125 --> 00:01:35.000
+That's right. Yes, so the data that they'll have is anonymized data of
+
+00:01:35.000 --> 00:01:37.939
+the interactions between all of the different kinds of articles and
+
+00:01:37.939 --> 00:01:40.989
+datasets and that sort of thing we have in the community and our users.
+
+00:01:40.989 --> 00:01:45.419
+So there's that communication between what they're actually doing on the platform,
+
+00:01:45.420 --> 00:01:46.769
+interacting with those assets,
+
+00:01:46.769 --> 00:01:50.849
+and all of that is actually part of the data that they'll take advantage of.
+
+00:01:50.849 --> 00:01:52.289
+So that's pretty exciting I think.
+
+00:01:52.290 --> 00:01:54.920
+Yeah, it sounds like a really cool project.
+
+00:01:54.920 --> 00:02:00.990
+It also sounds like so students will be able to sort of tackle
+
+00:02:00.989 --> 00:02:03.929
+this recommendation system however they might want
+
+00:02:03.930 --> 00:02:06.890
+to which could be like looking at how users are connected,
+
+00:02:06.890 --> 00:02:08.469
+how articles are connected,
+
+00:02:08.469 --> 00:02:11.234
+how different types of medium are connected,
+
+00:02:11.235 --> 00:02:15.255
+and there's like lots of different ways that they could go about creating a solution.
+
+00:02:15.254 --> 00:02:16.259
+Yeah.
+
+00:02:16.259 --> 00:02:17.949
+Very cool.
+

@@ -1,0 +1,1332 @@
+{
+  "data": {
+    "lesson": {
+      "id": 495681,
+      "key": "2f907351-912b-40c7-8b2b-289e1446fa32",
+      "title": "Deep Neural Networks",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "A deeper dive into backpropagation and the training process of neural networks, including techniques to improve the training.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/2f907351-912b-40c7-8b2b-289e1446fa32/495681/1544448507751/Deep+Neural+Networks+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/2f907351-912b-40c7-8b2b-289e1446fa32/495681/1544448500829/Deep+Neural+Networks+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 308891,
+          "key": "60ed34da-990f-462e-b440-33f1a96a39e3",
+          "title": "Non-linear Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "60ed34da-990f-462e-b440-33f1a96a39e3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308892,
+              "key": "b859abf5-851e-48df-ac17-5d6d25f745eb",
+              "title": "Non-Linear Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "F7ZiE8PQiSc",
+                "china_cdn_id": "F7ZiE8PQiSc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308889,
+          "key": "5e9bd75b-a419-45d4-8a2b-88ba847cc814",
+          "title": "Continuous Perceptrons",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e9bd75b-a419-45d4-8a2b-88ba847cc814",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 310562,
+              "key": "883a7df2-5946-4a99-a953-a3c9324ab9bb",
+              "title": "Continuous Perceptrons",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "07-JJ-aGEfM",
+                "china_cdn_id": "07-JJ-aGEfM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301714,
+          "key": "24d1d59e-b66c-40b1-a555-5975fb128f3c",
+          "title": "Non-Linear Models",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "24d1d59e-b66c-40b1-a555-5975fb128f3c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 310921,
+              "key": "12049098-1cde-46e4-822f-d2446ddf884a",
+              "title": "Non-Linear Models",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HWuBKCZsCo8",
+                "china_cdn_id": "HWuBKCZsCo8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301716,
+          "key": "7a42d26d-7d7e-4c76-a014-5bf8b4413179",
+          "title": "Neural Network Architecture",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7a42d26d-7d7e-4c76-a014-5bf8b4413179",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308895,
+              "key": "f0c39c45-c729-4256-8996-709769d7ab61",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Neural Network Architecture\nOk, so we're ready to put these building blocks together, and build great Neural Networks! (Or Multi-Layer Perceptrons, however you prefer to call them.)\n\nThis first two videos will show us how to combine two perceptrons into a third, more complicated one.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 436182,
+              "key": "072f0f84-7559-4507-9188-ccb1dee67307",
+              "title": "Combinando modelos",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Boy3zHVrWB4",
+                "china_cdn_id": "Boy3zHVrWB4.mp4"
+              }
+            },
+            {
+              "id": 385226,
+              "key": "155a9439-1b94-431c-8640-ebd0bc1d17bb",
+              "title": "29 Neural Network Architecture 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "FWN3Sw5fFoM",
+                "china_cdn_id": "FWN3Sw5fFoM.mp4"
+              }
+            },
+            {
+              "id": 395756,
+              "key": "3dbaf35f-b389-4748-a2bb-f83282935f6b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3dbaf35f-b389-4748-a2bb-f83282935f6b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Based on the above video, let's define the combination of two new perceptrons as w<sub>1</sub>\\*0.4 + w<sub>2</sub>*0.6 + b. Which of the following values for the weights and the bias would result in the final probability of the point to be 0.88?",
+                "answers": [
+                  {
+                    "id": "a1505310098557",
+                    "text": "w<sub>1</sub>: 2, w<sub>2</sub>: 6, b: -2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505310111002",
+                    "text": "w<sub>1</sub>: 3, w<sub>2</sub>: 5, b: -2.2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505310112348",
+                    "text": "w<sub>1</sub>: 5, w<sub>2</sub>: 4, b: -3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 308896,
+              "key": "e27b5551-e2ca-4787-b1f8-b81b15a1c3a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Multiple layers\nNow, not all neural networks look like the one above. They can be way more complicated! In particular, we can do the following things:\n- Add more nodes to the input, hidden, and output layers.\n- Add more layers.\n\nWe'll see the effects of these changes in the next video.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 321885,
+              "key": "6f95b131-58ef-47ac-a6cc-c5ff1dd2cfac",
+              "title": "Layers",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pg99FkXYK0M",
+                "china_cdn_id": "pg99FkXYK0M.mp4"
+              }
+            },
+            {
+              "id": 308897,
+              "key": "2f0c10e3-6a0a-4388-aed1-d5176c78c245",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Multi-Class Classification\nAnd here we elaborate a bit more into what can be done if our neural network needs to model data with more than one output.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 310924,
+              "key": "c8815c6c-549a-4916-b989-1a46f02251ec",
+              "title": "Multiclass Classification",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "uNTtvxwfox0",
+                "china_cdn_id": "uNTtvxwfox0.mp4"
+              }
+            },
+            {
+              "id": 395757,
+              "key": "13a2225e-cfa1-4a6d-8ae9-0d07ba978202",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "13a2225e-cfa1-4a6d-8ae9-0d07ba978202",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How many nodes in the output layer would you require if you were trying to classify all the letters in the English alphabet?",
+                "matchers": [
+                  {
+                    "expression": "^[2][6]\\s*$"
+                  },
+                  {
+                    "expression": "^[5][2]\\s*$"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 301718,
+          "key": "02c36864-ee71-481c-bb01-a34c35bfc581",
+          "title": "Feedforward",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "02c36864-ee71-481c-bb01-a34c35bfc581",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308898,
+              "key": "daef89a0-10d2-4857-8389-ef86f9416448",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Feedforward\nFeedforward is the process neural networks use to turn the input into an output. Let's study it more carefully, before we dive into how to train the networks.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461533,
+              "key": "86f55e1d-d5d2-4cda-8a06-b623c25eade4",
+              "title": "DL 41 Feedforward FIX V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hVCuvMGOfyY",
+                "china_cdn_id": "hVCuvMGOfyY.mp4"
+              }
+            },
+            {
+              "id": 322621,
+              "key": "5100ebef-9f25-4487-923f-d50462cd878e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Error Function\nJust as before, neural networks will produce an error function, which at the end, is what we'll be minimizing. The following video shows the error function for a neural network.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461532,
+              "key": "3714806e-0318-4950-ae62-fd7fa6e3836c",
+              "title": "DL 42 Neural Network Error Function (1)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "SC1wEW7TtKs",
+                "china_cdn_id": "SC1wEW7TtKs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301721,
+          "key": "4cc13714-37d7-4705-a714-314ede5290b5",
+          "title": "Backpropagation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4cc13714-37d7-4705-a714-314ede5290b5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308901,
+              "key": "e6e62773-7797-4973-a353-0f77f19d6e17",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Backpropagation\nNow, we're ready to get our hands into training a neural network. For this, we'll use the method known as **backpropagation**. In a nutshell, backpropagation will consist of:\n- Doing a feedforward operation.\n- Comparing the output of the model with the desired output.\n- Calculating the error.\n- Running the feedforward operation backwards (backpropagation) to spread the error to each of the weights.\n- Use this to update the weights, and get a better model.\n- Continue this until we have a model that is good.\n\nSounds more complicated than what it actually is. Let's take a look in the next few videos. The first video will show us a conceptual interpretation of what backpropagation is.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 322088,
+              "key": "d81b8b53-d5b9-4955-a9f9-ec9a288f4715",
+              "title": "Backpropagation V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1SmY3TZTyUk",
+                "china_cdn_id": "1SmY3TZTyUk.mp4"
+              }
+            },
+            {
+              "id": 308902,
+              "key": "d1463a38-3338-454a-8b85-fde047452d93",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Backpropagation Math\nAnd the next few videos will go deeper into the math. Feel free to tune out, since this part gets handled by Keras pretty well. If you'd like to go start training networks right away, go to the next section. But if you enjoy calculating lots of derivatives, let's dive in!\n\nIn the video below at 1:24, the edges should be directed to the sigmoid function and not the bias at that last layer; the edges of the last layer point to the bias currently which is incorrect.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 321900,
+              "key": "d04523fa-8341-429d-8b0c-0638e9de10d5",
+              "title": "Calculating The Gradient 1 ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tVuZDbUrzzI",
+                "china_cdn_id": "tVuZDbUrzzI.mp4"
+              }
+            },
+            {
+              "id": 308903,
+              "key": "940013b8-b419-46a0-beca-fa4456f4dc9e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Chain Rule\nWe'll need to recall the chain rule to help us calculate derivatives.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 310925,
+              "key": "b2f1f683-c75c-46cb-9796-8f13d2c941c5",
+              "title": "Chain Rule",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YAhIBOnbt54",
+                "china_cdn_id": "YAhIBOnbt54.mp4"
+              }
+            },
+            {
+              "id": 462390,
+              "key": "f8e117c4-4c38-467b-b271-45f437836fa3",
+              "title": "DL 46 Calculating The Gradient 2 V2 (2)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7lidiTGIlN4",
+                "china_cdn_id": "7lidiTGIlN4.mp4"
+              }
+            },
+            {
+              "id": 394623,
+              "key": "602f0d40-c473-442c-9b10-3d88987e0371",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Calculation of the derivative of the sigmoid function\nRecall that the sigmoid function has a beautiful derivative, which we can see in the following calculation. This will make our backpropagation step much cleaner.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 394622,
+              "key": "eb986cd9-a133-470f-b066-7e92b24c75e4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b6ffad_sigmoid-derivative/sigmoid-derivative.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eb986cd9-a133-470f-b066-7e92b24c75e4",
+              "caption": "",
+              "alt": "",
+              "width": 251,
+              "height": 125,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 301743,
+          "key": "7c3d9b4c-206d-4430-9459-c78357181d9a",
+          "title": "Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7c3d9b4c-206d-4430-9459-c78357181d9a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308193,
+              "key": "cb03b861-d46e-4106-8b37-d382ce55021e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Neural Networks in Keras\n\nLuckily, every time we need to use a neural network, we won't need to code the activation function, gradient descent, etc. There are lots of packages for this, which we recommend you to check out, including the following:\n- [Keras](https://keras.io/)\n- [TensorFlow](https://www.tensorflow.org/)\n- [Caffe](http://caffe.berkeleyvision.org/)\n- [Theano](http://deeplearning.net/software/theano/)\n- [Scikit-learn](http://scikit-learn.org/)\n- And many others!\n\nIn this course, we will learn [Keras](https://keras.io/). Keras makes coding deep neural networks simpler. To demonstrate just how easy it is, you're going to build a simple fully-connected network in a few dozen lines of code.\n\nWe’ll be connecting the concepts that you’ve learned in the previous lessons to the methods that Keras provides.\n\nThe general idea for this example is that you'll first load the data, then define the network, and then finally train the network.\n\n## Building a Neural Network in Keras\nHere are some core concepts you need to know for working with Keras.\n\n## Sequential Model\n\n```python\n    from keras.models import Sequential\n\n    #Create the Sequential model\n    model = Sequential()\n```\n\nThe [keras.models.Sequential](https://keras.io/models/sequential/) class is a wrapper for the neural network model that treats the network as a sequence of layers. It implements the Keras model interface with common methods like `compile()`, `fit()`, and `evaluate()` that are used to train and run the model. We'll cover these functions soon, but first let's start looking at the layers of the model.\n\n## Layers\nThe Keras Layer class provides a common interface for a variety of standard neural network layers. There are fully connected layers, max pool layers, activation layers, and more. You can add a layer to a model using the model's `add()` method. For example, a simple model with a single hidden layer might look like this:\n\n```python\n    import numpy as np\n    from keras.models import Sequential\n    from keras.layers.core import Dense, Activation\n\n    # X has shape (num_rows, num_cols), where the training data are stored\n    # as row vectors\n    X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.float32)\n\n    # y must have an output vector for each input vector\n    y = np.array([[0], [0], [0], [1]], dtype=np.float32)\n\n    # Create the Sequential model\n    model = Sequential()\n\n    # 1st Layer - Add an input layer of 32 nodes with the same input shape as\n    # the training samples in X\n    model.add(Dense(32, input_dim=X.shape[1]))\n\n    # Add a softmax activation layer\n    model.add(Activation('softmax'))\n\n    # 2nd Layer - Add a fully connected output layer\n    model.add(Dense(1))\n\n    # Add a sigmoid activation layer\n    model.add(Activation('sigmoid'))\n```\n\nKeras requires the input shape to be specified in the first layer, but it will automatically infer the shape of all other layers. This means you only have to explicitly set the input dimensions for the first layer.\n\nThe first (hidden) layer from above, `model.add(Dense(32, input_dim=X.shape[1]))`, creates 32 nodes which each expect to receive 2-element vectors as inputs. Each layer takes the outputs from the previous layer as inputs and pipes through to the next layer. This chain of passing output to the next layer continues until the last layer, which is the output of the model. We can see that the output has dimension 1.\n\nThe activation \"layers\" in Keras are equivalent to specifying an activation function in the Dense layers (e.g., `model.add(Dense(128)); model.add(Activation('softmax'))` is computationally equivalent to `model.add(Dense(128, activation=\"softmax\")))`), but it is common to explicitly separate the activation layers because it allows direct access to the outputs of each layer before the activation is applied (which is useful in some model architectures).\n\nOnce we have our model built, we need to compile it before it can be run. Compiling the Keras model calls the backend (tensorflow, theano, etc.) and binds the optimizer, loss function, and other parameters required before the model can be run on any input data. We'll specify the loss function to be `categorical_crossentropy` which can be used when there are only two classes, and specify `adam` as the optimizer (which is a reasonable default when speed is a priority). And finally, we can specify what metrics we want to evaluate the model with. Here we'll use accuracy.\n\n```python\nmodel.compile(loss=\"categorical_crossentropy\", optimizer=\"adam\", metrics = [\"accuracy\"])\n```\n\nWe can see the resulting model architecture with the following command:\n\n```python\nmodel.summary()\n```\n\nThe model is trained with the `fit()` method, through the following command that specifies the number of training epochs and the message level (how much information we want displayed on the screen during training).\n\n```python\nmodel.fit(X, y, nb_epoch=1000, verbose=0)\n```\n\n**Note:** In Keras 1, `nb_epoch` sets the number of epochs, but in Keras 2 this changes to the keyword `epochs`.\n\nFinally, we can use the following command to evaluate the model:\n\n```python\nmodel.evaluate()\n```\n\nPretty simple, right? Let's put it into practice.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 308190,
+              "key": "d70cf717-e602-42dc-ac9e-7036160f27e9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Quiz\nLet's start with the simplest example. In this quiz you will build a simple multi-layer feedforward neural network to solve the XOR problem.\n\n1. Set the first layer to a `Dense()` layer with an output width of 8 nodes and the `input_dim` set to the size of the training samples (in this case 2).\n2. Add a `tanh` activation function.\n5. Set the output layer width to 1, since the output has only two classes. (We can use 0 for one class and 1 for the other)\n6. Use a `sigmoid` activation function after the output layer.\n7. Run the model for 50 epochs.\n\nThis should give you an accuracy of 50%. That's ok, but certainly not great. Out of 4 input points, we're correctly classifying only 2 of them. Let's try to change some parameters around to improve. For example, you can increase the number of epochs. You'll pass this quiz if you get 75% accuracy. Can you reach 100%?\n\nTo get started, review the Keras documentation about models and layers.\nThe Keras example of a [Multi-Layer Perceptron](https://github.com/fchollet/keras/blob/master/examples/mnist_mlp.py) network is similar to what you need to do here. Use that as a guide, but keep in mind that there will be a number of differences.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 308191,
+              "key": "bfff2ac1-0262-4dcc-a72c-491bd744e052",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "bfff2ac1-0262-4dcc-a72c-491bd744e052",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6176481718960128",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\r\nfrom keras.utils import np_utils\r\nimport tensorflow as tf\r\n# Using TensorFlow 1.0.0; use tf.python_io in later versions\r\ntf.python.control_flow_ops = tf\r\n\r\n# Set random seed\r\nnp.random.seed(42)\r\n\r\n# Our data\r\nX = np.array([[0,0],[0,1],[1,0],[1,1]]).astype('float32')\r\ny = np.array([[0],[1],[1],[0]]).astype('float32')\r\n\r\n# Initial Setup for Keras\r\nfrom keras.models import Sequential\r\nfrom keras.layers.core import Dense, Activation\r\n# One-hot encoding the output\r\ny = np_utils.to_categorical(y)\r\n\r\n# Building the model\r\nxor = Sequential()\r\n\r\n# Add required layers\r\n# xor.add()\r\n\r\n# Specify loss as \"binary_crossentropy\", optimizer as \"adam\",\r\n# and add the accuracy metric\r\n# xor.compile()\r\n\r\n# Uncomment this line to print the model architecture\r\n# xor.summary()\r\n\r\n# Fitting the model\r\nhistory = xor.fit(X, y, nb_epoch=50, verbose=0)\r\n\r\n# Scoring the model\r\nscore = xor.evaluate(X, y)\r\nprint(\"\\nAccuracy: \", score[-1])\r\n\r\n# Checking the predictions\r\nprint(\"\\nPredictions:\")\r\nprint(xor.predict_proba(X))",
+                    "name": "network.py"
+                  },
+                  {
+                    "text": "import numpy as np\r\nfrom keras.utils import np_utils\r\nimport tensorflow as tf\r\ntf.python.control_flow_ops = tf\r\n\r\n# Set random seed\r\nnp.random.seed(42)\r\n\r\n# Our data\r\nX = np.array([[0,0],[0,1],[1,0],[1,1]]).astype('float32')\r\ny = np.array([[0],[1],[1],[0]]).astype('float32')\r\n\r\n# Initial Setup for Keras\r\nfrom keras.models import Sequential\r\nfrom keras.layers.core import Dense, Activation, Flatten\r\n\r\n# One-hot encoding the output\r\ny = np_utils.to_categorical(y)\r\n\r\n# Building the model\r\nxor = Sequential()\r\nxor.add(Dense(32, input_dim=2))\r\nxor.add(Activation(\"tanh\"))\r\nxor.add(Dense(2))\r\nxor.add(Activation(\"sigmoid\"))\r\n\r\nxor.compile(loss=\"categorical_crossentropy\", optimizer=\"adam\", metrics = ['accuracy'])\r\n\r\n# Uncomment this line to print the model architecture\r\n# xor.summary()\r\n\r\n# Fitting the model\r\nhistory = xor.fit(X, y, nb_epoch=1000, verbose=0)\r\n\r\n# Scoring the model\r\nscore = xor.evaluate(X, y)\r\nprint(\"\\nAccuracy: \", score[-1])\r\n\r\n# Checking the predictions\r\nprint(\"\\nPredictions:\")\r\nprint(xor.predict_proba(X))",
+                    "name": "network_solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 410773,
+          "key": "bb1f6b73-b886-4ed5-ba63-a992faf7d873",
+          "title": "Pre-Lab: Student Admissions in Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bb1f6b73-b886-4ed5-ba63-a992faf7d873",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439367,
+              "key": "e0f1b4e0-203e-44c1-8c7b-af9e5c74f15e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Mini Project: Student Admissions in Keras\n\nSo, now we're ready to use Keras with real data. We'll now build a neural network which analyzes the dataset of student admissions at UCLA that we've previously studied.\n\nAs you follow along with this lesson, you are encouraged to work in the referenced Jupyter notebooks at the end of the page.  We will present a solution to you, but please try creating your own deep learning models! Much of the value in this experience will come from playing around with the code in your own way. \n\n# Workspace\nTo open this notebook, you have two options:\n- Go to the next page in the classroom (recommended)\n- Clone the repo from [Github](https://github.com/udacity/deep-learning) and open the notebook **StudentAdmissionsKeras.ipynb** in the **student_admissions_keras** folder. You can either download the repository with `git clone https://github.com/udacity/deep-learning.git`, or download it as an archive file from [this link](https://github.com/udacity/deep-learning/archive/master.zip).\n\n# Instructions\nThis is more of a follow-along lab. We'll show you the steps to build the network. However, at the end of the lab you'll be given the opportunity to improve the model, and try to improve on its performance. Here are the main steps in this lab.\n\n### Studying the data\nThe dataset has the following columns:\n- Student GPA (grades)\n- Score on the GRE (test)\n- Class rank (1-4)\n\nFirst, let's start by looking at the data. For that, we'll use the read_csv function in pandas.\n\n    import pandas as pd\n    data = pd.read_csv('student_data.csv')\n    print(data)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 439368,
+              "key": "1568bb44-f2cf-4ea8-8503-7c8c94e6f231",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59baed82_data/data.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1568bb44-f2cf-4ea8-8503-7c8c94e6f231",
+              "caption": "",
+              "alt": "",
+              "width": 394,
+              "height": 646,
+              "instructor_notes": null
+            },
+            {
+              "id": 439369,
+              "key": "d86e0394-0516-4983-9f35-94a900b35285",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here we can see that the first column is the label `y`, which corresponds to acceptance/rejection. Namely, a label of `1` means the student got accepted, and a label of `0` means the student got rejected.\n\nWhen we plot the data, we get the following graphs, which show that unfortunately, the data is not as nicely separable as we'd hope:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 439370,
+              "key": "a60651d6-aeee-432d-9a89-25fb0750ece8",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59baedcc_student-acceptance/student-acceptance.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a60651d6-aeee-432d-9a89-25fb0750ece8",
+              "caption": "",
+              "alt": "",
+              "width": 396,
+              "height": 266,
+              "instructor_notes": null
+            },
+            {
+              "id": 439371,
+              "key": "b5c655ae-29f1-411d-95d3-18678b121412",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "So one thing we can do is make one graph for each of the 4 ranks. In that case, we get this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 439372,
+              "key": "9e661743-b9cf-41b1-999e-614f491ea0ea",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59baee23_all-ranks/all-ranks.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9e661743-b9cf-41b1-999e-614f491ea0ea",
+              "caption": "",
+              "alt": "",
+              "width": 1514,
+              "height": 1074,
+              "instructor_notes": null
+            },
+            {
+              "id": 439373,
+              "key": "ec26c7c8-b024-4035-b661-af84a918cf16",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Pre-processing the data\nOk, there's a bit more hope here. It seems like the better grades and test scores the student has, the more likely they are to be accepted. And the rank has something to do with it. So what we'll do is, we'll one-hot encode the rank, and our 6 input variables will be:\n- Test (GPA)\n- Grades (GRE)\n- Rank 1\n- Rank 2\n- Rank 3\n- Rank 4.\n\nThe last 4 inputs will be binary variables that have a value of 1 if the student has that rank, or 0 otherwise.\n\nSo, first things first, let's notice that the test scores have a range of 800, while the grades have a range of 4. This is a huge discrepancy, and it will affect our training. Normally, the best thing to do is to normalize the scores so they are between 0 and 1. We can do this as follows:\n\n     data[\"gre\"] = data[\"gre\"]/800\n     data[\"gpa\"] = data[\"gpa\"]/4.0\n\nNow, we split our data input into X, and the labels y , and one-hot encode the output, so it appears as two classes (accepted and not accepted).\n\n     X = np.array(data)[:,1:]\n     y = keras.utils.to_categorical(np.array(data[\"admit\"]))\n\n### Building the model architecture\nAnd finally, we define the model architecture. We can use different architectures, but here's an example:\n\n     model = Sequential()\n     model.add(Dense(128, input_dim=6))\n     model.add(Activation('sigmoid'))\n     model.add(Dense(32))\n     model.add(Activation('sigmoid'))\n     model.add(Dense(2))\n     model.add(Activation('sigmoid'))\n     model.compile(loss = 'categorical_crossentropy', optimizer='adam', metrics=['accuracy'])\n     model.summary()\n\nThe error function is given by `categorical_crossentropy`, which is the one we've been using, but there are other options. There are several optimizers which you can choose from in order to improve your training. Here we use _adam_, but there are others that are useful, such as _rmsprop_. These use a variety of techniques that we'll outline in upcoming pages in this lesson.\n\nThe model summary will tell us the following:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 439374,
+              "key": "e933310a-f8cb-4594-8d6e-e038897dbfb0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59baee60_summary/summary.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e933310a-f8cb-4594-8d6e-e038897dbfb0",
+              "caption": "",
+              "alt": "",
+              "width": 1171,
+              "height": 648,
+              "instructor_notes": null
+            },
+            {
+              "id": 439375,
+              "key": "a39d9d57-9909-4440-8a0c-decbc56e6404",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Training the model\nNow, we train the model, with 1000 epochs. Don't worry about the batch_size, we'll learn about it soon.\n\n    model.fit(X_train, y_train, epochs=1000, batch_size=100, verbose=0)\n\n### Evaluating the model\nAnd finally, we can evaluate our model.\n\n     score = model.evaluate(X_train, y_train)\nResults may vary, but you should get somewhere over 70% accuracy.\n\nAnd there you go, you've trained your first neural network to analyze a dataset. Now, in the following pages, you'll learn many techniques to improve the training process.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 439888,
+          "key": "4d086d3f-17d5-4982-a5d7-595c6c1cd2e9",
+          "title": "Lab: Student Admissions in Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4d086d3f-17d5-4982-a5d7-595c6c1cd2e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439889,
+              "key": "7757119c-0fb3-426f-ab99-7613eaae8def",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view789caf36",
+              "pool_id": "jupyter",
+              "view_id": "2af14764-3c8f-488c-b8f6-1cd7db79e9a0",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/StudentAdmissionsKeras.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 308904,
+          "key": "b7683c31-5e82-4457-b061-070ff4188a41",
+          "title": "Training Optimization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b7683c31-5e82-4457-b061-070ff4188a41",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308905,
+              "key": "c3bd0375-9e85-479b-b776-28b9a649a5aa",
+              "title": "Training Optimization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UiGKhx9pUYc",
+                "china_cdn_id": "UiGKhx9pUYc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301727,
+          "key": "6ca15486-4db4-4731-89f3-06b704ef8455",
+          "title": "Early Stopping",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6ca15486-4db4-4731-89f3-06b704ef8455",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309322,
+              "key": "c4993845-a7a0-4f8a-a187-1706258224d0",
+              "title": "Model Complexity Graph",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NnS0FJyVcDQ",
+                "china_cdn_id": "NnS0FJyVcDQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301729,
+          "key": "75935645-a408-4685-bd9c-5f234e1b0761",
+          "title": "Regularization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "75935645-a408-4685-bd9c-5f234e1b0761",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309225,
+              "key": "e13c64d5-1b20-4f0e-a400-c28e54ee0b92",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Regularization",
+              "instructor_notes": ""
+            },
+            {
+              "id": 309672,
+              "key": "d6506b13-388c-4acf-aaf6-219ffb829f6a",
+              "title": "DL 53 Q Regularization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "KxROxcRsHL8",
+                "china_cdn_id": "KxROxcRsHL8.mp4"
+              }
+            },
+            {
+              "id": 308750,
+              "key": "d4a4a842-0003-430a-9db6-421f3c74afee",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/May/59113b25_regularization-quiz/regularization-quiz.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d4a4a842-0003-430a-9db6-421f3c74afee",
+              "caption": "",
+              "alt": null,
+              "width": 1920,
+              "height": 663,
+              "instructor_notes": null
+            },
+            {
+              "id": 308755,
+              "key": "93bfddd2-24ce-483f-b3be-d6b5b5455a5f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "93bfddd2-24ce-483f-b3be-d6b5b5455a5f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which gives a smaller error?",
+                "answers": [
+                  {
+                    "id": "a1494301677230",
+                    "text": "x1 + x2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1494301688642",
+                    "text": "10x1 + 10x2",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 355879,
+          "key": "2e0a0320-f6f0-4506-a6b5-0d913fac2fa1",
+          "title": "Regularization 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e0a0320-f6f0-4506-a6b5-0d913fac2fa1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462387,
+              "key": "3b4751ad-2881-435e-ba7f-75b95148d1e8",
+              "title": "Regularization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ndYnUrx8xvs",
+                "china_cdn_id": "ndYnUrx8xvs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 439332,
+          "key": "05d1b01f-191e-4b45-8e93-469aa0e05877",
+          "title": "Dropout",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05d1b01f-191e-4b45-8e93-469aa0e05877",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439333,
+              "key": "55e872df-6109-4a23-abc1-68aef4c09521",
+              "title": "Dropout",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ty6K6YiGdBs",
+                "china_cdn_id": "Ty6K6YiGdBs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 301735,
+          "key": "696fa20c-c948-464b-a024-bf65a3ee8813",
+          "title": "Local Minima",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "696fa20c-c948-464b-a024-bf65a3ee8813",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309393,
+              "key": "b34eafee-7673-41cc-9c1d-c38525105b2e",
+              "title": "Local Minima",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gF_sW_nY-xw",
+                "china_cdn_id": "gF_sW_nY-xw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308917,
+          "key": "f39bf14a-ddc9-4560-99b5-be8eff82fac6",
+          "title": "Vanishing Gradient",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f39bf14a-ddc9-4560-99b5-be8eff82fac6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309315,
+              "key": "891ee5a8-b5ef-497c-807e-3ba7b99ffde9",
+              "title": "Vanishing Gradient",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "W_JJm_5syFw",
+                "china_cdn_id": "W_JJm_5syFw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 462472,
+          "key": "c2aab1c9-2d8a-4e7a-82e4-cdfe7818ac34",
+          "title": "Other Activation Functions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c2aab1c9-2d8a-4e7a-82e4-cdfe7818ac34",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462474,
+              "key": "3c20b7e9-8eed-43c8-9c85-9a9b1fb0a3ca",
+              "title": "Other Activation Functions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "**Correction**: For the plots of _tanh_() and _relu_() in the first half of the video, the origin should be labeled with a value _y_ = 0, not 0.5.",
+              "video": {
+                "youtube_id": "kA-1vUt6cvQ",
+                "china_cdn_id": "kA-1vUt6cvQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 462473,
+          "key": "ff999e70-e14b-4940-bf70-567888d0e79a",
+          "title": "Batch vs Stochastic Gradient Descent",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ff999e70-e14b-4940-bf70-567888d0e79a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462475,
+              "key": "7890911d-6849-4d0c-97e3-1e3cf6f3b842",
+              "title": "Batch vs Stochastic Gradient Descent",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2p58rVgqsgo",
+                "china_cdn_id": "2p58rVgqsgo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308906,
+          "key": "153aaf4d-d2f7-49c4-8343-dd6cb04b35ac",
+          "title": "Learning Rate Decay",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "153aaf4d-d2f7-49c4-8343-dd6cb04b35ac",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308907,
+              "key": "dcb78aa0-01ec-43b6-a9d4-f6db59bca6cd",
+              "title": "Learning Rate",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TwJ8aSZoh2U",
+                "china_cdn_id": "TwJ8aSZoh2U.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308914,
+          "key": "61dacb5b-dc2b-4249-b326-8022baa18d62",
+          "title": "Random Restart",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "61dacb5b-dc2b-4249-b326-8022baa18d62",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309392,
+              "key": "f2cf2b27-e238-4ace-ad75-b8a6bea032de",
+              "title": "Random Restart",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "idyBBCzXiqg",
+                "china_cdn_id": "idyBBCzXiqg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308915,
+          "key": "d98afa37-4318-4203-9f99-4e2a64922bee",
+          "title": "Momentum",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d98afa37-4318-4203-9f99-4e2a64922bee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 310220,
+              "key": "2dd578e9-da77-470d-b924-9e593580c865",
+              "title": "Momentum",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "r-rYz_PEWC8",
+                "china_cdn_id": "r-rYz_PEWC8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 308412,
+          "key": "ff0ab4d8-5441-4d00-baa3-88735b503b76",
+          "title": "Optimizers in Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ff0ab4d8-5441-4d00-baa3-88735b503b76",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308447,
+              "key": "bf44fcee-1375-4ab1-9177-c8c7e8b90862",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Keras Optimizers\n\nThere are many optimizers in Keras, that we encourage you to explore further, in this [link](https://keras.io/optimizers/), or in this excellent [blog post](http://ruder.io/optimizing-gradient-descent/index.html#rmsprop). These optimizers use a combination of the tricks above, plus a few others. Some of the most common are:\n\n#### SGD\nThis is Stochastic Gradient Descent. It uses the following parameters:\n- Learning rate.\n- Momentum (This takes the weighted average of the previous steps, in order to get a bit of momentum and go over bumps, as a way to not get stuck in local minima).\n- Nesterov Momentum (This slows down the gradient when it's close to the solution).\n\n#### Adam\nAdam (Adaptive Moment Estimation) uses a more complicated exponential decay that consists of not just considering the average (first moment), but also the variance (second moment) of the previous steps.\n\n#### RMSProp\nRMSProp (RMS stands for Root Mean Squared Error) decreases the learning rate by dividing it by an exponentially decaying average of squared gradients. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 301737,
+          "key": "8d6ae663-f64d-4e91-b214-f70c2789c977",
+          "title": "Error Functions Around the World",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8d6ae663-f64d-4e91-b214-f70c2789c977",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 322778,
+              "key": "5ef6bc2a-f222-4ed2-bf04-d032e749f04f",
+              "title": "Error Functions Around the World",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "34AAcTECu2A",
+                "china_cdn_id": "34AAcTECu2A.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 439326,
+          "key": "5cb5938c-cf31-4749-88ca-32ee7b5f6bb2",
+          "title": "Neural Network Regression",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5cb5938c-cf31-4749-88ca-32ee7b5f6bb2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461344,
+              "key": "e2870b11-4f7a-46ab-ba44-6040df87e391",
+              "title": "Neural Network Regression",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "aUJCBqBfEnI",
+                "china_cdn_id": "aUJCBqBfEnI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 440723,
+          "key": "8ccd1106-2c84-4faf-9f1d-9a1cc09fc8a9",
+          "title": "Neural Networks Playground",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ccd1106-2c84-4faf-9f1d-9a1cc09fc8a9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 440725,
+              "key": "2a2a35e0-7aeb-45aa-b50b-80cc1c83854f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# A Visual and Interactive Guide to the Basics of Neural Networks",
+              "instructor_notes": ""
+            },
+            {
+              "id": 440724,
+              "key": "78706589-694c-46c1-8028-1a814a44fad1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59f7add3_nn/nn.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/78706589-694c-46c1-8028-1a814a44fad1",
+              "caption": "",
+              "alt": "",
+              "width": 1920,
+              "height": 1080,
+              "instructor_notes": null
+            },
+            {
+              "id": 440727,
+              "key": "f5e11502-5c23-403f-8747-e4fefb7e9c67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Jay Alammar, one of our Content Developers, has created this amazing neural networks playground, where you can see great visualizations and play with parameters in order to solve linear regression problems, and then try your luck with some neural network regression. Enjoy!\n\n[http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/](http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 309647,
+          "key": "6d1b6bc4-d9cc-46a1-b5b5-a7dae40458df",
+          "title": "Mini Project Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6d1b6bc4-d9cc-46a1-b5b5-a7dae40458df",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309648,
+              "key": "1ffc86d1-afd3-4d5f-b688-faf548cffc41",
+              "title": "Keras Lab",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "a50un22BsLI",
+                "china_cdn_id": "a50un22BsLI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 410785,
+          "key": "5e22aa8d-9d4d-4b83-8b34-9f606d0abee4",
+          "title": "Pre-Lab: IMDB Data in Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e22aa8d-9d4d-4b83-8b34-9f606d0abee4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439365,
+              "key": "19bccba1-e3ca-4bcd-a799-0cd691f188cc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Mini Project: Using Keras to analyze IMDB Movie Data\nNow, you're ready to shine! In this project, we will analyze a dataset from IMDB and use it to predict the sentiment analysis of a review.\n\n# Workspace\nTo open this notebook, you have two options:\n- Go to the next page in the classroom (recommended)\n- Clone the repo from [Github](https://github.com/udacity/deep-learning) and open the notebook **IMDB_in_Keras.ipynb** in the **imdb_keras** folder. You can either download the repository with `git clone https://github.com/udacity/deep-learning.git`, or download it as an archive file from [this link](https://github.com/udacity/deep-learning/archive/master.zip).\n\n# Instructions\nIn this lab, we will preprocess the data for you, and you'll be in charge of building and training the model in Keras.\n\n### The dataset\nThis lab uses a dataset of 25,000 [IMDB](http://www.imdb.com) reviews. Each review comes with a label. A label of 0 is given to a negative review, and a label of 1 is given to a positive review. The goal of this lab is to create a model that will predict the sentiment of a review, based on the words in the review. You can see more information about this dataset in the [Keras](https://keras.io/datasets) website.\n\nNow, the input already comes preprocessed for us for convenience. Each review is encoded as a sequence of indexes, corresponding to the words in the review. The words are ordered by frequency, so the integer 1 corresponds to the most frequent word  (\"the\"), the integer 2 to the second most frequent word, etc. By convention, the integer 0 corresponds to unknown words.\n\nThen, the sentence is turned into a vector by simply concatenating these integers. For instance, if the sentence is \"To be or not to be.\" and the indices of the words are as follows:\n- \"to\": 5\n- \"be\": 8\n- \"or\": 21\n- \"not\": 3\n\nThen the sentence gets encoded as the vector `[5,8,21,3,5,8]`.\n\n### Loading the data\nThe data comes preloaded in Keras, which means we don't need to open or read any files manually. The command to load it is the following, which will actually split the words into training and testing sets and labels!:\n\n```python\nfrom keras.datasets import imdb\n(x_train, y_train), (x_test, y_test) = imdb.load_data(path=\"imdb.npz\",\n                                                     num_words=None,\n                                                     skip_top=0,\n                                                     maxlen=None,\n                                                     seed=113,\n                                                     start_char=1,\n                                                     oov_char=2,\n                                                     index_from=3)\n```\nThe meanings of all of these arguments are [here](https://keras.io/datasets). But in a nutshell, the most important ones are:\n- **num_words**: Top most frequent words to consider. This is useful if you don't want to consider very obscure words such as \"Ultracrepidarian.\"\n- **skip_top**: Top words to ignore. This is useful if you don't want to consider the most common words. For example, the word \"the\" would add no information to the review, so we can skip it by setting `skip_top` to 2 or higher.\n\n### Pre-processing the data\nWe first prepare the data by one-hot encoding it into (0,1)-vectors as follows: If, for example, we have 10 words in our vocabulary, and the vector is (4,1,8), we'll turn it into the vector (1,0,0,1,0,0,0,1,0,0).\n\n### Building the model\nNow it's your turn to use all you've learned! You can build a neural network using Keras, train it, and evaluate it! Make sure you also use methods such as dropout or regularization, and good Keras optimizers to do this. A good accuracy to aim for is 85%. Can your model achieve this?\n\n### Help\nThis is a self-assessed lab. If you need any help or want to check your answers, feel free to check out the solutions notebook in the same folder, or click [here](https://github.com/udacity/deep-learning/blob/master/IMDB-keras/IMDB_In_Keras_Solutions.ipynb).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 439890,
+          "key": "05134e3b-883e-4163-b821-49aa2f533c29",
+          "title": "Lab: IMDB Data in Keras",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05134e3b-883e-4163-b821-49aa2f533c29",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439891,
+              "key": "7dff5601-5da4-4fa9-940a-dcd11cba6fa2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6583101a",
+              "pool_id": "jupyter",
+              "view_id": "3ccaf38f-91db-4592-ae29-ff65fac9e792",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/IMDB_In_Keras.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 439849,
+          "key": "0541da7d-2d80-4783-b3b6-2fd143a0d291",
+          "title": "Outro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0541da7d-2d80-4783-b3b6-2fd143a0d291",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 439850,
+              "key": "35b5f658-99bb-4ccb-8d76-94e63513b132",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wOiUQDgGD9E",
+                "china_cdn_id": "wOiUQDgGD9E.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

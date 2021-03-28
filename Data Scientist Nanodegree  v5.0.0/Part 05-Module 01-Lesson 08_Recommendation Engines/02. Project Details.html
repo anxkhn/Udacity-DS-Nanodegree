@@ -1,0 +1,213 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Recommendation Engines</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Project Workspace.html">03. Project Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Recommendations with IBM.html">Project Description - Recommendations with IBM</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Recommendations with IBM.html">Project Rubric - Recommendations with IBM</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Project Details</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="recommendations-with-ibm">Recommendations with IBM</h3>
+<h4 id="introduction">Introduction</h4>
+<p>For this project you will analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles you think they will like.  Below you can see an example of what the dashboard could look like displaying articles on the IBM Watson Platform.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-09-17-at-3.40.30-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Though the above dashboard is just showing the newest articles, you could imagine having a recommendation board available here that shows the articles that are most pertinent to a specific user.  </p>
+<p>In order to determine which articles to show to each user, you will be performing a study of the data available on the IBM Watson Studio platform.  You can create your own account to become a part of their community, and get a better understanding of their data <a href="https://dataplatform.cloud.ibm.com/" rel="noopener noreferrer" target="_blank">by creating an account on the platform here</a>.</p>
+<h3 id="your-tasks">Your Tasks</h3>
+<p>Your project will be divided into the following tasks</p>
+<p>I. <strong>Exploratory Data Analysis</strong><br></p>
+<p>Before making recommendations of any kind, you will need to explore the data you are working with for the project.  Dive in to see what you can find.  There are some basic, required questions to be answered about the data you are working with throughout the rest of the notebook.  Use this space to explore, before you dive into the details of your recommendation system in the later sections.</p>
+<p>II. <strong>Rank Based Recommendations</strong><br></p>
+<p>To get started in building recommendations, you will first find the most popular articles simply based on the most interactions.  Since there are no ratings for any of the articles, it is easy to assume the articles with the most interactions are the most popular.  These are then the articles we might recommend to new users (or anyone depending on what we know about them).</p>
+<p>III. <strong>User-User Based Collaborative Filtering</strong><br></p>
+<p>In order to build better recommendations for the users of IBM's platform, we could look at users that are similar in terms of the items they have interacted with.  These items could then be recommended to the similar users.  This would be a step in the right direction towards more personal recommendations for the users.  You will implement this next.</p>
+<p>IV. <strong>Content Based Recommendations (EXTRA - NOT REQUIRED)</strong><br></p>
+<p>Given the amount of content available for each article, there are a number of different ways in which someone might choose to implement a content based recommendations system.  Using your NLP skills, you might come up with some extremely creative ways to develop a content based recommendation system.  You are encouraged to complete a content based recommendation system, but not required to do so to complete this project.</p>
+<p>V. <strong>Matrix Factorization</strong><br></p>
+<p>Finally, you will complete a machine learning approach to building recommendations.  Using the user-item interactions, you will build out a matrix decomposition.  Using your decomposition, you will get an idea of how well you can predict new articles an individual might interact with (spoiler alert - it isn't great).  You will finally discuss which methods you might use moving forward, and how you might test how well your recommendations are working for engaging users.</p>
+<p>Before you submit your work, check the <a href="https://review.udacity.com/#!/rubrics/2322/view" rel="noopener noreferrer" target="_blank">RUBRIC</a> to make sure you meet all of the rubric items.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Project Workspace.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Project Details')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
