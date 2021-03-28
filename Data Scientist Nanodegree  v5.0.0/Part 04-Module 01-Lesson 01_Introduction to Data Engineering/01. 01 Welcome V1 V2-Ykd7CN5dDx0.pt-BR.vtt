@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.824 --> 00:00:04.660
+INTRODUÇÃO
+À ENGENHARIA DE DADOS
+
+00:00:05.239 --> 00:00:07.450
+Bem-vindo ao curso
+de engenharia de dados
+
+00:00:07.483 --> 00:00:09.115
+para cientistas de dados.
+
+00:00:09.148 --> 00:00:12.279
+Vamos apresentá-lo a habilidades
+que engenheiros de dados usam
+
+00:00:12.312 --> 00:00:14.255
+para coletar e manipular dados
+
+00:00:14.288 --> 00:00:16.493
+e explicar como incorporar
+essas habilidades
+
+00:00:16.526 --> 00:00:18.795
+no seu trabalho
+como cientista de dados.
+
+00:00:18.828 --> 00:00:22.186
+Então, o que exatamente
+os engenheiros de dados fazem?
+
+00:00:22.858 --> 00:00:26.570
+Bem, eles coletam
+todos os tipos de dados
+
+00:00:26.603 --> 00:00:28.218
+de diferentes fontes,
+
+00:00:28.251 --> 00:00:30.386
+processam e combinam
+esses dados
+
+00:00:30.419 --> 00:00:35.113
+e armazenam os dados limpos
+em um lugar de fácil acesso.
+
+00:00:35.375 --> 00:00:39.306
+O objetivo é deixar tudo pronto
+para que um cientista de dados,
+
+00:00:39.339 --> 00:00:42.843
+analista de negócios
+ou qualquer pessoa na empresa
+
+00:00:42.876 --> 00:00:46.346
+possa usar esses dados
+sem muita dificuldade.
+
+00:00:47.154 --> 00:00:49.633
+Engenheiros de dados
+automatizam esse processo
+
+00:00:49.666 --> 00:00:53.353
+escrevendo programas de software
+chamados "pipeline de dados".
+
+00:00:53.386 --> 00:00:56.101
+Esses engenheiros trabalham
+com sistemas enormes
+
+00:00:56.134 --> 00:00:59.426
+que eles constroem, testam
+e mantêm com códigos.
+
+00:00:59.459 --> 00:01:02.796
+Recentemente, engenheiros têm
+recebido pedidos para automatizar
+
+00:01:02.829 --> 00:01:05.890
+e dimensionar algoritmos
+de aprendizado de máquina também.
+
+00:01:05.923 --> 00:01:08.674
+Eles estão mais próximos
+de engenheiros de software
+
+00:01:08.707 --> 00:01:10.874
+do que de cientistas de dados.
+
+00:01:12.278 --> 00:01:15.226
+Como cientista de dados,
+é importante que você tenha
+
+00:01:15.259 --> 00:01:18.153
+ao menos algumas habilidades
+de engenharia de dados.
+
+00:01:18.186 --> 00:01:21.075
+Você estará sempre
+comunicando aos engenheiros
+
+00:01:21.108 --> 00:01:25.579
+os dados de que você precisa
+e o formato em que eles devem estar.
+
+00:01:26.434 --> 00:01:29.971
+Eu admito que a parte mais
+fascinante da ciência de dados,
+
+00:01:30.004 --> 00:01:32.042
+para mim, é a aprendizagem
+de máquina,
+
+00:01:32.075 --> 00:01:34.426
+mas não podemos
+criar recursos e treinar
+
+00:01:34.459 --> 00:01:38.346
+um modelo de aprendizagem de máquina
+com dados confusos e mal formatados.
+
+00:01:38.379 --> 00:01:40.891
+É aí que entra
+a engenharia de dados.
+
+00:01:42.314 --> 00:01:46.249
+Vamos detalhar qual é
+exatamente o papel
+
+00:01:46.282 --> 00:01:50.026
+de um engenheiro de dados
+e o que você fará nesta aula.
+

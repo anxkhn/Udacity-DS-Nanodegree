@@ -1,0 +1,1099 @@
+{
+  "data": {
+    "lesson": {
+      "id": 672943,
+      "key": "0de0349a-13cf-4bc1-9821-2fa5ddedca24",
+      "title": "NLP Pipelines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In order to complete the project at the end of the course, you will need some natural language processing skills. Here you will practice engineering machine learning features from text data.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/0de0349a-13cf-4bc1-9821-2fa5ddedca24/672943/1537291291497/NLP+Pipelines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/0de0349a-13cf-4bc1-9821-2fa5ddedca24/672943/1537291283997/NLP+Pipelines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 682594,
+          "key": "57075066-8ea5-46dc-8ac6-5fb71ac1330a",
+          "title": "NLP and Pipelines",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "57075066-8ea5-46dc-8ac6-5fb71ac1330a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682596,
+              "key": "83bbe45c-2091-4792-8aa0-27b50cafaebb",
+              "title": "Natural Language Processing",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UQBxJzoCp-I",
+                "china_cdn_id": "UQBxJzoCp-I.mp4"
+              }
+            },
+            {
+              "id": 682634,
+              "key": "ed47bc53-2cea-4cda-973e-6dd9485c887e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Natural Language Processing Pipelines\nIn this lesson, you'll be introduced to some of the steps involved in a NLP pipeline:\n1. Text Processing\n  - Cleaning\n  - Normalization\n  - Tokenization\n  - Stop Word Removal\n  - Part of Speech Tagging\n  - Named Entity Recognition\n  - Stemming and Lemmatization\n2. Feature Extraction\n  - Bag of Words\n  -  TF-IDF\n  - Word Embeddings\n3. Modeling",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 682597,
+          "key": "e20497f0-b9f6-44ff-8692-b4e3826bd390",
+          "title": "How NLP Pipelines Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e20497f0-b9f6-44ff-8692-b4e3826bd390",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682598,
+              "key": "da1417ac-8136-4160-b5d1-c7335b46d860",
+              "title": "NLP M1-L1 01 NLP Pipeline",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vJx6oKlu_MM",
+                "china_cdn_id": "vJx6oKlu_MM.mp4"
+              }
+            },
+            {
+              "id": 682635,
+              "key": "f10f9728-d6ea-4258-aadd-95648b72011c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How NLP Pipelines Work\n\nThe 3 stages of an NLP pipeline are: Text Processing > Feature Extraction > Modeling.\n\n- __Text Processing:__ Take raw input text, clean it, normalize it, and convert it into a form that is suitable for feature extraction.\n- __Feature Extraction:__ Extract and produce feature representations that are appropriate for the type of NLP task you are trying to accomplish and the type of model you are planning to use.\n- __Modeling:__ Design a statistical or machine learning model, fit its parameters to training data, use an optimization procedure, and then use it to make predictions about unseen data.\n\nThis process isn't always linear and may require additional steps.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 672961,
+          "key": "278004b2-254f-4e83-bcc4-dfb50105535a",
+          "title": "Text Processing",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "278004b2-254f-4e83-bcc4-dfb50105535a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682659,
+              "key": "041bf1b3-ebe0-4f17-8101-2673cb54f5aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Stage 1: Text Processing\nThe first chunk of this lesson will explore the steps involved in __text processing__, the first stage of the NLP pipeline.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 682661,
+              "key": "b62f9ebe-569c-46b7-a114-e6a901a2cd33",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Why Do We Need to Process Text?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672964,
+              "key": "b17dc2e9-7f8b-4875-8a60-97d02ac41876",
+              "title": "Text Processing",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Source: https://en.wikipedia.org/wiki/Kingfisher",
+              "video": {
+                "youtube_id": "pqheVyctkNQ",
+                "china_cdn_id": "pqheVyctkNQ.mp4"
+              }
+            },
+            {
+              "id": 682667,
+              "key": "aec81f80-8c8d-48b8-b94c-ed4b1da7ba67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- __Extracting plain text:__ Textual data can come from a wide variety of sources: the web, PDFs, word documents, speech recognition systems, book scans, etc. Your goal is to extract plain text that is free of any source specific markup or constructs that are not relevant to your task.\n- __Reducing complexity:__ Some features of our language like capitalization, punctuation, and common words such as _a, of,_ and _the,_ often help provide structure, but don't add much meaning. Sometimes it's best to remove them if that helps reduce the complexity of the procedures you want to apply later.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 682663,
+              "key": "68f2d417-d600-4dfe-98fe-e4417b00dec2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## What Text Processing Will You Do in This Lesson?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672970,
+              "key": "802da40a-8116-4895-a925-1bd7423518b3",
+              "title": "Text Processing",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "6LO6I5M18PQ",
+                "china_cdn_id": "6LO6I5M18PQ.mp4"
+              }
+            },
+            {
+              "id": 682670,
+              "key": "dbee358e-527e-49ed-9b13-e048ed6ccf6c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You'll prepare text data from different sources with the following text processing steps:\n1. __Cleaning__ to remove irrelevant items, such as HTML tags\n2. __Normalizing__ by converting to all lowercase and removing punctuation\n3. Splitting text into words or __tokens__\n4. Removing words that are too common, also known as __stop words__\n5. Identifying different __parts of speech__ and __named entities__\n6. Converting words into their dictionary forms, using __stemming and lemmatization__\n\nAfter performing these steps, your text will capture the essence of what was being conveyed in a form that is easier to work with.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 682601,
+          "key": "f1aaabae-f185-47a0-8b59-e40b8287841b",
+          "title": "Cleaning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f1aaabae-f185-47a0-8b59-e40b8287841b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682674,
+              "key": "84c55e81-1eb0-4c1b-b0f6-7e467e563472",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cleaning\nLet's walk through an example of cleaning text data from a popular source - the web. You'll be introduced to helpful tools in working with this data, including the __requests__ library, __regular expressions__, and __Beautiful Soup__.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 682602,
+              "key": "426c151b-6e5e-47c6-8067-4c24e2e649a8",
+              "title": "Cleaning",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "__Note:__ The website used in this example has since been updated with a new layout. In the next page, you'll work through the steps shown here for the new web page.",
+              "video": {
+                "youtube_id": "qawXp9DPV6I",
+                "china_cdn_id": "qawXp9DPV6I.mp4"
+              }
+            },
+            {
+              "id": 682617,
+              "key": "8d8818e3-bc1c-4a02-a6ef-667def968dcc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Documentation for Python Libraries:\n- [Requests](http://docs.python-requests.org/en/master/user/quickstart/#make-a-request)\n- [Regular Expressions](https://docs.python.org/3/library/re.html)\n- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 677029,
+          "key": "5f444f86-e479-44d0-8663-ca5556da9a30",
+          "title": "Notebook: Cleaning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5f444f86-e479-44d0-8663-ca5556da9a30",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677031,
+              "key": "710d7419-c15f-4d99-94a2-6e1e8d755aee",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rJ2F+cAm7",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/cleaning_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682604,
+          "key": "fd31fb5e-7713-47e1-be6b-00e24039e1b0",
+          "title": "Normalization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fd31fb5e-7713-47e1-be6b-00e24039e1b0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682614,
+              "key": "e89f056d-5745-4750-bfaf-1042c800ebae",
+              "title": "Normalization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eOV2UUY8vtM",
+                "china_cdn_id": "eOV2UUY8vtM.mp4"
+              }
+            },
+            {
+              "id": 682615,
+              "key": "152c01e6-40f4-4807-af7b-f090fc1cd4f3",
+              "title": "Quiz: Punctuation Removal",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "152c01e6-40f4-4807-af7b-f090fc1cd4f3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Is it better to just remove punctuation characters, or replace each with a space?",
+                "answers": [
+                  {
+                    "id": "a1532725044217",
+                    "text": "Remove",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1532725063545",
+                    "text": "Replace with a space",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 677041,
+          "key": "830a190e-7ea2-4c9b-9066-73f1c4683966",
+          "title": "Notebook: Normalization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "830a190e-7ea2-4c9b-9066-73f1c4683966",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677050,
+              "key": "f519c10f-6c31-4c03-8065-68565e56695b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BykzOqCmX",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/normalization_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682605,
+          "key": "efb58dda-f94b-4eaa-bf4b-586d27e2ab78",
+          "title": "Tokenization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "efb58dda-f94b-4eaa-bf4b-586d27e2ab78",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682616,
+              "key": "dbb04bbd-4f21-43e0-8663-420002c5c601",
+              "title": "Tokenization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4Ieotbeh4u8",
+                "china_cdn_id": "4Ieotbeh4u8.mp4"
+              }
+            },
+            {
+              "id": 682632,
+              "key": "c58eb306-e064-42d8-9ea3-6e360b5bf394",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Tokenization\n\nReference:\n- `nltk.tokenize` package: http://www.nltk.org/api/nltk.tokenize.html",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 677088,
+          "key": "a805592b-0b5d-4648-9c60-635683c8d262",
+          "title": "Notebook: Tokenization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a805592b-0b5d-4648-9c60-635683c8d262",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677090,
+              "key": "e0eff9bb-f238-4480-a048-c39fb379788e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-Hkx1DjC7m",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/tokenization_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682606,
+          "key": "4140d6a1-cc84-4d03-96f3-0597ade25a12",
+          "title": "Stop Word Removal",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4140d6a1-cc84-4d03-96f3-0597ade25a12",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682619,
+              "key": "b3486eea-4b45-43af-b220-357ee2bba394",
+              "title": "Stop Word Removal",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WAU_Ij0GJbw",
+                "china_cdn_id": "WAU_Ij0GJbw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677091,
+          "key": "f8b1d25c-dc82-4d6c-a3b4-6d1838bc0245",
+          "title": "Notebook: Stop Words",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f8b1d25c-dc82-4d6c-a3b4-6d1838bc0245",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677092,
+              "key": "ee009ae2-0fb2-4f18-a380-d302ad5ba5d0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-By1zti0mm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/stop_words_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682607,
+          "key": "456b72d6-4fe3-42c6-90cc-5542347696af",
+          "title": "Part-of-Speech Tagging",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "456b72d6-4fe3-42c6-90cc-5542347696af",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682621,
+              "key": "7cb6e87a-5c0e-4c9d-a86f-fe0427d6efa5",
+              "title": "Part-of-Speech Tagging",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WFEu8bXI5OA",
+                "china_cdn_id": "WFEu8bXI5OA.mp4"
+              }
+            },
+            {
+              "id": 682620,
+              "key": "ba42be34-305d-4094-a26e-4bf05cefd5e0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**Note**: Part-of-speech tagging using a predefined grammar like this is a simple, but limited, solution. It can be very tedious and error-prone for a large corpus of text, since you have to account for all possible sentence structures and tags!\n\nThere are other more advanced forms of POS tagging that can learn sentence structures and tags from given data, including Hidden Markov Models (HMMs) and Recurrent Neural Networks (RNNs).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 682608,
+          "key": "defd9b07-5bec-4ddb-bf7b-3c47ee5cadf8",
+          "title": "Named Entity Recognition",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "defd9b07-5bec-4ddb-bf7b-3c47ee5cadf8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682622,
+              "key": "c41d2b54-6823-4eae-8575-7a3753524652",
+              "title": "Named Entity Recognition",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QUQu2nsE7vE",
+                "china_cdn_id": "QUQu2nsE7vE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677094,
+          "key": "b6ecd7c4-baa3-4c53-a5dc-f3e391501e7b",
+          "title": "Notebook: POS and NER",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b6ecd7c4-baa3-4c53-a5dc-f3e391501e7b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677096,
+              "key": "e3d0cae1-decf-49ca-a073-94ab52b0446a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rJRCYjAX7",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/pos_ner_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 682609,
+          "key": "7cef55a5-337c-4ebd-93b9-237220982488",
+          "title": "Stemming and Lemmatization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7cef55a5-337c-4ebd-93b9-237220982488",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682623,
+              "key": "e3f645ca-4da7-4069-a0a3-099ba4a0cb0a",
+              "title": "Stemming And Lemmatization",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7Gjf81u5hmw",
+                "china_cdn_id": "7Gjf81u5hmw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677097,
+          "key": "a83ef091-9bb4-4b8c-a949-bc8fc83ac772",
+          "title": "Notebook: Stemming and Lemmatization",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a83ef091-9bb4-4b8c-a949-bc8fc83ac772",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677098,
+              "key": "52b3ece3-826a-40d0-8c5e-96416b3ea004",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-SJ9WRjCXQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/stem_lemmatize_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 673041,
+          "key": "a51c0cd3-6535-445d-8cd5-d35cac1a6535",
+          "title": "Text Processing Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a51c0cd3-6535-445d-8cd5-d35cac1a6535",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677104,
+              "key": "a8375ab3-be92-4f68-a193-7822de523de1",
+              "title": "Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zKYEvRd2XmI",
+                "china_cdn_id": "zKYEvRd2XmI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 682610,
+          "key": "080d1f72-9752-4a86-b451-24eff3f2b3c0",
+          "title": "Feature Extraction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "080d1f72-9752-4a86-b451-24eff3f2b3c0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682664,
+              "key": "66172b83-277f-45e9-bf5f-6c7ce782ce64",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Stage 2: Feature Extraction",
+              "instructor_notes": ""
+            },
+            {
+              "id": 682624,
+              "key": "2a966227-0038-4be8-99aa-6f856f3b2b78",
+              "title": "Feature Extraction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UgENzCmfFWE",
+                "china_cdn_id": "UgENzCmfFWE.mp4"
+              }
+            },
+            {
+              "id": 682618,
+              "key": "b0152fce-e658-4ca6-8f2f-c031465ee6d4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "WordNet visualization tool: http://mateogianolio.com/wordnet-visualization/",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 682611,
+          "key": "f52e41b8-28ba-49a3-ad85-21fd97f07c27",
+          "title": "Bag of Words",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f52e41b8-28ba-49a3-ad85-21fd97f07c27",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682625,
+              "key": "b1f86bb8-731a-4524-8bbb-631059c79ee8",
+              "title": "Bag Of Words",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "A7M1z8yLl0w",
+                "china_cdn_id": "A7M1z8yLl0w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 682612,
+          "key": "f192dcdf-c2d3-4618-ad45-e20322cd3ac5",
+          "title": "TF-IDF",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f192dcdf-c2d3-4618-ad45-e20322cd3ac5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682627,
+              "key": "e846758a-3cfd-472a-9552-c3d5690126f9",
+              "title": "02 TF-IDF",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LYYWIrWbBq4",
+                "china_cdn_id": "LYYWIrWbBq4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 673051,
+          "key": "d4afcabc-30e7-45bf-b22a-51504176101a",
+          "title": "Notebook: Bag of Words and TF-IDF",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d4afcabc-30e7-45bf-b22a-51504176101a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677111,
+              "key": "dfaf7143-d793-410e-af68-cb5f038049ae",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewByehtb5077",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-Hy4_W30mm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/bow_tfidf_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 677051,
+          "key": "6cef7712-e3c8-4ce3-9f93-1058dfdaf433",
+          "title": "One-Hot Encoding",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6cef7712-e3c8-4ce3-9f93-1058dfdaf433",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677053,
+              "key": "3954e5f2-7e96-4a81-9ad8-75bec77cda5c",
+              "title": "One-Hot Encoding",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "a0j1CDXFYZI",
+                "china_cdn_id": "a0j1CDXFYZI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677052,
+          "key": "abc42874-24ca-4b65-9046-a7bee7f80eb8",
+          "title": "Word Embeddings",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "abc42874-24ca-4b65-9046-a7bee7f80eb8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677054,
+              "key": "2ccd08bb-f041-4606-90d3-8b38b2c6ba1b",
+              "title": "Word Embeddings",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4mM_S9L2_JQ",
+                "china_cdn_id": "4mM_S9L2_JQ.mp4"
+              }
+            },
+            {
+              "id": 682666,
+              "key": "4b11414a-6e14-419f-8761-11996f4a02e1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Word Embeddings\nFor more on word embeddings, take a look at the optional content at the end of the lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 682613,
+          "key": "b11be4d3-5f1a-41d5-9879-a30097eb9cfc",
+          "title": "Modeling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b11be4d3-5f1a-41d5-9879-a30097eb9cfc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682665,
+              "key": "3999465f-b936-4a6f-9abc-c805afa41435",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Stage 3: Modeling",
+              "instructor_notes": ""
+            },
+            {
+              "id": 682628,
+              "key": "890b9f83-0b99-4068-b431-d510e91adfc8",
+              "title": "Modeling",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "P4w_2rkxBvE",
+                "china_cdn_id": "P4w_2rkxBvE.mp4"
+              }
+            },
+            {
+              "id": 682651,
+              "key": "a6019e51-3a13-42bc-b260-8c260e51a41a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Modeling\nThe final stage of the NLP pipeline is __modeling__, which includes designing a statistical or machine learning model, fitting its parameters to training data, using an optimization procedure, and then using it to make predictions about unseen data.\n\nThe nice thing about working with numerical features is that it allows you to choose from all machine learning models or even a combination of them.\n\nOnce you have a working model, you can deploy it as a web app, mobile app, or integrate it with other products and services. The possibilities are endless!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 677055,
+          "key": "60dac861-281a-4af5-9610-518221ee3c02",
+          "title": "[OPTIONAL] Word2Vec",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "60dac861-281a-4af5-9610-518221ee3c02",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677059,
+              "key": "14760cb6-8040-4ed2-9917-b770f5e3bbc4",
+              "title": "Word2Vec",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7jjappzGRe0",
+                "china_cdn_id": "7jjappzGRe0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677056,
+          "key": "d5b49a65-0a2b-401e-8989-f7341179519f",
+          "title": "[OPTIONAL] GloVe",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d5b49a65-0a2b-401e-8989-f7341179519f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677060,
+              "key": "993e7706-4b5b-4436-ba6f-7040cb4c6d13",
+              "title": "GloVe",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "KK3PMIiIn8o",
+                "china_cdn_id": "KK3PMIiIn8o.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677057,
+          "key": "de9d37b5-a8b4-4d30-b04e-71fa2fd4de97",
+          "title": "[OPTIONAL] Embeddings for Deep Learning",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "de9d37b5-a8b4-4d30-b04e-71fa2fd4de97",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677061,
+              "key": "02d7953a-90fb-4e7e-99ef-5722cebc04a1",
+              "title": "Embeddings For Deep Learning",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gj8u1KG0H2w",
+                "china_cdn_id": "gj8u1KG0H2w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 677058,
+          "key": "0859039b-032c-4c0c-a634-3bb1ada2dbb0",
+          "title": "[OPTIONAL] t-SNE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0859039b-032c-4c0c-a634-3bb1ada2dbb0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 677062,
+              "key": "8686aef8-232d-4eb5-bf94-b6f7e60fb93d",
+              "title": "T-SNE",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xxcK8oZ6_WE",
+                "china_cdn_id": "xxcK8oZ6_WE.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

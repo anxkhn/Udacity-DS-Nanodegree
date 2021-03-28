@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.030 --> 00:00:08.445
+You have a really cool project ahead of you.
+
+00:00:08.445 --> 00:00:10.935
+Our partners at Figure Eight are providing
+
+00:00:10.935 --> 00:00:15.405
+pre-labeled tweets and text messages from real life disasters.
+
+00:00:15.405 --> 00:00:19.500
+Your task is to repair this data with an ETL pipeline
+
+00:00:19.500 --> 00:00:24.215
+and then use a machine learning pipeline to build a supervised learning model.
+
+00:00:24.215 --> 00:00:28.410
+Before you start, Robert is going to give us some background on where
+
+00:00:28.410 --> 00:00:32.920
+the data set came from and how Figure Eight prepare the data for us.
+
+00:00:32.920 --> 00:00:36.570
+Thank you. So, this is one of one most important problems that
+
+00:00:36.570 --> 00:00:40.390
+we're trying to solve in data science and machine learning right now.
+
+00:00:40.390 --> 00:00:43.760
+Following a disaster, typically you will get
+
+00:00:43.760 --> 00:00:47.835
+millions and millions of communications either direct or via social media,
+
+00:00:47.835 --> 00:00:51.140
+right at the time when disaster response organizations have
+
+00:00:51.140 --> 00:00:55.660
+the least capacity to filter and then pull out the messages which are the most important.
+
+00:00:55.660 --> 00:00:59.020
+Often it really is only one in every thousand messages that
+
+00:00:59.020 --> 00:01:02.510
+might be relevant to the exact response professionals.
+
+00:01:02.510 --> 00:01:05.390
+So, the way that disasters are typically responded to
+
+00:01:05.390 --> 00:01:08.510
+is that different organizations will take care of different parts of the problem.
+
+00:01:08.510 --> 00:01:10.640
+So, one organization one care about water,
+
+00:01:10.640 --> 00:01:15.045
+another will care about blocked roads another will care about medical supplies.
+
+00:01:15.045 --> 00:01:16.425
+So, when you look at the data,
+
+00:01:16.425 --> 00:01:17.480
+you'll see that these are
+
+00:01:17.480 --> 00:01:20.970
+the categories that we have pulled out for each of these data sets.
+
+00:01:20.970 --> 00:01:23.320
+So, we actually used Figure Eight from many
+
+00:01:23.320 --> 00:01:25.955
+of the disasters from which these messages are taken.
+
+00:01:25.955 --> 00:01:29.340
+We've then combined these data sets and relabeled them,
+
+00:01:29.340 --> 00:01:33.325
+so that there are consistent labels across their different disasters.
+
+00:01:33.325 --> 00:01:37.180
+This is to allow you to investigate the different trends that you
+
+00:01:37.180 --> 00:01:41.155
+might be able to find and to build supervised machine learning models.
+
+00:01:41.155 --> 00:01:43.220
+So, you'll see for example,
+
+00:01:43.220 --> 00:01:47.015
+when you look at a keyword like water that's actually
+
+00:01:47.015 --> 00:01:49.010
+a very small percent of the time that that will
+
+00:01:49.010 --> 00:01:51.860
+map to someone who needs fresh drinking water.
+
+00:01:51.860 --> 00:01:56.095
+Also that we'll miss people who say they're thirsty but don't use the word water.
+
+00:01:56.095 --> 00:01:59.510
+So, supervised machine learning based approaches are going
+
+00:01:59.510 --> 00:02:02.950
+to be a lot more accurate than anyone could do with keyword searching.
+
+00:02:02.950 --> 00:02:07.130
+But this is actually a big gap right now in disaster response contexts.
+
+00:02:07.130 --> 00:02:09.830
+So I, really look forward to seeing what you
+
+00:02:09.830 --> 00:02:12.650
+build in your projects and hopefully discover
+
+00:02:12.650 --> 00:02:14.330
+new trends and new ways of building
+
+00:02:14.330 --> 00:02:18.745
+machine learning models that can help us respond to future disasters.
+
+00:02:18.745 --> 00:02:23.455
+One of my favorite parts about this project is how meaningful the work is.
+
+00:02:23.455 --> 00:02:26.270
+Think about the benefits this solution brings to
+
+00:02:26.270 --> 00:02:30.100
+people affected by natural disasters around the world.
+
+00:02:30.100 --> 00:02:34.180
+Good luck with your projects and I look forward to seeing the results.
+

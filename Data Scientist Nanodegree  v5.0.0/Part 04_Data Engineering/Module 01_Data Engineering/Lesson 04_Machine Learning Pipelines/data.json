@@ -1,0 +1,966 @@
+{
+  "data": {
+    "lesson": {
+      "id": 673200,
+      "key": "d64b867f-541b-491d-b704-b91abebab4d5",
+      "title": "Machine Learning Pipelines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "You'll use the Scikit-Learn package to code a machine learning pipeline. With these skills, you can ingest data, create features, and train a machine learning algorithm in just one step.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/d64b867f-541b-491d-b704-b91abebab4d5/673200/1581445568267/Machine+Learning+Pipelines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/d64b867f-541b-491d-b704-b91abebab4d5/673200/1581445563600/Machine+Learning+Pipelines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 675052,
+          "key": "a6a5992b-fce4-4f90-bd76-00a53323cde7",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a6a5992b-fce4-4f90-bd76-00a53323cde7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690811,
+              "key": "51e5ab1c-6466-4835-b824-31cc5b1ec19c",
+              "title": "01 Intro V1 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Zl_es7xtSqk",
+                "china_cdn_id": "Zl_es7xtSqk.mp4"
+              }
+            },
+            {
+              "id": 675053,
+              "key": "5d5e8eb1-737b-4a66-83ad-53c9dc43acdf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction\nWelcome to this lesson on ML Pipelines! Here, we'll cover:\n- Advantages of Machine Learning Pipelines\n- Scikit-learn Pipeline\n- Scikit-learn Feature Union\n- Pipelines and Grid Search\n- Case Study",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675123,
+          "key": "fd9eaf1f-7c9d-4ff8-92e7-e3a28944ba59",
+          "title": "Corporate Messaging Case Study",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fd9eaf1f-7c9d-4ff8-92e7-e3a28944ba59",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715065,
+              "key": "e845b56a-fd16-40f0-b06d-425bfa3e8285",
+              "title": "Corporate Messaging Case Study",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xnDsUsrF884",
+                "china_cdn_id": "xnDsUsrF884.mp4"
+              }
+            },
+            {
+              "id": 714721,
+              "key": "41ef9066-2c69-4ec4-b812-789ca6deb90d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Corporate Messaging Case Study\nThis corporate message data is from one of the free datasets provided on the [Figure Eight Platform](https://www.figure-eight.com/data-for-everyone/), licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).\n\nNext, you'll use NLP to process text data, much like what you'll be doing in the project.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 679782,
+          "key": "d43a8d6b-c159-4d29-a006-333f9a8dcbb0",
+          "title": "Case Study: Clean and Tokenize",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d43a8d6b-c159-4d29-a006-333f9a8dcbb0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679819,
+              "key": "efb0b3fa-3876-45e1-9f0e-4dc4bdded209",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-HJN49w14Q",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/clean_tokenize.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679785,
+          "key": "24022ef1-af8b-4fe3-a901-3786e98b402e",
+          "title": "Solution: Clean and Tokenize",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "24022ef1-af8b-4fe3-a901-3786e98b402e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679790,
+              "key": "4cb7b87a-cee8-4f8b-91e1-4e55eb145029",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\n# download necessary NLTK data\nimport nltk\nnltk.download(['punkt', 'wordnet'])\n\n# import statements\nimport re\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\nX, y = load_data()\nfor message in X[:5]:\n    tokens = tokenize(message)\n    print(message)\n    print(tokens, '\\n')\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 679796,
+              "key": "b135c8d4-c815-4b8a-b9cc-e8226cade76c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\n```txt\nBarclays CEO stresses the importance of regulatory and cultural reform in financial services at Brussels conference  http://t.co/Ge9Lp7hpyG\n['barclays', 'ceo', 'stress', 'the', 'importance', 'of', 'regulatory', 'and', 'cultural', 'reform', 'in', 'financial', 'service', 'at', 'brussels', 'conference', 'urlplaceholder'] \n\nBarclays announces result of Rights Issue http://t.co/LbIqqh3wwG\n['barclays', 'announces', 'result', 'of', 'rights', 'issue', 'urlplaceholder'] \n\nBarclays publishes its prospectus for its å£5.8bn Rights Issue: http://t.co/YZk24iE8G6\n['barclays', 'publishes', 'it', 'prospectus', 'for', 'it', 'å£5.8bn', 'rights', 'issue', ':', 'urlplaceholder'] \n\nBarclays Group Finance Director Chris Lucas is to step down at the end of the week due to ill health http://t.co/nkuHoAfnSD\n['barclays', 'group', 'finance', 'director', 'chris', 'lucas', 'is', 'to', 'step', 'down', 'at', 'the', 'end', 'of', 'the', 'week', 'due', 'to', 'ill', 'health', 'urlplaceholder'] \n\nBarclays announces that Irene McDermott Brown has been appointed as Group Human Resources Director http://t.co/c3fNGY6NMT\n['barclays', 'announces', 'that', 'irene', 'mcdermott', 'brown', 'ha', 'been', 'appointed', 'a', 'group', 'human', 'resources', 'director', 'urlplaceholder'] \n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 714815,
+          "key": "ae2b0ac3-c09d-4d24-b0fb-2fa45fae91e2",
+          "title": "Machine Learning Workflow",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ae2b0ac3-c09d-4d24-b0fb-2fa45fae91e2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715113,
+              "key": "1c010aa6-d9e1-410d-8c25-29f13f18681d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Machine Learning Workflow",
+              "instructor_notes": ""
+            },
+            {
+              "id": 715066,
+              "key": "28bd06e3-cc22-4f16-9e50-3b0f153885ff",
+              "title": "Machine Learning Workflow",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0nA6oTIlwaA",
+                "china_cdn_id": "0nA6oTIlwaA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 675055,
+          "key": "57ab80dd-72dc-4c82-ae0e-9df6e8306901",
+          "title": "Case Study: Machine Learning Workflow",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "57ab80dd-72dc-4c82-ae0e-9df6e8306901",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676884,
+              "key": "6c62273c-3cca-4280-82bb-11e529c7c0a9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-Sya7Mw0QX",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/ml_workflow.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679786,
+          "key": "5500f4af-ce2d-49c0-aa87-6a7f45ca4af8",
+          "title": "Solution: Machine Learning Workflow",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5500f4af-ce2d-49c0-aa87-6a7f45ca4af8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679791,
+              "key": "3a0ef4bb-80a0-46fb-8722-9c0ea6f2fb47",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nimport nltk\nnltk.download(['punkt', 'wordnet'])\n\nimport re\nimport numpy as np\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\nfrom sklearn.metrics import confusion_matrix\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\ndef display_results(y_test, y_pred):\n    labels = np.unique(y_pred)\n    confusion_mat = confusion_matrix(y_test, y_pred, labels=labels)\n    accuracy = (y_pred == y_test).mean()\n\n    print(\"Labels:\", labels)\n    print(\"Confusion Matrix:\\n\", confusion_mat)\n    print(\"Accuracy:\", accuracy)\n\n\ndef main():\n    X, y = load_data()\n    X_train, X_test, y_train, y_test = train_test_split(X, y)\n\n    vect = CountVectorizer(tokenizer=tokenize)\n    tfidf = TfidfTransformer()\n    clf = RandomForestClassifier()\n\n    # train classifier\n    X_train_counts = vect.fit_transform(X_train)\n    X_train_tfidf = tfidf.fit_transform(X_train_counts)\n    clf.fit(X_train_tfidf, y_train)\n\n    # predict on test data\n    X_test_counts = vect.transform(X_test)\n    X_test_tfidf = tfidf.transform(X_test_counts)\n    y_pred = clf.predict(X_test_tfidf)\n\n    # display results\n    display_results(y_test, y_pred)\n\n\nmain()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 679797,
+              "key": "7a1c214e-7356-4fd8-a341-fad8ad40e4e8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\nActual numbers will vary.\n```txt\nLabels: ['Action' 'Dialogue' 'Information']\nConfusion Matrix:\n[[ 87   0  27]\n [  1  34   5]\n [  7   1 439]]\nAccuracy: 0.931780366057\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675056,
+          "key": "02a368d5-2ac5-4d44-ab68-b02d4fda2591",
+          "title": "Using Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "02a368d5-2ac5-4d44-ab68-b02d4fda2591",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715067,
+              "key": "9eb3a718-124f-4c6d-9054-645afdd1092e",
+              "title": "Using Pipelines",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "mxFrS8qpZ6Y",
+                "china_cdn_id": "mxFrS8qpZ6Y.mp4"
+              }
+            },
+            {
+              "id": 681499,
+              "key": "8e937314-2aff-441d-b39c-9a63a4b97aab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Using Pipeline\nBelow, you'll find a simple example of a machine learning workflow where we generate features from text data using count vectorizer and tf-idf transformer, and then fit it to a random forest classifier. Before we get into using pipelines, let's first use this example to go over some `scikit-learn` terminology.\n- **ESTIMATOR:** An [estimator](http://scikit-learn.org/stable/tutorial/statistical_inference/settings.html#estimators-objects) is any object that learns from data, whether it's a classification, regression, or clustering algorithm, or a transformer that extracts or filters useful features from raw data. Since estimators *learn from data*, they each must have a `fit` method that takes a dataset. In the example below, the `CountVectorizer`, `TfidfTransformer`, and `RandomForestClassifier` are all estimators, and each have a `fit` method. \n- **TRANSFORMER:** A [transformer](http://scikit-learn.org/stable/data_transforms.html) is a specific type of estimator that has a `fit` method to learn from training data, and then a `transform` method to apply a transformation model to new data. These transformations can include cleaning, reducing, expanding, or generating features. In the example below, `CountVectorizer` and `TfidfTransformer` are transformers.\n- **PREDICTOR:** A **predictor** is a specific type of estimator that has a `predict` method to predict on test data based on a supervised learning algorithm, and has a `fit` method to train the model on training data. The final estimator, `RandomForestClassifier`, in the example below is a predictor.\n\nIn machine learning tasks, it's pretty common to have a very specific sequence of transformers to fit to data before applying a final estimator, such as this classifier. And normally, we'd have to initialize all the estimators, `fit` and `transform` the training data for each of the transformers, and then `fit` to the final estimator. Next, we'd have to call `transform` for each transformer again to the test data, and finally call `predict` on the final estimator.\n\n### Without pipeline:\n```python\n    vect = CountVectorizer()\n    tfidf = TfidfTransformer()\n    clf = RandomForestClassifier()\n\n    # train classifier\n    X_train_counts = vect.fit_transform(X_train)\n    X_train_tfidf = tfidf.fit_transform(X_train_counts)\n    clf.fit(X_train_tfidf, y_train)\n\n    # predict on test data\n    X_test_counts = vect.transform(X_test)\n    X_test_tfidf = tfidf.transform(X_test_counts)\n    y_pred = clf.predict(X_test_tfidf)\n```\nFortunately, you can actually automate all of this fitting, transforming, and predicting, by chaining these estimators together into a single estimator object. That single estimator would be scikit-learn's Pipeline. To create this pipeline, we just need a list of `(key, value)` pairs, where the key is a string containing what you want to name the step, and the value is the estimator object.\n### Using pipeline:\n```python\npipeline = Pipeline([\n    ('vect', CountVectorizer()),\n    ('tfidf', TfidfTransformer()),\n    ('clf', RandomForestClassifier()),\n])\n\n# train classifier\npipeline.fit(Xtrain)\n\n# evaluate all steps on test set\npredicted = pipeline.predict(Xtest)\n```\nNow, by fitting our pipeline to the training data, we're accomplishing exactly what we would by fitting and transforming each of these steps to our training data one by one. Similarly, when we call `predict` on our pipeline to our test data, we're accomplishing what we would by calling `transform` on each of our transformer objects to our test data and then calling `predict` on our final estimator. Not only does this make our code much shorter and simpler, it has other great advantages, which we'll cover in the next video.\n\nNote that every step of this pipeline has to be a transformer, except for the last step, which can be of an estimator type. Pipeline takes on all the methods of whatever the last estimator in its sequence is. For example, here, since the final estimator of our pipeline is a classifier, the pipeline object can be used as a classifier, taking on the `fit` and `predict` methods of its last step. Alternatively, if the last estimator was a transformer, then pipeline would be a transformer.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675058,
+          "key": "1f79f7af-dd42-454e-a05b-0d823c3a8f52",
+          "title": "Advantages of Using Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f79f7af-dd42-454e-a05b-0d823c3a8f52",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714817,
+              "key": "626f4f67-2280-47a6-a74f-778f1e207717",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Advantages of Using Pipeline\nBelow are two videos explaining the advantages of using scikit-learn's `Pipeline` as seen in the previous video.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690812,
+              "key": "da7c333b-4652-49a8-bf3c-454f7ca0b503",
+              "title": "08 1 Advantages Of Using Pipeline V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ASYcx911E2Q",
+                "china_cdn_id": "ASYcx911E2Q.mp4"
+              }
+            },
+            {
+              "id": 675059,
+              "key": "18f61fe0-c65a-489b-98b1-4b9b41a93eca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Advantages of Using Pipeline Part 1:\n### 1. Simplicity and Convencience\n- **Automates repetitive steps** - Chaining all of your steps into one estimator allows you to fit and predict on all steps of your sequence automatically with one call. It handles smaller steps for you, so you can focus on implementing higher level changes swiftly and efficiently.\n- **Easily understandable workflow** - Not only does this make your code more concise, it also makes your workflow much easier to understand and modify. Without Pipeline, your model can easily turn into messy spaghetti code from all the adjustments and experimentation required to improve your model.\n- **Reduces mental workload** - Because Pipeline automates the intermediate actions required to execute each step, it reduces the mental burden of having to keep track of all your data transformations. Using Pipeline may require some extra work at the beginning of your modeling process, but it prevents a lot of headaches later on.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690814,
+              "key": "ae4a4a7d-be2a-468b-afbd-574dbaafe261",
+              "title": "08 2 Advantages Of Using Pipelines V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eT1MS3n8fZ8",
+                "china_cdn_id": "eT1MS3n8fZ8.mp4"
+              }
+            },
+            {
+              "id": 675060,
+              "key": "4fff84e1-a150-4201-ae58-c11c40b7847d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Advantages of Using Pipeline Part 2:\n\n### 2. Optimizing Entire Workflow\n- **GRID SEARCH:** Method that automates the process of testing different hyper parameters to optimize a model.\n- By running grid search on your pipeline, you're able to optimize your entire workflow, including data transformation and modeling steps. This accounts for any interactions among the steps that may affect the final metrics.\n- Without grid search, tuning these parameters can be painfully slow, incomplete, and messy.\n\n### 3. Preventing Data leakage\n- Using Pipeline, all transformations for data preparation and feature extractions occur within each fold of the cross validation process. \n- This prevents common mistakes where you’d allow your training process to be influenced by your test data - for example, if you used the entire training dataset to normalize or extract features from your data. \n\nYou'll see what we mean by this in a video later in this lesson about using Pipeline with GridSearchCV.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675057,
+          "key": "0a7c40ce-a2bd-4924-9d1b-8048acd10c88",
+          "title": "Case Study: Build Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0a7c40ce-a2bd-4924-9d1b-8048acd10c88",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676885,
+              "key": "bf596f2a-468b-461a-a8d2-32703e73e3fa",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-H1i4fD0mQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/pipeline.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679787,
+          "key": "6b66d661-4574-45bc-bce3-57d311d67740",
+          "title": "Solution: Build Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6b66d661-4574-45bc-bce3-57d311d67740",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679792,
+              "key": "a2c1f60d-26b6-4604-bd1e-4ac149300e5d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nimport nltk\nnltk.download(['punkt', 'wordnet'])\n\nimport re\nimport numpy as np\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.metrics import confusion_matrix\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\ndef display_results(y_test, y_pred):\n    labels = np.unique(y_pred)\n    confusion_mat = confusion_matrix(y_test, y_pred, labels=labels)\n    accuracy = (y_pred == y_test).mean()\n\n    print(\"Labels:\", labels)\n    print(\"Confusion Matrix:\\n\", confusion_mat)\n    print(\"Accuracy:\", accuracy)\n\n\ndef main():\n    X, y = load_data()\n    X_train, X_test, y_train, y_test = train_test_split(X, y)\n\n    pipeline = Pipeline([\n        ('vect', CountVectorizer(tokenizer=tokenize)),\n        ('tfidf', TfidfTransformer()),\n        ('clf', RandomForestClassifier())\n    ])\n    \n    # train classifier\n    pipeline.fit(X_train, y_train)\n\n    # predict on test data\n    y_pred = pipeline.predict(X_test)\n\n    # display results\n    display_results(y_test, y_pred)\n\n\nmain()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 679798,
+              "key": "42502765-fda6-4204-989d-cfcf7d988377",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\nActual numbers will vary.\n```txt\nLabels: ['Action' 'Dialogue' 'Information']\nConfusion Matrix:\n[[ 87   0  26]\n [  3  21   8]\n [  4   0 452]]\nAccuracy: 0.931780366057\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675064,
+          "key": "3a2c7325-7e49-4fe9-ac10-66779053ab3f",
+          "title": "Pipelines and Feature Unions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3a2c7325-7e49-4fe9-ac10-66779053ab3f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690816,
+              "key": "2347b2f1-92fb-43aa-94c1-0443a6a31920",
+              "title": "12 Pipelines And Feature Unions V1 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zduxy0g23L0",
+                "china_cdn_id": "zduxy0g23L0.mp4"
+              }
+            },
+            {
+              "id": 675065,
+              "key": "9461a331-6fc6-405f-87e1-fafb735900b9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pipelines and Feature Unions\n- **FEATURE UNION:** [Feature union](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html) is a class in scikit-learn’s Pipeline module that allows us to perform steps in parallel and take the union of their results for the next step.\n- A *pipeline* performs a list of steps in a *linear sequence*, while a *feature union* performs a list of steps in *parallel* and then combines their results.\n- In more complex workflows, multiple feature unions are often used within pipelines, and multiple pipelines are used within feature unions.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675066,
+          "key": "9d30d7d0-63df-4eff-8a33-6a22e6338861",
+          "title": "Using Feature Union",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9d30d7d0-63df-4eff-8a33-6a22e6338861",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 722240,
+              "key": "843a5c16-0c32-444a-9b92-3274575d0a79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Sometimes, you don't always have all the data transformation steps you need in scikit-learn's library, which is why it is possible to actually create your own custom transformers. For the video below, just keep in mind that `TextLengthExtractor` is a custom transformer that is already built in a separate file and imported for this example.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 715068,
+              "key": "d829a955-d91e-4493-822b-0af2b5f8131c",
+              "title": "Using Feature Unions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QmE6CMGar1U",
+                "china_cdn_id": "QmE6CMGar1U.mp4"
+              }
+            },
+            {
+              "id": 681501,
+              "key": "a1508ea9-a04d-4026-9b1d-42023404b3f5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Using Feature Union\nTaking the example from the previous video, let's say you wanted to extract two different kinds of features from the same text column - tfidf values, and the length of the text. Your first approach might be to create an additional column from the `text` column called `text_length` like this. Then both `text` and `text_length` can be part of your feature matrix. But now your pipeline would break. You can't run `CountVectorizer` on NumPy arrays of strings and integers. \n```python\ndf['txt_length'] = df['text'].apply(len)\nX = df[['text', 'txt_length']].values\ny = df['label'].values\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n\npipeline = Pipeline([\n    ('vect', CountVectorizer()),\n    ('tfidf', TfidfTransformer()),\n    ('clf', RandomForestClassifier()),\n])\n\n# train classifier\npipeline.fit(Xtrain)\n\n# predict on test data\npredicted = pipeline.predict(Xtest)\n```\nLet's say you had a custom transformer called `TextLengthExtractor`. Now, you could leave `X_train` as just the original text column, if you could figure out how to add the text length extractor to your pipeline. If only you could fit it on the original text data, rather than the output of the previous transformer. But you need both the outputs of `TfidfTransformer ` and `TextLengthExtractor` to feed into the classifier as input.\n```python\nX = df['text'].values\ny = df['label'].values\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n\npipeline = Pipeline([\n    ('vect', CountVectorizer()),\n    ('tfidf', TfidfTransformer()),\n    ('txt_length', TextLengthExtractor()),\n    ('clf', RandomForestClassifier()),\n])\n\n# train classifier\npipeline.fit(Xtrain)\n\n# predict on test data\npredicted = pipeline.predict(Xtest)\n```\n\n- Feature unions are super helpful for handling these situations, where we need to run two steps in parallel on the same data and combine their results to pass into the next step.\n- Like pipelines, feature unions are built using a list of `(key, value)` pairs, where the key is the string that you want to name a step, and the value is the estimator object. Also like pipelines, feature unions combine a list of estimators to become a single estimator. However, a feature union runs its estimators in parallel, rather than in a sequence as a pipeline does. In this example, the estimators run in parallel are `nlp_pipeline` and `text_length`. Notice we use a pipeline in this feature union to make sure the count vectorizer and tfidf transformer steps are still running in sequence. \n\n```python\nX = df['text'].values\ny = df['label'].values\nX_train, X_test, y_train, y_test = train_test_split(X, y)\n\npipeline = Pipeline([\n    ('features', FeatureUnion([\n\n        ('nlp_pipeline', Pipeline([\n            ('vect', CountVectorizer()\n            ('tfidf', TfidfTransformer())\n        ])),\n\n        ('txt_len', TextLengthExtractor())\n    ])),\n\n    ('clf', RandomForestClassifier())\n])\n\n# train classifier\npipeline.fit(Xtrain)\n\n# predict on test data\npredicted = pipeline.predict(Xtest)\n```\n- Now, our pipeline doesn't break and uses both features! This would be equivalent to this code.\n\n```python\nvect = CountVectorizer()\ntfidf = TfidfTransformer()\ntxt_len = TextLengthExtractor()\nclf = RandomForestClassifier()\n\n# train classifier\nX_train_counts = vect.fit_transform(X_train)\nX_train_tfidf = tfidf.fit_transform(X_train_counts)\n\nX_train_len = txt_len.fit_transform(X_train)\nX_train_features = hstack([X_train_tfidf, X_train_len])\nclf.fit(X_train_features, y_train)\n\n# predict on test data\nX_test_counts = vect.transform(X_test)\nX_test_tfidf = tfidf.transform(X_test_counts)\n\nX_test_len = txt_len.transform(X_test)\nX_test_features = hstack([X_test_tfidf, X_test_len])\ny_pred = clf.predict(X_test_features)\n```\n- The tfidf transformer and the text length extractor are fit to the input data, in this case the raw data, independently. They are then performed in parallel, and their outputs are combined and passed to the next estimator, in this case, the classifier.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714836,
+              "key": "5e9690d3-c5b7-4bd2-b1f9-aa97f3498367",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Read more about feature unions in Scikit-learn's [user guide](http://scikit-learn.org/stable/modules/pipeline.html#feature-union).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675067,
+          "key": "89e44de2-0f9e-46f9-8f19-ed1a589a2b9e",
+          "title": "Case Study: Add Feature Union",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "89e44de2-0f9e-46f9-8f19-ed1a589a2b9e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676889,
+              "key": "9bcc74b4-c172-49b7-80c6-fe12957d85c9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-SkZDMvRXQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/feature_union_practice.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681504,
+          "key": "26b42b04-74ca-40d6-98a0-3496ea37dbdb",
+          "title": "Solution: Add Feature Union",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "26b42b04-74ca-40d6-98a0-3496ea37dbdb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681505,
+              "key": "4ccafb8c-5778-4885-bcd6-eed6dcfd1b82",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nimport nltk\nnltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger'])\n\nimport re\nimport numpy as np\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nfrom sklearn.metrics import confusion_matrix\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import Pipeline, FeatureUnion\nfrom sklearn.base import BaseEstimator, TransformerMixin\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer\n\nfrom custom_transformer import StartingVerbExtractor\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\ndef model_pipeline():\n    pipeline = Pipeline([\n        ('features', FeatureUnion([\n            \n            ('text_pipeline', Pipeline([\n                ('vect', CountVectorizer(tokenizer=tokenize)),\n                ('tfidf', TfidfTransformer())\n            ])),\n\n            ('starting_verb', StartingVerbExtractor())\n        ])),\n    \n        ('clf', RandomForestClassifier())\n    ])\n    \n    return pipeline\n\n\ndef display_results(y_test, y_pred):\n    labels = np.unique(y_pred)\n    confusion_mat = confusion_matrix(y_test, y_pred, labels=labels)\n    accuracy = (y_pred == y_test).mean()\n\n    print(\"Labels:\", labels)\n    print(\"Confusion Matrix:\\n\", confusion_mat)\n    print(\"Accuracy:\", accuracy)\n\n\ndef main():\n    X, y = load_data()\n    X_train, X_test, y_train, y_test = train_test_split(X, y)\n\n    model = model_pipeline()\n    model.fit(X_train, y_train)\n    y_pred = model.predict(X_test)\n\n    display_results(y_test, y_pred)\n\nmain()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 681506,
+              "key": "52fcdfc9-24e9-4319-beae-1f8bb62b114c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\nActual numbers will vary.\n```txt\nLabels: ['Action' 'Dialogue' 'Information']\nConfusion Matrix:\n [[ 82   0  19]\n [  3  27   6]\n [  6   1 457]]\nAccuracy: 0.941763727121\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 679783,
+          "key": "1fc01419-d711-464c-b83a-ed79424eff18",
+          "title": "Creating Custom Transformers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1fc01419-d711-464c-b83a-ed79424eff18",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715069,
+              "key": "db02f095-2683-400b-90de-ff29f36f9346",
+              "title": "Creating Custom Transformers",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TBxUCQdXRjY",
+                "china_cdn_id": "TBxUCQdXRjY.mp4"
+              }
+            },
+            {
+              "id": 681507,
+              "key": "7ab9f606-8b52-47b1-9610-96514572dac5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Creating Custom Transformer\nIn the last section, you used a custom transformer that extracted whether each text started with a verb. You can implement a custom transformer yourself by extending the base class in Scikit-Learn. Let's take a look at a a very simple example that multiplies the input data by ten.  \n```python\nimport numpy as np\nfrom sklearn.base import BaseEstimator, TransformerMixin\n\nclass TenMultiplier(BaseEstimator, TransformerMixin):\n    def __init__(self):\n        pass\n\n    def fit(self, X, y=None):\n        return self\n\n    def transform(self, X):\n        return X * 10\n```\nRemember, all estimators have a fit method, and since this is a transformer, it also has a transform method.\n- **FIT METHOD:** This takes in a 2d array `X` for the feature data and a 1d array `y` for the target labels. Inside the `fit` method, we simply return `self`. This allows us to chain methods together, since the result on calling fit on the transformer is still the transformer object. This method is required to be compatible with scikit-learn.\n- **TRANSFORM METHOD:** The transform function is where we include the code that well, transforms the data. In this case, we return the data in `X` multiplied by 10. This `transform` method also takes a 2d array `X`.\n\nLet's test our new transformer, by entering the code below in the interactive python interpreter in the terminal, ipython. We can also do this in Jupyter notebook.\n```python\nmultiplier = TenMultiplier()\n\nX = np.array([6, 3, 7, 4, 7])\nmultiplier.transform(X)\n```\nThis outputs the following:\n```txt\narray([60, 30, 70, 40, 70])\n```\nNice! Next, we'll create a custom transformer that has a bit more significance. Let's build a case normalizer, which simply converts all text to lowercase. We aren't setting anything in our init method, so we can actually remove that. We can leave our fit method as is, and focus on the transform method. We can lowercase all the values in `X` by applying a lambda function that calls lower on each value. We'll have to wrap this in a pandas Series to be able to use this apply function. \n```python\nimport numpy as np\nimport pandas as pd\nfrom sklearn.base import BaseEstimator, TransformerMixin\n\nclass CaseNormalizer(BaseEstimator, TransformerMixin):\n    def fit(self, X, y=None):\n        return self\n\n    def transform(self, X):\n        return pd.Series(X).apply(lambda x: x.lower()).values\n\ncase_normalizer = CaseNormalizer()\n\nX = np.array(['Implementing', 'a', 'Custom', 'Transformer', 'from', 'SCIKIT-LEARN'])\ncase_normalizer.transform(X)\n```\nEntering the code above in ipython outputs the following:\n```txt\narray(['implementing', 'a', 'custom', 'transformer', 'from',\n       'scikit-learn'], dtype=object)\n```\nAwesome! It's a good idea to learn how to write your own custom functions - it allows you to have more control and flexibility with your machine learning pipelines.\n\nAnother way to create custom transformers is by using this FunctionTransformer from scikit-learn's preprocessing module. This allows you to wrap an existing function to become a transformer. This provides less flexibility, but is much simpler. You can learn more about this in the link below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714851,
+              "key": "106c4b9a-25ba-4277-b096-8b6e14538fa3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Read more about using FunctionTransformer to create custom transformers [here](http://scikit-learn.org/stable/modules/preprocessing.html#custom-transformers) and [here](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer).\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 679784,
+          "key": "ee4a5553-e689-4bad-982d-f9679fc23918",
+          "title": "Case Study: Create Custom Transformer",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ee4a5553-e689-4bad-982d-f9679fc23918",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679842,
+              "key": "21190fe5-e33f-46ff-9f34-713162413748",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BJLCP914X",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/custom_transformer.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679788,
+          "key": "1fa3777e-e9d9-4c07-8ac3-ad2cfbc66e5e",
+          "title": "Solution: Create Custom Transformer",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1fa3777e-e9d9-4c07-8ac3-ad2cfbc66e5e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679793,
+              "key": "dda3b326-618b-4012-bc78-40ecc11b18ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nimport nltk\nnltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger'])\n\nimport re\nimport numpy as np\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nfrom sklearn.metrics import confusion_matrix\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import Pipeline, FeatureUnion\nfrom sklearn.base import BaseEstimator, TransformerMixin\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\nclass StartingVerbExtractor(BaseEstimator, TransformerMixin):\n\n    def starting_verb(self, text):\n        sentence_list = nltk.sent_tokenize(text)\n        for sentence in sentence_list:\n            pos_tags = nltk.pos_tag(tokenize(sentence))\n            first_word, first_tag = pos_tags[0]\n            if first_tag in ['VB', 'VBP'] or first_word == 'RT':\n                return True\n        return False\n\n    def fit(self, X, y=None):\n        return self\n\n    def transform(self, X):\n        X_tagged = pd.Series(X).apply(self.starting_verb)\n        return pd.DataFrame(X_tagged)\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\ndef model_pipeline():\n    pipeline = Pipeline([\n        ('features', FeatureUnion([\n            \n            ('text_pipeline', Pipeline([\n                ('vect', CountVectorizer(tokenizer=tokenize)),\n                ('tfidf', TfidfTransformer())\n            ])),\n\n            ('starting_verb', StartingVerbExtractor())\n        ])),\n    \n        ('clf', RandomForestClassifier())\n    ])\n    \n    return pipeline\n\n\ndef display_results(y_test, y_pred):\n    labels = np.unique(y_pred)\n    confusion_mat = confusion_matrix(y_test, y_pred, labels=labels)\n    accuracy = (y_pred == y_test).mean()\n\n    print(\"Labels:\", labels)\n    print(\"Confusion Matrix:\\n\", confusion_mat)\n    print(\"Accuracy:\", accuracy)\n\n\ndef main():\n    X, y = load_data()\n    X_train, X_test, y_train, y_test = train_test_split(X, y)\n\n    model = model_pipeline()\n    model.fit(X_train, y_train)\n    y_pred = model.predict(X_test)\n\n    display_results(y_test, y_pred)\n\nmain()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 679799,
+              "key": "4e0de772-f6a2-4941-9713-d52f052e635a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\nActual numbers will vary.\n```txt\nLabels: ['Action' 'Dialogue' 'Information']\nConfusion Matrix:\n [[ 82   0  19]\n [  3  27   6]\n [  6   1 457]]\nAccuracy: 0.941763727121\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675068,
+          "key": "fde1e2ef-62d7-4405-a8a1-f56a6de686ec",
+          "title": "Pipelines and Grid Search",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fde1e2ef-62d7-4405-a8a1-f56a6de686ec",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690817,
+              "key": "d374af49-7c35-45f4-a944-d2950d36b17f",
+              "title": "15 Pipelines And Grid Search V1 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HZaOiSxJjCY",
+                "china_cdn_id": "HZaOiSxJjCY.mp4"
+              }
+            },
+            {
+              "id": 722577,
+              "key": "4389fcc4-540f-4900-b4a0-f2a093bef3eb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pipelines and Grid Search\nAs mentioned earlier in the lesson, a powerful benefit to using pipeline is the ability to perform a grid search on your entire workflow.\n\nMost machine learning algorithms have a set of parameters that need tuning. Grid search is a tool that allows you to define a “grid” of parameters, or a set of values to check. Your computer automates the process of trying out all possible combinations of values. Grid search scores each combination with cross validation, and uses the cross validation score to determine the parameters that produce the most optimal model.\n\nRunning grid search on your pipeline allows you to try many parameter values thoroughly and conveniently, for both your data transformations and estimators.\n\nAnd again, although you can also run grid search on just a single classifier, running it on your whole pipeline helps you test multiple parameter combinations across your entire pipeline. This accounts for interactions among parameters not just in your model, but data preparation steps as well.\n\nLet’s see how this works.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718909,
+          "key": "5e793e09-8a2b-4dc2-981f-66cc5b14edba",
+          "title": "Using Grid Search with Pipelines",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e793e09-8a2b-4dc2-981f-66cc5b14edba",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 722516,
+              "key": "5df5abca-d6a3-4467-88c4-ffb5c08f733a",
+              "title": "Using Grid Search",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iTL43Jk9_bQ",
+                "china_cdn_id": "iTL43Jk9_bQ.mp4"
+              }
+            },
+            {
+              "id": 718910,
+              "key": "f9761108-f54f-44ec-b753-1b2ab3d7a06c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Using Pipeline with GridSearchCV\n\nAs you may have seen before, grid search can be used to optimize hyper parameters of a model. Here is a simple example that uses grid search to find parameters for a support vector classifier. All you need to do is create a dictionary of parameters to search, using keys for the names of the parameters and values for the list of parameter values to check. Then, pass the model and parameter grid to the grid search object. Now when you call fit on this grid search object, it will run cross validation on all different combinations of these parameters to find the best combination of parameters for the model.\n```python\nparameters = {\n    'kernel': ['linear', 'rbf'],\n    'C':[1, 10]\n}\n\nsvc = SVC()\nclf = GridSearchCV(svc, parameters)\nclf.fit(X_train, y_train)\n```\nAwesome. Now consider if we had a data preprocessing step, where we standardized the data using `StandardScaler` like this.\n```python\nscaler = StandardScaler()\nscaled_data = scaler.fit_transform(X_train)\n\nparameters = {\n    'kernel': ['linear', 'rbf'],\n    'C':[1, 10]\n}\n\nsvc = SVC()\nclf = GridSearchCV(svc, parameters)\nclf.fit(scaled_data, y_train)\n```\nThis may seem okay at first, but if you standardize your whole training dataset, and then use cross validation in grid search to evaluate your model, you've got data leakage. Let me explain. Grid search uses cross validation to score your model, meaning it splits your training data into folds of train and validation sets, trains your model on the train set, and scores it on the validation set, and does this multiple times.\n\nHowever, each time, or fold, that this happens, the model already has knowledge of the validation set because all the data was rescaled based on the distribution of the whole training dataset. Important factors like the mean and standard deviation are influenced by the whole dataset. This means the model perform better than it really should on unseen data, since information about the validation set is always baked into the rescaled values of your train dataset.\n\nThe way to fix this, would be to make sure you run standard scaler only on the training set, and not the validation set within each fold of cross validation. Pipelines allow you to do just this.\n```python\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('clf', SVC())\n])\n\nparameters = {\n    'scaler__with_mean': [True, False]\n    'clf__kernel': ['linear', 'rbf'],\n    'clf__C':[1, 10]\n}\n\ncv = GridSearchCV(pipeline, param_grid=parameters)\n\ncv.fit(X_train, y_train)\ny_pred = cv.predict(X_test)\n```\nNow, since the rescaling is included as part of the pipeline, the standardization doesn't happen until we run grid search. Meaning in each fold of cross validation, the rescaling is done only on the data that the model is trained on, preventing leakage from the validation set. As you can see, pipelines are very valuable to removing the risk of data leakage during the data preparation process.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 729647,
+              "key": "0deb18b4-cbd4-419c-8273-31636b833c33",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Note on Run Time\nRunning grid search can take a while, especially if you are searching over a lot of parameters! If you want to reduce it to a few minutes, try commenting out some of your parameters to grid search over just 1 or 2 parameters with a small number of values each. Once you know that works, feel free to add more parameters and see how well your final model can perform! You can try this out in the next page.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675071,
+          "key": "936b2739-c71b-467c-8988-562a72aeb1d1",
+          "title": "Case Study: Grid Search Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "936b2739-c71b-467c-8988-562a72aeb1d1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676891,
+              "key": "ddc8cb4f-5655-4320-a539-3b314d0adf75",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewHkgHabGwX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-B1fOGD07Q",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/grid_search.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679789,
+          "key": "355eef6d-d1f5-4185-8569-3e2cd707e569",
+          "title": "Solution: Grid Search Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "355eef6d-d1f5-4185-8569-3e2cd707e569",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679794,
+              "key": "d110ff54-3415-414e-b7e1-390dd66b6bb4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```python\nimport nltk\nnltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger'])\n\nimport re\nimport numpy as np\nimport pandas as pd\nfrom nltk.tokenize import word_tokenize\nfrom nltk.stem import WordNetLemmatizer\n\nfrom sklearn.metrics import confusion_matrix\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import Pipeline, FeatureUnion\nfrom sklearn.base import BaseEstimator, TransformerMixin\nfrom sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer\n\nurl_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'\n\n\nclass StartingVerbExtractor(BaseEstimator, TransformerMixin):\n\n    def starting_verb(self, text):\n        sentence_list = nltk.sent_tokenize(text)\n        for sentence in sentence_list:\n            pos_tags = nltk.pos_tag(tokenize(sentence))\n            first_word, first_tag = pos_tags[0]\n            if first_tag in ['VB', 'VBP'] or first_word == 'RT':\n                return True\n        return False\n\n    def fit(self, x, y=None):\n        return self\n\n    def transform(self, X):\n        X_tagged = pd.Series(X).apply(self.starting_verb)\n        return pd.DataFrame(X_tagged)\n\n\ndef load_data():\n    df = pd.read_csv('corporate_messaging.csv', encoding='latin-1')\n    df = df[(df[\"category:confidence\"] == 1) & (df['category'] != 'Exclude')]\n    X = df.text.values\n    y = df.category.values\n    return X, y\n\n\ndef tokenize(text):\n    detected_urls = re.findall(url_regex, text)\n    for url in detected_urls:\n        text = text.replace(url, \"urlplaceholder\")\n\n    tokens = word_tokenize(text)\n    lemmatizer = WordNetLemmatizer()\n\n    clean_tokens = []\n    for tok in tokens:\n        clean_tok = lemmatizer.lemmatize(tok).lower().strip()\n        clean_tokens.append(clean_tok)\n\n    return clean_tokens\n\n\ndef build_model():\n    pipeline = Pipeline([\n        ('features', FeatureUnion([\n            \n            ('text_pipeline', Pipeline([\n                ('vect', CountVectorizer(tokenizer=tokenize)),\n                ('tfidf', TfidfTransformer())\n            ])),\n\n            ('starting_verb', StartingVerbExtractor())\n        ])),\n    \n        ('clf', RandomForestClassifier())\n    ])\n\n    parameters = {\n        'features__text_pipeline__vect__ngram_range': ((1, 1), (1, 2)),\n        'features__text_pipeline__vect__max_df': (0.5, 0.75, 1.0),\n        'features__text_pipeline__vect__max_features': (None, 5000, 10000),\n        'features__text_pipeline__tfidf__use_idf': (True, False),\n        'clf__n_estimators': [50, 100, 200],\n        'clf__min_samples_split': [2, 3, 4],\n        'features__transformer_weights': (\n            {'text_pipeline': 1, 'starting_verb': 0.5},\n            {'text_pipeline': 0.5, 'starting_verb': 1},\n            {'text_pipeline': 0.8, 'starting_verb': 1},\n        )\n    }\n\n    cv = GridSearchCV(pipeline, param_grid=parameters)\n    \n    return cv\n\n\ndef display_results(cv, y_test, y_pred):\n    labels = np.unique(y_pred)\n    confusion_mat = confusion_matrix(y_test, y_pred, labels=labels)\n    accuracy = (y_pred == y_test).mean()\n\n    print(\"Labels:\", labels)\n    print(\"Confusion Matrix:\\n\", confusion_mat)\n    print(\"Accuracy:\", accuracy)\n    print(\"\\nBest Parameters:\", cv.best_params_)\n\n\ndef main():\n    X, y = load_data()\n    X_train, X_test, y_train, y_test = train_test_split(X, y)\n\n    model = build_model()\n    model.fit(X_train, y_train)\n    y_pred = model.predict(X_test)\n    \n    display_results(model, y_test, y_pred)\n\nmain()\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 679795,
+              "key": "f2dde608-d900-4b62-a9eb-8b66374c6d1f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Output:\nActual numbers will vary.\n```txt\nLabels: ['Action' 'Dialogue' 'Information']\nConfusion Matrix:\n [[ 92   1  15]\n [  2  32   3]\n [ 14   2 440]]\nAccuracy: 0.9384359401\n\nBest Parameters: {'features__transformer_weights': {'text_pipeline': 1, 'verb_feature': 0.5}}\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675078,
+          "key": "2e761689-5118-49f1-9252-eb7792d85b78",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e761689-5118-49f1-9252-eb7792d85b78",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 675079,
+              "key": "3969ae6a-31f9-4eac-a8cd-921937c583df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Conclusion",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690818,
+              "key": "4c739d6d-eda8-45ed-95b2-4cb99e7d2932",
+              "title": "24 Conclusion V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Jq6pj_uKDmY",
+                "china_cdn_id": "Jq6pj_uKDmY.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

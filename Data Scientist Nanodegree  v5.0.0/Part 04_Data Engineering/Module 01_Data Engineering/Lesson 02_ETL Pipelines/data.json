@@ -1,0 +1,2109 @@
+{
+  "data": {
+    "lesson": {
+      "id": 671646,
+      "key": "013cd87c-acef-4cb1-b043-c47dbc4ef371",
+      "title": "ETL Pipelines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "ETL stands for extract, transform, and load. This is the most common type of data pipeline, and you will practice each step in this lesson.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/013cd87c-acef-4cb1-b043-c47dbc4ef371/671646/1551695026982/ETL+Pipelines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/013cd87c-acef-4cb1-b043-c47dbc4ef371/671646/1551695021893/ETL+Pipelines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 672382,
+          "key": "8f6d2db4-83ef-4865-b652-6c203843b8ba",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f6d2db4-83ef-4865-b652-6c203843b8ba",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 694916,
+              "key": "a2348845-3d4d-4e8e-ad7b-ab3dd5138329",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction to ETL Pipelines",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833534,
+              "key": "b0122dda-dfea-4eae-86ac-f8c166725cb6",
+              "title": "01  Intro V1 2 V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iW4uqhfRk10",
+                "china_cdn_id": "iW4uqhfRk10.mp4"
+              }
+            },
+            {
+              "id": 672484,
+              "key": "ee9533bc-7abb-48c0-9ce0-a2bd02a77942",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Data Pipelines: ETL vs ELT\n\nData pipeline is a generic term for moving data from one place to another. For example, it could be moving data from one server to another server.\n\n### ETL\nAn [ETL pipeline](https://en.wikipedia.org/wiki/Extract,_transform,_load) is a specific kind of data pipeline and very common.  ETL stands for Extract, Transform, Load. Imagine that you have a database containing web [log data](https://en.wikipedia.org/wiki/Log_file). Each entry contains the IP address of a user, a timestamp, and the link that the user clicked. \n\nWhat if your company wanted to run an analysis of links clicked by city and by day? You would need another data set that maps IP address to a city, and you would also need to extract the day from the timestamp. With an ETL pipeline, you could run code once per day that would extract the previous day's log data, map IP address to city, aggregate link clicks by city, and then load these results into a new database. That way, a data analyst or scientist would have access to a table of log data by city and day. That is more convenient than always having to run the same complex data transformations on the raw web log data.\n\nBefore cloud computing, businesses stored their data on large, expensive, private servers. Running queries on large data sets, like raw web log data, could be expensive both economically and in terms of time. But data analysts might need to query a database multiple times even in the same day; hence, pre-aggregating the data with an ETL pipeline makes sense.\n\n### ELT\n\nELT (Extract, Load, Transform) pipelines have gained traction since the advent of cloud computing. Cloud computing has lowered the cost of storing data and running queries on large, raw data sets. Many of these cloud services, like [Amazon Redshift](https://aws.amazon.com/redshift/), [Google BigQuery](https://cloud.google.com/bigquery/), or [IBM Db2](https://www.ibm.com/cloud/db2-warehouse-on-cloud) can be queried using SQL or a SQL-like language. With these tools, the data gets extracted, then loaded directly, and finally transformed at the end of the pipeline.\n\nHowever, ETL pipelines are still used even with these cloud tools. Oftentimes, it still makes sense to run ETL pipelines and store data in a more readable or intuitive format. This can help data analysts and scientists work more efficiently as well as help an organization become more data driven.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 672384,
+          "key": "90d82beb-26ab-4649-9910-d32638888364",
+          "title": "Lesson Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "90d82beb-26ab-4649-9910-d32638888364",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672385,
+              "key": "967c43c0-3ba0-41ed-8597-af07be075d86",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lesson Overview",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833535,
+              "key": "e09aaa0c-7941-4ec1-80b5-b91a6a76bdcd",
+              "title": "Lesson Overview ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "q1beUVlLoIQ",
+                "china_cdn_id": "q1beUVlLoIQ.mp4"
+              }
+            },
+            {
+              "id": 672389,
+              "key": "ad17f7db-1c91-4fc3-b70b-81db0f6164e6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Outline of the Lesson\n1. Extract data from different sources such as:\n  * csv files\n  * json files\n  * APIs\n2. Transform data\n  * combining data from different sources\n  *  data cleaning\n  * data types\n  * parsing dates\n  * file encodings\n  * missing data\n  * duplicate data\n  * dummy variables\n  * remove outliers\n  * scaling features\n  * engineering features\n3. Load\n  * send the transformed data to a database\n4. ETL Pipeline\n  * code an ETL pipeline\n\nThis lesson contains many Jupyter notebook exercises where you can practice the different parts of an ETL pipeline. Some of the exercises are challenging, but they also contain hints to help you get through them. You'll notice that the \"transformation\" section is relatively long. You'll oftentimes hear data scientists say that cleaning and transforming data is how they spend a majority of their time. This lesson reflects that reality.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 688723,
+              "key": "25add056-b31a-4f4b-8b89-0cd18bd058e1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Big Data Courses at Udacity\n\n\"Big Data\" gets a lot of buzz these days, and it is definitely an important part of a data engineer's and, sometimes, a data scientists's work. With \"Big Data\", you need special tools that can work on distributed computer systems. \n\nThis ETL course focuses on the practical fundamentals of ETL. Hence, you'll be working with a local data set so that you do not need to worry about learning a new tool. Udacity has other courses where the primary focus is on tools used for distributed data sets.\n\nHere are links to other big data courses at Udacity:\n* [Intro to Hadoop and MapReduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)\n* [Deploying a Hadoop Cluster](https://www.udacity.com/course/deploying-a-hadoop-cluster--ud1000)\n* [Real-time Analytics with Apache Storm](https://www.udacity.com/course/real-time-analytics-with-apache-storm--ud381)\n* [Big Data Analytics in Health Care](https://www.udacity.com/course/big-data-analytics-in-healthcare--ud758)\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 715102,
+              "key": "d3de3890-a976-4318-b969-0eeb03003ffa",
+              "title": "data pipelines",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d3de3890-a976-4318-b969-0eeb03003ffa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "There is only one type of data pipeline and it is called ETL (Extract, Transform, Load).",
+                "answers": [
+                  {
+                    "id": "a1537223048448",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1537223060070",
+                    "text": "False",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 673754,
+          "key": "c5fc36e0-3dbd-4405-8657-da2f57ab74d8",
+          "title": "World Bank Datasets",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c5fc36e0-3dbd-4405-8657-da2f57ab74d8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689068,
+              "key": "5c13fd83-0424-4e8b-b70b-afa75e86627c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# World Bank Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 673755,
+              "key": "10abc34a-3951-4a42-9250-e4f118ecb24f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the next section, you'll find a series of exercises. These are relatively brief and focus on extracting, or in other words, reading in data from different sources. The goal is to familiarize yourself with different types of files and see how the same data can be formatted in different ways. This lesson assumes you have experience with pandas and basic programming skills. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833536,
+              "key": "723be6ef-5e86-49ae-ac89-22ef3f91f038",
+              "title": "World Bank Datasets",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lNPzOLzZVbw",
+                "china_cdn_id": "lNPzOLzZVbw.mp4"
+              }
+            },
+            {
+              "id": 689039,
+              "key": "7754b14c-40d5-43f8-ad5a-870645d782fc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This lesson uses data from the World Bank. The data comes from two sources:\n1. [World Bank Indicator Data](https://data.worldbank.org/indicator) - This data contains socio-economic indicators for countries around the world. A few example indicators include population, arable land, and central government debt.\n2. [World Bank Project Data](https://datacatalog.worldbank.org/dataset/world-bank-projects-operations) - This data set contains information about World Bank project lending since 1947.\n\nBoth of these data sets are available in different formats including as a csv file, json, or xml. You can download the csv directly or you can use the World Bank APIs to extract data from the World Bank's servers. You'll be doing both in this lesson. \n\nThe end goal is to clean these data sets and bring them together into one table. As you'll see, it's not as easy as one might hope. By the end of the lesson, you'll have written an ETL pipeline to extract, transform, and load this data into a new database.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 689222,
+              "key": "e0efe5e6-e61d-49e5-85e1-5fd09a5ce627",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The goal of the lesson is to combine these data sets together so that you can run a linear regression model predicting World Bank Project total costs. You will not actually build the model; instead, you will get the data ready so that a data analyst or data scientist could more easily build the model.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714642,
+              "key": "649b1a6e-d7ac-40ca-b679-eba843434ad7",
+              "title": "World Bank Data",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "649b1a6e-d7ac-40ca-b679-eba843434ad7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the World Bank data set with the type of information it contains"
+                },
+                "concepts_label": "information",
+                "answers_label": "data set",
+                "concepts": [
+                  {
+                    "text": "gross domestic product",
+                    "correct_answer": {
+                      "id": "a1536883257440",
+                      "text": "indicator data set"
+                    }
+                  },
+                  {
+                    "text": "money spent to build a bridge in Nepal",
+                    "correct_answer": {
+                      "id": "a1536883351796",
+                      "text": "projects data set"
+                    }
+                  },
+                  {
+                    "text": "world population",
+                    "correct_answer": {
+                      "id": "a1536883462634",
+                      "text": "indicator data set"
+                    }
+                  },
+                  {
+                    "text": "a project to help African farmers save water",
+                    "correct_answer": {
+                      "id": "a1536883542580",
+                      "text": "projects data set"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1536883257440",
+                    "text": "indicator data set"
+                  },
+                  {
+                    "id": "a1536883542580",
+                    "text": "projects data set"
+                  },
+                  {
+                    "id": "a1536883351796",
+                    "text": "projects data set"
+                  },
+                  {
+                    "id": "a1536883462634",
+                    "text": "indicator data set"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 689227,
+          "key": "eb69775a-a3cb-4e13-b648-5b4d24e4eeb7",
+          "title": "How to Tackle the Exercises",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "eb69775a-a3cb-4e13-b648-5b4d24e4eeb7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689228,
+              "key": "134f0b3a-54ec-439d-9052-d5100be036c6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# How to Tackle the Exercises\n\nThis course assumes you have experience manipulating data with the Pandas library, which is covered in the data analyst nanodegree. Some of these transformation exercises are challenging. The most challenging exercises are marked (challenging). If an exercise is marked as a challenge, it means you’ll get something out of solving it, but it’s not essential for understanding the lesson material or for getting through the final project at the end of this data engineering course. \n\nThroughout the exercises, you might have to read the pandas documentation or search outside the classroom for how to do a certain processing technique. That is not just expected but also **encouraged**. As a data scientist professional, you will oftentimes have to research how to do something on your own much like what software engineers do. See this answer on Quora about [how often do people use stackoverflow when working on data science projects?](https://www.quora.com/How-often-do-people-use-stackoverflow-when-working-on-data-science-projects).\n\nUse Google and other search engines when you're not sure how to do something!\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 689229,
+              "key": "0624d001-f729-4ff8-a6e3-500575e27c52",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What You Will do in the Next Section\nIn the next section of the lesson, you'll learn about the extract portion of an ETL pipeline. You’ll get practice with a series of exercises. These exercises are relatively brief and focus on extracting, or in other words, reading in data from different sources. The goal is to familiarize yourself with different types of files and see how the same data can be formatted in different ways.\n\nFor a review of pandas, click on the \"Extracurricular\" section of the classroom. Open the *Prerequisite: Python for Data Analysis course*, and go to *Lesson 7: Pandas*.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 672570,
+          "key": "e69a9d7a-97d4-4a98-a2a4-bbc42b3d240c",
+          "title": "Extract",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e69a9d7a-97d4-4a98-a2a4-bbc42b3d240c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672574,
+              "key": "74c26bdd-ce4c-4e12-ba88-59f6c8148aa3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Extract",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833537,
+              "key": "0c43fa5a-278b-41e6-a310-37a5b9e05123",
+              "title": "05 Extraction Idea 1 V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4dKG_08zMm4",
+                "china_cdn_id": "4dKG_08zMm4.mp4"
+              }
+            },
+            {
+              "id": 695333,
+              "key": "f62eebe3-9e7b-4a78-87aa-c5bdf35aef34",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Overview of the Extract Part of the Lesson",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833538,
+              "key": "66a4897a-9793-4787-b216-efe22619e9c1",
+              "title": "Extract Walk Through",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Bbj8rQRRVoM",
+                "china_cdn_id": "Bbj8rQRRVoM.mp4"
+              }
+            },
+            {
+              "id": 672579,
+              "key": "1afaec8f-0e8e-4d05-94bb-ca822251b032",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Summary of the data file types you'll work with\n\n### CSV files\n\nCSV stands for comma-separated values. These types of files separate values with a comma, and each entry is on a separate line. Oftentimes, the first entry will contain variable names. Here is an example of what CSV data looks like. This is an abbreviated version of the first three lines in the World Bank projects data csv file.\n\n```csv\nid,regionname,countryname,prodline,lendinginstr\nP162228,Other,World;World,RE,Investment Project Financing\nP163962,Africa,Democratic Republic of the Congo;Democratic Republic of the Congo,PE,Investment Project Financing```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672590,
+              "key": "0e5234c9-023a-4946-aeaa-13accd9954b5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### JSON\n\nJSON is a file format with key/value pairs. It looks like a Python dictionary. The exact same CSV file represented in JSON could look like this:\n```json\n[{\"id\":\"P162228\",\"regionname\":\"Other\",\"countryname\":\"World;World\",\"prodline\":\"RE\",\"lendinginstr\":\"Investment Project Financing\"},{\"id\":\"P163962\",\"regionname\":\"Africa\",\"countryname\":\"Democratic Republic of the Congo;Democratic Republic of the Congo\",\"prodline\":\"PE\",\"lendinginstr\":\"Investment Project Financing\"},{\"id\":\"P167672\",\"regionname\":\"South Asia\",\"countryname\":\"People\\'s Republic of Bangladesh;People\\'s Republic of Bangladesh\",\"prodline\":\"PE\",\"lendinginstr\":\"Investment Project Financing\"}]\n```\n\nEach line in the data is inside of a squiggly bracket {}. The variable names are the keys, and the variable values are the values.\n\nThere are other ways to organize JSON data, but the general rule is that JSON is organized into key/value pairs. For example, here is a different way to represent the same data using JSON:\n```json\n{\"id\":{\"0\":\"P162228\",\"1\":\"P163962\",\"2\":\"P167672\"},\"regionname\":{\"0\":\"Other\",\"1\":\"Africa\",\"2\":\"South Asia\"},\"countryname\":{\"0\":\"World;World\",\"1\":\"Democratic Republic of the Congo;Democratic Republic of the Congo\",\"2\":\"People\\'s Republic of Bangladesh;People\\'s Republic of Bangladesh\"},\"prodline\":{\"0\":\"RE\",\"1\":\"PE\",\"2\":\"PE\"},\"lendinginstr\":{\"0\":\"Investment Project Financing\",\"1\":\"Investment Project Financing\",\"2\":\"Investment Project Financing\"}}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672987,
+              "key": "17896c40-33c6-4ba9-bf12-ba0b90195b68",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### XML\n\nAnother data format is called XML (Extensible Markup Language). XML is very similar to HTML at least in terms of formatting. The main difference between the two is that HTML has pre-defined tags that are standardized. In XML, tags can be tailored to the data set. Here is what this same data would look like as XML.\n\n```xml\n<ENTRY>\n  <ID>P162228</ID>\n  <REGIONNAME>Other</REGIONNAME>\n  <COUNTRYNAME>World;World</COUNTRYNAME>\n  <PRODLINE>RE</PRODLINE>\n  <LENDINGINSTR>Investment Project Financing</LENDINGINSTR>\n</ENTRY>\n<ENTRY>\n  <ID>P163962</ID>\n  <REGIONNAME>Africa</REGIONNAME>\n  <COUNTRYNAME>Democratic Republic of the Congo;Democratic Republic of the Congo</COUNTRYNAME>\n  <PRODLINE>PE</PRODLINE>\n  <LENDINGINSTR>Investment Project Financing</LENDINGINSTR>\n</ENTRY>\n<ENTRY>\n  <ID>P167672</ID>\n  <REGIONNAME>South Asia</REGIONNAME>\n  <COUNTRYNAME>People's Republic of Bangladesh;People's Republic of Bangladesh</COUNTRYNAME>\n  <PRODLINE>PE</PRODLINE>\n  <LENDINGINSTR>Investment Project Financing</LENDINGINSTR>\n</ENTRY>\n```\n\nXML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. The World Bank API, for example, can return either XML data or JSON data. From a data perspective, the process for handling HTML and XML data is essentially the same.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672990,
+              "key": "2bf7ce8f-193d-40df-8f0c-da3cddd0d32f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### SQL databases\n\nSQL databases store data in tables using [primary and foreign keys](https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017). In a SQL database, the same data would look like this:\n\n| id      | regionname | countryname                                                       | prodline | lendinginstr                 |\n|---------|------------|-------------------------------------------------------------------|----------|------------------------------|\n| P162228 | Other      | World;World                                                       | RE       | Investment Project Financing |\n| P163962 | Africa     | Democratic Republic of the Congo;Democratic Republic of the Congo | PE       | Investment Project Financing |\n| P167672 | South Asia | People's Republic of Bangladesh;People's Republic of Bangladesh   | PE       | Investment Project Financing |",
+              "instructor_notes": ""
+            },
+            {
+              "id": 673053,
+              "key": "15dd4a29-44e9-4524-b224-46fc99520153",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Text Files\n\nThis course won't go into much detail about text data. There are other Udacity courses, namely on natural language processing, that go into the details of processing text for machine learning.\n\nText data present their own issues. Whereas CSV, JSON, XML, and SQL data are organized with a clear structure, text is more ambiguous. For example, the World Bank project data country names are written like this\n```text\nDemocratic Republic of the Congo;Democratic Republic of the Congo\n```\n\nIn the World Bank Indicator data sets, the [Democratic Republic of the Congo]((https://data.worldbank.org/country/congo-dem-rep?view=chart) is represented by the abbreviation \"Congo, Dem. Rep.\" You'll have to clean these country names to join the data sets together.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 672998,
+              "key": "d81b728e-e754-4ff7-ab83-9c909bcf3a39",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Extracting Data from the Web\n\nIn this lesson, you'll see how to extract data from the web using an APIs (Application Programming Interface). APIs generally provide data in either JSON or XML format.\n\nCompanies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714643,
+              "key": "60faa1e7-7d67-4f9d-a574-29a471ae6c41",
+              "title": "Match the Data Set",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "60faa1e7-7d67-4f9d-a574-29a471ae6c41",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the data with its format"
+                },
+                "concepts_label": "data",
+                "answers_label": "format",
+                "concepts": [
+                  {
+                    "text": "{'players' :5, 'date':'Jul 5 1999'} ",
+                    "correct_answer": {
+                      "id": "a1536883772550",
+                      "text": "json"
+                    }
+                  },
+                  {
+                    "text": "players, date<br>\n5, Jul 5 1999",
+                    "correct_answer": {
+                      "id": "a1536883858329",
+                      "text": "csv"
+                    }
+                  },
+                  {
+                    "text": "`<entry><players>5</players><date>July 5 1999</date></entry>` ",
+                    "correct_answer": {
+                      "id": "a1536883877014",
+                      "text": "xml"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1536883772550",
+                    "text": "json"
+                  },
+                  {
+                    "id": "a1536883877014",
+                    "text": "xml"
+                  },
+                  {
+                    "id": "a1536883858329",
+                    "text": "csv"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 673013,
+          "key": "19378fa5-d498-48df-a4f2-a8efa233f93b",
+          "title": "Exercise: CSV",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "19378fa5-d498-48df-a4f2-a8efa233f93b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 673733,
+              "key": "568704c9-6837-4712-8e90-27686cae41b7",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BkPtGGNXQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/1_csv_exercise/1_csv_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 673847,
+          "key": "1a129bea-4d6b-400a-bc95-b3790bf74c5a",
+          "title": "Exercise: JSON and XML",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1a129bea-4d6b-400a-bc95-b3790bf74c5a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 673848,
+              "key": "eb6c1d2d-cb50-4b20-8d11-a5c507339d15",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BykyN8VXQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2_extract_exercise/2_extract_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 673851,
+          "key": "ad11d5e2-3e6c-424e-aba7-5c5ef219be1b",
+          "title": "Exercise: SQL Databases",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ad11d5e2-3e6c-424e-aba7-5c5ef219be1b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 674426,
+              "key": "152886e6-6cd0-41ee-a297-2f03ed5d49c3",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-Sy7yc7r7X",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/3_sql_exercise/3_sql_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 673852,
+          "key": "28a3f8ac-fb79-4476-85e0-ee32a2271d9e",
+          "title": "Extracting Text Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28a3f8ac-fb79-4476-85e0-ee32a2271d9e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 674854,
+              "key": "eb81ab59-e84a-436b-8401-ab3e66cd5b72",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Text Data\n\nText data can come in different forms. A text file (.txt), for example, will contain only text. As another example, a data set might contain text for one or more variables. In the world bank projects data set, the regionname, countryname, theme and sector variables contain text.\n\nAnalyzing text is a big topic that is covered in other Udacity courses on Natural Language Processing. For the purposes of this lesson on ETL pipelines, pandas is automatically \"extracting\" text data when reading in a csv, xml or json file.\n\nText data will be more important in the Transform stage of an ETL pipeline, which comes later in the lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 673853,
+          "key": "a5076206-d5ae-4c49-b4ea-c953b267a076",
+          "title": "Exercise: APIs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a5076206-d5ae-4c49-b4ea-c953b267a076",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 675044,
+              "key": "fe2a5a5d-cdd7-4de0-81c8-766c5006963c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rJxEbTIXQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/4_api_exercise/4_api_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 675045,
+          "key": "e3b9c9dc-d52b-452b-b0e1-110c2ad0b4c7",
+          "title": "Transform",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e3b9c9dc-d52b-452b-b0e1-110c2ad0b4c7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 675046,
+              "key": "dc8d0471-6250-45ab-9aaf-f42486a092b0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Transform",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833539,
+              "key": "ef96c588-14c5-446f-9146-9edd1b67ac5a",
+              "title": "19 Transform Intro V2 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "SXp4Qa-rQJg",
+                "china_cdn_id": "SXp4Qa-rQJg.mp4"
+              }
+            },
+            {
+              "id": 695334,
+              "key": "7280e53a-9464-4d23-99aa-859753833a65",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Overview of the Transform Part of the Lesson",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833540,
+              "key": "ab417d56-0e73-4341-9911-30660404bf90",
+              "title": "Transform Walk Through",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "i9_0kHCCCCE",
+                "china_cdn_id": "i9_0kHCCCCE.mp4"
+              }
+            },
+            {
+              "id": 715103,
+              "key": "26ef5422-6e32-4266-ada4-315f425395a5",
+              "title": "Role of a data engineer",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "26ef5422-6e32-4266-ada4-315f425395a5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "True or False? Data scientists never transform data; transforming data is the job of a data engineer.",
+                "answers": [
+                  {
+                    "id": "a1537223375489",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1537223446044",
+                    "text": "False",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 675047,
+          "key": "46222822-0848-4290-927a-b48b08d37983",
+          "title": "Combining Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46222822-0848-4290-927a-b48b08d37983",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 675048,
+              "key": "32a09433-64fa-4157-bad8-68bdf24b83d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Combining Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833541,
+              "key": "78885f95-1dbb-41a3-af79-3dd2f7bfcd48",
+              "title": "Combining Data From Different Sources",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IfMydJvU37M",
+                "china_cdn_id": "IfMydJvU37M.mp4"
+              }
+            },
+            {
+              "id": 715104,
+              "key": "e6edda39-6caf-4b41-bfbd-d424b55520ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pandas Resources for Quick Review\n\n* [10 minute Intro to Pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html)\n* [Pandas Basic Functionality](https://pandas.pydata.org/pandas-docs/stable/basics.html)\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 675049,
+          "key": "3cd8ba81-b124-46c2-a138-109183ec993f",
+          "title": "Exercise: Combining Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3cd8ba81-b124-46c2-a138-109183ec993f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 675094,
+              "key": "0646c2e2-9669-41e5-84ef-64787259a69e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-HkogMpU7m",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/5_combinedata_exercise/5_combining_data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 675095,
+          "key": "2e3009bb-807a-4c0f-ad4c-1de0574d4f70",
+          "title": "Cleaning Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e3009bb-807a-4c0f-ad4c-1de0574d4f70",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 694994,
+              "key": "b2a1e466-baa4-4f63-9e1d-117020cc38e3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cleaning Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833542,
+              "key": "76d32af8-4c65-478b-b069-ef54da9da8f5",
+              "title": "22 Cleaning Data V1 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zYxgkUqTX0Y",
+                "china_cdn_id": "zYxgkUqTX0Y.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 676589,
+          "key": "33d53e32-277a-4982-9b43-b44cddcaafa6",
+          "title": "Exercise: Cleaning Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "33d53e32-277a-4982-9b43-b44cddcaafa6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676597,
+              "key": "70f34253-6c34-49a5-b814-3b359aa3e65a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-ryAjalpmm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/6_cleaningdata_exercise/6_cleaning_data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 676894,
+          "key": "102440db-bb92-4ef0-aa59-6dac7dcc8f03",
+          "title": "Exercise: Data Types",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "102440db-bb92-4ef0-aa59-6dac7dcc8f03",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676896,
+              "key": "88819d5a-b396-44f3-9143-da6eb185585a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-S1BwrwCQX",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/7_datatypes_exercise/7_datatypes_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 676759,
+          "key": "7569c2c7-49d2-4ad3-b569-a898cb853130",
+          "title": "Exercise: Parsing Dates",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7569c2c7-49d2-4ad3-b569-a898cb853130",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676875,
+              "key": "ad731223-2d38-42ec-823f-a24eb203c935",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-H1kMm8TXm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/8_parsingdates_exercise/8_parsingdates_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 676876,
+          "key": "511763d5-2243-4a12-9e61-3058d9f46053",
+          "title": "Matching Encodings",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "511763d5-2243-4a12-9e61-3058d9f46053",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676877,
+              "key": "8780c0fb-8ef6-4a82-87ad-80f208e74eed",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Matching Encodings",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833543,
+              "key": "04443bb3-f939-4edd-af1c-b4bd80f40a3a",
+              "title": "Matching Encodings",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "398xRMnhjGk",
+                "china_cdn_id": "398xRMnhjGk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 676878,
+          "key": "211fb65a-ef35-488e-b1b9-31480a4768ee",
+          "title": "Exercise: Matching Encodings",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "211fb65a-ef35-488e-b1b9-31480a4768ee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 676879,
+              "key": "880d71f6-934c-45dd-8f27-c28b3145a76f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BJ+9oUAmQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/9_encodings_exercise/9_encodings_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 679925,
+          "key": "424d45d0-cfd4-4cbe-9fa6-04660def339b",
+          "title": "Missing Data - Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "424d45d0-cfd4-4cbe-9fa6-04660def339b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679926,
+              "key": "5f8efe80-34ed-48c5-b816-b94e7e53f191",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Missing Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833544,
+              "key": "6ed5672b-0667-4204-86da-a9162268064e",
+              "title": "28 Missing Data  Causes V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zlw8ESS6Q88",
+                "china_cdn_id": "zlw8ESS6Q88.mp4"
+              }
+            },
+            {
+              "id": 708788,
+              "key": "1f9dd755-5434-4095-915a-79970ace4712",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the video, I say that a machine learning algorithm won't work with missing values. This is essentially correct; however, there are a couple of situations where this isn't quite true. For example, if you had a categorical variable, you could keep the NULL value as one of the options.\n\nLike if theme_2 could have a value of agriculture, banking, or NULL, you might encode this variable as 0, 1, 2 where the value 2 stands in for the NULL value. You could do something similar for one-hot encoding where the theme_2 variable becomes 3 true/false features: theme_2_agriculture, theme_2_banking, theme_2_NULL. You could have to make sure that this improves your model performance.\n\nThere are also implementations of some machine learning algorithms, such as [gradient boosting decision trees](https://xgboost.readthedocs.io/en/latest/) that can [handle missing values](https://github.com/dmlc/xgboost/issues/21). ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 679928,
+          "key": "66cfd6e8-61ef-4eb0-85bd-d5f5e96b840e",
+          "title": "Missing Data - Delete",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "66cfd6e8-61ef-4eb0-85bd-d5f5e96b840e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679929,
+              "key": "d5844b77-0765-47b3-8bf5-3647517ec725",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Missing Data - Delete",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833558,
+              "key": "e7f644a8-bb26-4f09-adaa-9f034752249f",
+              "title": "29  Missing Data  Delete V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "L0MoPGyiiYo",
+                "china_cdn_id": "L0MoPGyiiYo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 679933,
+          "key": "1e6cfdae-ea49-449b-a297-e2ab7802fa25",
+          "title": "Missing Data - Impute",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1e6cfdae-ea49-449b-a297-e2ab7802fa25",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 679938,
+              "key": "68125b84-ff5e-4e0e-a11a-d9cdaaf29e09",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Missing Data - Inpute",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833545,
+              "key": "7264e4a5-84fc-4091-a9f0-a0f0a502ac09",
+              "title": "30 Imputing Missing Data V1 V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "A5sOJDj3AKg",
+                "china_cdn_id": "A5sOJDj3AKg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 679940,
+          "key": "6ad56efe-bd0e-4012-88ae-c8e025973706",
+          "title": "Exercise: Imputation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6ad56efe-bd0e-4012-88ae-c8e025973706",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 680099,
+              "key": "5fdfdfeb-231c-4ee2-b39e-243d223416e8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rygn3Wl47",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/10_imputation_exercise/10_imputations_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 695340,
+          "key": "49b955ea-1da6-410e-b875-9c8a9c106f18",
+          "title": "SQL, optimization, and ETL - Robert Chang Airbnb",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "49b955ea-1da6-410e-b875-9c8a9c106f18",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 695341,
+              "key": "a9543a99-63d6-4297-b73d-3fb448e70d1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Robert Chang from AirBnB\n\nTake a break from all that coding and watch an interview excerpt with Robert Chang, a data scientist at AirBnB. Robert is a data scientist with a deep interest in data engineering. He starts talking about the importance of SQL and discusses optimizing ETL pipelines.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833546,
+              "key": "3e340fda-855b-4352-a284-e41304df977b",
+              "title": "Data Engineering",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "z6r2e_V0Td0",
+                "china_cdn_id": "z6r2e_V0Td0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 680964,
+          "key": "96e9bdbb-5282-4846-9e0c-8af9f1db93e6",
+          "title": "Duplicate Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "96e9bdbb-5282-4846-9e0c-8af9f1db93e6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 680967,
+              "key": "cf9148fa-8cbc-4781-80f1-986bb6641530",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Duplicate Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833547,
+              "key": "12362062-758f-46ed-9af9-c46a43e489e4",
+              "title": "Duplicate Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "49ZwWRviAFg",
+                "china_cdn_id": "49ZwWRviAFg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681274,
+          "key": "2cecf620-78ba-4509-bac3-cbcf72f30ee9",
+          "title": "Exercise: Duplicate Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2cecf620-78ba-4509-bac3-cbcf72f30ee9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681275,
+              "key": "fb313087-77b4-46b9-9069-3621e31737d0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-HJ0mc1NNX",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/11_duplicatedata_exercise/11_duplicatedata_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681276,
+          "key": "62fb662e-3b67-4a6a-b11b-a09921f08721",
+          "title": "Dummy Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "62fb662e-3b67-4a6a-b11b-a09921f08721",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681277,
+              "key": "6bc4d2be-f48c-4159-b8af-c5c9efefe06d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Dummy Variables",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833548,
+              "key": "d55d1d69-47e2-44aa-818c-88ef724eae6c",
+              "title": "Dummy Variables",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bgxBUvPpKQQ",
+                "china_cdn_id": "bgxBUvPpKQQ.mp4"
+              }
+            },
+            {
+              "id": 689148,
+              "key": "c3695eed-b955-4997-b19c-362f9f356012",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# When to Remove a Feature\n\nAs mentioned in the video, if you have five categories, you only really need four features. For example, if the categories are \"agriculture\", \"banking\", \"retail\", \"roads\", and \"government\", then you only need four of those five categories for dummy variables. This topic is somewhat outside the scope of a data engineer. \n\nIn some cases, you don't necessarily need to remove one of the features. It will depend on your application. In regression models, which use linear combinations of features, removing a dummy variable is important. For a decision tree, removing one of the variables is not needed.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 681769,
+          "key": "94e1aa3b-809d-4958-9f90-38009f549c61",
+          "title": "Exercise: Dummy Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "94e1aa3b-809d-4958-9f90-38009f549c61",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681771,
+              "key": "06db0890-3993-4f0c-8fae-08c86fe4d5b6",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-HJMlU4S4X",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/12_dummyvariables_exercise/12_dummyvariables_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681778,
+          "key": "beb9e0f9-b363-4d35-9e02-0eacd777b17d",
+          "title": "Outliers - How to Find Them",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "beb9e0f9-b363-4d35-9e02-0eacd777b17d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681793,
+              "key": "c124ba00-16dc-433b-9007-9c528fb89c20",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Outliers - How to Find Them",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833549,
+              "key": "770c1401-057f-4b35-946f-7947dab2c69a",
+              "title": "Outliers  How To Find Them",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ksqzOCSAp5U",
+                "china_cdn_id": "ksqzOCSAp5U.mp4"
+              }
+            },
+            {
+              "id": 688722,
+              "key": "bc9dc020-cce7-4378-9a7c-bf938c75a01b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Outlier Detection Resources [Optional]\n\nHere are a couple of links to outlier detection processes and algorithms. Since this is an ETL course rather than a statistics course, you don't need to read these in order to complete the lesson.\n* [scikit-learn novelty and outlier detection](http://scikit-learn.org/stable/modules/outlier_detection.html)\n* [statistical and machine learning methods for outlier detection](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 681798,
+          "key": "23d7f68e-cdf6-4bdb-8f3d-cea94a5b5677",
+          "title": "Exercise: Outliers Part 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "23d7f68e-cdf6-4bdb-8f3d-cea94a5b5677",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682204,
+              "key": "b6def926-e2dd-40db-936b-0435c00bd265",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-H155kYLN7",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/13_outlierspart1_exercise/13_outliers_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681779,
+          "key": "529eaf6a-d529-4163-8d37-067863fb7e8d",
+          "title": "Outliers - What to do ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "529eaf6a-d529-4163-8d37-067863fb7e8d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681795,
+              "key": "10784aed-c950-47a4-9557-3836ca43046b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Outliers - What to do",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833550,
+              "key": "a1ae9707-f895-4d48-9968-8b2044e26f70",
+              "title": "38 Outliers  What To Do With Them V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Yd_fPCmGNZ0",
+                "china_cdn_id": "Yd_fPCmGNZ0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681780,
+          "key": "b0e3028c-0f3f-4866-a3cf-08b390d39279",
+          "title": "Exercise: Outliers - Part 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b0e3028c-0f3f-4866-a3cf-08b390d39279",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682205,
+              "key": "7aba1bf2-2f9c-4aa7-9fae-a3191d29c668",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rk7zltIE7",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/14_outlierspart2_exercise/14_outliers_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 695344,
+          "key": "3316d999-5a7c-47bf-a5a5-de62cb5c712b",
+          "title": "AI and Data Engineering - Robert Chang Airbnb",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3316d999-5a7c-47bf-a5a5-de62cb5c712b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 695345,
+              "key": "d55c2aa9-90d5-495a-9f22-7fc759e7cc96",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Interview - Robert Chang\n\nIn this interview exercpt, Robert Chang discusses the [AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007) and where data engineering comes into play.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833551,
+              "key": "432a1a08-646b-44b2-ab5e-1db219499fd7",
+              "title": "Data Engineering Importance",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VO-OrJ0JqxM",
+                "china_cdn_id": "VO-OrJ0JqxM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681781,
+          "key": "79fc573f-49c0-4ac7-b812-2fe9aa720744",
+          "title": "Scaling Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79fc573f-49c0-4ac7-b812-2fe9aa720744",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681799,
+              "key": "45f597a3-e879-4948-9dfd-84941e582cee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Scaling Data",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833552,
+              "key": "d58a0ddd-5d30-4ed5-961d-25022792ee27",
+              "title": "Scaling Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OgjTk3XCUUE",
+                "china_cdn_id": "OgjTk3XCUUE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681782,
+          "key": "825570de-1345-4116-870d-cf9709312df1",
+          "title": "Exercise: Scaling Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "825570de-1345-4116-870d-cf9709312df1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682311,
+              "key": "d35fb34d-e9de-495a-95b5-456f0d5215d3",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BkgYj38Nm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/15_scaling_exercise/15_scaling_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681783,
+          "key": "ea662948-62ce-4658-ba64-0b2e077ec31e",
+          "title": "Feature Engineering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ea662948-62ce-4658-ba64-0b2e077ec31e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681801,
+              "key": "e4d317e4-4550-4668-90c0-7e8bbea2f923",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Feature Engineering",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714605,
+              "key": "60ff9e60-8cf4-42c7-afba-7dbfce1ec6b1",
+              "title": "44 Feature Engineering V1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7Bof5l8xjz8",
+                "china_cdn_id": "7Bof5l8xjz8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681784,
+          "key": "75d05d0e-f4b4-45c9-9385-438fbd6658a5",
+          "title": "Exercise: Feature Engineering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "75d05d0e-f4b4-45c9-9385-438fbd6658a5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682392,
+              "key": "80ce82bb-fecf-4f21-9fce-d7df7da9e7a5",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-BJA+BTD4Q",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/16_featureengineering_exercise/16_featureengineering_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 714629,
+          "key": "1421efe3-4e3e-4cd8-8f29-551ea9d5b461",
+          "title": "Bloopers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1421efe3-4e3e-4cd8-8f29-551ea9d5b461",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714631,
+              "key": "d637db0f-650c-4724-a28e-b2bd338a24ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Bloopers\n\nYou've finished the extract portion of the lesson, so pat yourself on the back, take a break, and enjoy a few bloopers.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833553,
+              "key": "4cbb9be9-ff7a-4de9-9c63-c3600e6e9c70",
+              "title": "Bloopers Intro 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Y1weHponR2Q",
+                "china_cdn_id": "Y1weHponR2Q.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681785,
+          "key": "78fdbc22-9cca-438e-bd12-33bd2277f03e",
+          "title": "Load",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78fdbc22-9cca-438e-bd12-33bd2277f03e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681802,
+              "key": "ff5172d6-b5c5-4ea5-a758-e2da8d635b89",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Load",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833554,
+              "key": "05119b63-fda9-4cbd-8465-54817bc71ca9",
+              "title": "47  Load V1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Us1hWDaabxo",
+                "china_cdn_id": "Us1hWDaabxo.mp4"
+              }
+            },
+            {
+              "id": 695201,
+              "key": "1e75ce58-c35d-4913-8201-73e3fcec328b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Links to Other Data Storage Systems\n* [ranking of database engines](https://db-engines.com/en/ranking)\n* [Redis](https://redis.io/)\n* [Cassandra](http://cassandra.apache.org/)\n* [Hbase](http://hbase.apache.org/)\n* [MongoDB](https://www.mongodb.com/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 695336,
+              "key": "bd8ea898-6453-47b7-ac64-13e6f34d40d7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Overview of the Load Part of the Lesson",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833555,
+              "key": "e4aeac71-9f69-471c-b909-b6b3843b56bb",
+              "title": "Load Walk Through",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AZvC7kYp_74",
+                "china_cdn_id": "AZvC7kYp_74.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681786,
+          "key": "8d094dd8-7a75-4887-b1fb-2025e51bf872",
+          "title": "Exercise: Load",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8d094dd8-7a75-4887-b1fb-2025e51bf872",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682668,
+              "key": "b62692a3-4fb7-48e6-b52a-600bfe83e974",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-rkb06fKVQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/17_load_exercise/17_load_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681787,
+          "key": "b5ad8115-858b-4a77-a032-37b3f6232dae",
+          "title": "Putting It All Together",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b5ad8115-858b-4a77-a032-37b3f6232dae",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681805,
+              "key": "a0268680-43c7-48bf-ae68-228019c87c58",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Putting It All Together",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714607,
+              "key": "b6186da7-2b7b-469a-8b99-28f572b96050",
+              "title": "52 Putting It All Together V1 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "D2Th0KdPI-Y",
+                "china_cdn_id": "D2Th0KdPI-Y.mp4"
+              }
+            },
+            {
+              "id": 695338,
+              "key": "97cee36a-606d-4f3f-aae2-5255db1b428f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Overview of the Final Exercise",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833556,
+              "key": "7dbb7235-2bac-4bc3-8ad5-4b53ae11eead",
+              "title": "Putting It All Together",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PHaSifd-Mas",
+                "china_cdn_id": "PHaSifd-Mas.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 681788,
+          "key": "15089450-ae47-4330-b0bd-ebd70af4d251",
+          "title": "Exercise: Putting It All Together",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "15089450-ae47-4330-b0bd-ebd70af4d251",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 682703,
+              "key": "ef6ef680-6ab7-40ea-9c78-4286bba7f9de",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewr1gvKMzVX7",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-H1Zcy9K47",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/18_final_exercise/18_final_exercise.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 681791,
+          "key": "a0db038f-98d4-40c4-87a3-5bd131ec1324",
+          "title": "Lesson Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a0db038f-98d4-40c4-87a3-5bd131ec1324",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 681806,
+              "key": "fcb76ede-d6ab-46bf-a36f-2aac4ab7e6ce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lesson Summary",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833557,
+              "key": "571b070f-b23d-4ed1-8332-003cb6aaee67",
+              "title": "Outro V1 V4",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XE3aoYOXeBw",
+                "china_cdn_id": "XE3aoYOXeBw.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

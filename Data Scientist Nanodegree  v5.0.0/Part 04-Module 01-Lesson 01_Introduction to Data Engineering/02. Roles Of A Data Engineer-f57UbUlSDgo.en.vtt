@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.790 --> 00:00:08.910
+Let's talk about the roles of a data engineer which can actually
+
+00:00:08.910 --> 00:00:13.375
+vary a lot depending on where you work and the size of your company.
+
+00:00:13.375 --> 00:00:16.574
+At larger companies, there are usually
+
+00:00:16.574 --> 00:00:20.355
+dedicated data engineers who pull from many sources,
+
+00:00:20.355 --> 00:00:23.914
+and pipeline the data into a usable form.
+
+00:00:23.914 --> 00:00:28.674
+These sources can include website logs, smartphone app logs,
+
+00:00:28.675 --> 00:00:31.280
+user data, transaction data,
+
+00:00:31.280 --> 00:00:35.140
+sensor data, mechanical data, and much more.
+
+00:00:35.140 --> 00:00:39.685
+Analysts can then use these results for dashboard visualizations,
+
+00:00:39.685 --> 00:00:42.719
+predictive models, business decisions,
+
+00:00:42.719 --> 00:00:46.429
+recommendations, or other data science applications.
+
+00:00:46.429 --> 00:00:51.969
+Smaller companies often don't have the resources for a dedicated data engineer.
+
+00:00:51.969 --> 00:00:54.679
+For these companies, a data scientist might have
+
+00:00:54.679 --> 00:00:59.409
+more than one role taking on at least some of the responsibilities of a data engineer.
+
+00:00:59.409 --> 00:01:04.310
+As data scientists, we focus much of our time on building mathematical,
+
+00:01:04.310 --> 00:01:07.530
+machine learning, and domain specific business skills.
+
+00:01:07.530 --> 00:01:13.954
+However, improving our engineering skills sometimes gets little attention.
+
+00:01:13.954 --> 00:01:17.569
+This course will mimic the kind of work you'll do as
+
+00:01:17.569 --> 00:01:21.509
+a data scientist in a smaller company and a larger company.
+
+00:01:21.510 --> 00:01:25.715
+The first section focuses on writing data pipelines.
+
+00:01:25.715 --> 00:01:28.829
+You'll practice pulling data from various sources,
+
+00:01:28.829 --> 00:01:33.349
+transforming the data, and then storing the results in a database.
+
+00:01:33.349 --> 00:01:34.979
+In the next section,
+
+00:01:34.980 --> 00:01:37.310
+you'll create machine learning pipelines to
+
+00:01:37.310 --> 00:01:40.575
+streamline data preparation and model building,
+
+00:01:40.575 --> 00:01:44.290
+and at the end of the lesson is a really cool project,
+
+00:01:44.290 --> 00:01:47.955
+where you can put what you've learned into practice.
+
+00:01:47.954 --> 00:01:49.954
+Before we start coding,
+
+00:01:49.954 --> 00:01:54.719
+let's introduce our industry partner for the data engineering project.
+

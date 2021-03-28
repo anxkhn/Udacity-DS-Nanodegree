@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:09.060
+Welcome to this course on Data Engineering for data scientists.
+
+00:00:09.060 --> 00:00:13.410
+We'll introduce you to some of the skills that data engineers use to gather and
+
+00:00:13.410 --> 00:00:15.810
+manipulate data and how you can incorporate
+
+00:00:15.810 --> 00:00:18.713
+those skills into your work as a data scientist.
+
+00:00:18.713 --> 00:00:22.429
+So, what exactly do data engineers do?
+
+00:00:22.429 --> 00:00:27.600
+Well, data engineers gather all kinds of data from different sources,
+
+00:00:27.600 --> 00:00:30.395
+a process and combine this data,
+
+00:00:30.394 --> 00:00:35.144
+and then store the clean data in a place that can be easily accessed.
+
+00:00:35.145 --> 00:00:39.430
+The goal is to get everything ready so that a data scientist,
+
+00:00:39.429 --> 00:00:42.109
+business analyst, or really anyone at
+
+00:00:42.109 --> 00:00:46.810
+the company can use this data without having to do much wrangling.
+
+00:00:46.810 --> 00:00:50.090
+Data engineers automate this whole process writing
+
+00:00:50.090 --> 00:00:53.420
+software programs called data pipelines.
+
+00:00:53.420 --> 00:00:59.405
+These engineers work with large systems that they build test and maintain with code.
+
+00:00:59.405 --> 00:01:02.314
+More recently, data engineers are being asked to
+
+00:01:02.314 --> 00:01:05.750
+automate and scale machine learning algorithms as well.
+
+00:01:05.750 --> 00:01:11.469
+They're actually much closer to software engineers than they are to data scientists.
+
+00:01:11.530 --> 00:01:13.900
+As a data scientist,
+
+00:01:13.900 --> 00:01:17.980
+it's important that you have at least some data engineering skills.
+
+00:01:17.980 --> 00:01:21.560
+You'll often be communicating with engineers about
+
+00:01:21.560 --> 00:01:25.930
+what data you need and what format the data needs to be in.
+
+00:01:25.930 --> 00:01:27.860
+I'll be the first to admit that
+
+00:01:27.859 --> 00:01:32.075
+the most fascinating part of data science for me is machine learning,
+
+00:01:32.075 --> 00:01:34.505
+but you can't build features and train
+
+00:01:34.504 --> 00:01:38.375
+a machine learning model with messy poorly formatted data.
+
+00:01:38.375 --> 00:01:41.564
+That's where data engineering comes into play.
+
+00:01:41.564 --> 00:01:46.069
+Let's talk in more detail about what exactly the role
+
+00:01:46.069 --> 00:01:50.719
+of a data engineer is and what you'll be doing in this lesson.
+

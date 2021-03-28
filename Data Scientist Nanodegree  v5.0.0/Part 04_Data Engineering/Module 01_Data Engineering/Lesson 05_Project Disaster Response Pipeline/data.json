@@ -1,0 +1,451 @@
+{
+  "data": {
+    "lesson": {
+      "id": 550753,
+      "key": "7a929d2c-6da9-49d4-9849-e725b8c6e7a2",
+      "title": "Project: Disaster Response Pipeline",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "You’ll build a machine learning pipeline to categorize emergency messages based on the needs communicated by the sender.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/7a929d2c-6da9-49d4-9849-e725b8c6e7a2/550753/1581969319350/Project%3A+Disaster+Response+Pipeline+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/7a929d2c-6da9-49d4-9849-e725b8c6e7a2/550753/1581969316421/Project%3A+Disaster+Response+Pipeline+Subtitles.zip"
+          },
+          {
+            "name": "Disaster Response Pipeline Project",
+            "uri": "https://video.udacity-data.com/topher/2018/September/5b9708d2_disaster-response-pipeline-project/disaster-response-pipeline-project.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "e47345d5-9ac6-4382-9d51-b07b16454903",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 47520,
+        "semantic_type": "Project",
+        "title": "Disaster Response Pipelines",
+        "description": "Your **deliverables** will be a **Github repo** containing your Python file and files for a working web app. Remember that reviewers will run your Python script with the original data set and then check that the script outputs a SQLite database file and a trained scikit-learn model.\n\n### Before you submit:\n\nEnsure you meet specifications for all items in the [Project Rubric](https://review.udacity.com/#!/rubrics/1565/view). Your project  must **Meet Specifications** in each category in order for your submission to pass. \n\nIt can take us up to a week to grade the project, but in most cases it is much faster. You will get an email once your submission has been reviewed. In the meantime, you should feel free to proceed with your learning journey by continuing on to the next module in the program.",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1565",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 701873,
+          "key": "2f634809-74d8-489b-ae16-0ec7963ef120",
+          "title": "Project Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2f634809-74d8-489b-ae16-0ec7963ef120",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 701874,
+              "key": "b13abfce-cce5-4cd5-b7c6-bc891a967e34",
+              "title": "Figure 8 Project",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QbLVh5GTuJQ",
+                "china_cdn_id": "QbLVh5GTuJQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 550757,
+          "key": "331e08a5-23da-4d9c-843a-3d6d368f8abd",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "331e08a5-23da-4d9c-843a-3d6d368f8abd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 722399,
+              "key": "a4d6ba59-0bd8-48ca-a2d4-e79d5c6068d1",
+              "title": "Disaster Relief Project Preview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DuwYAjqGM3E",
+                "china_cdn_id": "DuwYAjqGM3E.mp4"
+              }
+            },
+            {
+              "id": 553084,
+              "key": "ce1c0d82-8313-406b-91a4-3eef13af7f44",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Overview\nIn this course, you've learned and built on your data engineering skills to expand your opportunities and potential as a data scientist. In this project, you'll apply these skills to analyze disaster data from [Figure Eight](https://www.figure-eight.com/) to build a model for an API that classifies disaster messages.\n\nIn the Project Workspace, you'll find a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.\n\nYour project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. This project will show off your software skills, including your ability to create basic data pipelines and write clean, organized code!\n\nBelow are a few screenshots of the web app.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 713428,
+              "key": "cd6ed533-f96d-4344-a79b-d9fa7a245101",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b967bef_disaster-response-project1/disaster-response-project1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cd6ed533-f96d-4344-a79b-d9fa7a245101",
+              "caption": "",
+              "alt": "",
+              "width": 1100,
+              "height": 775,
+              "instructor_notes": null
+            },
+            {
+              "id": 713430,
+              "key": "a2016687-bd84-42df-b520-d9c5d424fd0d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b967cda_disaster-response-project2/disaster-response-project2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a2016687-bd84-42df-b520-d9c5d424fd0d",
+              "caption": "",
+              "alt": "",
+              "width": 1100,
+              "height": 900,
+              "instructor_notes": null
+            },
+            {
+              "id": 551841,
+              "key": "8813d437-7767-4352-a863-6aeedbfe4b78",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Components\n\nThere are three components you'll need to complete for this project. \n\n### 1. ETL Pipeline\nIn a Python script, `process_data.py`, write a data cleaning pipeline that:\n* Loads the `messages` and `categories` datasets\n* Merges the two datasets\n* Cleans the data \n* Stores it in a SQLite database\n\n### 2. ML Pipeline\nIn a Python script, `train_classifier.py`, write a machine learning pipeline that:\n* Loads data from the SQLite database\n* Splits the dataset into training and test sets\n* Builds a text processing and machine learning pipeline\n* Trains and tunes a model using GridSearchCV\n* Outputs results on the test set\n* Exports the final model as a pickle file\n\n### 3. Flask Web App\n\nWe are providing much of the flask web app for you, but feel free to add extra features depending on your knowledge of flask, html, css and javascript. For this part, you'll need to:\n * Modify file paths for database and model as needed\n * Add data visualizations using Plotly in the web app. One example is provided for  you\n\n### Github and Code Quality\nYour project will also be graded based on the following:\n- Use of Git and Github\n- Strong documentation\n- Clean and modular code\n\nFollow the [RUBRIC](https://review.udacity.com/#!/rubrics/1565/view) when you work on your project to assure you meet all of the necessary criteria for developing the pipelines and web app.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 550765,
+          "key": "c66d4c6c-a47b-4f70-a4a6-66ab48753867",
+          "title": "Project Details",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c66d4c6c-a47b-4f70-a4a6-66ab48753867",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Data Pipeline",
+                "uri": "https://video.udacity-data.com/topher/2018/March/5a9834fd_data-pipeline/data-pipeline.py"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 553087,
+              "key": "06f459ee-f7ac-4500-9023-68f8fd05002f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Details\n\nBelow are additional details about each component and tips to get you started.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551850,
+              "key": "8dfb2574-0746-4354-86b1-c8db396c09eb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Data Pipelines: Jupyter Notebooks\n\nWe've provided Jupyter notebooks in Project Workspaces with instructions to get you started with both data pipelines. The Jupyter notebook is not required for submission, but highly recommended to complete before getting started on the Python script.\n\n### Project Workspace - ETL\nThe first part of your data pipeline is the Extract, Transform, and Load process. Here, you will read the dataset, clean the data, and then store it in a SQLite database. We expect you to do the data cleaning with pandas. To load the data into an SQLite database, you can use the pandas dataframe `.to_sql()` method, which you can use with an SQLAlchemy engine.\n\nFeel free to do some exploratory data analysis in order to figure out how you want to clean the data set. Though you do not need to submit this exploratory data analysis as part of your project, you'll need to include your cleaning code in the final ETL script, `process_data.py`.\n\n### Project Workspace - Machine Learning Pipeline\nFor the machine learning portion, you will split the data into a training set and a test set. Then, you will create a machine learning pipeline that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a final model that uses the `message` column to predict classifications for 36 categories (multi-output classification). Finally, you will export your model to a pickle file. After completing the notebook, you'll need to include your final machine learning code in `train_classifier.py`.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 555745,
+              "key": "666cef7c-f2e4-4d31-8ddf-059d21730f3e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Data Pipelines: Python Scripts\nAfter you complete the notebooks for the ETL and machine learning pipeline, you'll need to transfer your work into Python scripts, `process_data.py` and `train_classifier.py`. If someone in the future comes with a revised or new dataset of messages, they should be able to easily create a new model just by running your code. These Python scripts should be able to run with additional arguments specifying the files used for the data and model.\n\n#### Example:\n```txt\npython process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db\n\npython train_classifier.py ../data/DisasterResponse.db classifier.pkl\n```\nTemplates for these scripts are provided in the Resources section, as well as the **Project Workspace IDE**. The code for handling these arguments on the command line is given to you in the templates. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551863,
+              "key": "fb656494-70a7-4dac-b263-260e530a0b72",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Flask App\n\nIn the last step, you'll display your results in a Flask web app. We have provided a workspace for you with starter files. You will need to upload your database file and pkl file with your model.\n\nThis is the part of the project that allows for the most creativity. So if you are comfortable with html, css, and javascript, feel free to make the web app as elaborate as you would like.\n\nIn the starter files, you will see that the web app already works and displays a visualization. You'll just have to modify the file paths to your database and pickled model file as needed.\n\nThere is one other change that you are required to make. We've provided code for a simple data visualization. Your job will be to create two additional data visualizations in your web app based on data you extract from the SQLite database. You can modify and copy the code we provided in the starter files to make the visualizations.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551851,
+              "key": "bc0f7c0b-16d6-412a-9cad-5e06e4acc1ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Github and Code Quality\n\nThroughout the process, make sure to push your code and comments to Github so that you will not repeat your work and you can keep track of the changes you've made. This will also help you keep your code modular and well documented. Make sure to include effective comments and docstrings.  These software engineering practices will improve your communication and collaboration in the future when you work within a team. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551827,
+              "key": "a619bd63-ff3b-4d20-8e0c-86db7944f7ff",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Starter Code\n\nThe coding for this project can be completed using the Project Workspace IDE provided. Here's the file structure of the project:\n```txt\n- app\n| - template\n| |- master.html  # main page of web app\n| |- go.html  # classification result page of web app\n|- run.py  # Flask file that runs app\n\n- data\n|- disaster_categories.csv  # data to process \n|- disaster_messages.csv  # data to process\n|- process_data.py\n|- InsertDatabaseName.db   # database to save clean data to\n\n- models\n|- train_classifier.py\n|- classifier.pkl  # saved model \n\n- README.md\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551864,
+              "key": "c4ce3b37-1e1a-4033-bffc-8d9f0108c9c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Running the Web App from the Project Workspace IDE\n\nWhen working in the Project Workspace IDE, here is how to see your Flask app. \n\nOpen a new terminal window. You should already be in the workspace folder, but if not, then use terminal commands to navigate inside the folder with the run.py file. \n\nType in the command line:\n\n```python\npython run.py\n``` \n\nYour web app should now be running if there were no errors.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551869,
+              "key": "e97fcfbf-cc18-4cac-a2d8-20840d66c904",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Now, open another Terminal Window.\n\nType\n```python\nenv|grep WORK\n```\n\nYou'll see output that looks something like this:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 551867,
+              "key": "8090fa27-82d0-4a02-8cf0-1d60cfe87c97",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a8e41a1_screen-shot-2018-02-21-at-8.05.18-pm/screen-shot-2018-02-21-at-8.05.18-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8090fa27-82d0-4a02-8cf0-1d60cfe87c97",
+              "caption": "",
+              "alt": "",
+              "width": 1152,
+              "height": 406,
+              "instructor_notes": null
+            },
+            {
+              "id": 551868,
+              "key": "5acd7864-46c2-4c60-a4b9-1c46e58a3850",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In a new web browser window, type in the following:\n```\nhttps://SPACEID-3001.SPACEDOMAIN\n```\n\nIn this example, that would be:\n\"https://viewa7a4999b-3001.udacity-student-workspaces.com/\" (Don't follow this link now, this is just an example.)\n\nYour SPACEID might be different.\n\nYou should be able to see the web app. The number 3001 represents the port where your web app will show up. Make sure that the 3001 is part of the web address you type in.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 790364,
+              "key": "88248b0b-18b5-4dc7-97df-26bf44db11f7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Rubric\nFollow the [RUBRIC](https://review.udacity.com/#!/rubrics/1565/view) when you work on your project to assure you meet all of the necessary criteria for developing the pipelines and web app.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 694703,
+          "key": "87f9cda3-9c98-4ce3-a307-0478e8fc7ebb",
+          "title": "Project Workspace - ETL",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "87f9cda3-9c98-4ce3-a307-0478e8fc7ebb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 694723,
+              "key": "8b79f8eb-224b-475e-9820-2d095140e784",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6fc3e9d1",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-asput990k5p",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/ETL Pipeline Preparation.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 550769,
+          "key": "65a088dd-681d-413f-963c-63dc5417da90",
+          "title": "Project Workspace - ML Pipeline",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65a088dd-681d-413f-963c-63dc5417da90",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Data Pipeline",
+                "uri": "https://video.udacity-data.com/topher/2018/March/5a983419_data-pipeline/data-pipeline.py"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 550770,
+              "key": "14dbca54-2c6a-4c18-8a74-5e163b012300",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6fc3e9d1",
+              "pool_id": "jupyter",
+              "view_id": "6fc3e9d1-e19f-4d49-9f00-0a5934b67333",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/ML Pipeline Preparation.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551763,
+          "key": "94f3a9bf-52af-4c12-82e2-b6065716fa1f",
+          "title": "Project Workspace IDE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "94f3a9bf-52af-4c12-82e2-b6065716fa1f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 551765,
+              "key": "bbdf0e86-9fc0-49b7-8d99-19500053cfe8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6914b2f4",
+              "pool_id": "webterminal",
+              "view_id": "6914b2f4-8fa1-443e-bccf-8d2d81ad516d",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [
+                      3001
+                    ],
+                    "userCode": "python -m nltk.downloader wordnet punkt",
+                    "openFiles": [
+                      "/home/workspace/README.md"
+                    ],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH"
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

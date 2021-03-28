@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.429 --> 00:00:05.368
+PROJETO DA FIGURE EIGHT
+
+00:00:06.004 --> 00:00:08.596
+Você tem um projeto
+muito legal à frente.
+
+00:00:08.629 --> 00:00:10.945
+Nossos parceiros
+da Figure Eight nos forneceram
+
+00:00:10.978 --> 00:00:13.323
+tuítes e mensagens
+de texto pré-rotuladas
+
+00:00:13.356 --> 00:00:15.563
+de desastres da vida real.
+
+00:00:15.596 --> 00:00:19.417
+A sua tarefa será preparar
+esses dados com um pipeline ETL
+
+00:00:19.450 --> 00:00:21.676
+e usar um pipeline
+de aprendizado de máquina
+
+00:00:21.709 --> 00:00:24.419
+para construir um modelo
+de aprendizado supervisionado.
+
+00:00:24.452 --> 00:00:27.724
+Antes de começarmos,
+o Robert vai nos explicar
+
+00:00:27.757 --> 00:00:29.819
+de onde veio
+esse conjunto de dados
+
+00:00:29.852 --> 00:00:32.618
+e de como a Figure Eight
+os preparou para a gente.
+
+00:00:33.179 --> 00:00:34.279
+Obrigado.
+
+00:00:34.312 --> 00:00:37.499
+Esse é um dos problemas mais
+importantes que tentamos resolver
+
+00:00:37.532 --> 00:00:40.195
+em ciência de dados
+e no aprendizado de máquina.
+
+00:00:40.228 --> 00:00:45.464
+Após um desastre, costumam
+ser feitas milhares de comunicações,
+
+00:00:45.497 --> 00:00:47.708
+por mensagens diretas
+ou pelas redes sociais,
+
+00:00:47.741 --> 00:00:51.115
+bem na hora em que as organizações
+de assistência estão
+
+00:00:51.148 --> 00:00:53.694
+com a menor capacidade
+de filtrar e escolher
+
+00:00:53.727 --> 00:00:55.611
+as mensagens mais importantes.
+
+00:00:55.644 --> 00:00:58.482
+Geralmente, apenas uma
+em cada mil mensagens
+
+00:00:58.515 --> 00:01:02.835
+pode ser relevante para
+profissionais de assistência.
+
+00:01:02.868 --> 00:01:05.843
+Os desastres são abordados
+da seguinte maneira:
+
+00:01:05.876 --> 00:01:09.038
+diferentes organizações cuidam
+de diferentes partes do problema.
+
+00:01:09.071 --> 00:01:12.666
+Uma cuida da água,
+outra cuida de estradas bloqueadas,
+
+00:01:12.699 --> 00:01:14.995
+outra cuida
+de suprimentos médicos.
+
+00:01:15.028 --> 00:01:18.449
+Ao analisar os dados, você verá
+que essas são as categorias
+
+00:01:18.482 --> 00:01:20.987
+que selecionamos de cada um
+dos conjuntos de dados.
+
+00:01:21.020 --> 00:01:24.411
+Nós usamos o Figure Eight
+para muitos dos desastres
+
+00:01:24.444 --> 00:01:26.559
+dos quais essas mensagens
+foram retiradas.
+
+00:01:26.592 --> 00:01:29.259
+E combinamos esses conjuntos
+e os rotulamos de novo,
+
+00:01:29.292 --> 00:01:33.100
+para que haja rótulos consistentes
+durante desastres diferentes.
+
+00:01:33.133 --> 00:01:35.715
+Isso é para permitir
+que você investigue
+
+00:01:35.748 --> 00:01:38.171
+as diferentes tendências
+que você pode encontrar
+
+00:01:38.204 --> 00:01:41.010
+e para construir modelos
+de aprendizado supervisionado.
+
+00:01:41.043 --> 00:01:45.451
+Você verá que, por exemplo,
+uma palavra-chave como "água"
+
+00:01:46.131 --> 00:01:49.299
+só em uma pequena
+parcela de ocorrências mapeará
+
+00:01:49.332 --> 00:01:51.547
+alguém que precisa
+de água potável.
+
+00:01:52.059 --> 00:01:54.496
+E isso ignoraria pessoas
+que dizem estar com sede
+
+00:01:54.529 --> 00:01:56.083
+sem usar a palavra "água".
+
+00:01:56.116 --> 00:01:59.378
+Abordagens baseadas em aprendizado
+de máquina supervisionado
+
+00:01:59.411 --> 00:02:02.842
+serão muito mais precisas do que
+outras com palavras-chave.
+
+00:02:02.875 --> 00:02:07.043
+Isso é uma grande lacuna no
+contexto de respostas a desastres.
+
+00:02:07.328 --> 00:02:10.979
+Estou ansioso para ver o que
+você construirá em seus projetos
+
+00:02:11.012 --> 00:02:13.191
+e, com sorte, vou descobrir
+novas tendências
+
+00:02:13.224 --> 00:02:15.387
+e formas de construir modelos
+de aprendizado
+
+00:02:15.420 --> 00:02:18.092
+que possam nos ajudar
+a responder a futuros desastres.
+
+00:02:19.211 --> 00:02:21.643
+Uma das minhas partes favoritas
+desse projeto
+
+00:02:21.676 --> 00:02:23.690
+é a relevância desse trabalho.
+
+00:02:23.723 --> 00:02:25.987
+Imagine os benefícios
+que essa solução levará
+
+00:02:26.020 --> 00:02:29.667
+a pessoas afetadas por desastres
+naturais ao redor do mundo.
+
+00:02:30.602 --> 00:02:33.243
+Boa sorte! Estou ansioso
+pelos resultados.
+

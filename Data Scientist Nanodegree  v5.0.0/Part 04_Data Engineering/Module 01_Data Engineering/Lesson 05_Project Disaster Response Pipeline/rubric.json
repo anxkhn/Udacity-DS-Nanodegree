@@ -1,0 +1,240 @@
+{
+  "id": 1565,
+  "project_id": 516,
+  "upload_types": [
+    "link",
+    "repo",
+    "zip"
+  ],
+  "file_filter_regex": "\\A(?!(((.*/)?(__MACOSX|\\.git|node_modules|bower_components|jspm_packages|\\.idea|build|.ipynb_checkpoints|\\.Trash-0|logs)(\\Z|/))))((.*\\.(css|docx|gradle|htm|html|java|js|markdown|md|pdf|py|rmd|rst|sql|swift|txt|xml|yaml|yml)\\Z)|((.*/)?(README|Readme|readme|Makefile)\\Z))",
+  "nomination_eligible": true,
+  "stand_out": "- Go into more detail about the dataset and your data cleaning and modeling process in your README file, add screenshots of your web app and model results.\n- Add more visualizations to the web app.\n- Based on the categories that the ML algorithm classifies text into, advise some organizations to connect to.\n- Customize the design of the web app.\n- Deploy the web app to a cloud service provider.\n- Improve the efficiency of the code in the ETL and ML pipeline.\n- This dataset is imbalanced (ie some labels like water have few examples). In your README, discuss how this imbalance, how that affects training the model, and your thoughts about emphasizing precision or recall for the various categories.",
+  "hide_criteria": false,
+  "created_at": "2018-02-20T20:06:27.495Z",
+  "updated_at": "2019-12-03T05:50:56.461Z",
+  "hashtag": "",
+  "max_upload_size_mb": 500,
+  "estimated_sla": null,
+  "project_assistant_enabled": false,
+  "available_for_cert_project": false,
+  "language": "en-us",
+  "ndkeys": [
+    "nd025-beta",
+    "nd025",
+    "nd025-mena-connect",
+    "nd027-beta",
+    "nd0000",
+    "nd025-ent-demo",
+    "nd025-ent",
+    "nd898-ent-airbus",
+    "nd025-cn"
+  ],
+  "coursekeys": [],
+  "is_career": false,
+  "sections": [
+    {
+      "id": 3260,
+      "name": "Github & Code Quality",
+      "created_at": "2018-03-01T21:59:41.906Z",
+      "updated_at": "2018-09-10T16:21:57.738Z",
+      "deleted_at": null,
+      "position": 0,
+      "rubric_id": 1565,
+      "rubric_items": [
+        {
+          "id": 9626,
+          "section_id": 3260,
+          "passed_description": "All project code is stored in a GitHub repository and a link to the repository has been provided for reviewers. The student made at least 3 commits to this repository.",
+          "exceeded_description": null,
+          "created_at": "2018-03-01T22:01:15.186Z",
+          "updated_at": "2018-09-21T17:42:37.117Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "The project demonstrates an understanding of Git and Github.",
+          "exceedable": false
+        },
+        {
+          "id": 9627,
+          "section_id": 3260,
+          "passed_description": "The README file includes a summary of the project, how to run the Python scripts and web app, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.",
+          "exceeded_description": null,
+          "created_at": "2018-03-01T22:04:05.654Z",
+          "updated_at": "2018-09-21T16:08:54.896Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "The project shows proper use of documentation.",
+          "exceedable": false
+        },
+        {
+          "id": 14099,
+          "section_id": 3260,
+          "passed_description": "Scripts have an intuitive, easy-to-follow structure with code separated into logical functions. Naming for variables and functions follows the PEP8 style guidelines.",
+          "exceeded_description": null,
+          "created_at": "2018-09-10T16:21:57.976Z",
+          "updated_at": "2018-10-02T18:46:27.064Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "The project code is clean and modular.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 3052,
+      "name": "ETL",
+      "created_at": "2018-02-21T01:36:50.961Z",
+      "updated_at": "2018-09-10T16:25:18.147Z",
+      "deleted_at": null,
+      "position": 2,
+      "rubric_id": 1565,
+      "rubric_items": [
+        {
+          "id": 8999,
+          "section_id": 3052,
+          "passed_description": "The ETL script, process_data.py, runs in the terminal without errors. The script takes the file paths of the two datasets and database, cleans the datasets, and stores the clean data into a SQLite database in the specified database file path.",
+          "exceeded_description": null,
+          "created_at": "2018-02-21T01:37:03.251Z",
+          "updated_at": "2018-09-21T16:22:10.043Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "ETL script runs without errors.",
+          "exceedable": false
+        },
+        {
+          "id": 9000,
+          "section_id": 3052,
+          "passed_description": "The script successfully follows steps to clean the dataset. It merges the messages and categories datasets, splits the categories column into separate, clearly named columns, converts values to binary, and drops duplicates.",
+          "exceeded_description": null,
+          "created_at": "2018-02-21T18:57:00.773Z",
+          "updated_at": "2018-09-21T16:19:33.791Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "ETL script properly cleans the data.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 3054,
+      "name": "Machine Learning",
+      "created_at": "2018-02-21T19:19:21.370Z",
+      "updated_at": "2018-03-01T22:00:55.762Z",
+      "deleted_at": null,
+      "position": 4,
+      "rubric_id": 1565,
+      "rubric_items": [
+        {
+          "id": 9633,
+          "section_id": 3054,
+          "passed_description": "The machine learning script, train_classifier.py, runs in the terminal without errors. The script takes the database file path and model file path, creates and trains a classifier, and stores the classifier into a pickle file to the specified model file path.",
+          "exceeded_description": null,
+          "created_at": "2018-03-02T00:05:21.935Z",
+          "updated_at": "2018-09-21T16:47:34.647Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Machine learning script runs without errors.",
+          "exceedable": false
+        },
+        {
+          "id": 9625,
+          "section_id": 3054,
+          "passed_description": "The script uses a custom tokenize function using nltk to case normalize, lemmatize, and tokenize text. This function is used in the machine learning pipeline to vectorize and then apply TF-IDF to the text.",
+          "exceeded_description": null,
+          "created_at": "2018-03-01T21:52:28.550Z",
+          "updated_at": "2018-09-21T16:47:34.654Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "The project shows an understanding of NLP techniques to process text data.",
+          "exceedable": false
+        },
+        {
+          "id": 9003,
+          "section_id": 3054,
+          "passed_description": "The script builds a pipeline that processes text and then performs multi-output classification on the 36 categories in the dataset. GridSearchCV is used to find the best parameters for the model.",
+          "exceeded_description": null,
+          "created_at": "2018-02-21T19:19:34.586Z",
+          "updated_at": "2018-09-10T16:27:40.912Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "The project demonstrates proper use of pipelines and grid search.",
+          "exceedable": false
+        },
+        {
+          "id": 9623,
+          "section_id": 3054,
+          "passed_description": "The TF-IDF pipeline is only trained with the training data. The f1 score, precision and recall for the test set is outputted for each category.",
+          "exceeded_description": null,
+          "created_at": "2018-03-01T21:47:23.530Z",
+          "updated_at": "2018-09-21T18:03:06.971Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 3,
+          "criteria": "The project demonstrates an understanding of training vs. test data and model evaluation.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 3055,
+      "name": "Deployment",
+      "created_at": "2018-02-21T19:22:53.550Z",
+      "updated_at": "2018-03-01T22:00:55.770Z",
+      "deleted_at": null,
+      "position": 5,
+      "rubric_id": 1565,
+      "rubric_items": [
+        {
+          "id": 9006,
+          "section_id": 3055,
+          "passed_description": "The web app, run.py, runs in the terminal without errors. The main page includes at least two visualizations using data from the SQLite database.",
+          "exceeded_description": null,
+          "created_at": "2018-02-21T19:23:05.042Z",
+          "updated_at": "2018-09-21T16:47:34.666Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "The web app runs without errors and displays visualizations that describe the training data.",
+          "exceedable": false
+        },
+        {
+          "id": 9007,
+          "section_id": 3055,
+          "passed_description": "When a user inputs a message into the app, the app returns classification results for all 36 categories.",
+          "exceeded_description": null,
+          "created_at": "2018-02-21T19:23:57.045Z",
+          "updated_at": "2018-09-21T16:47:34.672Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "The web app successfully uses the trained model to input text and return classification results.",
+          "exceedable": false
+        }
+      ]
+    }
+  ],
+  "project": {
+    "id": 516,
+    "name": "Disaster Response Pipeline",
+    "nanodegree_key": "nd025",
+    "is_cert_project": false,
+    "audit_project_id": null,
+    "hashtag": null,
+    "audit_rubric_id": 2899,
+    "entitlement_required": false,
+    "is_career": false,
+    "recruitment_family_id": 5,
+    "created_at": "2018-08-21T02:21:29.061Z",
+    "updated_at": "2021-03-27T08:50:27.300Z",
+    "price": "7.0",
+    "ungradeable_price": "3.0",
+    "audit_price": "0.0"
+  }
+}

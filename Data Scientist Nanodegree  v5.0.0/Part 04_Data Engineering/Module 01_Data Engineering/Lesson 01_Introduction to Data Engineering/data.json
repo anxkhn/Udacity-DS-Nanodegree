@@ -1,0 +1,157 @@
+{
+  "data": {
+    "lesson": {
+      "id": 689028,
+      "key": "a9c4a6b4-fdc7-4257-b992-ff5ff5633abb",
+      "title": "Introduction to Data Engineering",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "You will get an introduction to the data engineering for data scientists course and project. The lessons include ETL pipelines, natural language pipelines, and machine learning pipelines.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/a9c4a6b4-fdc7-4257-b992-ff5ff5633abb/689028/1551692558982/Introduction+to+Data+Engineering+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/a9c4a6b4-fdc7-4257-b992-ff5ff5633abb/689028/1551692556483/Introduction+to+Data+Engineering+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 689029,
+          "key": "8dfdb7ea-8ad2-4252-b2d5-ef4bdecb0c37",
+          "title": "Introduction to the Lesson",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8dfdb7ea-8ad2-4252-b2d5-ef4bdecb0c37",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 694796,
+              "key": "80d2641f-fbfc-457e-ad9b-f6bfa8ed746b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction to the Data Engineering Lesson",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833531,
+              "key": "24fe6762-e8fa-4ccf-800a-80809088a39c",
+              "title": "01 Welcome V1 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ykd7CN5dDx0",
+                "china_cdn_id": "Ykd7CN5dDx0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 694797,
+          "key": "9ee29e0c-5108-499f-84fa-76eb839eb839",
+          "title": "Roles of a Data Engineer",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9ee29e0c-5108-499f-84fa-76eb839eb839",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 694799,
+              "key": "4b885471-724f-4bf3-aa15-c525380ca9ae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Roles of a Data Engineer",
+              "instructor_notes": ""
+            },
+            {
+              "id": 833532,
+              "key": "4e0163fd-3ed6-4d2d-8e6d-7c01463bfddc",
+              "title": "Roles Of A Data Engineer",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "f57UbUlSDgo",
+                "china_cdn_id": "f57UbUlSDgo.mp4"
+              }
+            },
+            {
+              "id": 718287,
+              "key": "ae4dc2a1-7517-49ec-8e22-63acdf98f633",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Course Roadmap\n\n* Data Engineering\n * Data Pipelines\n * ETL (Extract Transform Load) Pipelines\n* NLP Pipelines\n  * Text Processing\n  * Modeling\n* Machine Learning Pipelines\n  * Scikit-learn pipelines\n  * Feature Union\n  * Grid Search\n* Data Engineering Project\n  * Classify disaster response messages\n  * Skills: data pipelines, NLP pipelines, machine learning pipelines, supervised learning",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 694800,
+          "key": "67015a2c-0087-47d1-a7bc-b26a4a26a3e4",
+          "title": "Project Preview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "67015a2c-0087-47d1-a7bc-b26a4a26a3e4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 833533,
+              "key": "ee9d1135-cae7-4e60-82af-c8f5b38e410b",
+              "title": "Figure 8 Project V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "adtlHL42AuQ",
+                "china_cdn_id": "adtlHL42AuQ.mp4"
+              }
+            },
+            {
+              "id": 694801,
+              "key": "5ae331e0-ebeb-4f58-9a59-72f50392d4ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Project Preview\n\nIn this project you're going to be analyzing thousands of real messages provided by Figure 8, sent during natural disasters either via social media or directly to disaster response organizations. You'll build an ETL pipeline that processes message and category data from csv files and load them into a SQLite database, which your machine learning pipeline will then read from to create and save a multi-output supervised learning model. Then, your web app will extract data from this database to provide data visualizations and use your model to classify new messages for 36 categories. \n\nMachine learning is critical to helping different organizations understand which messages are relevant to them and which messages to prioritize. During these disasters is when they have the least capacity to filter out messages that matter, and find basic methods such as using key word searches to provide trivial results. In this course, you'll learn the skills you need in ETL pipelines, natural language processing, and machine learning pipelines to create an amazing project with real world significance.",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
