@@ -1,0 +1,93 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.213 --> 00:00:04.581
+Parabéns por completar
+os exercícios de transformação.
+
+00:00:04.614 --> 00:00:09.432
+Sei que havia muita informação
+e muitos exercícios,
+
+00:00:09.465 --> 00:00:11.577
+mas também quero lembrar
+
+00:00:11.610 --> 00:00:13.700
+que muito do trabalho
+dos cientistas de dados
+
+00:00:13.733 --> 00:00:17.850
+é transformar dados
+e deixá-los prontos para análise.
+
+00:00:17.883 --> 00:00:21.758
+Essa é uma prática muito boa.
+
+00:00:21.791 --> 00:00:24.414
+Você está quase no fim da aula.
+
+00:00:24.447 --> 00:00:25.693
+Na parte seguinte,
+
+00:00:25.726 --> 00:00:28.361
+você vai praticar carregar dados
+em diferentes formatos,
+
+00:00:28.394 --> 00:00:32.847
+como CSV, JSON
+e em bancos de dados.
+
+00:00:32.880 --> 00:00:37.663
+O exercício completo
+está nesse notebook.
+
+00:00:37.696 --> 00:00:39.529
+Se quiser um desafio extra,
+
+00:00:39.562 --> 00:00:43.257
+você pode encontrar um exercício
+no final do notebook
+
+00:00:43.290 --> 00:00:48.887
+que envolve criar mais tabelas SQL
+do que em outros exercícios.
+
+00:00:48.920 --> 00:00:52.249
+Novamente, há um arquivo de resposta
+para este exercício
+
+00:00:52.282 --> 00:00:56.005
+se você for em Arquivo, Abrir
+
+00:00:56.038 --> 00:00:59.370
+e clicar no arquivo da solução.
+
+00:00:59.403 --> 00:01:04.295
+Você também vai perceber
+que, no início desse exercício,
+
+00:01:04.328 --> 00:01:08.483
+todos os dados já estão carregados
+e transformados para você.
+
+00:01:08.516 --> 00:01:12.687
+As transformações são coisas
+que você praticou mais cedo na aula.
+
+00:01:12.720 --> 00:01:18.687
+Fiz isso para que você não tivesse
+que repetir o mesmo exercício.
+
+00:01:18.720 --> 00:01:20.275
+Assim, você pode focar
+o seu tempo
+
+00:01:20.308 --> 00:01:23.265
+na parte de carregamento
+do pipeline ETL,
+
+00:01:23.298 --> 00:01:25.466
+em vez de ficar repetindo
+o que você já fez.
+

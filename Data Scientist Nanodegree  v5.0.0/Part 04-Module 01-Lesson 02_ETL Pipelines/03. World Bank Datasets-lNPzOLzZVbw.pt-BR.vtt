@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.190 --> 00:00:02.927
+Esta aula é dividida
+em três partes.
+
+00:00:03.222 --> 00:00:06.242
+Temos a parte
+sobre extração, que começa aqui.
+
+00:00:06.799 --> 00:00:09.348
+Depois, sobre transformação.
+
+00:00:09.663 --> 00:00:15.607
+E, por fim, aqui embaixo,
+temos carregamento.
+
+00:00:16.086 --> 00:00:20.999
+Isso tudo é seguido de um exercício
+que junta todas as partes do ETL.
+
+00:00:21.687 --> 00:00:24.543
+Ao longo da aula,
+você vai trabalhar com exercícios
+
+00:00:24.576 --> 00:00:26.752
+que usam dados
+do Bando Mundial.
+
+00:00:26.785 --> 00:00:30.320
+Embora você não vá executar nenhum
+algoritmo de aprendizado de máquina,
+
+00:00:30.353 --> 00:00:33.099
+nesta aula, você vai preparar
+os dados para tarefas
+
+00:00:33.132 --> 00:00:34.987
+como regressão linear.
+
+00:00:35.287 --> 00:00:38.582
+Este é o site dos projetos
+do Banco Mundial.
+
+00:00:38.895 --> 00:00:42.591
+O Banco Mundial fornece
+muitos dados para download.
+
+00:00:43.142 --> 00:00:47.759
+Nesta aula, você vai trabalhar
+com a base de dados de projetos
+
+00:00:47.792 --> 00:00:50.895
+e com a base de dados
+de indicadores.
+
+00:00:51.487 --> 00:00:54.010
+Por exemplo, cada projeto
+do Banco Mundial tem
+
+00:00:54.043 --> 00:00:56.207
+um custo associado a ele.
+
+00:00:56.240 --> 00:01:00.313
+Assim como outros dados,
+como o título e o tema do projeto,
+
+00:01:00.346 --> 00:01:04.183
+os dados de indicadores
+do Banco Mundial têm
+
+00:01:04.216 --> 00:01:07.383
+informações sociodemográficas
+e dados financeiros
+
+00:01:07.416 --> 00:01:09.463
+a respeito de países
+ao redor do mundo.
+
+00:01:09.496 --> 00:01:13.982
+Se você for prever o custo
+de um projeto do Banco Mundial,
+
+00:01:14.015 --> 00:01:18.526
+é bom ver se os dados
+sociodemográficos e financeiros
+
+00:01:18.559 --> 00:01:20.974
+do país formam bons recursos.
+
+00:01:21.007 --> 00:01:24.638
+Você teria que combinar dados
+do conjunto de dados do projeto,
+
+00:01:24.671 --> 00:01:28.958
+assim como desses
+dados sociodemográficos.
+
+00:01:29.926 --> 00:01:33.302
+Na verdade, você não vai tentar
+fazer essas previsões.
+
+00:01:33.335 --> 00:01:36.470
+Em vez disso, você vai colocar
+os dados em um pipeline ETL
+
+00:01:36.503 --> 00:01:39.236
+para deixá-los prontos
+para análise.
+
+00:01:39.269 --> 00:01:42.656
+Eu vou dar uma visão geral
+de onde esses dados vêm.
+
+00:01:43.422 --> 00:01:48.414
+Voltando, este site tem informações
+sobre todos os projetos
+
+00:01:48.447 --> 00:01:50.478
+que o Banco Mundial financia.
+
+00:01:51.047 --> 00:01:55.150
+Se você for para baixo
+e clicar em "Use Our Data"
+
+00:01:55.518 --> 00:01:58.349
+e, depois, acessar
+"Data &amp; Resources",
+
+00:01:58.382 --> 00:02:02.110
+você pode baixar os dados
+do projeto em formatos diferentes.
+
+00:02:02.143 --> 00:02:07.029
+Por exemplo, eles têm
+a API do projeto e um arquivo CSV.
+
+00:02:07.463 --> 00:02:11.742
+O que eu fiz para esta aula
+foi baixar o arquivo CSV
+
+00:02:11.775 --> 00:02:13.406
+e usá-lo na sala de aula.
+
+00:02:13.439 --> 00:02:16.686
+Você não vai precisar
+baixar dados deste site,
+
+00:02:16.719 --> 00:02:19.623
+porque eu já baixei
+e os preparei para você.
+
+00:02:20.214 --> 00:02:23.181
+O Banco Mundial tem outro
+repositório de dados
+
+00:02:23.214 --> 00:02:25.726
+para dados indicadores
+de países.
+
+00:02:25.759 --> 00:02:28.702
+Indicadores são coisas
+como PIB,
+
+00:02:28.735 --> 00:02:31.366
+a porcentagem rural
+de uma população
+
+00:02:31.399 --> 00:02:34.885
+e outras informações
+demográficas e econômicas.
+
+00:02:35.423 --> 00:02:39.205
+Por exemplo, você vai
+trabalhar com dados de PIB.
+
+00:02:39.974 --> 00:02:43.381
+Você pode vir aqui na barra
+de busca e procurar por "PIB",
+
+00:02:43.823 --> 00:02:46.798
+e ele vai mostrar
+o PIB em dólares americanos
+
+00:02:46.831 --> 00:02:50.437
+e em várias outras maneiras
+com as quais eles medem o PIB.
+
+00:02:50.854 --> 00:02:52.701
+Eu vou clicar aqui em cima.
+
+00:02:53.381 --> 00:02:55.925
+Aqui, há uma interface
+de usuário gráfica
+
+00:02:55.958 --> 00:02:57.999
+onde você pode
+brincar com os dados,
+
+00:02:58.032 --> 00:03:01.245
+mas tudo o que fiz
+foi vir aqui onde diz "Download"
+
+00:03:01.278 --> 00:03:06.861
+e clicar no formato que eu queria
+para baixar os dados.
+
+00:03:06.894 --> 00:03:09.360
+Mas, como eu disse,
+preparei tudo para você,
+
+00:03:09.393 --> 00:03:11.983
+então você não precisa
+baixar esses dados.
+
+00:03:12.846 --> 00:03:17.129
+Note que aqui no URL
+
+00:03:17.333 --> 00:03:21.735
+diz "NY.GDP.MKTP.CD".
+
+00:03:21.768 --> 00:03:27.133
+Isso é um tipo de abreviação
+que o Banco Mundial usa
+
+00:03:27.166 --> 00:03:29.341
+para representar o PIB.
+
+00:03:30.246 --> 00:03:32.166
+Voltando à sala de aula,
+
+00:03:32.638 --> 00:03:37.069
+os exercícios estão marcados
+à esquerda como "Exercise".
+
+00:03:37.102 --> 00:03:40.056
+Por exemplo,
+se você clicar em "Extract",
+
+00:03:40.089 --> 00:03:43.590
+vai acessar apenas informações,
+que podem textos ou vídeos.
+
+00:03:43.623 --> 00:03:46.822
+Mas se você clicar
+em "Exercise: CSV",
+
+00:03:46.855 --> 00:03:50.254
+vai abrir um exercício
+com o notebook Jupyter.
+
+00:03:50.725 --> 00:03:52.861
+E aí você pode
+começar a trabalhar.
+
+00:03:52.894 --> 00:03:55.909
+É daí que vêm os dados
+para esta aula,
+
+00:03:55.942 --> 00:04:00.638
+e é assim que todos
+os exercícios estão organizados.
+

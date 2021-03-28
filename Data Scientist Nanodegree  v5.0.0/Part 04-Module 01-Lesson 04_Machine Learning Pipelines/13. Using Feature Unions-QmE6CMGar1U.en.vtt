@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.259
+Taking the example from the previous video,
+
+00:00:03.259 --> 00:00:05.339
+let's say you wanted to extract
+
+00:00:05.339 --> 00:00:09.599
+two different kinds of features from the same text column,
+
+00:00:09.599 --> 00:00:13.744
+"tfidf" values and the length of the text.
+
+00:00:13.744 --> 00:00:19.475
+You're first approach might be to create an additional column from the text column,
+
+00:00:19.475 --> 00:00:21.615
+called 'text_length', like this.
+
+00:00:21.614 --> 00:00:27.524
+Then, both text and text_length can be part of your future matrix.
+
+00:00:27.524 --> 00:00:29.974
+But now your pipeline would break.
+
+00:00:29.975 --> 00:00:34.814
+You can't run CountVectorizer on NumPy arrays of strings and numbers.
+
+00:00:34.814 --> 00:00:40.804
+Now, let's say you had a custom transformer called TextLengthExtractor.
+
+00:00:40.804 --> 00:00:43.820
+Now, you could leave x_train as
+
+00:00:43.820 --> 00:00:46.909
+just original text column if you could figure
+
+00:00:46.909 --> 00:00:50.784
+out how to add the TextLengthExtractor to your pipeline,
+
+00:00:50.784 --> 00:00:56.114
+if only you could fit your TextLengthExtractor on the original text data,
+
+00:00:56.115 --> 00:00:59.585
+rather than the output of the previous transformer.
+
+00:00:59.585 --> 00:01:03.799
+But you need both the outputs of the TfidfTransformer
+
+00:01:03.799 --> 00:01:09.109
+and the TextLengthExtractor to feed into the classifier as input.
+
+00:01:09.109 --> 00:01:13.689
+FeatureUnions are super helpful for handling these situations,
+
+00:01:13.689 --> 00:01:16.620
+where we need to run two steps in parallel,
+
+00:01:16.620 --> 00:01:18.150
+on the same data,
+
+00:01:18.150 --> 00:01:21.515
+and combine the results to pass into the next step.
+
+00:01:21.515 --> 00:01:27.319
+Like pipelines, FeatureUnions are built using a list of key value pairs,
+
+00:01:27.319 --> 00:01:30.859
+where the key is a string for what you want to name
+
+00:01:30.859 --> 00:01:35.355
+a step and the value is the estimator object.
+
+00:01:35.355 --> 00:01:39.124
+Also, similarly, a FeatureUnion combines
+
+00:01:39.123 --> 00:01:43.108
+a list of estimators to become a single estimator.
+
+00:01:43.108 --> 00:01:47.039
+However, it runs its estimators in parallel,
+
+00:01:47.040 --> 00:01:50.120
+rather than in sequence, like pipelines.
+
+00:01:50.120 --> 00:01:57.385
+In this example, the estimators being run in parallel are nlp_pipeline and text_length.
+
+00:01:57.385 --> 00:02:02.800
+Notice that we use a pipeline in the FeatureUnion to make sure
+
+00:02:02.799 --> 00:02:08.935
+the CountVectorizer and the TfidfTransformer steps are still running in sequence.
+
+00:02:08.935 --> 00:02:13.370
+Now, our pipeline doesn't break and uses both features.
+
+00:02:13.370 --> 00:02:17.409
+This would actually be equivalent to this code.
+
+00:02:17.409 --> 00:02:20.960
+After initializing all the estimators,
+
+00:02:20.960 --> 00:02:24.000
+notice that the CountVectorizer and
+
+00:02:24.000 --> 00:02:30.270
+the TextLengthExtractor are both feed and transformed onto the original training data.
+
+00:02:30.270 --> 00:02:36.430
+Then, their outputs are combined and passed in to the classifier.
+
+00:02:36.430 --> 00:02:38.629
+Similarly, with the test data,
+
+00:02:38.629 --> 00:02:41.555
+the CountVectorizer and TextLengthExtractor,
+
+00:02:41.555 --> 00:02:44.460
+both transform the original test data,
+
+00:02:44.460 --> 00:02:48.730
+and the results are combined to pass into the classifier.
+

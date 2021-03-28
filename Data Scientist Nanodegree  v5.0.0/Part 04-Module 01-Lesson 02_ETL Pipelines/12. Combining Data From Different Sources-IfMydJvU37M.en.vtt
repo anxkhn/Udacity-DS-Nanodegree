@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.639 --> 00:00:07.529
+In the extraction part of the lesson,
+
+00:00:07.530 --> 00:00:11.323
+you learned that data comes in all different formats and sizes.
+
+00:00:11.323 --> 00:00:16.750
+Oftentimes you want to combine part of one data set with part of another data set.
+
+00:00:16.750 --> 00:00:22.910
+These data sets might be in different formats like a CSV file and JSON file.
+
+00:00:22.910 --> 00:00:27.425
+Let's say you have a CSV file that has three columns country,
+
+00:00:27.425 --> 00:00:30.160
+gross domestic product, and year.
+
+00:00:30.160 --> 00:00:36.365
+You also have a JSON file containing country name, year, and population.
+
+00:00:36.365 --> 00:00:42.079
+You want to visualize changes over time in gross domestic product per capita.
+
+00:00:42.079 --> 00:00:47.799
+Per capita means you'll need to divide the gross domestic product by the population.
+
+00:00:47.799 --> 00:00:50.809
+However, you can't merge JSON data and
+
+00:00:50.810 --> 00:00:54.734
+a CSV file together without first transforming the data.
+
+00:00:54.734 --> 00:00:56.604
+In this particular case,
+
+00:00:56.604 --> 00:00:59.029
+it will probably be easiest to transform
+
+00:00:59.030 --> 00:01:02.630
+the JSON data so that it looked more like the CSV file,
+
+00:01:02.630 --> 00:01:06.370
+then you could perform a join using the country name.
+
+00:01:06.370 --> 00:01:11.250
+There isn't a hard and fast rule for how to combine data sets together.
+
+00:01:11.250 --> 00:01:15.409
+Every data set will be different both in terms of formatting and
+
+00:01:15.409 --> 00:01:21.244
+content which means the processes for combining the data will be different.
+
+00:01:21.245 --> 00:01:23.755
+In the next part of the lesson,
+
+00:01:23.754 --> 00:01:27.879
+you'll find an exercise for combining data from different sources.
+
+00:01:27.879 --> 00:01:30.379
+Python's pandas package will be
+
+00:01:30.379 --> 00:01:34.894
+a huge help and I'm assuming that you already know how to use pandas.
+
+00:01:34.894 --> 00:01:38.825
+If you're unfamiliar with pandas or feeling a bit rusty,
+
+00:01:38.825 --> 00:01:41.945
+I've provided a few learning resources below the video.
+
+00:01:41.944 --> 00:01:43.719
+So, let's get coding.
+

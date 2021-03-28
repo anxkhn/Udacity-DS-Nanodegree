@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.075 --> 00:00:04.675
+LIMPANDO DADOS
+
+00:00:06.453 --> 00:00:09.531
+A seguir, vamos falar
+sobre a limpeza de dados sujos.
+
+00:00:10.003 --> 00:00:12.699
+Dados sujos significam
+dados que contêm erros,
+
+00:00:12.732 --> 00:00:16.995
+como quando você quer escrever
+um milhão mas esquece de um zero
+
+00:00:17.028 --> 00:00:19.475
+e acaba escrevendo
+cem mil sem querer.
+
+00:00:20.140 --> 00:00:23.525
+Dados sujos podem vir
+de inúmeras fontes,
+
+00:00:23.558 --> 00:00:25.861
+incluindo erros de entrada
+de dados,
+
+00:00:25.894 --> 00:00:28.291
+dados duplicados,
+registros incompletos
+
+00:00:28.324 --> 00:00:31.435
+ou inconsistências
+entre conjuntos de dados diferentes.
+
+00:00:32.524 --> 00:00:34.659
+Ao obter um conjunto
+de dados,
+
+00:00:34.692 --> 00:00:38.472
+você deve automaticamente
+auditar esses dados
+
+00:00:38.505 --> 00:00:40.240
+e encontrar os erros.
+
+00:00:40.762 --> 00:00:42.769
+Você deve procurar
+por dados ausentes,
+
+00:00:42.802 --> 00:00:47.113
+inconsistências, dados duplicados
+e encodings incorretos.
+
+00:00:47.601 --> 00:00:50.259
+Do contrário, os algoritmos
+de aprendizado de máquina
+
+00:00:50.292 --> 00:00:52.729
+não vão fornecer os resultados
+que você espera.
+
+00:00:53.665 --> 00:00:56.528
+É mais fácil falar
+do que encontrar dados sujos,
+
+00:00:56.561 --> 00:00:59.026
+porque cada conjunto de dados
+é diferente
+
+00:00:59.059 --> 00:01:01.305
+e terá problemas diferentes.
+
+00:01:02.402 --> 00:01:07.134
+Embora não seja possível mostrar
+cada erro possível,
+
+00:01:07.167 --> 00:01:11.098
+na seção a seguir, você vai praticar
+a limpeza de um conjunto de dados.
+
+00:01:11.131 --> 00:01:14.378
+Você verá que os nomes dos países
+no conjunto de dados de projetos
+
+00:01:14.411 --> 00:01:16.721
+do Banco Mundial
+são inconsistentes
+
+00:01:16.754 --> 00:01:20.233
+com os dados de indicadores
+socioeconômicos do Banco Mundial.
+
+00:01:20.650 --> 00:01:22.658
+Não podemos fundir
+os conjuntos de dados,
+
+00:01:22.691 --> 00:01:25.666
+porque os nomes dos países
+não correspondem corretamente.
+
+00:01:26.274 --> 00:01:28.992
+Sua tarefa será limpar
+os nomes dos países,
+
+00:01:29.025 --> 00:01:30.327
+deixando-os consistentes.
+

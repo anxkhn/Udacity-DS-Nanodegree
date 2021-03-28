@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.570 --> 00:00:09.625
+Next, let's talk about cleaning dirty data.
+
+00:00:09.625 --> 00:00:12.750
+Dirty data refers to data that contains errors.
+
+00:00:12.750 --> 00:00:15.894
+Like if you meant to input the number one million but
+
+00:00:15.894 --> 00:00:19.920
+you left off a zero and type 100,000 instead.
+
+00:00:19.920 --> 00:00:25.830
+Dirty data tends to come from a number of sources including; data entry mistakes,
+
+00:00:25.829 --> 00:00:31.994
+duplicate data, incomplete records or inconsistencies between different datasets.
+
+00:00:31.995 --> 00:00:34.740
+When you first obtain a dataset,
+
+00:00:34.740 --> 00:00:36.800
+you should automatically say to yourself,
+
+00:00:36.799 --> 00:00:40.445
+"I need to audit this data and find errors."
+
+00:00:40.445 --> 00:00:45.520
+You want to search for missing values, inconsistencies, duplicate data,
+
+00:00:45.520 --> 00:00:48.745
+and incorrect encodings because otherwise,
+
+00:00:48.744 --> 00:00:53.209
+machine-learning algorithms will not give you the results you expect.
+
+00:00:53.210 --> 00:00:56.870
+Finding dirty data is easier said than done though,
+
+00:00:56.869 --> 00:01:01.854
+because every dataset is different and will have different problems.
+
+00:01:01.854 --> 00:01:07.144
+While it wouldn't be possible to show you every single data error that could occur,
+
+00:01:07.144 --> 00:01:11.060
+you'll get some practice in the next section with cleaning a dataset.
+
+00:01:11.060 --> 00:01:15.680
+You'll see that the country names in the World Bank Project dataset are
+
+00:01:15.680 --> 00:01:20.480
+inconsistent with the World Bank socioeconomic indicator dataset.
+
+00:01:20.480 --> 00:01:26.040
+Hence you can't merge datasets together because the country names don't match correctly.
+
+00:01:26.040 --> 00:01:30.640
+Your task will be to clean the country names for consistency.
+

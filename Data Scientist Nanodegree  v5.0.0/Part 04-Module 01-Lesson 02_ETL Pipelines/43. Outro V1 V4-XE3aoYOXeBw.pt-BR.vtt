@@ -1,0 +1,84 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.803 --> 00:00:04.795
+REVISÃO DA AULA
+
+00:00:05.520 --> 00:00:08.727
+Parabéns por todo o esforço
+realizado.
+
+00:00:08.760 --> 00:00:13.656
+Esta aula tinha muitas informações
+e exercícios de codificação.
+
+00:00:13.689 --> 00:00:15.643
+Vamos revisar
+o que você aprendeu.
+
+00:00:15.676 --> 00:00:18.057
+Um dos papéis principais
+de um engenheiro de dados
+
+00:00:18.090 --> 00:00:20.575
+é preparar pipelines de dados.
+
+00:00:20.608 --> 00:00:22.607
+Pipelines são usados
+para mover dados
+
+00:00:22.640 --> 00:00:25.261
+de um lugar para outro.
+
+00:00:25.294 --> 00:00:26.898
+Você praticou escrever códigos
+
+00:00:26.931 --> 00:00:29.780
+para um pipeline
+bem específico e comum
+
+00:00:29.813 --> 00:00:35.277
+chamado "ETL" ou "extrair,
+transformar, carregar".
+
+00:00:35.310 --> 00:00:36.849
+Você puxa dados de uma fonte,
+
+00:00:36.882 --> 00:00:38.304
+transforma os dados
+
+00:00:38.337 --> 00:00:42.380
+e carrega os dados transformados
+em um armazém.
+
+00:00:42.413 --> 00:00:44.692
+Com seu conhecimento
+sobre pipelines ETL,
+
+00:00:44.725 --> 00:00:47.414
+você pode se comunicar melhor
+com um engenheiro de dados,
+
+00:00:47.447 --> 00:00:50.128
+explicando exatamente
+de que dados você precisa
+
+00:00:50.161 --> 00:00:52.877
+e como os dados devem ser.
+
+00:00:52.910 --> 00:00:54.363
+Como cientista de dados,
+
+00:00:54.396 --> 00:00:58.694
+grande parte do seu trabalho
+envolverá reunir e limpar dados.
+
+00:00:58.727 --> 00:01:01.167
+As habilidades de extração
+e transformação
+
+00:01:01.200 --> 00:01:04.923
+que você desenvolveu nesta aula
+serão especialmente úteis.
+

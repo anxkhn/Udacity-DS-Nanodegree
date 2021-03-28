@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.050 --> 00:00:04.800
+TRANSFORMANDO DADOS
+
+00:00:05.775 --> 00:00:07.079
+Ótimo trabalho!
+
+00:00:07.112 --> 00:00:10.984
+Você extraiu dados de uma variedade
+de fontes com sucesso.
+
+00:00:11.017 --> 00:00:13.776
+Essa é a primeira parte
+de um pipeline ETL.
+
+00:00:13.809 --> 00:00:16.551
+Agora, você vai praticar
+transformar os dados.
+
+00:00:17.327 --> 00:00:19.439
+O que "transformar"
+realmente significa?
+
+00:00:19.472 --> 00:00:22.824
+No contexto da ciência de dados,
+transformação costuma envolver
+
+00:00:22.857 --> 00:00:26.305
+preparar os dados para um algoritmo
+de aprendizado de máquina.
+
+00:00:26.751 --> 00:00:29.670
+Por exemplo, você geralmente
+trabalha com dados vindos
+
+00:00:29.703 --> 00:00:31.855
+de mais de uma fonte.
+
+00:00:31.888 --> 00:00:34.647
+Você pode precisar obter dados
+de um arquivo CSV,
+
+00:00:34.680 --> 00:00:36.872
+outros dados de uma base SQL
+
+00:00:36.905 --> 00:00:39.679
+e combinar esses
+dois conjuntos de dados.
+
+00:00:40.089 --> 00:00:42.751
+Ou talvez você
+queira limpar os dados
+
+00:00:42.784 --> 00:00:44.871
+ou criar novos recursos.
+
+00:00:44.904 --> 00:00:47.807
+Você estará transformando
+os conjuntos de dados originais
+
+00:00:47.840 --> 00:00:50.031
+para criar
+um conjunto de dados novo.
+
+00:00:50.064 --> 00:00:52.263
+Nesta parte da aula,
+você vai praticar
+
+00:00:52.296 --> 00:00:54.759
+várias técnicas
+de transformação de dados,
+
+00:00:54.792 --> 00:00:57.190
+como combinar dados
+de fontes diferentes,
+
+00:00:57.223 --> 00:01:00.591
+limpar dados e trabalhar
+com diferentes codificações.
+
+00:01:01.158 --> 00:01:05.335
+Você verá como procurar e remover
+linhas de dados duplicadas,
+
+00:01:05.368 --> 00:01:08.271
+criar variáveis dummy,
+remover valores atípicos,
+
+00:01:08.304 --> 00:01:11.966
+normalizar dados
+e criar novos recursos.
+
+00:01:12.734 --> 00:01:16.446
+Você deve estar pensando
+que há muito assunto para cobrirmos,
+
+00:01:16.479 --> 00:01:18.150
+e você está certo.
+
+00:01:18.183 --> 00:01:20.560
+Uma pesquisa feita por uma
+das nossas parceiras,
+
+00:01:20.593 --> 00:01:23.517
+a Figure Eight, descobriu
+que cientistas de dados gastam
+
+00:01:23.550 --> 00:01:28.598
+80% do tempo deles reunindo
+e transformando dados.
+
+00:01:28.631 --> 00:01:31.686
+Temos muita coisa para ver,
+então vamos começar logo.
+

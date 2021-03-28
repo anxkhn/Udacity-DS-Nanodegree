@@ -1,0 +1,519 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Extract</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>ETL Pipelines</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Lesson Overview.html">02. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="03. World Bank Datasets.html">03. World Bank Datasets</a>
+    </li>
+    <li class="">
+      <a href="04. How to Tackle the Exercises.html">04. How to Tackle the Exercises</a>
+    </li>
+    <li class="">
+      <a href="05. Extract.html">05. Extract</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise CSV.html">06. Exercise: CSV</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise JSON and XML.html">07. Exercise: JSON and XML</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise SQL Databases.html">08. Exercise: SQL Databases</a>
+    </li>
+    <li class="">
+      <a href="09. Extracting Text Data.html">09. Extracting Text Data</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise APIs.html">10. Exercise: APIs</a>
+    </li>
+    <li class="">
+      <a href="11. Transform.html">11. Transform</a>
+    </li>
+    <li class="">
+      <a href="12. Combining Data.html">12. Combining Data</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Combining Data.html">13. Exercise: Combining Data</a>
+    </li>
+    <li class="">
+      <a href="14. Cleaning Data.html">14. Cleaning Data</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise Cleaning Data.html">15. Exercise: Cleaning Data</a>
+    </li>
+    <li class="">
+      <a href="16. Exercise Data Types.html">16. Exercise: Data Types</a>
+    </li>
+    <li class="">
+      <a href="17. Exercise Parsing Dates.html">17. Exercise: Parsing Dates</a>
+    </li>
+    <li class="">
+      <a href="18. Matching Encodings.html">18. Matching Encodings</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise Matching Encodings.html">19. Exercise: Matching Encodings</a>
+    </li>
+    <li class="">
+      <a href="20. Missing Data - Overview.html">20. Missing Data - Overview</a>
+    </li>
+    <li class="">
+      <a href="21. Missing Data - Delete.html">21. Missing Data - Delete</a>
+    </li>
+    <li class="">
+      <a href="22. Missing Data - Impute.html">22. Missing Data - Impute</a>
+    </li>
+    <li class="">
+      <a href="23. Exercise Imputation.html">23. Exercise: Imputation</a>
+    </li>
+    <li class="">
+      <a href="24. SQL, optimization, and ETL - Robert Chang Airbnb.html">24. SQL, optimization, and ETL - Robert Chang Airbnb</a>
+    </li>
+    <li class="">
+      <a href="25. Duplicate Data.html">25. Duplicate Data</a>
+    </li>
+    <li class="">
+      <a href="26. Exercise Duplicate Data.html">26. Exercise: Duplicate Data</a>
+    </li>
+    <li class="">
+      <a href="27. Dummy Variables.html">27. Dummy Variables</a>
+    </li>
+    <li class="">
+      <a href="28. Exercise Dummy Variables.html">28. Exercise: Dummy Variables</a>
+    </li>
+    <li class="">
+      <a href="29. Outliers - How to Find Them.html">29. Outliers - How to Find Them</a>
+    </li>
+    <li class="">
+      <a href="30. Exercise Outliers Part 1.html">30. Exercise: Outliers Part 1</a>
+    </li>
+    <li class="">
+      <a href="31. Outliers - What to do .html">31. Outliers - What to do </a>
+    </li>
+    <li class="">
+      <a href="32. Exercise Outliers - Part 2.html">32. Exercise: Outliers - Part 2</a>
+    </li>
+    <li class="">
+      <a href="33. AI and Data Engineering - Robert Chang Airbnb.html">33. AI and Data Engineering - Robert Chang Airbnb</a>
+    </li>
+    <li class="">
+      <a href="34. Scaling Data.html">34. Scaling Data</a>
+    </li>
+    <li class="">
+      <a href="35. Exercise Scaling Data.html">35. Exercise: Scaling Data</a>
+    </li>
+    <li class="">
+      <a href="36. Feature Engineering.html">36. Feature Engineering</a>
+    </li>
+    <li class="">
+      <a href="37. Exercise Feature Engineering.html">37. Exercise: Feature Engineering</a>
+    </li>
+    <li class="">
+      <a href="38. Bloopers.html">38. Bloopers</a>
+    </li>
+    <li class="">
+      <a href="39. Load.html">39. Load</a>
+    </li>
+    <li class="">
+      <a href="40. Exercise Load.html">40. Exercise: Load</a>
+    </li>
+    <li class="">
+      <a href="41. Putting It All Together.html">41. Putting It All Together</a>
+    </li>
+    <li class="">
+      <a href="42. Exercise Putting It All Together.html">42. Exercise: Putting It All Together</a>
+    </li>
+    <li class="">
+      <a href="43. Lesson Summary.html">43. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Extract</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="extract">Extract</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>05 Extraction Idea 1 V1 V2</p></h3>
+  <video controls>
+  <source src="05. 05 Extraction Idea 1 V1 V2-4dKG_08zMm4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 05 Extraction Idea 1 V1 V2-4dKG_08zMm4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. 05 Extraction Idea 1 V1 V2-4dKG_08zMm4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. 05 Extraction Idea 1 V1 V2-4dKG_08zMm4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="overview-of-the-extract-part-of-the-lesson">Overview of the Extract Part of the Lesson</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Extract Walk Through</p></h3>
+  <video controls>
+  <source src="05. Extract Walk Through-Bbj8rQRRVoM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Extract Walk Through-Bbj8rQRRVoM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Extract Walk Through-Bbj8rQRRVoM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Extract Walk Through-Bbj8rQRRVoM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="summary-of-the-data-file-types-youll-work-with">Summary of the data file types you'll work with</h1>
+<h3 id="csv-files">CSV files</h3>
+<p>CSV stands for comma-separated values. These types of files separate values with a comma, and each entry is on a separate line. Oftentimes, the first entry will contain variable names. Here is an example of what CSV data looks like. This is an abbreviated version of the first three lines in the World Bank projects data csv file.</p>
+<p><code>csv
+id,regionname,countryname,prodline,lendinginstr
+P162228,Other,World;World,RE,Investment Project Financing
+P163962,Africa,Democratic Republic of the Congo;Democratic Republic of the Congo,PE,Investment Project Financing</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="json">JSON</h3>
+<p>JSON is a file format with key/value pairs. It looks like a Python dictionary. The exact same CSV file represented in JSON could look like this:</p>
+<pre><code class="json language-json">[{"id":"P162228","regionname":"Other","countryname":"World;World","prodline":"RE","lendinginstr":"Investment Project Financing"},{"id":"P163962","regionname":"Africa","countryname":"Democratic Republic of the Congo;Democratic Republic of the Congo","prodline":"PE","lendinginstr":"Investment Project Financing"},{"id":"P167672","regionname":"South Asia","countryname":"People\'s Republic of Bangladesh;People\'s Republic of Bangladesh","prodline":"PE","lendinginstr":"Investment Project Financing"}]</code></pre>
+<p>Each line in the data is inside of a squiggly bracket {}. The variable names are the keys, and the variable values are the values.</p>
+<p>There are other ways to organize JSON data, but the general rule is that JSON is organized into key/value pairs. For example, here is a different way to represent the same data using JSON:</p>
+<pre><code class="json language-json">{"id":{"0":"P162228","1":"P163962","2":"P167672"},"regionname":{"0":"Other","1":"Africa","2":"South Asia"},"countryname":{"0":"World;World","1":"Democratic Republic of the Congo;Democratic Republic of the Congo","2":"People\'s Republic of Bangladesh;People\'s Republic of Bangladesh"},"prodline":{"0":"RE","1":"PE","2":"PE"},"lendinginstr":{"0":"Investment Project Financing","1":"Investment Project Financing","2":"Investment Project Financing"}}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="xml">XML</h3>
+<p>Another data format is called XML (Extensible Markup Language). XML is very similar to HTML at least in terms of formatting. The main difference between the two is that HTML has pre-defined tags that are standardized. In XML, tags can be tailored to the data set. Here is what this same data would look like as XML.</p>
+<pre><code class="xml language-xml">&lt;ENTRY&gt;
+  &lt;ID&gt;P162228&lt;/ID&gt;
+  &lt;REGIONNAME&gt;Other&lt;/REGIONNAME&gt;
+  &lt;COUNTRYNAME&gt;World;World&lt;/COUNTRYNAME&gt;
+  &lt;PRODLINE&gt;RE&lt;/PRODLINE&gt;
+  &lt;LENDINGINSTR&gt;Investment Project Financing&lt;/LENDINGINSTR&gt;
+&lt;/ENTRY&gt;
+&lt;ENTRY&gt;
+  &lt;ID&gt;P163962&lt;/ID&gt;
+  &lt;REGIONNAME&gt;Africa&lt;/REGIONNAME&gt;
+  &lt;COUNTRYNAME&gt;Democratic Republic of the Congo;Democratic Republic of the Congo&lt;/COUNTRYNAME&gt;
+  &lt;PRODLINE&gt;PE&lt;/PRODLINE&gt;
+  &lt;LENDINGINSTR&gt;Investment Project Financing&lt;/LENDINGINSTR&gt;
+&lt;/ENTRY&gt;
+&lt;ENTRY&gt;
+  &lt;ID&gt;P167672&lt;/ID&gt;
+  &lt;REGIONNAME&gt;South Asia&lt;/REGIONNAME&gt;
+  &lt;COUNTRYNAME&gt;People's Republic of Bangladesh;People's Republic of Bangladesh&lt;/COUNTRYNAME&gt;
+  &lt;PRODLINE&gt;PE&lt;/PRODLINE&gt;
+  &lt;LENDINGINSTR&gt;Investment Project Financing&lt;/LENDINGINSTR&gt;
+&lt;/ENTRY&gt;</code></pre>
+<p>XML is falling out of favor especially because JSON tends to be easier to navigate; however, you still might come across XML data. The World Bank API, for example, can return either XML data or JSON data. From a data perspective, the process for handling HTML and XML data is essentially the same.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="sql-databases">SQL databases</h3>
+<p>SQL databases store data in tables using <a href="https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017" rel="noopener noreferrer" target="_blank">primary and foreign keys</a>. In a SQL database, the same data would look like this:</p>
+<table>
+<thead>
+<tr>
+<th id="id">id</th>
+<th id="regionname">regionname</th>
+<th id="countryname">countryname</th>
+<th id="prodline">prodline</th>
+<th id="lendinginstr">lendinginstr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P162228</td>
+<td>Other</td>
+<td>World;World</td>
+<td>RE</td>
+<td>Investment Project Financing</td>
+</tr>
+<tr>
+<td>P163962</td>
+<td>Africa</td>
+<td>Democratic Republic of the Congo;Democratic Republic of the Congo</td>
+<td>PE</td>
+<td>Investment Project Financing</td>
+</tr>
+<tr>
+<td>P167672</td>
+<td>South Asia</td>
+<td>People's Republic of Bangladesh;People's Republic of Bangladesh</td>
+<td>PE</td>
+<td>Investment Project Financing</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="text-files">Text Files</h3>
+<p>This course won't go into much detail about text data. There are other Udacity courses, namely on natural language processing, that go into the details of processing text for machine learning.</p>
+<p>Text data present their own issues. Whereas CSV, JSON, XML, and SQL data are organized with a clear structure, text is more ambiguous. For example, the World Bank project data country names are written like this</p>
+<pre><code class="text language-text">Democratic Republic of the Congo;Democratic Republic of the Congo</code></pre>
+<p>In the World Bank Indicator data sets, the <a href="(https://data.worldbank.org/country/congo-dem-rep?view=chart" rel="noopener noreferrer" target="_blank">Democratic Republic of the Congo</a> is represented by the abbreviation "Congo, Dem. Rep." You'll have to clean these country names to join the data sets together.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="extracting-data-from-the-web">Extracting Data from the Web</h1>
+<p>In this lesson, you'll see how to extract data from the web using an APIs (Application Programming Interface). APIs generally provide data in either JSON or XML format.</p>
+<p>Companies and organizations provide APIs so that programmers can access data in an official, safe way. APIs allow you to download, and sometimes even upload or modify, data from a web server without giving you direct access. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Match the Data Set</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the data with its format</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>json</p></button>
+  <button class="btn btn-primary"><p>xml</p></button>
+  <button class="btn btn-primary"><p>csv</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>data</p>
+      </th>
+      <th>
+        <p>format</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>{'players' :5, 'date':'Jul 5 1999'} </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>players, date<br><br />
+5, Jul 5 1999</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><code>&lt;entry&gt;&lt;players&gt;5&lt;/players&gt;&lt;date&gt;July 5 1999&lt;/date&gt;&lt;/entry&gt;</code> </p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>data</p>
+        </th>
+        <th>
+          <p>format</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>{'players' :5, 'date':'Jul 5 1999'} </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>json</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><code>&lt;entry&gt;&lt;players&gt;5&lt;/players&gt;&lt;date&gt;July 5 1999&lt;/date&gt;&lt;/entry&gt;</code> </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>xml</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>players, date<br><br />
+5, Jul 5 1999</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>csv</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Exercise CSV.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Extract')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.379
+Here is a simple example,
+
+00:00:02.379 --> 00:00:07.224
+where we generate features from text data using CountVectoriser
+
+00:00:07.224 --> 00:00:13.085
+and TfidfTransformer and then fit it to a RandomForestClassifier.
+
+00:00:13.085 --> 00:00:15.060
+Let's use this to first go over
+
+00:00:15.060 --> 00:00:19.615
+some terminology and then learn how to use pipeline to simplify this.
+
+00:00:19.614 --> 00:00:23.539
+Each of these three objects is called an estimator.
+
+00:00:23.539 --> 00:00:28.489
+Which scikit-learn states, is any object that learns from data,
+
+00:00:28.489 --> 00:00:30.364
+whether it's a classification,
+
+00:00:30.364 --> 00:00:33.100
+regression or clustering algorithm,
+
+00:00:33.100 --> 00:00:38.795
+or a transformer that extracts or filter is useful features from raw data.
+
+00:00:38.795 --> 00:00:41.179
+Because it learns from data,
+
+00:00:41.179 --> 00:00:45.500
+every estimator must have a fit method that takes a dataset.
+
+00:00:45.500 --> 00:00:49.744
+So, each of these three estimators have a fit method.
+
+00:00:49.744 --> 00:00:54.789
+Additionally, CountVectoriser and TfidfTransformer,
+
+00:00:54.789 --> 00:00:58.969
+are a specific type of estimator called a transformer.
+
+00:00:58.969 --> 00:01:01.789
+Meaning it has a transform method.
+
+00:01:01.789 --> 00:01:05.944
+The final estimator we have here is a predictor.
+
+00:01:05.944 --> 00:01:09.399
+Which although it doesn't have a transform method,
+
+00:01:09.400 --> 00:01:11.405
+has a predictor method.
+
+00:01:11.405 --> 00:01:13.010
+In machine learning tasks,
+
+00:01:13.010 --> 00:01:16.550
+it's pretty common to have a very specific sequence of
+
+00:01:16.549 --> 00:01:21.295
+transformers to fit to data before applying a final estimator.
+
+00:01:21.295 --> 00:01:25.365
+Normally, we'd have to initialize all the estimators,
+
+00:01:25.364 --> 00:01:28.519
+fit and transform the training data for each of
+
+00:01:28.519 --> 00:01:32.908
+the transformers and then fit to the final estimator.
+
+00:01:32.909 --> 00:01:38.255
+Next, we'd have to call transform for each transformer again
+
+00:01:38.254 --> 00:01:43.519
+to the test data and finally call predict on the final estimator.
+
+00:01:43.519 --> 00:01:48.489
+Now, what if I told you that you could actually automate all of this fitting,
+
+00:01:48.489 --> 00:01:51.559
+transforming and predicting by chaining
+
+00:01:51.560 --> 00:01:56.394
+these estimators together into one single estimator object.
+
+00:01:56.394 --> 00:02:00.869
+That single estimator would be scikit-learns pipeline.
+
+00:02:00.870 --> 00:02:02.650
+To create this pipeline,
+
+00:02:02.650 --> 00:02:05.480
+we just need a list of key value pairs.
+
+00:02:05.480 --> 00:02:09.140
+Where the key is a string containing what you want to name
+
+00:02:09.139 --> 00:02:13.464
+the step and the value is the estimator object.
+
+00:02:13.465 --> 00:02:17.689
+Now, by fitting our pipeline to the training data,
+
+00:02:17.689 --> 00:02:21.740
+we're accomplishing exactly what we would buy fitting and
+
+00:02:21.740 --> 00:02:26.064
+transforming each of these objects to our training data one by one.
+
+00:02:26.064 --> 00:02:31.129
+Similarly, when we call predict on our pipeline to our test data,
+
+00:02:31.129 --> 00:02:35.810
+we're accomplishing what we would by calling transform on each of
+
+00:02:35.810 --> 00:02:42.020
+our transformer objects to our test data and then calling predict on our final estimator.
+
+00:02:42.020 --> 00:02:46.000
+Not only does this make our code is so much shorter and simpler,
+
+00:02:46.000 --> 00:02:51.169
+it has other great advantages which we'll cover in the next video.
+
+00:02:51.169 --> 00:02:55.924
+Note that every step of a pipeline has to be a transformer,
+
+00:02:55.925 --> 00:02:58.485
+except for the last step,
+
+00:02:58.485 --> 00:03:01.055
+which can be an estimator of any type.
+
+00:03:01.055 --> 00:03:06.900
+Pipeline takes on all the methods of whatever the last estimator in its sequence is.
+
+00:03:06.900 --> 00:03:12.689
+For example, here since the final estimator of our pipeline is a classifier,
+
+00:03:12.689 --> 00:03:16.069
+the pipeline object can be used as a classifier.
+
+00:03:16.069 --> 00:03:19.104
+Taking on the fit and predict methods.
+
+00:03:19.104 --> 00:03:23.114
+Alternatively, if the last estimator was a transformer,
+
+00:03:23.115 --> 00:03:28.730
+then pipeline would also be a transformer and you wouldn't be able to call predict on it.
+

@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.195 --> 00:00:03.310
+Na próxima parte da aula,
+você vai trabalhar na parte
+
+00:00:03.343 --> 00:00:05.789
+da extração
+de um pipeline ETL.
+
+00:00:05.822 --> 00:00:08.285
+Você vai extrair dados
+de diferentes fontes,
+
+00:00:08.318 --> 00:00:11.702
+como arquivos CSV,
+arquivos JSON, XML
+
+00:00:11.735 --> 00:00:13.431
+e bases de dados SQL.
+
+00:00:13.464 --> 00:00:16.997
+Eu vou só dar uma visão geral
+de como essa seção é organizada
+
+00:00:17.030 --> 00:00:18.500
+e do que você pode esperar.
+
+00:00:18.533 --> 00:00:22.867
+Você vai notar que, no geral,
+esta aula não tem muita teoria.
+
+00:00:22.900 --> 00:00:26.582
+Há mais exercícios práticos,
+para que você ganhe prática
+
+00:00:26.615 --> 00:00:29.694
+movendo, limpando
+e preparando dados.
+
+00:00:30.374 --> 00:00:32.141
+Sempre que houver
+um exercício,
+
+00:00:32.174 --> 00:00:34.614
+ele vai estar marcado
+à esquerda como "Exercise".
+
+00:00:35.173 --> 00:00:39.251
+Todos os exercícios são
+encontrados em notebooks Jupyter.
+
+00:00:39.500 --> 00:00:43.150
+Ao abrir um exercício,
+o notebook abre automaticamente
+
+00:00:43.183 --> 00:00:44.356
+no espaço de trabalho.
+
+00:00:44.734 --> 00:00:47.556
+Para completar o exercício,
+leia os notebooks
+
+00:00:47.589 --> 00:00:49.317
+e siga as instruções.
+
+00:00:49.757 --> 00:00:52.788
+Algumas células de códigos
+você só vai precisar executar.
+
+00:00:53.172 --> 00:00:57.294
+Mas em outras células
+haverá tarefas com instruções.
+
+00:00:57.327 --> 00:00:58.909
+Sempre que você
+vir uma tarefa,
+
+00:00:58.942 --> 00:01:00.910
+você vai precisar
+escrever um código.
+
+00:01:01.389 --> 00:01:05.749
+Eu quero chamar atenção
+para o fato de que esses exercícios
+
+00:01:05.782 --> 00:01:07.894
+também têm soluções.
+
+00:01:07.927 --> 00:01:11.221
+Se você clicar no ícone
+do Jupyter aqui em cima
+
+00:01:11.677 --> 00:01:15.588
+e procurar o arquivo com o exercício
+que você está resolvendo,
+
+00:01:15.621 --> 00:01:18.501
+que, neste caso,
+é o "1_csv_exercise",
+
+00:01:18.901 --> 00:01:20.188
+e clicar para acessá-lo,
+
+00:01:20.221 --> 00:01:22.853
+você pode clicar aqui
+para abrir a solução.
+
+00:01:23.438 --> 00:01:26.517
+Voltando uma página,
+todos esses arquivos têm
+
+00:01:26.550 --> 00:01:28.910
+os exercícios
+dos notebooks Jupyter
+
+00:01:28.943 --> 00:01:34.069
+e também têm
+todas as soluções.
+
+00:01:35.141 --> 00:01:38.699
+Ao acessar esse exercício
+sobre JSON e XML,
+
+00:01:38.910 --> 00:01:43.213
+note que, no final, eu marquei
+uma seção como um desafio.
+
+00:01:44.117 --> 00:01:45.664
+Bem aqui embaixo.
+
+00:01:46.637 --> 00:01:50.253
+O que eu quero dizer
+é que esta parte é mais desafiante
+
+00:01:50.286 --> 00:01:54.444
+e também consume mais tempo
+do que outras partes do exercício.
+
+00:01:54.477 --> 00:01:58.828
+Eu sempre as deixo por último,
+no final do exercício.
+
+00:01:59.692 --> 00:02:02.981
+Se eu marquei algo como desafio,
+significa que acho
+
+00:02:03.014 --> 00:02:05.093
+que você vai adquirir algo
+ao resolvê-lo,
+
+00:02:05.126 --> 00:02:08.581
+mas não é essencial
+para entender o material da aula
+
+00:02:08.614 --> 00:02:12.040
+ou para conseguir fazer
+o projeto final
+
+00:02:12.074 --> 00:02:14.668
+ao fim deste curso.
+
+00:02:14.967 --> 00:02:18.222
+Então, comece a trabalhar
+nessa seção sobre extração
+
+00:02:18.255 --> 00:02:21.789
+e, quando você chegar
+em "Transformar" aqui embaixo,
+
+00:02:21.822 --> 00:02:24.829
+eu vou dar outra visão geral
+sobre essa seção.
+

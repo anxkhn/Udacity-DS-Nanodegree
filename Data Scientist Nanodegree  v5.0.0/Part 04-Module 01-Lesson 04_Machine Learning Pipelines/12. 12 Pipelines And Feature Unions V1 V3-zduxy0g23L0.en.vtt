@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.120 --> 00:00:09.509
+So far, we used pipelines to change transformations,
+
+00:00:09.509 --> 00:00:14.394
+and an estimator together to define a clear sequence for our workflow.
+
+00:00:14.394 --> 00:00:17.160
+But what if we want to engineer a feature from
+
+00:00:17.160 --> 00:00:21.254
+the dataset while simultaneously engineering another feature?
+
+00:00:21.254 --> 00:00:23.894
+For example, if we wanted to extract
+
+00:00:23.894 --> 00:00:29.754
+both TFIDF and the number of characters text length for each document,
+
+00:00:29.754 --> 00:00:33.409
+in this case, we would use feature unions.
+
+00:00:33.409 --> 00:00:39.019
+Feature union is another class in Scikit-learn's Pipeline module that allows us
+
+00:00:39.020 --> 00:00:44.680
+to perform steps in parallel and take the union of the results for the next step.
+
+00:00:44.679 --> 00:00:48.200
+In other words, add the resulting features from
+
+00:00:48.200 --> 00:00:52.890
+both steps to the data before moving on to the next step.
+
+00:00:52.890 --> 00:00:58.215
+If you imagine pipeline to be a linear sequence of data transformations,
+
+00:00:58.215 --> 00:01:04.890
+a feature union would add two sequences of transformations in parallel, like this.
+
+00:01:04.890 --> 00:01:10.340
+Both TFIDF and text length are run after the load step,
+
+00:01:10.340 --> 00:01:12.770
+and their results are combined with the original set
+
+00:01:12.769 --> 00:01:15.804
+of features to be used in the next step.
+
+00:01:15.805 --> 00:01:18.240
+In more complex workflows,
+
+00:01:18.239 --> 00:01:22.729
+multiple feature unions are often used within pipelines,
+
+00:01:22.730 --> 00:01:26.704
+and multiple pipelines are used within feature unions.
+
+00:01:26.704 --> 00:01:29.870
+Let's take a look at an example.
+

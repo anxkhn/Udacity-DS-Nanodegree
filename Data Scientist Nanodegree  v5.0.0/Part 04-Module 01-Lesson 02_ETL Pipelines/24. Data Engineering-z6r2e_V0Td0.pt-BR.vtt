@@ -1,0 +1,333 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.023 --> 00:00:06.447
+SQL é uma das habilidades básicas
+mais importantes,
+
+00:00:06.480 --> 00:00:09.110
+mas não é uma linguagem
+muito difícil de se aprender.
+
+00:00:09.143 --> 00:00:13.091
+Acho que muitas pessoas aprendem
+a habilidade no trabalho,
+
+00:00:13.124 --> 00:00:17.630
+mas é definitivamente uma
+das habilidades mais importantes.
+
+00:00:17.663 --> 00:00:21.835
+Não consigo pensar em um dia
+nos últimos anos
+
+00:00:21.868 --> 00:00:24.224
+em que não tenha escrito
+uma consulta SQL.
+
+00:00:24.257 --> 00:00:25.624
+Qual é a complexidade delas?
+
+00:00:25.657 --> 00:00:27.458
+Você as seleciona
+de algum lugar,
+
+00:00:27.491 --> 00:00:30.332
+tem subconsultas gigantes
+que você roda normalmente?
+
+00:00:30.365 --> 00:00:32.756
+Você pensa em eficiência
+ao escrevê-las?
+
+00:00:32.789 --> 00:00:34.082
+Depende.
+
+00:00:34.115 --> 00:00:36.469
+Acho que, quando você faz
+uma análise ad hoc,
+
+00:00:36.502 --> 00:00:38.834
+você não se importa muito.
+
+00:00:38.867 --> 00:00:43.394
+Apenas escrevemos uma consulta
+para responder perguntas,
+
+00:00:43.427 --> 00:00:46.502
+é mais voltada para perguntas.
+
+00:00:46.535 --> 00:00:51.333
+Mas há momentos em que você
+tem que construir um trabalho ETL,
+
+00:00:51.366 --> 00:00:54.007
+extrair, transformar
+e carregar,
+
+00:00:54.040 --> 00:00:57.054
+que é o nome que usamos
+para construir pipelines de dados.
+
+00:00:57.087 --> 00:00:58.871
+Quando você constrói
+pipelines de dados,
+
+00:00:58.904 --> 00:01:01.097
+você precisa ser
+um pouco mais cuidadoso
+
+00:01:01.130 --> 00:01:04.367
+e ser um pouco mais estruturado,
+pensar a fundo nisso.
+
+00:01:04.400 --> 00:01:06.541
+Ver se você está fazendo
+a ligação certa,
+
+00:01:06.574 --> 00:01:08.478
+se deve colocar
+a tabela maior à esquerda.
+
+00:01:08.511 --> 00:01:10.708
+E, dependendo da linguagem,
+pode ser diferente.
+
+00:01:10.741 --> 00:01:15.203
+Tudo isso é
+meio que importante,
+
+00:01:15.236 --> 00:01:18.916
+mas não diria que são coisas
+nas quais costumo pensar.
+
+00:01:18.949 --> 00:01:22.883
+Você tem uma pergunta,
+tenta achar uma reposta e...
+
+00:01:22.916 --> 00:01:27.070
+Mas parece que você é quem
+está sempre otimizando essas coisas,
+
+00:01:27.103 --> 00:01:29.650
+não um outro membro da equipe
+que faz isso.
+
+00:01:29.683 --> 00:01:31.946
+Há engenheiros de dados
+focados nisso
+
+00:01:31.979 --> 00:01:33.815
+ou nas habilidades
+que você usa
+
+00:01:33.848 --> 00:01:35.786
+como cientista de dados
+no seu trabalho?
+
+00:01:35.819 --> 00:01:37.283
+É uma boa pergunta.
+
+00:01:37.316 --> 00:01:42.290
+Na verdade, acho que o que sei
+é utilizado quando necessário,
+
+00:01:42.323 --> 00:01:45.588
+mas, como trabalho muito
+com engenharia de dados,
+
+00:01:45.621 --> 00:01:49.784
+aprendo muito com pessoas
+que são muito melhores do que eu,
+
+00:01:49.817 --> 00:01:51.980
+então, com o tempo,
+fui ficando melhor nisso.
+
+00:01:52.013 --> 00:01:55.922
+Quais você acha que...
+são as habilidades
+
+00:01:55.955 --> 00:01:58.144
+que você aprendeu
+com engenheiros de dados
+
+00:01:58.177 --> 00:02:00.860
+e que fica contente
+em ter no seu dia a dia?
+
+00:02:00.893 --> 00:02:05.416
+É um ótimo assunto
+e uma ótima pergunta.
+
+00:02:05.449 --> 00:02:10.341
+Eu me lembro de me fazer
+a mesma pergunta uns anos atrás,
+
+00:02:10.374 --> 00:02:12.720
+porque queria saber mais
+sobre engenharia de dados,
+
+00:02:12.753 --> 00:02:15.363
+procurei na internet
+e não achei nada útil.
+
+00:02:15.396 --> 00:02:17.531
+Depois de entrar no Airbnb,
+
+00:02:17.564 --> 00:02:19.987
+passei a trabalhar bastante
+nos projetos de engenharia
+
+00:02:20.020 --> 00:02:21.712
+com os engenheiros deles,
+
+00:02:21.745 --> 00:02:25.424
+e há algumas coisas
+que considero importantes.
+
+00:02:25.457 --> 00:02:28.227
+A primeira coisa seria...
+
+00:02:28.260 --> 00:02:33.342
+ter um entendimento básico
+sobre modelagem de dados.
+
+00:02:33.375 --> 00:02:36.776
+Há conceitos, por exemplo,
+
+00:02:36.809 --> 00:02:39.275
+como criar
+um armazém de dados,
+
+00:02:39.308 --> 00:02:41.464
+tabelas de dados,
+usando um esquema estrela.
+
+00:02:41.497 --> 00:02:45.406
+A noção de uma tabela
+de fatos ou de dimensões
+
+00:02:45.439 --> 00:02:48.975
+e como essas duas coisas
+são em geral diferentes,
+
+00:02:49.008 --> 00:02:53.744
+mas como podem ser combinadas
+ao construir um armazém de dados.
+
+00:02:53.777 --> 00:02:59.001
+Outro conceito é a noção
+de preenchimento de dados.
+
+00:02:59.034 --> 00:03:02.639
+Ao construir um pipeline ETL,
+
+00:03:02.672 --> 00:03:05.132
+é provável que seja
+um trabalho automatizado
+
+00:03:05.165 --> 00:03:08.811
+que vai computar suas métricas
+antecipadamente.
+
+00:03:08.844 --> 00:03:12.928
+Mas às vezes você quer
+analisar dados históricos,
+
+00:03:12.961 --> 00:03:14.888
+tendências históricas.
+
+00:03:14.921 --> 00:03:17.018
+Para esses casos,
+
+00:03:17.051 --> 00:03:21.116
+é preciso recomputar
+retroativamente
+
+00:03:21.149 --> 00:03:23.236
+as métricas ou a história.
+
+00:03:23.269 --> 00:03:26.125
+O conceito
+de preenchimento de dados
+
+00:03:26.158 --> 00:03:30.158
+é também muito importante,
+também consome muito tempo.
+
+00:03:30.191 --> 00:03:31.954
+Saber como preencher dados
+corretamente
+
+00:03:31.987 --> 00:03:34.804
+e monitorar o progresso
+das tarefas de preenchimento
+
+00:03:34.837 --> 00:03:37.617
+é algo que considero
+muito comum, muito importante,
+
+00:03:37.650 --> 00:03:39.784
+mas que é raramente ensinado
+na universidade.
+
+00:03:41.562 --> 00:03:45.515
+A última coisa acho que é
+o conhecimento prático
+
+00:03:45.548 --> 00:03:49.519
+em construção
+de pipelines ETL.
+
+00:03:50.122 --> 00:03:52.822
+E, para isso,
+realmente depende.
+
+00:03:52.855 --> 00:03:54.681
+No Airbnb usamos o Airflow,
+
+00:03:54.714 --> 00:03:58.118
+um projeto de código aberto
+que é bem útil.
+
+00:03:58.151 --> 00:04:00.305
+Só de saber como...
+
+00:04:00.547 --> 00:04:02.735
+Não apenas escrever
+um script ad hoc,
+
+00:04:02.768 --> 00:04:07.625
+mas como incorporar suas consultas
+em um trabalho ETL
+
+00:04:07.658 --> 00:04:10.049
+que será executado
+todos os dias.
+
+00:04:10.082 --> 00:04:12.158
+Acho que é uma habilidade
+bem importante,
+
+00:04:12.191 --> 00:04:14.208
+principalmente
+para cientistas de dados.
+
+00:04:14.241 --> 00:04:18.103
+Isso ajuda a desbloquear
+o trabalho,
+
+00:04:18.136 --> 00:04:20.459
+porque você não precisa esperar
+engenheiros de dados
+
+00:04:20.492 --> 00:04:23.128
+escreverem o ETL para você
+para eles consumirem os dados,
+
+00:04:23.161 --> 00:04:24.993
+-você pode fazer tudo.
+-Com certeza.
+

@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.183 --> 00:00:02.590
+Nesta próxima seção,
+você vai começar a trabalhar
+
+00:00:02.623 --> 00:00:06.214
+na parte da transformação
+de um pipeline ETL.
+
+00:00:06.247 --> 00:00:09.566
+Esta seção sobre transformação
+é relativamente longa,
+
+00:00:09.599 --> 00:00:12.837
+porque há várias formas
+diferentes de transformar dados.
+
+00:00:13.350 --> 00:00:16.218
+Como na parte de extração,
+cada exercício está
+
+00:00:16.251 --> 00:00:17.773
+em um notebook Jupyter.
+
+00:00:17.806 --> 00:00:23.069
+Você verá que muitos exercícios
+têm um problema-desafio no final.
+
+00:00:24.065 --> 00:00:28.265
+Repito: eu acho que vale à pena
+resolver esses problemas,
+
+00:00:28.298 --> 00:00:30.669
+mas são opcionais
+e você não precisa resolvê-los
+
+00:00:30.702 --> 00:00:34.534
+para conseguir acompanhar
+a aula e entender o material,
+
+00:00:34.567 --> 00:00:37.804
+e nem para conseguir fazer
+o projeto no final do curso.
+
+00:00:38.645 --> 00:00:40.726
+Também quero enfatizar
+que cada notebook
+
+00:00:40.759 --> 00:00:43.765
+tem um arquivo de respostas,
+que você pode encontrar clicando
+
+00:00:43.798 --> 00:00:48.277
+aqui no ícone do Jupyter,
+ou acessando "File", depois "Open".
+
+00:00:48.662 --> 00:00:51.469
+Você verá a solução aqui.
+

@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.987 --> 00:00:04.592
+DELETANDO DADOS FALTANTES
+
+00:00:05.153 --> 00:00:08.713
+Se você tem dados faltantes,
+só há duas opções:
+
+00:00:08.746 --> 00:00:13.056
+você pode deletar dados
+ou preencher os valores faltantes.
+
+00:00:13.089 --> 00:00:15.800
+O que eu quero dizer
+com "deletar dados" é o seguinte.
+
+00:00:16.793 --> 00:00:18.937
+Observe este quadro de dados.
+
+00:00:18.970 --> 00:00:21.648
+A maioria das colunas,
+ou recursos,
+
+00:00:21.681 --> 00:00:23.563
+tratando-se
+de aprendizado de máquina,
+
+00:00:23.596 --> 00:00:25.657
+estão completamente
+preenchidas por dados,
+
+00:00:25.690 --> 00:00:27.113
+com exceção desta aqui.
+
+00:00:27.609 --> 00:00:30.426
+Esta tem muitos
+valores faltantes.
+
+00:00:30.459 --> 00:00:33.888
+Provavelmente, é melhor deletar
+esta coluna da sua análise,
+
+00:00:33.921 --> 00:00:38.135
+a não ser que você consiga encontrar
+os valores por outra fonte.
+
+00:00:38.513 --> 00:00:40.329
+E quanto a esta linha aqui?
+
+00:00:40.686 --> 00:00:43.697
+Ela também tem
+muitos valores faltantes.
+
+00:00:43.993 --> 00:00:46.377
+Se achar que isso
+não vai afetar a sua análise,
+
+00:00:46.410 --> 00:00:48.809
+você pode remover essa linha
+dos seus dados.
+
+00:00:49.553 --> 00:00:52.854
+Contudo, deletar dados
+não é a única opção.
+
+00:00:52.887 --> 00:00:55.752
+Você também pode tentar preencher
+esses valores faltantes.
+
+00:00:56.098 --> 00:00:59.216
+A seguir, vamos falar
+de algumas dessas técnicas.
+

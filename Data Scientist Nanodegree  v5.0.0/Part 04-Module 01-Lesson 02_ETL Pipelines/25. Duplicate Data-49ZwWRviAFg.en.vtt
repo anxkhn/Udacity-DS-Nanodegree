@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.099 --> 00:00:09.794
+Another problem you could run into is duplicate data.
+
+00:00:09.794 --> 00:00:12.820
+You might think that duplicate data just means that
+
+00:00:12.820 --> 00:00:16.245
+the same row shows up twice in a data set.
+
+00:00:16.245 --> 00:00:18.670
+That definitely does happen.
+
+00:00:18.670 --> 00:00:22.880
+In this case, you can look for duplicate rows and remove them.
+
+00:00:22.879 --> 00:00:27.644
+Pandas makes this quite easy with the drop duplicates method.
+
+00:00:27.644 --> 00:00:33.159
+However, duplicate data can sometimes be trickier to spot.
+
+00:00:33.159 --> 00:00:36.989
+Let's say your company has a few different contact lists,
+
+00:00:36.990 --> 00:00:39.329
+and wants to merge them together.
+
+00:00:39.329 --> 00:00:43.085
+One contact list contains first name,
+
+00:00:43.085 --> 00:00:47.765
+last name, phone number, and mailing address.
+
+00:00:47.765 --> 00:00:51.655
+The contact list looks like this.
+
+00:00:51.655 --> 00:00:55.204
+The second list contains first name,
+
+00:00:55.204 --> 00:00:58.530
+last name, and email address.
+
+00:00:58.530 --> 00:01:01.740
+Here is the second contact list.
+
+00:01:01.740 --> 00:01:05.765
+One customer's name is Cristina Real.
+
+00:01:05.765 --> 00:01:08.075
+In the first contact list,
+
+00:01:08.075 --> 00:01:12.365
+her first name and last name appear as Cristina Real.
+
+00:01:12.364 --> 00:01:14.304
+In the second list,
+
+00:01:14.305 --> 00:01:18.065
+her first name and last name appears Christina Real,
+
+00:01:18.064 --> 00:01:23.539
+with an H. If you merge the two lists together,
+
+00:01:23.540 --> 00:01:26.665
+based off of first name and last name,
+
+00:01:26.665 --> 00:01:31.425
+you could end up with two entries for Cristina, instead of one.
+
+00:01:31.424 --> 00:01:34.864
+You've got a case of duplicate data.
+
+00:01:34.864 --> 00:01:41.914
+Recognizing that Cristina and Christina with an H are the same person is not easy to do.
+
+00:01:41.915 --> 00:01:46.400
+There are entire software programs and companies dedicated to
+
+00:01:46.400 --> 00:01:51.925
+searching out and eliminating duplicate entries in these hard to find cases.
+
+00:01:51.924 --> 00:01:54.829
+Much like with missing values,
+
+00:01:54.829 --> 00:01:57.829
+each data set will have its own issues.
+
+00:01:57.829 --> 00:02:02.859
+Part of your job as a data scientist or engineer is to comb through the data,
+
+00:02:02.859 --> 00:02:04.515
+find the problem areas,
+
+00:02:04.515 --> 00:02:07.519
+and write the code to fix these issues.
+

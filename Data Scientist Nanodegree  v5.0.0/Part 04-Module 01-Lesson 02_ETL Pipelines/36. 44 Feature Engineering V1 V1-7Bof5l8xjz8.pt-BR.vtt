@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.021 --> 00:00:04.817
+ENGENHARIA DE RECURSOS
+
+00:00:05.575 --> 00:00:08.562
+Ao construir e testar algoritmos
+de aprendizado de máquina,
+
+00:00:08.595 --> 00:00:10.618
+você pode decidir criar
+novos recursos
+
+00:00:10.651 --> 00:00:12.467
+a partir
+de seu conjunto de dados.
+
+00:00:12.500 --> 00:00:15.567
+Há algumas maneiras diferentes
+de se fazer novos recursos,
+
+00:00:15.600 --> 00:00:18.146
+incluindo criar
+variáveis categóricas
+
+00:00:18.179 --> 00:00:19.950
+de variáveis numéricas,
+
+00:00:19.983 --> 00:00:24.240
+multiplicar recursos
+ou até reunir mais dados.
+
+00:00:24.273 --> 00:00:26.358
+Você pode também
+tentar usar proporções
+
+00:00:26.391 --> 00:00:29.290
+ou fazer a soma
+ou a subtração entre recursos
+
+00:00:29.323 --> 00:00:32.709
+se fizer sentido
+no contexto dos seus dados.
+
+00:00:32.742 --> 00:00:35.590
+Um engenheiro de dados
+não necessariamente decide
+
+00:00:35.623 --> 00:00:38.138
+o que seria um bom recurso
+para construir.
+
+00:00:38.171 --> 00:00:40.661
+Esse seria o trabalho
+do cientista de dados.
+
+00:00:40.694 --> 00:00:42.680
+No entanto, podem pedir
+para um engenheiro
+
+00:00:42.713 --> 00:00:46.853
+escrever um código que transforme
+dados em um novo recurso.
+
+00:00:46.886 --> 00:00:50.277
+Vamos falar de um jeito
+de criar novos recursos
+
+00:00:50.310 --> 00:00:52.519
+e depois implementar
+em código
+
+00:00:52.552 --> 00:00:55.363
+pegando a função polinomial
+de um recurso.
+
+00:00:56.351 --> 00:01:00.774
+Digamos que você tenha
+dois recursos, x e y.
+
+00:01:00.807 --> 00:01:02.478
+Para fazer um novo recurso,
+
+00:01:02.511 --> 00:01:04.401
+você pode pegar
+o quadrado da coluna x,
+
+00:01:04.434 --> 00:01:07.014
+o cubo da coluna x etc.,
+
+00:01:07.047 --> 00:01:10.804
+e anexar esses novos recursos
+ao seu conjunto de dados.
+
+00:01:10.837 --> 00:01:14.650
+Depois, você pode fazer
+o mesmo com a coluna y.
+
+00:01:14.683 --> 00:01:16.042
+Para combinar os recursos,
+
+00:01:16.075 --> 00:01:19.668
+você deve multiplicá-los,
+x vezes y.
+
+00:01:19.701 --> 00:01:22.886
+Você pode depois calcular
+x ao quadrado vezes y,
+
+00:01:22.919 --> 00:01:24.494
+x vezes y ao quadrado
+
+00:01:24.527 --> 00:01:27.339
+e x ao quadrado
+vezes y ao quadrado.
+
+00:01:27.372 --> 00:01:29.376
+Você pode continuar
+com funções polinomiais
+
+00:01:29.409 --> 00:01:31.212
+de ordem superior também.
+
+00:01:31.245 --> 00:01:35.213
+Criar novos recursos dessa forma
+é especialmente útil
+
+00:01:35.246 --> 00:01:37.801
+se o seu modelo
+estiver subajustado.
+
+00:01:37.834 --> 00:01:40.121
+Vamos tentar implementar
+algumas técnicas
+
+00:01:40.154 --> 00:01:42.398
+para criar novos recursos.
+

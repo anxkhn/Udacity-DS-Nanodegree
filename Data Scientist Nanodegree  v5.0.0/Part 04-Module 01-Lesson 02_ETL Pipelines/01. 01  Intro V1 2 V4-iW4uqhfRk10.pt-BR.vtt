@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.190 --> 00:00:04.607
+PIPELINES ETL
+
+00:00:05.753 --> 00:00:09.597
+Dados vêm em várias
+formas, formatos e tamanhos.
+
+00:00:09.630 --> 00:00:12.142
+É trabalho do engenheiro
+de dados certificar-se
+
+00:00:12.175 --> 00:00:16.418
+de que toda essa informação esteja
+acessível e pronta para análise.
+
+00:00:16.806 --> 00:00:20.165
+Uma das principais responsabilidades
+dos engenheiros de dados
+
+00:00:20.198 --> 00:00:22.389
+é fazer o pipeline.
+
+00:00:22.422 --> 00:00:24.358
+"Fazer o pipeline"
+é um termo genérico
+
+00:00:24.391 --> 00:00:27.566
+para o ato de mover dados
+de um lugar para outro.
+
+00:00:27.599 --> 00:00:29.925
+Podemos fazer
+o pipeline de dados
+
+00:00:29.958 --> 00:00:32.198
+de uma base de dados
+para outra,
+
+00:00:32.231 --> 00:00:34.917
+ou de um arquivo de texto
+para um arquivo CSV,
+
+00:00:34.950 --> 00:00:37.380
+ou de um arquivo de texto
+para uma base de dados.
+
+00:00:37.965 --> 00:00:42.301
+Nesta aula, você vai aprender sobre
+o pipeline provavelmente mais usado,
+
+00:00:42.334 --> 00:00:47.645
+que é chamado de "ETL": Extrair,
+Transformar, Carregar.
+
+00:00:48.742 --> 00:00:52.685
+Com pipelines ETL,
+você extrai dados de um lugar,
+
+00:00:53.061 --> 00:00:55.573
+transforma os dados
+para outro formato
+
+00:00:55.606 --> 00:00:59.941
+e carrega os dados transformados,
+armazenando-os em outro lugar.
+
+00:01:00.322 --> 00:01:03.477
+Como isso é relevante para o seu
+papel como cientista de dados?
+
+00:01:03.781 --> 00:01:07.967
+Idealmente, cientistas de dados
+trabalham no extremo dos pipelines,
+
+00:01:08.000 --> 00:01:11.274
+depois que os dados
+foram transformados e carregados.
+
+00:01:11.307 --> 00:01:15.278
+Um engenheiro de dados já organizou
+os dados para você analisá-los.
+
+00:01:15.733 --> 00:01:19.429
+Nesses casos, você deve dar
+aos engenheiros instruções claras
+
+00:01:19.462 --> 00:01:23.798
+sobre quais dados você precisa
+e em qual formato eles devem estar.
+
+00:01:24.174 --> 00:01:26.837
+Mas se você trabalha
+em uma empresa menor,
+
+00:01:26.870 --> 00:01:31.749
+é provável que você atue tanto como
+cientista como engenheiro de dados.
+
+00:01:32.276 --> 00:01:35.901
+Esta aula vai ajudá-lo a se preparar
+para ambos os casos.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.700 --> 00:00:09.435
+A dataset might be missing data for a number of reasons.
+
+00:00:09.435 --> 00:00:14.620
+Some datasets were created manually by a human sitting at a keyboard typing.
+
+00:00:14.619 --> 00:00:17.369
+You can imagine how easy it would be to make
+
+00:00:17.370 --> 00:00:20.519
+a mistake or forget to input a piece of data.
+
+00:00:20.519 --> 00:00:23.699
+Even when data gets automatically recorded,
+
+00:00:23.699 --> 00:00:26.175
+you could end up with missing values.
+
+00:00:26.175 --> 00:00:30.660
+Consider a weather station that measures the air temperature, pressure,
+
+00:00:30.660 --> 00:00:32.795
+and wind speed on top of a building,
+
+00:00:32.795 --> 00:00:36.929
+and then sends the measurements to a database every two seconds.
+
+00:00:36.929 --> 00:00:41.030
+The sensor might malfunction and skip a measurement.
+
+00:00:41.030 --> 00:00:45.674
+The data might be lost or corrupted in transmission,
+
+00:00:45.674 --> 00:00:50.224
+and sometimes a missing value actually should be missing.
+
+00:00:50.225 --> 00:00:55.670
+This happens especially with text or categorical variables, for example,
+
+00:00:55.670 --> 00:00:59.495
+each project entry in the World Bank Project dataset has
+
+00:00:59.494 --> 00:01:04.704
+five variables representing the theme or purpose of the project.
+
+00:01:04.704 --> 00:01:09.414
+These variables are labeled theme 1 through theme 5.
+
+00:01:09.415 --> 00:01:14.205
+Some projects might have values for all five theme variables,
+
+00:01:14.204 --> 00:01:18.435
+other projects might only encompass one theme.
+
+00:01:18.435 --> 00:01:24.935
+This is a case where the theme 2 through 5 variables should be empty.
+
+00:01:24.935 --> 00:01:27.560
+To run a machine learning algorithm,
+
+00:01:27.560 --> 00:01:30.409
+you can't have missing values in your dataset.
+
+00:01:30.409 --> 00:01:36.119
+So, next we'll talk about your options when your dataset is missing values.
+

@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.879 --> 00:00:10.294
+An outlier is a data point that is far away from the rest of the data.
+
+00:00:10.294 --> 00:00:14.759
+Outliers can appear in your data for similar reasons to missing data.
+
+00:00:14.759 --> 00:00:20.109
+An outlier could be due to a data entry error or a processing mistake,
+
+00:00:20.109 --> 00:00:24.210
+or an outlier might be legitimate data because, in any situation,
+
+00:00:24.210 --> 00:00:28.490
+there's always some probability of obtaining an extreme value.
+
+00:00:28.489 --> 00:00:31.139
+The questions to ask yourself are;
+
+00:00:31.140 --> 00:00:32.670
+how do you find outliers,
+
+00:00:32.670 --> 00:00:34.560
+and then once you found them,
+
+00:00:34.560 --> 00:00:36.160
+what do you do with them?
+
+00:00:36.159 --> 00:00:39.409
+First, I'll introduce a few ways for detecting
+
+00:00:39.409 --> 00:00:43.414
+outliers and then talk about what to do with outliers.
+
+00:00:43.414 --> 00:00:46.274
+When working in one or two dimensions,
+
+00:00:46.274 --> 00:00:49.954
+you can use data visualizations to spot outliers.
+
+00:00:49.954 --> 00:00:52.155
+In the case of one dimensional data,
+
+00:00:52.155 --> 00:00:54.685
+you can plot the data along a number line.
+
+00:00:54.685 --> 00:00:58.130
+A data point that falls far to the left or far to
+
+00:00:58.130 --> 00:01:02.030
+the right of most of the data could be considered an outlier.
+
+00:01:02.030 --> 00:01:06.275
+You can also spot outliers using two dimensional plots.
+
+00:01:06.275 --> 00:01:11.435
+In this plot, it's clear that one point is far away from the other data points.
+
+00:01:11.435 --> 00:01:14.629
+There are also statistical methods for finding outliers,
+
+00:01:14.629 --> 00:01:17.795
+and I'll give you some practice in the coding exercises.
+
+00:01:17.795 --> 00:01:22.969
+These include using z-scores from a normal distribution or the two-key method.
+
+00:01:22.969 --> 00:01:27.465
+Both of these methods use basic statistics like means,
+
+00:01:27.465 --> 00:01:30.409
+standard deviations, or quantiles to
+
+00:01:30.409 --> 00:01:34.500
+identify outliers that are far away from most of the data.
+
+00:01:34.500 --> 00:01:39.269
+So far, we've talked about finding outliers in one or two dimensions.
+
+00:01:39.269 --> 00:01:42.709
+How do you find outliers in three or more dimensions?
+
+00:01:42.709 --> 00:01:44.284
+You could, for example,
+
+00:01:44.284 --> 00:01:49.939
+use machine learning techniques like PCA to reduce the data to one or two dimensions.
+
+00:01:49.939 --> 00:01:54.754
+Then you could use the graphical or statistical methods already discussed.
+
+00:01:54.754 --> 00:01:58.444
+Another example would be to use a clustering method.
+
+00:01:58.444 --> 00:02:00.919
+In this case, you would first calculate
+
+00:02:00.920 --> 00:02:03.469
+the cluster centroids and then you would measure
+
+00:02:03.469 --> 00:02:06.784
+the distance between each centroid and each point.
+
+00:02:06.784 --> 00:02:10.875
+A large distance might indicate an outlier.
+
+00:02:10.875 --> 00:02:15.740
+Scikit-learn also includes various outlier detection algorithms,
+
+00:02:15.740 --> 00:02:17.460
+and I'll provide a link below.
+
+00:02:17.460 --> 00:02:21.640
+Next, you'll get some practice identifying outliers.
+

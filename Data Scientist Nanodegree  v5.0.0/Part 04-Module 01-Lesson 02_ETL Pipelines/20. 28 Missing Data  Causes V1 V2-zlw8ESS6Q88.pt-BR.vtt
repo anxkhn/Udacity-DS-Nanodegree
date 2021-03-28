@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.938 --> 00:00:04.407
+CAUSAS PARA DADOS FALTANTES
+
+00:00:05.645 --> 00:00:09.397
+Um conjunto de dados pode ter
+dados faltantes por inúmeras razões.
+
+00:00:09.732 --> 00:00:11.795
+Alguns conjuntos foram criados
+manualmente
+
+00:00:11.828 --> 00:00:14.711
+por um ser humano
+digitando em um teclado.
+
+00:00:14.744 --> 00:00:18.012
+Imagine como seria fácil
+cometer um erro
+
+00:00:18.045 --> 00:00:20.170
+ou esquecer de acrescentar
+partes de dados.
+
+00:00:20.981 --> 00:00:23.396
+Mesmo quando dados são
+gravados automaticamente,
+
+00:00:23.429 --> 00:00:25.612
+podemos ter valores faltantes.
+
+00:00:26.592 --> 00:00:29.793
+Considere uma estação meteorológica
+que mede a temperatura do ar,
+
+00:00:29.826 --> 00:00:32.581
+a pressão e a velocidade do vento
+no topo de um prédio,
+
+00:00:32.614 --> 00:00:36.252
+e envia as medidas para uma base
+de dados a cada 2 segundos.
+
+00:00:37.494 --> 00:00:40.489
+O sensor pode dar defeito
+e pular uma medição.
+
+00:00:41.611 --> 00:00:45.069
+O dado pode se perder
+ou ser corrompido na transmissão.
+
+00:00:46.157 --> 00:00:50.080
+Às vezes, um valor faltante,
+na verdade, deve faltar mesmo.
+
+00:00:50.533 --> 00:00:54.068
+Isso acontece especialmente com
+variáveis textuais ou categóricas.
+
+00:00:54.875 --> 00:00:58.229
+Por exemplo, cada entrada
+no conjunto de dados de projetos
+
+00:00:58.262 --> 00:01:02.164
+do Banco Mundial
+tem 5 variáveis representando o tema
+
+00:01:02.197 --> 00:01:04.229
+ou o objetivo do projeto.
+
+00:01:05.188 --> 00:01:08.942
+Essas variáveis foram nomeadas
+de "theme_1" a "theme_5".
+
+00:01:09.859 --> 00:01:13.904
+Alguns projetos podem ter valores
+para todas as 5 variáveis de tema.
+
+00:01:14.555 --> 00:01:17.988
+Outros, podem contemplar
+apenas um tema.
+
+00:01:18.885 --> 00:01:23.050
+Este é um caso onde as variáveis
+dos temas 2 ao 5
+
+00:01:23.083 --> 00:01:24.948
+deveriam estar vazias.
+
+00:01:24.981 --> 00:01:27.768
+Para executar um algoritmo
+de aprendizado de máquina,
+
+00:01:27.801 --> 00:01:30.804
+você não pode ter valores
+faltantes no seu conjunto de dados.
+
+00:01:30.837 --> 00:01:33.036
+A seguir,
+vamos falar das opções
+
+00:01:33.069 --> 00:01:35.503
+para quando o seu conjunto
+tiver dados faltantes.
+

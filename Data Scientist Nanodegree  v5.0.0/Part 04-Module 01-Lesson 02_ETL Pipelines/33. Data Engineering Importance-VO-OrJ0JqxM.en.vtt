@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.320
+So, Robert can you talk a little bit about maybe advice that you would give to
+
+00:00:04.320 --> 00:00:08.669
+yourself and also maybe like what keeps you going in the world of data science.
+
+00:00:08.669 --> 00:00:11.820
+Yeah. Definitely, the number one thing that I recommend is just focus on
+
+00:00:11.820 --> 00:00:15.740
+the fundamentals and these are things like basic computing skills,
+
+00:00:15.740 --> 00:00:19.179
+basic statistics knowledge, good analytical mindset,
+
+00:00:19.179 --> 00:00:21.370
+SQL, so and so forth.
+
+00:00:21.370 --> 00:00:26.940
+The second thing that I think it's very important is to look for a company
+
+00:00:26.940 --> 00:00:32.460
+that is willing or has been investing in data engineering.
+
+00:00:32.460 --> 00:00:35.009
+So, having a solid data infrastructure team,
+
+00:00:35.009 --> 00:00:36.990
+having a solid engineering team,
+
+00:00:36.990 --> 00:00:39.210
+and have a reasonable data warehouse,
+
+00:00:39.210 --> 00:00:42.785
+which you can extract data and play with the data.
+
+00:00:42.784 --> 00:00:48.464
+My first job I was literally executing SQL script in tendon by
+
+00:00:48.465 --> 00:00:51.470
+hand to now we're using airflow and we can do
+
+00:00:51.469 --> 00:00:55.240
+very sophisticated stuff and everything is automated.
+
+00:00:55.240 --> 00:00:58.179
+So, there's definitely best practices that can be learned.
+
+00:00:58.179 --> 00:01:04.769
+So, it sounds like you're saying also for companies anyway, having data engineers,
+
+00:01:04.769 --> 00:01:07.849
+and figuring out what you want to store and
+
+00:01:07.849 --> 00:01:10.984
+how it's going to be stored is like almost more important
+
+00:01:10.984 --> 00:01:15.680
+than bringing on data scientists who are supposed to tell you what to do
+
+00:01:15.680 --> 00:01:20.430
+with data until you have a plan and you're storing the right things.
+
+00:01:20.430 --> 00:01:27.450
+Yeah, I think the person who articulated this best is Monica Rogati.
+
+00:01:27.450 --> 00:01:32.185
+She wrote also on media and she wrote a post called "The AI Hierarchial Needs."
+
+00:01:32.185 --> 00:01:36.064
+She described how like basically analytics are build in layers
+
+00:01:36.064 --> 00:01:38.480
+and you have to start from the foundation and
+
+00:01:38.480 --> 00:01:41.280
+the foundation is like having your data infrastructure in place,
+
+00:01:41.280 --> 00:01:42.700
+having your ETL in place,
+
+00:01:42.700 --> 00:01:45.950
+data warehouse and only after then can you do things like analytics,
+
+00:01:45.950 --> 00:01:47.630
+experimentation, and machine learning.
+
+00:01:47.629 --> 00:01:49.744
+I think that's very, very true.
+
+00:01:49.745 --> 00:01:53.750
+They always talk about after years of hard work finally,
+
+00:01:53.750 --> 00:01:55.215
+they are able to achieve this,
+
+00:01:55.215 --> 00:01:59.549
+but then they didn't really talk about of all the things that happened like before then.
+
+00:01:59.549 --> 00:02:07.349
+But that's really how any big and important data projects are built,
+
+00:02:07.349 --> 00:02:09.000
+it's layer upon layers.
+

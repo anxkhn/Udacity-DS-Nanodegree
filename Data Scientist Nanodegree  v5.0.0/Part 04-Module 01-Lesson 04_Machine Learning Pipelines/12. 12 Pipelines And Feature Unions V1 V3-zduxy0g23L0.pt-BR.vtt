@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:06.039 --> 00:00:09.476
+Até agora, usamos pipelines
+para encadear transformações
+
+00:00:09.509 --> 00:00:11.244
+e um estimador juntos
+
+00:00:11.277 --> 00:00:14.347
+para definir uma sequência clara
+para nosso fluxo de trabalho.
+
+00:00:14.381 --> 00:00:18.051
+Mas e se quiséssemos arquitetar
+um recurso do conjunto de dados
+
+00:00:18.084 --> 00:00:21.221
+enquanto simultaneamente
+arquitetamos outro recurso?
+
+00:00:21.254 --> 00:00:23.857
+Por exemplo,
+se quiséssemos extrair
+
+00:00:23.890 --> 00:00:28.061
+o TF-IDF e o número de caracteres -
+o comprimento do texto -
+
+00:00:28.094 --> 00:00:29.729
+de cada documento.
+
+00:00:29.763 --> 00:00:33.400
+Neste caso,
+usaríamos a Feature Union.
+
+00:00:33.433 --> 00:00:35.869
+Feature Union é outra classe
+
+00:00:35.902 --> 00:00:38.071
+no módulo de pipeline
+do scikit-learn
+
+00:00:38.104 --> 00:00:40.807
+e permite fazer etapas
+em paralelo
+
+00:00:40.840 --> 00:00:44.678
+e pegar a união dos resultados
+para a próxima etapa.
+
+00:00:44.711 --> 00:00:47.981
+Em outras palavras,
+adicionar os recursos resultantes
+
+00:00:48.014 --> 00:00:50.250
+de ambos os passos aos dados
+
+00:00:50.283 --> 00:00:52.886
+antes de ir
+para o próximo passo.
+
+00:00:52.919 --> 00:00:54.988
+Se você imaginar um pipeline
+
+00:00:55.021 --> 00:00:58.224
+como uma sequência linear
+de transformações de dados,
+
+00:00:58.258 --> 00:01:01.161
+uma Feature Union adicionaria
+duas sequências
+
+00:01:01.194 --> 00:01:04.898
+de transformações
+em paralelo, assim.
+
+00:01:04.931 --> 00:01:10.203
+O TF-IDF e o comprimento de texto
+são executados após o carregamento,
+
+00:01:10.236 --> 00:01:13.606
+e seus resultados são combinados
+com o conjunto original de recursos
+
+00:01:13.639 --> 00:01:15.842
+a serem usados
+no próximo passo.
+
+00:01:15.875 --> 00:01:19.879
+Em fluxos mais complexos,
+Feature Unions múltiplas
+
+00:01:19.913 --> 00:01:22.749
+são frequentemente usadas
+dentro de pipelines,
+
+00:01:22.782 --> 00:01:26.753
+e múltiplos pipelines são usados
+dentro de Feature Unions.
+
+00:01:26.786 --> 00:01:29.956
+Vamos ver um exemplo.
+

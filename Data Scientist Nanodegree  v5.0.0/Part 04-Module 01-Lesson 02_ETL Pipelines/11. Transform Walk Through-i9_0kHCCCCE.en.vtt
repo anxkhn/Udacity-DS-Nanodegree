@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.695
+In this next section,
+
+00:00:01.695 --> 00:00:06.089
+you'll start working on the transformation part of a data pipeline.
+
+00:00:06.089 --> 00:00:09.000
+This transformation section is relatively
+
+00:00:09.000 --> 00:00:13.065
+long because there are many different ways to transform data.
+
+00:00:13.064 --> 00:00:15.119
+Like in the extract section,
+
+00:00:15.119 --> 00:00:17.754
+each exercises in a Jupyter notebook.
+
+00:00:17.754 --> 00:00:23.614
+You'll see that many exercises have a challenge problem at the end.
+
+00:00:23.614 --> 00:00:28.458
+Again, these are problems that I think are worth doing,
+
+00:00:28.458 --> 00:00:30.814
+but they're really optional and you don't have to do them
+
+00:00:30.815 --> 00:00:33.304
+in order to get through the lesson and
+
+00:00:33.304 --> 00:00:38.469
+understand the material as well as doing the project at the end of the course.
+
+00:00:38.469 --> 00:00:43.159
+I also want to emphasize that each notebook has an answer file which you can find
+
+00:00:43.159 --> 00:00:48.709
+by clicking here on the Jupyter icon or going to file and then open,
+
+00:00:48.710 --> 00:00:51.929
+and then there will be a solution here.
+

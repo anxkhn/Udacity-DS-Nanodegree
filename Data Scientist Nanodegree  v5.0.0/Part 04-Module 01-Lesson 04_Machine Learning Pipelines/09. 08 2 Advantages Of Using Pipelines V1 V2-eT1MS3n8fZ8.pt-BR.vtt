@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.834 --> 00:00:04.671
+VANTAGENS DO PIPELINE -
+PARTE 2
+
+00:00:05.572 --> 00:00:09.275
+Há algumas outras vantagens
+em usar pipeline,
+
+00:00:09.309 --> 00:00:13.246
+sendo que a mais importante
+é a habilidade de otimizar
+
+00:00:13.279 --> 00:00:16.149
+todo o seu fluxo de trabalho
+com pesquisa de grade.
+
+00:00:16.182 --> 00:00:17.884
+Pesquisa de grade é um método
+
+00:00:17.917 --> 00:00:21.154
+que automatiza o processo
+de testar diferentes valores
+
+00:00:21.187 --> 00:00:23.523
+para achar a combinação
+de parâmetros
+
+00:00:23.556 --> 00:00:26.393
+que resulte no modelo
+de melhor desempenho.
+
+00:00:26.426 --> 00:00:29.963
+Nos aprofundaremos
+nisto mais tarde.
+
+00:00:29.996 --> 00:00:32.399
+Embora a pesquisa de grade
+possa ser executada
+
+00:00:32.432 --> 00:00:35.635
+num simples classificador
+para ajustar seus parâmetros,
+
+00:00:35.669 --> 00:00:40.240
+usá-la no pipeline completo
+permite ajustar os parâmetros
+
+00:00:40.273 --> 00:00:43.243
+na sua preparação de dados
+e no modelo,
+
+00:00:43.276 --> 00:00:46.446
+o que justifica qualquer interação
+entre os passos
+
+00:00:46.479 --> 00:00:48.615
+que possa afetar
+a pontuação final.
+
+00:00:48.648 --> 00:00:50.216
+Sem a pesquisa de grade,
+
+00:00:50.250 --> 00:00:54.154
+ajustar estes parâmetros
+pode ser muito lento,
+
+00:00:54.187 --> 00:00:56.489
+incompleto e bagunçado.
+
+00:00:56.523 --> 00:00:59.859
+A última vantagem do pipeline
+de que falaremos
+
+00:00:59.893 --> 00:01:04.230
+é que ele previne o erro
+de vazar conhecimento
+
+00:01:04.264 --> 00:01:08.301
+dos dados de teste ou de validação
+para o seu processo de treino.
+
+00:01:08.335 --> 00:01:11.371
+Usando pipeline,
+todas as transformações
+
+00:01:11.404 --> 00:01:14.341
+para a preparação de dados
+e extração de recursos
+
+00:01:14.374 --> 00:01:18.445
+ocorrem dentro de cada parte
+do processo de validação cruzada.
+
+00:01:18.478 --> 00:01:20.880
+Isto previne erros comuns,
+
+00:01:20.914 --> 00:01:23.149
+onde você permitiria
+que o processo de treino
+
+00:01:23.183 --> 00:01:25.585
+fosse influenciado
+pelos dados de teste.
+
+00:01:25.618 --> 00:01:29.522
+Por exemplo, se você usar
+todo o conjunto de dados de teste
+
+00:01:29.556 --> 00:01:32.959
+para normalizar ou extrair
+recursos dos dados.
+
+00:01:32.992 --> 00:01:35.862
+Isto provavelmente
+parece confuso agora,
+
+00:01:35.895 --> 00:01:37.630
+mas ficará bem mais claro
+
+00:01:37.664 --> 00:01:41.234
+quando você vir isto em código
+no próximo vídeo.
+

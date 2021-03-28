@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.899 --> 00:00:04.919
+DADOS DUPLICADOS
+
+00:00:05.891 --> 00:00:07.889
+Outro problema
+que você pode enfrentar
+
+00:00:07.922 --> 00:00:10.009
+são dados duplicados.
+
+00:00:10.042 --> 00:00:12.727
+Você pode achar
+que dados duplicados querem dizer
+
+00:00:12.760 --> 00:00:16.343
+que a mesma linha aparece duas vezes
+em um conjunto de dados.
+
+00:00:16.376 --> 00:00:18.900
+Isso com certeza acontece.
+
+00:00:18.933 --> 00:00:22.911
+Neste caso, você pode procurar
+por linhas duplicadas e removê-las.
+
+00:00:22.944 --> 00:00:27.850
+Pandas torna isso bem fácil
+com o método drop duplicates.
+
+00:00:27.883 --> 00:00:33.464
+No entanto, dados duplicados
+podem ser difíceis de encontrar.
+
+00:00:33.497 --> 00:00:36.874
+Digamos que sua empresa
+tenha diferentes listas de contatos
+
+00:00:36.907 --> 00:00:39.643
+e queira fundi-las.
+
+00:00:39.676 --> 00:00:43.122
+Uma lista de contatos
+contém nome,
+
+00:00:43.155 --> 00:00:48.079
+sobrenome, telefone
+e endereço.
+
+00:00:48.112 --> 00:00:51.797
+A lista de contatos é assim.
+
+00:00:52.374 --> 00:00:55.144
+A segunda lista contém nome,
+
+00:00:55.177 --> 00:00:58.778
+sobrenome e e-mail.
+
+00:00:58.811 --> 00:01:02.256
+Aqui está
+a segunda lista de contatos.
+
+00:01:02.289 --> 00:01:06.183
+O nome de um dos clientes
+é Cristina Real.
+
+00:01:06.216 --> 00:01:08.084
+Na primeira lista de contatos,
+
+00:01:08.117 --> 00:01:12.526
+o nome e o sobrenome dela
+aparecem como Cristina Real.
+
+00:01:12.915 --> 00:01:14.367
+Na segunda lista,
+
+00:01:14.400 --> 00:01:18.156
+o nome e o sobrenome dela
+aparecem como Christina Real,
+
+00:01:18.189 --> 00:01:20.020
+com H.
+
+00:01:20.919 --> 00:01:26.712
+Se você funde as duas listas
+a partir do nome e sobrenome,
+
+00:01:26.745 --> 00:01:31.815
+você pode acabar com duas entradas
+para Cristina, em vez de uma.
+
+00:01:31.848 --> 00:01:35.241
+Este é um caso
+de dados duplicados.
+
+00:01:35.274 --> 00:01:38.607
+Reconhecer que Cristina
+e Christina com H
+
+00:01:38.640 --> 00:01:42.123
+são a mesma pessoa
+não é algo fácil.
+
+00:01:42.156 --> 00:01:46.076
+Há programas e empresas
+inteiramente dedicadas
+
+00:01:46.109 --> 00:01:49.091
+a buscar e eliminar
+entradas duplicadas
+
+00:01:49.124 --> 00:01:51.176
+nesses casos mais difíceis.
+
+00:01:52.583 --> 00:01:54.848
+Assim como com casos ausentes,
+
+00:01:54.881 --> 00:01:57.926
+cada conjunto de dados
+tem suas próprias questões.
+
+00:01:57.959 --> 00:02:01.006
+Parte do seu trabalho como cientista
+ou engenheiro de dados
+
+00:02:01.039 --> 00:02:02.929
+é passar um pente-fino
+nos dados,
+
+00:02:02.962 --> 00:02:04.485
+encontrar
+as áreas problemáticas
+
+00:02:04.518 --> 00:02:06.960
+e escrever um código
+para resolver essas questões.
+

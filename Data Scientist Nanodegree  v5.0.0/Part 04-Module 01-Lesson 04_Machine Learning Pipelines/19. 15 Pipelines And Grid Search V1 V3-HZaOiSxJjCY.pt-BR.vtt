@@ -1,0 +1,105 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.777 --> 00:00:04.848
+PIPELINES E PESQUISA DE GRADE
+
+00:00:05.881 --> 00:00:08.032
+Como mencionado
+anteriormente na aula,
+
+00:00:08.065 --> 00:00:10.600
+um benefício poderoso
+do uso de pipeline
+
+00:00:10.633 --> 00:00:12.785
+é poder realizar
+uma pesquisa de grade
+
+00:00:12.818 --> 00:00:15.051
+no fluxo de trabalho.
+
+00:00:15.084 --> 00:00:18.355
+Os algoritmos de aprendizado
+de máquina costumam ter parâmetros
+
+00:00:18.388 --> 00:00:19.860
+que precisam de ajuste.
+
+00:00:19.893 --> 00:00:22.486
+A pesquisa de grade é uma ferramenta
+que permite definir
+
+00:00:22.519 --> 00:00:26.475
+uma grade de parâmetros
+ou valores a serem verificados.
+
+00:00:26.508 --> 00:00:28.786
+Seu computador
+automatiza o processo
+
+00:00:28.819 --> 00:00:32.523
+de experimentar as combinações
+possíveis de valores.
+
+00:00:32.556 --> 00:00:34.843
+A pesquisa de grade
+pontua cada combinação
+
+00:00:34.876 --> 00:00:36.683
+com validações cruzadas
+
+00:00:36.716 --> 00:00:39.442
+e usa a pontuação
+da validação cruzada
+
+00:00:39.475 --> 00:00:44.211
+para determinar os parâmetros
+que produzem o modelo mais ideal.
+
+00:00:44.244 --> 00:00:46.458
+Executar a pesquisa de grade
+no pipeline
+
+00:00:46.491 --> 00:00:49.516
+permite experimentar
+vários valores de parâmetro
+
+00:00:49.549 --> 00:00:51.707
+completamente
+e convenientemente,
+
+00:00:51.740 --> 00:00:55.859
+tanto para as transformações
+como para os estimadores de dados.
+
+00:00:55.892 --> 00:00:58.903
+Novamente, embora possamos executar
+a pesquisa de grade
+
+00:00:58.936 --> 00:01:03.003
+em um único classificador,
+executá-la em todo o pipeline
+
+00:01:03.036 --> 00:01:05.945
+ajudará a testar combinações
+de múltiplos parâmetros
+
+00:01:05.978 --> 00:01:08.595
+em todo o fluxo de trabalho.
+
+00:01:08.628 --> 00:01:10.586
+Isso explica as interações
+
+00:01:10.619 --> 00:01:13.370
+entre os parâmetros
+não apenas no modelo,
+
+00:01:13.403 --> 00:01:16.467
+mas também nos passos
+de preparação de dados.
+
+00:01:16.500 --> 00:01:18.403
+Vejamos como isso funciona.
+

@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.099 --> 00:00:03.703
+Agora que você limpou
+e tokenizou os dados de texto,
+
+00:00:03.737 --> 00:00:07.173
+vamos completar o fluxo de trabalho
+do aprendizado de máquina.
+
+00:00:07.207 --> 00:00:08.675
+Na próxima página,
+
+00:00:08.708 --> 00:00:11.677
+você encontrará o espaço de trabalho
+contendo este notebook.
+
+00:00:11.711 --> 00:00:15.515
+As primeiras três células contêm
+trabalho da seção anterior,
+
+00:00:15.548 --> 00:00:17.650
+e aqui você vai completar
+
+00:00:17.684 --> 00:00:19.486
+o fluxo do aprendizado
+de máquina.
+
+00:00:19.519 --> 00:00:24.491
+Esta aula vai ensinar a fazer isto
+mais efetivamente, usando pipelines.
+
+00:00:24.524 --> 00:00:28.862
+Mas é importante que você primeiro
+construa do jeito normal,
+
+00:00:28.895 --> 00:00:30.397
+sem pipelines.
+
+00:00:30.430 --> 00:00:34.734
+Siga estes passos para construir
+e testar seu classificador.
+
+00:00:34.768 --> 00:00:36.302
+Quando terminar,
+
+00:00:36.336 --> 00:00:39.339
+refatore estes passos
+nestas duas funções.
+

@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:10.464
+Up until now, we've treated each part of the ETL pipeline in isolation.
+
+00:00:10.464 --> 00:00:14.899
+The last step is to write an entire pipeline that extracts,
+
+00:00:14.900 --> 00:00:19.015
+transforms, and loads the data all in one go.
+
+00:00:19.015 --> 00:00:20.655
+In this next section,
+
+00:00:20.655 --> 00:00:23.480
+you'll write a program to do exactly that.
+

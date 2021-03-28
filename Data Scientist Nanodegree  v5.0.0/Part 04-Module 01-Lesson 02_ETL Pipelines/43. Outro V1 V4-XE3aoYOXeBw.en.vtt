@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.580
+Congrats on all the hard work you've put in.
+
+00:00:08.580 --> 00:00:13.289
+This lesson contained a lot of information encoding exercises.
+
+00:00:13.289 --> 00:00:15.329
+Let's recap what you've learned.
+
+00:00:15.330 --> 00:00:20.490
+One of the main roles of a data engineer is to prepare data pipelines.
+
+00:00:20.489 --> 00:00:25.119
+Pipelines are used to move data from one place to another place.
+
+00:00:25.120 --> 00:00:29.880
+You practice writing code for a very specific and common pipeline
+
+00:00:29.879 --> 00:00:34.829
+called ETL or Extract Transform Load.
+
+00:00:34.829 --> 00:00:37.049
+You pull data from a source,
+
+00:00:37.049 --> 00:00:42.114
+transform the data and then load that transformed data into storage.
+
+00:00:42.115 --> 00:00:46.429
+With your knowledge of ETL pipelines you can communicate better with
+
+00:00:46.429 --> 00:00:52.530
+a data engineer explaining exactly what data you need and what the data should look like.
+
+00:00:52.530 --> 00:00:54.480
+As a data scientist,
+
+00:00:54.479 --> 00:00:58.534
+much of your job will involve gathering and cleaning data.
+
+00:00:58.534 --> 00:01:05.509
+The extract and transform skills you developed in this lesson will be especially helpful.
+

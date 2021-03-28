@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.864 --> 00:00:04.850
+CARREGAMENTO
+
+00:00:04.883 --> 00:00:07.690
+Há um último passo
+para um pipeline ETL
+
+00:00:07.723 --> 00:00:09.872
+sobre o qual
+ainda não falamos.
+
+00:00:09.905 --> 00:00:10.993
+Carregamento.
+
+00:00:11.026 --> 00:00:13.195
+Agora que você transformou
+os dados,
+
+00:00:13.228 --> 00:00:15.624
+você quer armazená-los
+em algum lugar,
+
+00:00:15.657 --> 00:00:18.544
+senão vai perder
+todo o seu trabalho.
+
+00:00:18.577 --> 00:00:21.840
+Há muitas opções
+para armazenamento de dados.
+
+00:00:21.873 --> 00:00:24.554
+O que você escolher vai depender
+das suas necessidades.
+
+00:00:24.587 --> 00:00:26.986
+Por exemplo,
+para dados estruturados,
+
+00:00:27.019 --> 00:00:30.481
+um banco de dados relacional,
+como o SQL, pode ser apropriado.
+
+00:00:30.514 --> 00:00:33.244
+Se seus dados se encaixam
+em um data frame Pandas,
+
+00:00:33.277 --> 00:00:36.032
+um arquivo CSV
+deve funcionar bem.
+
+00:00:36.065 --> 00:00:37.985
+Parte do trabalho
+de um engenheiro de dados
+
+00:00:38.018 --> 00:00:41.539
+é saber trabalhar com diferentes
+opções de armazenamento de dados.
+
+00:00:41.572 --> 00:00:43.612
+Abaixo do vídeo,
+você encontrará alguns links
+
+00:00:43.645 --> 00:00:47.330
+sobre sistemas de armazenamento
+de dados populares para além do SQL,
+
+00:00:47.363 --> 00:00:50.547
+CSV e arquivos JSON.
+
+00:00:50.580 --> 00:00:54.053
+Vou mostrar algumas maneiras
+de carregar dados usando o Python,
+
+00:00:54.086 --> 00:00:56.924
+e, depois, você vai praticar
+fazendo isso sozinho.
+

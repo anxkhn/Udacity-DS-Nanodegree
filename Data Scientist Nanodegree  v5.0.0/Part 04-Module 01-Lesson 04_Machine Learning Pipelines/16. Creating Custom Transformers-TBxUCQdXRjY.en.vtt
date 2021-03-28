@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.815
+In the last section,
+
+00:00:01.815 --> 00:00:07.789
+you used a custom transformer that extracted whether each text started with a verb.
+
+00:00:07.790 --> 00:00:10.019
+You can implement a custom transformer
+
+00:00:10.019 --> 00:00:13.949
+yourself by extending the base class in scikit-learn.
+
+00:00:13.949 --> 00:00:19.134
+Here is a very simple example that multiplies the input data by ten.
+
+00:00:19.135 --> 00:00:21.795
+Remember, all estimators need
+
+00:00:21.795 --> 00:00:26.745
+a fit method to learn on the data and because this is a transformer,
+
+00:00:26.745 --> 00:00:28.815
+we'll need a transform method.
+
+00:00:28.815 --> 00:00:34.890
+The transform method is where will include the code that will transforms the data.
+
+00:00:34.890 --> 00:00:37.810
+Note that both fit and transform,
+
+00:00:37.810 --> 00:00:41.590
+typically take a 2D array X.
+
+00:00:42.259 --> 00:00:48.295
+Next, we'll create a custom transformer that has a bit more significance.
+
+00:00:48.295 --> 00:00:53.990
+Here is a case normalizer which simply converts all text to lowercase.
+
+00:00:53.990 --> 00:00:56.820
+We aren't setting anything in our init method,
+
+00:00:56.820 --> 00:00:59.005
+so we can actually remove that.
+
+00:00:59.005 --> 00:01:04.655
+We can leave our fit method as is and focus on the transform method.
+
+00:01:04.655 --> 00:01:08.180
+We can lowercase all the values in X by
+
+00:01:08.180 --> 00:01:12.200
+applying a lambda function that occurs lower on each value.
+
+00:01:12.200 --> 00:01:17.040
+We'll have to wrap this in a panda series to be able to use a Pi function and
+
+00:01:17.040 --> 00:01:22.800
+lastly we'll put dot values at the end to to convert it back to a NumPy array.
+
+00:01:24.640 --> 00:01:30.825
+Awesome. It's a good idea to learn how to write your own custom functions.
+
+00:01:30.825 --> 00:01:36.365
+It allows you to have more control and flexibility with your machine learning pipelines.
+
+00:01:36.364 --> 00:01:40.429
+Another way to create custom transformers is by using
+
+00:01:40.430 --> 00:01:45.035
+this function transformer from scikit-learn preprocessing module.
+
+00:01:45.034 --> 00:01:47.944
+This allows you to wrap an existing function
+
+00:01:47.944 --> 00:01:51.829
+including one that you write to become a transformer.
+
+00:01:51.829 --> 00:01:54.120
+This allows less flexibility,
+
+00:01:54.120 --> 00:01:56.060
+but it is pretty simple.
+
+00:01:56.060 --> 00:01:58.870
+You can learn more about this in the link below.
+

@@ -1,0 +1,249 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.193 --> 00:00:02.153
+No último exercício,
+
+00:00:02.186 --> 00:00:05.664
+você vai escrever um código
+para um pipeline ETL inteiro.
+
+00:00:05.697 --> 00:00:08.718
+Quero guiar você
+pelo notebook Jupyter
+
+00:00:08.751 --> 00:00:10.406
+para que você tenha
+uma noção melhor
+
+00:00:10.439 --> 00:00:12.398
+do que o código todo
+está fazendo
+
+00:00:12.431 --> 00:00:14.178
+e do que você precisa
+para preenchê-lo.
+
+00:00:14.211 --> 00:00:16.208
+Aqui, esta primeira célula
+se conecta
+
+00:00:16.241 --> 00:00:19.938
+ao banco de dados SQLite,
+chamado "worldbank.db",
+
+00:00:19.971 --> 00:00:25.968
+e cria uma tabela
+que vai guardar dados gdp.
+
+00:00:26.001 --> 00:00:29.354
+Você não precisa
+fazer nada neste código,
+
+00:00:29.387 --> 00:00:31.974
+além de executar a célula.
+
+00:00:32.007 --> 00:00:35.070
+Na parte inferior
+do pipeline ETL,
+
+00:00:35.103 --> 00:00:39.232
+esta é a tabela em que você
+vai carregar seus dados.
+
+00:00:39.265 --> 00:00:43.244
+A segunda célula tem uma função
+chamada "extract_line".
+
+00:00:43.277 --> 00:00:45.902
+Você não precisa fazer nada
+nesse código também
+
+00:00:45.935 --> 00:00:48.520
+além de executar a célula.
+
+00:00:48.553 --> 00:00:52.079
+Esta função é
+um gerador Python.
+
+00:00:52.112 --> 00:00:55.878
+Você não precisa necessariamente
+entender como ele funciona
+
+00:00:55.911 --> 00:00:58.306
+para completar o exercício,
+
+00:00:58.339 --> 00:01:02.672
+mas será útil se você abrir o link
+que está nos comentários
+
+00:01:02.705 --> 00:01:04.957
+e ler um pouco sobre ele.
+
+00:01:04.990 --> 00:01:08.463
+Basicamente, um gerador é
+como uma função normal,
+
+00:01:08.496 --> 00:01:11.478
+só que, em vez de retornar
+uma instrução,
+
+00:01:11.511 --> 00:01:14.366
+o gerador tem
+uma instrução yield.
+
+00:01:14.399 --> 00:01:19.268
+Geradores permitem
+que você use funções em um loop for.
+
+00:01:19.301 --> 00:01:22.045
+Basicamente, esta função
+permite que você leia,
+
+00:01:22.078 --> 00:01:24.824
+em um arquivo de dados,
+uma linha de cada vez,
+
+00:01:24.857 --> 00:01:28.230
+rode uma transformação
+nessa única linha de dados,
+
+00:01:28.263 --> 00:01:29.760
+carregue os dados
+
+00:01:29.793 --> 00:01:32.264
+e vá para a linha seguinte
+do arquivo
+
+00:01:32.297 --> 00:01:34.507
+para repetir o processo.
+
+00:01:34.540 --> 00:01:38.972
+A terceira célula é onde você vai
+começar a escrever o código.
+
+00:01:39.005 --> 00:01:44.054
+Esta célula contém uma função
+chamada "transform_indicator_data".
+
+00:01:44.087 --> 00:01:48.435
+Esta função recebe uma linha
+de um arquivo CSV
+
+00:01:48.468 --> 00:01:51.061
+e transforma os dados
+em preparação
+
+00:01:51.094 --> 00:01:52.916
+para o passo de carregamento.
+
+00:01:52.949 --> 00:01:58.105
+Lembre-se de como
+uma linha de dados é no arquivo CSV.
+
+00:01:58.138 --> 00:01:59.933
+Ela tem um nome de país,
+
+00:01:59.966 --> 00:02:01.994
+uma variável de indicador
+
+00:02:02.027 --> 00:02:04.227
+e uma coluna para cada ano.
+
+00:02:04.260 --> 00:02:06.182
+São os mesmos dados gdp
+
+00:02:06.215 --> 00:02:09.678
+com os quais você trabalhou
+nos exercícios anteriores.
+
+00:02:09.711 --> 00:02:14.509
+Sua tarefa será transformar
+esses dados em uma lista de listas,
+
+00:02:14.542 --> 00:02:17.436
+em que cada entrada
+tenha o país,
+
+00:02:17.469 --> 00:02:22.748
+a abreviação do país,
+o ano e o valor.
+
+00:02:22.781 --> 00:02:27.533
+A quarta célula contém uma função
+chamada "load_indicator_data",
+
+00:02:27.566 --> 00:02:31.204
+e você terá que preencher o código
+nessa função também.
+
+00:02:31.237 --> 00:02:33.780
+Esta função carrega
+os dados transformados
+
+00:02:33.813 --> 00:02:38.742
+na tabela gdp
+do banco de dados worldbank.db.
+
+00:02:38.775 --> 00:02:40.341
+Nesta parte do código,
+
+00:02:40.374 --> 00:02:42.252
+você vai preparar
+uma consultar SQL
+
+00:02:42.285 --> 00:02:45.914
+que vai carregar cada entrada
+no banco de dados.
+
+00:02:45.947 --> 00:02:49.196
+A quinta célula roda
+o pipeline ETL.
+
+00:02:49.229 --> 00:02:53.630
+Você não precisa fazer nada aqui
+além de rodar o código,
+
+00:02:53.663 --> 00:02:57.637
+mas, por favor, leia o código todo
+para entender o que ele faz.
+
+00:02:57.670 --> 00:03:00.795
+Este código está usando
+o gerador extract_lines,
+
+00:03:00.828 --> 00:03:04.408
+que foi carregado mais cedo
+no notebook Jupyter.
+
+00:03:04.441 --> 00:03:07.925
+A sexta célula roda uma consulta
+contra o banco de dados
+
+00:03:07.958 --> 00:03:10.861
+para garantir que tudo
+funcionou corretamente.
+
+00:03:10.894 --> 00:03:13.367
+O que você precisa fazer aqui
+é rodar o código
+
+00:03:13.400 --> 00:03:16.893
+e garantir que o output
+faça sentido.
+
+00:03:16.926 --> 00:03:19.474
+Só um lembrete:
+
+00:03:19.507 --> 00:03:22.534
+você só precisa modificar
+a terceira e quarta células
+
+00:03:22.567 --> 00:03:24.331
+nesse notebook Jupyter.
+
+00:03:24.364 --> 00:03:26.763
+As outras células só precisam
+ser executadas.
+

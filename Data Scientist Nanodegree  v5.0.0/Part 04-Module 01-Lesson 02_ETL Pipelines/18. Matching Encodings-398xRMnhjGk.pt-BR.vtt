@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.976 --> 00:00:04.522
+ENCODINGS CORRESPONDENTES
+
+00:00:05.342 --> 00:00:07.205
+Como computadores
+armazenam caracteres
+
+00:00:07.238 --> 00:00:09.518
+como as letras do alfabeto?
+
+00:00:09.941 --> 00:00:13.005
+Computadores armazenam tudo
+como números binários.
+
+00:00:13.038 --> 00:00:15.017
+O "a" minúsculo, por exemplo,
+
+00:00:15.050 --> 00:00:19.917
+pode ser armazenado
+como 01100001.
+
+00:00:21.084 --> 00:00:23.813
+Mas como o computador
+vai e volta,
+
+00:00:23.846 --> 00:00:25.662
+armazenando o "a"
+como binário
+
+00:00:25.695 --> 00:00:29.029
+e, depois, convertendo o binário
+para exibir a letra "a"?
+
+00:00:29.398 --> 00:00:32.516
+Computadores fazem
+essa conversão com encodings.
+
+00:00:33.139 --> 00:00:36.030
+Encodings são um conjunto
+de regras para fazer a conversão
+
+00:00:36.063 --> 00:00:40.213
+entre caracteres e as representações
+binárias desses caracteres.
+
+00:00:40.861 --> 00:00:45.006
+Quando a internet começou,
+o inglês era o idioma mais comum.
+
+00:00:45.039 --> 00:00:48.780
+Por isso, o encoding mais comum
+na época, chamado "ASCII",
+
+00:00:48.813 --> 00:00:50.637
+era específico para o inglês.
+
+00:00:51.069 --> 00:00:54.124
+Conforme a internet proliferou,
+o ASCII não deu conta
+
+00:00:54.157 --> 00:00:56.126
+de todos os idiomas do mundo.
+
+00:00:56.159 --> 00:00:59.560
+Muitos idiomas têm mais
+do que os 26 caracteres
+
+00:00:59.593 --> 00:01:00.928
+do alfabeto inglês.
+
+00:01:01.195 --> 00:01:04.908
+Alguns idiomas asiáticos
+têm milhares de caracteres.
+
+00:01:06.029 --> 00:01:09.837
+Uma organização internacional
+chamada Unicode Consortium
+
+00:01:09.870 --> 00:01:13.652
+criou alguns dos encodings
+mais flexíveis e compreensíveis
+
+00:01:13.685 --> 00:01:15.669
+para cobrir todos
+os idiomas do mundo.
+
+00:01:15.963 --> 00:01:18.061
+A maioria dos dados
+que você vai encontrar
+
+00:01:18.094 --> 00:01:20.461
+são codificados
+com um dos encodings deles,
+
+00:01:20.494 --> 00:01:23.477
+especialmente
+um chamado "UTF-8".
+
+00:01:23.941 --> 00:01:27.645
+Mas você vai encontrar conjuntos
+de dados com outros encodings,
+
+00:01:27.678 --> 00:01:32.036
+como o GB2312, para caracteres
+chineses simplificados,
+
+00:01:32.069 --> 00:01:36.444
+e o latin-1, para idiomas
+que usam o alfabeto latino.
+
+00:01:36.853 --> 00:01:41.517
+Só que não é fácil dizer como
+um conjunto de dados foi codificado,
+
+00:01:41.550 --> 00:01:43.180
+a menos que alguém nos diga.
+
+00:01:43.580 --> 00:01:47.580
+É aí que entra o próximo exercício
+de programação.
+
+00:01:47.613 --> 00:01:51.092
+Eu forneci um conjunto de dados
+com um encoding misterioso.
+
+00:01:51.125 --> 00:01:54.933
+A sua tarefa será descobrir
+qual encoding foi usado.
+
+00:01:54.966 --> 00:01:57.405
+Pode parecer
+que estou sendo mau,
+
+00:01:57.438 --> 00:02:01.293
+mas descobrir encodings
+é um problema real.
+
+00:02:01.326 --> 00:02:04.580
+Como você verá, não é possível
+ler um arquivo CSV
+
+00:02:04.613 --> 00:02:07.213
+sem saber o encoding dele.
+
+00:02:07.246 --> 00:02:09.996
+No exercício, você vai usar
+o pacote Pandas
+
+00:02:10.029 --> 00:02:14.531
+junto com uma lista dos encodings
+que vêm com a instalação do Python.
+
+00:02:14.564 --> 00:02:17.212
+Passe para a próxima parte
+da aula para começar.
+

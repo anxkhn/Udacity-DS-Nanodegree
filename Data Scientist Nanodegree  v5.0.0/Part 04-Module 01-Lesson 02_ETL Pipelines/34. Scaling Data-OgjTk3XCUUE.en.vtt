@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.589 --> 00:00:10.050
+Numerical data comes in all different distribution patterns and ranges.
+
+00:00:10.050 --> 00:00:13.480
+However, some machine learning algorithms work better
+
+00:00:13.480 --> 00:00:17.795
+when all of the features are within a similar numerical range.
+
+00:00:17.795 --> 00:00:22.570
+A few examples of these machine learning algorithms would be PCA,
+
+00:00:22.570 --> 00:00:24.760
+Linear regression with gradient descent,
+
+00:00:24.760 --> 00:00:29.679
+or any algorithm that calculates Euclidean distance between points.
+
+00:00:29.679 --> 00:00:36.189
+Changing the numerical range of data is called Normalization or Feature Scaling.
+
+00:00:36.189 --> 00:00:42.820
+Two common ways to scale features are called Rescaling and Standardization.
+
+00:00:42.820 --> 00:00:47.719
+With Rescaling, you take your data and scale down the range,
+
+00:00:47.719 --> 00:00:52.359
+so that the minimum value is zero and the maximum value is one.
+
+00:00:52.359 --> 00:00:55.409
+The distribution of the data remains the same,
+
+00:00:55.409 --> 00:00:57.699
+but the range changes.
+
+00:00:57.700 --> 00:01:00.970
+With Standardization, you transform the data,
+
+00:01:00.969 --> 00:01:05.140
+so that it has a mean of zero and a standard deviation of one.
+
+00:01:05.140 --> 00:01:08.900
+Again, the general shape of the distribution remains the same,
+
+00:01:08.900 --> 00:01:12.600
+which means the information contained in the data hasn't changed.
+
+00:01:12.599 --> 00:01:18.239
+However, the mean and standard deviation had been standardized.
+
+00:01:18.239 --> 00:01:20.125
+In the next section,
+
+00:01:20.125 --> 00:01:23.599
+you'll see how to scale features by writing some code.
+

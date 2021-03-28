@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.754
+In the next part of the lesson,
+
+00:00:01.754 --> 00:00:05.639
+you'll be working on the extract part of an ETL pipeline.
+
+00:00:05.639 --> 00:00:09.765
+You will be extracting data from different sources like CSV files,
+
+00:00:09.765 --> 00:00:13.320
+JSON files, XML, and SQL databases.
+
+00:00:13.320 --> 00:00:15.810
+I'm just going to give you a brief overview about how
+
+00:00:15.810 --> 00:00:18.350
+this section is organized and what you can expect?
+
+00:00:18.350 --> 00:00:19.740
+You'll notice in general,
+
+00:00:19.739 --> 00:00:22.863
+this lesson isn't too heavy on theory,
+
+00:00:22.864 --> 00:00:27.585
+it's mostly practical exercises so that you gain practice moving,
+
+00:00:27.585 --> 00:00:30.005
+cleaning, and preparing data.
+
+00:00:30.004 --> 00:00:32.475
+You'll see that whenever there's an exercise,
+
+00:00:32.475 --> 00:00:34.859
+it's marked here on the left as an exercise.
+
+00:00:34.859 --> 00:00:39.229
+All of the exercises are contained in Jupyter Notebooks.
+
+00:00:39.229 --> 00:00:41.244
+When you open an exercise,
+
+00:00:41.244 --> 00:00:44.449
+the notebook opens automatically in the workspace.
+
+00:00:44.450 --> 00:00:46.290
+To complete the exercise,
+
+00:00:46.289 --> 00:00:49.500
+read through the notebooks and follow the instructions.
+
+00:00:49.500 --> 00:00:51.164
+For some code cells,
+
+00:00:51.164 --> 00:00:52.909
+you only need to run them,
+
+00:00:52.909 --> 00:00:54.889
+but for other code cells,
+
+00:00:54.890 --> 00:00:57.285
+there's going to be a to do with instructions.
+
+00:00:57.284 --> 00:00:58.934
+So, whenever you see a to do,
+
+00:00:58.935 --> 00:01:01.460
+that means you have some code to write.
+
+00:01:01.460 --> 00:01:04.400
+I want to call your attention to the fact that,
+
+00:01:04.400 --> 00:01:07.820
+all of these exercises also have solutions.
+
+00:01:07.819 --> 00:01:11.399
+If you click on the Jupyter icon up here,
+
+00:01:11.400 --> 00:01:15.560
+and then you find the file with the exercise you're currently working on,
+
+00:01:15.560 --> 00:01:18.674
+which in this case is one CSV exercise.
+
+00:01:18.674 --> 00:01:20.194
+Then click and go inside,
+
+00:01:20.194 --> 00:01:21.339
+you can click here,
+
+00:01:21.340 --> 00:01:23.125
+and open a solution file.
+
+00:01:23.125 --> 00:01:25.245
+So, going back one level,
+
+00:01:25.245 --> 00:01:29.025
+all of these files have the exercises in them in Jupyter Notebooks,
+
+00:01:29.025 --> 00:01:34.670
+and they also have all of the solutions.
+
+00:01:34.670 --> 00:01:38.695
+Going here to this exercise on JSON, and XML,
+
+00:01:38.694 --> 00:01:46.009
+you'll see at the bottom that I've marked a section as a challenge, way down here.
+
+00:01:46.010 --> 00:01:48.079
+So, what I mean by that,
+
+00:01:48.079 --> 00:01:50.599
+is that this part is more challenging and
+
+00:01:50.599 --> 00:01:54.500
+also time-consuming than other parts of the exercise.
+
+00:01:54.500 --> 00:01:59.250
+I always put them as the very last thing at the bottom of an exercise.
+
+00:01:59.250 --> 00:02:01.954
+If I've marked something as a challenge,
+
+00:02:01.954 --> 00:02:05.099
+it means, I think you'll get something out of solving it,
+
+00:02:05.099 --> 00:02:09.439
+but it's not essential for understanding the lesson material or for
+
+00:02:09.439 --> 00:02:14.710
+getting through the final project at the end of this course.
+
+00:02:14.710 --> 00:02:21.590
+So, start working on this extract section and then when you get down to transform here,
+
+00:02:21.590 --> 00:02:25.530
+I'll give another overview about that section as well.
+

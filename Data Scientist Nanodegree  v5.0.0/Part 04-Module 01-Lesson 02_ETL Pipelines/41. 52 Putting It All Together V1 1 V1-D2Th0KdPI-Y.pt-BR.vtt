@@ -1,0 +1,29 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.777 --> 00:00:04.835
+JUNTANDO TUDO
+
+00:00:05.201 --> 00:00:06.365
+Até agora,
+
+00:00:06.398 --> 00:00:10.699
+tratamos cada parte
+do pipeline ETL isoladamente.
+
+00:00:10.732 --> 00:00:13.682
+O último passo é escrever
+um pipeline inteiro
+
+00:00:13.715 --> 00:00:19.037
+que extraia, transforme
+e carregue os dados de uma vez.
+
+00:00:19.070 --> 00:00:20.560
+Na próxima parte,
+
+00:00:20.593 --> 00:00:23.418
+você vai escrever um programa
+para fazer exatamente isso.
+

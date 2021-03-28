@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.040 --> 00:00:10.900
+There's one last step to an ETL pipeline we haven't talked about yet, load.
+
+00:00:10.900 --> 00:00:13.280
+Now that you've transformed the data,
+
+00:00:13.279 --> 00:00:15.469
+you'll want to store the data somewhere,
+
+00:00:15.470 --> 00:00:18.324
+otherwise you'd lose all your work.
+
+00:00:18.324 --> 00:00:21.980
+There are so many options for data storage.
+
+00:00:21.980 --> 00:00:24.379
+What you choose will depend on your needs.
+
+00:00:24.379 --> 00:00:27.114
+For example, with structured data,
+
+00:00:27.114 --> 00:00:30.320
+a relational database like SQL could be appropriate.
+
+00:00:30.320 --> 00:00:32.899
+If your data fits in a Pandas DataFrame,
+
+00:00:32.899 --> 00:00:35.649
+then a CSV file might work well.
+
+00:00:35.649 --> 00:00:41.449
+Part of a data engineer's job is to know how to work with different data storage options.
+
+00:00:41.450 --> 00:00:47.554
+Below the video, you'll find a few links about popular data storage systems beyond SQL,
+
+00:00:47.554 --> 00:00:50.164
+CSV, and Json files.
+
+00:00:50.164 --> 00:00:54.054
+I'll show you a couple of ways to load data using Python,
+
+00:00:54.054 --> 00:00:57.479
+and then you'll get some practice doing it on your own.
+

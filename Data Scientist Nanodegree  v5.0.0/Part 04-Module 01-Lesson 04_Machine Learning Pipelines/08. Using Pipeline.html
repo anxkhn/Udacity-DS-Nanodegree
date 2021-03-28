@@ -1,0 +1,279 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Pipeline</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Machine Learning Pipelines</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Corporate Messaging Case Study.html">02. Corporate Messaging Case Study</a>
+    </li>
+    <li class="">
+      <a href="03. Case Study Clean and Tokenize.html">03. Case Study: Clean and Tokenize</a>
+    </li>
+    <li class="">
+      <a href="04. Solution Clean and Tokenize.html">04. Solution: Clean and Tokenize</a>
+    </li>
+    <li class="">
+      <a href="05. Machine Learning Workflow.html">05. Machine Learning Workflow</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Machine Learning Workflow.html">06. Case Study: Machine Learning Workflow</a>
+    </li>
+    <li class="">
+      <a href="07. Solution Machine Learning Workflow.html">07. Solution: Machine Learning Workflow</a>
+    </li>
+    <li class="">
+      <a href="08. Using Pipeline.html">08. Using Pipeline</a>
+    </li>
+    <li class="">
+      <a href="09. Advantages of Using Pipeline.html">09. Advantages of Using Pipeline</a>
+    </li>
+    <li class="">
+      <a href="10. Case Study Build Pipeline.html">10. Case Study: Build Pipeline</a>
+    </li>
+    <li class="">
+      <a href="11. Solution Build Pipeline.html">11. Solution: Build Pipeline</a>
+    </li>
+    <li class="">
+      <a href="12. Pipelines and Feature Unions.html">12. Pipelines and Feature Unions</a>
+    </li>
+    <li class="">
+      <a href="13. Using Feature Union.html">13. Using Feature Union</a>
+    </li>
+    <li class="">
+      <a href="14. Case Study Add Feature Union.html">14. Case Study: Add Feature Union</a>
+    </li>
+    <li class="">
+      <a href="15. Solution Add Feature Union.html">15. Solution: Add Feature Union</a>
+    </li>
+    <li class="">
+      <a href="16. Creating Custom Transformers.html">16. Creating Custom Transformers</a>
+    </li>
+    <li class="">
+      <a href="17. Case Study Create Custom Transformer.html">17. Case Study: Create Custom Transformer</a>
+    </li>
+    <li class="">
+      <a href="18. Solution Create Custom Transformer.html">18. Solution: Create Custom Transformer</a>
+    </li>
+    <li class="">
+      <a href="19. Pipelines and Grid Search.html">19. Pipelines and Grid Search</a>
+    </li>
+    <li class="">
+      <a href="20. Using Grid Search with Pipelines.html">20. Using Grid Search with Pipelines</a>
+    </li>
+    <li class="">
+      <a href="21. Case Study Grid Search Pipeline.html">21. Case Study: Grid Search Pipeline</a>
+    </li>
+    <li class="">
+      <a href="22. Solution Grid Search Pipeline.html">22. Solution: Grid Search Pipeline</a>
+    </li>
+    <li class="">
+      <a href="23. Conclusion.html">23. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Using Pipeline</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Using Pipelines</p></h3>
+  <video controls>
+  <source src="08. Using Pipelines-mxFrS8qpZ6Y.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. Using Pipelines-mxFrS8qpZ6Y.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="08. Using Pipelines-mxFrS8qpZ6Y.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="08. Using Pipelines-mxFrS8qpZ6Y.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="using-pipeline">Using Pipeline</h1>
+<p>Below, you'll find a simple example of a machine learning workflow where we generate features from text data using count vectorizer and tf-idf transformer, and then fit it to a random forest classifier. Before we get into using pipelines, let's first use this example to go over some <code>scikit-learn</code> terminology.</p>
+<ul>
+<li><strong>ESTIMATOR:</strong> An <a href="http://scikit-learn.org/stable/tutorial/statistical_inference/settings.html#estimators-objects" rel="noopener noreferrer" target="_blank">estimator</a> is any object that learns from data, whether it's a classification, regression, or clustering algorithm, or a transformer that extracts or filters useful features from raw data. Since estimators <em>learn from data</em>, they each must have a <code>fit</code> method that takes a dataset. In the example below, the <code>CountVectorizer</code>, <code>TfidfTransformer</code>, and <code>RandomForestClassifier</code> are all estimators, and each have a <code>fit</code> method. </li>
+<li><strong>TRANSFORMER:</strong> A <a href="http://scikit-learn.org/stable/data_transforms.html" rel="noopener noreferrer" target="_blank">transformer</a> is a specific type of estimator that has a <code>fit</code> method to learn from training data, and then a <code>transform</code> method to apply a transformation model to new data. These transformations can include cleaning, reducing, expanding, or generating features. In the example below, <code>CountVectorizer</code> and <code>TfidfTransformer</code> are transformers.</li>
+<li><strong>PREDICTOR:</strong> A <strong>predictor</strong> is a specific type of estimator that has a <code>predict</code> method to predict on test data based on a supervised learning algorithm, and has a <code>fit</code> method to train the model on training data. The final estimator, <code>RandomForestClassifier</code>, in the example below is a predictor.</li>
+</ul>
+<p>In machine learning tasks, it's pretty common to have a very specific sequence of transformers to fit to data before applying a final estimator, such as this classifier. And normally, we'd have to initialize all the estimators, <code>fit</code> and <code>transform</code> the training data for each of the transformers, and then <code>fit</code> to the final estimator. Next, we'd have to call <code>transform</code> for each transformer again to the test data, and finally call <code>predict</code> on the final estimator.</p>
+<h3 id="without-pipeline">Without pipeline:</h3>
+<pre><code class="python language-python">    vect = CountVectorizer()
+    tfidf = TfidfTransformer()
+    clf = RandomForestClassifier()
+
+    # train classifier
+    X_train_counts = vect.fit_transform(X_train)
+    X_train_tfidf = tfidf.fit_transform(X_train_counts)
+    clf.fit(X_train_tfidf, y_train)
+
+    # predict on test data
+    X_test_counts = vect.transform(X_test)
+    X_test_tfidf = tfidf.transform(X_test_counts)
+    y_pred = clf.predict(X_test_tfidf)</code></pre>
+<p>Fortunately, you can actually automate all of this fitting, transforming, and predicting, by chaining these estimators together into a single estimator object. That single estimator would be scikit-learn's Pipeline. To create this pipeline, we just need a list of <code>(key, value)</code> pairs, where the key is a string containing what you want to name the step, and the value is the estimator object.</p>
+<h3 id="using-pipeline-1">Using pipeline:</h3>
+<pre><code class="python language-python">pipeline = Pipeline([
+    ('vect', CountVectorizer()),
+    ('tfidf', TfidfTransformer()),
+    ('clf', RandomForestClassifier()),
+])
+
+# train classifier
+pipeline.fit(Xtrain)
+
+# evaluate all steps on test set
+predicted = pipeline.predict(Xtest)</code></pre>
+<p>Now, by fitting our pipeline to the training data, we're accomplishing exactly what we would by fitting and transforming each of these steps to our training data one by one. Similarly, when we call <code>predict</code> on our pipeline to our test data, we're accomplishing what we would by calling <code>transform</code> on each of our transformer objects to our test data and then calling <code>predict</code> on our final estimator. Not only does this make our code much shorter and simpler, it has other great advantages, which we'll cover in the next video.</p>
+<p>Note that every step of this pipeline has to be a transformer, except for the last step, which can be of an estimator type. Pipeline takes on all the methods of whatever the last estimator in its sequence is. For example, here, since the final estimator of our pipeline is a classifier, the pipeline object can be used as a classifier, taking on the <code>fit</code> and <code>predict</code> methods of its last step. Alternatively, if the last estimator was a transformer, then pipeline would be a transformer.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Advantages of Using Pipeline.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Using Pipeline')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

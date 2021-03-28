@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+One limitation of the bag of words approach is
+
+00:00:03.180 --> 00:00:06.599
+that it treats every word as being equally important.
+
+00:00:06.599 --> 00:00:11.669
+Whereas intuitively, we know that some words occur frequently within a corpus.
+
+00:00:11.669 --> 00:00:14.714
+For example, when looking at financial documents,
+
+00:00:14.714 --> 00:00:17.730
+cost or price maybe a pretty common term.
+
+00:00:17.730 --> 00:00:23.120
+We can compensate for this by counting the number of documents in which each word occurs.
+
+00:00:23.120 --> 00:00:25.300
+This can be called document frequency,
+
+00:00:25.300 --> 00:00:30.370
+and then dividing the term frequencies by the document frequency of that term.
+
+00:00:30.370 --> 00:00:33.060
+This gives us a metric that is proportional to
+
+00:00:33.060 --> 00:00:36.030
+the frequency of occurrence of a term in a document,
+
+00:00:36.030 --> 00:00:40.109
+but inversely proportional to the number of documents it appears in.
+
+00:00:40.109 --> 00:00:43.939
+It highlights the words that are more unique to a document,
+
+00:00:43.939 --> 00:00:46.424
+and thus better for characterizing it.
+
+00:00:46.424 --> 00:00:51.004
+You may have heard of or used the TF-IDF transform before.
+
+00:00:51.005 --> 00:00:53.535
+It's simply the product of two weights.
+
+00:00:53.534 --> 00:00:55.879
+Very similar to what we've seen so far,
+
+00:00:55.880 --> 00:00:59.885
+a term frequency, and an inverse document frequency.
+
+00:00:59.884 --> 00:01:03.649
+The most commonly used form of TF-IDF defines
+
+00:01:03.649 --> 00:01:08.554
+term frequency as the raw count of a term T in a document D,
+
+00:01:08.555 --> 00:01:11.000
+divided by the total number of terms in
+
+00:01:11.000 --> 00:01:15.799
+D. Inverse document frequency as the logarithm of,
+
+00:01:15.799 --> 00:01:18.799
+the total number of documents in the collection D,
+
+00:01:18.799 --> 00:01:22.170
+divided by the number of documents where T is present.
+
+00:01:22.170 --> 00:01:25.939
+Several variations exist, that try to normalize or smooth
+
+00:01:25.939 --> 00:01:30.739
+the resulting values or prevent edge cases such as divide by zero errors.
+
+00:01:30.739 --> 00:01:35.479
+Overall TF-IDF is an innovative approach to assigning weights to words,
+
+00:01:35.480 --> 00:01:38.060
+that signify their relevance in documents.
+
+00:01:38.060 --> 00:01:43.510
+So, what can we accomplished with a bag of words or TF-IDF representation?
+
+00:01:43.510 --> 00:01:47.550
+Let's try to apply what we've learned to a classification task,
+
+00:01:47.549 --> 00:01:51.420
+distinguishing spam messages, from normal messages.
+
+00:01:51.420 --> 00:01:54.825
+Here we'll use the TF-IDF vectors as features,
+
+00:01:54.825 --> 00:01:56.445
+along with the label spam,
+
+00:01:56.444 --> 00:01:59.869
+not spam to set up a supervised learning problem.
+

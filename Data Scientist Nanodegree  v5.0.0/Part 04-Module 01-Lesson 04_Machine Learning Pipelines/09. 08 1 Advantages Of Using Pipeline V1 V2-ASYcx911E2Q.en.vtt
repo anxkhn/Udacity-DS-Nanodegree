@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.879 --> 00:00:07.080
+In the last video,
+
+00:00:07.080 --> 00:00:10.650
+you saw how Scikit-learn's pipeline utility allows
+
+00:00:10.650 --> 00:00:14.685
+you to chain a sequence of machine learning steps into one estimator.
+
+00:00:14.685 --> 00:00:17.274
+This has massive advantages.
+
+00:00:17.274 --> 00:00:21.964
+First of all, it adds simplicity and convenience to your workflow.
+
+00:00:21.964 --> 00:00:26.464
+Chaining all of your steps into one estimator allows you to fit
+
+00:00:26.464 --> 00:00:31.335
+and predict on all steps of your sequence automatically with one call.
+
+00:00:31.335 --> 00:00:34.560
+Not only does this make your code more concise,
+
+00:00:34.560 --> 00:00:39.125
+it also makes your workflow much easier to understand and modify.
+
+00:00:39.125 --> 00:00:44.719
+Because pipeline automates the intermediate steps required to execute each step,
+
+00:00:44.719 --> 00:00:49.609
+it reduces the mental burden of having to keep track of all your data transformations.
+
+00:00:49.609 --> 00:00:53.179
+Without pipeline, your model can easily turn into
+
+00:00:53.179 --> 00:00:55.878
+messy spaghetti code from all the adjustments
+
+00:00:55.878 --> 00:00:59.294
+and experimentation required to improve your model.
+
+00:00:59.295 --> 00:01:05.275
+Using pipeline may require some extra work at the beginning of your modeling process,
+
+00:01:05.275 --> 00:01:08.234
+but it prevents a lot of headaches later on.
+
+00:01:08.234 --> 00:01:12.215
+It handles those smaller steps for you so you can focus
+
+00:01:12.215 --> 00:01:17.010
+on implementing higher-level changes swiftly and efficiently.
+

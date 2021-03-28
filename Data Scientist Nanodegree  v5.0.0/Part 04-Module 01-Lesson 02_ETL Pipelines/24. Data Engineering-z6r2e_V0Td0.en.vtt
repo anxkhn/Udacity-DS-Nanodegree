@@ -1,0 +1,220 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.509
+Yeah, actually SQL is one of the most important basic skills that one should learn,
+
+00:00:06.509 --> 00:00:08.769
+but it's not a very difficult language to learn.
+
+00:00:08.769 --> 00:00:13.019
+I think many people picked up the skill on the job,
+
+00:00:13.019 --> 00:00:17.884
+but it's definitely one of the most important skills to have.
+
+00:00:17.885 --> 00:00:23.910
+I can't think of a day in the past few years that I have not written a SQL query.
+
+00:00:23.910 --> 00:00:25.449
+How complex are those?
+
+00:00:25.449 --> 00:00:27.769
+Are those are just like select from where so you have
+
+00:00:27.769 --> 00:00:30.329
+giant subqueries that you run on a regular basis?
+
+00:00:30.329 --> 00:00:32.809
+Do you think about efficiency when you write those?
+
+00:00:32.810 --> 00:00:36.350
+Yeah, It depends. I think when you're doing some ad hoc analysis,
+
+00:00:36.350 --> 00:00:38.265
+you don't really care too much.
+
+00:00:38.265 --> 00:00:42.840
+We just write a query that you need to answer your questions,
+
+00:00:42.840 --> 00:00:46.130
+so it's more question-driven.
+
+00:00:46.130 --> 00:00:51.335
+But there are times where you actually have to build out a ETL job,
+
+00:00:51.335 --> 00:00:54.410
+extract, transform, load, it's kind
+
+00:00:54.409 --> 00:00:56.964
+of the jargon that we use for building data pipelines.
+
+00:00:56.965 --> 00:00:58.400
+When you're building out data pipelines,
+
+00:00:58.399 --> 00:01:00.739
+you need to be a little bit more careful and
+
+00:01:00.740 --> 00:01:03.520
+then you need to be a little bit more structured and think about,
+
+00:01:03.520 --> 00:01:06.240
+if you can see like are you doing the right joint,
+
+00:01:06.239 --> 00:01:08.339
+should you put the bigger table on the left,
+
+00:01:08.340 --> 00:01:10.695
+and depending on the language, it's actually different.
+
+00:01:10.694 --> 00:01:15.209
+So, all those things are important,
+
+00:01:15.209 --> 00:01:18.804
+but I wouldn't say that something that I constantly keep in mind.
+
+00:01:18.805 --> 00:01:20.515
+You have a question,
+
+00:01:20.515 --> 00:01:22.405
+you try to get an answer,
+
+00:01:22.405 --> 00:01:27.079
+but it does sound like maybe you are the person often optimizing those things.
+
+00:01:27.079 --> 00:01:29.599
+It's not like some other team member that does that.
+
+00:01:29.599 --> 00:01:32.409
+You have like data engineers who focus on that or
+
+00:01:32.409 --> 00:01:35.564
+are those skills that you use as a data scientist in your regular job?
+
+00:01:35.564 --> 00:01:37.054
+Yeah, that's a good question.
+
+00:01:37.055 --> 00:01:42.085
+Actually, I think all my knowledge are requiring a per need phases,
+
+00:01:42.084 --> 00:01:45.469
+but then because I do a lot of data engineering work.
+
+00:01:45.469 --> 00:01:49.679
+I learned a ton from people who are much better than I am,
+
+00:01:49.680 --> 00:01:52.020
+and so over time I got better at this.
+
+00:01:52.019 --> 00:01:56.390
+So, what do you think falls into like maybe skills that you've
+
+00:01:56.390 --> 00:01:58.409
+picked up from data engineers that you're
+
+00:01:58.409 --> 00:02:00.920
+really glad that you have now in you're day-to-day work?
+
+00:02:00.920 --> 00:02:05.189
+Yeah. That's a great topic and a great question.
+
+00:02:05.189 --> 00:02:08.514
+Because I remember a few years ago,
+
+00:02:08.514 --> 00:02:11.599
+I was asking myself the same question because I wanted to learn more about
+
+00:02:11.599 --> 00:02:15.289
+data engineering and I was like searching online I couldn't find anything useful.
+
+00:02:15.289 --> 00:02:19.969
+After joining Airbnb, I work a lot on their engineering project
+
+00:02:19.969 --> 00:02:25.060
+with their engineers and there are a few things that I think are quite important.
+
+00:02:25.060 --> 00:02:33.348
+So, the first thing would be to have a basic understanding of data modeling,
+
+00:02:33.348 --> 00:02:38.905
+and so there are concepts such as how do you design a data warehouse,
+
+00:02:38.905 --> 00:02:40.925
+data tables using star schema.
+
+00:02:40.925 --> 00:02:47.120
+So, the notion of a fact table or dimension table and how wide
+
+00:02:47.120 --> 00:02:50.300
+these two things are generally different behind how they can
+
+00:02:50.300 --> 00:02:53.765
+be combined into building your data warehouse.
+
+00:02:53.764 --> 00:02:58.919
+Another concept is this notion of data backfilling.
+
+00:02:58.919 --> 00:03:02.159
+So, when you're building out a ETL pipeline,
+
+00:03:02.159 --> 00:03:05.254
+most likely it's going to be automated job that will
+
+00:03:05.254 --> 00:03:08.525
+compute your metrics forward in time.
+
+00:03:08.525 --> 00:03:14.460
+But then sometimes you want to be able to analyze historical data, historical trends.
+
+00:03:14.460 --> 00:03:17.030
+For those use cases there,
+
+00:03:17.030 --> 00:03:22.849
+you actually have to retroactively recompute metrics or history.
+
+00:03:22.849 --> 00:03:27.000
+So, the concept of data backfilling is also very,
+
+00:03:27.000 --> 00:03:29.080
+very important, it's also very time-consuming.
+
+00:03:29.080 --> 00:03:32.660
+So, knowing how to do proper backfilling and then monitor
+
+00:03:32.659 --> 00:03:36.829
+the progress of your backfill jobs is something that I think very common,
+
+00:03:36.830 --> 00:03:40.280
+very important but rarely taught in school.
+
+00:03:40.800 --> 00:03:49.130
+The last thing I think is just working knowledge of building out ETL pipelines.
+
+00:03:49.500 --> 00:03:52.520
+For that, it really depends.
+
+00:03:52.520 --> 00:03:57.935
+At Airbnb, we use airflow which is an open source project that is very useful.
+
+00:03:57.935 --> 00:04:03.485
+Just knowing how to not just write a ad hoc script but how do you
+
+00:04:03.485 --> 00:04:09.685
+incorporate your queries into an ETL job that will be executed every day,
+
+00:04:09.685 --> 00:04:13.715
+I think that's a very valuable skill especially for data scientists.
+
+00:04:13.715 --> 00:04:18.875
+It will help and unblock your work because you
+
+00:04:18.875 --> 00:04:21.079
+don't have to wait for data engineers to write
+
+00:04:21.079 --> 00:04:24.099
+the ETL for you so they can consume the data, you can just do everything.
+
+00:04:24.100 --> 00:04:25.080
+For sure.
+

@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.790 --> 00:00:10.969
+Great work. You've successfully extracted data from a variety of sources,
+
+00:00:10.970 --> 00:00:13.640
+that's the first part of an ETL pipeline.
+
+00:00:13.640 --> 00:00:16.865
+Now, you'll practice transforming data.
+
+00:00:16.864 --> 00:00:19.469
+What does transform really mean?
+
+00:00:19.469 --> 00:00:21.364
+In the context of data science,
+
+00:00:21.364 --> 00:00:26.479
+transformation usually involves getting data ready for a machine learning algorithm.
+
+00:00:26.480 --> 00:00:31.789
+For instance, you'll often work with data coming from more than one source.
+
+00:00:31.789 --> 00:00:34.979
+You might need to pull some data from a CSV file,
+
+00:00:34.979 --> 00:00:36.945
+other data from a SQL database,
+
+00:00:36.945 --> 00:00:39.905
+and then combine those two datasets together,
+
+00:00:39.905 --> 00:00:42.844
+or perhaps you want to clean the data,
+
+00:00:42.844 --> 00:00:44.795
+or engineer new features.
+
+00:00:44.795 --> 00:00:50.005
+Hence, you're transforming the original datasets to create a new dataset.
+
+00:00:50.005 --> 00:00:51.755
+In this part of the lesson,
+
+00:00:51.755 --> 00:00:54.770
+you'll practice many data transformation techniques
+
+00:00:54.770 --> 00:00:57.315
+such as combining data from different sources,
+
+00:00:57.314 --> 00:01:01.114
+cleaning data, and working with different data encodings.
+
+00:01:01.115 --> 00:01:05.469
+You'll also see how to search for and remove duplicate data rows,
+
+00:01:05.469 --> 00:01:08.424
+create dummy variables, remove outliers,
+
+00:01:08.424 --> 00:01:12.420
+normalize data, and engineer new features.
+
+00:01:12.420 --> 00:01:17.870
+You might be thinking that there are a lot of topics to cover and you're right.
+
+00:01:17.870 --> 00:01:20.515
+A survey by one of our industry partners,
+
+00:01:20.515 --> 00:01:23.739
+Figure Eight found that data scientists spend
+
+00:01:23.739 --> 00:01:28.530
+80 percent of their time gathering and transforming data.
+
+00:01:28.530 --> 00:01:30.474
+We have a lot to get through,
+
+00:01:30.474 --> 00:01:32.439
+so let's get right to it.
+

@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.198 --> 00:00:03.570
+Nesta aula, vamos aprender
+a automatizar fluxos de trabalho
+
+00:00:03.603 --> 00:00:06.139
+de aprendizado de máquina
+com pipelines,
+
+00:00:06.172 --> 00:00:09.075
+usando este conjunto de dados
+de mensagens corporativas
+
+00:00:09.109 --> 00:00:10.443
+como um estudo de caso.
+
+00:00:10.477 --> 00:00:13.313
+Este é um dos conjuntos
+de dados gratuitos fornecidos
+
+00:00:13.346 --> 00:00:14.948
+na plataforma do Figure-Eight.
+
+00:00:14.981 --> 00:00:19.085
+Cada fileira contém informações
+de uma postagem nas mídias sociais
+
+00:00:19.119 --> 00:00:20.920
+de diferentes empresas
+
+00:00:20.954 --> 00:00:24.758
+e contém uma coluna
+para a categoria da postagem.
+
+00:00:24.791 --> 00:00:28.695
+Se olharmos as contagens de valor
+para esta coluna de categoria,
+
+00:00:28.728 --> 00:00:32.298
+podemos ver que cada postagem
+é classificada como "Informação",
+
+00:00:32.332 --> 00:00:35.402
+"Ação", "Diálogo"
+ou "Excluir".
+
+00:00:35.435 --> 00:00:37.737
+Se olharmos o site
+do Figure-Eight,
+
+00:00:37.771 --> 00:00:40.640
+podemos achar uma descrição
+de cada categoria.
+
+00:00:40.674 --> 00:00:42.942
+"Informação: frases objetivas
+
+00:00:42.976 --> 00:00:44.911
+sobre uma companhia
+e suas atividades."
+
+00:00:44.944 --> 00:00:47.781
+"Diálogo: respostas
+para usuários."
+
+00:00:47.814 --> 00:00:51.718
+"Ação: mensagens
+que pedem por votos
+
+00:00:51.751 --> 00:00:53.887
+ou pedem que usuários
+cliquem em links."
+
+00:00:53.920 --> 00:00:57.524
+"Informação" parece ser de longe
+a categoria mais comum,
+
+00:00:57.557 --> 00:01:00.560
+seguida por "Ação"
+e "Diálogo".
+
+00:01:00.593 --> 00:01:03.897
+"Excluir" parece ser
+uma coluna miscelânea.
+
+00:01:03.930 --> 00:01:07.634
+Veja que temos uma coluna
+"confiança" na categoria.
+
+00:01:07.667 --> 00:01:10.804
+Como só estamos interessados
+em linhas classificadas
+
+00:01:10.837 --> 00:01:13.473
+numa destas três
+principais categorias,
+
+00:01:13.506 --> 00:01:15.075
+com confiança total,
+
+00:01:15.108 --> 00:01:19.179
+vamos nos limitar a linhas
+com confiança 1
+
+00:01:19.212 --> 00:01:22.716
+e categoria que não seja
+"Excluir".
+
+00:01:22.749 --> 00:01:25.218
+Ótimo. É isto que sobrou.
+
+00:01:25.251 --> 00:01:27.620
+Agora vamos isolar as colunas
+
+00:01:27.654 --> 00:01:31.124
+para serem usadas como recursos
+e rótulos no classificador.
+
+00:01:31.157 --> 00:01:33.226
+E convertê-las
+em arrays NumPy.
+
+00:01:33.259 --> 00:01:35.929
+Aqui, estas seriam
+a coluna de texto
+
+00:01:35.962 --> 00:01:37.430
+e a coluna de categoria.
+
+00:01:37.464 --> 00:01:39.933
+Aqui está a primeira linha
+de dados de texto
+
+00:01:39.966 --> 00:01:41.935
+e a categoria
+para a primeira linha.
+
+00:01:41.968 --> 00:01:45.438
+Para repetir as transformações
+feitas neste conjunto de dados,
+
+00:01:45.472 --> 00:01:48.608
+aqui estão as etapas
+numa função load_data
+
+00:01:48.641 --> 00:01:51.111
+que usaremos
+pelo resto da aula.
+
+00:01:51.144 --> 00:01:52.479
+Vamos tentar.
+
+00:01:52.512 --> 00:01:56.282
+Agora o conjunto de dados tem 2.403
+linhas de dados
+
+00:01:56.316 --> 00:01:58.184
+de mensagens corporativas.
+

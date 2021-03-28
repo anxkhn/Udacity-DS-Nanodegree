@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.759 --> 00:00:04.691
+VARIÁVEIS DUMMY
+
+00:00:05.239 --> 00:00:07.845
+Se você planeja usar
+variáveis categóricas
+
+00:00:07.878 --> 00:00:09.533
+com regressão linear,
+
+00:00:09.566 --> 00:00:12.160
+é bem comum que você precise
+converter essas variáveis
+
+00:00:12.193 --> 00:00:15.212
+em um conjunto de números
+chamado "variáveis dummy".
+
+00:00:15.835 --> 00:00:17.147
+Por exemplo,
+
+00:00:17.180 --> 00:00:20.759
+os dados do World Bank Project
+contêm o valor total de dinheiro
+
+00:00:20.792 --> 00:00:23.747
+associado a cada projeto.
+
+00:00:23.780 --> 00:00:26.346
+Você deve usar um modelo
+de regressão linear
+
+00:00:26.379 --> 00:00:27.908
+para predizer quanto dinheiro
+
+00:00:27.941 --> 00:00:30.715
+uma nova proposta de projeto
+vai receber.
+
+00:00:30.748 --> 00:00:35.063
+Você poderia usar o tema do projeto
+como um dos recursos do seu modelo.
+
+00:00:35.096 --> 00:00:37.449
+Digamos que haja
+apenas cinco temas:
+
+00:00:37.482 --> 00:00:43.187
+agricultura, estradas, bancos,
+comércio e governo,
+
+00:00:43.220 --> 00:00:48.102
+e cada projeto esteja associado
+a apenas um tema.
+
+00:00:48.135 --> 00:00:52.155
+Você terá que converter
+as categorias de tema em números.
+
+00:00:52.188 --> 00:00:55.197
+Para cada categoria,
+você criará um novo recurso,
+
+00:00:55.230 --> 00:00:58.229
+preenchendo com 1,
+caso a linha contenha esse valor,
+
+00:00:58.262 --> 00:01:02.218
+ou 0, caso não contenha
+esse valor.
+
+00:01:02.251 --> 00:01:05.207
+Agricultura se tornará
+um recurso,
+
+00:01:05.240 --> 00:01:09.106
+estradas, outro recurso,
+bancos, outro,
+
+00:01:09.139 --> 00:01:11.765
+e, por fim, comércio.
+
+00:01:11.798 --> 00:01:15.165
+Você só precisa
+de quatro recursos, não de cinco.
+
+00:01:15.198 --> 00:01:20.945
+Se agricultura, estradas,
+bancos e comércio são todos 0,
+
+00:01:20.978 --> 00:01:26.118
+você tem informação suficiente
+para saber que governo é igual a 1.
+
+00:01:26.151 --> 00:01:33.014
+Neste exemplo,
+a primeira linha seria 1, 0, 0, 0
+
+00:01:33.047 --> 00:01:37.157
+para indicar que a linha 1
+tem um valor de agricultura.
+
+00:01:37.190 --> 00:01:40.663
+A linha 2 seria 0, 0, 1, 0
+
+00:01:40.696 --> 00:01:44.136
+para indicar que o projeto
+cobre o comércio.
+
+00:01:44.169 --> 00:01:49.699
+A terceira linha seria 0, 0, 0, 0
+para representar o governo.
+
+00:01:49.732 --> 00:01:52.312
+A seguir, você vai praticar
+a criação de variáveis dummy.
+

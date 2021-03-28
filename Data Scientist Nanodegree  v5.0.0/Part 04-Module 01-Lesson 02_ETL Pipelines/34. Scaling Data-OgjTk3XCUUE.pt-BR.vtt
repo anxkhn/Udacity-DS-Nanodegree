@@ -1,0 +1,99 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.898 --> 00:00:04.613
+NORMALIZAÇÃO DE DADOS
+
+00:00:05.348 --> 00:00:07.624
+Dados numéricos aparecem
+
+00:00:07.657 --> 00:00:10.168
+com diferentes padrões
+de distribuição e intervalos.
+
+00:00:10.201 --> 00:00:12.770
+No entanto, alguns algoritmos
+de aprendizado de máquina
+
+00:00:12.803 --> 00:00:14.795
+funcionam melhor
+quando todos os recursos
+
+00:00:14.828 --> 00:00:17.985
+estão dentro de um intervalo
+numérico similar.
+
+00:00:18.018 --> 00:00:21.163
+Alguns exemplos desses algoritmos
+de aprendizado de máquina seriam
+
+00:00:21.196 --> 00:00:24.530
+PCA, regressão linear
+com gradiente descendente
+
+00:00:24.563 --> 00:00:29.563
+ou qualquer algoritmo que calcule
+a distância euclidiana entre pontos.
+
+00:00:30.054 --> 00:00:32.904
+Mudar o intervalo numérico
+de dados é chamado
+
+00:00:32.937 --> 00:00:36.356
+de "normalização"
+ou "transformação de recursos".
+
+00:00:36.623 --> 00:00:38.935
+Duas maneiras comuns
+de se transformar recursos
+
+00:00:38.968 --> 00:00:42.560
+são chamadas de "redimensionamento"
+e "padronização".
+
+00:00:43.270 --> 00:00:44.709
+Com o redimensionamento,
+
+00:00:44.742 --> 00:00:47.560
+você pega seus dados
+e reduz o intervalo
+
+00:00:47.593 --> 00:00:52.297
+para que o valor mínimo seja 0
+e o valor máximo seja 1.
+
+00:00:52.716 --> 00:00:55.236
+A distribuição de dados
+continua a mesma,
+
+00:00:55.269 --> 00:00:57.170
+mas o intervalo muda.
+
+00:00:58.077 --> 00:01:00.870
+Com a padronização,
+você transforma seus dados
+
+00:01:00.903 --> 00:01:05.276
+para que a média seja 0
+e o desvio padrão seja 1.
+
+00:01:05.309 --> 00:01:08.723
+Novamente, a forma geral
+da distribuição continua a mesma,
+
+00:01:08.756 --> 00:01:12.935
+ou seja, a informação
+contida nos dados não muda.
+
+00:01:12.968 --> 00:01:18.421
+No entanto, a média
+e o desvio padrão são padronizados.
+
+00:01:18.795 --> 00:01:20.045
+Na próxima parte,
+
+00:01:20.078 --> 00:01:23.092
+você verá como aumentar recursos
+escrevendo código.
+

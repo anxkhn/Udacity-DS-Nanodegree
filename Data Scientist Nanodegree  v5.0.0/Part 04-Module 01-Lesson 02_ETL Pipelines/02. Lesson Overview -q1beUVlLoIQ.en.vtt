@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.309 --> 00:00:08.339
+Here's what you're going to work on in this lesson.
+
+00:00:08.339 --> 00:00:12.240
+First, you'll practice extracting data from various sources
+
+00:00:12.240 --> 00:00:16.585
+such as CSV files, databases, and APIs.
+
+00:00:16.585 --> 00:00:19.980
+Then, you'll transform data using different techniques
+
+00:00:19.980 --> 00:00:23.385
+like data cleaning and removing outliers.
+
+00:00:23.385 --> 00:00:27.234
+Next, you'll write code to load data into a database.
+
+00:00:27.234 --> 00:00:30.270
+Finally, you'll put all of this together into
+
+00:00:30.269 --> 00:00:35.325
+a single ETL pipeline that gets the data ready for further analysis.
+
+00:00:35.325 --> 00:00:40.990
+This lesson is built around small data sets that can fit on your local computer.
+
+00:00:40.990 --> 00:00:45.195
+I'm providing data from the World Bank that you can practice with.
+
+00:00:45.195 --> 00:00:49.219
+However, these days, data engineers work with
+
+00:00:49.219 --> 00:00:53.725
+massive distributed data sets that won't fit on a single machine.
+
+00:00:53.725 --> 00:00:57.155
+This is often referred to as big data.
+
+00:00:57.155 --> 00:01:00.170
+Udacity has other courses about how to deal with
+
+00:01:00.170 --> 00:01:03.950
+data sets that are too big for your personal computer to handle.
+
+00:01:03.950 --> 00:01:08.650
+Continue on to get started with ETL pipelines.
+

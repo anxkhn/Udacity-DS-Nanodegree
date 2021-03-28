@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.923
+Robert, você pode falar
+um pouco sobre...
+
+00:00:02.956 --> 00:00:05.567
+Um conselho
+que você daria para si mesmo
+
+00:00:05.600 --> 00:00:08.528
+e o que motiva você
+no mundo da Ciência de Dados.
+
+00:00:08.561 --> 00:00:09.715
+Com certeza.
+
+00:00:09.748 --> 00:00:12.600
+A primeira coisa que recomendo é
+se concentrar no que é fundamental,
+
+00:00:12.633 --> 00:00:15.587
+como habilidades básicas
+de computação,
+
+00:00:15.620 --> 00:00:17.655
+conhecimentos básicos
+de estatística,
+
+00:00:17.688 --> 00:00:19.221
+um bom pensamento analítico,
+
+00:00:19.254 --> 00:00:21.620
+SQL, e assim por diante.
+
+00:00:21.653 --> 00:00:25.233
+A segunda coisa
+que acho muito importante
+
+00:00:25.266 --> 00:00:27.140
+é procurar uma empresa
+
+00:00:27.173 --> 00:00:32.468
+que esteja investindo
+em engenharia de dados.
+
+00:00:32.501 --> 00:00:34.938
+Com uma equipe sólida
+com infraestrutura de dados,
+
+00:00:34.971 --> 00:00:36.885
+uma equipe sólida
+de engenharia
+
+00:00:36.918 --> 00:00:39.159
+e um armazém de dados
+razoável,
+
+00:00:39.192 --> 00:00:42.643
+de onde você pode extrair dados
+e brincar com eles.
+
+00:00:42.676 --> 00:00:44.843
+Meu primeiro trabalho
+foi literalmente
+
+00:00:44.876 --> 00:00:49.066
+executar um script SQL à mão,
+
+00:00:49.099 --> 00:00:50.774
+enquanto agora
+usamos o Airflow
+
+00:00:50.807 --> 00:00:52.604
+e podemos fazer coisas
+bem sofisticadas
+
+00:00:52.637 --> 00:00:55.111
+com tudo automatizado.
+
+00:00:55.144 --> 00:00:58.246
+Definitivamente, há práticas
+melhores para se aprender.
+
+00:00:58.279 --> 00:01:01.757
+Parece que você está dizendo
+que ter engenheiros de dados...
+
+00:01:01.790 --> 00:01:03.200
+Digo, para empresas.
+
+00:01:03.233 --> 00:01:04.975
+Ter engenheiros de dados,
+
+00:01:05.008 --> 00:01:07.606
+entender o que você quer
+armazenar
+
+00:01:07.639 --> 00:01:10.800
+e como isso será armazenado
+é quase mais importante
+
+00:01:10.833 --> 00:01:13.986
+que trazer cientistas de dados
+
+00:01:14.019 --> 00:01:16.343
+para dizer o que fazer
+com os dados
+
+00:01:16.376 --> 00:01:20.332
+até você ter um plano
+e armazenar as coisas certas.
+
+00:01:20.365 --> 00:01:26.343
+Acho que a pessoa
+que melhor articulou isso
+
+00:01:26.376 --> 00:01:29.937
+foi a Monica Rogati.
+Ela escreveu uma postagem
+
+00:01:29.970 --> 00:01:32.058
+chamada "A Hierarquia
+de Necessidades da IA".
+
+00:01:32.091 --> 00:01:35.978
+Ela descreve como as análises
+são construídas em camadas
+
+00:01:36.011 --> 00:01:38.320
+e que você tem que começar
+pela fundação.
+
+00:01:38.353 --> 00:01:41.120
+E a fundação é ter toda
+a infraestrutura de dados no lugar,
+
+00:01:41.153 --> 00:01:43.598
+o ETL no lugar,
+o armazém de dados.
+
+00:01:43.631 --> 00:01:45.717
+E só depois disso
+você pode fazer análises,
+
+00:01:45.750 --> 00:01:47.734
+experimentações
+e aprendizado de máquina.
+
+00:01:47.767 --> 00:01:49.807
+Acho que isso é bem verdade.
+
+00:01:49.840 --> 00:01:53.163
+Sempre se fala do quanto,
+depois de anos de trabalho,
+
+00:01:53.196 --> 00:01:55.118
+finalmente
+é possível conquistar isso,
+
+00:01:55.151 --> 00:01:59.494
+mas não se fala das coisas
+que acontecem antes disso.
+
+00:01:59.527 --> 00:02:02.992
+Mas é assim que qualquer...
+
+00:02:04.196 --> 00:02:07.491
+projeto de dados importante
+é construído,
+
+00:02:07.524 --> 00:02:08.896
+camadas em cima de camadas.
+

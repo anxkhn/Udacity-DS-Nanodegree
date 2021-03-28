@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.750
+Now that you've cleaned and tokenized the text data,
+
+00:00:03.750 --> 00:00:07.224
+it's time to complete the rest of your Machine Learning workflow.
+
+00:00:07.224 --> 00:00:11.669
+In the next page, you'll find a workspace containing this notebook.
+
+00:00:11.669 --> 00:00:15.535
+The first three cells contain work from the previous section,
+
+00:00:15.535 --> 00:00:19.519
+and here is where you'll complete your Machine Learning workflow.
+
+00:00:19.519 --> 00:00:24.519
+This lesson will teach you how to do this more effectively using pipelines.
+
+00:00:24.519 --> 00:00:30.414
+However, it's important that you first build this out the normal way, without pipelines.
+
+00:00:30.414 --> 00:00:34.765
+Follow the steps here to build and test your classifier.
+
+00:00:34.765 --> 00:00:39.329
+Once you're finished, refactor these steps into these two functions.
+

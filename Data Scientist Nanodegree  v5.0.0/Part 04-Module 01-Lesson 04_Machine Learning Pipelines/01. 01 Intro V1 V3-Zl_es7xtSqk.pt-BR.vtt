@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.676 --> 00:00:05.138
+INTRODUÇÃO A PIPELINES
+DE APRENDIZADO DE MÁQUINA
+
+00:00:05.171 --> 00:00:09.309
+Bem-vindo à aula sobre pipelines
+de aprendizado de máquina.
+
+00:00:09.342 --> 00:00:11.978
+Anteriormente, você construiu
+pipelines ETL
+
+00:00:12.012 --> 00:00:13.780
+para deixar
+seus dados prontos.
+
+00:00:13.813 --> 00:00:17.050
+Agora você construirá pipelines
+para automatizar fluxos
+
+00:00:17.083 --> 00:00:20.653
+de aprendizado de máquina
+que treinam nestes dados.
+
+00:00:20.687 --> 00:00:23.023
+Você vai aprender as vantagens
+
+00:00:23.056 --> 00:00:25.225
+de usar pipelines
+de aprendizado de máquina,
+
+00:00:25.258 --> 00:00:27.694
+vai praticar usar o pipeline
+do scikit-learn
+
+00:00:27.727 --> 00:00:29.596
+e classes Feature Union,
+
+00:00:29.629 --> 00:00:32.632
+fará uma pesquisa de grade
+sobre seu fluxo de trabalho
+
+00:00:32.665 --> 00:00:34.601
+e vai passar
+por um estudo de caso,
+
+00:00:34.634 --> 00:00:37.570
+construindo um pipeline completo
+para um conjunto de dados.
+
+00:00:37.604 --> 00:00:39.706
+Vamos começar.
+

@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.240 --> 00:00:08.205
+As mentioned earlier in the lesson,
+
+00:00:08.205 --> 00:00:10.919
+a powerful benefit to using pipeline is
+
+00:00:10.919 --> 00:00:14.714
+the ability to perform a grid search on your entire workflow.
+
+00:00:14.714 --> 00:00:19.699
+Most machine learning algorithms have a set of parameters that need tuning.
+
+00:00:19.699 --> 00:00:22.619
+Grid search is a tool that allows you to define
+
+00:00:22.620 --> 00:00:26.339
+a grid of parameters or a set of values to check.
+
+00:00:26.339 --> 00:00:32.465
+Your computer automates the process of trying out all possible combination of values.
+
+00:00:32.465 --> 00:00:36.645
+Grid search scores each combination with cross-validation,
+
+00:00:36.645 --> 00:00:39.740
+and uses the cross-validation score to
+
+00:00:39.740 --> 00:00:43.960
+determine the parameters that produce the most optimal model.
+
+00:00:43.960 --> 00:00:49.625
+Running grid search on your pipeline allows you to try many parameter values
+
+00:00:49.625 --> 00:00:55.744
+thoroughly and conveniently for both your data transformations and estimators.
+
+00:00:55.744 --> 00:01:00.834
+Again, although you can run grid search on just a single classifier,
+
+00:01:00.835 --> 00:01:03.935
+running it on your whole pipeline helps you test
+
+00:01:03.935 --> 00:01:08.325
+multiple parameter combinations across your entire workflow.
+
+00:01:08.325 --> 00:01:13.609
+This accounts for interactions among parameters not just in your model,
+
+00:01:13.609 --> 00:01:16.174
+but data preparation steps as well.
+
+00:01:16.174 --> 00:01:18.799
+Let's see how this works.
+

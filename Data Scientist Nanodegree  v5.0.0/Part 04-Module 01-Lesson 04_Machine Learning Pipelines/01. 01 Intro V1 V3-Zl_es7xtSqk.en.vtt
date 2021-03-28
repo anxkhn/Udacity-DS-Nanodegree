@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.759 --> 00:00:09.195
+Welcome to this lesson on machine learning pipelines.
+
+00:00:09.195 --> 00:00:13.660
+Previously, you built ETL pipelines to get your data ready.
+
+00:00:13.660 --> 00:00:17.070
+In this lesson, you will build pipelines to automate
+
+00:00:17.070 --> 00:00:20.679
+your machine learning workflows that train on this data.
+
+00:00:20.679 --> 00:00:25.074
+You will learn about the advantages of using machine learning pipelines,
+
+00:00:25.074 --> 00:00:29.614
+practice using Scikit-learn's Pipeline and Feature Union classes,
+
+00:00:29.614 --> 00:00:32.649
+grid search over your entire workflow,
+
+00:00:32.649 --> 00:00:34.629
+and walk through a case study,
+
+00:00:34.630 --> 00:00:39.670
+building a full pipeline for data set. Let's get started.
+

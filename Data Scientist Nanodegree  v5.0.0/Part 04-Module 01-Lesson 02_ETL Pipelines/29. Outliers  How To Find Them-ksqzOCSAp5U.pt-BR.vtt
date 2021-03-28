@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.879 --> 00:00:04.586
+VALORES ATÍPICOS
+COMO ENCONTRÁ-LOS
+
+00:00:05.582 --> 00:00:07.702
+Um valor atípico é
+um ponto de dado
+
+00:00:07.735 --> 00:00:10.533
+que está bem distante
+do resto dos dados.
+
+00:00:10.566 --> 00:00:12.325
+Valores atípicos
+podem aparecer
+
+00:00:12.358 --> 00:00:14.909
+por razões semelhantes
+aos dos dados ausentes.
+
+00:00:14.942 --> 00:00:16.644
+Um valor atípico pode aparecer
+
+00:00:16.677 --> 00:00:18.607
+por conta de um erro
+de entrada de dados
+
+00:00:18.640 --> 00:00:20.268
+ou um erro de processamento.
+
+00:00:20.301 --> 00:00:22.809
+Um valor atípico
+pode ser um dado legítimo
+
+00:00:22.842 --> 00:00:24.334
+porque, em qualquer situação,
+
+00:00:24.367 --> 00:00:28.734
+há sempre alguma probabilidade
+de se obter um valor extremo.
+
+00:00:28.767 --> 00:00:31.019
+As perguntas
+que você deve se fazer são:
+
+00:00:31.052 --> 00:00:32.686
+como encontrar
+valores atípicos
+
+00:00:32.719 --> 00:00:36.398
+e, ao encontrá-los,
+o que fazer com eles?
+
+00:00:36.431 --> 00:00:38.625
+Primeiro, vou introduzir
+algumas maneiras
+
+00:00:38.658 --> 00:00:40.325
+de detectar valores atípicos
+
+00:00:40.358 --> 00:00:42.680
+e depois falar
+sobre o que fazer com eles.
+
+00:00:43.655 --> 00:00:46.185
+Ao trabalhar
+em uma ou duas dimensões,
+
+00:00:46.218 --> 00:00:50.041
+você pode usar visualização de dados
+para encontrar valores atípicos.
+
+00:00:50.074 --> 00:00:52.043
+No caso de dados
+de uma dimensão,
+
+00:00:52.076 --> 00:00:54.889
+você pode diagramar os dados
+ao longo de uma linha de números.
+
+00:00:54.922 --> 00:00:59.818
+Um ponto de dado de que cai
+muito à esquerda ou muito à direita
+
+00:00:59.851 --> 00:01:02.480
+pode ser considerado
+um valor atípico.
+
+00:01:02.513 --> 00:01:04.575
+Você também pode encontrar
+valores atípicos
+
+00:01:04.608 --> 00:01:06.717
+usando diagramas
+bidimensionais.
+
+00:01:06.750 --> 00:01:08.651
+Neste diagrama,
+está claro que um ponto
+
+00:01:08.684 --> 00:01:11.870
+está muito distante
+dos outros pontos de dado.
+
+00:01:11.903 --> 00:01:14.782
+Há também métodos estatísticos
+para encontrar valores atípicos,
+
+00:01:14.815 --> 00:01:17.924
+e você poderá praticar
+nos exercícios de código.
+
+00:01:17.957 --> 00:01:21.202
+Incluindo o uso de z-scores
+a partir de uma distribuição normal
+
+00:01:21.235 --> 00:01:23.223
+ou o método Tukey.
+
+00:01:23.256 --> 00:01:26.317
+Ambos os métodos se utilizam
+de estatística básica,
+
+00:01:26.350 --> 00:01:30.115
+como médias,
+desvios padrão ou quantis
+
+00:01:30.148 --> 00:01:31.799
+para identificar
+valores atípicos
+
+00:01:31.832 --> 00:01:34.803
+que estejam muito distantes
+da maior parte dos dados.
+
+00:01:35.106 --> 00:01:37.622
+Até agora, falamos sobre encontrar
+valores atípicos
+
+00:01:37.655 --> 00:01:39.571
+em uma ou duas dimensões.
+
+00:01:39.604 --> 00:01:42.956
+Como encontrá-los
+em três ou mais dimensões?
+
+00:01:42.989 --> 00:01:44.586
+Você pode, por exemplo,
+
+00:01:44.619 --> 00:01:47.124
+usar técnicas de aprendizado
+de máquina, como PCA,
+
+00:01:47.157 --> 00:01:50.182
+para reduzir os dados
+a uma ou duas dimensões.
+
+00:01:50.215 --> 00:01:52.878
+E você pode usar
+os métodos gráficos ou estatísticos
+
+00:01:52.911 --> 00:01:55.168
+que já discutimos.
+
+00:01:55.201 --> 00:01:58.739
+Outro exemplo seria usar
+um método de agrupamento.
+
+00:01:58.772 --> 00:02:02.460
+Neste caso, você calcularia primeiro
+os centroides do cluster
+
+00:02:02.493 --> 00:02:06.951
+e depois mediria a distância
+entre cada centroide e cada ponto.
+
+00:02:06.984 --> 00:02:10.572
+Uma distância grande
+indicaria um valor atípico.
+
+00:02:11.404 --> 00:02:13.220
+Scikit-learn também inclui
+
+00:02:13.253 --> 00:02:15.632
+vários algoritmos detectores
+de valores atípicos,
+
+00:02:15.665 --> 00:02:17.656
+e vou deixar um link abaixo.
+
+00:02:17.689 --> 00:02:21.074
+A seguir, você vai praticar
+identificar valores atípicos.
+

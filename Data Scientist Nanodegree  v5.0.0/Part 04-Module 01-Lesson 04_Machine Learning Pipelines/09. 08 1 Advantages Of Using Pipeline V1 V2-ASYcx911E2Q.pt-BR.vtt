@@ -1,0 +1,102 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.767 --> 00:00:05.038
+VANTAGENS DO PIPELINE -
+PARTE 1
+
+00:00:05.739 --> 00:00:07.040
+No último vídeo,
+
+00:00:07.073 --> 00:00:10.010
+você viu como o utilitário
+pipeline do scikit-learn
+
+00:00:10.043 --> 00:00:11.845
+permite encadear uma sequência
+
+00:00:11.878 --> 00:00:14.647
+de passos de aprendizado de máquina
+em um estimador.
+
+00:00:14.681 --> 00:00:17.250
+Isto tem muitas vantagens.
+
+00:00:17.283 --> 00:00:21.921
+Primeiro, adiciona simplicidade
+e conveniência ao fluxo de trabalho.
+
+00:00:21.955 --> 00:00:25.425
+Encadear todos os passos
+em um estimador
+
+00:00:25.458 --> 00:00:28.161
+permite ajustar e prever
+todos os passos
+
+00:00:28.194 --> 00:00:31.331
+de sua sequência automaticamente
+com uma chamada.
+
+00:00:31.364 --> 00:00:34.534
+Não apenas deixa seu código
+mais conciso,
+
+00:00:34.567 --> 00:00:38.905
+como também deixa seu fluxo
+mais fácil de entender e modificar.
+
+00:00:39.572 --> 00:00:42.909
+Como o pipeline automatiza
+os passos intermediários necessários
+
+00:00:42.942 --> 00:00:44.711
+para executar cada passo,
+
+00:00:44.744 --> 00:00:47.414
+ele reduz o estresse
+de ter que rastrear
+
+00:00:47.447 --> 00:00:49.616
+todas as suas transformações
+de dados.
+
+00:00:49.649 --> 00:00:51.151
+Sem o pipeline,
+
+00:00:51.184 --> 00:00:54.754
+seu modelo pode se transformar
+num código todo bagunçado,
+
+00:00:54.788 --> 00:00:57.724
+por causa de todos os ajustes
+e experimentações necessárias
+
+00:00:57.757 --> 00:00:59.292
+para melhorar o modelo.
+
+00:00:59.325 --> 00:01:02.796
+Usar o pipeline
+talvez exija trabalho extra
+
+00:01:02.829 --> 00:01:05.298
+no começo do processo
+de modelagem,
+
+00:01:05.331 --> 00:01:08.268
+mas previne muitas dores de cabeça
+mais tarde.
+
+00:01:08.301 --> 00:01:11.004
+Ele lida com as etapas menores
+para você,
+
+00:01:11.037 --> 00:01:13.006
+para você se concentrar
+em implementar
+
+00:01:13.039 --> 00:01:17.077
+mudanças de alto nível
+rapidamente e eficientemente.
+

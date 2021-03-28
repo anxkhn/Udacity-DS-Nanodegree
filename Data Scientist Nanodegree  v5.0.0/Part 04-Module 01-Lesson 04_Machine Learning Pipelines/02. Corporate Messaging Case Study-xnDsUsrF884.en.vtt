@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.250
+In this lesson, we'll learn about automating our machine-learning workflows with
+
+00:00:05.250 --> 00:00:10.474
+pipelines using this dataset on corporate messaging as a case study.
+
+00:00:10.474 --> 00:00:14.994
+This is one of the free datasets provided on the figure-eight platform.
+
+00:00:14.994 --> 00:00:19.469
+Each row contains information about a social media post from
+
+00:00:19.469 --> 00:00:24.794
+different corporations and contains a column for the category of the post.
+
+00:00:24.795 --> 00:00:28.710
+If we look at the value counts for this category column,
+
+00:00:28.710 --> 00:00:32.329
+we can see that each post is classified as information,
+
+00:00:32.329 --> 00:00:35.429
+action, dialogue or exclude.
+
+00:00:35.429 --> 00:00:37.740
+If we look back on the figure-eight site,
+
+00:00:37.740 --> 00:00:40.635
+we can find a description of each category.
+
+00:00:40.634 --> 00:00:44.929
+Information, objective statements about the company or its activities,
+
+00:00:44.929 --> 00:00:48.530
+dialogue like replies to users or
+
+00:00:48.530 --> 00:00:53.899
+action such as messages that ask for votes or ask users to click on links.
+
+00:00:53.899 --> 00:00:58.670
+Information seems to be the most common category by far followed by
+
+00:00:58.670 --> 00:01:03.875
+action and then dialogue and exclude seems to be a miscellaneous column.
+
+00:01:03.875 --> 00:01:07.625
+Also notice that we have a category confidence column.
+
+00:01:07.625 --> 00:01:11.269
+Since we're only interested in rows classified into one
+
+00:01:11.269 --> 00:01:15.058
+of these top three categories with full confidence,
+
+00:01:15.058 --> 00:01:18.500
+we're going to narrow down to rows with a confidence of
+
+00:01:18.500 --> 00:01:22.668
+one and category that is not exclude.
+
+00:01:22.668 --> 00:01:25.170
+Awesome. This is what we have left.
+
+00:01:25.170 --> 00:01:28.460
+Now, let's isolate the columns to be used as
+
+00:01:28.459 --> 00:01:33.189
+features and labels in this classifier and convert them to NumPy arrays.
+
+00:01:33.189 --> 00:01:37.384
+Here, those would be the text column and the category column.
+
+00:01:37.385 --> 00:01:41.885
+Here's the first row of text data and the category for that first row.
+
+00:01:41.885 --> 00:01:45.370
+To repeat the transformations made on this dataset,
+
+00:01:45.370 --> 00:01:47.215
+here are steps in a nice,
+
+00:01:47.215 --> 00:01:51.064
+low data function that we'll use for the rest of our lesson.
+
+00:01:51.064 --> 00:01:58.069
+Let's try it out. Now our dataset has 2,403 rows of corporate messaging data.
+

@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.849 --> 00:00:08.789
+As you build and test machine learning algorithms,
+
+00:00:08.789 --> 00:00:12.160
+you might decide to engineer new features from your dataset.
+
+00:00:12.160 --> 00:00:16.410
+There are quite a few different ways to make new features including,
+
+00:00:16.410 --> 00:00:19.910
+creating categorical variables from numerical variables,
+
+00:00:19.910 --> 00:00:24.079
+multiplying features together, or even gathering more data.
+
+00:00:24.079 --> 00:00:26.500
+You might also try using ratios,
+
+00:00:26.500 --> 00:00:27.769
+or taking the sum,
+
+00:00:27.769 --> 00:00:29.429
+or difference between features.
+
+00:00:29.429 --> 00:00:32.354
+If it makes sense in the context of your data,
+
+00:00:32.354 --> 00:00:37.989
+a data engineer wouldn't necessarily decide what would be a good feature to engineer.
+
+00:00:37.990 --> 00:00:40.539
+That would be the job of a data scientist.
+
+00:00:40.539 --> 00:00:43.310
+However, an engineer might be asked to write
+
+00:00:43.310 --> 00:00:46.510
+code that transforms data into a new feature.
+
+00:00:46.509 --> 00:00:50.449
+Let's talk about one way of creating new features in more detail,
+
+00:00:50.450 --> 00:00:52.490
+and then implement it in code.
+
+00:00:52.490 --> 00:00:55.664
+Taking the polynomial of a feature,
+
+00:00:55.664 --> 00:01:00.530
+say you have two features, x and y.
+
+00:01:00.530 --> 00:01:02.359
+To make a new feature,
+
+00:01:02.359 --> 00:01:04.515
+you could take the square of column x,
+
+00:01:04.515 --> 00:01:06.209
+the cube of column x,
+
+00:01:06.209 --> 00:01:10.599
+et cetera and append those new features to your dataset.
+
+00:01:10.599 --> 00:01:14.375
+Then you could do the same thing with the y column.
+
+00:01:14.375 --> 00:01:16.170
+To combine the features,
+
+00:01:16.170 --> 00:01:19.590
+you might multiply them together x times y.
+
+00:01:19.590 --> 00:01:22.895
+You can then also calculate x squared times y,
+
+00:01:22.894 --> 00:01:24.594
+x times y squared,
+
+00:01:24.594 --> 00:01:27.170
+and x squared times y squared.
+
+00:01:27.170 --> 00:01:31.415
+You could keep going with higher-order polynomials as well.
+
+00:01:31.415 --> 00:01:37.550
+Creating new features like this is especially useful if your model is underfitting.
+
+00:01:37.549 --> 00:01:42.560
+Let's try implementing a few techniques to create new features.
+

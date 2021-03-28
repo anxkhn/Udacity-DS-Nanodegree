@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.980 --> 00:00:09.940
+The process of filling in missing values is called imputation.
+
+00:00:09.939 --> 00:00:15.399
+Let's go through a few ways to impute data and then you'll get some coding practice.
+
+00:00:15.400 --> 00:00:19.655
+One option is to fill in the missing value using the mean.
+
+00:00:19.655 --> 00:00:24.160
+For instance, if you're looking at the costs of the World Bank projects,
+
+00:00:24.160 --> 00:00:26.230
+some of the data is missing.
+
+00:00:26.230 --> 00:00:31.890
+You could take the mean value of all projects and use that to fill in empty cells.
+
+00:00:31.890 --> 00:00:34.960
+You could get even more specific grouping by
+
+00:00:34.960 --> 00:00:38.795
+country and then calculating the mean for each country.
+
+00:00:38.795 --> 00:00:42.745
+Then you'd fill in missing values based on the results.
+
+00:00:42.744 --> 00:00:46.214
+The median or mode might work as well.
+
+00:00:46.215 --> 00:00:51.400
+Now you don't have to delete entire rows or columns of data.
+
+00:00:51.399 --> 00:00:54.489
+Another common method especially for
+
+00:00:54.490 --> 00:01:00.640
+ordered or time series data is to use Forward Fill or Backward Fill.
+
+00:01:00.640 --> 00:01:05.750
+With both of these methods you could use neighboring cells to fill in the data,
+
+00:01:05.750 --> 00:01:10.730
+but this technique really only works if the data is ordered by time.
+
+00:01:10.730 --> 00:01:16.195
+So, the first step is to double check that your data is sorted by a timestamp.
+
+00:01:16.194 --> 00:01:22.704
+With Forward Fill, values are pushed forward down to replace any empty values.
+
+00:01:22.704 --> 00:01:25.155
+Backward Fill does the opposite,
+
+00:01:25.155 --> 00:01:28.320
+values move up to fill in empty values.
+
+00:01:28.319 --> 00:01:31.339
+In other words, you're either filling in empty cells with
+
+00:01:31.340 --> 00:01:34.704
+the previous value or the following value.
+
+00:01:34.704 --> 00:01:37.984
+There's no hard and fast rule to follow.
+
+00:01:37.984 --> 00:01:42.349
+Filling in missing values can be somewhat of an art and you'll need to
+
+00:01:42.349 --> 00:01:47.559
+test how different strategies affect the results of your Machine Learning models.
+
+00:01:47.560 --> 00:01:51.454
+Now that you've seen a few ways to deal with missing data,
+
+00:01:51.454 --> 00:01:53.480
+let's get some practice.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.910 --> 00:00:09.719
+Data comes in all shapes, formats, and sizes.
+
+00:00:09.720 --> 00:00:12.870
+It's the data engineer's job to make sure that all of
+
+00:00:12.869 --> 00:00:16.494
+this information is accessible and ready for analysis.
+
+00:00:16.495 --> 00:00:22.214
+One of the major responsibilities of a data engineer is called pipelining.
+
+00:00:22.214 --> 00:00:27.589
+Pipelining is a generic term for moving data from one place to another place.
+
+00:00:27.589 --> 00:00:32.255
+For example, you could pipeline data from a database to another database,
+
+00:00:32.255 --> 00:00:34.955
+or from a text file to a CSV file,
+
+00:00:34.954 --> 00:00:37.429
+or text file to a database.
+
+00:00:37.429 --> 00:00:42.354
+In this lesson, you'll learn about perhaps the most commonly used data pipeline,
+
+00:00:42.354 --> 00:00:48.104
+which is called ETL, extract, transform, load.
+
+00:00:48.104 --> 00:00:52.804
+With ETL pipelines, you extract data from one place,
+
+00:00:52.804 --> 00:00:55.505
+transform data into another format,
+
+00:00:55.505 --> 00:01:00.109
+and then load the transform data into storage somewhere else.
+
+00:01:00.109 --> 00:01:03.575
+How is this relevant to your role as a data scientist?
+
+00:01:03.575 --> 00:01:08.100
+Ideally, data scientist work over at the far end of the pipeline.
+
+00:01:08.099 --> 00:01:10.934
+After the data is transformed and loaded,
+
+00:01:10.935 --> 00:01:15.540
+a data engineer has already set up the data for you to analyze.
+
+00:01:15.540 --> 00:01:19.594
+In these cases, you'll need to give engineers clear instructions
+
+00:01:19.594 --> 00:01:24.239
+about what data you need and what format the data should be in.
+
+00:01:24.239 --> 00:01:26.979
+However, if you work in a smaller company,
+
+00:01:26.980 --> 00:01:31.850
+you'll very likely act as both data scientists and data engineer.
+
+00:01:31.849 --> 00:01:36.239
+This lesson will help you prepare for both of these cases.
+

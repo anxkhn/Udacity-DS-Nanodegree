@@ -1,0 +1,138 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.999 --> 00:00:04.613
+IMPUTAÇÃO DE VALORES FALTANTES
+
+00:00:05.722 --> 00:00:07.877
+O processo de preencher
+valores faltantes
+
+00:00:07.910 --> 00:00:10.156
+chama-se "imputação".
+
+00:00:10.189 --> 00:00:12.785
+Vamos ver algumas formas
+de imputar dados
+
+00:00:12.818 --> 00:00:15.002
+e, depois, você
+vai poder praticar.
+
+00:00:15.666 --> 00:00:19.402
+Uma opção é preencher o valor
+faltante usando a média.
+
+00:00:19.930 --> 00:00:23.961
+Por exemplo, olhando os custos
+dos projetos do Banco Mundial,
+
+00:00:23.994 --> 00:00:26.540
+vemos que alguns dados
+estão faltando.
+
+00:00:26.573 --> 00:00:29.233
+Você pode tirar a média
+dos valores dos projetos
+
+00:00:29.266 --> 00:00:31.571
+e usá-la para preencher
+as células vazias.
+
+00:00:32.146 --> 00:00:35.521
+Você pode ser ainda mais específico
+agrupando-as por países
+
+00:00:35.554 --> 00:00:38.268
+e calculando a média
+para cada país.
+
+00:00:38.978 --> 00:00:42.766
+Depois, você preencheria os valores
+faltantes baseado nos resultados.
+
+00:00:43.103 --> 00:00:45.642
+A mediana ou a moda
+também funcionariam.
+
+00:00:46.706 --> 00:00:50.717
+Assim, você não precisa deletar
+linhas ou colunas de dados inteiras.
+
+00:00:52.065 --> 00:00:55.272
+Outro método comum, especialmente
+para dados ordenados
+
+00:00:55.305 --> 00:00:56.642
+ou de série temporal,
+
+00:00:56.675 --> 00:01:00.321
+é usar o preenchimento
+progressivo ou regressivo.
+
+00:01:00.801 --> 00:01:04.042
+Com ambos os métodos,
+você pode usar células vizinhas
+
+00:01:04.075 --> 00:01:05.865
+para preencher os dados.
+
+00:01:05.898 --> 00:01:10.664
+Mas essa técnica só funciona
+com dados ordenados por tempo.
+
+00:01:11.122 --> 00:01:14.408
+Então, o 1º passo é checar
+se seus dados são organizados
+
+00:01:14.441 --> 00:01:16.202
+por uma estampa de tempo.
+
+00:01:16.665 --> 00:01:20.267
+Com o preenchimento progressivo,
+os valores são empurrados para baixo
+
+00:01:20.300 --> 00:01:22.499
+para substituir
+valores faltantes.
+
+00:01:22.835 --> 00:01:25.042
+O preenchimento regressivo
+faz o contrário:
+
+00:01:25.075 --> 00:01:28.437
+os valores movem-se para cima
+para preencher os faltantes.
+
+00:01:28.470 --> 00:01:31.025
+Isto é, ou você preenche
+as células vazias
+
+00:01:31.058 --> 00:01:34.138
+com o valor anterior,
+ou com o valor seguinte.
+
+00:01:35.004 --> 00:01:37.851
+Não há uma regra rígida
+e rápida para seguir.
+
+00:01:38.226 --> 00:01:41.286
+Preencher valores faltantes
+pode ser uma arte,
+
+00:01:41.319 --> 00:01:44.097
+e você precisa testar
+como diferentes estratégias afetam
+
+00:01:44.130 --> 00:01:47.382
+os resultados dos seus modelos
+de aprendizado de máquina.
+
+00:01:47.858 --> 00:01:51.226
+Agora que você viu algumas maneiras
+de lidar com dados faltantes,
+
+00:01:51.259 --> 00:01:52.866
+vamos praticar.
+

@@ -1,0 +1,158 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.290 --> 00:00:01.751
+Na última seção,
+
+00:00:01.784 --> 00:00:04.120
+usamos um transformador
+personalizado
+
+00:00:04.153 --> 00:00:07.945
+que extraía se o texto
+começava com um verbo.
+
+00:00:07.978 --> 00:00:10.896
+Podemos implementar
+um transformador personalizado
+
+00:00:10.929 --> 00:00:14.037
+estendendo a classe base
+no scikit-learn.
+
+00:00:14.070 --> 00:00:19.367
+Este exemplo simples multiplica
+os dados de input por dez.
+
+00:00:19.400 --> 00:00:22.923
+Lembre-se, todos os estimadores
+precisam de um método fit
+
+00:00:22.956 --> 00:00:26.884
+para aprender sobre os dados.
+Como isto é um transformador,
+
+00:00:26.917 --> 00:00:28.940
+precisaremos
+de um método transform,
+
+00:00:28.973 --> 00:00:34.940
+que é onde incluiremos o código
+que transformará os dados.
+
+00:00:35.270 --> 00:00:37.790
+Note que tanto fit
+quanto transform
+
+00:00:37.823 --> 00:00:41.070
+normalmente usam
+um array X 2D.
+
+00:00:43.044 --> 00:00:44.203
+Em seguida,
+
+00:00:44.236 --> 00:00:46.483
+criaremos um transformador
+personalizado
+
+00:00:46.516 --> 00:00:48.492
+que terá um pouco
+mais de importância.
+
+00:00:48.525 --> 00:00:50.419
+Aqui está um CaseNormalizer,
+
+00:00:50.452 --> 00:00:54.167
+que converte o texto
+em minúsculas.
+
+00:00:54.200 --> 00:00:56.875
+Não estamos definindo nada
+no método init,
+
+00:00:56.908 --> 00:00:58.716
+então podemos remover isso.
+
+00:00:59.404 --> 00:01:02.356
+Podemos deixar o método fit
+como está
+
+00:01:02.389 --> 00:01:04.840
+e nos concentrar
+no método transform.
+
+00:01:04.873 --> 00:01:07.636
+Podemos diminuir
+os valores em X
+
+00:01:07.669 --> 00:01:12.363
+aplicando uma função lambda,
+que chama lower em cada valor.
+
+00:01:12.396 --> 00:01:14.850
+Teremos que empacotar isso
+em uma série Pandas
+
+00:01:14.883 --> 00:01:16.858
+para podermos usar
+uma função Pi.
+
+00:01:16.891 --> 00:01:20.067
+Por fim,
+colocaremos ".values" no final
+
+00:01:20.100 --> 00:01:22.533
+para converter de volta
+em um array NumPy.
+
+00:01:25.493 --> 00:01:26.723
+Legal.
+
+00:01:26.756 --> 00:01:31.059
+É bom aprender como escrever
+funções personalizadas,
+
+00:01:31.092 --> 00:01:34.434
+pois isso permite ter
+mais controle e flexibilidade
+
+00:01:34.467 --> 00:01:36.693
+com os pipelines
+de aprendizado de máquina.
+
+00:01:36.726 --> 00:01:39.651
+Outra maneira de criar
+transformadores personalizados
+
+00:01:39.684 --> 00:01:42.291
+é usando
+esta função transformer
+
+00:01:42.324 --> 00:01:45.195
+do módulo
+scikit-learn.preprocessing.
+
+00:01:45.228 --> 00:01:48.081
+Isso permite embrulhar
+uma função existente -
+
+00:01:48.114 --> 00:01:50.071
+incluindo uma
+que você tenha escrito -
+
+00:01:50.104 --> 00:01:52.027
+para se tornar
+um transformador.
+
+00:01:52.060 --> 00:01:54.100
+Isso permite
+menos flexibilidade,
+
+00:01:54.133 --> 00:01:56.108
+mas é bem simples.
+
+00:01:56.141 --> 00:01:58.399
+Podemos ver mais sobre isso
+no link abaixo.
+

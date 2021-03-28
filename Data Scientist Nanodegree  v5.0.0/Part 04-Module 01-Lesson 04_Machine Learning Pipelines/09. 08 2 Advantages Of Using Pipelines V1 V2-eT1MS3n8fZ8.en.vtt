@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.730 --> 00:00:09.304
+There are a couple of other advantages to using pipeline.
+
+00:00:09.304 --> 00:00:12.629
+Arguably, the most important is the ability to
+
+00:00:12.630 --> 00:00:16.179
+optimize your entire workflow with grid search.
+
+00:00:16.179 --> 00:00:19.679
+Grid search is a method that automates the process of
+
+00:00:19.679 --> 00:00:23.545
+testing different values to find the combination of parameters,
+
+00:00:23.545 --> 00:00:26.400
+the result in the highest performing model.
+
+00:00:26.399 --> 00:00:30.109
+We will dive into this deeper later in the lesson.
+
+00:00:30.109 --> 00:00:35.664
+Although grid search can be run on a single classifier to tune its parameters,
+
+00:00:35.664 --> 00:00:39.409
+varying this on your full pipeline allows you to tune
+
+00:00:39.409 --> 00:00:43.259
+the parameters in your data preparation and model,
+
+00:00:43.259 --> 00:00:48.625
+which accounts for any interactions among the steps that may affect the final score.
+
+00:00:48.625 --> 00:00:52.280
+Without grid search, tuning these parameters can be
+
+00:00:52.280 --> 00:00:56.325
+painfully slow, incomplete, and messy.
+
+00:00:56.325 --> 00:01:01.520
+The last advantage of pipelining we'll talk about is that it helps prevent
+
+00:01:01.520 --> 00:01:04.430
+the easy mistake of leaking knowledge from
+
+00:01:04.430 --> 00:01:08.275
+test or validation data into your training process.
+
+00:01:08.275 --> 00:01:13.130
+Using pipeline, all transformations for data preparation and
+
+00:01:13.129 --> 00:01:18.424
+feature extractions occur within each fold of the cross-validation process.
+
+00:01:18.424 --> 00:01:20.834
+This prevents common mistakes,
+
+00:01:20.834 --> 00:01:25.559
+where you would allow your training process to be influenced by your test data.
+
+00:01:25.560 --> 00:01:27.620
+For example, if you use
+
+00:01:27.620 --> 00:01:32.920
+the entire training dataset to normalize or extract features from your data.
+
+00:01:32.920 --> 00:01:35.975
+This probably sounds confusing now,
+
+00:01:35.974 --> 00:01:41.159
+but it'll be much clearer when you see this in code in the next video.
+

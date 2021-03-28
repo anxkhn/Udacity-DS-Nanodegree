@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.519 --> 00:00:06.869
+You've found some outliers.
+
+00:00:06.870 --> 00:00:09.359
+Now, what do you do with them?
+
+00:00:09.359 --> 00:00:14.039
+Let's go back to looking at a two-dimensional graph that contains an outlier.
+
+00:00:14.039 --> 00:00:18.449
+Clearly, this point is far away from the rest of the data,
+
+00:00:18.449 --> 00:00:20.579
+and if you were to draw a trend line,
+
+00:00:20.579 --> 00:00:23.234
+the outlier is pulling the trend line up.
+
+00:00:23.234 --> 00:00:27.405
+Removing the data point will give a different trend line.
+
+00:00:27.405 --> 00:00:31.160
+If you were to use a linear regression model on this data,
+
+00:00:31.160 --> 00:00:35.268
+you want to make sure that removing the outlier gives you better results.
+
+00:00:35.268 --> 00:00:39.695
+Ask yourself, does removing the outlier improve the model?
+
+00:00:39.695 --> 00:00:45.530
+Does your mean squared error or whatever metric you're using decrease on your test set?
+
+00:00:45.530 --> 00:00:48.259
+Are you certain that your model does not need to take into
+
+00:00:48.259 --> 00:00:51.969
+consideration a similar value to what you removed?
+
+00:00:51.969 --> 00:00:54.454
+What about this second case?
+
+00:00:54.454 --> 00:00:56.655
+This also looks like an outlier,
+
+00:00:56.655 --> 00:00:59.840
+the data point is far away from the rest of the data.
+
+00:00:59.840 --> 00:01:02.590
+But does it affect a machine learning model?
+
+00:01:02.590 --> 00:01:06.760
+In this case, removing this datapoint hardly changes the trend line,
+
+00:01:06.760 --> 00:01:09.410
+so it's not actually an outlier.
+
+00:01:09.409 --> 00:01:11.679
+The point has a large X value,
+
+00:01:11.680 --> 00:01:15.505
+but then also has a correspondingly large Y value.
+
+00:01:15.504 --> 00:01:21.399
+In general, consider how removing datapoints will affect your machine learning models.
+
+00:01:21.400 --> 00:01:24.560
+If removing an outlier improves the model,
+
+00:01:24.560 --> 00:01:28.295
+then consider removing extreme isolated data points.
+
+00:01:28.295 --> 00:01:33.870
+On the other hand, if removing an extreme value has no or little effect on your results,
+
+00:01:33.870 --> 00:01:36.760
+you can leave the point as is.
+

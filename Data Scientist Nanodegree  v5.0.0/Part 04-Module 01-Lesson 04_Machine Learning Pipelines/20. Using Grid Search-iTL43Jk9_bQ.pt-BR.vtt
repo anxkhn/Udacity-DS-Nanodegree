@@ -1,0 +1,203 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.234 --> 00:00:01.737
+Eis um exemplo simples
+
+00:00:01.770 --> 00:00:04.297
+que usa a pesquisa de grade
+para encontrar parâmetros
+
+00:00:04.330 --> 00:00:06.333
+para suportar
+o classificador de vetor.
+
+00:00:06.366 --> 00:00:10.409
+Precisamos criar um dicionário
+para definir a grade de parâmetros
+
+00:00:10.442 --> 00:00:13.858
+usando as chaves
+para os nomes dos parâmetros
+
+00:00:13.891 --> 00:00:16.733
+e os valores para a lista de valores
+a serem verificados
+
+00:00:16.766 --> 00:00:18.050
+na pesquisa de grade.
+
+00:00:18.083 --> 00:00:21.074
+Em seguida, passamos o modelo
+e a grade de parâmetros
+
+00:00:21.107 --> 00:00:22.633
+para o objeto grid search.
+
+00:00:22.666 --> 00:00:24.858
+Chamar fit
+no objeto grid search
+
+00:00:24.891 --> 00:00:26.689
+executará a validação cruzada
+
+00:00:26.722 --> 00:00:29.346
+em todas as combinações
+desses parâmetros
+
+00:00:29.379 --> 00:00:33.075
+para encontrar a melhor combinação
+de parâmetros para o modelo.
+
+00:00:33.108 --> 00:00:36.355
+Imagine se tivéssemos uma etapa
+de pré-processamento de dados
+
+00:00:36.388 --> 00:00:39.403
+na qual padronizamos
+os dados usando StandardScaler.
+
+00:00:39.436 --> 00:00:41.490
+Isso pode parecer bom
+no começo,
+
+00:00:41.523 --> 00:00:44.385
+mas, se padronizarmos
+todo o conjunto de treinamento
+
+00:00:44.418 --> 00:00:47.889
+e usarmos a validação cruzada
+para avaliar o modelo,
+
+00:00:47.922 --> 00:00:49.946
+teremos vazamento de dados.
+
+00:00:49.979 --> 00:00:51.538
+Vou explicar.
+
+00:00:51.571 --> 00:00:53.531
+A pesquisa de grade
+usa validação cruzada
+
+00:00:53.564 --> 00:00:55.099
+para pontuar o modelo
+
+00:00:55.132 --> 00:00:58.642
+dividindo os dados em conjuntos
+de treinamento e validação,
+
+00:00:58.675 --> 00:01:01.007
+treinando o modelo
+no conjunto de treinamento
+
+00:01:01.040 --> 00:01:03.147
+e pontuando
+no conjunto de validação.
+
+00:01:03.180 --> 00:01:05.106
+Isso acontece várias vezes.
+
+00:01:05.139 --> 00:01:07.411
+No entanto,
+sempre que isso acontece,
+
+00:01:07.444 --> 00:01:10.667
+o modelo já tem conhecimento
+do conjunto de validação
+
+00:01:10.700 --> 00:01:12.977
+porque os dados
+foram redimensionados
+
+00:01:13.010 --> 00:01:16.558
+a partir da distribuição de todo
+o conjunto de dados de treinamento.
+
+00:01:16.591 --> 00:01:19.641
+Fatores importantes,
+como a média e o desvio padrão,
+
+00:01:19.674 --> 00:01:22.011
+são influenciados
+pelos dados de treinamento.
+
+00:01:22.044 --> 00:01:24.022
+O modelo pode ter
+um desempenho melhor
+
+00:01:24.055 --> 00:01:26.256
+do que deveria
+em dados inéditos,
+
+00:01:26.289 --> 00:01:28.605
+pois as informações
+do conjunto de validação
+
+00:01:28.638 --> 00:01:31.720
+já estão
+nos valores redimensionados.
+
+00:01:31.753 --> 00:01:33.057
+Para corrigir isso,
+
+00:01:33.090 --> 00:01:35.567
+devemos executar
+o StandardScaler
+
+00:01:35.600 --> 00:01:38.856
+somente no conjunto de treinamento,
+e não no de validação
+
+00:01:38.889 --> 00:01:41.527
+em cada dobra
+da validação cruzada.
+
+00:01:41.560 --> 00:01:44.040
+Os pipelines permitem
+fazer isso.
+
+00:01:44.073 --> 00:01:48.409
+Agora, como o redimensionamento
+faz parte do pipeline,
+
+00:01:48.442 --> 00:01:52.456
+a padronização só acontece
+depois da pesquisa de grade.
+
+00:01:52.489 --> 00:01:55.177
+Em cada dobra
+da validação cruzada,
+
+00:01:55.210 --> 00:01:57.032
+o reescalonamento
+só será feito
+
+00:01:57.065 --> 00:01:59.864
+nos dados nos quais o modelo
+está sendo treinado,
+
+00:01:59.897 --> 00:02:02.448
+impedindo o vazamento
+do conjunto de validação.
+
+00:02:02.481 --> 00:02:04.937
+Também podemos obter
+valores da pesquisa de grade
+
+00:02:04.970 --> 00:02:07.007
+nas etapas
+de transformação de dados.
+
+00:02:07.040 --> 00:02:09.513
+Como vemos, os pipelines
+são muito valiosos
+
+00:02:09.546 --> 00:02:11.602
+para impedir
+o vazamento de dados
+
+00:02:11.635 --> 00:02:13.896
+durante o processo
+de preparação de dados.
+

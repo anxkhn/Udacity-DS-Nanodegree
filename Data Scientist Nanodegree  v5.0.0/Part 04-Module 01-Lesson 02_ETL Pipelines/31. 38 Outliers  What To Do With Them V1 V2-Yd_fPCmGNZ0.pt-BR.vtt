@@ -1,0 +1,128 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.779 --> 00:00:05.120
+VALORES ATÍPICOS
+O QUE FAZER COM ELES
+
+00:00:05.153 --> 00:00:07.053
+Encontramos
+alguns valores atípicos.
+
+00:00:07.086 --> 00:00:09.680
+Agora, o que fazer com eles?
+
+00:00:09.713 --> 00:00:12.412
+Vamos voltar a dar uma olhada
+em um gráfico bidimensional
+
+00:00:12.445 --> 00:00:14.350
+contendo um valor atípico.
+
+00:00:14.383 --> 00:00:18.525
+Claramente, este ponto está
+muito distante do resto dos dados,
+
+00:00:18.558 --> 00:00:20.698
+e, se você desenhasse
+uma linha de tendência,
+
+00:00:20.731 --> 00:00:23.492
+o valor atípico puxaria
+a linha para cima.
+
+00:00:23.525 --> 00:00:27.923
+Removendo o ponto de dado,
+teríamos outra linha de tendência.
+
+00:00:27.956 --> 00:00:31.012
+Se você usar um modelo
+de regressão linear nestes dados,
+
+00:00:31.045 --> 00:00:35.433
+garanta que remover o valor atípico
+gera melhores resultados.
+
+00:00:35.466 --> 00:00:36.819
+Faça as perguntas:
+
+00:00:36.852 --> 00:00:39.946
+"Remover o valor atípico
+melhora o modelo?
+
+00:00:39.979 --> 00:00:43.442
+O seu erro quadrático médio
+ou qualquer outra métrica
+
+00:00:43.475 --> 00:00:45.827
+diminui no seu conjunto
+de teste?
+
+00:00:45.860 --> 00:00:49.108
+Você tem certeza de que seu modelo
+não precisa levar em consideração
+
+00:00:49.141 --> 00:00:51.423
+um valor similar
+ao que você removeu?"
+
+00:00:52.416 --> 00:00:54.642
+E esse segundo caso?
+
+00:00:54.675 --> 00:00:56.720
+Também parece
+um valor atípico,
+
+00:00:56.753 --> 00:01:00.106
+o ponto está muito distante
+do resto dos dados.
+
+00:01:00.139 --> 00:01:02.781
+Mas isso afeta o modelo
+de aprendizado de máquina?
+
+00:01:02.814 --> 00:01:06.760
+Neste caso, remover o ponto de dado
+quase não muda a linha de tendência,
+
+00:01:06.793 --> 00:01:09.556
+então não é
+um valor atípico de verdade.
+
+00:01:09.589 --> 00:01:11.676
+O ponto tem
+um valor de x alto,
+
+00:01:11.709 --> 00:01:15.587
+mas também tem um valor
+correspondentemente alto de y.
+
+00:01:16.036 --> 00:01:18.988
+Em geral, leve em consideração
+o quanto remover pontos de dado
+
+00:01:19.021 --> 00:01:21.790
+afeta seus modelos
+de aprendizado de máquina.
+
+00:01:21.823 --> 00:01:24.530
+Se remover um valor atípico
+melhora o modelo,
+
+00:01:24.563 --> 00:01:28.565
+então considere remover pontos
+de dados extremamente isolados.
+
+00:01:28.598 --> 00:01:31.059
+Por outro lado,
+se remover um valor extremo
+
+00:01:31.092 --> 00:01:33.847
+quase não tem efeito
+nos seus resultados,
+
+00:01:33.880 --> 00:01:36.265
+você pode deixar o ponto
+como está.
+

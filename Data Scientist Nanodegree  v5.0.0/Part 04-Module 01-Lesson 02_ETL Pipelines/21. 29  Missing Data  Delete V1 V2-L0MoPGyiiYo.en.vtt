@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.160 --> 00:00:06.224
+If you're missing data,
+
+00:00:06.224 --> 00:00:08.824
+you really only have two options,
+
+00:00:08.824 --> 00:00:10.529
+you can delete data,
+
+00:00:10.529 --> 00:00:13.003
+or you can fill in the missing values.
+
+00:00:13.003 --> 00:00:16.410
+Here's what I mean when I say delete data.
+
+00:00:16.410 --> 00:00:18.839
+Take a look at this DataFrame,
+
+00:00:18.839 --> 00:00:21.795
+most of the columns or features,
+
+00:00:21.795 --> 00:00:23.675
+if we're talking about machine learning,
+
+00:00:23.675 --> 00:00:27.300
+are completely filled with data except for this one here,
+
+00:00:27.300 --> 00:00:30.324
+this one has quite a lot of missing values,
+
+00:00:30.324 --> 00:00:34.019
+it's probably best to delete this column from you analysis
+
+00:00:34.020 --> 00:00:38.145
+unless you can somehow find the missing values from another source.
+
+00:00:38.145 --> 00:00:40.450
+What about this row over here?
+
+00:00:40.450 --> 00:00:43.810
+This row is also missing quite a lot of values,
+
+00:00:43.810 --> 00:00:46.450
+if you feel like it won't affect your analysis,
+
+00:00:46.450 --> 00:00:49.234
+you could remove this row from the data,
+
+00:00:49.234 --> 00:00:51.670
+deleting data however, isn't
+
+00:00:51.670 --> 00:00:55.965
+your only option you can also try to fill in those missing values.
+
+00:00:55.965 --> 00:01:00.200
+Next, let's talk about some of these techniques.
+
