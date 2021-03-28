@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.751 --> 00:00:04.887
+RECOMENDAÇÕES
+BASEADAS NO CONTEÚDO
+
+00:00:05.551 --> 00:00:08.693
+Você deve ter notado que,
+ao usar o filtro colaborativo,
+
+00:00:08.726 --> 00:00:13.761
+ainda tivemos muitos usuários
+que ficaram sem recomendações.
+
+00:00:13.794 --> 00:00:17.334
+Se estiver começando a criar
+seu mecanismo de recomendações,
+
+00:00:17.367 --> 00:00:22.021
+você pode não ter nenhum usuário
+ou talvez não tenha muitos.
+
+00:00:22.054 --> 00:00:26.348
+Nesse caso, pode ser muito difícil
+ou mesmo impossível
+
+00:00:26.381 --> 00:00:28.315
+encontrar
+usuários semelhantes.
+
+00:00:28.348 --> 00:00:33.724
+Como fazer recomendações quando
+não temos usuários para comparar?
+
+00:00:33.757 --> 00:00:38.503
+Nesse caso, usamos a recomendação
+baseada no conteúdo.
+
+00:00:38.536 --> 00:00:42.075
+Imagine que você descobre que
+um cliente comprou uma bicicleta.
+
+00:00:42.108 --> 00:00:45.235
+Temos alguns palpites de itens
+de que ele possa gostar,
+
+00:00:45.268 --> 00:00:47.162
+como um capacete de bicicleta,
+
+00:00:47.195 --> 00:00:48.731
+uma bomba de pneu,
+
+00:00:48.764 --> 00:00:51.552
+uma luz de bicicleta,
+refletores de bicicleta
+
+00:00:51.585 --> 00:00:54.269
+ou outros itens
+relacionados à bicicleta.
+
+00:00:54.302 --> 00:00:56.883
+Dependendo dos tipos de itens
+que recomendamos,
+
+00:00:56.916 --> 00:01:00.243
+encontramos itens semelhantes
+a partir do nome do item,
+
+00:01:00.276 --> 00:01:02.703
+como com esses itens
+relacionados à bicicleta.
+
+00:01:02.736 --> 00:01:04.781
+Ou, se estivermos
+comprando roupas,
+
+00:01:04.814 --> 00:01:07.474
+podemos recomendar roupas
+que pareçam semelhantes.
+
+00:01:07.507 --> 00:01:09.307
+Se estivermos
+recomendando filmes,
+
+00:01:09.340 --> 00:01:12.139
+podemos recomendar filmes
+do mesmo gênero.
+
+00:01:12.172 --> 00:01:14.227
+O uso desse tipo de informação
+
+00:01:14.260 --> 00:01:17.059
+se chama "recomendações
+baseadas no conteúdo".
+
+00:01:17.932 --> 00:01:20.386
+Depois de começar
+a ganhar usuários,
+
+00:01:20.419 --> 00:01:24.826
+geralmente é útil usar uma mistura
+de muitas técnicas de recomendações,
+
+00:01:24.859 --> 00:01:26.650
+mas, com poucos usuários,
+
+00:01:26.683 --> 00:01:30.131
+as recomendações baseadas
+no conteúdo são úteis.
+

@@ -1,0 +1,264 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Deciding on Metrics - Part I</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>A/B Testing Case Study</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Scenario Description.html">02. Scenario Description</a>
+    </li>
+    <li class="">
+      <a href="03. Building a Funnel.html">03. Building a Funnel</a>
+    </li>
+    <li class="">
+      <a href="04. Building a Funnel - Discussion.html">04. Building a Funnel - Discussion</a>
+    </li>
+    <li class="">
+      <a href="05. Deciding on Metrics - Part I.html">05. Deciding on Metrics - Part I</a>
+    </li>
+    <li class="">
+      <a href="06. Deciding on Metrics - Part II.html">06. Deciding on Metrics - Part II</a>
+    </li>
+    <li class="">
+      <a href="07. Deciding on Metrics - Discussion.html">07. Deciding on Metrics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="08. Experiment Sizing.html">08. Experiment Sizing</a>
+    </li>
+    <li class="">
+      <a href="09. Experiment Sizing - Discussion.html">09. Experiment Sizing - Discussion</a>
+    </li>
+    <li class="">
+      <a href="10. Validity, Bias, and Ethics - Discussion.html">10. Validity, Bias, and Ethics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="11. Analyze Data.html">11. Analyze Data</a>
+    </li>
+    <li class="">
+      <a href="12. Draw Conclusions.html">12. Draw Conclusions</a>
+    </li>
+    <li class="">
+      <a href="13. Draw Conclusions - Discussion.html">13. Draw Conclusions - Discussion</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Conclusion.html">14. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Deciding on Metrics - Part I</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="deciding-on-metrics">Deciding on Metrics</h2>
+<p>From our user funnel, we should consider two things: where and how we<br />
+should split users into experiment groups, and what metrics we will use to<br />
+track the success or failure of the experimental manipulation. The choice of<br />
+unit of diversion (the point at which we divide observations into groups) may<br />
+affect what metrics we can use, and whether the metrics we record should be<br />
+considered invariant or evaluation metrics. To start, decide on a unit of<br />
+diversion and brainstorm some ideas for metrics to capture.</p>
+<p>To be clear, the overall plan is to test the effect of the new homepage using a<br />
+true experiment; in particular, we'll be using an A/B testing framework. This<br />
+means that prospective users should be split into two groups. The control, or<br />
+'A' group, will see the old homepage, while the experimental, or 'B' group,<br />
+will see the new homepage that emphasizes the 7-day trial.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Unit of Diversion</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>By which means should we divide visitors into our experimental and control groups?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1538613013006" name="730159" id="a1538613013006">
+        <label for="a1538613013006"><p>Event-based diversion (i.e. pageview)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1538613021705" name="730159" id="a1538613021705">
+        <label for="a1538613021705"><p>Cookie-based diversion</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1538613022319" name="730159" id="a1538613022319">
+        <label for="a1538613022319"><p>Account-based diversion (i.e. User ID)</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Cookie-based diversion
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Brainstorm Potential Metrics</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write down some potential metrics or ways of objectively measuring things related to evaluating the success of the experiment. You don't need to decide on invariant or evaluation metrics here: that'll be discussed on the next page.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Deciding on Metrics - Part II.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Deciding on Metrics - Part I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

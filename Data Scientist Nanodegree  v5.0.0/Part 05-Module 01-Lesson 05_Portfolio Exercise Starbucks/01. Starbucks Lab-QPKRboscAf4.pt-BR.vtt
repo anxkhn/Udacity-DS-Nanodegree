@@ -1,0 +1,165 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.602 --> 00:00:06.373
+LABORATÓRIO STARBUCKS
+
+00:00:07.208 --> 00:00:09.254
+Então, a tarefa
+
+00:00:09.287 --> 00:00:11.654
+é uma que já usamos,
+eu mesmo a realizei.
+
+00:00:11.687 --> 00:00:14.279
+Ela imita
+um experimento individual,
+
+00:00:14.312 --> 00:00:19.453
+imita o envio de uma oferta
+para um certo grupo de indivíduos,
+
+00:00:19.486 --> 00:00:22.583
+e também há um grupo
+de controle envolvido.
+
+00:00:23.432 --> 00:00:25.927
+Existem vários recursos
+
+00:00:25.960 --> 00:00:27.166
+que são apresentados
+
+00:00:27.199 --> 00:00:29.987
+sem que haja uma descrição
+desses recursos,
+
+00:00:30.020 --> 00:00:31.843
+eles vão de V_1 a V_7.
+
+00:00:31.876 --> 00:00:35.560
+A ideia é analisar os dados,
+
+00:00:35.593 --> 00:00:38.037
+encontrar o que deverá
+ser trabalhado
+
+00:00:38.070 --> 00:00:39.636
+e, em segundo lugar,
+
+00:00:39.669 --> 00:00:43.399
+descobrir se essa oferta
+teve uma resposta incremental.
+
+00:00:43.432 --> 00:00:46.575
+A resposta incremental é uma
+das coisas que sempre buscamos,
+
+00:00:46.608 --> 00:00:50.517
+e não apenas o agito gerado
+pela oferta.
+
+00:00:50.550 --> 00:00:52.359
+Sabemos
+que a publicidade funciona,
+
+00:00:52.392 --> 00:00:55.614
+mas qual é a forma
+que alguém se comporta
+
+00:00:55.647 --> 00:00:58.678
+ao receber essa oferta?
+
+00:00:58.711 --> 00:01:03.604
+Identificar
+a resposta incremental
+
+00:01:03.637 --> 00:01:04.980
+é sempre o objetivo.
+
+00:01:05.013 --> 00:01:07.156
+A parte legal é a modelagem,
+
+00:01:07.189 --> 00:01:10.916
+é descobrir o grupo de pessoas
+que realmente amam a oferta,
+
+00:01:10.949 --> 00:01:14.517
+que vão além do que teriam feito
+de qualquer maneira.
+
+00:01:14.550 --> 00:01:19.530
+Sem a análise, sem entendermos
+os fundamentos dos dados
+
+00:01:19.563 --> 00:01:21.930
+e o que eles estão
+tentando dizer,
+
+00:01:21.963 --> 00:01:24.657
+não teremos base
+para construir esse modelo.
+
+00:01:24.690 --> 00:01:27.369
+A configuração do experimento
+é bem realista.
+
+00:01:27.402 --> 00:01:31.522
+Os dados e os resultados reais
+são simulados.
+
+00:01:31.555 --> 00:01:35.337
+Um erro comum para problemas
+como este é começar
+
+00:01:35.370 --> 00:01:38.146
+supondo que os dados informam
+
+00:01:38.179 --> 00:01:40.945
+o que os nomes das colunas
+fornecem como valor.
+
+00:01:40.978 --> 00:01:43.373
+Se houver uma coluna
+chamada de "preço",
+
+00:01:44.068 --> 00:01:47.169
+podemos supor que esse
+seja o custo de um item,
+
+00:01:47.202 --> 00:01:50.995
+mas temos que cavar um pouco
+mais fundo e perguntar:
+
+00:01:51.028 --> 00:01:54.058
+"Esse é o custo
+que a Starbucks pagou?
+
+00:01:54.091 --> 00:01:56.282
+Esse é o custo
+que o cliente pagou?
+
+00:01:56.315 --> 00:01:59.259
+É o custo pago pelo cliente
+depois dos impostos?"
+
+00:02:00.459 --> 00:02:05.227
+Verifique se os dados
+são úteis,
+
+00:02:05.260 --> 00:02:08.609
+se constituem
+a margem regular de dados,
+
+00:02:08.642 --> 00:02:11.097
+se os dados contam
+uma história
+
+00:02:11.130 --> 00:02:14.859
+que seja consistente
+com o que esperamos.
+
+00:02:14.892 --> 00:02:18.305
+O que esperamos será traduzido
+na construção do modelo.
+

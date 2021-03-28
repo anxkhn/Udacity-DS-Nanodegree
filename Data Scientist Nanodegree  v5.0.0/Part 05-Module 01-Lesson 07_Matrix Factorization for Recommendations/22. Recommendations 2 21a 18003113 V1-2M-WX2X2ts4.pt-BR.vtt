@@ -1,0 +1,464 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.339 --> 00:00:03.184
+Uma das formas de melhorarmos
+
+00:00:03.217 --> 00:00:08.128
+é com os métodos baseados
+na classificação e no conteúdo.
+
+00:00:08.161 --> 00:00:11.886
+Esta parte está lendo
+algumas funções
+
+00:00:11.919 --> 00:00:13.738
+das métricas
+baseadas no conteúdo,
+
+00:00:13.771 --> 00:00:15.894
+que encontram filmes
+parecidos
+
+00:00:15.927 --> 00:00:18.279
+a partir de filmes anteriores.
+
+00:00:18.312 --> 00:00:22.645
+Esta função está pegando
+as recomendações populares.
+
+00:00:22.678 --> 00:00:28.303
+O objetivo é criar recomendações
+usando a filtragem colaborativa
+
+00:00:28.336 --> 00:00:33.139
+e a baseada no conteúdo
+e na popularidade,
+
+00:00:33.172 --> 00:00:35.199
+que já usamos antes.
+
+00:00:35.232 --> 00:00:38.552
+Os dados treinados - train.df -
+são um dataframe.
+
+00:00:38.585 --> 00:00:41.230
+Vamos observar
+o cabeçalho disto.
+
+00:00:44.542 --> 00:00:47.185
+Esta é basicamente
+a combinação de usuário e filme
+
+00:00:47.218 --> 00:00:49.424
+para todas
+as combinações possíveis.
+
+00:00:49.457 --> 00:00:53.749
+Queremos criar recomendações
+para cada usuário daqui.
+
+00:00:53.782 --> 00:00:56.524
+Podemos fazer isso
+usando o funkSVD.
+
+00:00:56.557 --> 00:01:01.196
+Podemos fazer isso
+com um método de classificação.
+
+00:01:01.229 --> 00:01:05.089
+Eu criarei dois caminhos,
+
+00:01:05.122 --> 00:01:09.720
+um é uma recomendação
+baseada no tipo de ID,
+
+00:01:09.753 --> 00:01:11.869
+se o ID for um usuário,
+
+00:01:11.902 --> 00:01:14.772
+então fornecerei outro tipo
+de técnica de recomendação,
+
+00:01:14.805 --> 00:01:18.288
+diferente de quando o ID
+for de um filme.
+
+00:01:18.321 --> 00:01:20.986
+Essencialmente, começamos
+
+00:01:21.019 --> 00:01:23.971
+criando dois métodos
+em potencial
+
+00:01:24.004 --> 00:01:25.667
+para criar recomendações.
+
+00:01:25.700 --> 00:01:29.146
+Na verdade, vou terminar este,
+pois ele é bem simples.
+
+00:01:29.179 --> 00:01:32.146
+Se você me der
+a recomendação de um filme,
+
+00:01:32.179 --> 00:01:36.345
+então eu só usarei o sistema
+de recomendação baseado no conteúdo.
+
+00:01:36.378 --> 00:01:41.011
+Então diremos
+que os ID recomendados
+
+00:01:41.044 --> 00:01:44.176
+buscarão filmes parecidos
+
+00:01:44.209 --> 00:01:45.984
+com o ID fornecido.
+
+00:01:46.017 --> 00:01:49.560
+Você passará o movie_id,
+eu encontrarei os filmes parecidos,
+
+00:01:49.593 --> 00:01:51.785
+os nomes desses filmes
+
+00:01:51.818 --> 00:01:53.633
+e passarei para você.
+
+00:01:53.666 --> 00:01:58.836
+Este find_similar_movies é o sistema
+baseado no conteúdo de antes.
+
+00:01:58.869 --> 00:02:03.071
+Se você fornecer o movie_id,
+e eu tiver a variável type...
+
+00:02:03.104 --> 00:02:06.062
+Se você der o movie_id,
+eu encontrarei filmes parecidos
+
+00:02:06.095 --> 00:02:07.769
+e os recomendarei para você.
+
+00:02:07.802 --> 00:02:09.467
+Se você passar o user_id,
+
+00:02:09.500 --> 00:02:13.016
+existirão vários métodos
+para criar uma previsão,
+
+00:02:13.049 --> 00:02:14.700
+como a filtragem colaborativa
+
+00:02:14.733 --> 00:02:16.628
+e o sistema baseado
+na classificação.
+
+00:02:16.661 --> 00:02:20.117
+Podemos fazer várias coisas
+com o user_id.
+
+00:02:20.150 --> 00:02:22.255
+O que eu fiz primeiro
+
+00:02:22.288 --> 00:02:24.968
+foi ir até os usuários
+
+00:02:25.641 --> 00:02:28.065
+e pegar o índice.
+
+00:02:28.098 --> 00:02:30.667
+Quero obter isto -
+
+00:02:30.700 --> 00:02:34.187
+e fizemos isso
+várias vezes.
+
+00:02:34.220 --> 00:02:36.612
+Vou obter o índice
+
+00:02:36.645 --> 00:02:38.422
+e armazenar isso.
+
+00:02:39.036 --> 00:02:44.499
+Agora eu farei uma previsão
+
+00:02:44.532 --> 00:02:47.723
+a partir do produto escalonar
+
+00:02:47.756 --> 00:02:52.343
+da matriz de usuário,
+onde o usuário está.
+
+00:02:52.376 --> 00:02:56.124
+Então pegamos a linha dele
+e todas as colunas.
+
+00:02:56.157 --> 00:03:00.803
+Isso pegará a linha associada
+ao usuário da matriz de usuário.
+
+00:03:00.836 --> 00:03:03.998
+Eu pegarei
+toda a matriz de filme
+
+00:03:04.924 --> 00:03:06.730
+e o produto escalonar.
+
+00:03:06.763 --> 00:03:10.842
+Isso me dará todas
+as previsões
+
+00:03:10.875 --> 00:03:14.421
+de classificação de todos os filmes
+para um dado usuário.
+
+00:03:14.454 --> 00:03:16.967
+Pegamos o produto escalonar
+na matriz de usuário
+
+00:03:17.000 --> 00:03:18.430
+com a matriz de filme,
+
+00:03:18.463 --> 00:03:20.061
+mas, na matriz de usuário,
+
+00:03:20.094 --> 00:03:22.580
+pegamos apenas a linha associada
+ao usuário
+
+00:03:22.613 --> 00:03:25.216
+e o produto escalonar
+com a matriz de filme.
+
+00:03:25.249 --> 00:03:29.473
+Isso usa funkSVD
+para criar uma previsão.
+
+00:03:30.297 --> 00:03:34.562
+Agora vamos organizar
+a partir das previsões mais altas.
+
+00:03:34.595 --> 00:03:38.448
+Isso retornará
+classificações previstas,
+
+00:03:38.481 --> 00:03:40.721
+e só queremos obter
+as mais altas
+
+00:03:40.754 --> 00:03:42.065
+e devolver isso.
+
+00:03:42.098 --> 00:03:44.482
+Optei por fazer as previsões
+dessa forma.
+
+00:03:46.090 --> 00:03:49.912
+Para obter as mais altas,
+uso algo chamado de "argsort".
+
+00:03:49.945 --> 00:03:52.632
+Organizei as coisas
+
+00:03:52.665 --> 00:03:57.080
+e obtive as recomendações
+desejadas.
+
+00:03:57.113 --> 00:04:00.106
+Vou pegar isto para você ver
+o que está acontecendo.
+
+00:04:00.891 --> 00:04:05.350
+O índice pega a linha associada
+ao usuário na matriz de usuário.
+
+00:04:05.383 --> 00:04:07.764
+Se você passar o ID 50,
+
+00:04:07.797 --> 00:04:10.692
+encontrarei o usuário
+na matriz de usuário
+
+00:04:10.725 --> 00:04:11.864
+e pegarei esta linha.
+
+00:04:11.897 --> 00:04:14.296
+Pegarei o produto escalonar
+com a matriz de filme,
+
+00:04:14.329 --> 00:04:16.223
+e isso gerará as previsões.
+
+00:04:16.256 --> 00:04:19.797
+Esta é a previsão da classificação
+dada pelo usuário
+
+00:04:19.830 --> 00:04:23.756
+para cada filme
+em toda matriz de filme.
+
+00:04:23.789 --> 00:04:25.964
+Depois, nesta parte -
+
+00:04:25.997 --> 00:04:28.396
+creio que usei
+o Stack Overflow -,
+
+00:04:29.038 --> 00:04:32.164
+organizo os valores
+
+00:04:32.197 --> 00:04:36.230
+e obtenho os índices
+associados aos filmes.
+
+00:04:36.263 --> 00:04:39.300
+Isso pega as previsões -
+
+00:04:39.333 --> 00:04:44.028
+podemos olhar esta parte aqui,
+que deve ser a coisa principal.
+
+00:04:44.061 --> 00:04:49.116
+Isto organiza de acordo
+com o valor previsto
+
+00:04:49.149 --> 00:04:51.533
+e devolve o índice.
+
+00:04:51.566 --> 00:04:54.295
+E esta parte -
+
+00:04:54.328 --> 00:04:57.471
+se observarmos isto,
+aqui está 10 negativo -
+
+00:04:57.504 --> 00:05:01.200
+devolve os 10 mais,
+
+00:05:01.233 --> 00:05:05.079
+e eu, basicamente,
+altero a ordem.
+
+00:05:05.112 --> 00:05:08.499
+Este "::-1" altera a ordem.
+
+00:05:08.532 --> 00:05:13.854
+Se observarmos isto
+em contraposição com esta parte...
+
+00:05:15.373 --> 00:05:18.781
+Se não viu isto antes,
+isso é um belo truque
+
+00:05:19.468 --> 00:05:23.051
+que diz para inverter a ordem.
+
+00:05:23.084 --> 00:05:25.118
+Antes estava ordenado
+desta forma,
+
+00:05:25.151 --> 00:05:26.460
+agora está assim.
+
+00:05:26.493 --> 00:05:29.628
+Isso varia de acordo
+com a indexação.
+
+00:05:29.661 --> 00:05:31.971
+Posso decidir depois
+
+00:05:32.004 --> 00:05:34.580
+indexar isto de certa forma
+
+00:05:34.613 --> 00:05:37.283
+e retornar em certa ordem.
+
+00:05:37.316 --> 00:05:41.331
+Isto está obtendo
+os nomes dos filmes.
+
+00:05:41.364 --> 00:05:44.043
+Então train_data_df.columns
+
+00:05:44.076 --> 00:05:46.085
+são os movie_ids,
+
+00:05:46.118 --> 00:05:50.437
+e isto é o índice associado
+a cada movie_id.
+
+00:05:50.470 --> 00:05:52.175
+Obtenho os movie_ids
+
+00:05:52.208 --> 00:05:54.938
+e peço para devolver
+os movie_names
+
+00:05:54.971 --> 00:05:56.987
+para os movie_ids.
+
+00:05:57.020 --> 00:05:59.727
+Chamarei isto de "rec_names".
+
+00:05:59.760 --> 00:06:03.101
+Basicamente, estes rec_ids
+e rec_names
+
+00:06:03.134 --> 00:06:07.104
+são a mesma coisa, mas será
+uma coisa com o movie_id
+
+00:06:07.137 --> 00:06:11.167
+e outra com o user_id.
+
+00:06:11.200 --> 00:06:13.274
+Percebi que, com este método,
+
+00:06:13.307 --> 00:06:16.484
+muitas previsões
+acabaram ficando parecidas
+
+00:06:16.517 --> 00:06:18.441
+para muitos usuários.
+
+00:06:18.474 --> 00:06:20.784
+Talvez isso seja preciso,
+
+00:06:20.817 --> 00:06:23.372
+pois muitos usuários
+gostariam dos mesmos filmes,
+
+00:06:23.405 --> 00:06:25.490
+mas, em relação
+a outros critérios,
+
+00:06:25.523 --> 00:06:26.930
+como a aleatoriedade
+
+00:06:26.963 --> 00:06:29.986
+ou para encontrar coisas
+que sejam nostálgicas,
+
+00:06:30.019 --> 00:06:33.527
+o meu sistema
+de recomendações não se sairia bem.
+
+00:06:33.560 --> 00:06:37.579
+Boa sorte ao criar
+seu sistema de recomendações.
+
+00:06:37.612 --> 00:06:40.496
+Espero que isso tenha ajudado
+a mostrar
+
+00:06:40.529 --> 00:06:43.895
+como combinar um método
+baseado no conteúdo
+
+00:06:43.928 --> 00:06:48.593
+com um funkSVD para criar
+previsões para usuários e filmes.
+

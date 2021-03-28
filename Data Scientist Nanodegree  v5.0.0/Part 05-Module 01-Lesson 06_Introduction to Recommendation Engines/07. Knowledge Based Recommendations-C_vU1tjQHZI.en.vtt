@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.129 --> 00:00:08.250
+If you were looking to make a recommendation of a book,
+
+00:00:08.250 --> 00:00:10.144
+a movie, or a song,
+
+00:00:10.144 --> 00:00:11.744
+how might you do it?
+
+00:00:11.744 --> 00:00:15.969
+You might just recommend the most popular item in that category.
+
+00:00:15.970 --> 00:00:18.824
+Catcher in the Rye is the most popular book,
+
+00:00:18.824 --> 00:00:21.250
+so I just recommend that to every reader.
+
+00:00:21.250 --> 00:00:23.585
+Despacito is a popular song,
+
+00:00:23.585 --> 00:00:26.405
+so I'd recommend this to every listener.
+
+00:00:26.405 --> 00:00:28.984
+Titanic is a popular movie,
+
+00:00:28.984 --> 00:00:32.304
+so let's recommend that as a movie for everyone.
+
+00:00:32.304 --> 00:00:34.375
+As a small extension,
+
+00:00:34.375 --> 00:00:37.070
+you might allow individuals to filter for
+
+00:00:37.070 --> 00:00:40.924
+the most popular items according to specific categories.
+
+00:00:40.924 --> 00:00:44.974
+Instead of recommending any of the most popular movies,
+
+00:00:44.975 --> 00:00:49.054
+perhaps, we want to filter to only allow dramatic movies.
+
+00:00:49.054 --> 00:00:54.875
+Adding a filter for the dramatic movies would select only these from the most popular.
+
+00:00:54.875 --> 00:00:58.729
+Adding a filter like this turns this recommendation from
+
+00:00:58.729 --> 00:01:01.909
+simply a ranked-based recommendation system into
+
+00:01:01.909 --> 00:01:05.584
+what is known as a knowledge-based recommendation system.
+
+00:01:05.584 --> 00:01:09.544
+A ranked-based recommendation system orders items
+
+00:01:09.545 --> 00:01:12.799
+according to some criteria like most liked,
+
+00:01:12.799 --> 00:01:16.174
+most purchases, or most listened to.
+
+00:01:16.174 --> 00:01:19.984
+Knowledge-based recommendation systems have users provide
+
+00:01:19.984 --> 00:01:25.204
+context about the item or their preferences to make a recommendation.
+
+00:01:25.204 --> 00:01:31.069
+Adding a filter so that a user can choose a specific genre or specific year
+
+00:01:31.069 --> 00:01:32.959
+that a movie was produced is
+
+00:01:32.959 --> 00:01:37.439
+a very common way to introduce knowledge-based recommendations.
+

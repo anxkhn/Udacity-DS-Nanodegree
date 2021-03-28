@@ -1,0 +1,475 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:12.410 --> 00:00:18.379
+So to do that, I created this little function that I called create_date,
+
+00:00:18.379 --> 00:00:21.390
+and I just created it as a Lambda function.
+
+00:00:21.390 --> 00:00:30.054
+Essentially, I said I'm going to pull the last parts.
+
+00:00:30.054 --> 00:00:32.039
+So, you can imagine,
+
+00:00:32.039 --> 00:00:35.780
+this is just pulling this last part off,
+
+00:00:35.780 --> 00:00:37.359
+and we can try to pull an example.
+
+00:00:37.359 --> 00:00:40.380
+But there are some of these movies that don't have this,
+
+00:00:40.380 --> 00:00:42.965
+but I'm going to essentially just look for this last part,
+
+00:00:42.965 --> 00:00:44.690
+and there could be tricky parts if,
+
+00:00:44.689 --> 00:00:46.585
+let me go check this afterwards,
+
+00:00:46.585 --> 00:00:48.939
+but I'm just going to look for this last parentheses.
+
+00:00:48.939 --> 00:00:50.579
+Basically, if that exist,
+
+00:00:50.579 --> 00:00:53.460
+I want to pull the date from it,
+
+00:00:53.460 --> 00:00:56.259
+and if it doesn't exist, then I don't want to.
+
+00:00:56.259 --> 00:01:02.354
+So, if this last part is equal to one of these parentheses,
+
+00:01:02.354 --> 00:01:04.784
+then I want to pull the date,
+
+00:01:04.784 --> 00:01:06.810
+and otherwise I'm just going to give a name.
+
+00:01:06.810 --> 00:01:10.769
+So, otherwise, I'm going to say, there isn't a date associated with it.
+
+00:01:11.329 --> 00:01:15.914
+I'm going to create a new date column,
+
+00:01:15.915 --> 00:01:23.000
+and I'm going to apply this function to the movies column,
+
+00:01:23.000 --> 00:01:26.379
+and then just take a look.
+
+00:01:26.379 --> 00:01:29.739
+I made a mistake somewhere.
+
+00:01:29.739 --> 00:01:34.704
+Sorry. This should be X.
+
+00:01:34.704 --> 00:01:38.959
+This is the next movies.
+
+00:01:39.000 --> 00:01:42.170
+I think it's called movie.
+
+00:01:42.170 --> 00:01:46.570
+Yeah. So, the column itself is called movie and this was an X.
+
+00:01:46.569 --> 00:01:49.899
+So, basically, we are going into that movie column and we're
+
+00:01:49.900 --> 00:01:53.385
+applying this function that looks for this ending mark.
+
+00:01:53.385 --> 00:01:58.689
+If it exist, then it pulls this date using this part,
+
+00:01:58.689 --> 00:02:01.129
+and otherwise it should have a name.
+
+00:02:05.269 --> 00:02:11.314
+Essentially, what we want to do is I think the date will be easiest.
+
+00:02:11.314 --> 00:02:13.525
+I'm going to create a little function again,
+
+00:02:13.525 --> 00:02:16.740
+I'll call it add_movie_year,
+
+00:02:16.740 --> 00:02:19.725
+and it's just going to take in some value.
+
+00:02:19.724 --> 00:02:21.219
+So, you can imagine, again,
+
+00:02:21.219 --> 00:02:23.444
+we're going to apply this function to each one of these,
+
+00:02:23.444 --> 00:02:26.280
+and what we want to do is we want to pull the first two parts.
+
+00:02:26.280 --> 00:02:32.060
+So now, I'm going to pull the first two characters,
+
+00:02:32.060 --> 00:02:36.305
+and then if they're equal to some value a year, I'll return.
+
+00:02:36.305 --> 00:02:44.379
+So, if, then I'll return a one,
+
+00:02:44.379 --> 00:02:48.144
+and else, I'll return zero.
+
+00:02:48.145 --> 00:02:53.300
+So, essentially, this little function is going to look at these first two letters.
+
+00:02:53.300 --> 00:02:56.210
+I'll pass in a list of these things,
+
+00:02:56.210 --> 00:02:58.655
+and we'll loop through them,
+
+00:02:58.655 --> 00:03:01.495
+and then apply this to create a new column.
+
+00:03:01.495 --> 00:03:09.890
+So, the dates are basically either a 18, a 19,
+
+00:03:09.889 --> 00:03:11.599
+or a 2000,
+
+00:03:11.599 --> 00:03:16.519
+and I'm going to
+
+00:03:16.520 --> 00:03:21.784
+create a new column for each one of those that's just going to be named after the year.
+
+00:03:21.784 --> 00:03:24.109
+So, essentially, what this is doing is it's creating
+
+00:03:24.110 --> 00:03:27.445
+a new column name that we're attaching onto the movies data set,
+
+00:03:27.444 --> 00:03:30.198
+and it's going to be named 1800s, 1900s,
+
+00:03:30.199 --> 00:03:33.620
+or 2000s, and we just want to apply to
+
+00:03:33.620 --> 00:03:39.944
+the current date column this add_movie_year function.
+
+00:03:39.944 --> 00:03:42.819
+So, this is going to take the function and apply it to this,
+
+00:03:42.819 --> 00:03:45.889
+which is just going to get back a one or a zero,
+
+00:03:45.889 --> 00:03:49.959
+and it'll do that for every value in date.
+
+00:03:50.120 --> 00:03:54.469
+So, this should do this as an array where it gives back a one or a zero,
+
+00:03:54.469 --> 00:04:01.479
+and then we're just going to basically put that onto the end of our data set again.
+
+00:04:01.479 --> 00:04:03.619
+Great. So, if we look at this,
+
+00:04:03.620 --> 00:04:06.840
+you can see that all of these movies are in 1800s.
+
+00:04:11.120 --> 00:04:13.810
+For the last part that we want to do with this,
+
+00:04:13.810 --> 00:04:16.435
+we want to create a dummy column for the genre.
+
+00:04:16.435 --> 00:04:18.639
+The genre is a little tricky to work with because there
+
+00:04:18.639 --> 00:04:20.669
+can be more than one, as we can see here,
+
+00:04:20.670 --> 00:04:22.900
+like I should have a documentary and a short,
+
+00:04:22.899 --> 00:04:25.089
+and this one should have a short and a horror.
+
+00:04:25.089 --> 00:04:27.359
+Then basically, you can imagine,
+
+00:04:27.360 --> 00:04:28.585
+like we found up above,
+
+00:04:28.584 --> 00:04:30.269
+we have 28 genres.
+
+00:04:30.269 --> 00:04:34.870
+So, essentially, what we want to have onto the end of our data frame is 28 genres
+
+00:04:34.870 --> 00:04:40.444
+listed with either a one if that genre is associated with that movie or a zero otherwise.
+
+00:04:40.444 --> 00:04:43.420
+So, the first thing I'm going to do is I'm just going to create
+
+00:04:43.420 --> 00:04:47.049
+this thing that's going to split the genres.
+
+00:04:47.048 --> 00:04:48.919
+It's going to take this part,
+
+00:04:48.920 --> 00:04:51.360
+and just going to split them, and give it back to us.
+
+00:04:51.360 --> 00:04:55.105
+We actually could use something similar to what we did above,
+
+00:04:55.105 --> 00:04:58.535
+but there's this nice function we can show how that works.
+
+00:04:58.535 --> 00:05:06.370
+So, if we look at movies.genre 0, so that looks like this.
+
+00:05:06.370 --> 00:05:09.959
+If we do find short,
+
+00:05:09.959 --> 00:05:14.569
+it gives us the index and the index of the first place of that genre.
+
+00:05:14.569 --> 00:05:17.519
+If we do the same thing, but let's say,
+
+00:05:17.519 --> 00:05:21.079
+we do horror and horror isn't in here,
+
+00:05:21.079 --> 00:05:23.599
+so it gives us a negative one if it's not found.
+
+00:05:23.600 --> 00:05:26.920
+So, we can use that to look for each of the genres.
+
+00:05:26.920 --> 00:05:32.715
+So, what we can do is we can take the list of genres that we created up here,
+
+00:05:32.714 --> 00:05:34.714
+this group of genres.
+
+00:05:34.714 --> 00:05:38.883
+We're going to say, for g and genres,
+
+00:05:38.884 --> 00:05:40.689
+and then we're going to loop through,
+
+00:05:40.689 --> 00:05:43.235
+and see if that's in there.
+
+00:05:43.235 --> 00:05:46.725
+If it is, then we'll return a one,
+
+00:05:46.725 --> 00:05:51.314
+and else, we'll return a zero.
+
+00:05:51.314 --> 00:05:54.528
+We still have to look out for those null values
+
+00:05:54.528 --> 00:05:57.759
+and basically those will give us an attribute error.
+
+00:05:57.759 --> 00:06:00.920
+So, I'm going to write in this except statement.
+
+00:06:00.920 --> 00:06:02.259
+Well, I'm just going to call them zeros,
+
+00:06:02.259 --> 00:06:04.060
+you could return an n here too.
+
+00:06:04.060 --> 00:06:06.110
+I'm just going to return them as zeros and basically say,
+
+00:06:06.110 --> 00:06:07.259
+you didn't list any genre,
+
+00:06:07.259 --> 00:06:10.300
+so I'm just going to give it zero for all of the genres,
+
+00:06:10.300 --> 00:06:15.100
+which may or may not be the best way to actually do that.
+
+00:06:15.620 --> 00:06:20.129
+Then, I'm just going to add a column for each genre,
+
+00:06:20.129 --> 00:06:24.980
+and we can do this by taking the existing genre column,
+
+00:06:24.980 --> 00:06:30.840
+and applying our split genres function.
+
+00:06:30.839 --> 00:06:33.889
+So, we're going to apply this function to each one of these things,
+
+00:06:33.889 --> 00:06:35.469
+and then this will create an array,
+
+00:06:35.470 --> 00:06:39.845
+and then we're just going to attach that on for each one of those genres.
+
+00:06:39.845 --> 00:06:47.325
+If we look at, wait, sorry.
+
+00:06:47.324 --> 00:06:49.430
+We don't want this to be a find.
+
+00:06:49.430 --> 00:06:50.840
+It doesn't return a true or false,
+
+00:06:50.839 --> 00:06:51.974
+it returns a number.
+
+00:06:51.975 --> 00:06:56.180
+So, basically, if it returns a number that's greater than negative one,
+
+00:06:56.180 --> 00:06:58.720
+because when it moves through this genre,
+
+00:06:58.720 --> 00:07:00.450
+like this is the zero index,
+
+00:07:00.449 --> 00:07:01.529
+this is the one index,
+
+00:07:01.529 --> 00:07:02.954
+this is the two index,
+
+00:07:02.954 --> 00:07:04.365
+this is the three index,
+
+00:07:04.365 --> 00:07:10.415
+it's going to give us some number between zero and the length of this string minus one.
+
+00:07:10.415 --> 00:07:14.055
+So, basically, if it's any positive number or zero,
+
+00:07:14.055 --> 00:07:18.750
+what we know is that it exists in that genre string.
+
+00:07:18.750 --> 00:07:20.394
+If it's a negative one,
+
+00:07:20.394 --> 00:07:22.169
+it's not even possible that it's less than that.
+
+00:07:22.170 --> 00:07:24.615
+But if it is greater than negative one, we know it exists.
+
+00:07:24.615 --> 00:07:26.295
+If it is negative one,
+
+00:07:26.295 --> 00:07:27.490
+then we know it doesn't exist.
+
+00:07:27.490 --> 00:07:29.389
+So, this is one way we could do it.
+
+00:07:29.389 --> 00:07:33.069
+We could probably think of some other ways as well.
+
+00:07:34.069 --> 00:07:37.719
+Then, the mistake is in my header.
+
+00:07:42.410 --> 00:07:47.370
+Just don't like seeing that error, and this code works.
+
+00:07:47.370 --> 00:07:50.500
+So now, we can see this thing tacked onto the end.
+
+00:07:50.500 --> 00:07:54.709
+It looks like there's a lot of zeros that I can see.
+
+00:07:54.709 --> 00:07:56.834
+Let's make sure.
+
+00:07:56.834 --> 00:08:01.870
+Yeah. Let's make sure that there's one in here.
+
+00:08:08.420 --> 00:08:19.860
+Come on. Great. Yeah. So, there's a one here and there's a one here,
+
+00:08:19.860 --> 00:08:24.410
+which is consistent with what we saw before.
+
+00:08:30.680 --> 00:08:33.759
+One of the things that we'll need when we're working with
+
+00:08:33.759 --> 00:08:38.549
+these timestamps is this datetime library.
+
+00:08:54.129 --> 00:08:56.360
+With a quick search,
+
+00:08:56.360 --> 00:09:00.139
+and I just searched timestamp to date in Python,
+
+00:09:00.139 --> 00:09:01.429
+and with that quick search,
+
+00:09:01.429 --> 00:09:06.859
+this first link that you find will actually show you the thing that I used,
+
+00:09:06.860 --> 00:09:10.205
+which is this fromtimestamp,
+
+00:09:10.205 --> 00:09:12.840
+and then you're changing things into a year,
+
+00:09:12.840 --> 00:09:15.665
+month, day, hour, minute, second.
+
+00:09:15.664 --> 00:09:20.424
+By using this, I can create this little function,
+
+00:09:20.424 --> 00:09:23.224
+and so I just called it change_timestamp,
+
+00:09:23.225 --> 00:09:27.740
+and what it's going to do is it's going to take this timestamp.
+
+00:09:28.230 --> 00:09:31.045
+Using the library, there's
+
+00:09:31.044 --> 00:09:36.589
+a fromtimestamp where I want to take the integer of this thing,
+
+00:09:36.590 --> 00:09:39.070
+so it needs to be as a number and I think originally,
+
+00:09:39.070 --> 00:09:40.375
+it was as a string,
+
+00:09:40.375 --> 00:09:42.710
+and then I want to change it into
+
+00:09:42.710 --> 00:09:47.780
+a string with basically the same thing that we saw back here.
+
+00:09:47.779 --> 00:09:53.615
+I really just want this part here and I'm going to change this part here.
+
+00:09:53.615 --> 00:10:00.090
+So, I think that should be a function that we can now apply to this timestamp column.
+
+00:10:03.860 --> 00:10:06.735
+Okay. So, let's take a look.
+
+00:10:06.735 --> 00:10:13.360
+Great. So now, you can see we've changed that timestamp into this date_time.
+

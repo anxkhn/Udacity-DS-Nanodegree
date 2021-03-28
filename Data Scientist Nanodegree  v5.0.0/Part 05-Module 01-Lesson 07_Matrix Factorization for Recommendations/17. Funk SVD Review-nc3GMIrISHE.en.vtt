@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.919 --> 00:00:08.820
+Your newly created Funk SVD function is great and that you've gained
+
+00:00:08.820 --> 00:00:11.460
+the fundamental ideas associated with making
+
+00:00:11.460 --> 00:00:14.415
+predictions using singular value decomposition,
+
+00:00:14.414 --> 00:00:18.289
+and that you can make those predictions even when you have missing values.
+
+00:00:18.289 --> 00:00:21.599
+Being able to build out your own machine learning algorithms from
+
+00:00:21.600 --> 00:00:25.020
+scratch is a necessary skill for data scientists.
+
+00:00:25.019 --> 00:00:26.509
+In the next notebook,
+
+00:00:26.510 --> 00:00:30.679
+we're going to see just how well your algorithm performs in practice.
+

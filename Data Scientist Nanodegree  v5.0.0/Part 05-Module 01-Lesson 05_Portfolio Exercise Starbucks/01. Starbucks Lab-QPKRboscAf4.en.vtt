@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.880
+So, the take-home assessment
+
+00:00:08.880 --> 00:00:11.660
+is one that we've used in the past, I took it myself.
+
+00:00:11.660 --> 00:00:14.300
+It mimics an individual experiment.
+
+00:00:14.300 --> 00:00:19.620
+So, it mimics sending an offer to a certain group of individuals,
+
+00:00:19.620 --> 00:00:22.935
+and also there's a control group involved.
+
+00:00:22.934 --> 00:00:26.404
+There are a number of features that are
+
+00:00:26.405 --> 00:00:30.035
+presented without a description of what those features are.
+
+00:00:30.035 --> 00:00:31.725
+They're V_1 through V_7.
+
+00:00:31.725 --> 00:00:35.510
+The idea is to first go through the data,
+
+00:00:35.509 --> 00:00:37.479
+find what you have to work with there.
+
+00:00:37.479 --> 00:00:39.654
+Then secondly, more importantly,
+
+00:00:39.655 --> 00:00:43.109
+find if this offer had an incremental response.
+
+00:00:43.109 --> 00:00:46.539
+So, incremental response is one of the things that we're always looking for,
+
+00:00:46.539 --> 00:00:50.530
+not just how much of a spike did you see because you sent an offer.
+
+00:00:50.530 --> 00:00:52.060
+We know advertising works,
+
+00:00:52.060 --> 00:00:55.250
+but really how much differently did someone
+
+00:00:55.250 --> 00:00:58.634
+behave because they received this offer than they would have anyway.
+
+00:00:58.634 --> 00:01:01.519
+Identifying the incremental response above and
+
+00:01:01.520 --> 00:01:04.939
+beyond what the background is always the goal.
+
+00:01:04.939 --> 00:01:06.819
+The exciting part is the modeling,
+
+00:01:06.819 --> 00:01:11.089
+and the exciting part is discovering that group of people who really love this offer,
+
+00:01:11.090 --> 00:01:15.609
+who really go above and beyond what they would've done anyway, without the analysis,
+
+00:01:15.609 --> 00:01:19.700
+without understanding the basics of the data,
+
+00:01:19.700 --> 00:01:21.609
+and what it's trying to tell you first.
+
+00:01:21.609 --> 00:01:24.540
+You don't have grounds for building that model.
+
+00:01:24.540 --> 00:01:27.350
+The setup of the experiment is quite realistic.
+
+00:01:27.349 --> 00:01:31.414
+The actual data, and the actual outcomes are simulated.
+
+00:01:31.415 --> 00:01:35.930
+Common mistake for problems like this one is to jump right in and
+
+00:01:35.930 --> 00:01:41.030
+assume that the data is telling you what the column names seem to tell you at face value.
+
+00:01:41.030 --> 00:01:43.575
+If you saw a column said, 'price',
+
+00:01:43.575 --> 00:01:47.450
+you might just assume that that is the cost of an item,
+
+00:01:47.450 --> 00:01:51.060
+but you have to start digging in a little bit deeper and ask,
+
+00:01:51.060 --> 00:01:54.025
+"Well, is that the cost that Starbucks paid?
+
+00:01:54.025 --> 00:01:56.344
+Is that the cost that the customer paid?
+
+00:01:56.344 --> 00:01:59.984
+Is that the cost of the customer actually paid after-tax?"
+
+00:01:59.984 --> 00:02:04.504
+Digging in, and verifying that not only the data is
+
+00:02:04.504 --> 00:02:08.780
+usable will form the regular data margin,
+
+00:02:08.780 --> 00:02:11.360
+but the data is telling a story that's
+
+00:02:11.360 --> 00:02:14.595
+consistent with what you are expecting in your head.
+
+00:02:14.594 --> 00:02:18.719
+What you expect in your head is going to get translated to what you build into the model.
+

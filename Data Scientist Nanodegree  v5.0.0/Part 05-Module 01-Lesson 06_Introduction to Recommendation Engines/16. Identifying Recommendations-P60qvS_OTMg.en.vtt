@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.700 --> 00:00:09.455
+Using the similarity and distance metrics you saw previously,
+
+00:00:09.455 --> 00:00:12.419
+you'll now be able to identify similar users.
+
+00:00:12.419 --> 00:00:18.105
+But we need to be able to use information about these users to make recommendations.
+
+00:00:18.105 --> 00:00:20.730
+It can be a bit of an art mixed with
+
+00:00:20.730 --> 00:00:24.798
+science to figure out how many users we'll want to get recommendations
+
+00:00:24.798 --> 00:00:28.469
+from as well as identifying which and
+
+00:00:28.469 --> 00:00:33.655
+how many items should be recommended from each of these users.
+
+00:00:33.655 --> 00:00:36.435
+Let's bring back Sam again.
+
+00:00:36.435 --> 00:00:40.640
+One way we could make recommendations for Sam is to take all of
+
+00:00:40.640 --> 00:00:45.280
+the movies that the closest neighbors have seen and recommend these movies.
+
+00:00:45.280 --> 00:00:49.760
+However, recommending all of these items without any sort of
+
+00:00:49.759 --> 00:00:54.454
+filter will likely lead to recommending movies that Sam has already seen.
+
+00:00:54.454 --> 00:00:57.604
+We would definitely want to make sure we remove
+
+00:00:57.604 --> 00:01:01.829
+any items Sam has already viewed from our pile of recommendations.
+
+00:01:01.829 --> 00:01:05.390
+Additionally, just because one of Sam's neighbors has
+
+00:01:05.390 --> 00:01:09.219
+viewed a movie doesn't mean they actually liked it.
+
+00:01:09.219 --> 00:01:16.030
+If Sam and his neighbor have similar tastes and Jessie didn't like a particular movie,
+
+00:01:16.030 --> 00:01:18.870
+then Sam probably won't like it either.
+
+00:01:18.870 --> 00:01:22.875
+If Jesse has a rating for all of these items she's viewed,
+
+00:01:22.875 --> 00:01:27.980
+we might say we're only going to recommend items that she's rated positively.
+
+00:01:27.980 --> 00:01:31.520
+Given that our data are on a 10-point scale,
+
+00:01:31.519 --> 00:01:37.179
+we might only recommend movies to Sam that's rated at seven or higher.
+
+00:01:37.510 --> 00:01:40.850
+Now that we've found the movies from the neighbors,
+
+00:01:40.849 --> 00:01:43.839
+removed the movies Sam has already seen,
+
+00:01:43.840 --> 00:01:47.465
+and removed the movies that were not rated highly,
+
+00:01:47.465 --> 00:01:49.880
+we have our recommendations for Sam.
+
+00:01:49.879 --> 00:01:55.959
+Let's take a closer look at implementing these techniques to make recommendations.
+

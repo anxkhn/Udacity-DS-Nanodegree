@@ -1,0 +1,238 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Deciding on Metrics - Discussion</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>A/B Testing Case Study</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Scenario Description.html">02. Scenario Description</a>
+    </li>
+    <li class="">
+      <a href="03. Building a Funnel.html">03. Building a Funnel</a>
+    </li>
+    <li class="">
+      <a href="04. Building a Funnel - Discussion.html">04. Building a Funnel - Discussion</a>
+    </li>
+    <li class="">
+      <a href="05. Deciding on Metrics - Part I.html">05. Deciding on Metrics - Part I</a>
+    </li>
+    <li class="">
+      <a href="06. Deciding on Metrics - Part II.html">06. Deciding on Metrics - Part II</a>
+    </li>
+    <li class="">
+      <a href="07. Deciding on Metrics - Discussion.html">07. Deciding on Metrics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="08. Experiment Sizing.html">08. Experiment Sizing</a>
+    </li>
+    <li class="">
+      <a href="09. Experiment Sizing - Discussion.html">09. Experiment Sizing - Discussion</a>
+    </li>
+    <li class="">
+      <a href="10. Validity, Bias, and Ethics - Discussion.html">10. Validity, Bias, and Ethics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="11. Analyze Data.html">11. Analyze Data</a>
+    </li>
+    <li class="">
+      <a href="12. Draw Conclusions.html">12. Draw Conclusions</a>
+    </li>
+    <li class="">
+      <a href="13. Draw Conclusions - Discussion.html">13. Draw Conclusions - Discussion</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Conclusion.html">14. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Deciding on Metrics - Discussion</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="re-selecting-invariant-and-evaluation-metrics">Re: Selecting Invariant and Evaluation Metrics</h2>
+<p>There's one invariant metric that really stands out here, and that's the number<br />
+of cookies that hit the homepage. If we've done things correctly, each visitor<br />
+should have an equal chance of seeing each homepage, and that means that the<br />
+number of cookies assigned to each group should be about the same. Since<br />
+visitors come in without any additional information (e.g. account info) and<br />
+the change effected by the experimental manipulation comes in right at the<br />
+start, there aren't other invariant metrics we should worry about.</p>
+<p>Selecting evaluation metrics is a trickier proposition. Count-based metrics at<br />
+other parts of the process seem like natural choices: the number of times the<br />
+software was downloaded and the number of licenses purchased are exactly what<br />
+we want to change with the new homepage. The issue is that even though we<br />
+expect the number of cookies assigned to each group to be <em>about</em> the same,<br />
+it's much more likely than not they they won't be <em>exactly</em> the same. Instead,<br />
+we should prefer using the download rate (# downloads / # cookies) and purchase<br />
+rate (# licenses / # cookies) relative to the number of cookies as evaluation<br />
+metrics. Using these ratios allows us to account for slight imbalances between<br />
+groups.</p>
+<p>As for the other proposed metrics, the ratio between the number of licenses and<br />
+number of downloads is potentially interesting, but not as direct as the other<br />
+two ratios discussed above. It's possible that the manipulation increases both<br />
+the number of downloads and number of licenses, but increases the former to a<br />
+much higher rate. In this case, the licenses-to-downloads ratio might be worse<br />
+off for the new homepage compared to the old, even though the new homepage has<br />
+our desired effects. There's no such inconsistency issue with the ratios that<br />
+use the number of cookies in the denominator.</p>
+<p>Product usage statistics like the average time the software was used in the<br />
+trial period are potentially interesting features, but aren't directly related<br />
+to our experiment. We might not have a strong feeling about what kind of effect<br />
+the homepage will have on people that actually download the software. Stated<br />
+differently, product usage isn't a direct target of the homepage manipulation.<br />
+Certainly, these statistics might help us dig deeper into the reasons for<br />
+observed effects after an experiment is complete. They might even point toward<br />
+future changes and experiments to conduct. But in terms of experiment success,<br />
+product usage shouldn't be considered an invariant or evaluation metric.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Experiment Sizing.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Deciding on Metrics - Discussion')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

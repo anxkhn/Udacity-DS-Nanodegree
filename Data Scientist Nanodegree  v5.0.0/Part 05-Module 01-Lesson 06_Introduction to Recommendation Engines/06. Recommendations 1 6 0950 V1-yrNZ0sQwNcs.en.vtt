@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.049
+Before we get started making recommendations,
+
+00:00:03.049 --> 00:00:05.250
+it's important we have a good understanding of
+
+00:00:05.250 --> 00:00:08.164
+the data we'll be working with in the next couple of lessons.
+
+00:00:08.164 --> 00:00:12.309
+In this notebook, we'll explore the data and answer a few questions.
+
+00:00:12.310 --> 00:00:14.750
+To get started, we'll read in the data.
+
+00:00:14.750 --> 00:00:17.699
+So you can see we have two data sets,
+
+00:00:17.699 --> 00:00:22.554
+one is the movies data set and it looks like it has three columns.
+
+00:00:22.554 --> 00:00:25.039
+One with the movie id, one with movie name,
+
+00:00:25.039 --> 00:00:26.524
+and one with a genre.
+
+00:00:26.524 --> 00:00:32.475
+The genre has multiple possible categories and also potentially NaNs.
+
+00:00:32.475 --> 00:00:35.590
+If we look at the reviews,
+
+00:00:35.899 --> 00:00:38.254
+it has a user id,
+
+00:00:38.255 --> 00:00:43.715
+a movie id which I imagine matches the movies data set for their movie id column,
+
+00:00:43.715 --> 00:00:48.035
+a rating user gave to this movie, and a timestamp.
+
+00:00:48.034 --> 00:00:50.329
+A couple of the questions that are down here
+
+00:00:50.329 --> 00:00:53.089
+says to find the number of movies in the dataset,
+
+00:00:53.090 --> 00:00:58.960
+so we can get the movies from just the movies.shape zero.
+
+00:00:58.960 --> 00:01:02.634
+So, it looks like we have, in my case,
+
+00:01:02.634 --> 00:01:05.629
+31,917 but your dataset
+
+00:01:05.629 --> 00:01:08.839
+again might have a different number depending on when you're running this notebook.
+
+00:01:08.840 --> 00:01:16.540
+Again, these are live pulling from a constantly updated MovieTweetings dataset.
+
+00:01:16.540 --> 00:01:21.910
+The number of readings we can get from the reviews shapes
+
+00:01:21.909 --> 00:01:28.674
+zero and so there are a lot of them.
+
+00:01:28.674 --> 00:01:31.219
+The number of different genres.
+
+00:01:31.219 --> 00:01:35.170
+So this is a little tricky because what we want to do is
+
+00:01:35.170 --> 00:01:39.439
+if we look again at the movies data set,
+
+00:01:39.439 --> 00:01:46.704
+what we want to be able to do is pull these parts out of those genre portion.
+
+00:01:46.704 --> 00:01:49.734
+We can write a little loop to do this.
+
+00:01:49.734 --> 00:01:53.959
+I'll create an empty list genres and basically
+
+00:01:53.959 --> 00:01:57.769
+what we'll do is we'll loop through that column,
+
+00:01:57.769 --> 00:02:00.439
+there are probably lots of ways you could do this, this is one.
+
+00:02:00.439 --> 00:02:05.450
+So, I'm going to loop through this column and I'm going to do this as a try,
+
+00:02:05.450 --> 00:02:09.009
+except because if I hit one of those NaNs,
+
+00:02:09.009 --> 00:02:13.114
+I think I will get an attribute error.
+
+00:02:13.115 --> 00:02:16.340
+I'm just going to pass if I hit a NaN.
+
+00:02:16.340 --> 00:02:20.560
+Otherwise, what I want to do is I want to pull.
+
+00:02:20.560 --> 00:02:25.560
+So, what I'm going to do is I'm going to split this.
+
+00:02:25.560 --> 00:02:28.020
+So, if we can actually just look at what this does,
+
+00:02:28.020 --> 00:02:36.605
+so if we take movies genre zero and we run a split on that,
+
+00:02:36.604 --> 00:02:40.579
+the idea is it's going to give me this list of these things.
+
+00:02:40.580 --> 00:02:42.290
+So, what we can do,
+
+00:02:42.289 --> 00:02:45.754
+is we can just loop through each of these, which,
+
+00:02:45.754 --> 00:02:48.069
+again it's going to take a little bit of time because
+
+00:02:48.069 --> 00:02:51.694
+there's 31,000 of them but it shouldn't be too bad.
+
+00:02:51.694 --> 00:02:56.319
+So, I'm going to loop through, I'm going to extend this list and then the number of genre
+
+00:02:56.319 --> 00:03:01.810
+should actually just be the set of this.
+
+00:03:02.629 --> 00:03:07.210
+We can get the names of those two.
+
+00:03:10.189 --> 00:03:19.960
+So, it looks like there's 28 of them, so we do it like this.
+
+00:03:21.500 --> 00:03:26.139
+Yeah. So, it looks like there's 28 and here's a list of them.
+
+00:03:26.139 --> 00:03:29.119
+Again, there's probably a better way to potentially do
+
+00:03:29.120 --> 00:03:31.920
+this but this is one potential method that works,
+
+00:03:31.919 --> 00:03:34.269
+it's just looping through all of the possibilities,
+
+00:03:34.270 --> 00:03:36.895
+splitting based on this, creating a list,
+
+00:03:36.895 --> 00:03:39.740
+and then extending our original list by that,
+
+00:03:39.740 --> 00:03:43.180
+and then at the end we just take a set to get only the unique items.
+
+00:03:43.180 --> 00:03:51.730
+So, the next one is getting the unique number of users.
+
+00:03:51.729 --> 00:03:58.465
+So, there's an MP unique and we can run that on the reviews,
+
+00:03:58.465 --> 00:04:01.409
+it's just user one.
+
+00:04:08.860 --> 00:04:10.940
+User id.
+
+00:04:10.939 --> 00:04:20.250
+Okay. So, in
+
+00:04:20.250 --> 00:04:28.649
+my particular dataset I have 54,000,
+
+00:04:28.649 --> 00:04:32.104
+the number of missing ratings under reviews dataset.
+
+00:04:32.105 --> 00:04:38.105
+So, for that, we can do reviews.reading.
+
+00:04:38.105 --> 00:04:42.250
+Great. Then we're going to do is null and
+
+00:04:42.250 --> 00:04:47.540
+then some- yeah so it doesn't look like there's any missing ratings.
+
+00:04:47.540 --> 00:04:54.905
+The average rating given looks like it's 7.3.
+
+00:04:54.904 --> 00:05:00.004
+We can actually do a whole bunch of stats.
+
+00:05:00.004 --> 00:05:03.334
+So the min is zero,
+
+00:05:03.334 --> 00:05:06.139
+then max is 10.
+
+00:05:06.139 --> 00:05:09.439
+There's a couple of other useful pieces of information,
+
+00:05:09.439 --> 00:05:14.040
+the median, the 25th percentile, the 75th percentile.
+

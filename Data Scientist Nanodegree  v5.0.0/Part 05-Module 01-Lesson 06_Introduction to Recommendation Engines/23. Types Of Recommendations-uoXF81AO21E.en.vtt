@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.370 --> 00:00:07.950
+You've now built a recommender based on each of
+
+00:00:07.950 --> 00:00:13.515
+the three main ways people create recommendations: knowledge based recommendations,
+
+00:00:13.515 --> 00:00:15.740
+collaborative filtering based recommendations,
+
+00:00:15.740 --> 00:00:17.969
+and content based recommendations.
+
+00:00:17.969 --> 00:00:19.834
+In the first recommendation,
+
+00:00:19.835 --> 00:00:23.460
+you filtered movies by year and genre allowing you to
+
+00:00:23.460 --> 00:00:27.745
+recommend top movies based on which movies best met that criteria.
+
+00:00:27.745 --> 00:00:31.275
+This was an example of knowledge based recommendations.
+
+00:00:31.274 --> 00:00:34.199
+Knowledge based recommendations are common for
+
+00:00:34.200 --> 00:00:39.710
+luxury or rare purchases like jewelry, cars, or homes.
+
+00:00:39.710 --> 00:00:44.149
+For example, the filters used when looking at homes on Zillow is
+
+00:00:44.149 --> 00:00:48.875
+an example of users getting back items that meet a certain criteria.
+
+00:00:48.875 --> 00:00:54.225
+Certain filters are the most common way that knowledge recommendations are implemented.
+
+00:00:54.225 --> 00:00:56.160
+In the second recommendation,
+
+00:00:56.159 --> 00:00:59.779
+we use ratings from many users across items in
+
+00:00:59.780 --> 00:01:04.250
+a collaborative way to recommend new items to users.
+
+00:01:04.250 --> 00:01:06.890
+This is called collaborative filtering and it's
+
+00:01:06.890 --> 00:01:09.534
+the most common way that recommendations are made.
+
+00:01:09.534 --> 00:01:14.405
+The final type of recommender is called content based recommendation.
+
+00:01:14.405 --> 00:01:19.114
+Content based recommenders use information about similarities
+
+00:01:19.114 --> 00:01:25.479
+between items to make recommendations like you did with the year and genre of movies.
+
+00:01:25.480 --> 00:01:28.805
+Often, the most sophisticated recommendation engines
+
+00:01:28.805 --> 00:01:31.459
+allow for recommendations using filters,
+
+00:01:31.459 --> 00:01:33.670
+user, and item ratings,
+
+00:01:33.670 --> 00:01:36.295
+as well as information about the items.
+
+00:01:36.295 --> 00:01:40.700
+Even though these are the three main ways to make recommendations, knowledge based,
+
+00:01:40.700 --> 00:01:43.454
+collaborative filtering based, and content based,
+
+00:01:43.454 --> 00:01:47.149
+there are a number of other ways recommendations can be made.
+
+00:01:47.150 --> 00:01:52.760
+Further discussion about recommendations is provided in the text on the next page.
+

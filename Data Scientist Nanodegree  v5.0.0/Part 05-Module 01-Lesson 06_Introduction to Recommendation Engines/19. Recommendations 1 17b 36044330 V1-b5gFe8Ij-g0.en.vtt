@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.609
+Our function is done running.
+
+00:00:04.400 --> 00:00:07.065
+So, it looks like that.
+
+00:00:07.065 --> 00:00:11.295
+We need to make similar changes to what we had before.
+
+00:00:11.294 --> 00:00:14.504
+So, it'll look like this.
+
+00:00:14.505 --> 00:00:17.280
+Get rid of this part.
+
+00:00:17.280 --> 00:00:23.100
+Then, this will be the pd pickle.
+
+00:00:23.100 --> 00:00:25.905
+Cool. I'm sorry I didn't move in the fun parts.
+
+00:00:25.905 --> 00:00:27.630
+So, if you made it this far,
+
+00:00:27.629 --> 00:00:30.524
+we now have implemented collaborative filtering.
+
+00:00:30.524 --> 00:00:34.454
+Actually, if we look at the all recs portion,
+
+00:00:34.454 --> 00:00:39.765
+solution dot head. I see.
+
+00:00:39.765 --> 00:00:41.744
+So all recs is a dictionary.
+
+00:00:41.744 --> 00:00:48.299
+So, all recs and all recs solution are dictionaries.
+
+00:00:48.299 --> 00:00:49.739
+So if you look at this,
+
+00:00:49.740 --> 00:00:53.780
+these are basically the movies read recommend to user two.
+
+00:00:53.780 --> 00:00:55.435
+If we look at user eight.
+
+00:00:55.435 --> 00:00:56.850
+Yes. So, here's eight.
+
+00:00:56.850 --> 00:00:58.820
+Here's the recommendations we'd give to user eight.
+
+00:00:58.820 --> 00:01:00.619
+You can see there's a lot more here.
+
+00:01:00.619 --> 00:01:04.250
+That's probably just because the individual that was closely matched to
+
+00:01:04.250 --> 00:01:08.754
+them the first time had a lot of movies that they watch.
+
+00:01:08.754 --> 00:01:10.530
+It's potentially the reason.
+
+00:01:10.530 --> 00:01:12.480
+Great. So, at the end,
+
+00:01:12.480 --> 00:01:16.640
+we can check some ideas to make sure that we understand them.
+
+00:01:16.640 --> 00:01:20.930
+So, the type of recommendation system you implemented here was actually called
+
+00:01:20.930 --> 00:01:23.120
+collaborative filtering and it was
+
+00:01:23.120 --> 00:01:27.079
+a user-based collaborative filtering because we were comparing users to one another.
+
+00:01:27.079 --> 00:01:30.515
+The two methods we use to estimate similarity were
+
+00:01:30.515 --> 00:01:37.969
+Pearson's correlation coefficient and we used a Euclidean distance.
+
+00:01:37.969 --> 00:01:41.209
+So that is e. Then,
+
+00:01:41.209 --> 00:01:44.239
+there was an issue with using the correlation coefficient, what was it?
+
+00:01:44.239 --> 00:01:46.099
+It was that we were dividing by zero,
+
+00:01:46.099 --> 00:01:49.164
+because the spread and some ratings was zero,
+
+00:01:49.165 --> 00:01:53.900
+so h. Use the three objects
+
+00:01:53.900 --> 00:01:56.090
+along with the cells below to correctly fill in the dictionary.
+
+00:01:56.090 --> 00:01:57.710
+So, for how many pairs of users?
+
+00:01:57.709 --> 00:02:01.824
+This is just making sure that you can use each of the objects that you've created.
+
+00:02:01.825 --> 00:02:05.210
+So, can we find the users who didn't have any recommendations?
+
+00:02:05.209 --> 00:02:09.694
+So, we could write a little loop to find that.
+
+00:02:09.694 --> 00:02:13.099
+So, I'll just create this empty list for right now.
+
+00:02:13.099 --> 00:02:23.400
+Then, for movie recs and all recs items.
+
+00:02:23.400 --> 00:02:25.879
+So, this is a dictionary where the key is
+
+00:02:25.879 --> 00:02:28.835
+the user and the movie recs are the recommendations.
+
+00:02:28.835 --> 00:02:31.439
+Basically, if that list is zero,
+
+00:02:31.439 --> 00:02:33.669
+then we want to,
+
+00:02:34.879 --> 00:02:37.544
+if there's nothing in that,
+
+00:02:37.544 --> 00:02:46.244
+then what we want to do is append users without recs or append the user.
+
+00:02:46.245 --> 00:02:53.210
+Great. Then, we can look at the length of users without recs.
+
+00:02:53.210 --> 00:02:56.960
+So it looks like there's 1319.
+
+00:02:56.960 --> 00:03:00.135
+How many NaN correlation values were there?
+
+00:03:00.134 --> 00:03:03.530
+So, we can find this from the df corrs that we read in.
+
+00:03:03.530 --> 00:03:06.460
+We want to find where the movie correlation,
+
+00:03:06.460 --> 00:03:11.640
+so that was the column where that is a null value.
+
+00:03:14.349 --> 00:03:19.229
+So, I got two million.
+
+00:03:19.229 --> 00:03:22.329
+If you look at this- so, basically,
+
+00:03:22.330 --> 00:03:25.719
+the idea is this is going to count the number
+
+00:03:25.718 --> 00:03:30.194
+of correlations in the df corrs that were null.
+
+00:03:30.194 --> 00:03:32.180
+So, this is just going to come back as true or false.
+
+00:03:32.180 --> 00:03:36.080
+Then, basically, if we take the sum that's going to count the number of trues.
+
+00:03:36.080 --> 00:03:38.825
+We can do the same thing with Euclidean distance.
+
+00:03:38.824 --> 00:03:46.369
+So, that was in df dists and the column was called eucl dists.
+
+00:03:46.370 --> 00:03:48.379
+So, again, this was a column.
+
+00:03:48.379 --> 00:03:52.694
+Similarly, isnull, we look at the sum.
+
+00:03:52.694 --> 00:03:56.840
+This should be zero. So, this is the great part.
+
+00:03:56.840 --> 00:03:58.150
+When we use the correlation,
+
+00:03:58.150 --> 00:04:00.955
+there were a bunch of incidences where we were dividing by zero.
+
+00:04:00.955 --> 00:04:03.200
+A lot of times, that was because the spread of one
+
+00:04:03.199 --> 00:04:06.099
+of the ratings for a particular user was zero.
+
+00:04:06.099 --> 00:04:10.759
+Whereas, when we use a more traditional distance metric like Euclidean distance,
+
+00:04:10.759 --> 00:04:12.274
+instead of a similarity,
+
+00:04:12.275 --> 00:04:14.974
+we make sure that we don't have any of those issues.
+
+00:04:14.974 --> 00:04:16.534
+So, similar to up here.
+
+00:04:16.535 --> 00:04:19.640
+We can find users with fewer than 10 ratings.
+
+00:04:19.639 --> 00:04:27.300
+So, I'm just going to copy this users and we'll say less than 10. le10 recs.
+
+00:04:27.649 --> 00:04:30.674
+I'll do le10 rex.
+
+00:04:30.675 --> 00:04:32.520
+Basically, if the length
+
+00:04:32.519 --> 00:04:42.750
+is less than 10.
+
+00:04:42.750 --> 00:04:45.399
+So, it looks like that's 1325.
+

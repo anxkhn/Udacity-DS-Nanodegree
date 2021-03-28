@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.740
+And the next part, what we want to do is we have these first 1,000 users and basically,
+
+00:00:06.740 --> 00:00:10.605
+we're going to try using FunkSVD on that.
+
+00:00:10.605 --> 00:00:14.245
+So, if we pull the first 1,000 users,
+
+00:00:14.244 --> 00:00:19.809
+we are doing 20 iterations and it says this will take some time.
+
+00:00:19.809 --> 00:00:22.479
+So, do 20 iterations.
+
+00:00:22.480 --> 00:00:25.129
+So, here you can see we're going to do this with 1,000
+
+00:00:25.129 --> 00:00:27.964
+users but you could imagine doing this with the full data frame,
+
+00:00:27.964 --> 00:00:29.339
+this would work, it's
+
+00:00:29.339 --> 00:00:34.804
+just a function of what your compute power is and how long this might take.
+
+00:00:34.804 --> 00:00:37.399
+We're starting to see some results come in
+
+00:00:37.399 --> 00:00:40.469
+and we can see that things are moving in the right direction,
+
+00:00:40.469 --> 00:00:46.629
+and we have our first mean squared error of 23 and then it almost happening.
+
+00:00:46.630 --> 00:00:48.500
+Now, it's done the seventh. So, we'll see what happens
+
+00:00:48.500 --> 00:00:50.829
+by the 20th iteration but hopefully,
+
+00:00:50.829 --> 00:00:54.234
+you're also seeing things that are moving in the right direction.
+
+00:00:54.234 --> 00:00:56.975
+So, my results are finished running.
+
+00:00:56.975 --> 00:01:00.649
+You can see they're still may be more of an error than we want
+
+00:01:00.649 --> 00:01:04.429
+here and we could continue running this to probably get that down even lower.
+
+00:01:04.430 --> 00:01:07.640
+It looks like it's still reducing at a pretty reasonable rate,
+
+00:01:07.640 --> 00:01:12.210
+but let's go ahead and move forward and learn from what's happening here.
+
+00:01:12.209 --> 00:01:15.754
+So, the first thing we should look at is this first 1,000 users
+
+00:01:15.754 --> 00:01:20.989
+and see how many missing values are sort of in that particular matrix.
+
+00:01:20.989 --> 00:01:24.534
+So, if you didn't look at the header of it, yourself,
+
+00:01:24.534 --> 00:01:29.840
+I'm just using the same counts non-zero part that we had before.
+
+00:01:29.840 --> 00:01:35.525
+So, how many of the actual ratings exist in the first 1,000 users? So, that looks okay.
+
+00:01:35.525 --> 00:01:37.910
+Then, how many ratings did we make for
+
+00:01:37.909 --> 00:01:40.310
+user-movie pairs that didn't actually have any rating?
+
+00:01:40.310 --> 00:01:45.025
+So, essentially, this should be the shape.
+
+00:01:45.025 --> 00:01:48.310
+What I was trying to do earlier,
+
+00:01:48.310 --> 00:01:51.560
+so if I take the number of rows times the number of columns and
+
+00:01:51.560 --> 00:01:56.490
+then subtract the num_ratings,
+
+00:01:56.489 --> 00:02:01.069
+this is basically how many possible ratings we could've made?
+
+00:02:01.069 --> 00:02:04.369
+This is the number of ratings that actually existed
+
+00:02:04.370 --> 00:02:07.630
+in the data frame for us to learn from. Let's free run this.
+
+00:02:07.629 --> 00:02:12.049
+You can see there's a ton of missing values here and we only
+
+00:02:12.050 --> 00:02:17.240
+had 11,000 ratings to work from so this is a very sparse matrix.
+
+00:02:17.240 --> 00:02:22.855
+So, let's just go ahead and look at the first 1,000 users.
+
+00:02:22.854 --> 00:02:25.879
+Yes, so you can see it's basically all Nans.
+
+00:02:25.879 --> 00:02:30.409
+If we look at the number of rows and the number of columns,
+
+00:02:30.409 --> 00:02:36.189
+it's 1,000 users by 31,000 movies.
+
+00:02:36.189 --> 00:02:41.650
+Essentially, it's just a ton of missing values with only 10,000 ratings in there.
+
+00:02:41.650 --> 00:02:43.730
+You can imagine this took some time to run through because
+
+00:02:43.729 --> 00:02:46.399
+we're going through each element in that matrix.
+
+00:02:46.400 --> 00:02:48.650
+So, finally, we can check.
+
+00:02:48.650 --> 00:02:50.650
+It looks like my results are ready.
+
+00:02:50.650 --> 00:02:55.189
+But this is a great step because we don't need to use the built-in,
+
+00:02:55.189 --> 00:02:58.234
+we built our own function that can now take
+
+00:02:58.235 --> 00:03:02.665
+any matrix no matter how sparse it is and can compute
+
+00:03:02.664 --> 00:03:07.519
+ratings for user-movie pairs what they didn't originally exists and we can make
+
+00:03:07.520 --> 00:03:12.005
+sure that learning in the right ways and we'll get ratings.
+
+00:03:12.004 --> 00:03:16.069
+So, by taking the dot product of these two items,
+
+00:03:16.069 --> 00:03:20.254
+we can now obtain a prediction for any user-movie.
+
+00:03:20.254 --> 00:03:22.590
+So if I grab the index of
+
+00:03:22.590 --> 00:03:26.000
+some user and the index of some movie and I take the dot product of
+
+00:03:26.000 --> 00:03:28.909
+those two things that will give me the prediction for
+
+00:03:28.909 --> 00:03:33.215
+that user-movie even if that user has never actually interacted with that movie.
+
+00:03:33.215 --> 00:03:37.080
+An incredible thing and we can see that it's doing well.
+

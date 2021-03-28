@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.839
+Now, you've implemented a method
+
+00:00:06.839 --> 00:00:10.519
+for recommending the most popular items to any user.
+
+00:00:10.519 --> 00:00:13.230
+This method frequently works well for
+
+00:00:13.230 --> 00:00:16.754
+trending events which you see on Twitter and Facebook,
+
+00:00:16.754 --> 00:00:20.109
+as well as when you don't know a lot about your users.
+
+00:00:20.109 --> 00:00:21.809
+It's easier to just pick
+
+00:00:21.809 --> 00:00:26.149
+the most popular events and use them as a recommendation for everyone.
+
+00:00:26.149 --> 00:00:32.074
+However, this way of making recommendations is not very personalized to the user.
+
+00:00:32.075 --> 00:00:35.570
+Instead, we can make better recommendations by using
+
+00:00:35.570 --> 00:00:40.725
+information about how users have interacted with items in the past.
+
+00:00:40.725 --> 00:00:45.770
+This would lead to more personalized and therefore, better recommendations.
+
+00:00:45.770 --> 00:00:50.210
+Recommending Titanic for every user because it's one of
+
+00:00:50.210 --> 00:00:54.950
+the most popular movies of all time probably doesn't make a lot of sense.
+
+00:00:54.950 --> 00:00:59.420
+Because the recommendation would be totally irrelevant to a household
+
+00:00:59.420 --> 00:01:04.415
+whose entire watch history is comprised of children's educational shows.
+
+00:01:04.415 --> 00:01:08.390
+Using interactions between users and items is
+
+00:01:08.390 --> 00:01:11.450
+a very common approach used by retailers to
+
+00:01:11.450 --> 00:01:14.930
+create better recommendations for their customers.
+
+00:01:14.930 --> 00:01:19.400
+Here is a snapshot of what my landing page at Amazon looks like.
+
+00:01:19.400 --> 00:01:23.090
+I regularly received recommendations from Amazon for books
+
+00:01:23.090 --> 00:01:27.875
+related to statistics and machine learning because of my earlier purchasing habits.
+
+00:01:27.875 --> 00:01:29.980
+In the next parts of this lesson,
+
+00:01:29.980 --> 00:01:32.240
+we'll look at different ways we might go about
+
+00:01:32.239 --> 00:01:35.319
+providing more personalized recommendations.
+

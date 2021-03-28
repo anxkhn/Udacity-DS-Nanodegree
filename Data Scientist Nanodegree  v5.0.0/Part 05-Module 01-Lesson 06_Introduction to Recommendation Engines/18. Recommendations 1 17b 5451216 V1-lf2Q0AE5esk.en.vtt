@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.070 --> 00:00:16.875
+Why would we still be getting NaNs,
+
+00:00:16.875 --> 00:00:19.890
+and if we look at the header,
+
+00:00:19.890 --> 00:00:23.489
+you can see that when we compare two to 104,
+
+00:00:23.489 --> 00:00:25.390
+which is what we are doing in this test here,
+
+00:00:25.390 --> 00:00:28.469
+we get a NaN value and really we shouldn't be getting
+
+00:00:28.469 --> 00:00:31.814
+that because we're only comparing where these things match.
+
+00:00:31.815 --> 00:00:33.660
+So therefore, we shouldn't be getting NaNs.
+
+00:00:33.659 --> 00:00:37.243
+But if you remember back to the correlation coefficient,
+
+00:00:37.243 --> 00:00:39.539
+before and how that's computed,
+
+00:00:39.539 --> 00:00:40.945
+because that's what we're using here,
+
+00:00:40.945 --> 00:00:44.494
+that might give you some insight into why we would be getting NaNs.
+
+00:00:44.494 --> 00:00:51.109
+Let's say we look at the movies to analyze for User 2
+
+00:00:51.109 --> 00:00:56.219
+and movies to analyze for User 104,
+
+00:00:56.219 --> 00:00:59.344
+that's the comparison we're making up here,
+
+00:00:59.344 --> 00:01:01.159
+that's where we're getting NaNs.
+
+00:01:01.159 --> 00:01:03.754
+If we look at a set of each of those,
+
+00:01:03.755 --> 00:01:07.234
+just to make sure we only get unique values back.
+
+00:01:07.234 --> 00:01:13.310
+So I'm just going to call this set 2 and I'll call this set 104
+
+00:01:13.310 --> 00:01:19.260
+and let's actually just print that really quick.
+
+00:01:21.530 --> 00:01:26.189
+Movies to analyze wasn't found.
+
+00:01:26.189 --> 00:01:30.170
+Oh, I spelled it wrong, analyze.
+
+00:01:30.170 --> 00:01:32.635
+You probably all noticed that before I did.
+
+00:01:32.635 --> 00:01:34.240
+So if you look at this,
+
+00:01:34.239 --> 00:01:37.619
+this is just a set of the movies that User 104
+
+00:01:37.620 --> 00:01:43.750
+seen and if we do an intersection with set 2,
+
+00:01:46.400 --> 00:01:49.335
+this gives us the movies they've both seen.
+
+00:01:49.334 --> 00:01:51.989
+So we're getting a NaN when they've both viewed
+
+00:01:51.989 --> 00:01:56.379
+the same movies and if you think about why that might be
+
+00:01:56.379 --> 00:01:58.074
+in terms of the correlation coefficient,
+
+00:01:58.075 --> 00:02:01.359
+what might ring a bell is the way that that's computed and that's
+
+00:02:01.359 --> 00:02:05.629
+that it looks at the comparison of these observations,
+
+00:02:05.629 --> 00:02:07.909
+their mean and in the denominator,
+
+00:02:07.909 --> 00:02:09.514
+we're calculating the standard deviation.
+
+00:02:09.514 --> 00:02:12.139
+So one way we might get a NaN is if either
+
+00:02:12.139 --> 00:02:14.089
+one of the standard deviations is a zero,
+
+00:02:14.090 --> 00:02:18.134
+then we're dividing by zero in which case we get a NaN,
+
+00:02:18.134 --> 00:02:20.129
+we can't divide by zero.
+
+00:02:20.129 --> 00:02:25.039
+So we can maybe take a look at what the ratings
+
+00:02:25.039 --> 00:02:30.169
+actually were for each user on those specific movies.
+
+00:02:30.169 --> 00:02:33.089
+So if we store this,
+
+00:02:33.340 --> 00:02:38.460
+just call them, same_ movs for now.
+
+00:02:40.060 --> 00:02:42.680
+You'll see for User 2,
+
+00:02:42.680 --> 00:02:45.080
+they all had the same rating and so that means
+
+00:02:45.080 --> 00:02:47.105
+the standard deviation of these is zero.
+
+00:02:47.104 --> 00:02:49.369
+Therefore when we compute the correlation coefficient,
+
+00:02:49.370 --> 00:02:51.259
+we end up with a zero and the denominator
+
+00:02:51.259 --> 00:02:54.804
+and that's bad because we'll get a NaN.
+
+00:02:54.805 --> 00:02:58.159
+So, instead of using this similarity metric,
+
+00:02:58.158 --> 00:03:00.949
+it might be a better idea to use something like
+
+00:03:00.949 --> 00:03:05.044
+Euclidean distance where we won't get a NaN when we compute this.
+
+00:03:05.044 --> 00:03:07.669
+Similarly to what we did before when we were
+
+00:03:07.669 --> 00:03:09.500
+computing the correlation coefficient,
+
+00:03:09.500 --> 00:03:12.349
+we can use a lot of the same stuff.
+
+00:03:12.349 --> 00:03:17.039
+So I'm just going to copy it and use it over again down here.
+
+00:03:17.539 --> 00:03:20.750
+Instead of computing the correlation coefficient,
+
+00:03:20.750 --> 00:03:25.039
+what we actually want to do is compute the Euclidean distance.
+
+00:03:25.039 --> 00:03:26.854
+With a quick Google search,
+
+00:03:26.854 --> 00:03:31.489
+I found this nice NumPy way of doing it so that it would be
+
+00:03:31.490 --> 00:03:36.950
+fast where we essentially take what's called the Linalg.norm.
+
+00:03:36.949 --> 00:03:41.149
+So if you take the norm, that's the same as computing
+
+00:03:41.149 --> 00:03:43.759
+the Euclidean distance between these two things.
+
+00:03:43.759 --> 00:03:48.590
+So let me pick norm of the column associated.
+
+00:03:48.590 --> 00:03:52.319
+Well in this case, it's actually a row associated with User 1.
+
+00:03:52.319 --> 00:03:54.109
+Take the row associated with User 2,
+
+00:03:54.110 --> 00:03:55.910
+take the difference between those two vectors
+
+00:03:55.909 --> 00:03:57.889
+and then you compute the norm and that's
+
+00:03:57.889 --> 00:04:01.198
+essentially computing the Euclidean distance
+

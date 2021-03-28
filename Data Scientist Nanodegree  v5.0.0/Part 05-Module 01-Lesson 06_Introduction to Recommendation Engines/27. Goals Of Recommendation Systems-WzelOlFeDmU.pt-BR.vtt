@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.713 --> 00:00:04.893
+OBJETIVOS DOS SISTEMAS
+DE RECOMENDAÇÕES
+
+00:00:04.926 --> 00:00:07.739
+As empresas se preocupam
+com sistemas de recomendações
+
+00:00:07.772 --> 00:00:11.955
+porque eles são fundamentais
+para a receita do negócio.
+
+00:00:11.988 --> 00:00:14.328
+Existem quatro objetivos
+de recomendação
+
+00:00:14.361 --> 00:00:16.512
+que podem gerar receita.
+
+00:00:16.545 --> 00:00:19.067
+O primeiro deles
+é o mais óbvio,
+
+00:00:19.100 --> 00:00:21.135
+que é a relevância.
+
+00:00:21.168 --> 00:00:24.999
+Queremos fazer recomendações
+relevantes para os usuários.
+
+00:00:25.032 --> 00:00:30.312
+É mais provável que os consumidores
+se envolvam e usem itens relevantes,
+
+00:00:30.345 --> 00:00:32.632
+portanto, isso é fundamental.
+
+00:00:32.665 --> 00:00:35.072
+O segundo objetivo
+é a novidade.
+
+00:00:35.105 --> 00:00:37.656
+Embora queiramos
+recomendar itens relevantes,
+
+00:00:37.689 --> 00:00:39.927
+é ideal que o item recomendado
+
+00:00:39.960 --> 00:00:43.601
+não seja algo ao qual o usuário
+já tenha sido exposto.
+
+00:00:43.634 --> 00:00:47.215
+Isso significa encontrar novos itens
+para um usuário específico.
+
+00:00:47.248 --> 00:00:50.001
+O terceiro objetivo
+é a aleatoriedade.
+
+00:00:50.034 --> 00:00:52.945
+Muitas vezes,
+isso é confundido com novidade.
+
+00:00:52.978 --> 00:00:57.902
+Recomendações aleatórias
+são surpreendentes para um usuário.
+
+00:00:57.935 --> 00:01:00.432
+Se um usuário ouve
+rock clássico,
+
+00:01:00.465 --> 00:01:02.062
+uma nova recomendação
+
+00:01:02.095 --> 00:01:06.581
+será uma nova música de rock que
+o usuário ainda não tenha ouvido.
+
+00:01:06.614 --> 00:01:09.173
+Porém,
+a recomendação aleatória
+
+00:01:09.206 --> 00:01:11.686
+é aquela que pode vir
+de um gênero diferente
+
+00:01:11.719 --> 00:01:14.549
+e que o usuário ficará surpreso
+de gostar.
+
+00:01:14.582 --> 00:01:17.712
+Esse objetivo é muitas vezes
+mais difícil de implementar
+
+00:01:17.745 --> 00:01:20.177
+e envolve uma mistura
+de filtragem colaborativa
+
+00:01:20.210 --> 00:01:23.085
+e métodos
+baseados no conteúdo.
+
+00:01:23.118 --> 00:01:26.822
+O objetivo final é aumentar
+a diversidade de recomendações.
+
+00:01:26.855 --> 00:01:30.094
+Novamente,
+isso não é simples de implementar.
+
+00:01:30.127 --> 00:01:34.718
+Os sistemas costumam recomendar
+muitos itens semelhantes.
+
+00:01:34.751 --> 00:01:37.701
+Criar listas de recomendações
+que sejam diversas
+
+00:01:37.734 --> 00:01:42.967
+aumenta a chance de que pelo menos
+um item seja desfrutado.
+
+00:01:43.000 --> 00:01:45.934
+Além disso,
+diversificar as recomendações
+
+00:01:45.967 --> 00:01:49.788
+diminui a chance de um usuário
+ficar entediado com elas.
+

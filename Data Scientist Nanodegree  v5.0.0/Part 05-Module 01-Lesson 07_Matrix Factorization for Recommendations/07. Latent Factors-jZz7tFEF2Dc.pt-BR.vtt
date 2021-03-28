@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.879 --> 00:00:05.055
+VARIÁVEIS LATENTES
+
+00:00:05.089 --> 00:00:07.832
+Antes de nos aprofundarmos
+em SVD,
+
+00:00:07.866 --> 00:00:10.591
+é importante entender
+variáveis latentes.
+
+00:00:10.625 --> 00:00:14.243
+Uma variável latente não é
+observada nos dados.
+
+00:00:14.277 --> 00:00:18.834
+Nós a inferimos com base
+na avaliação dada por usuários.
+
+00:00:19.115 --> 00:00:20.751
+Quais são
+as variáveis latentes
+
+00:00:20.785 --> 00:00:23.246
+dos filmes no nosso
+conjunto de dados?
+
+00:00:23.280 --> 00:00:26.789
+Uma variável pode ser
+que o filme é triste,
+
+00:00:26.823 --> 00:00:29.460
+ou que é
+sobre inteligência artificial,
+
+00:00:29.494 --> 00:00:32.037
+ou que é estrelado
+por Meryl Streep,
+
+00:00:32.071 --> 00:00:34.356
+ou que tem um cachorro,
+
+00:00:34.390 --> 00:00:39.141
+ou é um filme que tem
+um ator canadense chamado Ryan.
+
+00:00:39.900 --> 00:00:43.140
+Não são pontos de dados
+presentes diretamente nos dados,
+
+00:00:43.174 --> 00:00:46.572
+mas talvez possamos encontrá-los
+como variáveis latentes.
+
+00:00:46.606 --> 00:00:49.619
+Por exemplo,
+o filme "Diário de Uma Paixão"
+
+00:00:49.653 --> 00:00:55.197
+tem um Ryan canadense
+e tem cenas que farão você chorar.
+
+00:00:55.467 --> 00:00:59.083
+Já "A.I. - Inteligência Artificial"
+tem Meryl Streep
+
+00:00:59.117 --> 00:01:01.778
+e inteligência artificial.
+
+00:01:01.812 --> 00:01:05.337
+Por outro lado, variáveis latentes
+também podem ter a ver
+
+00:01:05.371 --> 00:01:07.667
+com as preferências
+dos usuários.
+
+00:01:07.701 --> 00:01:11.611
+Jesse, por exemplo,
+tem avaliações positivas
+
+00:01:11.645 --> 00:01:15.323
+sobre as variáveis
+de cachorros, Ryans canadenses
+
+00:01:15.357 --> 00:01:17.179
+e filmes tristes.
+
+00:01:17.213 --> 00:01:22.635
+Já Sam gosta de IA,
+Meryl Streep e também de cachorros.
+
+00:01:22.669 --> 00:01:25.674
+A ideia de descobrir
+como filmes e usuários
+
+00:01:25.708 --> 00:01:27.492
+têm a ver
+com variáveis latentes
+
+00:01:27.526 --> 00:01:31.155
+é crucial para fazermos previsões
+usando SVD.
+
+00:01:31.189 --> 00:01:33.873
+No próximo vídeo,
+vamos ver de perto
+
+00:01:33.907 --> 00:01:37.883
+como essas relações aparecem
+quando usamos SVD.
+

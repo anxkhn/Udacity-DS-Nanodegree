@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.730 --> 00:00:08.820
+You might have noticed that when using collaborative filtering,
+
+00:00:08.820 --> 00:00:13.635
+we still had a lot of users who are left without any recommendations.
+
+00:00:13.634 --> 00:00:17.489
+If you're just starting out with building out your recommendation engine,
+
+00:00:17.489 --> 00:00:21.844
+you might not have any users or you might not have very many.
+
+00:00:21.844 --> 00:00:28.254
+In this case, it might be really difficult or even impossible to find similar users.
+
+00:00:28.254 --> 00:00:33.570
+So, how can we make recommendations when we don't have users to compare to one another?
+
+00:00:33.570 --> 00:00:38.314
+In these cases, we can use content-based recommendation methods.
+
+00:00:38.314 --> 00:00:41.984
+Imagine you find out that a customer purchased a bike.
+
+00:00:41.984 --> 00:00:45.019
+I have a few guesses of items you might like.
+
+00:00:45.020 --> 00:00:47.130
+You might also need a bike helmet,
+
+00:00:47.130 --> 00:00:48.700
+or a bike tire pump,
+
+00:00:48.700 --> 00:00:51.550
+or a bike light, or a bike reflectors,
+
+00:00:51.549 --> 00:00:53.994
+or other biking related items.
+
+00:00:53.994 --> 00:00:56.924
+Depending on the types of items you're recommending,
+
+00:00:56.924 --> 00:01:00.409
+finding similar items could be based on the name of the item,
+
+00:01:00.409 --> 00:01:02.389
+like with these bike related items.
+
+00:01:02.390 --> 00:01:04.849
+Or if we're shopping for clothing,
+
+00:01:04.849 --> 00:01:07.375
+we might recommend clothing that looks similar.
+
+00:01:07.375 --> 00:01:09.325
+If we're recommending movies,
+
+00:01:09.325 --> 00:01:12.079
+we might recommend movies in the same genre.
+
+00:01:12.079 --> 00:01:17.450
+Using this type of information is called content-based recommendations.
+
+00:01:17.450 --> 00:01:20.380
+Once you start gaining additional users,
+
+00:01:20.379 --> 00:01:24.920
+it's often useful to use a blend of many recommendation techniques.
+
+00:01:24.920 --> 00:01:26.814
+But with limited users,
+
+00:01:26.814 --> 00:01:30.840
+content-based recommenders often come in handy.
+

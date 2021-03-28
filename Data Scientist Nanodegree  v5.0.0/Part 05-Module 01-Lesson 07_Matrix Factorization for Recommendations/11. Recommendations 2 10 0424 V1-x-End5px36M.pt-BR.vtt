@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.382 --> 00:00:03.350
+Neste notebook, vamos ver
+como podemos usar
+
+00:00:03.384 --> 00:00:05.655
+as funções built-in do Python
+
+00:00:05.689 --> 00:00:08.612
+para fazer a decomposição
+em valores singulares.
+
+00:00:08.646 --> 00:00:11.301
+Para começar, vamos ler
+o conjunto de dados.
+
+00:00:11.525 --> 00:00:16.702
+São os conjuntos de dados
+de filmes e resenhas da última aula,
+
+00:00:16.736 --> 00:00:19.982
+mas vamos criar subconjuntos
+
+00:00:20.016 --> 00:00:23.262
+com alguns filmes diferentes
+
+00:00:23.296 --> 00:00:27.206
+e armazenar essa informação
+em user_movie_subset.
+
+00:00:27.240 --> 00:00:30.813
+É o que usaremos
+até o fim deste notebook.
+
+00:00:30.847 --> 00:00:32.773
+Vamos começar respondendo
+
+00:00:32.807 --> 00:00:35.294
+algumas perguntas
+sobre o subconjunto
+
+00:00:35.328 --> 00:00:39.068
+para garantir que entendemos
+os dados com que trabalharemos.
+
+00:00:39.102 --> 00:00:41.181
+A primeira pergunta é:
+
+00:00:41.215 --> 00:00:44.116
+"Qual é o número de usuários
+no subconjunto?"
+
+00:00:44.150 --> 00:00:46.950
+Digito user_movie_subset.
+shape[0].
+
+00:00:50.101 --> 00:00:52.466
+Parece que são 20.
+
+00:00:52.500 --> 00:00:56.762
+O número de filmes é 4,
+como eu vi na primeira parte.
+
+00:00:56.796 --> 00:01:00.050
+Vou mudar para "1" aqui.
+Pronto.
+
+00:01:00.084 --> 00:01:03.779
+"O usuário com a maior média
+das notas."
+
+00:01:03.813 --> 00:01:09.194
+Certo, mean(axis=1).
+
+00:01:09.228 --> 00:01:14.337
+Parece que o usuário 265
+tem uma média de 10.
+
+00:01:15.154 --> 00:01:18.066
+Vou colocar "e", para igual.
+
+00:01:18.100 --> 00:01:21.732
+"O filme com maior nota média."
+
+00:01:21.766 --> 00:01:27.458
+Vou mudar para "0".
+Parece que é este filme, 68646.
+
+00:01:27.851 --> 00:01:29.892
+Um "b".
+
+00:01:29.926 --> 00:01:32.641
+E o nome do filme.
+
+00:01:35.874 --> 00:01:40.634
+Em "movies",
+eu digito movie_id
+
+00:01:41.452 --> 00:01:45.251
+é igual a b.
+
+00:01:45.915 --> 00:01:50.571
+Para puxar o nome do filme,
+digito movie.
+
+00:01:55.418 --> 00:01:57.539
+Parece que é
+"O Poderoso Chefão".
+

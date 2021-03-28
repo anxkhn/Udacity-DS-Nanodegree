@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.250 --> 00:00:07.349
+In this lesson, we'll introduce to
+
+00:00:07.349 --> 00:00:10.679
+the three main methods used to create recommedation engines,
+
+00:00:10.679 --> 00:00:15.719
+and you got a glimpse at building these recommendations using the MovieTweetings data.
+
+00:00:15.720 --> 00:00:20.265
+You then saw some of the different rating scales you might use from click or not,
+
+00:00:20.265 --> 00:00:21.490
+to like or dislike,
+
+00:00:21.489 --> 00:00:23.375
+to more granular scales.
+
+00:00:23.375 --> 00:00:26.980
+Finally, we've looked at some of the goals recommenders play in
+
+00:00:26.980 --> 00:00:30.649
+meeting business needs that assists with the goal of driving revenue.
+
+00:00:30.649 --> 00:00:32.164
+In the next lesson,
+
+00:00:32.164 --> 00:00:34.570
+we'll look at collaborative filtering methods that use
+
+00:00:34.570 --> 00:00:37.570
+machine learning to make recommendations as well
+
+00:00:37.570 --> 00:00:39.715
+as some other difficult questions to answer
+
+00:00:39.715 --> 00:00:43.560
+like how do we measure how good our recommendations even are?
+

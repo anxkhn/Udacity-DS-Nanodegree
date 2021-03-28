@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:07.065
+Awesome job in this lesson.
+
+00:00:07.065 --> 00:00:08.955
+You've come so far.
+
+00:00:08.955 --> 00:00:12.310
+First, we took a look at the downfalls of some
+
+00:00:12.310 --> 00:00:15.640
+of the recommendation methods you saw in the last lesson.
+
+00:00:15.640 --> 00:00:18.655
+Specifically, we were worried that these didn't
+
+00:00:18.655 --> 00:00:21.865
+easily allow for us to know how well we were doing.
+
+00:00:21.864 --> 00:00:23.934
+Because the recommendations we make,
+
+00:00:23.934 --> 00:00:26.854
+might never actually be seen by our user.
+
+00:00:26.855 --> 00:00:30.179
+In which case, we don't know if they even like them or not.
+
+00:00:30.179 --> 00:00:32.990
+You learned about Singular Value Decomposition,
+
+00:00:32.990 --> 00:00:35.405
+as a means to predict rating values.
+
+00:00:35.405 --> 00:00:39.789
+These predicted ratings could then be compared to the actual ratings,
+
+00:00:39.789 --> 00:00:42.975
+to help us understand how well our predictions were performing.
+
+00:00:42.975 --> 00:00:49.225
+Unfortunately, we found this didn't work well when our ratings matrix had missing values.
+
+00:00:49.225 --> 00:00:52.600
+Therefore, you implemented funk SVD.
+
+00:00:52.600 --> 00:00:58.200
+Using funk SVD, you found that you could make predictions for any user movie pair.
+
+00:00:58.200 --> 00:01:02.630
+Except, when you are given a new user or a new movie.
+
+00:01:02.630 --> 00:01:04.870
+For these new users and movies,
+
+00:01:04.870 --> 00:01:07.210
+we've looked at a few different options,
+
+00:01:07.209 --> 00:01:11.054
+like using content or ranked based recommendations.
+
+00:01:11.055 --> 00:01:15.200
+Finally, you integrated this all into a Python module.
+
+00:01:15.200 --> 00:01:18.100
+Now, others and future you,
+
+00:01:18.099 --> 00:01:21.519
+can enjoy the fruits of your labor without having to
+
+00:01:21.519 --> 00:01:26.189
+do all of the labor over again. Awesome job.
+

@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.894 --> 00:00:04.813
+CONCLUSÃO
+
+00:00:05.077 --> 00:00:07.038
+Bom trabalho nesta aula.
+
+00:00:07.071 --> 00:00:09.141
+Você conquistou muita coisa.
+
+00:00:09.174 --> 00:00:13.556
+Primeiro, vimos algumas partes ruins
+dos métodos de recomendação
+
+00:00:13.589 --> 00:00:15.637
+da aula anterior.
+
+00:00:15.670 --> 00:00:20.108
+Não sabíamos se isso
+permitiria saber
+
+00:00:20.141 --> 00:00:21.976
+o nosso desempenho,
+
+00:00:22.009 --> 00:00:23.796
+porque as recomendações
+
+00:00:23.829 --> 00:00:26.867
+poderiam nunca ser vistas
+pelo usuário.
+
+00:00:26.900 --> 00:00:30.372
+Nesse caso, não sabíamos
+se eles gostavam ou não.
+
+00:00:30.405 --> 00:00:32.950
+Aprendemos sobre a decomposição
+de valor singular
+
+00:00:32.983 --> 00:00:35.410
+como forma de prever
+valores de classificação.
+
+00:00:35.443 --> 00:00:37.049
+Essas classificações previstas
+
+00:00:37.082 --> 00:00:39.724
+poderiam ser comparadas
+com as classificações reais
+
+00:00:39.757 --> 00:00:43.008
+para nos ajudar a entender
+o desempenho das previsões.
+
+00:00:43.041 --> 00:00:44.296
+Infelizmente,
+
+00:00:44.329 --> 00:00:46.256
+vimos que isso
+não funcionava bem
+
+00:00:46.289 --> 00:00:49.257
+quando a matriz de classificações
+tinha valores ausentes.
+
+00:00:49.290 --> 00:00:52.537
+Portanto,
+implementamos o funkSVD.
+
+00:00:52.570 --> 00:00:54.264
+Usando o funkSVD,
+
+00:00:54.297 --> 00:00:58.168
+conseguimos fazer previsões para
+qualquer par usuário-filme,
+
+00:00:58.201 --> 00:01:02.737
+exceto quando recebíamos
+um novo usuário ou um novo filme.
+
+00:01:02.770 --> 00:01:04.802
+Para esses novos
+usuários e filmes,
+
+00:01:04.835 --> 00:01:07.016
+observamos algumas
+opções diferentes,
+
+00:01:07.049 --> 00:01:11.289
+como usar as recomendações baseadas
+no conteúdo ou na classificação.
+
+00:01:11.322 --> 00:01:15.136
+Finalmente, integramos tudo
+em um módulo Python
+
+00:01:15.169 --> 00:01:17.960
+para que outras pessoas,
+e você no futuro,
+
+00:01:17.993 --> 00:01:20.330
+pudessem desfrutar
+do seu trabalho
+
+00:01:20.363 --> 00:01:23.866
+sem precisar refazer tudo.
+
+00:01:23.899 --> 00:01:25.393
+Ótimo trabalho.
+

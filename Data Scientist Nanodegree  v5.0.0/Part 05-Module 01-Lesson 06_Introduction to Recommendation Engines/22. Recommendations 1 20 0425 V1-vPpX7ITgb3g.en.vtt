@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.104
+In the previous notebook,
+
+00:00:02.104 --> 00:00:05.779
+you saw a way of making recommendations using collaborative filtering.
+
+00:00:05.780 --> 00:00:09.179
+In this notebook, we're going to take a look at a little bit of
+
+00:00:09.179 --> 00:00:13.664
+a different way to make recommendations based on the actual content.
+
+00:00:13.664 --> 00:00:19.589
+The way that we'll do that with the dataset we're working with in this lesson is by
+
+00:00:19.589 --> 00:00:22.350
+looking at the content associated with the movies
+
+00:00:22.350 --> 00:00:25.865
+and then trying to find movies that have similar content.
+
+00:00:25.864 --> 00:00:28.604
+Specific to our dataset,
+
+00:00:28.605 --> 00:00:33.240
+we can look at a header of the movies,
+
+00:00:33.240 --> 00:00:40.520
+and the idea is that we might use the year that the movie was created or
+
+00:00:40.520 --> 00:00:43.440
+the genre associated with the movie to better
+
+00:00:43.439 --> 00:00:47.729
+understand what movies might be most similar to it.
+
+00:00:47.729 --> 00:00:53.089
+You also could do something with natural language processing to try to
+
+00:00:53.090 --> 00:00:55.505
+find movies that are similar in terms of the title
+
+00:00:55.505 --> 00:00:58.490
+or if you had like the actual transcript of the movie,
+
+00:00:58.490 --> 00:01:02.495
+you could try to find movies that were similar based on having similar transcripts.
+
+00:01:02.494 --> 00:01:06.084
+Those are maybe more advanced than the techniques we'll look at this lesson,
+
+00:01:06.084 --> 00:01:10.439
+specifically because we don't actually have a lot of that information available to us.
+
+00:01:10.439 --> 00:01:15.319
+We'll do our best with sort of looking at these last dummy columns that
+
+00:01:15.319 --> 00:01:17.494
+we created to try to figure out
+
+00:01:17.495 --> 00:01:20.730
+how movies are related to one another based on the content.
+
+00:01:20.730 --> 00:01:22.805
+In this first part here,
+
+00:01:22.805 --> 00:01:26.465
+we're going to take a look at which users didn't
+
+00:01:26.465 --> 00:01:30.109
+actually get enough recommendations based on collaborative filtering,
+
+00:01:30.109 --> 00:01:36.474
+and not enough in our case will be anyone who didn't have more than nine,
+
+00:01:36.474 --> 00:01:40.634
+who didn't receive 10 or more recommendations using collaborative filtering.
+
+00:01:40.635 --> 00:01:43.035
+Up here, when we read stuff in,
+
+00:01:43.034 --> 00:01:45.155
+you can see we have this all_recs thing,
+
+00:01:45.155 --> 00:01:48.890
+which is essentially a dictionary where the key is a user and
+
+00:01:48.890 --> 00:01:53.710
+the value is a list of recommendations for that user.
+
+00:01:53.709 --> 00:01:56.794
+So, the key is the user ID and the value
+
+00:01:56.795 --> 00:02:03.090
+is a list of the movies that we had recommend for that user.
+
+00:02:03.310 --> 00:02:08.090
+In order to figure out the users who have all of the recs,
+
+00:02:08.090 --> 00:02:16.455
+essentially we want to loop through this all_recs dictionary.
+
+00:02:16.455 --> 00:02:23.745
+Basically, if the length of the movies array is greater than nine,
+
+00:02:23.745 --> 00:02:26.560
+we'll append to that user.
+
+00:02:26.560 --> 00:02:28.400
+This is basically saying if they have
+
+00:02:28.400 --> 00:02:31.485
+10 or more movies that have been recommended to them,
+
+00:02:31.485 --> 00:02:33.595
+then they have all of their recs.
+
+00:02:33.594 --> 00:02:38.060
+Otherwise, we'll say that they still need recommendations and these are essentially
+
+00:02:38.060 --> 00:02:43.420
+the users that we want to focus on for the content-based recommendations.
+
+00:02:47.240 --> 00:02:56.379
+So, it looks like that worked out okay.
+
+00:02:56.379 --> 00:02:59.000
+It looks like we had 31,000 users
+
+00:02:59.000 --> 00:03:03.800
+who didn't get 10 or more ratings based on collaborative filtering.
+

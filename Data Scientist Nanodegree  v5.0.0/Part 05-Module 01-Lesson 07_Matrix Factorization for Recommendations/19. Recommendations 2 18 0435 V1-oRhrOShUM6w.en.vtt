@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.200
+Now that we have put together a function that
+
+00:00:04.200 --> 00:00:08.365
+will make predicted ratings for any user movie combination,
+
+00:00:08.365 --> 00:00:11.580
+we should try to get a better idea of how
+
+00:00:11.580 --> 00:00:16.050
+well our predictions are matching up with the actual values that are available.
+
+00:00:16.050 --> 00:00:18.690
+Unfortunately, with everything we've done so far,
+
+00:00:18.690 --> 00:00:23.310
+we don't have predicted actual values that are very fair for us to judge
+
+00:00:23.309 --> 00:00:28.424
+on because we don't have training and test splits of the data.
+
+00:00:28.425 --> 00:00:30.574
+So in this notebook, we're going to do exactly that,
+
+00:00:30.574 --> 00:00:33.515
+we're going to split the data into training and test partitions,
+
+00:00:33.515 --> 00:00:37.005
+and then we're going to see how well we can make predictions
+
+00:00:37.005 --> 00:00:41.935
+on test ratings that our model hasn't seen before.
+
+00:00:41.935 --> 00:00:45.565
+So to do that, again we'll first read in our data set.
+
+00:00:45.564 --> 00:00:47.564
+Once we read in the data set,
+
+00:00:47.564 --> 00:00:50.030
+we're going to create a little function that's going
+
+00:00:50.030 --> 00:00:52.929
+to order things by a particular column,
+
+00:00:52.929 --> 00:00:55.530
+which here we just calls the order by column,
+
+00:00:55.530 --> 00:00:59.060
+and then it's going to split our data set into a training and test set,
+
+00:00:59.060 --> 00:01:02.315
+determined by the training size and testing sites that we pass to it.
+
+00:01:02.314 --> 00:01:03.974
+So, the way I'm going to do this,
+
+00:01:03.975 --> 00:01:06.640
+is I'm going to sort the reviews dataset,
+
+00:01:06.640 --> 00:01:09.349
+which is the reviews dataset that we're going to pass in,
+
+00:01:09.349 --> 00:01:13.049
+and we'll sort it by just the order by column.
+
+00:01:13.049 --> 00:01:18.765
+I'm going to store this into reviews new.
+
+00:01:18.765 --> 00:01:22.004
+Then, I'm going to make the training set,
+
+00:01:22.004 --> 00:01:24.349
+the first part of reviews new.
+
+00:01:24.349 --> 00:01:27.019
+So, a really nice way that we can do this is just to
+
+00:01:27.019 --> 00:01:29.689
+take a header based on the training size,
+
+00:01:29.689 --> 00:01:32.969
+and then the validation dataset that will pass back.
+
+00:01:32.969 --> 00:01:36.620
+I'll call this df, just because that's what it's called down at the bottom,
+
+00:01:36.620 --> 00:01:42.965
+is to take the rows associated with starting at
+
+00:01:42.965 --> 00:01:49.885
+the training size and then going to the training plus testing size.
+
+00:01:49.885 --> 00:01:54.560
+So, basically, this is going to say start at where we ended off here,
+
+00:01:54.560 --> 00:01:57.445
+and then go as far as the testing size.
+
+00:01:57.444 --> 00:01:59.779
+Essentially, we could do this a little differently where
+
+00:01:59.780 --> 00:02:02.484
+we don't pass a testing size or maybe we just go to
+
+00:02:02.484 --> 00:02:08.439
+the ending row of the reviews dataframe that's passed in.
+
+00:02:08.439 --> 00:02:10.750
+That's another way, we could do this.
+
+00:02:10.750 --> 00:02:13.699
+Then we can test this out by running this cell down here,
+
+00:02:13.699 --> 00:02:16.859
+which would run this function, review new.
+
+00:02:16.860 --> 00:02:18.545
+Oh, and I missed,
+
+00:02:18.544 --> 00:02:23.509
+and that's somewhere I think reviews new, quote.
+
+00:02:23.509 --> 00:02:28.509
+So then, we should have a training and testing set.
+
+00:02:28.669 --> 00:02:33.019
+So, the training dataset here in this case is the 8,000,
+
+00:02:33.020 --> 00:02:35.049
+the testing set is 2,000,
+
+00:02:35.049 --> 00:02:37.980
+and then this is just the number of columns.
+
+00:02:38.409 --> 00:02:42.359
+Cool, and now it looks like we pass all of our tests.
+

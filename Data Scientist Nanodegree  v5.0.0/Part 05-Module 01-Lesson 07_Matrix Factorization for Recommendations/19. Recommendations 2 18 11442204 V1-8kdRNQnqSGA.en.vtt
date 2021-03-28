@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.670
+So, from there, let's get this function ready to go
+
+00:00:05.670 --> 00:00:08.205
+called print_prediction_summary.
+
+00:00:08.205 --> 00:00:11.670
+I'm going to say let's grab the movie name
+
+00:00:11.670 --> 00:00:15.480
+and I'm just going to go into the movies data frame to get that.
+
+00:00:15.480 --> 00:00:21.250
+So this is the data frame that we were working with at the very beginning.
+
+00:00:21.800 --> 00:00:27.825
+Basically, if the movie is equal to the movie_id that you give me,
+
+00:00:27.825 --> 00:00:33.060
+I'm going to go in and grab that movie title,
+
+00:00:33.060 --> 00:00:37.740
+and so this should actually be movie_id is the name of the column.
+
+00:00:37.740 --> 00:00:41.410
+If you need a reminder, let's just do.
+
+00:00:42.470 --> 00:00:44.820
+So it looks like this.
+
+00:00:44.820 --> 00:00:46.410
+Basically, we're saying go in,
+
+00:00:46.410 --> 00:00:49.445
+pull the movie_id, and then give me the movie name back.
+
+00:00:49.445 --> 00:00:52.539
+So this is saying go into that dataframe,
+
+00:00:52.539 --> 00:00:55.065
+grab the movie_id where it's equal to the movie_id,
+
+00:00:55.065 --> 00:00:58.220
+and then grab the movie back from that dataframe.
+
+00:00:58.220 --> 00:01:01.820
+So if we go into the movie name,
+
+00:01:01.820 --> 00:01:05.120
+this is just some fancy string stuff that we could do.
+
+00:01:05.120 --> 00:01:06.920
+I think it just made it easier to read.
+
+00:01:06.920 --> 00:01:09.260
+So I don't know that you necessarily need to do this part,
+
+00:01:09.260 --> 00:01:12.085
+but this made it easier for me to read the output.
+
+00:01:12.085 --> 00:01:16.550
+Basically, if you see this, replace it with nothing.
+
+00:01:16.550 --> 00:01:19.790
+That's what this is doing. Yeah, so both of these
+
+00:01:19.790 --> 00:01:21.610
+are just cleaning up the movie name.
+
+00:01:21.610 --> 00:01:24.050
+Instead, we could have just pulled the movie name to use
+
+00:01:24.050 --> 00:01:29.625
+and then for user and I'm going to pass this ID into this part.
+
+00:01:29.625 --> 00:01:37.230
+We predict a, and here's the rating we predict for the movie.
+
+00:01:37.230 --> 00:01:44.235
+Then we're going to pass in the user_id,
+
+00:01:44.235 --> 00:01:49.660
+and then the movie_id, and then the movie_name.
+
+00:01:49.700 --> 00:01:56.730
+So now we have this nice statement that says for user 8 we predict,
+
+00:01:56.730 --> 00:02:01.865
+and this should be prediction for the movie, should be like that.
+
+00:02:01.865 --> 00:02:07.310
+So for user 8 we predict a 6.65 rating on this movie.
+
+00:02:07.310 --> 00:02:10.645
+So now we have this nice statement about what's happening.
+
+00:02:10.645 --> 00:02:14.250
+It would be really useful to understand
+
+00:02:14.250 --> 00:02:17.390
+how well our predictions are actually doing.
+
+00:02:17.390 --> 00:02:19.940
+So that's what we're going to look at next.
+
+00:02:19.940 --> 00:02:22.940
+So what we are taking in is the validation dataset
+
+00:02:22.940 --> 00:02:26.930
+which we're using here to pull that particular information from.
+
+00:02:26.930 --> 00:02:28.910
+What we're going to do is we're going
+
+00:02:28.910 --> 00:02:32.900
+to make predictions for a certain number of rows.
+
+00:02:32.900 --> 00:02:35.720
+So the prediction that we're going to make,
+
+00:02:35.720 --> 00:02:39.540
+we're going to use the predict rating function.
+
+00:02:48.410 --> 00:02:54.174
+So what this is doing is it's looping through each of these arrays,
+
+00:02:54.174 --> 00:02:56.370
+however many predictions we want to make.
+
+00:02:56.370 --> 00:03:00.080
+But we're going to loop through that many and we're going to essentially
+
+00:03:00.080 --> 00:03:04.085
+give the predicted versus the actual value on each of these things.
+
+00:03:04.085 --> 00:03:12.720
+So for the first part, we're going to get an error.
+
+00:03:12.720 --> 00:03:16.280
+So for the first part, we're going to just make this prediction on six of these.
+
+00:03:16.280 --> 00:03:20.150
+So you can see that for this user on this movie,
+
+00:03:20.150 --> 00:03:23.410
+the actual value is an eight and we predict it to be about a six,
+
+00:03:23.410 --> 00:03:26.555
+the actual is a nine, we predict it to be a 7.3.
+
+00:03:26.555 --> 00:03:31.510
+This is pretty good considering how sparse our original matrix was.
+
+00:03:31.510 --> 00:03:35.720
+These are all movies that we don't have any ratings for these users.
+
+00:03:35.720 --> 00:03:38.135
+So it's pretty spectacular that we're getting anything.
+
+00:03:38.135 --> 00:03:42.245
+We'll notice that if we try to do it for seven, we still get an error.
+
+00:03:42.245 --> 00:03:46.010
+So we try to do this for the first six and we were able
+
+00:03:46.010 --> 00:03:47.495
+to make predictions for all of these.
+
+00:03:47.495 --> 00:03:51.250
+But then when we hit the seventh user movie pair,
+
+00:03:51.250 --> 00:03:54.645
+we get an error. It says that this is out of the bounds.
+
+00:03:54.645 --> 00:03:57.080
+So this last part is to write a statement
+
+00:03:57.080 --> 00:03:59.615
+about what you think happened. I'll give you a hint.
+
+00:03:59.615 --> 00:04:02.840
+It again has to do with the cold start problem
+
+00:04:02.840 --> 00:04:06.290
+and the fact that we're getting new users and movies
+
+00:04:06.290 --> 00:04:11.130
+in our testing set that weren't actually in our training set.
+

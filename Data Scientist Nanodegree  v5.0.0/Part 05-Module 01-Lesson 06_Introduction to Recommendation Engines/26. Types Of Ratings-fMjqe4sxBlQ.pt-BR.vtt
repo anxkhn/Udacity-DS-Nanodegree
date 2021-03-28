@@ -1,0 +1,117 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.735 --> 00:00:04.854
+TIPOS DE CLASSIFICAÇÕES
+
+00:00:04.887 --> 00:00:08.280
+Vimos três tipos
+de mecanismos de recomendações:
+
+00:00:08.313 --> 00:00:11.433
+a baseada no conhecimento,
+a de filtragem colaborativa
+
+00:00:11.466 --> 00:00:13.374
+e a baseada no conteúdo,
+
+00:00:13.407 --> 00:00:16.433
+mas também devemos discutir
+os tipos de classificações
+
+00:00:16.466 --> 00:00:19.214
+que podemos usar
+para obter recomendações.
+
+00:00:19.247 --> 00:00:20.574
+Em alguns casos,
+
+00:00:20.607 --> 00:00:23.486
+só sabemos se o usuário
+interagiu com um item.
+
+00:00:23.519 --> 00:00:28.437
+Em muitos casos, pode ser mais útil
+saber se o usuário curtiu um item.
+
+00:00:28.470 --> 00:00:30.775
+Existem diferentes escalas
+que podemos usar
+
+00:00:30.808 --> 00:00:34.056
+para saber o quanto alguém
+gostou de um item.
+
+00:00:34.089 --> 00:00:36.864
+Isso pode ser simplesmente curtir
+ou descurtir algo.
+
+00:00:36.897 --> 00:00:40.112
+Também podemos obter classificações
+por espectro.
+
+00:00:40.145 --> 00:00:43.312
+De 1 a 3, de 1 a 5,
+de 1 a 7
+
+00:00:43.345 --> 00:00:46.441
+e de 1 a 10,
+que são espectros comuns.
+
+00:00:46.474 --> 00:00:49.023
+Dependendo da granularidade
+desejada
+
+00:00:49.056 --> 00:00:52.536
+ou se permitiremos
+a neutralidade,
+
+00:00:52.569 --> 00:00:55.964
+optamos por uma escala
+de classificação.
+
+00:00:55.997 --> 00:00:58.925
+Quando conseguirmos obter
+a classificação dos usuários,
+
+00:00:58.958 --> 00:01:01.783
+pense no tipo de classificação
+que significaria mais.
+
+00:01:01.816 --> 00:01:04.785
+Sugiro construir
+uma escala simples
+
+00:01:04.818 --> 00:01:06.939
+que forneça
+a informação necessária.
+
+00:01:06.972 --> 00:01:09.099
+Se conseguir entender
+tudo que é preciso
+
+00:01:09.132 --> 00:01:12.169
+a partir de uma curtida
+ou descurtida, use isso.
+
+00:01:12.202 --> 00:01:14.271
+Se precisar
+de algo mais granular,
+
+00:01:14.304 --> 00:01:17.886
+pense se alguém neutro
+alterará o resultado.
+
+00:01:17.919 --> 00:01:22.077
+Talvez você queira
+que alguém seja neutro.
+
+00:01:22.110 --> 00:01:24.663
+Esses aspectos devem ser
+levados em consideração
+
+00:01:24.696 --> 00:01:27.287
+na hora de determinar
+a escala a ser usada.
+

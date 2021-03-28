@@ -1,0 +1,101 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.768 --> 00:00:04.916
+TIPOS DE FILTRAGEM
+COLABORATIVA
+
+00:00:05.543 --> 00:00:06.765
+No último vídeo,
+
+00:00:06.798 --> 00:00:09.520
+fomos apresentados
+à filtragem colaborativa.
+
+00:00:09.553 --> 00:00:12.165
+O nome "filtragem colaborativa"
+vem da ideia
+
+00:00:12.198 --> 00:00:14.902
+de que podemos usar
+colaborações de itens do usuário
+
+00:00:14.935 --> 00:00:16.582
+para fazer recomendações.
+
+00:00:16.615 --> 00:00:17.894
+O que isto significa
+
+00:00:17.927 --> 00:00:22.085
+é que, mesmo sem qualquer informação
+anterior sobre os usuários
+
+00:00:22.118 --> 00:00:25.088
+e sem informações básicas
+sobre os itens,
+
+00:00:25.121 --> 00:00:27.455
+podemos fazer recomendações.
+
+00:00:27.488 --> 00:00:29.646
+As únicas informações
+necessárias
+
+00:00:29.679 --> 00:00:34.653
+são dados sobre como os usuários
+e os itens interagem.
+
+00:00:34.686 --> 00:00:36.966
+As recomendações
+que exigem informações
+
+00:00:36.999 --> 00:00:39.030
+sobre usuários e itens
+
+00:00:39.063 --> 00:00:42.726
+são consideradas um sistema de
+recomendações baseado em conteúdo,
+
+00:00:42.759 --> 00:00:46.693
+que será o último tipo
+de abordagem desta aula.
+
+00:00:46.726 --> 00:00:49.174
+Por enquanto,
+vamos dar uma olhada
+
+00:00:49.207 --> 00:00:53.133
+no tipo de informação necessária
+para a filtragem colaborativa.
+
+00:00:53.166 --> 00:00:55.327
+O tipo de dados
+que pode ser usado
+
+00:00:55.360 --> 00:00:57.425
+para a filtragem colaborativa
+
+00:00:57.458 --> 00:01:00.025
+inclui dados que respondem
+a perguntas como:
+
+00:01:00.058 --> 00:01:02.987
+Como os usuários
+classificaram determinados itens?
+
+00:01:03.020 --> 00:01:05.973
+Quais itens os usuários
+gostaram ou não gostaram?
+
+00:01:06.006 --> 00:01:11.300
+Poderíamos até mesmo perguntar
+se um usuário usou ou não cada item,
+
+00:01:11.333 --> 00:01:14.935
+mas não precisamos conhecer
+nenhum contexto adicional
+
+00:01:14.968 --> 00:01:17.511
+sobre os usuários ou os itens.
+

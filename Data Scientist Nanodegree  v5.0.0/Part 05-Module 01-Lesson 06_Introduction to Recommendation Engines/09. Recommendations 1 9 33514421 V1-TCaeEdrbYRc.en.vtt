@@ -1,0 +1,298 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.610
+Then this last part,
+
+00:00:01.610 --> 00:00:03.305
+basically, we can add filters.
+
+00:00:03.305 --> 00:00:05.455
+So, up here with this function,
+
+00:00:05.455 --> 00:00:09.929
+this was basically just returning the most popular recommendations no matter what.
+
+00:00:09.929 --> 00:00:15.835
+what we know is from the nice part is from this ranked_movies dataframe,
+
+00:00:15.835 --> 00:00:17.960
+which is now created and we can just use.
+
+00:00:17.960 --> 00:00:20.679
+Just going to look at that.
+
+00:00:20.679 --> 00:00:26.939
+From this, we might just choose specific years or specific genres
+
+00:00:26.940 --> 00:00:33.140
+and pull movies that fall into that specific set of years or genres.
+
+00:00:33.140 --> 00:00:36.359
+So, we have a date associated with them,
+
+00:00:36.359 --> 00:00:37.519
+and so we can check that.
+
+00:00:37.520 --> 00:00:44.245
+Or we can check if these are like one or a zero or even pull from this genre portion.
+
+00:00:44.244 --> 00:00:48.019
+If some particular text is shown in there,
+
+00:00:48.020 --> 00:00:51.195
+we could pull that to only return those movies.
+
+00:00:51.195 --> 00:00:55.820
+So, if we wanted to create a function to do that, we might call it,
+
+00:00:55.820 --> 00:00:57.075
+or at least I called mine,
+
+00:00:57.075 --> 00:01:01.484
+as you can see from the text up here, popular_recs_filtered.
+
+00:01:01.484 --> 00:01:06.329
+You can see from the body up here,
+
+00:01:06.329 --> 00:01:08.159
+these are the things that it takes.
+
+00:01:08.159 --> 00:01:12.424
+So, it takes a user_id, n_top just like before,
+
+00:01:12.424 --> 00:01:16.534
+ranked_movies is what I had mine used up above,
+
+00:01:16.534 --> 00:01:19.560
+and then the years and the genres.
+
+00:01:19.560 --> 00:01:23.314
+It looks like at least from this suggestion,
+
+00:01:23.314 --> 00:01:27.034
+it takes the years and then genres as lists.
+
+00:01:27.034 --> 00:01:32.439
+Then you can then use those lists run through the values and pull
+
+00:01:32.439 --> 00:01:39.579
+only the things from the ranked_movies dataframe that fall into those values.
+
+00:01:39.579 --> 00:01:43.810
+It might be easiest to look at ranked_movies.
+
+00:01:43.810 --> 00:01:48.314
+Basically, if we wanted to pull certain dates,
+
+00:01:48.314 --> 00:01:50.084
+we could say, "Okay,
+
+00:01:50.084 --> 00:01:55.780
+give me the ranked movies where the date is 2015,
+
+00:01:55.780 --> 00:01:57.585
+or 2016, or 2017."
+
+00:01:57.584 --> 00:02:00.469
+So, you can see those dates down here.
+
+00:02:00.469 --> 00:02:08.275
+If we do something like saying 2015.
+
+00:02:08.275 --> 00:02:10.289
+Okay. So that didn't work.
+
+00:02:10.289 --> 00:02:14.259
+What if it's as a list?
+
+00:02:16.610 --> 00:02:24.760
+Cool. Yeah. So, you can see that if I pass a list holding a date,
+
+00:02:24.759 --> 00:02:26.299
+we only get those dates back.
+
+00:02:26.300 --> 00:02:29.945
+So, let's try 2016.
+
+00:02:29.944 --> 00:02:34.549
+Great. So, if I pass a list with multiple of those,
+
+00:02:34.550 --> 00:02:40.405
+I can get the ranked movies where the date is in that specified range.
+
+00:02:40.405 --> 00:02:43.685
+So, we might add that into this.
+
+00:02:43.685 --> 00:02:47.930
+Might say, "Give me the ranked movies where the date is in,"
+
+00:02:47.930 --> 00:02:52.819
+and we just want this to be the list of years that they pass in,
+
+00:02:52.819 --> 00:02:58.810
+and that'll be my new ranked_movies dataframe.
+
+00:02:58.810 --> 00:03:01.295
+Then at the same time,
+
+00:03:01.294 --> 00:03:05.299
+we could look at the genres.
+
+00:03:05.300 --> 00:03:10.990
+This looks like it might be a little trickier because the genre can actually show up.
+
+00:03:10.990 --> 00:03:14.620
+There can be more than one genre as you can see here,
+
+00:03:14.620 --> 00:03:17.384
+so like short, comedy, drama.
+
+00:03:17.384 --> 00:03:19.340
+There's actually three genres here,
+
+00:03:19.340 --> 00:03:21.534
+there's two genres here,
+
+00:03:21.534 --> 00:03:24.590
+there's only one genre with this particular film,
+
+00:03:24.590 --> 00:03:27.745
+which makes it potentially a little bit harder of a problem.
+
+00:03:27.745 --> 00:03:31.659
+So, the way that I solve this,
+
+00:03:31.819 --> 00:03:37.459
+so if we looked at the ranked_movies and we pull this history column and we say, "Look,
+
+00:03:37.460 --> 00:03:43.715
+this is a one" if this particular movie_id has that genre or a zero otherwise.
+
+00:03:43.715 --> 00:03:45.210
+But if we pass,
+
+00:03:45.210 --> 00:03:52.314
+let's say we want to get historical Sci-Fi movies and we pull both of those,
+
+00:03:52.314 --> 00:03:54.814
+then we're going to get both of those columns back.
+
+00:03:54.814 --> 00:03:57.379
+Essentially, if this is an OR statement,
+
+00:03:57.379 --> 00:04:03.289
+so if the genre is I want history or Sci-Fi movies or another movie,
+
+00:04:03.289 --> 00:04:06.370
+basically we would want this movie returned,
+
+00:04:06.370 --> 00:04:08.405
+we would want this movie returned,
+
+00:04:08.405 --> 00:04:10.175
+but we don't want these ones returned.
+
+00:04:10.175 --> 00:04:11.415
+We still want this one.
+
+00:04:11.414 --> 00:04:13.275
+We can't just look at this column.
+
+00:04:13.275 --> 00:04:16.959
+Essentially, what we want to do is take the sum,
+
+00:04:16.959 --> 00:04:24.774
+and if this sum that's given back is greater than zero,
+
+00:04:24.774 --> 00:04:28.264
+then that means at least one of this is in that movie.
+
+00:04:28.264 --> 00:04:29.829
+But it could be three,
+
+00:04:29.829 --> 00:04:32.194
+which just means multiple of the genre showed up.
+
+00:04:32.194 --> 00:04:35.969
+So, the solution that I'm taking is an OR statement.
+
+00:04:35.970 --> 00:04:41.980
+Like, if it's history or it's Sci-Fi or it's one of these other ones,
+
+00:04:41.980 --> 00:04:45.035
+any of those, then give me the movie back.
+
+00:04:45.035 --> 00:04:47.975
+So, we can sort of see that with this part here.
+
+00:04:47.975 --> 00:04:51.240
+So, I'm going to use this part.
+
+00:04:52.790 --> 00:04:56.875
+So, basically, if this is greater than zero,
+
+00:04:56.875 --> 00:04:59.824
+then what I know is that
+
+00:04:59.824 --> 00:05:05.264
+the ranked movies for that particular row have at least one of those genres.
+
+00:05:05.264 --> 00:05:09.868
+So, I'm going to call this num_genre_match,
+
+00:05:09.869 --> 00:05:16.600
+and then basically what we can do is the ranked_movies that we want back are
+
+00:05:16.600 --> 00:05:25.075
+the ranked_movies that have rows where the row has greater than zero.
+
+00:05:25.074 --> 00:05:28.495
+So, if this is greater than zero, we want those back.
+
+00:05:28.495 --> 00:05:31.625
+Essentially, we could just take all the columns back.
+
+00:05:31.625 --> 00:05:38.620
+So, the ranked_movies where- and this is no longer these two,
+
+00:05:38.620 --> 00:05:42.840
+but in fact it's the entire list of genres that you give me,
+
+00:05:42.839 --> 00:05:44.894
+let's see how many there are.
+
+00:05:44.894 --> 00:05:49.729
+So, this sum is going to tell me how many of those genres show up in any particular row,
+
+00:05:49.730 --> 00:05:55.254
+and then essentially what we want to do is if that row has more than one,
+
+00:05:55.254 --> 00:05:57.139
+we'll return that back.
+
+00:05:57.139 --> 00:06:02.235
+Then, similar to this function up here with the top movies,
+
+00:06:02.235 --> 00:06:04.939
+we can just use this basically exactly.
+
+00:06:04.939 --> 00:06:10.920
+So, up here, these are just creating our filters.
+
+00:06:10.920 --> 00:06:12.504
+So, this is one filter,
+
+00:06:12.504 --> 00:06:14.420
+this is another filter.
+
+00:06:14.420 --> 00:06:17.949
+This takes in the years and genre, creates the top movies,
+
+00:06:17.949 --> 00:06:19.050
+and then at the end,
+
+00:06:19.050 --> 00:06:23.600
+we just want to return the top movies.
+

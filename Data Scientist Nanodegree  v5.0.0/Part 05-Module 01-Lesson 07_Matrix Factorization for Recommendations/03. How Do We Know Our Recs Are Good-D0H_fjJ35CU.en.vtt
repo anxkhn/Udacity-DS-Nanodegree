@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.790 --> 00:00:07.049
+In the last lesson,
+
+00:00:07.049 --> 00:00:10.320
+you made a number of recommendations using different methods.
+
+00:00:10.320 --> 00:00:13.665
+However, we didn't really look at how we could know
+
+00:00:13.664 --> 00:00:17.174
+if our users would even like our recommendations.
+
+00:00:17.175 --> 00:00:21.005
+In practice, we could look at a particular metric of interests,
+
+00:00:21.004 --> 00:00:23.489
+prior to implementing our recommendation.
+
+00:00:23.489 --> 00:00:29.059
+This might be a metric associated with user engagement, downloads, or revenue.
+
+00:00:29.059 --> 00:00:32.039
+We could then look at the metric again after
+
+00:00:32.039 --> 00:00:35.575
+implementing the recommendation engine to see the impact.
+
+00:00:35.575 --> 00:00:39.540
+All of the ideas related to the experimental design portion of this course,
+
+00:00:39.539 --> 00:00:44.685
+will come in handy when choosing how to best implement your recommendations and practice.
+
+00:00:44.685 --> 00:00:47.719
+But what if you would like to get a sense of how well
+
+00:00:47.719 --> 00:00:52.545
+your recommendation engine might work before using it on real users?
+
+00:00:52.545 --> 00:00:54.645
+Similar to machine learning techniques,
+
+00:00:54.645 --> 00:00:56.220
+you already are familiar with.
+
+00:00:56.219 --> 00:01:00.899
+It's a good idea to split your data into training and testing partition.
+
+00:01:00.899 --> 00:01:04.250
+You will fit the recommender on the training set,
+
+00:01:04.250 --> 00:01:07.375
+and then evaluate the performance on the test set.
+
+00:01:07.375 --> 00:01:10.340
+If your collected ratings are made over time,
+
+00:01:10.340 --> 00:01:13.015
+you should make the newest data your test set.
+
+00:01:13.015 --> 00:01:18.280
+This way, you avoid using future data to make predictions on past data.
+
+00:01:18.280 --> 00:01:21.379
+Now, take as an example Allie,
+
+00:01:21.379 --> 00:01:23.884
+who liked Avengers and Spiderman.
+
+00:01:23.885 --> 00:01:27.885
+We might recommend to her Rocky and the Incredibles.
+
+00:01:27.885 --> 00:01:31.165
+However, if she still hasn't seen them,
+
+00:01:31.165 --> 00:01:34.160
+then we don't know if these predictions are actually good.
+
+00:01:34.159 --> 00:01:38.450
+Instead, if we predict ratings for every movie,
+
+00:01:38.450 --> 00:01:44.395
+then we can compare the ratings of the movies a user actually watch to our predictions.
+
+00:01:44.394 --> 00:01:49.829
+If we predict for every user item combination in the test set,
+
+00:01:49.829 --> 00:01:53.685
+we can understand how well our recommendation engine is working.
+
+00:01:53.685 --> 00:01:55.890
+This is just one of the reasons,
+
+00:01:55.890 --> 00:02:01.314
+the next technique we'll look at for making recommendations has become extremely popular.
+
+00:02:01.314 --> 00:02:05.715
+It provides predicted ratings for every user item pair.
+
+00:02:05.715 --> 00:02:08.420
+This then allows you to use metrics like mean
+
+00:02:08.419 --> 00:02:12.019
+squared error or mean absolute error to measure how well
+
+00:02:12.020 --> 00:02:15.170
+your recommendation system is performing across
+
+00:02:15.169 --> 00:02:20.879
+all user anime combinations before you have to deploy it into the world.
+

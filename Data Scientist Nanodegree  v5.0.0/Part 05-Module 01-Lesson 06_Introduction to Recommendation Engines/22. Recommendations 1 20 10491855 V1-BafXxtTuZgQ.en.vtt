@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.810
+Then the next part what we want to do is we want to
+
+00:00:03.810 --> 00:00:08.740
+be able to pull the movies that are most like that particular movie.
+
+00:00:14.539 --> 00:00:19.019
+So what's the case here is that we have this dot_prod_movies,
+
+00:00:19.019 --> 00:00:25.905
+which is a matrix where each row is associated with a particular movie,
+
+00:00:25.905 --> 00:00:30.109
+and each column is then associated with a movie as well.
+
+00:00:30.109 --> 00:00:32.850
+Then the number in a particular cell
+
+00:00:32.850 --> 00:00:35.925
+tells us how related those two movies are with each other.
+
+00:00:35.924 --> 00:00:39.449
+So this three is a measure of
+
+00:00:39.450 --> 00:00:43.640
+the relationship between the first movie and the second movie,
+
+00:00:43.640 --> 00:00:48.024
+and this three is the relationship between the first movie and the third movie.
+
+00:00:48.024 --> 00:00:51.920
+This one is the relationship between the first movie and the fourth movie.
+
+00:00:51.920 --> 00:00:55.850
+However, because we took the dot product of these NP arrays,
+
+00:00:55.850 --> 00:00:59.945
+we don't actually have the movie index associated with them.
+
+00:00:59.945 --> 00:01:04.040
+So what we're doing in this part is we're going to use this NP where to
+
+00:01:04.040 --> 00:01:08.120
+figure out which row that movie will exist in.
+
+00:01:08.120 --> 00:01:10.380
+So the nice part is these movies only show up once.
+
+00:01:10.379 --> 00:01:13.714
+The order shouldn't have changed by taking the dot product.
+
+00:01:13.715 --> 00:01:19.469
+So we can index into the array in the right spot by essentially pulling this value.
+
+00:01:19.469 --> 00:01:25.209
+So if we index into it once, we get an array,
+
+00:01:25.209 --> 00:01:26.929
+but actually I just want the number.
+
+00:01:26.930 --> 00:01:29.045
+So I'm going to index into that one more time.
+
+00:01:29.045 --> 00:01:36.260
+So this gives me which spot the 10th movie ID should fall in in my matrix.
+
+00:01:36.260 --> 00:01:39.170
+So which row or column, either way.
+
+00:01:39.170 --> 00:01:44.820
+So I'm just going to call this movie_index.
+
+00:01:51.819 --> 00:01:56.044
+In order to find the most similar movie,
+
+00:01:56.045 --> 00:02:00.829
+we want to find where the maximum value is.
+
+00:02:00.829 --> 00:02:06.759
+So the way that I decided to do that was by taking the movie_index,
+
+00:02:06.760 --> 00:02:11.939
+and I'm going to say, "Where is the value equal to max?"
+
+00:02:11.939 --> 00:02:16.770
+So this part here is going to return an array.
+
+00:02:19.240 --> 00:02:25.835
+We store this into movie, and we run this.
+
+00:02:25.835 --> 00:02:31.409
+The idea is that this gives me the array associated with that particular movie.
+
+00:02:31.810 --> 00:02:35.134
+If we take where that's the maximum,
+
+00:02:35.134 --> 00:02:40.679
+so basically just this same thing, and we find that,
+
+00:02:40.680 --> 00:02:45.655
+then this can get all of the places where the movies are most similar.
+
+00:02:45.655 --> 00:02:47.590
+So the very most similar.
+
+00:02:47.590 --> 00:02:49.819
+One of those movies will always be the movie itself,
+
+00:02:49.819 --> 00:02:52.030
+but then the others will be other movies
+
+00:02:52.030 --> 00:02:54.500
+who basically shared the exact same content features,
+
+00:02:54.500 --> 00:02:55.675
+they were in the same year,
+
+00:02:55.675 --> 00:02:57.740
+and they shared the same genres.
+
+00:02:57.740 --> 00:03:02.659
+Let's just run this really quick just to see what it gives us back.
+
+00:03:03.150 --> 00:03:08.370
+So basically, for this particular movie index,
+
+00:03:08.370 --> 00:03:13.090
+there are six movies that have the exact same content features.
+
+00:03:13.090 --> 00:03:16.659
+What I really want is just that array.
+
+00:03:16.659 --> 00:03:19.525
+So if we just index into it once,
+
+00:03:19.525 --> 00:03:20.960
+we can get just that array,
+
+00:03:20.960 --> 00:03:23.340
+which is what I actually want. So I want that array.
+
+00:03:23.340 --> 00:03:27.069
+I'm just going to call this similar_movies.
+
+00:03:29.300 --> 00:03:31.550
+Actually, these are the indices.
+
+00:03:31.550 --> 00:03:34.225
+So I'm going to call this similar_indices.
+
+00:03:34.224 --> 00:03:40.484
+Then similar movies, if we go into the movies data frame,
+
+00:03:40.485 --> 00:03:46.245
+and we pull the IDs,
+
+00:03:46.245 --> 00:03:51.990
+so we now have this array that's the indices,
+
+00:03:51.990 --> 00:03:56.820
+and we can go back in and pull just the movie titles that we want.
+
+00:03:57.430 --> 00:04:03.099
+So this part here is going into the original movies data frame,
+
+00:04:03.099 --> 00:04:04.655
+and pulling those rows,
+
+00:04:04.655 --> 00:04:07.400
+and then this is saying, "Just give me the movie column back.
+
+00:04:07.400 --> 00:04:08.520
+I don't want anything else,
+
+00:04:08.520 --> 00:04:13.040
+and then just give me that as a NumPy array." You can try this out.
+
+00:04:13.039 --> 00:04:19.925
+So if I have find_similar_movies to movie eight,
+
+00:04:19.925 --> 00:04:22.444
+here basically the movie title is associated with that.
+
+00:04:22.444 --> 00:04:27.800
+Or if I have movie 10, here are the movies
+
+00:04:27.800 --> 00:04:30.650
+that are most similar in terms of content to that movie.
+
+00:04:30.649 --> 00:04:33.739
+If we do one of these other ones, like 91,
+
+00:04:33.740 --> 00:04:41.970
+these are the movies that are most similar to movie 91.
+

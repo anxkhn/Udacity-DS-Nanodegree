@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.829 --> 00:00:04.701
+POR QUE SVD?
+
+00:00:04.735 --> 00:00:07.012
+Nesta aula, você vai usar
+uma técnica
+
+00:00:07.046 --> 00:00:09.199
+chamada "decomposição
+em valores singulares"
+
+00:00:09.233 --> 00:00:11.003
+para fazer recomendações.
+
+00:00:11.037 --> 00:00:14.640
+A matemática associada
+à decomposição em valores singulares
+
+00:00:14.674 --> 00:00:16.413
+pode ser bastante complexa.
+
+00:00:16.447 --> 00:00:19.543
+O objetivo principal
+é usar essa técnica
+
+00:00:19.577 --> 00:00:21.464
+para fazer recomendações.
+
+00:00:21.498 --> 00:00:25.399
+Como saber fazer os cálculos
+de cor não é o objetivo,
+
+00:00:25.433 --> 00:00:28.751
+vamos ver parte dos cálculos
+associados à técnica
+
+00:00:28.785 --> 00:00:32.135
+e eu vou adicionar recursos
+adicionais com ao longo da aula,
+
+00:00:32.169 --> 00:00:34.927
+caso você decida que quer saber
+mais a fundo.
+
+00:00:34.961 --> 00:00:38.648
+A primeira coisa que quero fazer
+é motivá-lo a entender
+
+00:00:38.682 --> 00:00:41.328
+por que usar
+a decomposição de valores singulares
+
+00:00:41.362 --> 00:00:43.560
+para fazer recomendações.
+
+00:00:43.594 --> 00:00:45.237
+No começo dos anos 2000,
+
+00:00:45.271 --> 00:00:47.332
+a Netflix lançou
+um conjunto de dados
+
+00:00:47.366 --> 00:00:49.212
+com só três colunas.
+
+00:00:49.246 --> 00:00:52.190
+Assim como os conjuntos
+com que você tem trabalhado,
+
+00:00:52.224 --> 00:00:54.253
+mas com muito mais linhas.
+
+00:00:54.287 --> 00:00:56.422
+Eles ofereceram um prêmio
+de US$ 1 milhão
+
+00:00:56.456 --> 00:00:58.588
+para a pessoa ou a equipe
+
+00:00:58.622 --> 00:01:01.172
+que fizesse
+as melhores recomendações.
+
+00:01:01.206 --> 00:01:04.085
+Lembro que, na época,
+eu estava na faculdade,
+
+00:01:04.119 --> 00:01:09.020
+e um grupo de professores se uniu
+para trabalhar nessas recomendações.
+
+00:01:09.054 --> 00:01:12.492
+Com muitos dos líderes
+pertencendo a essas equipes,
+
+00:01:12.526 --> 00:01:17.589
+um indivíduo chamado Simon Funk
+se manteve no top 10.
+
+00:01:17.623 --> 00:01:20.372
+E o algoritmo que ele usou
+para as recomendações
+
+00:01:20.406 --> 00:01:23.836
+era simplesmente
+o que você aprenderá agora,
+
+00:01:23.870 --> 00:01:26.848
+conhecido como "decomposição
+em valores singulares de Funk",
+
+00:01:26.882 --> 00:01:28.965
+ou "SVD de Funk".
+

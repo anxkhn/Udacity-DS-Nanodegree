@@ -1,0 +1,251 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Experiment Sizing - Discussion</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>A/B Testing Case Study</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Scenario Description.html">02. Scenario Description</a>
+    </li>
+    <li class="">
+      <a href="03. Building a Funnel.html">03. Building a Funnel</a>
+    </li>
+    <li class="">
+      <a href="04. Building a Funnel - Discussion.html">04. Building a Funnel - Discussion</a>
+    </li>
+    <li class="">
+      <a href="05. Deciding on Metrics - Part I.html">05. Deciding on Metrics - Part I</a>
+    </li>
+    <li class="">
+      <a href="06. Deciding on Metrics - Part II.html">06. Deciding on Metrics - Part II</a>
+    </li>
+    <li class="">
+      <a href="07. Deciding on Metrics - Discussion.html">07. Deciding on Metrics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="08. Experiment Sizing.html">08. Experiment Sizing</a>
+    </li>
+    <li class="">
+      <a href="09. Experiment Sizing - Discussion.html">09. Experiment Sizing - Discussion</a>
+    </li>
+    <li class="">
+      <a href="10. Validity, Bias, and Ethics - Discussion.html">10. Validity, Bias, and Ethics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="11. Analyze Data.html">11. Analyze Data</a>
+    </li>
+    <li class="">
+      <a href="12. Draw Conclusions.html">12. Draw Conclusions</a>
+    </li>
+    <li class="">
+      <a href="13. Draw Conclusions - Discussion.html">13. Draw Conclusions - Discussion</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Conclusion.html">14. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Experiment Sizing - Discussion</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="re-experiment-sizing">Re: Experiment Sizing</h2>
+<p>Because we have two evaluation metrics of interest, we should make sure that we <br />
+are choosing an appropriate significance level to conduct each test, in order <br />
+to preserve a maximum overall Type I error rate of .05. Since we would be happy <br />
+to deploy the new homepage if either download rate or license purchase <br />
+rate showed a statistically significant increase, performing both individual <br />
+tests at a .05 error rate carries the risk of making too many Type I errors. As <br />
+such, we'll apply the Bonferroni correction to run each test at a .025 error <br />
+rate so as to protect against making too many errors. If it were the case that <br />
+we needed to see both metrics with a statistically significant increase, then <br />
+we wouldn't need to include the correction on the individual tests.</p>
+<p>For an overall 5% Type I error rate with Bonferroni correction and 80% power, <br />
+we should require 6 days (rounded up from 5.55) to reliably detect a 50 <br />
+download increase per day and 21 days (rounded up from 20.44) to detect an <br />
+increase of 10 license purchases per day. 21 days is actually a convenient <br />
+number since the three-week timespan helps to account for weekly cycles. In <br />
+addition, the 21-day data collection period is a short enough timeframe that <br />
+running the experiment is a reasonable proposition. If the required experiment <br />
+length were a few weeks longer, then we might have needed to forego measuring <br />
+the license purchasing rate as a critical metric.</p>
+<p>One thing that isn't accounted for in the base experiment length calculations <br />
+is that there is going to be a delay between when users download the software <br />
+and when they actually purchase a license. That is, when we start the <br />
+experiment, there could be about seven days before a user account associated <br />
+with a cookie actually comes back to make their purchase. Any purchases <br />
+observed within the first week might not be attributable to either experimental <br />
+condition. As a way of accounting for this, we'll run the experiment for about<br />
+one week longer to allow those users who come in during the third week a<br />
+chance to come back and be counted in the license purchases tally.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Validity, Bias, and Ethics</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Before you go on to the next part to analyze some simulated data, do you think that there would be any issues with the experiment in terms of validity, bias, or ethical guidelines?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Validity, Bias, and Ethics - Discussion.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Experiment Sizing - Discussion')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

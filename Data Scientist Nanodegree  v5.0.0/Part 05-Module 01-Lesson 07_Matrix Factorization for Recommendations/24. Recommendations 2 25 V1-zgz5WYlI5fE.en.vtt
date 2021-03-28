@@ -1,0 +1,319 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.780
+In this last part,
+
+00:00:01.780 --> 00:00:05.629
+we're going to want to move all the code that you used in earlier notebooks,
+
+00:00:05.629 --> 00:00:11.140
+into a single class that could be used by anyone to easily fit your recommendation,
+
+00:00:11.140 --> 00:00:12.825
+and then make predictions,
+
+00:00:12.824 --> 00:00:15.674
+or recommendations to new users.
+
+00:00:15.675 --> 00:00:17.469
+In order to do this,
+
+00:00:17.469 --> 00:00:20.729
+there are few files which you can see over here on the left.
+
+00:00:20.730 --> 00:00:22.875
+The file that you'll need to fill in,
+
+00:00:22.875 --> 00:00:25.399
+is this recommender_template file.
+
+00:00:25.399 --> 00:00:27.254
+If we open this,
+
+00:00:27.254 --> 00:00:30.529
+you'll notice that there's already a class set up in here.
+
+00:00:30.530 --> 00:00:34.429
+Then you'll notice that it has a Fit method. It has an Init.
+
+00:00:34.429 --> 00:00:37.519
+In case there are any variables you want to pass to your class,
+
+00:00:37.520 --> 00:00:39.625
+it has a predict_rating method,
+
+00:00:39.625 --> 00:00:42.804
+and it has a make_recs method.
+
+00:00:42.804 --> 00:00:46.789
+You'll notice that we also have the train_data.csv,
+
+00:00:46.789 --> 00:00:50.914
+which has all the reviews data and the movies_clean.csv.
+
+00:00:50.914 --> 00:00:55.839
+I'll just give you a quick glimpse of how your recommender will work once it's all setup.
+
+00:00:55.840 --> 00:00:57.585
+If we go into Python,
+
+00:00:57.585 --> 00:01:02.695
+you should be able to pull your recommender file from this recommender.py file.
+
+00:01:02.695 --> 00:01:06.665
+So, from recommender, I'm going to import this.
+
+00:01:06.665 --> 00:01:10.175
+Then, you should be able to instantiate it.
+
+00:01:10.174 --> 00:01:13.340
+So, I didn't actually have anything in my init,
+
+00:01:13.340 --> 00:01:15.475
+but you might set yours up in a different way.
+
+00:01:15.474 --> 00:01:19.369
+Then, essentially the way that I have set my init up,
+
+00:01:19.370 --> 00:01:21.609
+was so that it takes the reviews data.
+
+00:01:21.609 --> 00:01:26.914
+So, it should take the training data and then will take the movies data.
+
+00:01:26.915 --> 00:01:32.745
+I just set it up so it will fit our recommender to that training and movies data.
+
+00:01:32.745 --> 00:01:35.600
+You'll notice, this is using something like what you saw
+
+00:01:35.599 --> 00:01:39.679
+before with Singular Value Decomposition using SVD.
+
+00:01:39.680 --> 00:01:42.890
+You'll notice that I'm using the FunkSVD fit portion,
+
+00:01:42.890 --> 00:01:45.829
+but you could fit yours using the most popular recommendation.
+
+00:01:45.829 --> 00:01:49.069
+You could fit it based on some content-based recommendation,
+
+00:01:49.069 --> 00:01:52.699
+or you could use the setup that we made in the previous notebook.
+
+00:01:52.700 --> 00:01:55.070
+There isn't one right answer for this part.
+
+00:01:55.069 --> 00:01:56.724
+So, while this is running,
+
+00:01:56.724 --> 00:02:00.804
+I'm going to give you a quick glimpse of how my recommender file is setup.
+
+00:02:00.805 --> 00:02:03.950
+I also created this recommender functions file,
+
+00:02:03.950 --> 00:02:06.859
+where I just had a whole bunch of the functions that we wrote,
+
+00:02:06.858 --> 00:02:09.469
+and I pulled the ones that I needed into this file.
+
+00:02:09.469 --> 00:02:12.109
+If we look at the recommender functions file,
+
+00:02:12.110 --> 00:02:15.710
+you'll notice that I put the get_movie_names function in here.
+
+00:02:15.710 --> 00:02:19.515
+I created the function for create ranked dataframe in here.
+
+00:02:19.514 --> 00:02:22.349
+Again, basically, I just copied and pasted
+
+00:02:22.349 --> 00:02:26.069
+a whole bunch of the functions that we had already written into this file,
+
+00:02:26.069 --> 00:02:29.229
+so that I can easily use them in my recommender class.
+
+00:02:29.229 --> 00:02:32.590
+If we look at the class file,
+
+00:02:32.590 --> 00:02:35.390
+you'll notice I didn't have anything in my setup.
+
+00:02:35.389 --> 00:02:38.959
+But then, I wrote a really nice doc string so that it was
+
+00:02:38.960 --> 00:02:44.045
+clear for me what my inputs and outputs should be for each one of these.
+
+00:02:44.044 --> 00:02:49.383
+You'll notice that this particular recommendation will have 12 latent features.
+
+00:02:49.383 --> 00:02:53.394
+It'll have this learning rate and it should run for a hundred iterations.
+
+00:02:53.395 --> 00:02:58.430
+So, we're about halfway done at this point and then after we're done fitting our model,
+
+00:02:58.430 --> 00:03:01.719
+I set it up so that I can easily predict and make
+
+00:03:01.719 --> 00:03:05.504
+recommendations using this recommender that I instantiate.
+
+00:03:05.504 --> 00:03:10.715
+Here, I just want to give you a glimpse of each of the methods that are in my class.
+
+00:03:10.715 --> 00:03:15.545
+So, it's really useful to write nice doc strings for each of these methods.
+
+00:03:15.544 --> 00:03:18.829
+So that way, if someone else were to use your class,
+
+00:03:18.830 --> 00:03:23.565
+they could easily be able to write a question mark after any of your methods,
+
+00:03:23.564 --> 00:03:26.780
+and see what they should be inputting and what they can expect
+
+00:03:26.780 --> 00:03:30.405
+back out for each part of your recommendation class.
+
+00:03:30.405 --> 00:03:34.280
+Actually, all of the code that you see within the class,
+
+00:03:34.280 --> 00:03:37.240
+as well as within the recommender functions,
+
+00:03:37.240 --> 00:03:40.534
+is basically just code that we use throughout the notebooks.
+
+00:03:40.534 --> 00:03:43.039
+I just put it nicely into a class,
+
+00:03:43.039 --> 00:03:45.408
+so that it was easily reusable.
+
+00:03:45.408 --> 00:03:48.560
+Great. So, we can see that this model isn't
+
+00:03:48.560 --> 00:03:52.460
+necessarily done fitting to our data in a way where it's converged.
+
+00:03:52.460 --> 00:03:54.939
+It might be useful to run this for longer,
+
+00:03:54.939 --> 00:03:57.259
+but for the purpose of this demonstration,
+
+00:03:57.259 --> 00:04:00.745
+this illustrates how the fit method works.
+
+00:04:00.745 --> 00:04:04.909
+Based on that, if you weren't sure how the fit method was run,
+
+00:04:04.909 --> 00:04:08.314
+we have these doc strings that I wrote into the class.
+
+00:04:08.314 --> 00:04:12.055
+So, it's really easy to see what the inputs should be.
+
+00:04:12.055 --> 00:04:15.895
+You can see that there's no output that should come back from this.
+
+00:04:15.895 --> 00:04:19.750
+It did print what was happening but there was nothing returned.
+
+00:04:19.750 --> 00:04:22.415
+It created all of these other things,
+
+00:04:22.415 --> 00:04:27.020
+and now each of these should exist on my instantiated object.
+
+00:04:27.019 --> 00:04:29.824
+So if we look at, say here,
+
+00:04:29.824 --> 00:04:34.209
+the n users, we can see how many users were in the dataset.
+
+00:04:34.209 --> 00:04:36.454
+Or if we look at the number of movies,
+
+00:04:36.454 --> 00:04:39.004
+we can see how many users are in the dataset.
+
+00:04:39.004 --> 00:04:41.409
+Or we could look at the number of movies,
+
+00:04:41.410 --> 00:04:43.950
+and you can see how many of those were in the dataset.
+
+00:04:43.949 --> 00:04:48.084
+Again, the class makes it really easy to pull certain parts.
+
+00:04:48.084 --> 00:04:51.914
+So, here are all the things that exist.
+
+00:04:51.915 --> 00:04:54.970
+We should be able to make a recommendation.
+
+00:04:54.970 --> 00:04:58.025
+I just remembered that user eight was at the top.
+
+00:04:58.024 --> 00:05:00.984
+Oh sorry. That didn't work.
+
+00:05:00.985 --> 00:05:02.824
+If we look little closer,
+
+00:05:02.824 --> 00:05:05.495
+you can see that the default is a movie type.
+
+00:05:05.495 --> 00:05:07.454
+Let's go back up here.
+
+00:05:07.454 --> 00:05:13.334
+So, we can enter the ID and then this should be the ID type of user.
+
+00:05:13.334 --> 00:05:15.344
+So, I'm going to change this to user.
+
+00:05:15.345 --> 00:05:20.785
+Great. Then we can see that these are the five movies that we recommend to that user.
+
+00:05:20.785 --> 00:05:22.965
+You can see that that's the default.
+
+00:05:22.964 --> 00:05:26.899
+Again, it's really useful to write a good doc string.
+
+00:05:26.899 --> 00:05:31.109
+So that you can see exactly what you're supposed to be providing to these methods.
+
+00:05:31.110 --> 00:05:33.040
+You can see this with mine.
+
+00:05:33.040 --> 00:05:35.450
+I haven't used this for awhile and I wasn't
+
+00:05:35.449 --> 00:05:38.594
+exactly sure why it wasn't working without the doc string.
+
+00:05:38.595 --> 00:05:42.120
+I probably wouldn't have been able to figure this out without it.
+
+00:05:42.120 --> 00:05:46.019
+I hope this gives you some insight into how you could build your class.
+
+00:05:46.019 --> 00:05:50.389
+There's a lot of flexibility in creating whatever functionality you want into
+
+00:05:50.389 --> 00:05:56.709
+your class and making this as extravagant or as simple as you might like.
+

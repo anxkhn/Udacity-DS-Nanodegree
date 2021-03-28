@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.349 --> 00:00:05.653
+INTRODUÇÃO
+
+00:00:06.031 --> 00:00:07.216
+Nas aulas anteriores,
+
+00:00:07.249 --> 00:00:10.249
+aprendemos sobre os componentes
+conceituais e estatísticos
+
+00:00:10.282 --> 00:00:13.302
+do design
+e da análise de um experimento.
+
+00:00:13.335 --> 00:00:18.352
+Agora, veremos como o que aprendeu
+é usado em um estudo de caso.
+
+00:00:18.385 --> 00:00:22.062
+Veremos o processo de design
+de um experimento web
+
+00:00:22.095 --> 00:00:23.853
+a partir do funil do usuário,
+
+00:00:23.886 --> 00:00:25.357
+da concepção das métricas
+
+00:00:25.390 --> 00:00:28.585
+e da estimativa do tempo
+de execução do experimento.
+
+00:00:28.618 --> 00:00:30.732
+Depois, analisaremos
+os dados coletados,
+
+00:00:30.765 --> 00:00:32.505
+executando
+estatísticas inferenciais
+
+00:00:32.538 --> 00:00:35.040
+nas métricas invariantes
+e da avaliação,
+
+00:00:35.073 --> 00:00:38.179
+para tirar conclusões
+sobre o experimento.
+
+00:00:38.212 --> 00:00:39.673
+Vamos começar.
+

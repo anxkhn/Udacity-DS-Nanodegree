@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.797 --> 00:00:05.072
+INTRODUÇÃO AOS MECANISMOS
+DE RECOMENDAÇÃO
+
+00:00:05.418 --> 00:00:08.502
+Bem-vindo a esta aula sobre
+os mecanismos de recomendações.
+
+00:00:08.535 --> 00:00:11.286
+Os mecanismos de recomendações
+são uma das aplicações
+
+00:00:11.319 --> 00:00:14.012
+mais importantes
+da Ciência de Dados atualmente.
+
+00:00:14.045 --> 00:00:16.599
+A Ciência de Dados é usada
+para recomendar tudo,
+
+00:00:16.632 --> 00:00:21.567
+desde música e filmes
+a amigos e novos destinos.
+
+00:00:21.600 --> 00:00:25.382
+Nesta aula,
+veremos alguns métodos comuns
+
+00:00:25.415 --> 00:00:27.366
+para criar recomendações.
+
+00:00:27.399 --> 00:00:30.510
+Esses métodos se dividem
+em três recomendações principais:
+
+00:00:30.543 --> 00:00:32.486
+nas baseadas no conhecimento,
+
+00:00:32.519 --> 00:00:34.260
+nas baseadas no conteúdo
+
+00:00:34.293 --> 00:00:37.211
+e nas baseadas
+na filtragem colaborativa.
+
+00:00:37.244 --> 00:00:41.973
+Isto servirá como base sólida
+da construção das aulas futuras,
+
+00:00:42.006 --> 00:00:46.004
+nas quais veremos técnicas
+de recomendações mais avançadas.
+

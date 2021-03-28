@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.009 --> 00:00:06.879
+In this lesson, you're going to learn
+
+00:00:06.879 --> 00:00:11.580
+about SVD as a traditional approach to matrix factorization.
+
+00:00:11.580 --> 00:00:15.009
+Unfortunately, as you'll find out for yourself,
+
+00:00:15.009 --> 00:00:16.780
+this approach will fall short,
+
+00:00:16.780 --> 00:00:19.135
+and helping us in making recommendations,
+
+00:00:19.135 --> 00:00:24.359
+as it only works when our user item matrix has no missing values.
+
+00:00:24.359 --> 00:00:30.155
+However, the ideas here will be helpful as we continue in the rest of the lesson.
+
+00:00:30.155 --> 00:00:32.050
+In the previous lesson,
+
+00:00:32.049 --> 00:00:37.319
+you saw how we might create a user item matrix with users on the rows like this,
+
+00:00:37.320 --> 00:00:39.914
+and items on the columns like this.
+
+00:00:39.914 --> 00:00:43.210
+We might rewrite the user item matrix,
+
+00:00:43.210 --> 00:00:48.804
+where each R represents the rating by some user for some item.
+
+00:00:48.804 --> 00:00:50.679
+So, the first values,
+
+00:00:50.679 --> 00:00:54.829
+one through N indicate which user made the rating.
+
+00:00:54.829 --> 00:01:00.244
+The second value, one through M indicate the movie being rated.
+
+00:01:00.244 --> 00:01:06.515
+So, R11 here represents the rating user one gave to movie one.
+
+00:01:06.515 --> 00:01:12.724
+R23 here represents the rating user two gave to movie three.
+
+00:01:12.724 --> 00:01:18.655
+When we use singular value decomposition or SVD on a user item matrix,
+
+00:01:18.655 --> 00:01:21.420
+we split it into three matrices.
+
+00:01:21.420 --> 00:01:27.049
+Commonly, these matrices are called U Sigma and V transpose.
+
+00:01:27.049 --> 00:01:31.064
+First, let's take a closer look at this U matrix.
+
+00:01:31.064 --> 00:01:34.579
+The goal of this U matrix is to give us an idea of
+
+00:01:34.579 --> 00:01:38.090
+how users are related to particular latent factors.
+
+00:01:38.090 --> 00:01:41.630
+So, let's say we have these four users,
+
+00:01:41.629 --> 00:01:47.649
+and we'll also bring back a few latent factors: dogs, AI and sadness.
+
+00:01:47.650 --> 00:01:51.469
+Numbers within this U matrix would be an indicator of
+
+00:01:51.469 --> 00:01:56.200
+how each user feels about each latent factor.
+
+00:01:56.200 --> 00:02:00.400
+We can see that Jessie will rate dog movies highest.
+
+00:02:00.400 --> 00:02:05.570
+We can also see how AI ratings are related to each user,
+
+00:02:05.569 --> 00:02:08.944
+where Sam will rate these movies highest,
+
+00:02:08.944 --> 00:02:13.454
+or that these users will rate sad movies the highest.
+
+00:02:13.455 --> 00:02:18.310
+The U matrix would then be an N by K matrix,
+
+00:02:18.310 --> 00:02:23.444
+where K determines the number of latent factors you're looking to keep.
+
+00:02:23.444 --> 00:02:28.189
+Next, let's take a look at the V transpose matrix.
+
+00:02:28.189 --> 00:02:32.344
+This matrix again holds all the latent factors.
+
+00:02:32.344 --> 00:02:34.099
+But instead of users,
+
+00:02:34.099 --> 00:02:36.810
+this matrix tells us about movies.
+
+00:02:36.810 --> 00:02:41.240
+Looking at the same latent factors but using the movies instead,
+
+00:02:41.240 --> 00:02:43.520
+we get a matrix that looks like this.
+
+00:02:43.520 --> 00:02:45.745
+From the V transpose matrix,
+
+00:02:45.745 --> 00:02:47.840
+we can see that Lady and the Tramp has
+
+00:02:47.840 --> 00:02:51.335
+the highest value associated with our dog latent feature.
+
+00:02:51.335 --> 00:02:54.800
+The Notebook is the saddest of our movies,
+
+00:02:54.800 --> 00:02:59.915
+AI and Wall-E have positive values with our robot latent feature.
+
+00:02:59.914 --> 00:03:02.929
+The Notebook and Lady and the Tramp have
+
+00:03:02.930 --> 00:03:06.530
+pretty large negative values associated with this feature,
+
+00:03:06.530 --> 00:03:08.050
+which brings up a good point.
+
+00:03:08.050 --> 00:03:14.070
+The values of the U and V transposed matrices can take on any value.
+
+00:03:14.069 --> 00:03:19.430
+The weighting of movies or users onto a particular latent feature do not need to be
+
+00:03:19.430 --> 00:03:25.219
+positive even if all the given ratings and the user item matrix are positive.
+
+00:03:25.219 --> 00:03:28.430
+Given the information being held in this matrix,
+
+00:03:28.430 --> 00:03:30.895
+we can see that it's a K by N matrix,
+
+00:03:30.895 --> 00:03:33.560
+where K is the number of latent factors,
+
+00:03:33.560 --> 00:03:35.979
+and N is the number of movies.
+
+00:03:35.979 --> 00:03:40.604
+Finally, we also need to look at the middle Sigma matrix.
+
+00:03:40.604 --> 00:03:44.185
+This matrix is a K by K diagonal matrix,
+
+00:03:44.185 --> 00:03:48.854
+which means every entry that is not on the diagonal is a zero.
+
+00:03:48.854 --> 00:03:51.079
+It has the same number of rows and
+
+00:03:51.080 --> 00:03:54.850
+columns as the number of latent factors you decide to keep.
+
+00:03:54.849 --> 00:03:57.979
+In practice, the number of latent factors you
+
+00:03:57.979 --> 00:04:01.219
+choose to keep isn't necessarily straightforward.
+
+00:04:01.219 --> 00:04:04.969
+Here, we have these nicely labeled factors,
+
+00:04:04.969 --> 00:04:08.430
+but you will see soon that won't really be the case.
+
+00:04:08.430 --> 00:04:11.450
+These values along the diagonal can help us in
+
+00:04:11.449 --> 00:04:14.530
+determining how many latent factors we keep.
+
+00:04:14.530 --> 00:04:19.259
+They will always be positive values that are sorted from largest to smallest,
+
+00:04:19.259 --> 00:04:23.899
+where the first value is a weight associated with the first latent factor,
+
+00:04:23.899 --> 00:04:28.745
+and the second value is associated with the second main factor and so on.
+
+00:04:28.745 --> 00:04:33.139
+The larger weights are an indication that the latent factor is more
+
+00:04:33.139 --> 00:04:38.979
+important and being able to reproduce the ratings of the original user item matrix.
+
+00:04:38.980 --> 00:04:44.270
+So, here we can see that knowing that a user has a strong preference for dogs,
+
+00:04:44.269 --> 00:04:47.839
+or that a movie is related to dogs is more important in
+
+00:04:47.839 --> 00:04:52.579
+predicting ratings than using preferences on robots or sadness.
+
+00:04:52.579 --> 00:04:55.759
+By multiplying these matrices together,
+
+00:04:55.759 --> 00:04:58.235
+we are reconstructing a movie rating for
+
+00:04:58.235 --> 00:05:03.540
+each user movie combination based on how the users feel about the latent factors,
+
+00:05:03.540 --> 00:05:08.385
+as well as how much those latent factors matter towards a rating.
+
+00:05:08.384 --> 00:05:13.125
+Finally, using how a latent factor appears in a specific movie,
+
+00:05:13.125 --> 00:05:17.124
+by finding values for the matrices U, sigma,
+
+00:05:17.124 --> 00:05:22.720
+and V transpose, we can find a prediction for every user movie combination.
+

@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.852 --> 00:00:05.122
+CONCLUSÃO
+
+00:00:05.155 --> 00:00:08.717
+Nesta aula, vimos os três
+principais métodos usados
+
+00:00:08.750 --> 00:00:10.787
+para criar mecanismos
+de recomendações,
+
+00:00:10.820 --> 00:00:13.410
+além de vermos a construção
+dessas recomendações
+
+00:00:13.443 --> 00:00:15.755
+usando os dados
+do MovieTweeting.
+
+00:00:15.788 --> 00:00:18.970
+Vimos algumas escalas
+de classificações úteis -
+
+00:00:19.003 --> 00:00:21.418
+de clicar ou não,
+de curtir ou descurtir
+
+00:00:21.451 --> 00:00:23.402
+às escalas mais granulares.
+
+00:00:23.435 --> 00:00:26.691
+Por fim, vimos como
+os objetivos de recomendações
+
+00:00:26.724 --> 00:00:30.739
+se adéquam à necessidade de aumentar
+o faturamento da empresa.
+
+00:00:30.772 --> 00:00:34.171
+Na próxima aula, veremos os métodos
+de filtragem colaborativa
+
+00:00:34.204 --> 00:00:36.965
+que usam
+o aprendizado de máquina,
+
+00:00:36.998 --> 00:00:39.763
+além de perguntas difíceis
+de serem respondidas,
+
+00:00:39.796 --> 00:00:43.143
+como, por exemplo, como medir
+a qualidade das recomendações.
+

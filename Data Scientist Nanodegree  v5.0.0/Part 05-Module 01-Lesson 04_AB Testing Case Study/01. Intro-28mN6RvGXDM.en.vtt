@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.179 --> 00:00:07.365
+In the previous lessons,
+
+00:00:07.365 --> 00:00:10.259
+you've learned about conceptual and statistical components
+
+00:00:10.259 --> 00:00:13.339
+that go in designing and analyzing an experiment.
+
+00:00:13.339 --> 00:00:18.359
+In this lesson, you'll see how the things you've learned can be used in a case study.
+
+00:00:18.359 --> 00:00:21.960
+You'll be led through the design process for a web-based experiment.
+
+00:00:21.960 --> 00:00:23.880
+From thinking about the user funnel,
+
+00:00:23.879 --> 00:00:25.349
+coming up with metrics,
+
+00:00:25.350 --> 00:00:28.385
+and estimating how long the experiment will need to be run.
+
+00:00:28.385 --> 00:00:30.840
+Then you'll analyze collected data,
+
+00:00:30.839 --> 00:00:34.590
+performing inferential statistics on both invariant and evaluation
+
+00:00:34.590 --> 00:00:36.240
+metrics in order to come up with
+
+00:00:36.240 --> 00:00:40.120
+some conclusions about the experiment. So let's get to it.
+

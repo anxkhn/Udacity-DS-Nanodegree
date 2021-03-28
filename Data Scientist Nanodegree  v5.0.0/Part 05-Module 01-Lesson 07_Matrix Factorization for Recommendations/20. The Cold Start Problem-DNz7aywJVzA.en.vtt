@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.695
+In the previous notebook,
+
+00:00:06.695 --> 00:00:09.880
+you got a glimpse of some of the issues that still remain
+
+00:00:09.880 --> 00:00:13.585
+when making predictions using matrix factorization techniques.
+
+00:00:13.585 --> 00:00:18.300
+New users and movies are being added to our database all the time,
+
+00:00:18.300 --> 00:00:22.269
+and matrix factorization techniques aren't going to work in making
+
+00:00:22.269 --> 00:00:26.695
+predictions for these users and movies because they don't have any ratings yet.
+
+00:00:26.695 --> 00:00:29.699
+SVD has two major benefits.
+
+00:00:29.699 --> 00:00:33.549
+The first is that it gives a predicted rating for all of
+
+00:00:33.549 --> 00:00:39.004
+our user-movie pairs even when the total number of ratings is very sparse.
+
+00:00:39.005 --> 00:00:43.810
+Second, it gives a way to evaluate how good those ratings
+
+00:00:43.810 --> 00:00:46.520
+actually are using traditional metrics
+
+00:00:46.520 --> 00:00:49.415
+you've seen in regression machine learning techniques.
+
+00:00:49.414 --> 00:00:52.879
+Despite this, there's still the problem that we're left
+
+00:00:52.880 --> 00:00:56.745
+without predicted ratings for new users and movies.
+
+00:00:56.744 --> 00:01:00.750
+This is a common problem known as the cold start problem.
+
+00:01:00.750 --> 00:01:03.590
+In general, collaborative filtering methods
+
+00:01:03.590 --> 00:01:06.920
+just don't work for making recommendations in these cases.
+
+00:01:06.920 --> 00:01:08.995
+Instead, we'll need to use
+
+00:01:08.995 --> 00:01:14.520
+knowledge-based or content-based recommendations like you saw in the last lesson.
+
+00:01:14.519 --> 00:01:16.204
+In the next notebook,
+
+00:01:16.204 --> 00:01:18.560
+you'll create a blended approach for making
+
+00:01:18.560 --> 00:01:21.855
+recommendations using collaborative filtering with SVD,
+
+00:01:21.855 --> 00:01:23.810
+as well as knowledge and
+
+00:01:23.810 --> 00:01:27.640
+content-based recommendations for dealing with the cold start problem.
+

@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.764 --> 00:00:04.782
+COMO SABER O DESEMPENHO
+DAS NOSSAS RECOMENDAÇÕES?
+
+00:00:05.710 --> 00:00:08.806
+Na última aula, você fez
+várias recomendações
+
+00:00:08.840 --> 00:00:10.429
+usando métodos diferentes.
+
+00:00:10.463 --> 00:00:13.662
+No entanto, não vimos
+como podemos saber
+
+00:00:13.696 --> 00:00:17.238
+se nossos usuários gostariam
+dessas recomendações.
+
+00:00:17.272 --> 00:00:20.991
+Na prática, podemos avaliar
+uma métrica de interesses
+
+00:00:21.025 --> 00:00:23.599
+antes de implementar
+a recomendação.
+
+00:00:23.633 --> 00:00:26.894
+Pode ser uma métrica associada
+ao engajamento de usuário,
+
+00:00:26.928 --> 00:00:29.278
+downloads ou à receita.
+
+00:00:29.312 --> 00:00:31.614
+Depois podemos avaliar
+a métrica novamente
+
+00:00:31.648 --> 00:00:35.791
+após implementar o sistema
+de recomendação para ver o impacto.
+
+00:00:35.825 --> 00:00:39.598
+Todas as ideias relacionadas
+à parte do design experimental
+
+00:00:39.632 --> 00:00:44.471
+serão úteis na hora de escolher
+como implementar as recomendações.
+
+00:00:45.095 --> 00:00:49.612
+Mas e se quisermos ter uma noção
+do êxito do sistema de recomendação
+
+00:00:49.646 --> 00:00:52.693
+antes de usá-lo
+com usuários reais?
+
+00:00:52.727 --> 00:00:56.435
+Assim como no aprendizado
+de máquina, que já conhecemos,
+
+00:00:56.469 --> 00:01:01.029
+é uma boa ideia dividir os dados
+em treinamento e teste.
+
+00:01:01.062 --> 00:01:04.173
+Você vai ajustar o recomendador
+no conjunto de treinamento
+
+00:01:04.207 --> 00:01:07.611
+e avaliar o desempenho
+no conjunto de teste.
+
+00:01:07.645 --> 00:01:10.749
+Se as avaliações
+são coletadas ao longo do tempo,
+
+00:01:10.783 --> 00:01:13.254
+faça dos dados mais novos
+o seu conjunto de teste.
+
+00:01:13.288 --> 00:01:15.943
+Dessa forma, você evita
+usar dados futuros
+
+00:01:15.977 --> 00:01:18.533
+para fazer previsões
+sobre dados passados.
+
+00:01:18.567 --> 00:01:21.431
+Veja a Allie, por exemplo,
+
+00:01:21.465 --> 00:01:24.134
+que gostou de "Vingadores"
+e "Homem-Aranha".
+
+00:01:24.168 --> 00:01:28.079
+Podemos recomendar a ela
+"Rocky" e "Os Incríveis",
+
+00:01:28.113 --> 00:01:31.134
+mas, se ela ainda
+não os tiver visto,
+
+00:01:31.168 --> 00:01:34.350
+não sabemos se essas previsões
+são boas de verdade.
+
+00:01:34.384 --> 00:01:38.334
+Em vez disso, ao prevermos
+avaliações para todos os filmes,
+
+00:01:38.368 --> 00:01:42.439
+poderemos comparar as notas
+dos filmes que o usuário viu
+
+00:01:42.473 --> 00:01:44.575
+às nossas previsões.
+
+00:01:44.609 --> 00:01:50.047
+Se fizermos previsões para todas
+as combinações do conjunto de teste,
+
+00:01:50.081 --> 00:01:53.991
+podemos entender o sucesso
+do nosso sistema de recomendação.
+
+00:01:54.025 --> 00:01:57.394
+Essa é só uma das razões pelas quais
+a próxima técnica que vamos ver
+
+00:01:57.428 --> 00:02:01.433
+para fazer recomendações
+se tornou extremamente popular.
+
+00:02:01.467 --> 00:02:05.992
+Ela fornece avaliações previstas
+para todos os pares usuário-item.
+
+00:02:06.026 --> 00:02:09.224
+Isso permite o uso de métricas
+como erro quadrático médio
+
+00:02:09.258 --> 00:02:11.431
+ou erro absoluto
+médio para medir
+
+00:02:11.465 --> 00:02:14.375
+o desempenho do sistema
+de recomendação
+
+00:02:14.409 --> 00:02:17.376
+através de todas
+as combinações usuário-item
+
+00:02:17.410 --> 00:02:20.474
+antes de implementá-lo.
+

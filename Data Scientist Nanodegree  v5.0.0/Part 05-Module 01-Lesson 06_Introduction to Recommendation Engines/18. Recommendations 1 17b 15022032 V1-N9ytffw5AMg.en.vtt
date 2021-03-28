@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+Now that we've done a lot of the heavy lifting,
+
+00:00:02.250 --> 00:00:04.785
+we're going to complete a few different functions
+
+00:00:04.785 --> 00:00:07.169
+that will allow us to use what we've done above,
+
+00:00:07.169 --> 00:00:11.789
+to make recommendations for any user based on the users that are similar to one another,
+
+00:00:11.789 --> 00:00:15.119
+and based on the movies that they haven't seen.
+
+00:00:15.119 --> 00:00:19.259
+So we want to recommend new movies to users based on similar users,
+
+00:00:19.260 --> 00:00:22.335
+but that are movies that they haven't necessarily seen before.
+
+00:00:22.335 --> 00:00:26.100
+In order to do that, there's a bunch of functions down here.
+
+00:00:26.100 --> 00:00:29.445
+So we want to get the closest neighbors.
+
+00:00:29.445 --> 00:00:31.019
+So we'll find the closest neighbors,
+
+00:00:31.019 --> 00:00:32.655
+we'll get the movies that are liked,
+
+00:00:32.655 --> 00:00:37.524
+and there's a min rating portion to that will pull the movie names,
+
+00:00:37.524 --> 00:00:40.174
+and make those as recommendations.
+
+00:00:40.174 --> 00:00:45.034
+Then we'll basically do that for all of our users.
+
+00:00:45.034 --> 00:00:48.619
+If you think about what we had here was,
+
+00:00:48.619 --> 00:00:53.070
+we computed the Euclidean distance for each pair of users.
+
+00:00:53.070 --> 00:00:55.549
+If we were to do that for every set of users,
+
+00:00:55.549 --> 00:00:57.949
+that's basically what's stored in this.
+
+00:00:57.950 --> 00:01:03.890
+So similar to the idea of having the two pairs of users
+
+00:01:03.890 --> 00:01:05.780
+and then the correlation coefficient,
+
+00:01:05.780 --> 00:01:08.000
+this does the same thing but with distances,
+
+00:01:08.000 --> 00:01:09.909
+and therefore we don't have any names.
+
+00:01:09.909 --> 00:01:13.069
+If we look at this down below,
+
+00:01:13.209 --> 00:01:16.159
+you can see we have User 1,
+
+00:01:16.159 --> 00:01:17.599
+User 2, and then the distance.
+
+00:01:17.599 --> 00:01:20.809
+So there's no distance between two users that are exactly the same.
+
+00:01:20.810 --> 00:01:22.549
+But the smaller that distance,
+
+00:01:22.549 --> 00:01:24.259
+the more similar to those two users are.
+
+00:01:24.260 --> 00:01:26.630
+So this Euclidean distance measure is probably
+
+00:01:26.629 --> 00:01:29.750
+a better measure than our correlation coefficient,
+
+00:01:29.750 --> 00:01:32.435
+because it doesn't have any names.
+
+00:01:32.435 --> 00:01:36.829
+So essentially, what we want to do is use that data frame,
+
+00:01:36.829 --> 00:01:40.640
+and basically pull the users who are most similar to that user.
+
+00:01:40.640 --> 00:01:43.459
+So we want to sort this by the users
+
+00:01:43.459 --> 00:01:45.500
+that are most similar to a particular user.
+
+00:01:45.500 --> 00:01:47.900
+So you can imagine subsetting,
+
+00:01:47.900 --> 00:01:50.885
+looking at only User 1 equal to 2,
+
+00:01:50.885 --> 00:01:55.185
+sorting the Euclidean distances from smallest to largest,
+
+00:01:55.185 --> 00:01:58.534
+and then pulling the n highest,
+
+00:01:58.534 --> 00:02:00.679
+and those would be the n most similar users.
+
+00:02:00.680 --> 00:02:03.260
+So we want to write a function that does that.
+
+00:02:03.260 --> 00:02:08.659
+One way that we could do that is by going into that data frame,
+
+00:02:08.659 --> 00:02:12.259
+pulling the user ones that are equal to our user.
+
+00:02:12.259 --> 00:02:13.745
+So you give me the user,
+
+00:02:13.745 --> 00:02:17.289
+and I'm going to pull from that data frame only those individuals.
+
+00:02:17.289 --> 00:02:20.780
+Then I want to sort by the Euclidean distance column.
+
+00:02:20.780 --> 00:02:24.020
+So I'm going to sort these by, right.
+
+00:02:24.020 --> 00:02:28.070
+So if we look at what was brought back, I'm going to sort them by this.
+
+00:02:28.069 --> 00:02:32.060
+So I'm going to only pull the parts of the data frame
+
+00:02:32.060 --> 00:02:33.740
+that are related to the user that you give me,
+
+00:02:33.740 --> 00:02:36.350
+and then I'm going to sort by this Euclidean distance.
+
+00:02:36.349 --> 00:02:38.449
+Then essentially from there,
+
+00:02:38.449 --> 00:02:43.189
+I just want to pull from the first individual
+
+00:02:43.189 --> 00:02:45.229
+because the top one is always going to be
+
+00:02:45.229 --> 00:02:48.185
+the user themselves up through the end,
+
+00:02:48.185 --> 00:02:52.354
+and I want a list of the User 2's.
+
+00:02:52.354 --> 00:02:56.664
+So this will be a list excluding the user themselves
+
+00:02:56.664 --> 00:03:03.340
+and grabbing all of the users in a order in which they're closest.
+
+00:03:07.689 --> 00:03:13.405
+So we can even test that out if we wanted to. Put this up here.
+
+00:03:13.405 --> 00:03:22.814
+Let's say we want to find the closest neighbors to User 2 who we had above.
+
+00:03:22.814 --> 00:03:25.594
+Great. So basically, these are sorted from
+
+00:03:25.594 --> 00:03:30.389
+closest to farthest away in terms of Euclidean distance.
+

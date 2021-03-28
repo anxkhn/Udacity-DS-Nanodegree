@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.669 --> 00:00:06.814
+In the last video,
+
+00:00:06.815 --> 00:00:09.339
+you got an introduction to collaborative filtering.
+
+00:00:09.339 --> 00:00:12.789
+The name collaborative filtering comes from the idea that we can
+
+00:00:12.789 --> 00:00:16.589
+use user item collaborations to make recommendations.
+
+00:00:16.589 --> 00:00:19.780
+What this means is that even without
+
+00:00:19.780 --> 00:00:22.450
+any background information about the users and
+
+00:00:22.449 --> 00:00:25.210
+without background information about the items,
+
+00:00:25.210 --> 00:00:27.429
+we can still make recommendations.
+
+00:00:27.429 --> 00:00:34.590
+The only information we need is data about how users and items interact with one another.
+
+00:00:34.590 --> 00:00:39.955
+Recommendations that require information about users and items are considered
+
+00:00:39.954 --> 00:00:43.189
+content-based recommendation systems which will
+
+00:00:43.189 --> 00:00:46.689
+be the last type of recommendation we will cover in this lesson.
+
+00:00:46.689 --> 00:00:49.609
+For now, let's take a closer look at
+
+00:00:49.609 --> 00:00:53.109
+the type of information we need for collaborative filtering.
+
+00:00:53.109 --> 00:00:56.269
+The type of data that could be used for the purposes of
+
+00:00:56.270 --> 00:01:00.100
+collaborative filtering includes data that answers questions like,
+
+00:01:00.100 --> 00:01:02.450
+how have users rated certain items?
+
+00:01:02.450 --> 00:01:06.049
+Or which items have users liked or disliked?
+
+00:01:06.049 --> 00:01:11.120
+We could even go as far as asking whether or not a user has used each item.
+
+00:01:11.120 --> 00:01:17.960
+But again, we don't need to know any additional context about the users or the items.
+

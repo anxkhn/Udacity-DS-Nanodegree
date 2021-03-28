@@ -1,0 +1,369 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:06.356 --> 00:00:09.512
+Como você deve ter percebido
+pelo que já viu até agora,
+
+00:00:09.545 --> 00:00:13.121
+a SVD de Funk é uma técnica
+de fatoração de matriz
+
+00:00:13.154 --> 00:00:15.888
+que funciona bem
+para situações como esta,
+
+00:00:15.921 --> 00:00:18.928
+em que uma matriz
+tem muitos valores faltantes.
+
+00:00:19.624 --> 00:00:23.288
+Antes do método SVD de Funk,
+era comum usarmos técnicas
+
+00:00:23.321 --> 00:00:26.209
+para preencher esses valores
+faltantes com zeros.
+
+00:00:26.242 --> 00:00:28.198
+Mas o que Simon descobriu
+
+00:00:28.231 --> 00:00:31.975
+foi que podemos ignorar
+todos esses valores faltantes
+
+00:00:32.008 --> 00:00:34.711
+e encontrar uma forma
+de calcular variáveis latentes
+
+00:00:34.744 --> 00:00:37.032
+usando apenas valores
+que conhecemos.
+
+00:00:37.824 --> 00:00:42.399
+Nesta abordagem de fatoração
+de matriz, considere duas matrizes,
+
+00:00:42.432 --> 00:00:44.535
+parecidas
+com as que você já viu,
+
+00:00:44.568 --> 00:00:47.391
+com usuários
+e variáveis latentes em uma,
+
+00:00:47.424 --> 00:00:50.272
+e variáveis latentes
+por filmes na outra.
+
+00:00:50.775 --> 00:00:53.831
+Para começar, vamos alocar
+valores aleatoriamente
+
+00:00:53.864 --> 00:00:55.624
+em cada uma dessas matrizes.
+
+00:00:55.657 --> 00:00:57.215
+Isso é o suficiente por ora.
+
+00:00:57.248 --> 00:00:59.896
+Depois, fazemos uma busca
+na matriz usuário-item
+
+00:00:59.929 --> 00:01:01.783
+por uma avaliação
+que já existe.
+
+00:01:02.471 --> 00:01:06.008
+Quando encontramos essa avaliação,
+executamos a seguinte regra
+
+00:01:06.041 --> 00:01:08.184
+ao atualizar
+esses valores aleatórios.
+
+00:01:08.217 --> 00:01:12.447
+Nós pegamos o produto escalar
+entre a linha associada ao usuário
+
+00:01:12.480 --> 00:01:14.911
+e a coluna associada ao filme.
+
+00:01:14.944 --> 00:01:17.608
+Isso vai nos dar uma previsão
+da avaliação.
+
+00:01:19.424 --> 00:01:22.768
+Daqui, podemos calcular o erro
+como a diferença
+
+00:01:22.801 --> 00:01:25.231
+entre a avaliação real
+e a prevista.
+
+00:01:25.703 --> 00:01:28.159
+O nosso objetivo
+é minimizar esse erro
+
+00:01:28.192 --> 00:01:30.991
+para todos os valores
+conhecidos
+
+00:01:31.024 --> 00:01:33.991
+alterando o peso
+em cada matriz.
+
+00:01:34.024 --> 00:01:36.848
+Podemos fazer isso usando
+o gradiente descendente.
+
+00:01:36.881 --> 00:01:40.511
+Na matriz de usuários,
+obtemos o derivativo do erro
+
+00:01:40.544 --> 00:01:44.232
+relacionado a cada valor,
+identificado por este "u" aqui.
+
+00:01:44.265 --> 00:01:46.494
+Da mesma forma,
+na matriz do filme,
+
+00:01:46.527 --> 00:01:50.072
+obtemos o derivativo do erro
+relacionado a cada valor
+
+00:01:50.105 --> 00:01:51.702
+identificado por "v".
+
+00:01:52.216 --> 00:01:53.528
+Usando a regra da cadeia,
+
+00:01:53.561 --> 00:01:55.993
+encontramos a direção
+para onde devemos nos mover
+
+00:01:56.026 --> 00:01:58.679
+para minimizar o erro
+em cada matriz.
+
+00:01:59.123 --> 00:02:03.152
+Em cada derivativo,
+esta porção aqui é só a diferença
+
+00:02:03.185 --> 00:02:06.296
+entre os valores reais
+e os previstos.
+
+00:02:06.832 --> 00:02:09.313
+Agora, podemos usar isso
+para atualizar os valores
+
+00:02:09.346 --> 00:02:10.887
+em cada uma das matrizes.
+
+00:02:10.920 --> 00:02:13.383
+Em cada um desses pontos,
+em direções opostas,
+
+00:02:13.416 --> 00:02:16.079
+devemos nos mover
+para minimizar o nosso erro.
+
+00:02:16.112 --> 00:02:18.951
+Vamos passar por uma iteração
+de gradiente descendente
+
+00:02:18.984 --> 00:02:20.767
+com as matrizes anteriores.
+
+00:02:21.279 --> 00:02:22.743
+Isso vai ser útil.
+
+00:02:23.216 --> 00:02:25.774
+Para fazer a atualização
+na matriz de usuários,
+
+00:02:25.807 --> 00:02:29.159
+temos que observar essa linha
+da matriz de usuários.
+
+00:02:29.192 --> 00:02:33.264
+Estes valores são o "u"
+que vimos na equação anterior.
+
+00:02:34.298 --> 00:02:36.135
+Também precisamos
+desses valores,
+
+00:02:36.168 --> 00:02:39.446
+que estavam na última coluna
+da matriz de filmes.
+
+00:02:39.479 --> 00:02:43.015
+Estes são os valores "v"
+que vimos na fórmula anterior.
+
+00:02:43.598 --> 00:02:46.791
+Os nossos novos valores "u"
+serão o atual valor "u",
+
+00:02:46.824 --> 00:02:49.144
+mas temos que atualizar
+este valor atual
+
+00:02:49.177 --> 00:02:52.159
+movendo-o na direção
+oposta do gradiente,
+
+00:02:52.192 --> 00:02:54.742
+que é esse termo
+que acabamos de descobrir.
+
+00:02:54.775 --> 00:02:58.910
+Contudo, não queremos nos mover
+muito longe nessa direção,
+
+00:02:58.943 --> 00:03:01.335
+então é comum usarmos
+uma taxa de aprendizado
+
+00:03:01.368 --> 00:03:03.831
+para dar um pequeno passo
+nessa direção.
+
+00:03:04.256 --> 00:03:05.863
+Vamos chamá-la de "alfa"
+
+00:03:05.896 --> 00:03:09.431
+e posicioná-la na frente da direção
+na qual estamos nos movendo.
+
+00:03:10.263 --> 00:03:13.495
+Vamos colocar essa regra
+em prática e atualizar o 1º valor.
+
+00:03:13.528 --> 00:03:17.879
+A atualização diz para pegarmos
+o valor atual de 0,8
+
+00:03:17.912 --> 00:03:21.679
+e o atualizarmos adicionando a ele
+a nossa taxa de aprendizado,
+
+00:03:21.712 --> 00:03:24.198
+que vamos chamar de "0,01".
+
+00:03:24.231 --> 00:03:26.445
+Isso pode ser qualquer
+número pequeno.
+
+00:03:26.975 --> 00:03:30.063
+Nós multiplicamos isso
+por 2 vezes a diferença
+
+00:03:30.096 --> 00:03:32.567
+entre o valor real
+e o valor previsto,
+
+00:03:32.600 --> 00:03:35.015
+que, mais cedo,
+descobrimos ser este.
+
+00:03:35.575 --> 00:03:39.039
+Por fim, multiplicamos
+pelo termo "v" correspondente
+
+00:03:39.072 --> 00:03:41.087
+na mesma variável latente.
+
+00:03:41.120 --> 00:03:44.055
+Neste caso, este -1,2 aqui.
+
+00:03:44.958 --> 00:03:48.351
+Isso nos dá
+um novo valor "u" de 0,59.
+
+00:03:48.956 --> 00:03:51.038
+Podemos usar a mesma
+regra de atualização
+
+00:03:51.071 --> 00:03:53.174
+para cada um
+desses valores "u",
+
+00:03:53.207 --> 00:03:57.711
+o que nos dá novos valores
+de 1,39 e -0,23.
+
+00:03:58.566 --> 00:04:00.934
+Da mesma forma,
+podemos realizar essas operações
+
+00:04:00.967 --> 00:04:04.806
+para cada um dos valores
+na matriz v com esta equação.
+
+00:04:05.288 --> 00:04:07.401
+Note que os novos valores
+na matriz u
+
+00:04:07.434 --> 00:04:09.750
+já estão exercendo influência
+nos novos valores
+
+00:04:09.783 --> 00:04:11.451
+que veremos na matriz v,
+
+00:04:11.485 --> 00:04:13.643
+conforme vão aparecendo aqui,
+na equação.
+
+00:04:13.676 --> 00:04:16.654
+Isso nos permite atualizar
+todos os valores "v".
+
+00:04:17.036 --> 00:04:19.201
+Podemos substituir
+esses valores atualizados
+
+00:04:19.234 --> 00:04:21.501
+nas matrizes u e v aqui.
+
+00:04:21.534 --> 00:04:23.495
+E, assim, terminamos
+uma iteração.
+
+00:04:24.589 --> 00:04:28.198
+Neste ponto, procuramos
+pelo próximo valor não faltante
+
+00:04:28.231 --> 00:04:31.542
+e atualizamos as matrizes
+u e v de novo.
+
+00:04:32.710 --> 00:04:35.821
+Aplicamos essa técnica
+em todos os valores não faltantes,
+
+00:04:35.854 --> 00:04:39.173
+provavelmente passando
+diversas vezes por cada matriz.
+
+00:04:39.206 --> 00:04:42.877
+No notebook seguinte,
+você vai implementar essa técnica.
+
+00:04:42.910 --> 00:04:47.142
+Pode ser difícil pôr um algoritmo
+como esse em prática pela 1ª vez.
+
+00:04:47.175 --> 00:04:50.229
+Se você empacar, fornecemos
+um notebook de soluções,
+
+00:04:50.262 --> 00:04:53.105
+onde sigo o passo a passo
+da solução. Boa sorte!
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.490 --> 00:00:07.425
+As a final step for this lesson.
+
+00:00:07.424 --> 00:00:10.769
+We'll take a look at moving all of our code over into
+
+00:00:10.769 --> 00:00:14.899
+a module that anyone can easily use to make recommendations.
+
+00:00:14.900 --> 00:00:17.635
+We will want the module to contain a class,
+
+00:00:17.635 --> 00:00:19.980
+that we can import and use to make
+
+00:00:19.980 --> 00:00:23.714
+recommendations in much the way you've interacted with scikit-learn.
+
+00:00:23.714 --> 00:00:27.390
+You will want to be able to instantiate, fit,
+
+00:00:27.390 --> 00:00:30.570
+and predict a rating without having to think about
+
+00:00:30.570 --> 00:00:34.215
+the struggle you just went through to build out your recommendation system.
+
+00:00:34.215 --> 00:00:38.060
+There are a lot of different ways you might choose to structure your code,
+
+00:00:38.060 --> 00:00:40.469
+and you are now getting to the point in this program
+
+00:00:40.469 --> 00:00:43.094
+where there aren't really right answers.
+
+00:00:43.094 --> 00:00:46.009
+At the end of writing your class you should be
+
+00:00:46.009 --> 00:00:49.164
+able to take the reviews and movies datasets,
+
+00:00:49.164 --> 00:00:53.420
+fit your recommendation system and make a predicted rating for
+
+00:00:53.420 --> 00:00:56.630
+user-movie combination and also provide
+
+00:00:56.630 --> 00:01:01.000
+a recommended list of movies for any user ID that you're given.
+
+00:01:01.000 --> 00:01:06.049
+There might be reasons to structure your class in any of a number of ways.
+
+00:01:06.049 --> 00:01:09.409
+Feel free to be creative with your own solution to
+
+00:01:09.409 --> 00:01:12.965
+create something completely different than the template allows.
+
+00:01:12.965 --> 00:01:14.990
+This is an open-ended task.
+
+00:01:14.989 --> 00:01:17.359
+See what you can put together
+

@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.970
+Next we'll look at Spearman's correlation coefficient,
+
+00:00:03.970 --> 00:00:06.405
+and with Spearman's correlation coefficient,
+
+00:00:06.405 --> 00:00:07.705
+we're working with ranks.
+
+00:00:07.705 --> 00:00:10.679
+So, everything about Spearman's is a rank.
+
+00:00:10.679 --> 00:00:14.355
+So, this gives you an example of what those ranks would look like.
+
+00:00:14.355 --> 00:00:17.160
+So, the rank values here are one
+
+00:00:17.160 --> 00:00:20.199
+through seven even though the raw values are negative three through three.
+
+00:00:20.199 --> 00:00:21.399
+So this is the smallest,
+
+00:00:21.399 --> 00:00:22.604
+so it gets a rank of one,
+
+00:00:22.605 --> 00:00:24.899
+and this is the second smallest, so it gets a rank of two.
+
+00:00:24.899 --> 00:00:28.489
+So, you can see that just uses this rank function.
+
+00:00:28.489 --> 00:00:30.524
+Then, if you look at the formula,
+
+00:00:30.524 --> 00:00:33.659
+it looks a lot like what we just did except for
+
+00:00:33.659 --> 00:00:36.719
+these little r's floating around and that's because essentially,
+
+00:00:36.719 --> 00:00:40.195
+what we're going to do is we're going to change our original array
+
+00:00:40.195 --> 00:00:44.765
+to a ranked version of that array before we apply any formulas to it.
+
+00:00:44.765 --> 00:00:48.439
+Great. So, if we want to do Spearman's correlation coefficient,
+
+00:00:48.439 --> 00:00:53.920
+I'm just going to x.rank and y equals y.rank.
+
+00:00:53.920 --> 00:00:56.570
+So, if we calculate the ranks first,
+
+00:00:56.570 --> 00:01:00.679
+then x and y are being held as the ranked versions of them,
+
+00:01:00.679 --> 00:01:06.640
+and then essentially this should just look like exactly what we did up here.
+
+00:01:06.640 --> 00:01:10.525
+I should make this pretty straightforward.
+
+00:01:10.525 --> 00:01:12.469
+So, we'll take the mean.
+
+00:01:12.469 --> 00:01:14.179
+X is now the ranked version,
+
+00:01:14.180 --> 00:01:15.310
+y is the ranked version.
+
+00:01:15.310 --> 00:01:16.879
+We'll take the differences.
+
+00:01:16.879 --> 00:01:19.170
+It's like this. We'll calculate
+
+00:01:19.170 --> 00:01:23.700
+the same standard deviation things in the denominator. I think that should work.
+
+00:01:23.700 --> 00:01:27.700
+So, it looks like we got everything right there.
+
+00:01:27.700 --> 00:01:31.840
+Now, a couple of questions about why this is important.
+
+00:01:31.840 --> 00:01:33.100
+If when x increases,
+
+00:01:33.099 --> 00:01:35.724
+y also increases, will Spearman's correlation be one.
+
+00:01:35.724 --> 00:01:37.629
+And that's actually true. All right.
+
+00:01:37.629 --> 00:01:43.569
+So, spearman's correlation is a measure of that two things move monotonically.
+
+00:01:43.569 --> 00:01:44.809
+That is, they always move in
+
+00:01:44.810 --> 00:01:47.689
+the same direction or do they not move in the same direction,
+
+00:01:47.689 --> 00:01:52.634
+whereas Pearson's correlation is do they move linearly, exactly linearly.
+
+00:01:52.635 --> 00:01:55.935
+So, for all cases where Pearson's is one,
+
+00:01:55.935 --> 00:01:57.530
+Spearman will also be one.
+
+00:01:57.530 --> 00:01:59.329
+But that's not true vice versa.
+
+00:01:59.329 --> 00:02:01.370
+For all cases where Spearman is one,
+
+00:02:01.370 --> 00:02:03.439
+Pearson is not necessarily one.
+
+00:02:03.439 --> 00:02:06.810
+If when x increases by one and this decreases,
+
+00:02:06.810 --> 00:02:11.360
+this is also true and this last one is also true.
+
+00:02:11.360 --> 00:02:14.405
+So, all of these are monotonic changes,
+
+00:02:14.405 --> 00:02:18.169
+and therefore, for all of them Spearman's will be true.
+

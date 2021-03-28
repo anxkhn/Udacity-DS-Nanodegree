@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.559
+Now, from there, we have this function that makes recommendations,
+
+00:00:04.559 --> 00:00:07.769
+and essentially, we can use that to make
+
+00:00:07.769 --> 00:00:09.494
+recommendations for all of our users.
+
+00:00:09.494 --> 00:00:12.434
+That's what this final function is going to do.
+
+00:00:12.435 --> 00:00:15.400
+I'll show you how I did it.
+
+00:00:18.559 --> 00:00:23.354
+This is pulling only the unique users from the first column.
+
+00:00:23.355 --> 00:00:25.949
+There might be other ways that you could pull the users,
+
+00:00:25.949 --> 00:00:28.530
+that would be pretty much the same.
+
+00:00:28.530 --> 00:00:32.795
+Then I'm going to pull the number of users as the length of this.
+
+00:00:32.795 --> 00:00:35.045
+Then I'm going to create all recs,
+
+00:00:35.045 --> 00:00:36.649
+which is just going to be a dictionary
+
+00:00:36.649 --> 00:00:38.989
+where I'm going to store the recommendations.
+
+00:00:38.990 --> 00:00:42.065
+So what this will look like is, the key will be the user,
+
+00:00:42.064 --> 00:00:45.739
+and then the values will be the recommendations for that user.
+
+00:00:45.740 --> 00:00:54.150
+Then I'll say, for user in users, so for each user, all recs.
+
+00:00:54.149 --> 00:00:58.009
+Hope that user are going to be equal to
+
+00:00:58.009 --> 00:01:03.414
+the make recommendations per user,
+
+00:01:03.414 --> 00:01:05.340
+and I'm passing in the number recs,
+
+00:01:05.340 --> 00:01:08.310
+but you could potentially work for that if you wanted to.
+
+00:01:08.310 --> 00:01:12.740
+Great. So again, this is probably the only part
+
+00:01:12.739 --> 00:01:14.479
+that you really need if you want to,
+
+00:01:14.480 --> 00:01:16.295
+because this takes a little bit of time.
+
+00:01:16.295 --> 00:01:22.129
+It could be useful to again create this progress bar like you did before,
+
+00:01:22.129 --> 00:01:25.670
+so you can just copy and paste that and move it down here.
+
+00:01:25.670 --> 00:01:29.219
+So here, we're creating the progress bar,
+
+00:01:29.219 --> 00:01:32.025
+and users is still the value here.
+
+00:01:32.025 --> 00:01:33.290
+That makes sense.
+
+00:01:33.290 --> 00:01:35.495
+I don't need to change anything down there.
+
+00:01:35.495 --> 00:01:39.395
+Here's my calendar, and I'll add that,
+
+00:01:39.394 --> 00:01:50.024
+and then I'm just going to have bar finish.
+
+00:01:50.025 --> 00:01:58.365
+Great. So bar finish, and I'll see how this goes.
+
+00:01:58.364 --> 00:02:02.174
+There's an error. I have error, movie list.
+
+00:02:02.174 --> 00:02:05.989
+Oh, I missed a bracket up there somewhere.
+
+00:02:05.989 --> 00:02:10.229
+Right here. Go away then.
+

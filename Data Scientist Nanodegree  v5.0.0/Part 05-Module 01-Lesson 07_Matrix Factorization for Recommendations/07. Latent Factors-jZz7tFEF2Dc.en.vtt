@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.309 --> 00:00:07.865
+Before we dive into singular value decomposition,
+
+00:00:07.865 --> 00:00:10.445
+it's important to understand latent factors.
+
+00:00:10.445 --> 00:00:14.339
+A latent factor is not actually observed in our data,
+
+00:00:14.339 --> 00:00:18.824
+rather, we infer it based on the ratings users give to items.
+
+00:00:18.824 --> 00:00:23.140
+What are possible latent factors that are related to the movies in our data set?
+
+00:00:23.140 --> 00:00:26.580
+One latent factor might be that a movie is sad,
+
+00:00:26.579 --> 00:00:29.183
+or that it's about artificial intelligence,
+
+00:00:29.184 --> 00:00:31.660
+or that a movie stars Meryl Streep,
+
+00:00:31.660 --> 00:00:33.920
+or that it has a puppy in it,
+
+00:00:33.920 --> 00:00:39.350
+or latent factor might be that there's a movie that has a Canadian actor named Ryan.
+
+00:00:39.350 --> 00:00:43.219
+These aren't data points that are directly in our data,
+
+00:00:43.219 --> 00:00:46.269
+but we might be able to find as latent factors.
+
+00:00:46.270 --> 00:00:49.545
+For example, if you look at the movie, The Notebook,
+
+00:00:49.545 --> 00:00:55.030
+you'll notice that the movie both has a Canadian Ryan and scenes that'll make you cry,
+
+00:00:55.030 --> 00:00:57.660
+while this movie called A.I.
+
+00:00:57.659 --> 00:01:01.468
+has Meryl Streep and artificial intelligence.
+
+00:01:01.469 --> 00:01:07.454
+Alternatively, latent factors might also be related to users' preferences.
+
+00:01:07.454 --> 00:01:09.359
+If we look at Jesse,
+
+00:01:09.359 --> 00:01:14.084
+we can see that she has positive ratings related to the latent factors of dogs,
+
+00:01:14.084 --> 00:01:16.914
+Canadian Ryans, and sad movies,
+
+00:01:16.915 --> 00:01:19.395
+while Sam likes AI,
+
+00:01:19.394 --> 00:01:22.469
+Meryl Streep and also likes dogs.
+
+00:01:22.469 --> 00:01:26.390
+The idea of finding how movies and users relate to
+
+00:01:26.390 --> 00:01:31.040
+latent factors is central to how we make predictions using SVD.
+
+00:01:31.040 --> 00:01:32.720
+In the next video,
+
+00:01:32.719 --> 00:01:38.670
+we'll take a closer look at how these relationships show up when performing SVD.
+

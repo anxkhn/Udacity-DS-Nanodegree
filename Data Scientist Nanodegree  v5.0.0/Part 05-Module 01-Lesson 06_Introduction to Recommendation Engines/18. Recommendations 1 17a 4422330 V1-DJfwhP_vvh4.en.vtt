@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.990
+The next thing that we want to do is take that matrix
+
+00:00:03.990 --> 00:00:07.785
+and essentially return back. The end goal is this.
+
+00:00:07.785 --> 00:00:10.470
+We want to create a dictionary of movie scene
+
+00:00:10.470 --> 00:00:13.589
+where the key is the user and the value
+
+00:00:13.589 --> 00:00:17.969
+is a list or some array of the movie ID.
+
+00:00:17.969 --> 00:00:19.739
+So it could be a list or a NumPy array
+
+00:00:19.739 --> 00:00:22.049
+or could be a set, but that's the goal.
+
+00:00:22.050 --> 00:00:24.960
+So essentially, I suggest maybe using
+
+00:00:24.960 --> 00:00:27.420
+a helper function that just gets the movies
+
+00:00:27.420 --> 00:00:30.540
+watched for any particular ID given.
+
+00:00:30.539 --> 00:00:33.839
+Again, I like pulling things out and looking
+
+00:00:33.840 --> 00:00:37.170
+at what they do with just one example.
+
+00:00:37.170 --> 00:00:40.130
+So let's take a look at the header of that function.
+
+00:00:40.130 --> 00:00:43.275
+So you can see this is a very sparse matrix,
+
+00:00:43.274 --> 00:00:46.879
+and by sparse, I mean it just has NaNs everywhere.
+
+00:00:46.880 --> 00:00:51.200
+But if we just pull one or we pull two or anything like that,
+
+00:00:51.200 --> 00:00:54.260
+it gives us back an array across all the movies.
+
+00:00:54.259 --> 00:00:56.225
+So on the rows or all the IDs,
+
+00:00:56.225 --> 00:00:57.965
+on the columns are all the movies.
+
+00:00:57.965 --> 00:01:02.150
+So this is the rating for user two across all of the movies,
+
+00:01:02.149 --> 00:01:05.120
+and you can see basically for everything we can see it's NaN.
+
+00:01:05.120 --> 00:01:06.995
+They just haven't rated a lot of movies.
+
+00:01:06.995 --> 00:01:10.189
+One thing that we can do is if we're going
+
+00:01:10.189 --> 00:01:12.319
+to pull the movies that they've watched,
+
+00:01:12.319 --> 00:01:16.984
+we want to look at which ones are null and which ones are not.
+
+00:01:16.984 --> 00:01:19.129
+So if we do something like this,
+
+00:01:19.129 --> 00:01:22.594
+this is null gives back an array of true and falses.
+
+00:01:22.594 --> 00:01:25.200
+So isnull says if this is true,
+
+00:01:25.200 --> 00:01:28.189
+then there was a null value there and otherwise there wasn't.
+
+00:01:28.189 --> 00:01:33.500
+If it say it's false and we actually pull the user
+
+00:01:33.500 --> 00:01:39.394
+by movie values for that particular user.
+
+00:01:39.394 --> 00:01:45.399
+So let's do something like this.
+
+00:01:45.799 --> 00:01:49.325
+So then basically, this is just saying return
+
+00:01:49.325 --> 00:01:52.234
+the index that is the movies and return those values.
+
+00:01:52.234 --> 00:01:56.879
+So that gives us this array, which is nice.
+
+00:02:00.980 --> 00:02:04.770
+This part here instead of being two is just
+
+00:02:04.769 --> 00:02:08.430
+whatever user ID they pass to us.
+
+00:02:08.430 --> 00:02:11.110
+So you give us a user ID, we'll go in,
+
+00:02:11.110 --> 00:02:13.190
+we'll find out which movies this user has
+
+00:02:13.189 --> 00:02:15.740
+rated and then return that back into this movie's thing,
+
+00:02:15.740 --> 00:02:17.020
+and then we'll give that back to you.
+
+00:02:17.020 --> 00:02:19.375
+Then the goal here in the next part,
+
+00:02:19.375 --> 00:02:21.830
+is basically to loop through this function
+
+00:02:21.830 --> 00:02:27.020
+and get a dictionary called movie scene that basically has
+
+00:02:27.020 --> 00:02:31.594
+this array as the value and the user as the key.
+
+00:02:31.594 --> 00:02:34.729
+This again will take a little bit of time,
+
+00:02:34.729 --> 00:02:37.039
+and so I set up a progress bar to do it,
+
+00:02:37.039 --> 00:02:41.044
+but really all you need to do is create your dictionary.
+
+00:02:41.044 --> 00:02:45.269
+The main thing we want to do is we want to create our dictionary.
+
+00:02:45.319 --> 00:02:47.939
+This is where we're going to store things.
+
+00:02:47.939 --> 00:02:50.919
+I also created something called end users,
+
+00:02:50.919 --> 00:02:54.919
+which is equal to the number of rows.
+
+00:02:54.919 --> 00:02:59.434
+So it's just the number of users in our dataset.
+
+00:02:59.435 --> 00:03:05.465
+I just use that to figure out how I was going to loop for User 1,
+
+00:03:05.465 --> 00:03:14.340
+is what I call them in range one through, n users plus 1.
+
+00:03:14.870 --> 00:03:17.250
+What we want to do is,
+
+00:03:17.250 --> 00:03:24.269
+we're going to use our movies scene as the dictionary,
+
+00:03:24.269 --> 00:03:25.500
+and what I want to do is,
+
+00:03:25.500 --> 00:03:33.159
+I want to take User 1 and I want to equate it to movies watched, User 1.
+
+00:03:33.159 --> 00:03:35.389
+So this is basically all you have to do.
+
+00:03:35.389 --> 00:03:37.549
+If you look at the solution,
+
+00:03:37.550 --> 00:03:40.580
+I added a progress bar so that I could see what was happening.
+
+00:03:40.580 --> 00:03:42.770
+Progress bars are something that I actually use
+
+00:03:42.770 --> 00:03:52.689
+quite a few times and range.
+
+00:03:57.949 --> 00:04:00.939
+So if you set it up correctly,
+
+00:04:00.939 --> 00:04:03.379
+you should see your progress bar show up here,
+
+00:04:03.379 --> 00:04:05.509
+and then you'll see equals signs as they run
+
+00:04:05.509 --> 00:04:07.939
+through each of the users and calculate things.
+
+00:04:07.939 --> 00:04:11.650
+This will take a reasonably substantial time to run.
+
+00:04:21.769 --> 00:04:26.419
+So it's important that you are careful
+
+00:04:26.420 --> 00:04:28.415
+about whether you use loc or iloc.
+
+00:04:28.415 --> 00:04:31.175
+If you use iloc, these will need to be different,
+
+00:04:31.175 --> 00:04:32.735
+which is why mine broke.
+
+00:04:32.735 --> 00:04:35.520
+So I'm going to go ahead and start this again.
+
+00:04:40.100 --> 00:04:42.590
+So at the end of this,
+
+00:04:42.589 --> 00:04:47.029
+we now have this movie scene which holds a dictionary,
+
+00:04:47.029 --> 00:04:53.109
+where each key is our user ID and the values is the array.
+

@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.370 --> 00:00:09.175
+Collaborative filtering methods largely fall in two categories.
+
+00:00:09.175 --> 00:00:12.695
+The first is known as model based collaborative filtering,
+
+00:00:12.695 --> 00:00:16.410
+which uses machine learning techniques to make recommendations.
+
+00:00:16.410 --> 00:00:19.359
+This will be discussed in the next lesson.
+
+00:00:19.359 --> 00:00:21.689
+The second of these is known as
+
+00:00:21.690 --> 00:00:26.190
+neighborhood based collaborative filtering which we'll cover now.
+
+00:00:26.929 --> 00:00:31.009
+The name neighborhood is used to suggest that we're
+
+00:00:31.010 --> 00:00:35.445
+interested in finding individuals that are closely related to one another.
+
+00:00:35.445 --> 00:00:40.954
+We saw Jesse and Sam were highly related because they had watched the same movies.
+
+00:00:40.954 --> 00:00:43.920
+Therefore, they are closer neighbors than say,
+
+00:00:43.920 --> 00:00:47.490
+Noah, who has not seen any of these movies.
+
+00:00:47.490 --> 00:00:51.789
+I like to think of identifying neighborhoods in two possible ways.
+
+00:00:51.789 --> 00:00:57.325
+One is measuring similarity and the second is measuring distance.
+
+00:00:57.325 --> 00:01:02.765
+You might be thinking these sound like they're the same thing and they are very similar.
+
+00:01:02.765 --> 00:01:07.200
+Common measures of similarity include Pearson's correlation coefficient,
+
+00:01:07.200 --> 00:01:10.890
+Spearman's correlation coefficient and Kendall's tau.
+
+00:01:10.890 --> 00:01:16.515
+Each of these measures takes on a value in the range between negative one and one.
+
+00:01:16.515 --> 00:01:18.954
+When using any of these measures,
+
+00:01:18.954 --> 00:01:21.034
+as values move closer to one,
+
+00:01:21.034 --> 00:01:24.829
+this suggests that two individuals are more similar.
+
+00:01:24.829 --> 00:01:29.780
+For making recommendations, we want to find users that have the highest values of
+
+00:01:29.780 --> 00:01:36.335
+these coefficients and they are most similar and therefore live in closer neighborhoods.
+
+00:01:36.334 --> 00:01:42.149
+Distance based measures include Euclidian Distance and Manhattan Distance.
+
+00:01:42.150 --> 00:01:45.234
+Alternative to similarity based metrics,
+
+00:01:45.234 --> 00:01:48.594
+we want to find small values of these measures.
+
+00:01:48.594 --> 00:01:53.730
+Distance based metrics range from zero to essentially infinity.
+
+00:01:53.730 --> 00:01:56.385
+The closer these values are to zero,
+
+00:01:56.385 --> 00:01:59.940
+the more similar two individuals are to one another.
+
+00:01:59.939 --> 00:02:03.289
+Identifying neighborhoods with these metrics means
+
+00:02:03.290 --> 00:02:06.215
+finding individuals who are closer to zero.
+
+00:02:06.215 --> 00:02:12.069
+Choosing an appropriate metric is highly contingent on your particular situation.
+
+00:02:12.069 --> 00:02:14.139
+In the upcoming concepts,
+
+00:02:14.139 --> 00:02:18.319
+you will become more familiar with these metrics and we'll see
+
+00:02:18.319 --> 00:02:23.039
+why some metrics just don't work as well for our situation.
+

@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.859 --> 00:00:06.089
+In the previous notebook,
+
+00:00:06.089 --> 00:00:10.969
+you put your skills to work using SVD on a subset of the MovieTweetings data.
+
+00:00:10.970 --> 00:00:16.250
+The first talking point from your analysis is that your latent factors weren't labeled,
+
+00:00:16.250 --> 00:00:20.579
+so we might be able to get an idea of the latent factors based on how the weights,
+
+00:00:20.579 --> 00:00:23.429
+appear across different movies but we don't have
+
+00:00:23.429 --> 00:00:28.875
+a nice known label on the feature like I made it seem in the previous video.
+
+00:00:28.875 --> 00:00:31.365
+This is what makes a feature latent.
+
+00:00:31.364 --> 00:00:36.104
+The second talking point is that we found out that the sigma matrix holds values
+
+00:00:36.104 --> 00:00:40.944
+that can tell us how much of the variability in the original user movie matrix,
+
+00:00:40.945 --> 00:00:44.090
+can be explained by a particular latent factor.
+
+00:00:44.090 --> 00:00:46.940
+This is useful because you might not need
+
+00:00:46.939 --> 00:00:50.224
+all the latent features to make a good prediction.
+
+00:00:50.225 --> 00:00:52.969
+Looking at the elements in the sigma matrix,
+
+00:00:52.969 --> 00:00:56.899
+can give an indication of how many latent factors you might want to keep.
+
+00:00:56.899 --> 00:01:01.469
+By squaring each of these diagonal elements and adding them together,
+
+00:01:01.469 --> 00:01:05.525
+we can obtain the total variability to be explained in the matrix.
+
+00:01:05.525 --> 00:01:10.430
+Then the amount of variability explained by each latent feature can be
+
+00:01:10.430 --> 00:01:16.050
+found as the ratio of the square diagonal element divided by this sum.
+
+00:01:16.049 --> 00:01:19.159
+The final and most important point,
+
+00:01:19.159 --> 00:01:24.155
+is that we can't use SVD when our matrix has missing values.
+
+00:01:24.155 --> 00:01:28.439
+Traditional SVD is great for situations that look like this,
+
+00:01:28.439 --> 00:01:32.965
+as these types of matrices have eigenvalues and eigenvectors.
+
+00:01:32.965 --> 00:01:36.814
+However, it isn't great for this situation,
+
+00:01:36.814 --> 00:01:38.519
+this is terrible news.
+
+00:01:38.519 --> 00:01:40.704
+Because when we make our recommendations,
+
+00:01:40.704 --> 00:01:43.939
+our matrices tend to look a lot closer to this.
+
+00:01:43.939 --> 00:01:48.079
+This is where Simon Funks version of SVD comes in to help.
+

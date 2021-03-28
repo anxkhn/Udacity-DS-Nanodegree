@@ -1,0 +1,322 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text: More Recommendation Technniques</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to Recommendation Engines</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Video Intro.html">01. Video: Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Video + Text Example Recommendation Engines.html">02. Video + Text: Example Recommendation Engines</a>
+    </li>
+    <li class="">
+      <a href="03. Text What&#x27;s Ahead.html">03. Text: What&#x27;s Ahead?</a>
+    </li>
+    <li class="">
+      <a href="04. Video Introduction to MovieTweetings.html">04. Video: Introduction to MovieTweetings</a>
+    </li>
+    <li class="">
+      <a href="05. Notebook MovieTweeting Data.html">05. Notebook: MovieTweeting Data</a>
+    </li>
+    <li class="">
+      <a href="06. Screencast Solution MovieTweeting Data .html">06. Screencast: Solution MovieTweeting Data </a>
+    </li>
+    <li class="">
+      <a href="07. Video Ways to Recommend Knowledge Based.html">07. Video: Ways to Recommend: Knowledge Based</a>
+    </li>
+    <li class="">
+      <a href="08. Notebook Knowledge Based.html">08. Notebook: Knowledge Based</a>
+    </li>
+    <li class="">
+      <a href="09. Screencast Solution Knowledge Based.html">09. Screencast: Solution Knowledge Based</a>
+    </li>
+    <li class="">
+      <a href="10. Video More Personalized Recommendations.html">10. Video: More Personalized Recommendations</a>
+    </li>
+    <li class="">
+      <a href="11. Video Ways to Recommend Collaborative Filtering.html">11. Video: Ways to Recommend: Collaborative Filtering</a>
+    </li>
+    <li class="">
+      <a href="12. Video + Quiz Collaborative Filtering &amp; Content Based Recs.html">12. Video + Quiz: Collaborative Filtering &amp; Content Based Recs</a>
+    </li>
+    <li class="">
+      <a href="13. Video + Text Measuring Similarity.html">13. Video + Text: Measuring Similarity</a>
+    </li>
+    <li class="">
+      <a href="14. Notebook Measuring Similarity.html">14. Notebook: Measuring Similarity</a>
+    </li>
+    <li class="">
+      <a href="15. Screencast Solution Measuring Similarity.html">15. Screencast: Solution Measuring Similarity</a>
+    </li>
+    <li class="">
+      <a href="16. Video Identifying Recommendations.html">16. Video: Identifying Recommendations</a>
+    </li>
+    <li class="">
+      <a href="17. Notebook Collaborative Filtering.html">17. Notebook: Collaborative Filtering</a>
+    </li>
+    <li class="">
+      <a href="18. Screencast Solution Collaborative Filtering.html">18. Screencast: Solution Collaborative Filtering</a>
+    </li>
+    <li class="">
+      <a href="19. Screencast Solutions for Collaborative Filtering.html">19. Screencast: Solutions for Collaborative Filtering</a>
+    </li>
+    <li class="">
+      <a href="20. Video Ways to Recommend Content Based.html">20. Video: Ways to Recommend: Content Based</a>
+    </li>
+    <li class="">
+      <a href="21. Notebook Content Based.html">21. Notebook: Content Based</a>
+    </li>
+    <li class="">
+      <a href="22. Screencast Solution Content Based.html">22. Screencast: Solution Content Based</a>
+    </li>
+    <li class="">
+      <a href="23. Video Three Types of Recommendation Systems.html">23. Video: Three Types of Recommendation Systems</a>
+    </li>
+    <li class="">
+      <a href="24. Text More Recommendation Technniques.html">24. Text: More Recommendation Technniques</a>
+    </li>
+    <li class="">
+      <a href="25. Quiz Recommendation Methods.html">25. Quiz: Recommendation Methods</a>
+    </li>
+    <li class="">
+      <a href="26. Video Types of Ratings.html">26. Video: Types of Ratings</a>
+    </li>
+    <li class="">
+      <a href="27. Video Goals of Recommendation Systems.html">27. Video: Goals of Recommendation Systems</a>
+    </li>
+    <li class="">
+      <a href="28. Quiz Types of Ratings &amp; Goals of Recommendation Systems.html">28. Quiz: Types of Ratings &amp; Goals of Recommendation Systems</a>
+    </li>
+    <li class="">
+      <a href="29. Video Outro.html">29. Video: Outro</a>
+    </li>
+    <li class="">
+      <a href="30. Text Recap.html">30. Text: Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">24. Text: More Recommendation Technniques</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="three-types-of-recommendations">Three Types of Recommendations</h3>
+<p>There are three methods that you have now implemented for making recommendations.  These are the three most recognized methods in industry:</p>
+<p><code>1.</code> Knowledge Based Recommendations</p>
+<p>Knowledge based recommendations frequently are implemented using filters, and are extremely common amongst luxury based goods.  Filters that you might see when purchasing items like cars or homes are examples of knowledge based recommendations. In knowledge based recommendations, users provide information about the types of recommendations they would like back.</p>
+<p><code>2.</code> Collaborative Filtering Based Recommendations</p>
+<p>Collaborative filtering uses the connections between users and items to make recommendations. Even the content based recommendation you just implemented used some collaborative filtering techniques, as you were not treating items and users independent from one another. In this lesson, you used neighborhood based collaborative filtering to find users who were alike and then recommend new movies based on these similar users.  </p>
+<p>Even in the content based recommendation, you were using collaborative filtering.  You were finding items that were similar and making recommendations of new items based on the highest ratings of a user. Because you were still using the user ratings of an item, this was an example of a blend between content and collaborative filtering based techniques.</p>
+<p><code>3.</code> Content Based Recommendations</p>
+<p>In the previous notebook, you created a matrix of similarities between items (movies) based only on the content related to those movies (year and genre). The similarity matrix that was used, was completely created using only the items (movies).  There was no information used about the users implemented. For any movie, you would be able to determine the most related additional movies based only on the genre and the year of the movie. This is the premise of how a completely content based recommendation would be made.</p>
+<p>Often blended techniques of all three types are used in practice to provide the the best recommendation for a particular circumstance.  </p>
+<p>There are still more advanced techniques that are related to the methods that you learned about here, and they will most likely fall in one of the three buckets below.  </p>
+<ul>
+<li><a href="https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e" rel="noopener noreferrer" target="_blank">AirBnB uses embeddings in their recommendation, which you can read more about here</a>.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-08-11-at-12.52.21-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li><a href="https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-17885-1_1580" rel="noopener noreferrer" target="_blank">As our smart phones become more addicting every day, it is easy to see why location based recommendations will be more and more popular.  You can read more about these types of recommendations here.</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-08-11-at-12.52.03-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li><a href="https://ebaytech.berlin/deep-learning-for-recommender-systems-48c786a20e1a" rel="noopener noreferrer" target="_blank">Many companies are also exploring deep learning use cases in recommendation systems.</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-08-11-at-12.54.48-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="25. Quiz Recommendation Methods.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('24. Text: More Recommendation Technniques')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.791 --> 00:00:04.972
+INTRODUÇÃO AO MOVIETWEETINGS
+
+00:00:05.382 --> 00:00:08.699
+Nesta aula, trabalharemos
+com os dados do MovieTweetings,
+
+00:00:08.732 --> 00:00:12.067
+um conjunto de classificação
+de filmes coletado por Simon Dooms
+
+00:00:12.100 --> 00:00:15.373
+e uma agência de inovação
+na Bélgica, usando o Twitter.
+
+00:00:15.406 --> 00:00:17.835
+Veremos algumas das técnicas
+mais comuns
+
+00:00:17.868 --> 00:00:19.386
+para criar recomendações
+
+00:00:19.419 --> 00:00:23.147
+enquanto trabalhamos com os dados
+coletados usando o MovieTweetings.
+
+00:00:23.180 --> 00:00:25.436
+Conforme construímos
+cada recomendação,
+
+00:00:25.469 --> 00:00:29.379
+veremos os prós e os contras
+de cada um dos recomendadores,
+
+00:00:29.412 --> 00:00:32.299
+e como podemos melhorar
+as recomendações.
+

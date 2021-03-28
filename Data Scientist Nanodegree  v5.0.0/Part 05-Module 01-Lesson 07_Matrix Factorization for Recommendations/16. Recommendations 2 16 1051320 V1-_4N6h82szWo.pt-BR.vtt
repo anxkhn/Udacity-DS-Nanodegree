@@ -1,0 +1,529 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.464 --> 00:00:05.189
+Vamos começar implementando
+a SVD de Funk
+
+00:00:05.222 --> 00:00:08.900
+na matriz de avaliações,
+com os usuários como as linhas,
+
+00:00:08.933 --> 00:00:12.868
+os filmes como as colunas
+e os valores preenchidos aqui
+
+00:00:12.901 --> 00:00:16.604
+são as avaliações atribuídas
+a esse par usuário-filme específico.
+
+00:00:16.637 --> 00:00:18.585
+Para começar,
+nossa função será assim.
+
+00:00:18.619 --> 00:00:21.268
+Ela vai receber a nossa
+matriz de avaliações,
+
+00:00:21.301 --> 00:00:24.157
+que, por ora, é essencialmente
+essa parte aqui de cima.
+
+00:00:24.191 --> 00:00:26.171
+Quantas variáveis
+latentes queremos,
+
+00:00:26.204 --> 00:00:28.021
+qual deverá ser
+a taxa de aprendizado
+
+00:00:28.054 --> 00:00:31.708
+e o número de iterações
+que queremos realizar.
+
+00:00:31.741 --> 00:00:35.818
+O número de usuários
+é o número de linhas que temos,
+
+00:00:35.851 --> 00:00:41.643
+e o número
+de filmes será isso.
+
+00:00:41.676 --> 00:00:46.508
+O número de avaliações será
+o produto dessas duas coisas.
+
+00:00:47.683 --> 00:00:51.508
+Podemos fazer isso.
+Mas, se houver valores faltantes,
+
+00:00:51.541 --> 00:00:54.521
+isso não vai funcionar,
+então vou usar isso aqui.
+
+00:00:54.555 --> 00:00:58.308
+Essa é uma boa função
+que conta o número de não-zeros.
+
+00:00:58.341 --> 00:01:03.556
+Basicamente, esse "np.isnan"
+vai passar pela nossa matriz
+
+00:01:03.589 --> 00:01:07.699
+e monitorar se há
+um valor faltante ou não.
+
+00:01:07.732 --> 00:01:13.267
+Vamos criar a nossa matriz
+com valores aleatórios.
+
+00:01:13.300 --> 00:01:15.115
+Se você se lembra
+do vídeo anterior,
+
+00:01:15.148 --> 00:01:18.307
+nós temos duas matrizes:
+uma matriz de usuários,
+
+00:01:18.340 --> 00:01:21.667
+cujas dimensões
+são os usuários como as linhas
+
+00:01:21.700 --> 00:01:24.123
+e o número de variáveis latentes
+são as colunas,
+
+00:01:24.156 --> 00:01:27.658
+e uma matriz de filmes,
+onde o número de variáveis latentes
+
+00:01:27.691 --> 00:01:31.204
+são as linhas, e o número
+de filmes são as colunas.
+
+00:01:32.084 --> 00:01:35.755
+E o produto escalar da matriz
+de usuários com a matriz de filmes
+
+00:01:35.788 --> 00:01:41.115
+vai nos dar a matriz
+usuário-filme original.
+
+00:01:43.571 --> 00:01:45.788
+Então,
+for iteration in range(iters),
+
+00:01:45.821 --> 00:01:48.940
+onde "iters", lembre-se,
+é o que é passado.
+
+00:01:48.973 --> 00:01:53.611
+Isso é quantas vezes vamos passar
+pelo par de matrizes
+
+00:01:53.644 --> 00:01:55.675
+e atualizar o valor.
+
+00:01:55.708 --> 00:01:59.497
+O que você viu no vídeo
+
+00:01:59.531 --> 00:02:02.003
+não é uma iteração completa.
+
+00:02:02.036 --> 00:02:07.528
+Uma iteração é fazer esse processo
+de iteração uma vez em cada valor.
+
+00:02:07.562 --> 00:02:11.315
+Neste caso,
+vamos fazer isso 100 vezes.
+
+00:02:11.348 --> 00:02:13.794
+Para cada par usuário-filme...
+
+00:02:13.827 --> 00:02:16.303
+Vou escrever
+"para cada usuário",
+
+00:02:16.336 --> 00:02:20.155
+isto é, para cada
+i in range(n_users)
+
+00:02:23.274 --> 00:02:28.835
+e para cada filme, isto é,
+para cada j in range(n_movies)...
+
+00:02:29.564 --> 00:02:32.352
+Então, o que queremos fazer
+para cada par usuário-filme
+
+00:02:32.386 --> 00:02:34.467
+é que, se houver
+uma avaliação, isto é,
+
+00:02:34.500 --> 00:02:37.619
+se houver uma avaliação
+na matriz
+
+00:02:41.691 --> 00:02:45.004
+que não seja nula,
+
+00:02:45.996 --> 00:02:48.970
+e, como no nosso caso,
+as avaliações são de 1 a 10,
+
+00:02:50.107 --> 00:02:52.235
+vou só dizer if &gt; 0.
+
+00:02:52.268 --> 00:02:55.389
+Se fizermos algo como
+
+00:02:55.423 --> 00:02:58.691
+np.nan &gt; 1 ou &gt; 0,
+
+00:02:58.724 --> 00:03:00.739
+o retorno que recebemos
+é "falso",
+
+00:03:00.772 --> 00:03:05.050
+e isso é bom para a gente,
+porque queremos que isso seja
+
+00:03:05.083 --> 00:03:06.874
+avaliado como falso
+se for um NaN
+
+00:03:06.907 --> 00:03:10.354
+e como verdadeiro
+se um valor realmente existir ali.
+
+00:03:11.019 --> 00:03:14.948
+Aqui começa o real processo
+de iteração que vimos no vídeo.
+
+00:03:14.981 --> 00:03:19.755
+O que queremos fazer é calcular
+o resíduo, ou a diferença,
+
+00:03:19.788 --> 00:03:23.147
+entre o valor real
+e o que temos
+
+00:03:23.180 --> 00:03:25.355
+dado o produto escalar
+das matrizes.
+
+00:03:25.388 --> 00:03:28.954
+Então, o valor real é isso.
+
+00:03:30.466 --> 00:03:34.281
+E o valor que nós previmos
+baseado na nossa matriz
+
+00:03:34.314 --> 00:03:39.458
+é a iª linha na matriz à esquerda,
+que é a matriz de usuários,
+
+00:03:39.491 --> 00:03:45.267
+e a jª coluna na matriz v,
+que é a matriz de filmes.
+
+00:03:45.300 --> 00:03:50.354
+A nossa predição é
+user_mat,
+
+00:03:50.387 --> 00:03:56.103
+e queremos a iª linha
+e todas as colunas.
+
+00:03:56.136 --> 00:04:00.807
+Queremos o produto escalar
+entre a matriz de filmes,
+
+00:04:00.841 --> 00:04:04.420
+o que vai pegar
+todas as linhas,
+
+00:04:04.454 --> 00:04:07.586
+mas queremos só a jª coluna.
+
+00:04:07.619 --> 00:04:10.536
+Aqui, vamos monitorar
+
+00:04:10.570 --> 00:04:14.874
+as diferenças quadradas
+totais.
+
+00:04:16.226 --> 00:04:20.265
+Isso só será útil se quisermos
+nos certificar de que estamos
+
+00:04:20.298 --> 00:04:22.946
+melhorando a cada iteração.
+Podemos conferir
+
+00:04:22.979 --> 00:04:26.035
+a soma dos quadrados
+das nossas diferenças.
+
+00:04:26.068 --> 00:04:30.554
+No processo de atualização,
+vimos que o que queremos fazer
+
+00:04:30.587 --> 00:04:35.955
+é passar por cada item nessa linha
+e por cada item nessa coluna,
+
+00:04:35.988 --> 00:04:38.666
+isto é, cada item na linha
+da matriz de usuários
+
+00:04:38.699 --> 00:04:41.530
+e cada item na coluna
+da matriz de filmes,
+
+00:04:41.563 --> 00:04:44.714
+e atualizar esses valores
+de acordo com o gradiente.
+
+00:04:44.747 --> 00:04:48.746
+Nós vimos que o gradiente
+é igual a...
+
+00:04:48.779 --> 00:04:50.442
+Vamos olhar isso...
+
+00:04:51.883 --> 00:04:54.771
+Então, vimos que podemos obter
+esse valor individual
+
+00:04:54.804 --> 00:04:58.714
+como o valor original,
+então vou usar um "+="
+
+00:04:58.747 --> 00:05:02.577
+para calcular o valor antigo
+mais a taxa de aprendizado
+
+00:05:04.434 --> 00:05:09.777
+vezes 2 vezes a diferença
+
+00:05:11.330 --> 00:05:14.982
+vezes o mesmo ponto
+da matriz oposta.
+
+00:05:15.015 --> 00:05:17.496
+Se você notar a fórmula
+para o gradiente anterior,
+
+00:05:17.529 --> 00:05:19.978
+verá que eu quis tirar
+o valor antigo,
+
+00:05:20.011 --> 00:05:23.610
+então podemos escrever isso
+como user_mat(i, k)
+
+00:05:23.643 --> 00:05:27.473
+é igual a
+user_mat(i, k) original
+
+00:05:27.507 --> 00:05:30.898
+mais a taxa de aprendizado
+vezes 2
+
+00:05:30.931 --> 00:05:33.810
+vezes a diferença,
+que calculamos aqui em cima,
+
+00:05:33.843 --> 00:05:38.722
+vezes a matriz de filmes,
+a matriz oposta na mesma posição.
+
+00:05:38.755 --> 00:05:44.546
+Atualizar a matriz de filmes
+é muito parecido com isso.
+
+00:05:44.579 --> 00:05:50.034
+Para atualizar isso,
+o que queremos é o kº ponto.
+
+00:05:50.658 --> 00:05:52.761
+Estamos atualizando
+o ponto (k, j)
+
+00:05:52.794 --> 00:05:55.603
+multiplicando duas vezes
+pela taxa de aprendizado,
+
+00:05:55.636 --> 00:05:59.850
+e isso aqui precisa ser
+o local na matriz de usuários,
+
+00:05:59.883 --> 00:06:03.362
+então será (i, k).
+
+00:06:04.762 --> 00:06:06.442
+Isso é nossa atualização.
+
+00:06:06.475 --> 00:06:10.266
+No fim, vou escrever
+uma instrução print.
+
+00:06:11.545 --> 00:06:14.584
+UM TEMPO DEPOIS
+DE SOLUCIONAR PROBLEMAS...
+
+00:06:16.089 --> 00:06:19.130
+Ah, opa! Isso tem que ter...
+
+00:06:24.122 --> 00:06:27.129
+DOIS AJUSTES INCLUÍDOS...
+
+00:06:27.805 --> 00:06:33.265
+Isso deve ser a matriz oposta,
+então é a matriz de usuários,
+
+00:06:33.298 --> 00:06:34.890
+e não a matriz de filmes.
+
+00:06:36.201 --> 00:06:38.394
+E...
+
+00:06:39.419 --> 00:06:43.417
+Opa, eu vi um "see"
+em vez de um "sse".
+
+00:06:46.970 --> 00:06:50.386
+Isso tem que ser
+a soma dos quadrados.
+
+00:06:52.412 --> 00:06:54.685
+E...
+
+00:06:55.947 --> 00:06:57.833
+Encontrei o erro.
+
+00:06:58.385 --> 00:07:00.801
+Aqui em cima,
+essa matriz de filmes deve ter
+
+00:07:00.834 --> 00:07:03.977
+o número de variáveis latentes
+pelo número de filmes.
+
+00:07:05.521 --> 00:07:08.860
+OBSERVANDO OS RESULTADOS,
+VEMOS QUE...
+
+00:07:09.060 --> 00:07:12.153
+Certo. Essa 1ª linha
+deve ter um monte de 10.
+
+00:07:12.186 --> 00:07:15.098
+Como você pode ver,
+é muito próximo.
+
+00:07:15.131 --> 00:07:17.450
+Aqui devemos ter
+8, 9, 10, 5.
+
+00:07:17.483 --> 00:07:20.337
+Note que estamos um pouco
+mais distantes.
+
+00:07:20.370 --> 00:07:21.569
+E daí em diante.
+
+00:07:21.602 --> 00:07:25.489
+Note que ainda não convergiu
+com apenas 10 iterações
+
+00:07:25.522 --> 00:07:27.201
+usando 4 variáveis latentes,
+
+00:07:27.234 --> 00:07:32.161
+mas podemos tentar de novo
+se usarmos essa mesma função.
+
+00:07:33.690 --> 00:07:38.425
+Em vez de 10 iterações,
+vamos fazer 250.
+
+00:07:39.560 --> 00:07:41.306
+É o que nos pediram
+para fazer.
+
+00:07:42.721 --> 00:07:46.810
+Ainda está bem rápido,
+mas veja como chegamos a um erro
+
+00:07:46.843 --> 00:07:48.178
+que é essencialmente zero.
+
+00:07:48.211 --> 00:07:52.441
+Se olharmos para as nossas predições
+e para os valores reais agora,
+
+00:07:52.944 --> 00:07:56.497
+estamos na mesma,
+apenas com uma diferença decimal.
+
+00:07:56.961 --> 00:08:00.273
+A seguir, queremos aplicar
+um valor NaN
+
+00:08:00.306 --> 00:08:01.754
+na matriz de avaliações.
+
+00:08:01.787 --> 00:08:04.426
+Aqui, eu coloquei um "nan"
+na 1ª parte.
+
+00:08:04.459 --> 00:08:08.042
+Queremos ver se ainda
+conseguimos realizar cálculos.
+
+00:08:08.075 --> 00:08:12.025
+O que sabemos sobre
+o que fizemos com SVD mais cedo,
+
+00:08:12.058 --> 00:08:15.849
+usando a built-in, é que ela quebrou
+quando aplicamos um NaN.
+
+00:08:15.882 --> 00:08:18.874
+Se fizermos isso...
+
+00:08:18.907 --> 00:08:21.353
+Digamos que a gente faça
+250 iterações.
+
+00:08:23.473 --> 00:08:25.785
+Note que ela foi executada,
+e não quebrou.
+
+00:08:25.818 --> 00:08:30.490
+Convergiu muito bem, e note
+que até previu 10,64.
+
+00:08:30.523 --> 00:08:35.048
+Foi um NaN, mas sabemos
+que havia um 10 no ponto
+
+00:08:35.081 --> 00:08:36.242
+em que aplicamos o NaN.
+
+00:08:36.275 --> 00:08:41.761
+Nós obtivemos uma predição
+muito próxima do valor real
+
+00:08:41.794 --> 00:08:46.082
+e também aplicamos um NaN
+na matriz e ela não quebrou,
+
+00:08:46.115 --> 00:08:49.466
+então só aconteceram coisas
+boas por aqui.
+

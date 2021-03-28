@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.765 --> 00:00:04.954
+MEDINDO SIMILARIDADE
+
+00:00:05.284 --> 00:00:09.253
+Os métodos de filtragem colaborativa
+se dividem em duas categorias.
+
+00:00:09.286 --> 00:00:12.676
+A primeira é a filtragem
+colaborativa baseada no modelo,
+
+00:00:12.709 --> 00:00:16.453
+que usa técnicas de aprendizado
+de máquina para fazer recomendações.
+
+00:00:16.486 --> 00:00:19.661
+Isso será discutido
+na próxima aula.
+
+00:00:19.694 --> 00:00:23.836
+A segunda é a filtragem colaborativa
+baseada na vizinhança,
+
+00:00:23.869 --> 00:00:25.573
+que veremos agora.
+
+00:00:27.797 --> 00:00:30.436
+O nome "vizinhança" é usado
+para sugerir
+
+00:00:30.469 --> 00:00:32.854
+que estamos interessados
+em encontrar pessoas
+
+00:00:32.887 --> 00:00:35.565
+que estejam intimamente
+relacionadas.
+
+00:00:35.598 --> 00:00:38.817
+Vimos que havia uma relação
+entre Jessie e Sam
+
+00:00:38.850 --> 00:00:41.089
+porque tinham assistido
+aos mesmos filmes.
+
+00:00:41.122 --> 00:00:44.673
+Portanto, eles são vizinhos
+mais próximos do que Noah,
+
+00:00:44.706 --> 00:00:47.601
+que não assistiu
+a nenhum desses filmes.
+
+00:00:47.634 --> 00:00:51.761
+Vejo a identificação de vizinhos
+de duas maneiras possíveis,
+
+00:00:51.794 --> 00:00:54.570
+uma mede a similaridade
+
+00:00:54.603 --> 00:00:57.457
+e a segunda mede a distância.
+
+00:00:57.490 --> 00:01:00.937
+Você pode estar pensando que isso
+soa como se fosse a mesma coisa,
+
+00:01:00.970 --> 00:01:02.728
+pois são muito parecidos.
+
+00:01:02.761 --> 00:01:04.704
+Medidas comuns de similaridade
+
+00:01:04.737 --> 00:01:07.274
+incluem o coeficiente
+de correlação de Pearson,
+
+00:01:07.307 --> 00:01:10.972
+o coeficiente de correlação
+de Spearman e o tau de Kendall.
+
+00:01:11.005 --> 00:01:14.234
+Cada uma dessas medidas
+pega um valor no intervalo
+
+00:01:14.267 --> 00:01:16.627
+entre um -1 e 1.
+
+00:01:16.660 --> 00:01:18.843
+Ao usar qualquer
+uma dessas medidas,
+
+00:01:18.876 --> 00:01:21.115
+quando os valores
+se aproximam de 1,
+
+00:01:21.148 --> 00:01:25.019
+isso sugere que 2 indivíduos
+são mais parecidos.
+
+00:01:25.052 --> 00:01:26.810
+Para fazer recomendações,
+
+00:01:26.843 --> 00:01:31.146
+queremos encontrar usuários com os
+maiores valores destes coeficientes,
+
+00:01:31.179 --> 00:01:36.748
+pois eles são mais semelhantes
+e, portanto, vizinhos.
+
+00:01:36.781 --> 00:01:40.291
+As medidas baseadas na distância
+incluem a Distância Euclidiana
+
+00:01:40.324 --> 00:01:42.226
+e a Distância de Manhattan.
+
+00:01:42.259 --> 00:01:45.147
+Diferentemente das métricas
+baseadas em similaridade,
+
+00:01:45.180 --> 00:01:48.891
+queremos encontrar
+pequenos valores dessas medidas.
+
+00:01:48.924 --> 00:01:53.875
+As métricas com base na distância
+variam de zero ao infinito.
+
+00:01:53.908 --> 00:01:56.508
+Quanto mais próximos
+os valores estiverem de zero,
+
+00:01:56.541 --> 00:02:00.106
+mais semelhantes
+serão os indivíduos.
+
+00:02:00.139 --> 00:02:02.778
+Identificar vizinhanças
+com essas métricas
+
+00:02:02.811 --> 00:02:06.562
+significa encontrar pessoas
+que estão mais próximas de zero.
+
+00:02:06.595 --> 00:02:08.388
+A escolha
+de uma métrica apropriada
+
+00:02:08.421 --> 00:02:12.179
+é altamente contingente
+da situação específica.
+
+00:02:12.212 --> 00:02:13.810
+Nos próximos conceitos,
+
+00:02:13.843 --> 00:02:17.035
+nos familiarizaremos
+com essas métricas
+
+00:02:17.068 --> 00:02:19.498
+e veremos
+por que algumas métricas
+
+00:02:19.531 --> 00:02:22.609
+simplesmente não funcionam
+tão bem para a nossa situação.
+

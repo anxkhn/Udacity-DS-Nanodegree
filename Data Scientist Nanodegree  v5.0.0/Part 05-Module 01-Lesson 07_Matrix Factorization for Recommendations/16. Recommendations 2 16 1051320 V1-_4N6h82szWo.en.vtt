@@ -1,0 +1,445 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.955
+We're going to start by implementing
+
+00:00:02.955 --> 00:00:08.879
+Funk Singular Value Decomposition on this ratings matrix as users as the rows,
+
+00:00:08.880 --> 00:00:10.540
+movies as the columns,
+
+00:00:10.539 --> 00:00:13.379
+and then the values that are filled in here are
+
+00:00:13.380 --> 00:00:16.710
+the ratings that were given for that particular user-movie combo.
+
+00:00:16.710 --> 00:00:18.725
+To begin with, here's what our function will look like.
+
+00:00:18.725 --> 00:00:21.115
+It'll take in our ratings matrix,
+
+00:00:21.114 --> 00:00:23.559
+which is essentially just this part up here.
+
+00:00:23.559 --> 00:00:26.154
+For now, how many latent features we want,
+
+00:00:26.155 --> 00:00:28.080
+what our learning rate should be,
+
+00:00:28.079 --> 00:00:31.469
+and then the number of iterations that we want to perform.
+
+00:00:31.469 --> 00:00:35.759
+So, the number of users is basically the number of rows that we have.
+
+00:00:35.759 --> 00:00:41.574
+So, the number of movies is just going to be this.
+
+00:00:41.575 --> 00:00:46.984
+The number of ratings is going to basically be the product of those two things,
+
+00:00:46.984 --> 00:00:48.835
+so we could do this.
+
+00:00:48.835 --> 00:00:51.535
+Unfortunately, if we have missing values,
+
+00:00:51.534 --> 00:00:52.869
+this won't actually work,
+
+00:00:52.869 --> 00:00:54.729
+so I'm going to use this.
+
+00:00:54.729 --> 00:00:58.369
+So, this is a nice function that goes through and counts the number of non-zeros,
+
+00:00:58.369 --> 00:01:03.609
+and essentially this np.isnan is going to go through our matrix,
+
+00:01:03.609 --> 00:01:07.549
+and keep track of whether there's a missing value or not.
+
+00:01:07.549 --> 00:01:13.200
+Basically, we're going to just create our matrices filled with random values.
+
+00:01:13.200 --> 00:01:15.144
+So, if you remember from the earlier movie,
+
+00:01:15.144 --> 00:01:18.314
+we have two matrices: a user matrix,
+
+00:01:18.314 --> 00:01:21.769
+which has the dimensions are users as the rows,
+
+00:01:21.769 --> 00:01:24.200
+and the number of latent features as the columns;
+
+00:01:24.200 --> 00:01:25.340
+and then a movie matrix,
+
+00:01:25.340 --> 00:01:27.965
+which is the number of latent features as
+
+00:01:27.965 --> 00:01:31.715
+the rows and the number of movies as the columns,
+
+00:01:31.715 --> 00:01:36.620
+and basically this user-matrix dot product with the movie matrix is going to give
+
+00:01:36.620 --> 00:01:42.090
+us the original user-movie matrix.
+
+00:01:42.569 --> 00:01:46.029
+So, for iteration in range iters,
+
+00:01:46.030 --> 00:01:48.879
+where iters, remember, is this thing that gets passed.
+
+00:01:48.879 --> 00:01:51.289
+So, this is how many times we're going to go
+
+00:01:51.290 --> 00:01:55.630
+through the pair of matrices and update the values.
+
+00:01:55.629 --> 00:02:02.089
+So, what you saw in the movie is actually not even a full iteration,
+
+00:02:02.090 --> 00:02:04.340
+and iteration is to do that,
+
+00:02:04.340 --> 00:02:07.799
+iteration process on every single value once.
+
+00:02:07.799 --> 00:02:09.090
+So, in this case,
+
+00:02:09.090 --> 00:02:11.500
+what we're saying is, we're going to do that 100 times.
+
+00:02:11.500 --> 00:02:13.520
+For each user-movie pair,
+
+00:02:13.520 --> 00:02:16.275
+so I'm going to say, "For each user."
+
+00:02:16.275 --> 00:02:21.140
+So, for every i in range n_users,
+
+00:02:22.289 --> 00:02:24.609
+and then for every movie,
+
+00:02:24.610 --> 00:02:29.060
+so for every j in range n_movies.
+
+00:02:29.060 --> 00:02:31.490
+So, for every user-movie pair,
+
+00:02:31.490 --> 00:02:33.895
+what we want to do is if there's a rating,
+
+00:02:33.895 --> 00:02:38.530
+so if there's a rating in the matrix,
+
+00:02:40.039 --> 00:02:45.364
+and that it's not null.
+
+00:02:45.365 --> 00:02:49.240
+In our case, our ratings are from 1-10.
+
+00:02:49.240 --> 00:02:53.710
+So I'm just going to say, "If they're greater than 0," and if we do something
+
+00:02:53.710 --> 00:02:58.790
+like np.nan greater than one or greater than 0,
+
+00:02:58.789 --> 00:03:00.739
+and you can see that that comes back as false.
+
+00:03:00.740 --> 00:03:03.740
+So, that's a positive for us because basically
+
+00:03:03.740 --> 00:03:06.950
+we just want this to evaluate as false if it's a nan,
+
+00:03:06.949 --> 00:03:10.619
+and true if there's actually a value that exists in there.
+
+00:03:10.620 --> 00:03:15.069
+So, here comes the actual iteration process that we saw in the video.
+
+00:03:15.069 --> 00:03:18.139
+So, essentially, what we want to do is we want to calculate the
+
+00:03:18.139 --> 00:03:22.159
+residual or the difference between the actual value,
+
+00:03:22.159 --> 00:03:25.085
+and what we have given the dot product from our matrices.
+
+00:03:25.085 --> 00:03:29.550
+So, the actual value is this,
+
+00:03:29.550 --> 00:03:34.670
+and the value that we predict based on our matrix is
+
+00:03:34.669 --> 00:03:39.679
+the ith row in the left matrix or the user matrix,
+
+00:03:39.680 --> 00:03:45.230
+and the jth column in the V matrix or the movie Matrix.
+
+00:03:45.229 --> 00:03:50.185
+So, our prediction is user_mat,
+
+00:03:50.185 --> 00:03:53.020
+and we want the ith row.
+
+00:03:53.020 --> 00:03:56.380
+So, the ith row and all of the columns,
+
+00:03:56.379 --> 00:04:00.479
+and we want that dot product with the movie matrix,
+
+00:04:00.479 --> 00:04:04.250
+and that's going to get all of the rows,
+
+00:04:04.250 --> 00:04:07.689
+but we just want the jth column.
+
+00:04:07.689 --> 00:04:15.444
+Then, here, we're going to keep track of the total squared differences,
+
+00:04:15.444 --> 00:04:18.740
+and this is just going to be useful in the case that we
+
+00:04:18.740 --> 00:04:22.170
+want to make sure that we're doing better with each iteration.
+
+00:04:22.170 --> 00:04:26.015
+We can take a look at that sums of squares of our differences.
+
+00:04:26.014 --> 00:04:28.069
+So, in the updating process,
+
+00:04:28.069 --> 00:04:31.699
+we saw that basically what we want to do is go through
+
+00:04:31.699 --> 00:04:35.920
+each item in that row and each item in that column.
+
+00:04:35.920 --> 00:04:38.765
+So, each item in the row of the user matrix and
+
+00:04:38.764 --> 00:04:41.810
+each item in the column of the movie matrix,
+
+00:04:41.810 --> 00:04:44.660
+and update those values according to the gradient,
+
+00:04:44.660 --> 00:04:50.950
+and we saw that the gradient is essentially equal to, so if we look at this.
+
+00:04:50.980 --> 00:04:57.240
+So, we saw that we could get that individual value as basically the original value.
+
+00:04:57.240 --> 00:04:58.660
+So, I'm going to use a plus equal to,
+
+00:04:58.660 --> 00:05:00.200
+say the old value,
+
+00:05:00.199 --> 00:05:10.514
+plus the learning rate times 2 times the difference,
+
+00:05:10.514 --> 00:05:14.914
+times the value in the opposite matrix in the same spot.
+
+00:05:14.915 --> 00:05:17.280
+If you look at the formula for the gradient before,
+
+00:05:17.279 --> 00:05:18.509
+you'll see that it was,
+
+00:05:18.509 --> 00:05:19.860
+I want to take the old value.
+
+00:05:19.860 --> 00:05:22.990
+So, we could easily write this as user matrix i,
+
+00:05:22.990 --> 00:05:27.259
+k equals the original user matrix i,
+
+00:05:27.259 --> 00:05:32.334
+k plus the learning rate times 2 times the difference,
+
+00:05:32.334 --> 00:05:33.944
+which we calculated up here,
+
+00:05:33.944 --> 00:05:35.474
+times the movie matrix,
+
+00:05:35.475 --> 00:05:39.175
+the opposite matrix in the same position.
+
+00:05:39.175 --> 00:05:44.449
+Basically, updating the movie matrix looks very similar to this,
+
+00:05:44.449 --> 00:05:47.365
+but in order to update this,
+
+00:05:47.365 --> 00:05:50.174
+what we want is the kth spot.
+
+00:05:50.173 --> 00:05:52.810
+We're updating the k, j spot,
+
+00:05:52.810 --> 00:05:55.555
+and we're doing it by the learning rate 2 times,
+
+00:05:55.555 --> 00:05:59.915
+and then this needs to be the location in the user matrix.
+
+00:05:59.915 --> 00:06:03.980
+So, this is going to be the i, kth.
+
+00:06:03.980 --> 00:06:06.430
+So, that's basically our update,
+
+00:06:06.430 --> 00:06:08.569
+and then at the end,
+
+00:06:08.569 --> 00:06:11.189
+I'm just going to write it in a print statement.
+
+00:06:16.360 --> 00:06:18.980
+This needs to have a
+
+00:06:18.980 --> 00:06:29.069
+[inaudible] This should be
+
+00:06:29.069 --> 00:06:31.740
+the user, the opposite matrix.
+
+00:06:31.740 --> 00:06:35.490
+So, this should be the user matrix not the movie matrix.
+
+00:06:38.660 --> 00:06:43.870
+Oops, I saw see instead of sse.
+
+00:06:46.160 --> 00:06:50.230
+That should be sum squared.
+
+00:06:54.949 --> 00:06:57.750
+I found the bug.
+
+00:06:57.750 --> 00:07:00.829
+So, up here, this movie matrix should be
+
+00:07:00.829 --> 00:07:04.829
+the number of latent features by the number of movies.
+
+00:07:08.060 --> 00:07:11.995
+Great. So, this first line should be a bunch of 10s,
+
+00:07:11.995 --> 00:07:15.194
+and as you can see here, it's pretty close.
+
+00:07:15.194 --> 00:07:17.449
+Then, this should be 8, 9, 10, 5,
+
+00:07:17.449 --> 00:07:21.514
+and you can see we're a little farther away, and so on and so forth.
+
+00:07:21.514 --> 00:07:23.750
+So, you can see it hasn't quite converged with
+
+00:07:23.750 --> 00:07:27.180
+only 10 iterations using four latent features,
+
+00:07:27.180 --> 00:07:28.975
+but we can try it again.
+
+00:07:28.975 --> 00:07:32.865
+So, if we use that same function.
+
+00:07:32.865 --> 00:07:39.000
+When instead of 10 iterations, let's do 250.
+
+00:07:39.000 --> 00:07:41.670
+So, what they ask us to do,
+
+00:07:41.670 --> 00:07:44.090
+and so that's still pretty fast,
+
+00:07:44.089 --> 00:07:48.084
+but you can see that we get down to an error of essentially zero.
+
+00:07:48.084 --> 00:07:52.659
+So, if we look at our predictions versus the actual values now,
+
+00:07:52.660 --> 00:07:54.415
+we're basically the same.
+
+00:07:54.415 --> 00:07:56.720
+There's just decimal differences here.
+
+00:07:56.720 --> 00:08:01.620
+Now, the next part is that we want to place a nan value in that ratings matrix.
+
+00:08:01.620 --> 00:08:04.610
+So, here, I've just placed a nan in the first part,
+
+00:08:04.610 --> 00:08:07.970
+and we want to see if we can still compute things.
+
+00:08:07.970 --> 00:08:10.040
+So, what we know about what we did with
+
+00:08:10.040 --> 00:08:13.879
+singular value decomposition earlier using the built-in was that,
+
+00:08:13.879 --> 00:08:16.060
+it broke when we put a nan in.
+
+00:08:16.060 --> 00:08:18.459
+If we do this,
+
+00:08:18.459 --> 00:08:22.120
+so let's say we do 250 iterations.
+
+00:08:22.490 --> 00:08:25.835
+You can see that it ran. It didn't break.
+
+00:08:25.834 --> 00:08:27.449
+It converged really well,
+
+00:08:27.449 --> 00:08:30.985
+and you can see that it even predicted 10.64.
+
+00:08:30.985 --> 00:08:33.784
+So, it was a nan, but we know that there was
+
+00:08:33.784 --> 00:08:36.110
+actually a 110 in that spot where we plugged in the nan.
+
+00:08:36.110 --> 00:08:38.450
+So, not only did we get
+
+00:08:38.450 --> 00:08:41.915
+a prediction that was pretty close to what we know the actual value was,
+
+00:08:41.914 --> 00:08:44.929
+we shoved the nan into the matrix,
+
+00:08:44.929 --> 00:08:46.024
+and it didn't break.
+
+00:08:46.024 --> 00:08:50.000
+So, there's just good things happening here all the way around.
+

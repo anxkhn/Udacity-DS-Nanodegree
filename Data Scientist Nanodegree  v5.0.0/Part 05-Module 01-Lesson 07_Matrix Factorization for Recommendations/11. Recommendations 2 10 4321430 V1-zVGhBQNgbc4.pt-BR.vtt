@@ -1,0 +1,312 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:04.934
+Vamos dar as dimensões
+que teremos na SVD
+
+00:00:04.968 --> 00:00:07.300
+usando o que sabemos
+dos últimos vídeos.
+
+00:00:07.334 --> 00:00:13.100
+U é uma matriz que contém
+os usuários nas linhas
+
+00:00:13.133 --> 00:00:15.567
+e as variáveis latentes
+nas colunas.
+
+00:00:15.601 --> 00:00:19.133
+Sigma é uma matriz quadrada,
+
+00:00:19.167 --> 00:00:23.200
+em que o número de linhas
+é igual ao das colunas,
+
+00:00:23.234 --> 00:00:25.167
+que é o número
+das variáveis latentes.
+
+00:00:25.200 --> 00:00:30.667
+E VT tem o número de linhas
+igual ao número de variáveis
+
+00:00:30.701 --> 00:00:33.400
+e o número de colunas
+
+00:00:33.434 --> 00:00:36.801
+é igual ao número de filmes.
+
+00:00:36.834 --> 00:00:41.934
+Aqui, o número de linhas
+é o número de usuários: "b".
+
+00:00:42.234 --> 00:00:47.734
+O número de colunas de U
+é o número de variáveis, então "a".
+
+00:00:47.767 --> 00:00:52.267
+"O número de linhas em VT."
+
+00:00:52.300 --> 00:00:57.400
+Importante: V e VT têm
+as dimensões opostas,
+
+00:00:57.434 --> 00:01:02.634
+então o número de linhas em VT
+é o número de variáveis,
+
+00:01:02.667 --> 00:01:06.601
+e o número de colunas
+é o número de filmes.
+
+00:01:06.634 --> 00:01:09.734
+Espero que tenha
+uma imagem mental dessa ideia
+
+00:01:09.767 --> 00:01:12.868
+baseado no que vimos
+no vídeo anterior.
+
+00:01:12.901 --> 00:01:16.667
+Agora vamos executar
+decomposição em valores singulares
+
+00:01:16.701 --> 00:01:21.434
+nesta matriz usuário-filmes
+usando os documentos.
+
+00:01:21.767 --> 00:01:25.801
+Aqui tem um exemplo.
+Vou copiar isto.
+
+00:01:25.834 --> 00:01:28.234
+E "a" é a matriz que usamos.
+
+00:01:31.501 --> 00:01:36.901
+Isto se chama
+"user_movie_subset".
+
+00:01:38.534 --> 00:01:41.868
+"O que você percebe
+sobre a forma das matrizes?
+
+00:01:41.901 --> 00:01:45.033
+Se tentar tirar o produto escalar
+dos três objetos que receber,
+
+00:01:45.067 --> 00:01:48.567
+poderá usar isso para voltar
+à matriz usuário-filme?"
+
+00:01:49.300 --> 00:01:54.968
+Perceba que esta é 4 por 4,
+esta é 20 por 20
+
+00:01:55.001 --> 00:01:57.567
+e este é
+um array tetradimensional.
+
+00:01:57.601 --> 00:01:59.901
+Não poderemos calcular
+o produto escalar.
+
+00:01:59.934 --> 00:02:03.434
+Em vez disso, eles são limitados
+
+00:02:03.467 --> 00:02:06.734
+ao número de filmes da matriz.
+
+00:02:06.767 --> 00:02:11.534
+A primeira, sigma,
+aparece como um array,
+
+00:02:11.567 --> 00:02:15.601
+mas esse array provavelmente
+é por causa da diagonal.
+
+00:02:15.634 --> 00:02:20.167
+Esta é a matriz do usuário,
+20 por 20,
+
+00:02:20.200 --> 00:02:23.133
+em que o número de colunas
+que queremos manter
+
+00:02:23.167 --> 00:02:25.834
+é o mesmo das variáveis.
+
+00:02:25.868 --> 00:02:29.133
+E o número máximo de variáveis
+que podemos manter é 4,
+
+00:02:29.167 --> 00:02:32.601
+porque é limitado ao mínimo
+
+00:02:32.634 --> 00:02:35.367
+do número de filmes
+ou usuários.
+
+00:02:36.300 --> 00:02:39.067
+Aqui você pode ver
+a minha opinião sobre isso.
+
+00:02:39.734 --> 00:02:44.834
+Vamos mudar o formato
+para ter o produto escalar.
+
+00:02:44.868 --> 00:02:49.634
+Isso significa que U
+tem que ser 20 por 4,
+
+00:02:49.667 --> 00:02:51.567
+porque é o que querem
+que seja o k.
+
+00:02:51.601 --> 00:02:54.033
+Podemos fazer assim.
+
+00:02:54.067 --> 00:02:56.501
+Queremos todas as linhas,
+
+00:02:56.534 --> 00:03:01.534
+mas que as colunas tenham
+o mesmo comprimento que s.
+
+00:03:01.567 --> 00:03:06.901
+Vamos manter até o 4º,
+que é o comprimento de s.
+
+00:03:06.934 --> 00:03:12.901
+O s nós queremos
+que seja uma diagonal.
+
+00:03:13.567 --> 00:03:16.234
+É algo que podemos fazer,
+já que manteremos as quatro.
+
+00:03:16.267 --> 00:03:18.734
+Vamos armazenar a diagonal.
+
+00:03:18.767 --> 00:03:24.501
+A última coisa que faremos
+é pegar VT,
+
+00:03:24.534 --> 00:03:27.801
+que vai continuar igual,
+porque já é 4 por 4.
+
+00:03:30.033 --> 00:03:33.234
+Vejam só isso e o formato.
+
+00:03:33.267 --> 00:03:35.801
+A ideia é ter 20 por 4.
+
+00:03:35.834 --> 00:03:40.133
+Vamos multiplicar isso
+por esta 4 por 4.
+
+00:03:41.000 --> 00:03:42.534
+Vamos lá:
+
+00:03:43.133 --> 00:03:46.167
+s_new.shape,
+
+00:03:46.200 --> 00:03:49.968
+vt_new. shape.
+
+00:03:50.734 --> 00:03:56.501
+Agora temos 20 por 4,
+que é usuário por variável,
+
+00:03:56.534 --> 00:04:00.934
+a matriz sigma,
+que é 4 por 4,
+
+00:04:00.968 --> 00:04:05.534
+que é variáveis
+vezes variáveis.
+
+00:04:05.567 --> 00:04:08.767
+Esta é variáveis por filmes.
+
+00:04:08.801 --> 00:04:12.868
+Se quiséssemos mudar
+para três variáveis,
+
+00:04:12.901 --> 00:04:16.234
+seriam 3 por 3 e 3 por 4.
+
+00:04:16.267 --> 00:04:18.501
+Ou até mesmo duas.
+
+00:04:18.534 --> 00:04:21.968
+Mas o número de variáveis
+está restrito ao mínimo
+
+00:04:22.001 --> 00:04:26.033
+do número de usuários
+e de filmes, então 4.
+
+00:04:27.501 --> 00:04:29.634
+Parece que acertamos isso.
+
+00:04:30.901 --> 00:04:33.400
+Aqui perguntam qual é
+a quantidade total
+
+00:04:33.434 --> 00:04:35.300
+de variabilidade
+no conjunto de dados
+
+00:04:35.334 --> 00:04:37.100
+que podemos tentar explicar.
+
+00:04:37.133 --> 00:04:40.267
+Podemos encontrar isso
+com a soma
+
+00:04:40.300 --> 00:04:42.868
+dos elementos em diagonal
+ao quadrado.
+
+00:04:44.567 --> 00:04:48.000
+Depois perguntam
+qual é a variabilidade
+
+00:04:48.033 --> 00:04:51.067
+explicada por componente um
+e componente dois.
+
+00:04:51.100 --> 00:04:55.167
+Vamos fazer o primeiro elemento
+ao quadrado
+
+00:04:56.033 --> 00:04:58.267
+mais o segundo elemento
+ao quadrado.
+
+00:04:59.868 --> 00:05:02.968
+Isso nos dá a variabilidade
+
+00:05:03.001 --> 00:05:05.634
+explicada pelos primeiros
+dois componentes.
+
+00:05:05.667 --> 00:05:08.334
+A porcentagem então é:
+
+00:05:08.367 --> 00:05:13.400
+var_exp_comp1_and_comp2/
+total_var.
+
+00:05:15.334 --> 00:05:18.934
+A variabilidade total na matriz
+original é esta quantidade.
+
+00:05:18.968 --> 00:05:22.767
+E os primeiros dois componentes
+explicam bastante disso.
+

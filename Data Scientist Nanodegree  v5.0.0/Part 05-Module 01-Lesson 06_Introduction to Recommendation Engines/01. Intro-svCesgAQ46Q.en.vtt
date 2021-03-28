@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.639 --> 00:00:08.414
+Welcome to this lesson on Recommendation Engines.
+
+00:00:08.414 --> 00:00:10.529
+Recommendation engines are one of
+
+00:00:10.529 --> 00:00:13.949
+the most important data science applications in use today.
+
+00:00:13.949 --> 00:00:16.769
+Data science is being used to recommend everything from
+
+00:00:16.769 --> 00:00:21.405
+music and movies to friends and new destinations.
+
+00:00:21.405 --> 00:00:24.000
+In this lesson, you'll learn about some of
+
+00:00:24.000 --> 00:00:27.329
+the most common methods used to build recommendations.
+
+00:00:27.329 --> 00:00:32.324
+These methods fall into three main categories: Knowledge-based recommendations,
+
+00:00:32.325 --> 00:00:37.125
+content-based recommendations, and collaborative filtering-based recommendations.
+
+00:00:37.125 --> 00:00:40.710
+This will serve as a strong foundation to build upon in
+
+00:00:40.710 --> 00:00:43.189
+the following lessons where you'll be ready to
+
+00:00:43.189 --> 00:00:46.679
+look at more advanced recommendation techniques.
+

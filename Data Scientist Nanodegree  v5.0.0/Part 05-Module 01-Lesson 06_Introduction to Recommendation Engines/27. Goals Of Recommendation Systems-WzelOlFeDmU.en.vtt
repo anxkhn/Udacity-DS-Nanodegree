@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.250 --> 00:00:08.175
+Businesses care about recommendation systems because they are
+
+00:00:08.175 --> 00:00:11.595
+often central to how the business drives revenue.
+
+00:00:11.595 --> 00:00:16.310
+There are often four goals of recommenders that can help drive revenue.
+
+00:00:16.309 --> 00:00:19.169
+The first of these is the most obvious,
+
+00:00:19.170 --> 00:00:21.095
+and that is relevance.
+
+00:00:21.094 --> 00:00:24.989
+We want to make recommendations that are relevant to users.
+
+00:00:24.989 --> 00:00:30.409
+Consumers are more likely to engage with and use items that are relevant.
+
+00:00:30.410 --> 00:00:32.560
+Therefore, this is key.
+
+00:00:32.560 --> 00:00:35.134
+The second goal is novelty.
+
+00:00:35.134 --> 00:00:37.905
+While we want to recommend items that are relevant,
+
+00:00:37.905 --> 00:00:40.370
+it is ideal if a recommended item is
+
+00:00:40.369 --> 00:00:43.409
+not something that the user has been exposed to already.
+
+00:00:43.409 --> 00:00:46.934
+This means finding novel items for a particular user.
+
+00:00:46.935 --> 00:00:49.820
+The third goal is serendipity.
+
+00:00:49.820 --> 00:00:52.609
+Often this is confused with novelty.
+
+00:00:52.609 --> 00:00:57.704
+Recommendations that are serendipitous are truly surprising to a user.
+
+00:00:57.704 --> 00:01:00.484
+If a user listens to classic rock music,
+
+00:01:00.484 --> 00:01:06.435
+a novel recommendation is a new classic rock song that the user has not heard of before.
+
+00:01:06.435 --> 00:01:10.250
+However, a serendipitous recommendation is one that might come
+
+00:01:10.250 --> 00:01:14.234
+from a different genre that the user is surprised that they like.
+
+00:01:14.234 --> 00:01:18.349
+This goal is often much more difficult to implement and involves
+
+00:01:18.349 --> 00:01:22.789
+a mix of collaborative filtering and content-based methods to implement well.
+
+00:01:22.790 --> 00:01:26.660
+The final goal is to increase recommendation diversity.
+
+00:01:26.659 --> 00:01:29.814
+Again, this is not simple to implement.
+
+00:01:29.814 --> 00:01:34.564
+Recommender systems often recommend lots of similar items.
+
+00:01:34.564 --> 00:01:38.390
+Creating recommendation list that are diverse give it
+
+00:01:38.390 --> 00:01:42.829
+the greatest chance that at least one item will be enjoyed by the user.
+
+00:01:42.829 --> 00:01:46.010
+What's more, diversifying recommendations
+
+00:01:46.010 --> 00:01:50.160
+lowers the chance that a user will get bored of the recommendations.
+

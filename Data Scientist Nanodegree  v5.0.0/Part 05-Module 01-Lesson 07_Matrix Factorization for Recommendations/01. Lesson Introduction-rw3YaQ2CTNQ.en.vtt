@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.610 --> 00:00:06.770
+In the last lesson,
+
+00:00:06.769 --> 00:00:09.939
+you've gain foundational skills and recommendation engines.
+
+00:00:09.939 --> 00:00:15.009
+In this lesson, we're going to focus on a few questions that are still left open.
+
+00:00:15.009 --> 00:00:17.245
+The first of these questions is,
+
+00:00:17.245 --> 00:00:19.780
+how do we know when our recommendations are good?
+
+00:00:19.780 --> 00:00:25.495
+The second is, how do we use machine learning techniques to make recommendations?
+
+00:00:25.495 --> 00:00:29.410
+The third question, we explored a bit in the last lesson,
+
+00:00:29.410 --> 00:00:31.105
+but not in a lot of detail.
+
+00:00:31.105 --> 00:00:33.160
+That question is, how do we make
+
+00:00:33.159 --> 00:00:36.714
+recommendations for individuals when they're new to our platform?
+
+00:00:36.715 --> 00:00:39.385
+This is called the Cold Start Problem.
+
+00:00:39.384 --> 00:00:42.729
+We'll look at some ways to make recommendations in these cases.
+
+00:00:42.729 --> 00:00:45.619
+With that, let's get started.
+

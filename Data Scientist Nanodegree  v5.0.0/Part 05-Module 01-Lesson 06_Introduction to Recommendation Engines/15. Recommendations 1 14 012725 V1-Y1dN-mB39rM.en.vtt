@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.610
+In this notebook, you're looking at different measures of similarity and distance.
+
+00:00:05.610 --> 00:00:11.710
+This will be more of a test on the ability to move math to code than anything else.
+
+00:00:11.710 --> 00:00:15.480
+Being able to move from math to code and vice versa,
+
+00:00:15.480 --> 00:00:18.060
+is a really useful skill as you want to gain
+
+00:00:18.059 --> 00:00:21.239
+more flexibility in creating models of your own.
+
+00:00:21.239 --> 00:00:25.274
+Let's get started and look at a few of the most popular techniques.
+
+00:00:25.274 --> 00:00:29.509
+At the top here, you can see that we'll be looking at three measures of similarity;
+
+00:00:29.510 --> 00:00:31.920
+one is the Pearson's correlation coefficient,
+
+00:00:31.920 --> 00:00:34.145
+another is the Spearman's correlation coefficient,
+
+00:00:34.145 --> 00:00:35.610
+and the third is Kendall's Tau.
+
+00:00:35.609 --> 00:00:39.155
+Pearson's correlation coefficient has an equation that looks like this.
+
+00:00:39.155 --> 00:00:42.950
+So, our first task is to essentially calculate
+
+00:00:42.950 --> 00:00:46.685
+the Pearson's correlation coefficient for any two arrays.
+
+00:00:46.685 --> 00:00:48.365
+The first thing that I wanted to do,
+
+00:00:48.365 --> 00:00:53.570
+was just calculate the mean for each observation for each individual array.
+
+00:00:53.570 --> 00:00:55.384
+So, I'm going to create,
+
+00:00:55.384 --> 00:00:58.909
+what I'll call mean X and mean Y.
+
+00:00:58.909 --> 00:01:05.840
+Essentially, we can get this by taking the sum of X divided by the length of X.
+
+00:01:05.840 --> 00:01:08.365
+So, I'm just following this equation here saying,
+
+00:01:08.364 --> 00:01:10.939
+the mean for X is going to be this and we could
+
+00:01:10.939 --> 00:01:13.799
+also make a separate function for this is we wanted to.
+
+00:01:13.799 --> 00:01:16.869
+So, now we have the mean for both of those things,
+
+00:01:16.870 --> 00:01:22.240
+and then essentially what we want to do is get these parts.
+
+00:01:22.239 --> 00:01:25.579
+So, you'll see that this part shows up over and over again throughout
+
+00:01:25.579 --> 00:01:29.034
+the equation where we're taking Y minus Y bar,
+
+00:01:29.034 --> 00:01:31.435
+Y minus Y bar, X minus X bar.
+
+00:01:31.435 --> 00:01:37.284
+So, we can do that by essentially taking if these X's and Y's are arrays,
+
+00:01:37.284 --> 00:01:42.304
+we can just take the difference between that array and the mean.
+
+00:01:42.305 --> 00:01:45.550
+Let's call it X diffs.
+
+00:01:45.549 --> 00:01:52.500
+We'll call this Y diffs and it's going to be equal to the same thing.
+
+00:01:53.709 --> 00:01:57.674
+We could set this up the same way we did up there.
+
+00:01:57.674 --> 00:02:03.090
+Say Y diffs part.
+
+00:02:03.090 --> 00:02:04.170
+Let's just take this part.
+
+00:02:04.170 --> 00:02:08.520
+Great.
+
+00:02:08.520 --> 00:02:11.515
+Cool. So, now that we have those differences,
+
+00:02:11.514 --> 00:02:12.989
+we can compute out the rest of this.
+
+00:02:12.990 --> 00:02:17.480
+So, what we want to do is in this top part for each element in this array,
+
+00:02:17.479 --> 00:02:18.694
+we want to multiply it by
+
+00:02:18.694 --> 00:02:23.069
+that same index of that element in the Y diffs array and then essentially,
+
+00:02:23.069 --> 00:02:24.525
+we just want to sum them together.
+
+00:02:24.525 --> 00:02:27.590
+So, that will give us this numerator part up here.
+
+00:02:27.590 --> 00:02:33.765
+So, if we take np sum of X diffs.
+
+00:02:33.764 --> 00:02:38.064
+So, that's essentially this whole thing,
+
+00:02:38.064 --> 00:02:43.359
+and we just want to multiply that by Y diffs. All right.
+
+00:02:43.360 --> 00:02:45.480
+Then, this part summing them all up.
+
+00:02:45.479 --> 00:02:52.234
+Then, we want to take X diffs squared and,
+
+00:02:52.235 --> 00:02:55.700
+then basically we want to sum that up.
+
+00:02:56.330 --> 00:02:59.520
+We want to take the square root.
+
+00:02:59.520 --> 00:03:04.010
+So, that's giving us this part over here and we want to do
+
+00:03:04.009 --> 00:03:12.449
+the same thing with this part over here but with the Y portion.
+
+00:03:13.909 --> 00:03:24.629
+All right. So, I'm just going to make sure that we are, not that it should matter.
+
+00:03:24.629 --> 00:03:30.579
+So, we're going to take this np sum of these two things together,
+
+00:03:30.580 --> 00:03:35.000
+and we're going to divide it by essentially squaring
+
+00:03:35.000 --> 00:03:38.330
+these things and then summing them all
+
+00:03:38.330 --> 00:03:42.540
+together and then taking the square root and then doing that same thing for the Y's.
+
+00:03:42.539 --> 00:03:49.625
+So, this should give us our correlation coefficient which we can return back.
+
+00:03:49.625 --> 00:03:51.969
+Then, the cell is to test,
+
+00:03:51.969 --> 00:03:54.719
+and it looks like we pass all the tests.
+
+00:03:54.719 --> 00:03:57.699
+So, now that you've computed Pearson's correlation coefficient,
+
+00:03:57.699 --> 00:03:59.605
+we can answer a few questions about it.
+
+00:03:59.604 --> 00:04:01.719
+So, if when X increases,
+
+00:04:01.719 --> 00:04:04.889
+Y also increases, Pearson's correlation will always be one.
+
+00:04:04.889 --> 00:04:06.134
+So, that's actually not true.
+
+00:04:06.134 --> 00:04:11.929
+So, you can imagine things that are increasing but not in a line.
+
+00:04:11.930 --> 00:04:16.689
+So, Pearson's correlation coefficient always is defined by a line,
+
+00:04:16.689 --> 00:04:19.139
+and if they increase by like a quadratic,
+
+00:04:19.139 --> 00:04:20.534
+this statement is true.
+
+00:04:20.535 --> 00:04:22.360
+But Pearson's correlation will not be one.
+
+00:04:22.360 --> 00:04:24.449
+If when X increases by one,
+
+00:04:24.449 --> 00:04:27.349
+Y always increases by three, the correlation will be one.
+
+00:04:27.350 --> 00:04:29.085
+So, that's actually a true statement.
+
+00:04:29.084 --> 00:04:34.229
+Great. So, that one's true.
+
+00:04:34.230 --> 00:04:37.100
+That's essentially a line. So, X increases by one,
+
+00:04:37.100 --> 00:04:38.295
+Y increases by three.
+
+00:04:38.295 --> 00:04:39.535
+X increases by one,
+
+00:04:39.535 --> 00:04:42.980
+Y increases by three and that's going to be a true statement.
+
+00:04:42.980 --> 00:04:45.935
+So similarly, if X increases by one,
+
+00:04:45.935 --> 00:04:48.064
+Y always decreases by five,
+
+00:04:48.064 --> 00:04:49.610
+this will always be a negative one.
+
+00:04:49.610 --> 00:04:51.220
+That's actually a true statement as well.
+
+00:04:51.220 --> 00:04:52.775
+So, that's another line.
+
+00:04:52.774 --> 00:04:55.574
+That'll create another line.
+
+00:04:55.574 --> 00:04:58.089
+Then, if when X increases by one,
+
+00:04:58.089 --> 00:05:00.844
+Y increases by three times X.
+
+00:05:00.845 --> 00:05:02.505
+That's no longer a line.
+
+00:05:02.504 --> 00:05:07.519
+So, this falls into one of the scenarios up here that would be false.
+
+00:05:07.519 --> 00:05:12.029
+So, that would actually be a false statement.
+
+00:05:13.149 --> 00:05:16.954
+All right. So, B. That's right.
+
+00:05:16.954 --> 00:05:19.620
+There's a little explanation there.
+

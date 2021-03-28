@@ -1,0 +1,349 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.925 --> 00:00:04.896
+DECOMPOSIÇÃO
+EM VALORES SINGULARES
+
+00:00:04.930 --> 00:00:07.927
+Nesta aula, você vai aprender
+sobre SVD
+
+00:00:07.961 --> 00:00:11.672
+como uma abordagem tradicional
+à fatoração de matrizes.
+
+00:00:11.706 --> 00:00:14.911
+Infelizmente,
+como você vai descobrir,
+
+00:00:14.945 --> 00:00:19.199
+essa abordagem não conseguirá
+nos ajudar a fazer recomendações,
+
+00:00:19.233 --> 00:00:22.295
+pois ela só funciona
+quando a matriz usuário-item
+
+00:00:22.329 --> 00:00:24.495
+não tem dados ausentes.
+
+00:00:24.529 --> 00:00:29.818
+No entanto, as ideias ajudarão
+no resto da aula.
+
+00:00:30.535 --> 00:00:35.311
+Na última aula, você viu
+como criar uma matriz usuário-item,
+
+00:00:35.345 --> 00:00:40.160
+com usuários nas linhas
+e itens nas colunas.
+
+00:00:40.194 --> 00:00:43.032
+Podemos reescrever a matriz,
+
+00:00:43.066 --> 00:00:46.008
+onde cada "r"
+representa a avaliação
+
+00:00:46.042 --> 00:00:49.088
+de um usuário para um item.
+
+00:00:49.122 --> 00:00:51.968
+Então os primeiros valores,
+de 1 a n,
+
+00:00:52.002 --> 00:00:55.026
+indicam que usuário
+fez a avaliação.
+
+00:00:55.060 --> 00:01:00.505
+O segundo valor, de 1 a m,
+indica o filme avaliado.
+
+00:01:00.539 --> 00:01:04.009
+Então, r11 representa
+a avaliação
+
+00:01:04.043 --> 00:01:06.633
+que o usuário 1
+deu ao filme 1.
+
+00:01:06.667 --> 00:01:08.884
+E r23 representa
+
+00:01:08.918 --> 00:01:13.057
+a avaliação
+do usuário 2 ao filme 3.
+
+00:01:13.091 --> 00:01:16.776
+Quando usamos SVD,
+decomposição em valores singulares,
+
+00:01:16.810 --> 00:01:21.656
+em uma matriz usuário-item,
+a separamos em três matrizes.
+
+00:01:21.690 --> 00:01:26.807
+Elas comumente são chamadas
+de "U", "sigma" e "VT".
+
+00:01:27.333 --> 00:01:31.254
+Primeiro vamos ver a matriz U.
+
+00:01:31.288 --> 00:01:34.261
+O objetivo dela é nos dar
+uma ideia
+
+00:01:34.295 --> 00:01:38.630
+de como usuários se relacionam
+com variáveis latentes particulares.
+
+00:01:38.664 --> 00:01:41.559
+Digamos que temos
+esses quatro usuários.
+
+00:01:41.593 --> 00:01:44.629
+Vamos resgatar também
+algumas variáveis latentes:
+
+00:01:44.663 --> 00:01:47.869
+cães, IA e tristeza.
+
+00:01:47.903 --> 00:01:53.398
+Os números na matriz U indicam
+como cada usuário se sente
+
+00:01:53.432 --> 00:01:56.260
+em relação
+a cada variável latente.
+
+00:01:56.524 --> 00:02:00.438
+Jesse deu a maior nota
+para filmes com cachorros.
+
+00:02:00.472 --> 00:02:03.261
+Também vemos como as notas
+para IA
+
+00:02:03.295 --> 00:02:05.791
+estão relacionadas
+a cada usuário.
+
+00:02:05.825 --> 00:02:09.126
+Sam deu uma nota maior
+a esses filmes.
+
+00:02:09.160 --> 00:02:13.965
+Esses usuários deram as maiores
+notas para filmes tristes.
+
+00:02:13.999 --> 00:02:18.373
+A matriz U é
+uma matriz de n por k,
+
+00:02:18.407 --> 00:02:21.565
+onde k determina o número
+de variáveis latentes
+
+00:02:21.599 --> 00:02:23.606
+que você quer manter.
+
+00:02:24.295 --> 00:02:28.511
+Agora vamos ver a matriz VT.
+
+00:02:28.545 --> 00:02:32.481
+Essa matriz contém
+todas as variáveis latentes,
+
+00:02:32.515 --> 00:02:37.064
+mas, em vez de usuários,
+ela se refere aos filmes.
+
+00:02:37.098 --> 00:02:41.174
+Usando as mesmas variáveis,
+mas com filmes,
+
+00:02:41.208 --> 00:02:43.767
+temos uma matriz
+que se parece com isso.
+
+00:02:43.801 --> 00:02:47.584
+Na matriz VT,
+vemos que "A Dama e o Vagabundo"
+
+00:02:47.618 --> 00:02:51.583
+tem o maior valor associado
+à variável do cachorro.
+
+00:02:51.617 --> 00:02:55.071
+"Diário de Uma Paixão"
+é o filme mais triste.
+
+00:02:55.105 --> 00:02:57.712
+"AI" e "WALL-E"
+têm valores positivos
+
+00:02:57.746 --> 00:03:00.208
+na variável do robô.
+
+00:03:00.242 --> 00:03:02.627
+"Diário de Uma Paixão"
+e "A Dama e o Vagabundo"
+
+00:03:02.661 --> 00:03:06.451
+têm valores negativos grandes
+associados a essa variável,
+
+00:03:06.485 --> 00:03:08.297
+o que traz um bom ponto.
+
+00:03:08.331 --> 00:03:11.866
+Os valores das matrizes
+U e VT
+
+00:03:11.900 --> 00:03:14.298
+podem receber qualquer valor.
+
+00:03:14.332 --> 00:03:18.467
+A nota de filmes e usuários
+para uma variável latente
+
+00:03:18.501 --> 00:03:20.385
+não precisa ser positiva,
+
+00:03:20.419 --> 00:03:25.386
+mesmo se todas as notas da matriz
+item-usuário sejam positivas.
+
+00:03:25.714 --> 00:03:28.386
+Pela informação
+contida nesta matriz,
+
+00:03:28.420 --> 00:03:30.994
+podemos ver que é
+uma matriz k por m,
+
+00:03:31.028 --> 00:03:33.554
+onde k é o número
+de variáveis latentes
+
+00:03:33.588 --> 00:03:36.440
+e m é o número de filmes.
+
+00:03:36.474 --> 00:03:40.825
+Por fim, também precisamos
+analisar a matriz sigma.
+
+00:03:40.859 --> 00:03:44.274
+Esta é uma matriz diagonal
+k por k.
+
+00:03:44.308 --> 00:03:49.048
+Ou seja, todos os valores
+que não estão na diagonal são 0.
+
+00:03:49.082 --> 00:03:51.753
+Tem o mesmo número
+de linhas e colunas
+
+00:03:51.787 --> 00:03:55.114
+que o número de variáveis
+que você decidiu manter.
+
+00:03:55.148 --> 00:03:58.969
+Na prática, o número
+de variáveis que você mantém
+
+00:03:59.003 --> 00:04:01.464
+não é necessariamente simples.
+
+00:04:01.498 --> 00:04:04.881
+Aqui temos variáveis
+bem identificadas,
+
+00:04:04.915 --> 00:04:08.714
+mas em breve você vai ver
+que esse não será o caso.
+
+00:04:08.748 --> 00:04:12.162
+Esses valores na diagonal
+podem nos ajudar a determinar
+
+00:04:12.196 --> 00:04:14.754
+quantas variáveis latentes
+manter.
+
+00:04:14.788 --> 00:04:19.417
+Serão sempre valores positivos
+ordenados do maior para o menor,
+
+00:04:19.451 --> 00:04:21.889
+em que o primeiro valor
+é um peso associado
+
+00:04:21.923 --> 00:04:23.889
+à primeira variável latente,
+
+00:04:23.923 --> 00:04:28.833
+o segundo valor é associado
+à segunda variável e por aí vai.
+
+00:04:28.867 --> 00:04:32.474
+Os pesos mais altos indicam
+que a variável latente
+
+00:04:32.508 --> 00:04:36.475
+é mais importante em ser capaz
+de reproduzir as notas
+
+00:04:36.509 --> 00:04:39.162
+da matriz original
+usuário-item.
+
+00:04:39.196 --> 00:04:44.113
+Aqui, saber que um usuário
+prefere cachorros
+
+00:04:44.147 --> 00:04:46.441
+ou que um filme
+tem um cachorro
+
+00:04:46.475 --> 00:04:48.983
+é mais importante
+para prever as notas
+
+00:04:49.017 --> 00:04:52.447
+do que usar preferências
+sobre robôs e tristeza.
+
+00:04:53.088 --> 00:04:57.961
+Multiplicando essas matrizes,
+reconstruímos uma nota de filme
+
+00:04:57.995 --> 00:05:00.312
+para cada combinação
+usuário-item,
+
+00:05:00.346 --> 00:05:03.680
+baseados em como os usuários
+avaliam variáveis latentes,
+
+00:05:03.714 --> 00:05:08.456
+assim como no quanto essas variáveis
+importam na nota.
+
+00:05:08.490 --> 00:05:13.304
+E em como uma variável latente
+aparece em um filme específico.
+
+00:05:13.338 --> 00:05:18.480
+Encontrando os valores das matrizes
+U, sigma e VT,
+
+00:05:18.514 --> 00:05:22.322
+podemos encontrar uma previsão
+para todas as combinações.
+

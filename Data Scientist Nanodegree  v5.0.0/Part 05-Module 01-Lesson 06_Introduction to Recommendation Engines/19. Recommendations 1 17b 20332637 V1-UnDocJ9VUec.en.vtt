@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.750
+So then, the next thing we want do is pull the movies that were liked for any user ID.
+
+00:00:08.750 --> 00:00:11.015
+So, given a particular user ID,
+
+00:00:11.015 --> 00:00:13.120
+just pull the movies that they liked.
+
+00:00:13.119 --> 00:00:15.785
+So, before we pull the movies that they watched,
+
+00:00:15.785 --> 00:00:18.329
+and now we want to basically subset the movies that they
+
+00:00:18.329 --> 00:00:22.454
+watched to only be the movies that those individuals liked.
+
+00:00:22.454 --> 00:00:24.264
+The way that we could do this,
+
+00:00:24.265 --> 00:00:26.010
+and again, for a lot of these functions,
+
+00:00:26.010 --> 00:00:29.165
+there's probably multiple possible solutions.
+
+00:00:29.164 --> 00:00:31.390
+So, if we look at user items,
+
+00:00:31.390 --> 00:00:33.505
+let's look at the head of that,
+
+00:00:33.505 --> 00:00:36.580
+just going to get rid of this for now.
+
+00:00:40.369 --> 00:00:43.539
+So, what we're going to do is we're going to say,
+
+00:00:43.539 --> 00:00:45.814
+from this user items, DataFrame,
+
+00:00:45.814 --> 00:00:51.049
+pull the cases where the user is equal to the user you give me,
+
+00:00:51.049 --> 00:00:54.004
+and that the rating is greater than some number.
+
+00:00:54.005 --> 00:00:56.215
+So, right now, I'm saying is seven,
+
+00:00:56.215 --> 00:00:58.430
+but if you don't rate higher than a seven,
+
+00:00:58.429 --> 00:01:02.060
+I don't claim that to be a movie that you liked even if you saw it,
+
+00:01:02.060 --> 00:01:03.240
+you didn't necessarily like it.
+
+00:01:03.240 --> 00:01:07.250
+So, I just want an array of the movies that not only did you watch,
+
+00:01:07.250 --> 00:01:08.489
+but that you also liked.
+
+00:01:08.489 --> 00:01:11.759
+So, one of the ways we can do that is to use the query method.
+
+00:01:11.760 --> 00:01:16.500
+We can pull where the user ID is equal to, and this is nice,
+
+00:01:16.500 --> 00:01:21.510
+there's an @ symbol where you can then pass in this variable.
+
+00:01:21.510 --> 00:01:23.704
+So, this is saying, if you give me a two here,
+
+00:01:23.704 --> 00:01:27.209
+pass that to enter this part of the query.
+
+00:01:27.209 --> 00:01:29.794
+Where the rating, so again,
+
+00:01:29.795 --> 00:01:34.090
+this user ID is the column that comes from the user items, DataFrame,
+
+00:01:34.090 --> 00:01:36.710
+and rating as another column that comes from that,
+
+00:01:36.709 --> 00:01:42.179
+and where that's greater than basically the min rating minus one.
+
+00:01:42.180 --> 00:01:46.180
+You can also do this as like a greater than or equal to the min rating.
+
+00:01:46.180 --> 00:01:49.415
+From there, I'm just going to pull the movie IDs.
+
+00:01:49.415 --> 00:01:52.775
+So, this'll subset to just this DataFrame,
+
+00:01:52.775 --> 00:01:54.165
+the movies that we care about,
+
+00:01:54.165 --> 00:01:57.640
+and then I'm going to just pull the movie IDs.
+
+00:01:59.540 --> 00:02:04.875
+I'll wrap that in a NumPy array too similar to the above.
+
+00:02:04.875 --> 00:02:07.739
+Again, we could try this out,
+
+00:02:07.739 --> 00:02:09.629
+make sure that it works.
+
+00:02:09.629 --> 00:02:13.639
+So, if we do movies liked by, let's say,
+
+00:02:13.639 --> 00:02:19.639
+user two again, sorry,
+
+00:02:19.639 --> 00:02:22.314
+this should be a double equals.
+
+00:02:22.314 --> 00:02:24.784
+One equal is assignment,
+
+00:02:24.784 --> 00:02:27.384
+double equals is an evaluation statement.
+
+00:02:27.384 --> 00:02:29.734
+So, this is equal to two.
+
+00:02:29.735 --> 00:02:33.425
+So, where this is equal to two and this is greater than six,
+
+00:02:33.425 --> 00:02:35.580
+those are the movies that user two liked.
+
+00:02:35.580 --> 00:02:37.265
+So that looks pretty good,
+
+00:02:37.264 --> 00:02:41.299
+I'm going to make that fix down here as well.
+
+00:02:42.539 --> 00:02:46.074
+Next, we want to just pull the movie names.
+
+00:02:46.074 --> 00:02:49.849
+So, what we've done so far is we found the users who are most similar,
+
+00:02:49.849 --> 00:02:54.414
+we have this function that pulls the movies that any individual likes,
+
+00:02:54.414 --> 00:02:58.389
+and then what we want to do is take those movies that they liked based on the ID,
+
+00:02:58.389 --> 00:03:01.219
+and then pull the particular movies name,
+
+00:03:01.219 --> 00:03:04.250
+and this maybe could be deemed as an unnecessary step,
+
+00:03:04.250 --> 00:03:07.758
+but I think it's just simplifies the process.
+
+00:03:07.758 --> 00:03:11.619
+So, if we go into the movies, DataFrame,
+
+00:03:11.620 --> 00:03:14.370
+and pull the movie ID,
+
+00:03:14.370 --> 00:03:19.219
+and say, is in movie IDs.
+
+00:03:19.219 --> 00:03:24.099
+So, you can imagine this is an array or a list of some kind, and basically,
+
+00:03:24.099 --> 00:03:25.644
+if the movie ID is in there,
+
+00:03:25.645 --> 00:03:31.340
+then what we want to do is pull that from the DataFrame and then pull them movie title.
+
+00:03:31.340 --> 00:03:34.819
+So, this might seem a little confusing at this point,
+
+00:03:34.819 --> 00:03:38.439
+so let's go up, I'll show you what the movie is.
+
+00:03:39.610 --> 00:03:42.020
+So, what we're saying is,
+
+00:03:42.020 --> 00:03:44.450
+go in and look at this movie ID column.
+
+00:03:44.449 --> 00:03:49.339
+If the list that you give me contains whatever ID I'm looking at,
+
+00:03:49.340 --> 00:03:53.509
+then pull this movie name out and give it back to me.
+
+00:03:53.509 --> 00:03:56.524
+So, pull this movie name value back
+
+00:03:56.525 --> 00:04:00.960
+for any of these movie IDs that are in the list that you gave me.
+
+00:04:04.569 --> 00:04:08.319
+I'll do that as a list,
+
+00:04:08.319 --> 00:04:12.139
+you could do this as a NumPy array if you want it to,
+
+00:04:12.139 --> 00:04:14.444
+it just says to do it as a list,
+
+00:04:14.444 --> 00:04:17.259
+so I'll follow the docstring.
+

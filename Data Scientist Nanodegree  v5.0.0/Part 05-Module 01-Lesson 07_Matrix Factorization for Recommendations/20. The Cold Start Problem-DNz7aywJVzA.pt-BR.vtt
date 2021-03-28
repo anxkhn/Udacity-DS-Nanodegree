@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.787 --> 00:00:04.938
+PROBLEMA DE COLD-START
+
+00:00:05.292 --> 00:00:06.706
+No notebook anterior,
+
+00:00:06.739 --> 00:00:09.722
+vimos alguns dos problemas
+que ainda existem
+
+00:00:09.755 --> 00:00:13.572
+ao fazermos previsões usando
+técnicas de fatoração de matrizes.
+
+00:00:13.605 --> 00:00:18.355
+Usuários e filmes são adicionados
+constantemente ao banco de dados,
+
+00:00:18.388 --> 00:00:21.538
+e as técnicas de fatoração
+de matrizes não funcionarão
+
+00:00:21.571 --> 00:00:24.434
+nas previsões
+para esses usuários e filmes,
+
+00:00:24.467 --> 00:00:26.971
+porque eles ainda
+não têm classificações.
+
+00:00:27.004 --> 00:00:29.592
+O SVD tem dois
+grandes benefícios.
+
+00:00:29.625 --> 00:00:32.525
+O primeiro é que ele fornece
+uma classificação prevista
+
+00:00:32.558 --> 00:00:34.794
+para todos
+os pares usuário-filme,
+
+00:00:34.827 --> 00:00:39.067
+mesmo quando o número total
+de classificações for muito esparso.
+
+00:00:39.100 --> 00:00:40.244
+E o segundo
+
+00:00:40.277 --> 00:00:44.890
+é que ele consegue verificar
+a qualidade das avaliações
+
+00:00:44.923 --> 00:00:46.530
+usando as métricas
+tradicionais
+
+00:00:46.563 --> 00:00:49.579
+das técnicas de aprendizado
+de máquina de regressão.
+
+00:00:49.612 --> 00:00:54.474
+Apesar disso, ainda há o problema
+da falta de classificação prevista
+
+00:00:54.507 --> 00:00:56.779
+para novos usuários e filmes.
+
+00:00:56.812 --> 00:01:00.969
+Esse é um problema comum conhecido
+como "problema de cold-start".
+
+00:01:01.002 --> 00:01:03.513
+Em geral, os métodos
+de filtragem colaborativa
+
+00:01:03.546 --> 00:01:07.014
+não funcionam para recomendações
+nesses casos.
+
+00:01:07.047 --> 00:01:10.259
+Em vez disso, precisaremos usar
+recomendações por conhecimento
+
+00:01:10.292 --> 00:01:14.530
+ou por conteúdo,
+como vimos na última aula.
+
+00:01:14.563 --> 00:01:16.114
+No próximo notebook,
+
+00:01:16.147 --> 00:01:19.374
+criaremos uma abordagem mista
+para criar recomendações
+
+00:01:19.407 --> 00:01:21.778
+usando filtragem colaborativa
+com SVD,
+
+00:01:21.811 --> 00:01:25.432
+bem como as recomendações
+por conhecimento ou por conteúdo
+
+00:01:25.465 --> 00:01:27.583
+para lidar
+com o problema de cold-start.
+

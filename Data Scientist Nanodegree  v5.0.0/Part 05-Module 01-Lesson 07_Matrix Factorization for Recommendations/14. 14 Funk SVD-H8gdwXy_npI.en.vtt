@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.480 --> 00:00:09.655
+As you might have guessed from what you've seen so far this lesson,
+
+00:00:09.654 --> 00:00:13.125
+Funk SVD is a matrix factorization technique
+
+00:00:13.125 --> 00:00:16.289
+that works well for situations like this one,
+
+00:00:16.289 --> 00:00:19.199
+where a matrix has a lot of missing values.
+
+00:00:19.199 --> 00:00:21.535
+Prior to the Funk SVD method,
+
+00:00:21.535 --> 00:00:26.179
+it was commonly used techniques to fill these missing values with zeros.
+
+00:00:26.179 --> 00:00:29.189
+But what Simon found to be true was that we could
+
+00:00:29.190 --> 00:00:32.310
+actually just ignore all these missing values,
+
+00:00:32.310 --> 00:00:37.365
+and find a way to compute latent factors only using the values we know.
+
+00:00:37.365 --> 00:00:40.480
+In this approach to matrix factorization,
+
+00:00:40.479 --> 00:00:44.634
+consider two matrices much like the ones you've seen before.
+
+00:00:44.634 --> 00:00:47.339
+With users and latent factors in one,
+
+00:00:47.340 --> 00:00:50.450
+and latent factors by movies in the other.
+
+00:00:50.450 --> 00:00:55.565
+To begin with, we'll just randomly place values into each of these matrices.
+
+00:00:55.564 --> 00:00:57.199
+This looks good for now.
+
+00:00:57.200 --> 00:01:02.055
+Then we search our user item matrix for a rating that already exists.
+
+00:01:02.054 --> 00:01:04.034
+When we find that rating,
+
+00:01:04.034 --> 00:01:08.265
+we perform the following rule in updating these random values.
+
+00:01:08.265 --> 00:01:12.649
+We'll take the dot product between the row associated with the user,
+
+00:01:12.649 --> 00:01:14.980
+and the column associated with the movie.
+
+00:01:14.980 --> 00:01:18.445
+This will give us a prediction for the rating.
+
+00:01:18.444 --> 00:01:22.129
+From here, we can calculate the error as
+
+00:01:22.129 --> 00:01:25.375
+the difference between the actual and the predicted rating.
+
+00:01:25.375 --> 00:01:29.480
+Our goal is to minimize this error across all
+
+00:01:29.480 --> 00:01:34.050
+known actual values by changing the weights in each matrix.
+
+00:01:34.049 --> 00:01:36.804
+We can do this using gradient descent.
+
+00:01:36.805 --> 00:01:38.435
+In the user matrix,
+
+00:01:38.435 --> 00:01:44.055
+we take the derivative of the error with respect to each value identified by u here.
+
+00:01:44.055 --> 00:01:46.515
+Similarly, in the movie matrix,
+
+00:01:46.515 --> 00:01:49.405
+we take the derivative of the error with respect to
+
+00:01:49.405 --> 00:01:53.594
+each value identified by v. Using the chain rule,
+
+00:01:53.594 --> 00:01:58.885
+we find the direction we should move to minimize our error in each matrix.
+
+00:01:58.885 --> 00:02:01.965
+In each derivative, this portion here,
+
+00:02:01.965 --> 00:02:06.465
+is just the difference between our actual and predicted value.
+
+00:02:06.465 --> 00:02:10.849
+We can now use this to update the values in each of our matrices.
+
+00:02:10.849 --> 00:02:16.055
+Each of these points in the opposite direction we want to step to minimize our error.
+
+00:02:16.055 --> 00:02:20.939
+Let's go through one iteration of gradient descent with the previous matrices.
+
+00:02:20.939 --> 00:02:22.780
+This will come in handy.
+
+00:02:22.780 --> 00:02:26.060
+To perform our update and the user matrix,
+
+00:02:26.060 --> 00:02:29.280
+we will need to look at this row of our user matrix.
+
+00:02:29.280 --> 00:02:33.754
+These values are the u that you saw in the previous equation.
+
+00:02:33.754 --> 00:02:36.250
+We also need these values,
+
+00:02:36.250 --> 00:02:39.544
+which were in the last column of our movie matrix.
+
+00:02:39.544 --> 00:02:43.189
+These are the v values you saw in the previous formula.
+
+00:02:43.189 --> 00:02:46.780
+Our new u values will be our current u value,
+
+00:02:46.780 --> 00:02:49.520
+but then we need to update this current value by
+
+00:02:49.520 --> 00:02:52.400
+moving in the opposite direction of the gradient,
+
+00:02:52.400 --> 00:02:54.670
+which we just found as this term.
+
+00:02:54.669 --> 00:02:58.934
+However, we don't want to move too far in this direction.
+
+00:02:58.935 --> 00:03:04.004
+So, it's common to use a learning rate to take a small step in this direction.
+
+00:03:04.004 --> 00:03:09.789
+Let's call that alpha and slide that term in front of the direction we're moving here.
+
+00:03:09.789 --> 00:03:13.625
+Let's put this rule to practice to update the first value.
+
+00:03:13.625 --> 00:03:16.985
+So, our update says that we take the current value of
+
+00:03:16.985 --> 00:03:21.650
+0.8 and update it by adding to it our learning rate,,
+
+00:03:21.650 --> 00:03:24.145
+which lets just call as 0.01.
+
+00:03:24.145 --> 00:03:26.650
+This could really be any small number.
+
+00:03:26.650 --> 00:03:28.610
+Then we multiply this by
+
+00:03:28.610 --> 00:03:32.625
+two times the difference between the actual and the predicted value,
+
+00:03:32.625 --> 00:03:35.280
+which we found as this earlier.
+
+00:03:35.280 --> 00:03:41.164
+Finally, we multiply by the corresponding v term on the same latent factor.
+
+00:03:41.164 --> 00:03:44.495
+In this case, the negative 1.2 here.
+
+00:03:44.495 --> 00:03:48.655
+This gives us a new u value of 0.59.
+
+00:03:48.655 --> 00:03:53.329
+We could use the same update rule for each of these u values as well,
+
+00:03:53.329 --> 00:03:58.045
+which give new values of 1.39 and negative 0.23.
+
+00:03:58.044 --> 00:04:01.625
+We could similarly perform these operations for each
+
+00:04:01.625 --> 00:04:05.014
+of the values in the v matrix with this equation.
+
+00:04:05.014 --> 00:04:09.199
+Notice our new values and the u matrix are already having an impact on
+
+00:04:09.199 --> 00:04:13.544
+the new values we will see in the B matrix as they appear in our equation here.
+
+00:04:13.544 --> 00:04:16.654
+This allows us to update all the v values.
+
+00:04:16.654 --> 00:04:21.399
+We can replace these updated values into the u and v matrices here,
+
+00:04:21.399 --> 00:04:23.995
+and this ends one iteration.
+
+00:04:23.995 --> 00:04:26.350
+At this point, we look for
+
+00:04:26.350 --> 00:04:32.150
+our next non-missing value and update each of our u and v matrices again.
+
+00:04:32.149 --> 00:04:34.234
+You perform this technique for
+
+00:04:34.235 --> 00:04:39.045
+all non-missing values and you are likely to go through the matrix multiple times.
+
+00:04:39.045 --> 00:04:40.655
+In the upcoming notebook,
+
+00:04:40.654 --> 00:04:42.904
+you will implement this technique yourself.
+
+00:04:42.904 --> 00:04:47.029
+It can be difficult your first time to put an algorithm like this to practice.
+
+00:04:47.029 --> 00:04:48.424
+If you get stuck,
+
+00:04:48.425 --> 00:04:50.360
+the solution notebook is provided,
+
+00:04:50.360 --> 00:04:53.720
+which all walk through following the notebook. Good luck.
+

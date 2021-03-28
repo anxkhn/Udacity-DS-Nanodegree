@@ -1,0 +1,236 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Validity, Bias, and Ethics - Discussion</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>A/B Testing Case Study</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Scenario Description.html">02. Scenario Description</a>
+    </li>
+    <li class="">
+      <a href="03. Building a Funnel.html">03. Building a Funnel</a>
+    </li>
+    <li class="">
+      <a href="04. Building a Funnel - Discussion.html">04. Building a Funnel - Discussion</a>
+    </li>
+    <li class="">
+      <a href="05. Deciding on Metrics - Part I.html">05. Deciding on Metrics - Part I</a>
+    </li>
+    <li class="">
+      <a href="06. Deciding on Metrics - Part II.html">06. Deciding on Metrics - Part II</a>
+    </li>
+    <li class="">
+      <a href="07. Deciding on Metrics - Discussion.html">07. Deciding on Metrics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="08. Experiment Sizing.html">08. Experiment Sizing</a>
+    </li>
+    <li class="">
+      <a href="09. Experiment Sizing - Discussion.html">09. Experiment Sizing - Discussion</a>
+    </li>
+    <li class="">
+      <a href="10. Validity, Bias, and Ethics - Discussion.html">10. Validity, Bias, and Ethics - Discussion</a>
+    </li>
+    <li class="">
+      <a href="11. Analyze Data.html">11. Analyze Data</a>
+    </li>
+    <li class="">
+      <a href="12. Draw Conclusions.html">12. Draw Conclusions</a>
+    </li>
+    <li class="">
+      <a href="13. Draw Conclusions - Discussion.html">13. Draw Conclusions - Discussion</a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Conclusion.html">14. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Validity, Bias, and Ethics - Discussion</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="re-validity-bias-and-ethics">Re: Validity, Bias, and Ethics</h2>
+<p>Before getting to the data and its analysis, let's review a few of the<br />
+conceptual points that go into creation of an experiment: validity, bias, and<br />
+ethics.</p>
+<p>We probably don't have too much to worry about in terms of validity. For<br />
+conceptual validity, the evaluation metrics are directly aligned with the<br />
+experimental goals, no abstraction needed. Internal validity is maintained by<br />
+performing an experiment with properly-handled randomization and controls. We<br />
+don't really need to answer to external validity since we're drawing from the<br />
+full site population and there's no other population we're looking to<br />
+generalize to.</p>
+<p>As for biases, we might think of novelty bias as being a potential issue.<br />
+However, we don't expect users to come back to the homepage regularly.<br />
+Downloading and license purchasing are actions we expect to only occur once per<br />
+user, so there's no real 'return rate' to worry about. One possibility,<br />
+however, is that if more people download the software under the new homepage,<br />
+the expanded user base is qualitatively different from the people who came to<br />
+the page under the original homepage. This might cause more homepage hits from<br />
+people looking for the support pages on the site, causing the number of unique<br />
+cookies under each condition to differ. If we do see something wrong or out of<br />
+place in the invariant metric (number of cookies), then this might be an area<br />
+to explore in further investigations.</p>
+<p>Finally, for ethical issues, the changes to the homepage should be benign and<br />
+present no risk to users. Our experiment objectives are also clearly stated.<br />
+Considering the low risks of the experiment, informed consent is at worst a<br />
+minor concern; a standard popup to let visitors know that cookies are used to<br />
+track user experience on the site will likely suffice. The largest ethics<br />
+principle we should be concerned about is data sensitivity. We shouldn't get<br />
+any sensitive data out of the cookie assignment and collection, though some<br />
+information will be collected from the user when they go to download the<br />
+software. No sensitive data is required for the metrics we've laid out, so what<br />
+we should do is just aggregate daily visits, downloads, and purchase counts<br />
+without looking at any individual outcomes.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Analyze Data.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Validity, Bias, and Ethics - Discussion')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

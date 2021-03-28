@@ -1,0 +1,256 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.620
+Then, the third measure of
+
+00:00:01.620 --> 00:00:04.150
+similarity that we are going to look at is called Kendall's tau.
+
+00:00:04.150 --> 00:00:08.510
+You can see again that this uses rank data but then there's a sign.
+
+00:00:08.509 --> 00:00:11.184
+So, the sign is either a positive or a negative.
+
+00:00:11.185 --> 00:00:12.600
+So, this is basically saying,
+
+00:00:12.599 --> 00:00:14.789
+if two things are both positive,
+
+00:00:14.789 --> 00:00:17.890
+then this will become a positive one.
+
+00:00:17.890 --> 00:00:21.144
+Whereas, if two things are both negative,
+
+00:00:21.144 --> 00:00:22.829
+then that's still a positive one.
+
+00:00:22.829 --> 00:00:26.419
+If two things are pointing in opposite directions,
+
+00:00:26.420 --> 00:00:29.560
+then it's like a hit against Kendall's tau,
+
+00:00:29.559 --> 00:00:33.329
+and that x and y are moving in relationship to one another.
+
+00:00:33.329 --> 00:00:35.280
+So, if they're both positive or both negative,
+
+00:00:35.280 --> 00:00:37.965
+then things are moving in the same direction, they're more similar.
+
+00:00:37.965 --> 00:00:40.640
+Whereas if one's positive and one's negative,
+
+00:00:40.640 --> 00:00:42.770
+then they're moving in different directions,
+
+00:00:42.770 --> 00:00:45.734
+and therefore they should be considered less similar.
+
+00:00:45.734 --> 00:00:48.880
+That idea that's going into Kendall's tau.
+
+00:00:48.880 --> 00:00:50.750
+So, we can calculate that.
+
+00:00:50.750 --> 00:00:53.079
+Again, I'm going to grab some of the pieces.
+
+00:00:53.079 --> 00:00:55.219
+So, we're going to grab n which is just the length,
+
+00:00:55.219 --> 00:00:58.600
+and we're again using these ranked versions of things.
+
+00:00:58.600 --> 00:01:00.750
+So, we're going to
+
+00:01:07.810 --> 00:01:11.695
+pull the ranked versions like this,
+
+00:01:11.694 --> 00:01:15.625
+and then we also want this part here.
+
+00:01:15.625 --> 00:01:18.129
+So, n is just going to be though length,
+
+00:01:18.129 --> 00:01:19.579
+and x and y should be the same length.
+
+00:01:19.579 --> 00:01:22.929
+So, it doesn't really matter which one you put the length of.
+
+00:01:22.930 --> 00:01:25.370
+Then essentially, what I want to do do is I want to
+
+00:01:25.370 --> 00:01:27.689
+create something where I'm keeping track of this order.
+
+00:01:27.689 --> 00:01:29.864
+So, if i is less than j,
+
+00:01:29.864 --> 00:01:33.089
+then we're going to take the difference between these things,
+
+00:01:33.090 --> 00:01:35.579
+but if it's not, then we don't take the sum.
+
+00:01:35.579 --> 00:01:38.120
+So, this is a little tricky here.
+
+00:01:38.120 --> 00:01:40.020
+What I'm going to do is,
+
+00:01:40.019 --> 00:01:46.609
+I'm going to create the sum values thing where I'm going to keep track of all my sums.
+
+00:01:46.609 --> 00:01:51.659
+I'm going to iterate through the x values and y values together.
+
+00:01:51.659 --> 00:01:53.810
+I'm going to look at the index up them.
+
+00:01:53.810 --> 00:01:59.150
+A nice way to be able to look at the index of anything is to use enumerate,
+
+00:01:59.150 --> 00:02:03.000
+and the nice thing to keep x and y together is to zip them.
+
+00:02:03.000 --> 00:02:06.319
+So, basically, what this is doing is it slips them together.
+
+00:02:06.319 --> 00:02:10.489
+So, it's putting those two vectors together as one thing,
+
+00:02:10.490 --> 00:02:15.520
+and then enumerate is going to pull out which index we're on.
+
+00:02:15.520 --> 00:02:20.719
+Then, we can do basically the same thing again.
+
+00:02:20.719 --> 00:02:26.659
+So, this i is the same as this i here,
+
+00:02:26.659 --> 00:02:30.759
+and then the j is the same as this j up here.
+
+00:02:30.759 --> 00:02:34.454
+So, we're looking at the i iteration,
+
+00:02:34.455 --> 00:02:36.275
+we're subtracting the j iteration,
+
+00:02:36.275 --> 00:02:38.735
+as long as i is less than j.
+
+00:02:38.735 --> 00:02:40.670
+So, that's what we're keeping track up here.
+
+00:02:40.669 --> 00:02:42.484
+So, here's i and j,
+
+00:02:42.485 --> 00:02:44.800
+and then yi and yj.
+
+00:02:44.800 --> 00:02:49.475
+I'm going to change this to j and j.
+
+00:02:49.474 --> 00:02:54.229
+So, now, my syntax and the code actually lines up really nicely with the math.
+
+00:02:54.229 --> 00:02:55.715
+Basically, I'm going to say,
+
+00:02:55.715 --> 00:02:58.370
+if i is less than j,
+
+00:02:58.370 --> 00:03:03.379
+then what I want to do is I want to add to my sum values,
+
+00:03:03.379 --> 00:03:10.704
+and there's actually a really nice way to do this in NumPy which is called np sign.
+
+00:03:10.705 --> 00:03:13.395
+So, there's an np sign function.
+
+00:03:13.395 --> 00:03:17.165
+We're just going to take the difference between those two things and add them in.
+
+00:03:17.164 --> 00:03:20.120
+So, x i minus x j.
+
+00:03:20.120 --> 00:03:26.700
+So, we're going to take x i minus x j,
+
+00:03:26.699 --> 00:03:35.114
+and we're going to multiply that by the sine of y i minus y j.
+
+00:03:35.115 --> 00:03:39.870
+So, y minus y j,
+
+00:03:39.870 --> 00:03:42.180
+there should be a minus sign here.
+
+00:03:42.180 --> 00:03:44.655
+So, when multiply those things together,
+
+00:03:44.655 --> 00:03:46.365
+that's going to give me the sum values.
+
+00:03:46.365 --> 00:03:47.700
+Once we sum through all of those,
+
+00:03:47.699 --> 00:03:49.544
+we want to do this part out here.
+
+00:03:49.544 --> 00:03:54.839
+So then, the last part that we need to do is just this part here.
+
+00:03:54.840 --> 00:03:58.580
+So, take two times this sum values thing that we get back,
+
+00:03:58.580 --> 00:04:01.725
+and then divide it pi n times n minus one,
+
+00:04:01.724 --> 00:04:04.400
+two times the sum values,
+
+00:04:04.400 --> 00:04:09.585
+and then divide it by n times n minus one.
+
+00:04:09.585 --> 00:04:12.090
+It looks like that passes all the tests.
+
+00:04:12.090 --> 00:04:17.000
+So, then we can use our function to define these things.
+
+00:04:17.000 --> 00:04:19.069
+So, for all columns, we'll play data do
+
+00:04:19.069 --> 00:04:24.079
+Spearman's and Kendall's tau match and then similarly for Spearman versus Pearson,
+
+00:04:24.079 --> 00:04:25.459
+and Pearson vs Kendall,
+
+00:04:25.459 --> 00:04:28.004
+and all, let you do that part.
+
+00:04:28.004 --> 00:04:32.370
+Okay. So, next, we are going to look at different distance functions.
+
+00:04:32.370 --> 00:04:34.850
+These are actually pretty simple to compute,
+
+00:04:34.850 --> 00:04:37.100
+especially considering what we just did.
+
+00:04:37.100 --> 00:04:41.480
+So, I think I'll just leave this for you.
+

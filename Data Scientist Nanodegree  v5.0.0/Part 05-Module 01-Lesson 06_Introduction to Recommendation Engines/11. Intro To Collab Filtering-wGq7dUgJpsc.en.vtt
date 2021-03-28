@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.669 --> 00:00:09.719
+Let's take the first step towards providing more personalized recommendations.
+
+00:00:09.720 --> 00:00:11.455
+Consider Sam here.
+
+00:00:11.455 --> 00:00:13.650
+Same has seen Armageddon,
+
+00:00:13.650 --> 00:00:17.745
+Independence Day, and Arrival. Then there's Jesse.
+
+00:00:17.745 --> 00:00:22.865
+Jesse has also seen these movies but has also watched Interstellar.
+
+00:00:22.864 --> 00:00:26.794
+Due to the overlapping movies watch between Sam and Jessie,
+
+00:00:26.795 --> 00:00:30.225
+it follows that Sam might also like Interstellar.
+
+00:00:30.225 --> 00:00:32.730
+In recommendations of this nature,
+
+00:00:32.729 --> 00:00:37.049
+it makes sense to find users who've watched the same movies and
+
+00:00:37.049 --> 00:00:42.669
+recommend new movies based on what one of those users has seen that the other hasn't.
+
+00:00:42.670 --> 00:00:45.590
+Finding these types of relationships from
+
+00:00:45.590 --> 00:00:49.760
+user-item interactions is known as collaborative filtering.
+

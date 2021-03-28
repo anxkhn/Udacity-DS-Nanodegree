@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.763 --> 00:00:04.916
+IDENTIFICANDO RECOMENDAÇÕES
+
+00:00:05.539 --> 00:00:09.249
+Usando as métricas
+de similaridade e de distância,
+
+00:00:09.282 --> 00:00:12.391
+podemos identificar
+usuários semelhantes,
+
+00:00:12.424 --> 00:00:16.041
+mas precisamos ser capazes de usar
+informações sobre esses usuários
+
+00:00:16.074 --> 00:00:18.198
+para fazer recomendações.
+
+00:00:18.231 --> 00:00:21.504
+É uma arte e uma ciência
+
+00:00:21.537 --> 00:00:25.352
+descobrir de quantos usuários
+obteremos recomendações
+
+00:00:25.385 --> 00:00:29.910
+além de identificar
+quais e quantos itens
+
+00:00:29.943 --> 00:00:33.136
+devem ser recomendados
+a partir desses usuários.
+
+00:00:34.461 --> 00:00:36.647
+Vamos trazer Sam de volta.
+
+00:00:36.680 --> 00:00:39.111
+Uma forma de fazer
+recomendações para Sam
+
+00:00:39.144 --> 00:00:43.007
+é pegando todos os filmes
+que os vizinhos mais próximos viram
+
+00:00:43.040 --> 00:00:45.489
+e recomendando esses filmes.
+
+00:00:45.522 --> 00:00:48.489
+No entanto, se recomendarmos
+todos esses itens
+
+00:00:48.522 --> 00:00:50.350
+sem qualquer tipo
+de filtragem,
+
+00:00:50.383 --> 00:00:54.535
+provavelmente recomendaremos
+filmes que Sam já viu.
+
+00:00:54.568 --> 00:00:59.720
+Queremos remover qualquer item
+que Sam já tenha visto
+
+00:00:59.753 --> 00:01:01.902
+da pilha de recomendações.
+
+00:01:01.935 --> 00:01:06.439
+Além disso, só porque um
+dos vizinhos de Sam viu um filme
+
+00:01:06.472 --> 00:01:09.254
+não significa
+que eles gostaram.
+
+00:01:09.287 --> 00:01:13.390
+Se Sam e os vizinhos dele
+têm gostos semelhantes
+
+00:01:13.423 --> 00:01:16.067
+e Jessie não gostou
+de um filme em especial,
+
+00:01:16.100 --> 00:01:18.945
+então Sam provavelmente
+também não vai gostar.
+
+00:01:18.978 --> 00:01:22.936
+Se Jessie tiver uma classificação
+para os itens que ela viu,
+
+00:01:22.969 --> 00:01:25.881
+poderemos recomendar itens
+
+00:01:25.914 --> 00:01:28.137
+que ela tenha avaliado
+positivamente.
+
+00:01:28.170 --> 00:01:31.289
+Como os dados estão
+em uma escala de 10 pontos,
+
+00:01:31.322 --> 00:01:33.895
+podemos recomendar os filmes
+
+00:01:33.928 --> 00:01:36.472
+com pontuação igual
+ou superior a 7.
+
+00:01:38.367 --> 00:01:40.917
+Agora que encontramos
+os filmes dos vizinhos,
+
+00:01:40.950 --> 00:01:43.933
+removemos os filmes
+que Sam já viu
+
+00:01:43.966 --> 00:01:47.462
+e os filmes
+que não foram bem avaliados,
+
+00:01:47.495 --> 00:01:49.989
+para termos as recomendações
+para Sam.
+
+00:01:50.022 --> 00:01:51.685
+Vamos dar uma olhada
+
+00:01:51.718 --> 00:01:55.527
+na implementação dessas técnicas
+para fazer recomendações.
+

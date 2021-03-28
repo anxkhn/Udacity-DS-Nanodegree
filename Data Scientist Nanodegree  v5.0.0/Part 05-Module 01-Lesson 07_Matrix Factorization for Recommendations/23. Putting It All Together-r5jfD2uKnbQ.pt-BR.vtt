@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.800 --> 00:00:05.015
+JUNTANDO TUDO
+
+00:00:05.345 --> 00:00:07.304
+Como último passo desta aula,
+
+00:00:07.337 --> 00:00:10.399
+veremos como mover
+todo o código
+
+00:00:10.432 --> 00:00:13.280
+para um módulo
+que qualquer um possa usar
+
+00:00:13.313 --> 00:00:15.016
+para criar recomendações.
+
+00:00:15.049 --> 00:00:17.488
+Queremos que o módulo
+contenha uma classe
+
+00:00:17.521 --> 00:00:18.992
+que possamos importar
+
+00:00:19.025 --> 00:00:20.741
+e usar para criar
+recomendações
+
+00:00:20.774 --> 00:00:23.945
+de forma parecida
+com a interação do scikit-learn.
+
+00:00:23.978 --> 00:00:27.334
+Deveremos instanciar,
+ajustar
+
+00:00:27.367 --> 00:00:29.049
+e prever uma classificação
+
+00:00:29.082 --> 00:00:32.051
+sem precisarmos pensar
+na dificuldade que tivemos
+
+00:00:32.084 --> 00:00:34.474
+para construir o sistema
+de recomendação.
+
+00:00:34.507 --> 00:00:37.991
+Existem diversas formas
+de estruturar o código,
+
+00:00:38.024 --> 00:00:40.304
+e chegamos no momento
+deste programa
+
+00:00:40.337 --> 00:00:43.056
+no qual não existem
+respostas corretas.
+
+00:00:43.089 --> 00:00:45.343
+Depois de terminar
+de compor a classe,
+
+00:00:45.376 --> 00:00:48.991
+você poderá obter os conjuntos
+de dados de críticas e filmes,
+
+00:00:49.024 --> 00:00:51.289
+poderá ajustar o sistema
+de recomendação,
+
+00:00:51.322 --> 00:00:55.193
+criar uma classificação prevista
+para a combinação de usuário e filme
+
+00:00:55.226 --> 00:00:58.373
+e fornecer uma lista de filmes
+recomendados
+
+00:00:58.406 --> 00:01:01.069
+para qualquer user_id
+que seja fornecido.
+
+00:01:01.102 --> 00:01:03.791
+É preciso que haja razões
+para estruturar uma classe
+
+00:01:03.824 --> 00:01:06.173
+de diferentes formas.
+
+00:01:06.206 --> 00:01:09.189
+Seja criativo na sua solução
+
+00:01:09.222 --> 00:01:11.312
+para criar algo
+completamente diferente
+
+00:01:11.345 --> 00:01:13.111
+do que é permitido
+pelo template.
+
+00:01:13.144 --> 00:01:15.055
+Esta é uma tarefa aberta.
+
+00:01:15.088 --> 00:01:16.775
+Veja o que consegue fazer.
+

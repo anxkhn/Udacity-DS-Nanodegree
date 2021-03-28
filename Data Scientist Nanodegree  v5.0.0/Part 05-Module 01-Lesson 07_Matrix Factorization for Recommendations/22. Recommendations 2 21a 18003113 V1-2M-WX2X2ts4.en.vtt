@@ -1,0 +1,370 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.860
+One of the ways that we can improve is by using content and ranked-based methods.
+
+00:00:06.860 --> 00:00:10.080
+So, this part here is basically just reading
+
+00:00:10.080 --> 00:00:13.798
+in a couple of functions that we wrote before from the content-based metrics,
+
+00:00:13.798 --> 00:00:17.890
+so finding similar movies based on movies that you've already given.
+
+00:00:17.890 --> 00:00:22.230
+This function here is pulling the popular recommendations.
+
+00:00:22.230 --> 00:00:24.870
+So, our goal here is now to make
+
+00:00:24.870 --> 00:00:28.500
+recommendations using the collaborative filtering based method,
+
+00:00:28.500 --> 00:00:35.090
+as well as the content and popular based methods that we sort of have used before.
+
+00:00:35.090 --> 00:00:38.630
+Trained data here, trained data df is a data frame,
+
+00:00:38.630 --> 00:00:41.890
+so let's just take a look at the header of this.
+
+00:00:43.689 --> 00:00:49.579
+This is basically our user movie combinations for all possible user movie combinations,
+
+00:00:49.579 --> 00:00:53.774
+and what we want do is be able to make recommendations for every user in here.
+
+00:00:53.774 --> 00:00:56.600
+So, if we can use Funk SVD to do it, we can do that.
+
+00:00:56.600 --> 00:01:01.385
+If we can use a rank-based method, we could do that.
+
+00:01:01.384 --> 00:01:03.140
+So, basically what I'm going do is,
+
+00:01:03.140 --> 00:01:05.070
+I'm going to create a two paths here.
+
+00:01:05.069 --> 00:01:09.769
+One is a recommendation based on the type of ID,
+
+00:01:09.769 --> 00:01:11.994
+and if the ID has a user,
+
+00:01:11.995 --> 00:01:15.219
+then I'm going to provide a different type of recommendation technique than if
+
+00:01:15.219 --> 00:01:18.549
+you provide me an ID of a movie.
+
+00:01:18.549 --> 00:01:25.729
+So, I essentially started by creating two potential methods for creating recommendations,
+
+00:01:25.730 --> 00:01:27.020
+and actually I'm want to finish
+
+00:01:27.019 --> 00:01:29.099
+this one out because this one's actually pretty straightforward.
+
+00:01:29.099 --> 00:01:32.239
+So, if you give me a movie recommendation,
+
+00:01:32.239 --> 00:01:36.364
+then I'm going to only use a content-based recommendation system.
+
+00:01:36.364 --> 00:01:38.509
+So, what I'm basically going to do is,
+
+00:01:38.510 --> 00:01:41.690
+I'm going to say are recommended IDs are just
+
+00:01:41.689 --> 00:01:45.984
+based on finding similar movies to the idea that you gave me.
+
+00:01:45.984 --> 00:01:48.165
+You are going to give me a movie ID,
+
+00:01:48.165 --> 00:01:49.790
+I'm going to find similar movies.
+
+00:01:49.790 --> 00:01:51.980
+I'm going to grab the names of those movies,
+
+00:01:51.980 --> 00:01:54.109
+and I'm going to give them back to you okay,
+
+00:01:54.109 --> 00:01:56.030
+and this finding similar movies is basically
+
+00:01:56.030 --> 00:01:58.864
+just the content based recommendation system that we use before.
+
+00:01:58.864 --> 00:02:00.959
+So, if you give me a movie ID,
+
+00:02:00.959 --> 00:02:02.969
+and I have this type variable up here.
+
+00:02:02.969 --> 00:02:04.530
+So, basically if you give me a movie ID,
+
+00:02:04.530 --> 00:02:06.049
+I'm going to find similar movies,
+
+00:02:06.049 --> 00:02:07.625
+and I'm going to recommend those movies to you.
+
+00:02:07.625 --> 00:02:09.439
+If you give me a user ID,
+
+00:02:09.439 --> 00:02:13.069
+then there are multiple methods that I could use to make a prediction.
+
+00:02:13.069 --> 00:02:14.620
+I could use collaborative filtering.
+
+00:02:14.620 --> 00:02:16.680
+I could use a ranked-based system.
+
+00:02:16.680 --> 00:02:20.010
+There are lots of things that you might choose to do with a user ID.
+
+00:02:20.009 --> 00:02:25.359
+So, the main thing that I did first was I went into the users,
+
+00:02:25.360 --> 00:02:27.910
+and I pulled the index.
+
+00:02:27.909 --> 00:02:30.919
+So, I wanted to pull where this thing was,
+
+00:02:30.919 --> 00:02:33.934
+and we've actually used this a lot of times,
+
+00:02:33.935 --> 00:02:36.364
+so I'm going to pull the index,
+
+00:02:36.364 --> 00:02:38.250
+and I'm going to store that.
+
+00:02:38.250 --> 00:02:40.780
+Then, what I'm going to do is,
+
+00:02:40.780 --> 00:02:46.099
+I'm going to make a prediction based on
+
+00:02:46.099 --> 00:02:52.305
+the dot-product of the user matrix where that user exists.
+
+00:02:52.305 --> 00:02:56.210
+So, I'm going to grab their row and all of the columns.
+
+00:02:56.210 --> 00:03:00.950
+So, this is going to grab the row associated with that user from the user matrix,
+
+00:03:00.949 --> 00:03:04.534
+and I'm going to grab the entire movie matrix,
+
+00:03:04.534 --> 00:03:06.560
+and I'm going to take the dot-product.
+
+00:03:06.560 --> 00:03:10.039
+What this is going to do is it's going to give me all of
+
+00:03:10.039 --> 00:03:13.935
+the predictions for the rating for every movie for that user,
+
+00:03:13.935 --> 00:03:18.390
+so I'm going to take the dot-product of the user matrix with the movie matrix.
+
+00:03:18.389 --> 00:03:20.114
+But in the user matrix,
+
+00:03:20.115 --> 00:03:22.670
+I'm only going to grab the row associated with that user,
+
+00:03:22.669 --> 00:03:24.789
+and then I'm going to take the dot-product with the movie matrix.
+
+00:03:24.789 --> 00:03:29.905
+So, this is essentially using Funk SVD to create a prediction,
+
+00:03:29.905 --> 00:03:32.449
+and then what I'm going to do is I'm going to sort
+
+00:03:32.449 --> 00:03:34.669
+those according to the highest predictions.
+
+00:03:34.669 --> 00:03:38.629
+So, what this is going to do, is it's going to give me predicted ratings,
+
+00:03:38.629 --> 00:03:41.859
+and I just want to grab the highest ones and give those back,
+
+00:03:41.860 --> 00:03:44.535
+so this was the way that I chose to make those predictions.
+
+00:03:44.534 --> 00:03:49.699
+So, the way I grabbed the highest ones I use something called an argsort.
+
+00:03:49.699 --> 00:03:56.959
+I sorted them, and then I pulled the however many recommendations they wanted.
+
+00:03:56.960 --> 00:03:58.230
+I'm going to pull this out,
+
+00:03:58.229 --> 00:04:00.394
+just so you can see what's happening here.
+
+00:04:00.395 --> 00:04:05.245
+The index is grabbing the row associated with this user in the user matrix.
+
+00:04:05.245 --> 00:04:07.814
+If you give me the ID of 50,
+
+00:04:07.814 --> 00:04:10.794
+I'm going to go in and find that user in my user matrix,
+
+00:04:10.794 --> 00:04:11.964
+and I'm going to pull that row.
+
+00:04:11.965 --> 00:04:14.215
+I'm going to take the dot-product with the movie matrix,
+
+00:04:14.215 --> 00:04:16.250
+and that's going to give me the predictions.
+
+00:04:16.250 --> 00:04:19.490
+So, this is the prediction for the rating that that user would
+
+00:04:19.490 --> 00:04:23.730
+give to every movie in the entire movie matrix.
+
+00:04:23.730 --> 00:04:26.045
+Then, what this part does here,
+
+00:04:26.045 --> 00:04:28.660
+which I'm sure I use Stack Overflow to get,
+
+00:04:28.660 --> 00:04:30.640
+what this part does here,
+
+00:04:30.639 --> 00:04:36.729
+is it sorts those values and grabs the indices associated with those movies right.
+
+00:04:36.730 --> 00:04:39.470
+So, what this does is it takes the predictions,
+
+00:04:39.470 --> 00:04:43.880
+and we can look at this part here is probably the main thing.
+
+00:04:43.879 --> 00:04:49.310
+So, what this does is it sorts them according to the predicted value,
+
+00:04:49.310 --> 00:04:51.595
+and then it gives me the index back.
+
+00:04:51.595 --> 00:04:54.350
+Then, what this part does is it says,
+
+00:04:54.350 --> 00:04:57.085
+so if we look at this. Let's say negative 10.
+
+00:04:57.084 --> 00:05:01.430
+What this does is it gives me the top ten back,
+
+00:05:01.430 --> 00:05:03.740
+and then basically what I'm doing next is,
+
+00:05:03.740 --> 00:05:05.129
+I'm just flipping the order.
+
+00:05:05.129 --> 00:05:08.939
+So, this colon, colon negative one is just flipping the order.
+
+00:05:08.939 --> 00:05:14.504
+If we look at this versus this part,
+
+00:05:14.504 --> 00:05:16.560
+if you haven't seen this before,
+
+00:05:16.560 --> 00:05:23.175
+it's just a nice trick that says flip the order.
+
+00:05:23.175 --> 00:05:25.160
+So, before they were ordered this way,
+
+00:05:25.160 --> 00:05:27.245
+now they're ordered this way, and that's just
+
+00:05:27.245 --> 00:05:29.709
+important depending on how you're going to index into them.
+
+00:05:29.709 --> 00:05:34.819
+So, I must have decided later on that I wanted to index into them in a certain way,
+
+00:05:34.819 --> 00:05:37.009
+and return them back in a certain order.
+
+00:05:37.009 --> 00:05:42.810
+So, this is just pulling the actual movie names, so train, data,
+
+00:05:42.810 --> 00:05:46.024
+df.columns is the movie IDs,
+
+00:05:46.024 --> 00:05:50.404
+and this is the index associated with each movie ID.
+
+00:05:50.404 --> 00:05:53.250
+I'm pulling those movie IDs, and then I'm saying,
+
+00:05:53.250 --> 00:05:56.810
+"Give me the movie names back for the movie IDs."
+
+00:05:56.810 --> 00:05:59.850
+So, I'm going to call this rec names here,
+
+00:05:59.850 --> 00:06:04.625
+and then basically these rec IDs and rec names are the same,
+
+00:06:04.625 --> 00:06:05.720
+except for one set,
+
+00:06:05.720 --> 00:06:07.340
+is if you give me a movie ID,
+
+00:06:07.339 --> 00:06:10.750
+and the other set is if you give me a user ID.
+
+00:06:10.750 --> 00:06:14.420
+I noticed with this particular method that a lot of
+
+00:06:14.420 --> 00:06:18.590
+my predictions ended up looking the same across lots of different users,
+
+00:06:18.589 --> 00:06:23.369
+and so maybe that's very accurate in terms of like lots of users would like those movies.
+
+00:06:23.370 --> 00:06:25.970
+But in terms of some of the other criteria like
+
+00:06:25.970 --> 00:06:30.080
+serendipity or finding things that are sort of nostalgic,
+
+00:06:30.079 --> 00:06:33.594
+my particular recommendation system wouldn't do that very well.
+
+00:06:33.595 --> 00:06:37.940
+So, with that, I wish you luck in making your own recommendation system,
+
+00:06:37.939 --> 00:06:42.319
+and I hope this was insightful in terms of how I could combine both a
+
+00:06:42.319 --> 00:06:49.230
+content-based and a Funk SVD method to make predictions for users and movies like.
+

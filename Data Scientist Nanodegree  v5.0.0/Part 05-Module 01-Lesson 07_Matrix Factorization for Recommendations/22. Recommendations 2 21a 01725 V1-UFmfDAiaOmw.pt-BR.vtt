@@ -1,0 +1,603 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.196 --> 00:00:03.147
+Neste vídeo, estenderemos
+o que fizemos antes
+
+00:00:03.180 --> 00:00:04.692
+com o funkSVD,
+
+00:00:04.725 --> 00:00:07.899
+mas possibilitaremos
+criar previsões
+
+00:00:07.932 --> 00:00:11.563
+nos locais onde encontrávamos
+o problema de cold-start.
+
+00:00:11.596 --> 00:00:16.075
+Vimos no vídeo anterior
+que não conseguimos criar previsões
+
+00:00:16.108 --> 00:00:18.266
+quando um usuário ou um filme
+
+00:00:18.299 --> 00:00:20.693
+não estava
+no conjunto de treinamento
+
+00:00:20.726 --> 00:00:23.287
+e aparecia
+no conjunto de teste.
+
+00:00:23.320 --> 00:00:27.940
+Para essas instâncias -
+no notebook que veremos aqui -,
+
+00:00:27.973 --> 00:00:30.619
+faremos previsões
+usando outros métodos
+
+00:00:30.652 --> 00:00:32.891
+além do funkSVD.
+
+00:00:32.924 --> 00:00:37.380
+Para começar,
+leremos muitas coisas
+
+00:00:37.413 --> 00:00:38.744
+que usamos antes,
+
+00:00:38.777 --> 00:00:42.039
+e mostrarei tudo
+conforme são escritas.
+
+00:00:42.072 --> 00:00:45.270
+Essencialmente, a primeira parte
+será os conjuntos de dados.
+
+00:00:45.303 --> 00:00:50.950
+Pegamos este create_train_test,
+que usamos no notebook anterior,
+
+00:00:50.983 --> 00:00:53.013
+e o predict_rating,
+
+00:00:53.046 --> 00:00:56.630
+que obtém a previsão
+usando o funkSVD,
+
+00:00:56.663 --> 00:00:58.219
+do notebook anterior.
+
+00:00:58.252 --> 00:00:59.960
+Aqui embaixo,
+
+00:00:59.993 --> 00:01:02.269
+veremos que estou criando
+
+00:01:02.302 --> 00:01:05.348
+a matriz de filme com user_by,
+
+00:01:05.381 --> 00:01:08.578
+a mesma que usamos
+em vários notebooks.
+
+00:01:08.611 --> 00:01:12.799
+Aqui, nesta última parte,
+usei o pickle na matriz de usuário
+
+00:01:12.832 --> 00:01:16.245
+e na de filme - que foram criadas
+no notebook anterior,
+
+00:01:16.278 --> 00:01:17.685
+usando o funkSVD.
+
+00:01:17.718 --> 00:01:21.504
+Agora estou pegando-as para
+usá-las novamente neste notebook.
+
+00:01:21.537 --> 00:01:22.802
+Se observarmos isto...
+
+00:01:24.170 --> 00:01:25.769
+Criarei uma célula aqui...
+
+00:01:25.802 --> 00:01:28.885
+Vejamos a matriz de usuário.
+
+00:01:28.918 --> 00:01:32.989
+Na matriz de usuário -
+shape pode ser mais útil -,
+
+00:01:33.022 --> 00:01:37.004
+vemos que 378
+é a quantidade de usuários
+
+00:01:37.037 --> 00:01:39.091
+que temos
+no conjunto de treinamento
+
+00:01:39.124 --> 00:01:41.923
+e que há 15 recursos.
+
+00:01:41.956 --> 00:01:44.451
+Na matriz de filme,
+
+00:01:45.675 --> 00:01:51.128
+havia 15 recursos
+e 2.679 filmes.
+
+00:01:51.161 --> 00:01:55.213
+Esta é a quantidade de filmes,
+e esta é a de recursos obtidos
+
+00:01:55.246 --> 00:01:57.733
+ao usarmos o funkSVD
+no conjunto de treinamento
+
+00:01:57.766 --> 00:01:59.209
+no notebook anterior.
+
+00:01:59.242 --> 00:02:04.351
+Eu salvei isso em um lugar
+no qual podemos usar neste notebook.
+
+00:02:04.384 --> 00:02:07.544
+Queremos comparar
+
+00:02:07.577 --> 00:02:12.745
+cada uma das previsões
+com os valores reais
+
+00:02:12.778 --> 00:02:15.315
+usando o funkSVD
+onde for possível
+
+00:02:15.348 --> 00:02:20.058
+e retornando algumas métricas
+sobre o desempenho do funkSVD
+
+00:02:20.091 --> 00:02:25.168
+na previsão de uma combinação
+de usuário e filme específica.
+
+00:02:25.201 --> 00:02:27.754
+Eu criei três arrays
+
+00:02:27.787 --> 00:02:32.354
+parecidos com o que usamos
+em notebooks anteriores.
+
+00:02:33.073 --> 00:02:39.049
+Essencialmente, eu peguei
+um array dos usuários -
+
+00:02:39.082 --> 00:02:42.513
+eu peguei os usuários -,
+e isso pode ser útil.
+
+00:02:42.546 --> 00:02:44.752
+Se observarmos o val.df...
+
+00:02:44.785 --> 00:02:46.768
+Estes são os dados
+de validação,
+
+00:02:46.801 --> 00:02:50.432
+pois dividimos o conjunto de dados
+entre treinamento e validação.
+
+00:02:50.465 --> 00:02:55.314
+O val.df são as combinações
+de usuário e filme
+
+00:02:55.347 --> 00:02:59.410
+que não passamos
+pelo método funkSVD.
+
+00:02:59.443 --> 00:03:03.227
+Faremos previsões neles
+para ver como nos saímos.
+
+00:03:03.260 --> 00:03:04.868
+Então...
+
+00:03:07.316 --> 00:03:09.628
+Eu pegarei o movie_id.
+
+00:03:10.260 --> 00:03:15.061
+Isso é bem parecido
+com o que fizemos anteriormente.
+
+00:03:15.094 --> 00:03:19.327
+Vamos indexar nisso para garantir
+que obteremos os lugares certos,
+
+00:03:19.360 --> 00:03:22.853
+as combinações corretas
+entre as linhas e as colunas
+
+00:03:22.886 --> 00:03:27.483
+da matriz de usuário
+e de filme.
+
+00:03:27.516 --> 00:03:31.515
+Isso foi passado aqui em cima,
+pois pegaremos o produto escalonar
+
+00:03:31.548 --> 00:03:37.112
+de uma linha de usuário
+com uma coluna de filme
+
+00:03:37.145 --> 00:03:39.517
+para realizar as previsões.
+
+00:03:39.550 --> 00:03:41.013
+Então...
+
+00:03:41.046 --> 00:03:45.168
+Criarei outras variáveis
+que usaremos nesta função.
+
+00:03:45.201 --> 00:03:47.325
+Uma delas é a da soma
+do erro quadrático.
+
+00:03:47.358 --> 00:03:50.996
+Eu rastrearei
+as somas do erro quadrático
+
+00:03:51.029 --> 00:03:54.409
+e adicionarei a isso conforme
+criamos previsões adicionais.
+
+00:03:54.442 --> 00:03:56.815
+Rastrearei a quantidade
+de classificações -
+
+00:03:56.848 --> 00:03:59.146
+para começar, teremos zero -
+
+00:03:59.179 --> 00:04:02.905
+e rastrearei os valores
+previstos e reais.
+
+00:04:02.938 --> 00:04:05.001
+Vou armazenar isso em listas.
+
+00:04:05.034 --> 00:04:07.123
+Eu criei esse real
+versus previsto.
+
+00:04:07.156 --> 00:04:11.886
+Colocarei o real em um eixo,
+o previsto no outro
+
+00:04:11.919 --> 00:04:14.404
+e criarei um mapa de calor
+
+00:04:14.437 --> 00:04:17.619
+para entender o desempenho
+dos valores reais
+
+00:04:17.652 --> 00:04:20.159
+em comparação
+com os valores previstos.
+
+00:04:20.192 --> 00:04:22.364
+Para cada indivíduo
+do val_users,
+
+00:04:22.397 --> 00:04:27.387
+usaremos o índice dele
+nas partes necessárias.
+
+00:04:27.420 --> 00:04:31.915
+Tentarei fazer uma previsão
+usando o funkSVD,
+
+00:04:31.948 --> 00:04:34.612
+mas abrirei uma exceção
+
+00:04:34.645 --> 00:04:37.434
+para continuar
+no próximo indivíduo
+
+00:04:37.467 --> 00:04:39.172
+caso a previsão falhe.
+
+00:04:39.205 --> 00:04:42.212
+Usaremos a função predict_rating
+que criamos antes.
+
+00:04:42.245 --> 00:04:46.669
+Usaremos a matriz de usuário
+que vem do funkSVD
+
+00:04:46.702 --> 00:04:48.364
+que escrevemos com um pickle.
+
+00:04:48.397 --> 00:04:52.205
+Aqui está a matriz de filme
+que escrevemos com o pickle.
+
+00:04:52.238 --> 00:04:54.316
+Precisamos do user_id
+e do movie_id,
+
+00:04:54.349 --> 00:04:55.638
+então usaremos o índice
+
+00:04:55.671 --> 00:05:00.084
+para obtermos isso
+de val.users
+
+00:05:00.117 --> 00:05:02.245
+com o índice.
+
+00:05:02.278 --> 00:05:07.317
+Quero obter isso
+de val.movies no índice específico
+
+00:05:07.350 --> 00:05:09.245
+e fazer uma previsão.
+
+00:05:09.278 --> 00:05:14.791
+Depois, veremos
+o quão distante a previsão está
+
+00:05:14.824 --> 00:05:17.094
+do valor real.
+
+00:05:17.127 --> 00:05:20.086
+Pegarei a previsão
+menos o valor real,
+
+00:05:20.119 --> 00:05:25.448
+sendo que real
+será igual a val.ratings no índice.
+
+00:05:26.455 --> 00:05:29.776
+Farei ao quadrado
+para que tudo fique positivo,
+
+00:05:29.809 --> 00:05:32.872
+e isso rastreará
+a soma do erro quadrático.
+
+00:05:32.905 --> 00:05:38.113
+Basicamente, adicionamos 1
+às classificações feitas.
+
+00:05:38.146 --> 00:05:40.777
+Perceba que, se a previsão
+falhar,
+
+00:05:40.810 --> 00:05:42.407
+moveremos para a exceção,
+
+00:05:42.440 --> 00:05:45.525
+nada será adicionado
+à soma do erro quadrático
+
+00:05:45.558 --> 00:05:48.433
+e nada será adicionado
+à quantidade de classificações.
+
+00:05:49.307 --> 00:05:52.832
+Agora vamos anexar
+o valor real
+
+00:05:52.865 --> 00:05:54.600
+à lista real
+
+00:05:54.633 --> 00:05:58.486
+anexando o valor previsto
+à lista prevista.
+
+00:05:58.519 --> 00:06:00.800
+Anexamos a previsão.
+
+00:06:00.833 --> 00:06:04.722
+Anexamos o valor real...
+
+00:06:06.129 --> 00:06:10.722
+Depois, no actual_v_pred -
+
+00:06:10.755 --> 00:06:13.366
+e leva tempo
+para se acostumar com isto,
+
+00:06:13.399 --> 00:06:16.066
+mas, essencialmente,
+
+00:06:16.099 --> 00:06:22.026
+indexamos à matriz criada
+
+00:06:22.059 --> 00:06:24.404
+e armazenamos 1
+
+00:06:24.437 --> 00:06:27.378
+no lugar onde
+o valor da previsão recair.
+
+00:06:27.411 --> 00:06:29.748
+Isso fará mais sentido
+quando virmos a foto,
+
+00:06:29.781 --> 00:06:31.730
+mas, essencialmente,
+estamos indexando
+
+00:06:31.763 --> 00:06:34.906
+e dizendo para adicionar 1
+no lugar.
+
+00:06:34.939 --> 00:06:37.174
+Essa é uma forma
+de indexação chique
+
+00:06:37.207 --> 00:06:41.603
+para marcar onde desejamos
+adicionar o 1,
+
+00:06:41.636 --> 00:06:45.216
+e adicionamos isso onde o valor
+de actual_v_pred recair
+
+00:06:45.249 --> 00:06:47.121
+em uma grade de 10x10.
+
+00:06:47.154 --> 00:06:51.859
+Daqui, atualizamos rmse
+como a raiz quadrada
+
+00:06:52.564 --> 00:06:54.577
+da soma do erro quadrático
+
+00:06:54.610 --> 00:06:58.878
+dividida pela quantidade
+de classificações realizadas.
+
+00:06:58.911 --> 00:07:02.071
+Eu rastrearei perc_rated
+
+00:07:02.104 --> 00:07:04.219
+como a quantidade
+de classificações
+
+00:07:04.252 --> 00:07:07.862
+dividida pelo comprimento
+de val.users.
+
+00:07:07.895 --> 00:07:09.932
+Essa é a quantidade total
+de usuários,
+
+00:07:09.965 --> 00:07:13.893
+e podemos rastrear
+a porcentagem de pessoas
+
+00:07:13.926 --> 00:07:17.301
+que classificaram
+usando o SVD.
+
+00:07:17.334 --> 00:07:20.381
+A seguir, veremos
+o desempenho disso.
+
+00:07:20.414 --> 00:07:23.095
+Vou copiar esta parte
+
+00:07:23.128 --> 00:07:26.479
+e tirar esta parte aqui.
+
+00:07:27.157 --> 00:07:29.176
+Colocarei um sinal de igual
+entre elas.
+
+00:07:30.087 --> 00:07:31.870
+Já fiz isso antes.
+
+00:07:31.903 --> 00:07:35.151
+Me desculpe. Aqui deve estar
+act_v_pred.
+
+00:07:39.120 --> 00:07:43.278
+Aqui deve ser "act_v_pred".
+
+00:07:44.089 --> 00:07:49.359
+Imprimi o rmse e o perc_rated,
+
+00:07:50.351 --> 00:07:53.809
+também criei
+este mapa de calor
+
+00:07:53.842 --> 00:07:57.587
+do actual_v_pred,
+
+00:07:57.620 --> 00:08:00.549
+além de outros rótulos.
+
+00:08:01.220 --> 00:08:03.973
+Fiz algo de errado.
+
+00:08:04.989 --> 00:08:08.085
+Aqui deve ser
+val_ratings[idx].
+
+00:08:10.950 --> 00:08:12.771
+Eu devia ter visto.
+
+00:08:12.804 --> 00:08:15.623
+Isto deve obter o valor real.
+
+00:08:15.656 --> 00:08:20.006
+Ele deve obter a classificação real
+para saber onde ficará na grade.
+
+00:08:20.039 --> 00:08:22.364
+Vamos tentar novamente.
+Legal.
+
+00:08:22.397 --> 00:08:24.771
+A maioria dos pontos
+fica aqui,
+
+00:08:24.804 --> 00:08:27.008
+onde o valor previsto é 6,
+
+00:08:27.041 --> 00:08:29.371
+o valor real também é 6,
+
+00:08:29.404 --> 00:08:32.037
+e a maioria das classificações
+está nesse intervalo.
+
+00:08:32.070 --> 00:08:35.890
+Vemos que poucos valores
+estão fora desse intervalo.
+
+00:08:35.923 --> 00:08:37.957
+Podemos observar
+outras métricas,
+
+00:08:37.990 --> 00:08:41.929
+mas estamos errando em 2,04
+nas classificações
+
+00:08:41.962 --> 00:08:46.436
+e podemos fazer previsões
+para cerca de 50% deles.
+
+00:08:46.469 --> 00:08:49.251
+Vemos como conseguimos
+fazer previsões
+
+00:08:49.284 --> 00:08:54.260
+observando a quantidade
+de classificações disponíveis
+
+00:08:54.293 --> 00:08:59.826
+e perc_rated vezes isso.
+
+00:08:59.859 --> 00:09:03.095
+Essencialmente, com a quantidade
+de classificações disponíveis,
+
+00:09:03.128 --> 00:09:06.692
+conseguimos criar previsões
+para cerca de 960
+
+00:09:06.725 --> 00:09:10.972
+e, de forma parecida -
+se observamos um menos isso -,
+
+00:09:11.891 --> 00:09:16.491
+fizemos previsões
+para cerca de 1.040 pessoas.
+

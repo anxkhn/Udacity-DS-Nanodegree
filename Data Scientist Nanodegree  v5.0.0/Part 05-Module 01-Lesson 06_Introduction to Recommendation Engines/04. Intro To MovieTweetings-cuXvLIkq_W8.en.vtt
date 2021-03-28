@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.549 --> 00:00:09.000
+In this lesson, we'll be working with the MovieTweetings data,
+
+00:00:09.000 --> 00:00:10.890
+a movie rating dataset collected by
+
+00:00:10.890 --> 00:00:15.210
+Simon Dooms and innovation agency in Belgium using Twitter.
+
+00:00:15.210 --> 00:00:18.570
+You'll learn about some of the most common techniques for creating
+
+00:00:18.570 --> 00:00:23.010
+recommendations as you work with this data collected using MovieTweetings.
+
+00:00:23.010 --> 00:00:25.585
+As you build each recommendation,
+
+00:00:25.585 --> 00:00:29.350
+think about the pros and cons of each of the recommenders,
+
+00:00:29.350 --> 00:00:32.719
+and how you might improve the recommendations.
+

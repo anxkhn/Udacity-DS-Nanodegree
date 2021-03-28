@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.795 --> 00:00:05.151
+INTRODUÇÃO
+À FILTRAGEM COLABORATIVA
+
+00:00:05.547 --> 00:00:09.947
+Daremos o primeiro passo para
+recomendações mais personalizadas.
+
+00:00:09.980 --> 00:00:11.650
+Considere o Sam aqui.
+
+00:00:11.683 --> 00:00:13.628
+Ele assistiu a "Armageddon",
+
+00:00:13.661 --> 00:00:17.723
+"Independence Day"
+e "A Chegada". Agora temos a Jessie.
+
+00:00:17.756 --> 00:00:22.979
+Jessie também viu esses filmes,
+mas também viu "Interestelar".
+
+00:00:23.012 --> 00:00:26.835
+Devido à sobreposição dos filmes
+assistidos pelo Sam e pela Jessie,
+
+00:00:26.868 --> 00:00:30.547
+Sam também
+poderá gostar de "Interestelar".
+
+00:00:30.580 --> 00:00:32.531
+Em recomendações
+dessa natureza,
+
+00:00:32.564 --> 00:00:36.746
+faz sentido encontrar usuários
+que assistiram aos mesmos filmes
+
+00:00:36.779 --> 00:00:38.418
+e recomendar novos filmes
+
+00:00:38.451 --> 00:00:43.075
+com base no que um desses usuários
+assistiu e o outro, não.
+
+00:00:43.108 --> 00:00:47.425
+Esse tipo de relacionamento
+de interações de itens de usuários
+
+00:00:47.458 --> 00:00:49.679
+é conhecido
+como "filtragem colaborativa".
+

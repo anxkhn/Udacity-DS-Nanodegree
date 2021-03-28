@@ -1,0 +1,131 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.023 --> 00:00:04.878
+PONTOS IMPORTANTES
+DA PRÁTICA DE SVD
+
+00:00:04.911 --> 00:00:07.498
+No notebook anterior,
+você praticou suas habilidades
+
+00:00:07.531 --> 00:00:10.679
+usando SVD em um subconjunto
+dos dados de filmes.
+
+00:00:11.278 --> 00:00:13.455
+O primeiro ponto-chave
+da sua análise
+
+00:00:13.488 --> 00:00:16.270
+é que as variáveis latentes
+não foram rotuladas,
+
+00:00:16.303 --> 00:00:18.999
+então podemos ter uma ideia
+das variáveis latentes
+
+00:00:19.032 --> 00:00:22.399
+baseados em como os pesos
+aparecem em diferentes filmes.
+
+00:00:22.432 --> 00:00:26.493
+Mas não temos um rótulo
+bom e conhecido no recurso,
+
+00:00:26.526 --> 00:00:28.790
+como eu fiz parecer
+no último vídeo.
+
+00:00:29.207 --> 00:00:31.439
+É isso que torna
+uma variável latente.
+
+00:00:31.472 --> 00:00:35.022
+O 2º ponto-chave
+é que descobrimos que a matriz sigma
+
+00:00:35.055 --> 00:00:38.599
+possui valores que podem nos dizer
+o quanto da variabilidade
+
+00:00:38.632 --> 00:00:42.055
+na matriz usuário-filme original
+pode ser explicada
+
+00:00:42.088 --> 00:00:44.153
+por uma variável latente
+específica.
+
+00:00:44.186 --> 00:00:46.727
+Isso é útil,
+porque você talvez não precise
+
+00:00:46.760 --> 00:00:50.206
+de todas as variáveis latentes
+para fazer uma boa predição.
+
+00:00:50.582 --> 00:00:52.838
+Observando os elementos
+na matriz sigma,
+
+00:00:52.871 --> 00:00:55.590
+podemos ter uma indicação
+de quantas variáveis latentes
+
+00:00:55.623 --> 00:00:57.134
+você pode querer manter.
+
+00:00:57.167 --> 00:01:01.374
+Ao elevar esses elementos
+diagonais ao quadrado e somá-los,
+
+00:01:01.407 --> 00:01:05.454
+obtemos a variabilidade total
+que é explicada pela matriz.
+
+00:01:05.487 --> 00:01:09.910
+A quantidade de variabilidade
+explicada por cada variável latente
+
+00:01:09.943 --> 00:01:11.734
+pode ser encontrada
+como a razão
+
+00:01:11.767 --> 00:01:15.902
+do elemento diagonal ao quadrado
+dividido por essa soma.
+
+00:01:15.935 --> 00:01:21.718
+E o último e mais importante ponto
+é que não podemos usar SVD
+
+00:01:21.751 --> 00:01:24.215
+quando a nossa matriz
+tem dados ausentes.
+
+00:01:24.248 --> 00:01:28.406
+A SVD tradicional é ótima
+para situações como esta,
+
+00:01:28.439 --> 00:01:32.918
+já que esses tipos de matrizes
+têm autovalores e autovetores.
+
+00:01:32.951 --> 00:01:36.551
+Contudo, SVD não é boa
+para esta situação.
+
+00:01:36.584 --> 00:01:40.663
+Isso é péssimo, porque
+ao fazermos recomendações,
+
+00:01:40.696 --> 00:01:43.983
+nossas matrizes se parecem
+muito mais com isso.
+
+00:01:44.016 --> 00:01:47.726
+É aí que entra a versão
+de Simon Funk da SVD.
+
