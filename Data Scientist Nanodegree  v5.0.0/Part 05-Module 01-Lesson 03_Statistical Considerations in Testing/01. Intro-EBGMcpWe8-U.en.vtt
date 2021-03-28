@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.160 --> 00:00:07.980
+You might think that the importance of statistics in
+
+00:00:07.980 --> 00:00:12.414
+experiment design lies only in analyzing the results of an experiment.
+
+00:00:12.414 --> 00:00:16.419
+Set up the design following the principles established in the previous lesson,
+
+00:00:16.420 --> 00:00:20.140
+collect some data, and then use statistics to analyze the data.
+
+00:00:20.140 --> 00:00:23.519
+Well, there's actually more importance for statistics in
+
+00:00:23.519 --> 00:00:27.364
+your experimental design rather than just coming in at the end.
+
+00:00:27.364 --> 00:00:32.655
+For example, that point about collecting some data seems a bit vague.
+
+00:00:32.655 --> 00:00:35.340
+How much data will you need before you can judge
+
+00:00:35.340 --> 00:00:38.045
+your experiment's success on solid grounds?
+
+00:00:38.045 --> 00:00:43.250
+Do I need a thousand data points, 10,000, or 100,000.
+
+00:00:43.250 --> 00:00:46.759
+Factors like the size of the effect that you want to see can
+
+00:00:46.759 --> 00:00:50.089
+have a major effect on how much data you need to collect,
+
+00:00:50.090 --> 00:00:53.835
+and how long it will take before you get your results.
+
+00:00:53.835 --> 00:00:57.859
+This lesson will help you see how statistical techniques can
+
+00:00:57.859 --> 00:01:01.894
+be used to make solid decisions in your experimental designs.
+
+00:01:01.895 --> 00:01:04.040
+In the first part of this lesson,
+
+00:01:04.040 --> 00:01:06.605
+you'll learn about how statistical techniques can help you
+
+00:01:06.605 --> 00:01:10.290
+answer questions related to setting up an experiment.
+
+00:01:10.290 --> 00:01:12.980
+Then, in the second part of the lesson,
+
+00:01:12.980 --> 00:01:15.560
+you'll learn about some tricky pitfalls that can come as
+
+00:01:15.560 --> 00:01:19.000
+a part of enlightened outcomes of an experiment.
+

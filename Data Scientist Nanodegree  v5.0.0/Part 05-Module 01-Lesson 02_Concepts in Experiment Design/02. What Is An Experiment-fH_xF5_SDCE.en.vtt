@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.070 --> 00:00:09.375
+Let's say that you have an online store and want to add a new feature.
+
+00:00:09.375 --> 00:00:13.559
+Normally, after users make a search and are shown products,
+
+00:00:13.560 --> 00:00:18.094
+they can click on a product image to be taken to its full information page.
+
+00:00:18.094 --> 00:00:22.015
+The new feature that you want to add is a quick view overlay,
+
+00:00:22.015 --> 00:00:25.380
+where clicking on the product image brings up an overlay with summarize
+
+00:00:25.379 --> 00:00:29.864
+product info without taking them entirely away from the search results.
+
+00:00:29.864 --> 00:00:34.519
+You'd like to test if this new feature leads to more sales.
+
+00:00:34.520 --> 00:00:36.905
+If we run an experiment here,
+
+00:00:36.905 --> 00:00:39.300
+then we should be able to say whether or not the overlay
+
+00:00:39.299 --> 00:00:42.549
+caused a change in customers' purchasing habits.
+
+00:00:42.549 --> 00:00:46.404
+So, what makes an experiment an experiment?
+
+00:00:46.405 --> 00:00:51.615
+First, we need to perform a comparison between two groups.
+
+00:00:51.615 --> 00:00:56.150
+If we have some people interact with the old website without the overlay,
+
+00:00:56.149 --> 00:00:59.394
+and some people interact with the new website with the overlay,
+
+00:00:59.395 --> 00:01:05.180
+then a difference in purchases made by each group will show us the effect of the overlay.
+
+00:01:05.180 --> 00:01:08.450
+Without a comparison between groups,
+
+00:01:08.450 --> 00:01:10.764
+we don't have an experiment.
+
+00:01:10.763 --> 00:01:15.739
+Secondly, we need to control for other differences between groups.
+
+00:01:15.739 --> 00:01:20.419
+The only difference between the two groups should be the feature that we specifically
+
+00:01:20.420 --> 00:01:23.465
+manipulate whether the customer gets the site
+
+00:01:23.465 --> 00:01:27.475
+with the overlay or the site without the overlay.
+
+00:01:27.474 --> 00:01:31.894
+The typical way of doing this is through randomization.
+
+00:01:31.894 --> 00:01:36.274
+For each customer, we randomly assign them to a site version.
+
+00:01:36.275 --> 00:01:39.890
+By randomly assigning individuals to each page,
+
+00:01:39.890 --> 00:01:46.105
+the distribution of other variables like age or gender should be similar between groups.
+
+00:01:46.105 --> 00:01:50.270
+The only practical difference between the groups should be the feature we care
+
+00:01:50.269 --> 00:01:54.840
+about whether they got the new overlays or not.
+

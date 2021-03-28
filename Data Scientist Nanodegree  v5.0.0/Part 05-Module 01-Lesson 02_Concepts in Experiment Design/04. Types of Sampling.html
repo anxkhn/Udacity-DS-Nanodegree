@@ -1,0 +1,271 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Types of Sampling</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Concepts in Experiment Design</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is an Experiment.html">02. What is an Experiment?</a>
+    </li>
+    <li class="">
+      <a href="03. Types of Experiment.html">03. Types of Experiment</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Sampling.html">04. Types of Sampling</a>
+    </li>
+    <li class="">
+      <a href="05. Measuring Outcomes.html">05. Measuring Outcomes</a>
+    </li>
+    <li class="">
+      <a href="06. Creating Metrics.html">06. Creating Metrics</a>
+    </li>
+    <li class="">
+      <a href="07. Controlling Variables.html">07. Controlling Variables</a>
+    </li>
+    <li class="">
+      <a href="08. Checking Validity.html">08. Checking Validity</a>
+    </li>
+    <li class="">
+      <a href="09. Checking Bias.html">09. Checking Bias</a>
+    </li>
+    <li class="">
+      <a href="10. Ethics in Experimentation.html">10. Ethics in Experimentation</a>
+    </li>
+    <li class="">
+      <a href="11. A SMART Mnemonic for Experiment Design.html">11. A SMART Mnemonic for Experiment Design</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Conclusion.html">12. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Types of Sampling</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Types Of Sampling</p></h3>
+  <video controls>
+  <source src="04. Types Of Sampling-GF_eQqNoarI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Types Of Sampling-GF_eQqNoarI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Types Of Sampling-GF_eQqNoarI.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Types Of Sampling-GF_eQqNoarI.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="types-of-sampling">Types of Sampling</h2>
+<p>While web and other online experiments have an easy time collecting data,<br />
+collecting data from traditional methods involving real populations is a much<br />
+more difficult proposition. If you need to perform a survey of a population, it<br />
+could be unreasonable in both time and money costs to try and collect thoughts<br />
+from every single person in the population. This is where sampling comes in.<br />
+The goal of sampling is to only take a subset of the population, using the<br />
+responses from that subset to make an inference about the whole population.<br />
+Here, we'll cover two basic probabilistic techniques that are commonly used.</p>
+<p>The simplest of these approaches is <strong>simple random sampling</strong>. In a simple<br />
+random sample, each individual in the population has an equal chance of being<br />
+selected. We just randomly make draws from the population until we have the<br />
+sample size desired; your sample size depends on the level of uncertainty you<br />
+are willing to have about the collected data. Since everyone has an equal<br />
+chance of being drawn, we can expect the feature distribution of selected units<br />
+to be similar to the distribution of the population as a whole. In addition, a<br />
+simple random sample is easy to set up.</p>
+<p>However, it is possible that certain groups are underrepresented in a simple<br />
+random sample, especially those that make up a low proportion of the population.<br />
+If there are certain rarer subgroups of interest, it can be worth adding one<br />
+additional step and performing <strong>stratified random sampling</strong>. In a<br />
+stratified random sample, we need to first divide the entire population into<br />
+disjoint groups, or strata. That is, each individual must be a part of one<br />
+group, and only one group. For example, you could divide people by gender (male,<br />
+female, other), or age (e.g. 18-25, 26-35, etc.).</p>
+<p>Then, from each group, you take a simple random sample. In a <em>proportional
+sample</em>, the sample size is proportional to how large the group is in the full<br />
+population. For example, if you require 1000 data points, and stratified<br />
+individuals of proportion {0.5, 0.3, 0.2}, then you would take 500 people from<br />
+the first group, 300 from the second, and 200 from the third. This guarantees a<br />
+certain level of knowledge from each subset, and theoretically a more <br />
+representative overall inference on the population.</p>
+<p>An alternative approach is to take a <em>nonproportional sample</em> from each group.<br />
+For example, we could simply sample 500 people from each group. Computing the<br />
+overall statistics in this case requires weighting each group separately, but<br />
+this extra effort offers a higher understanding of each subgroup in a deeper<br />
+investigation.</p>
+<h3 id="side-note-non-probabilistic-sampling">Side Note: Non-Probabilistic Sampling</h3>
+<p>As noted at the start, the goal of sampling is to use a subset of the whole<br />
+population to make inferences about the full population, so that we didn't need<br />
+to record data from everyone. To that end, probabilistic sampling techniques<br />
+were described above to try and obtain a sample that was representative of the<br />
+whole. However, it's useful to note that there also exist non-probabilistic<br />
+sampling techniques that simplify the sampling process, at the risk of harming <br />
+the validity of your results. (We'll discuss the term 'validity' later in the<br />
+lesson.)</p>
+<p>For example, a <em>convenience sample</em> records information from readily available<br />
+units. Studies performed in the social sciences at colleges often fall into<br />
+this kind of sampling. The people participating in these tasks are often just<br />
+college students, rather than representatives of the population at large. When<br />
+performing inferences from this type of study, it's important to consider how<br />
+well your results might apply to the population at large.</p>
+<p>One notable example of a convenience sample resulting in a grave error comes<br />
+from the prediction made by magazine "The Literary Digest" on the 1936 U.S.<br />
+presidential election. While they predicted a healthy victory by candidate<br />
+Alf Landon, the final result ended with a landslide victory by opposing<br />
+candidate Franklin D. Roosevelt. This major error is attributed to their<br />
+methods capturing a non-representative sample of the population, which included<br />
+looking at the results of a mail-in survey from their magazine readers. Since<br />
+the mail-ins were voluntary, and the magazine subscribers were already not <br />
+well-representative of the general population, focusing on the people who returned<br />
+surveys gave a large bias toward Landon.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Measuring Outcomes.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Types of Sampling')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

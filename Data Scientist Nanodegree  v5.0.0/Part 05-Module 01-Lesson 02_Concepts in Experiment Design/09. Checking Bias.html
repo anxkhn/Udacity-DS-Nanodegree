@@ -1,0 +1,277 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checking Bias</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Concepts in Experiment Design</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is an Experiment.html">02. What is an Experiment?</a>
+    </li>
+    <li class="">
+      <a href="03. Types of Experiment.html">03. Types of Experiment</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Sampling.html">04. Types of Sampling</a>
+    </li>
+    <li class="">
+      <a href="05. Measuring Outcomes.html">05. Measuring Outcomes</a>
+    </li>
+    <li class="">
+      <a href="06. Creating Metrics.html">06. Creating Metrics</a>
+    </li>
+    <li class="">
+      <a href="07. Controlling Variables.html">07. Controlling Variables</a>
+    </li>
+    <li class="">
+      <a href="08. Checking Validity.html">08. Checking Validity</a>
+    </li>
+    <li class="">
+      <a href="09. Checking Bias.html">09. Checking Bias</a>
+    </li>
+    <li class="">
+      <a href="10. Ethics in Experimentation.html">10. Ethics in Experimentation</a>
+    </li>
+    <li class="">
+      <a href="11. A SMART Mnemonic for Experiment Design.html">11. A SMART Mnemonic for Experiment Design</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Conclusion.html">12. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Checking Bias</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Checking Bias</p></h3>
+  <video controls>
+  <source src="09. Checking Bias-ppjNNY4DhPw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. Checking Bias-ppjNNY4DhPw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="09. Checking Bias-ppjNNY4DhPw.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="09. Checking Bias-ppjNNY4DhPw.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="checking-bias">Checking Bias</h2>
+<p>Biases in experiments are systematic effects that interfere with the<br />
+interpretation of experimental results, mostly in terms of internal validity.<br />
+Just as humans can have a lot of different <a href="https://en.wikipedia.org/wiki/List_of_cognitive_biases" rel="noopener noreferrer" target="_blank">biases</a>,<br />
+there are numerous ways in which an experiment can become unbalanced.</p>
+<h3 id="sampling-bias">Sampling Bias</h3>
+<p>Many experimental biases fall under the sampling bias umbrella. Sampling biases<br />
+are those that cause our observations to not be representative of the<br />
+population. For example, if assignment to experimental groups is done in an<br />
+arbitrary fashion (as opposed to random assignment or matched groups), we risk<br />
+our outcomes being based less on the experimental manipulation and more on the<br />
+composition of the underlying groups.</p>
+<p>Studies that use surveys to collect data often have to deal with the<br />
+<strong>self-selection bias</strong>. The types of people that respond to a survey might be<br />
+qualitatively very different from those that do not. A straight average of<br />
+responses would not necessarily reflect the feelings of the full population;<br />
+weighting responses based on the differences between the observed responses and <br />
+properties of the target population may be needed to come to reasonable<br />
+conclusions.</p>
+<p>One type of sampling bias related to missing data is the <strong>survivor bias</strong>.<br />
+Survivor bias is one where losses or dropout of observed units is not accounted<br />
+for in an analysis. A key example of this was in British World War II operations<br />
+research, where engineers <em>avoided</em> using survivor bias when they considered where<br />
+to add armor to their planes. Rather than add armor to the spots where<br />
+returning planes had bullet holes, armor was added to the spots where the<br />
+planes <em>didn't</em> have bullet holes. That's because the planes that took shots to<br />
+those places probably crashed, due to those locations being more vital for<br />
+maintaining flight, so they didn't "survive" and weren't available for observation.</p>
+<h3 id="novelty-bias">Novelty Bias</h3>
+<p>A novelty effect is one that causes observers to change their behavior simply<br />
+because they're seeing something new. We might not be able to gauge the true<br />
+effect of a manipulation until after the novelty wears off and population<br />
+metrics return to a level that actually reflects the changes made. This will be<br />
+important for cases where we want to track changes over time, such as trying to<br />
+get users to re-visit a webpage or use an app more frequently. Novelty is<br />
+probably not a concern (or perhaps what we hope for) when it comes to<br />
+manipulations that are expected to only have a one-shot effect.</p>
+<h3 id="order-biases">Order Biases</h3>
+<p>There are a couple of biases to be aware of when running a within-subjects<br />
+experiment. Recall that in a within-subjects design, each participant performs<br />
+a task or makes a rating in multiple experimental conditions, rather than just<br />
+one. The order in which conditions are completed could have an effect on<br />
+participant responses. A <strong>primacy effect</strong> is one that affects early<br />
+conditions, perhaps biasing them to be recalled better or to serve as anchor<br />
+values for later conditions. A <strong>recency effect</strong> is one that affects later<br />
+conditions, perhaps causing bias due to being fresher in memory or task fatigue.</p>
+<p>An easy way of getting around order biases is to simply randomize the order of<br />
+conditions. If we have three conditions, then each of the six ways of<br />
+completing the task (ABC, ACB, BAC, BCA, CAB, CBA) should be equally likely.<br />
+While there still might end up being order effects like carry-over effects,<br />
+where a particular condition continues to have an effect on future conditions,<br />
+this will be much easier to detect than if every participant completed the task<br />
+in the exact same order of conditions.</p>
+<h3 id="experimenter-bias">Experimenter Bias</h3>
+<p>One bias to watch out for, especially in face-to-face experiments, is the<br />
+experimenter bias. This is where the presence or knowledge of the experimenter<br />
+can affect participants' behaviors or performance. If an experimenter knows<br />
+what condition a participant is in, they might subtly nudge the participant<br />
+towards their expected result with their interactions with the participant. In<br />
+addition, participants may act differently in the presence of an experimenter,<br />
+to try and act in the 'right' way – regardless of if a subject <em>actually</em> knows<br />
+what the experimenter is looking for or not.</p>
+<p>This is where design steps like blinding are important. In<br />
+<a href="https://en.wikipedia.org/wiki/Blinded_experiment" rel="noopener noreferrer" target="_blank">blinding</a>, the administrator<br />
+of a procedure or the participant do not know the condition being used, to <br />
+avoid that subconscious bias from having an effect. In particular, the<br />
+<strong>double-blind</strong> design hides condition information from both the administrator<br />
+<em>and</em> participant in order to have a strong rein on experimenter-based biases.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Ethics in Experimentation.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Checking Bias')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

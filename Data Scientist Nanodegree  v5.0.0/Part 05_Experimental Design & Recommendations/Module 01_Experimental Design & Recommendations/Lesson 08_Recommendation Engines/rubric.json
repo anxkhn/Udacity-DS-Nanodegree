@@ -1,0 +1,276 @@
+{
+  "id": 2322,
+  "project_id": 535,
+  "upload_types": [
+    "repo",
+    "zip"
+  ],
+  "file_filter_regex": "\\A(?!(((.*/)?(__MACOSX|\\.git|node_modules|bower_components|jspm_packages|\\.idea|build|.ipynb_checkpoints|\\.Trash-0|logs)(\\Z|/))))((.*\\.(css|docx|gradle|htm|html|java|js|markdown|md|pdf|py|rmd|rst|sql|swift|txt|xml|yaml|yml)\\Z)|((.*/)?(README|Readme|readme|Makefile)\\Z))",
+  "nomination_eligible": true,
+  "stand_out": "Ways to stand out are to move your notebook into a web application, and blend your code into a class that can be easily used with a web application.  You could package your recommendation engine code to be pip installed by others.  You could also build out a content based recommendation system using your NLP skills.  There are lots of ways to go beyond the rubric for this project!",
+  "hide_criteria": false,
+  "created_at": "2018-09-17T22:18:29.941Z",
+  "updated_at": "2021-02-12T18:59:28.463Z",
+  "hashtag": "",
+  "max_upload_size_mb": 500,
+  "estimated_sla": null,
+  "project_assistant_enabled": false,
+  "available_for_cert_project": false,
+  "language": "en-us",
+  "ndkeys": [
+    "nd025",
+    "nd025-beta",
+    "nd025-mena-connect",
+    "nd025-ent",
+    "nd025-ent-demo",
+    "nd025-cn",
+    "nd002-cn-advanced-vip",
+    "nd025-cn-ent",
+    "nd025-ent-Adnoc"
+  ],
+  "coursekeys": [],
+  "is_career": false,
+  "sections": [
+    {
+      "id": 4950,
+      "name": "Code Functionality & Readability",
+      "created_at": "2018-09-21T22:41:31.320Z",
+      "updated_at": "2018-09-30T03:54:22.992Z",
+      "deleted_at": null,
+      "position": 0,
+      "rubric_id": 2322,
+      "rubric_items": [
+        {
+          "id": 14352,
+          "section_id": 4950,
+          "passed_description": "All the project code is contained in a Jupyter notebook or script.  If you use a notebook, it demonstrates successful execution and output of the code.  All tests have passing remarks.",
+          "exceeded_description": null,
+          "created_at": "2018-09-21T22:41:38.382Z",
+          "updated_at": "2018-10-29T16:20:37.779Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Code is functional and passes all tests.",
+          "exceedable": false
+        },
+        {
+          "id": 14444,
+          "section_id": 4950,
+          "passed_description": "Code is well documented and uses functions and classes as necessary. All functions include document strings. DRY principles are implemented.",
+          "exceeded_description": null,
+          "created_at": "2018-09-30T03:54:23.174Z",
+          "updated_at": "2018-09-30T04:11:26.325Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "Write code that is well documented and uses functions and classes as necessary.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 4985,
+      "name": "Data Exploration",
+      "created_at": "2018-10-02T00:55:42.821Z",
+      "updated_at": "2018-10-02T00:56:06.642Z",
+      "deleted_at": null,
+      "position": 1,
+      "rubric_id": 2322,
+      "rubric_items": [
+        {
+          "id": 14457,
+          "section_id": 4985,
+          "passed_description": "Explore the data to understand the number of users, articles, and information about the interactions that take place.",
+          "exceeded_description": null,
+          "created_at": "2018-10-02T00:56:06.882Z",
+          "updated_at": "2018-10-02T01:31:39.501Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Explore the data.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 4982,
+      "name": "Create Rank Based Recommendations",
+      "created_at": "2018-09-30T04:45:16.523Z",
+      "updated_at": "2018-10-02T00:56:06.651Z",
+      "deleted_at": null,
+      "position": 2,
+      "rubric_id": 2322,
+      "rubric_items": [
+        {
+          "id": 14447,
+          "section_id": 4982,
+          "passed_description": "Tests will ensure that your functions will correctly pull the top articles.  The two functions should pull the top ids and the top names.",
+          "exceeded_description": null,
+          "created_at": "2018-09-30T05:08:27.115Z",
+          "updated_at": "2018-10-01T18:15:48.580Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Create ranked based recommendation model.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 4983,
+      "name": "Collaborative Filtering",
+      "created_at": "2018-09-30T05:17:47.802Z",
+      "updated_at": "2018-10-02T00:56:06.659Z",
+      "deleted_at": null,
+      "position": 3,
+      "rubric_id": 2322,
+      "rubric_items": [
+        {
+          "id": 14449,
+          "section_id": 4983,
+          "passed_description": "Create a matrix with users on the rows and articles on the columns.  There should be a 1 if a user-article interacted with one another and a zero otherwise.",
+          "exceeded_description": null,
+          "created_at": "2018-09-30T05:18:20.382Z",
+          "updated_at": "2018-09-30T05:38:51.029Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Create the user item matrix.",
+          "exceedable": false
+        },
+        {
+          "id": 14450,
+          "section_id": 4983,
+          "passed_description": "Find similar users needed for user-user collaborative filtering model.  Write a function that finds similar users.",
+          "exceeded_description": null,
+          "created_at": "2018-09-30T05:22:28.235Z",
+          "updated_at": "2018-10-02T00:51:56.817Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "Find similar users needed for user-user collaborative filtering model.",
+          "exceedable": false
+        },
+        {
+          "id": 14451,
+          "section_id": 4983,
+          "passed_description": "Make recommendations using user-user based collaborative filtering. Complete the functions needed to make recommendations for each user.",
+          "exceeded_description": null,
+          "created_at": "2018-09-30T05:38:51.262Z",
+          "updated_at": "2018-10-02T00:51:56.834Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "Make recommendations using user-user based collaborative filtering.",
+          "exceedable": false
+        },
+        {
+          "id": 14452,
+          "section_id": 4983,
+          "passed_description": "Improve your original method of using collaborative filtering to make recommendations by ranking the collaborative filtering results by users who have the most article interactions first and then by articles with the most interactions.",
+          "exceeded_description": null,
+          "created_at": "2018-10-01T18:15:48.876Z",
+          "updated_at": "2018-10-01T18:38:15.811Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 3,
+          "criteria": "Improve recommendations using user-user based collaborative filtering.",
+          "exceedable": false
+        },
+        {
+          "id": 14458,
+          "section_id": 4983,
+          "passed_description": "Provide recommendations for new users, which will not be able to receive recommendations using our user-user based collaborative filtering method.",
+          "exceeded_description": null,
+          "created_at": "2018-10-02T02:17:53.537Z",
+          "updated_at": "2018-10-29T16:20:37.792Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 4,
+          "criteria": "Provide recommendations for new users.",
+          "exceedable": false
+        }
+      ]
+    },
+    {
+      "id": 4984,
+      "name": "Matrix Factorization",
+      "created_at": "2018-10-01T18:38:16.142Z",
+      "updated_at": "2018-10-02T00:56:06.665Z",
+      "deleted_at": null,
+      "position": 4,
+      "rubric_id": 2322,
+      "rubric_items": [
+        {
+          "id": 14453,
+          "section_id": 4984,
+          "passed_description": "Perform SVD on user-item matrix. Provides U, Sigma, and V-transpose matrices, as well as an explanation of why this technique works in this case.",
+          "exceeded_description": null,
+          "created_at": "2018-10-01T18:38:46.635Z",
+          "updated_at": "2018-10-02T00:51:56.844Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 0,
+          "criteria": "Perform SVD on user-item matrix.",
+          "exceedable": false
+        },
+        {
+          "id": 14454,
+          "section_id": 4984,
+          "passed_description": "Split the user-item matrix into training and testing segments.  Identify the users in the test set that are also in the training.",
+          "exceeded_description": null,
+          "created_at": "2018-10-01T19:54:59.790Z",
+          "updated_at": "2018-10-02T00:51:56.851Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 1,
+          "criteria": "Perform split of training and testing datasets.",
+          "exceedable": false
+        },
+        {
+          "id": 14455,
+          "section_id": 4984,
+          "passed_description": "Perform assessment of the predicted vs. the actual values.  ",
+          "exceeded_description": null,
+          "created_at": "2018-10-01T20:50:40.395Z",
+          "updated_at": "2018-10-01T20:58:50.995Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 2,
+          "criteria": "Perform assessment of results.",
+          "exceedable": false
+        },
+        {
+          "id": 14456,
+          "section_id": 4984,
+          "passed_description": "Provide a discussion about the results, as well as a method by which you could test how well your recommendation engine is working in practice.",
+          "exceeded_description": null,
+          "created_at": "2018-10-01T20:58:51.208Z",
+          "updated_at": "2018-10-01T21:11:07.723Z",
+          "deleted_at": null,
+          "optional": false,
+          "position": 3,
+          "criteria": "Results discussion.",
+          "exceedable": false
+        }
+      ]
+    }
+  ],
+  "project": {
+    "id": 535,
+    "name": "Recommendations with IBM",
+    "nanodegree_key": "nd025",
+    "is_cert_project": false,
+    "audit_project_id": null,
+    "hashtag": null,
+    "audit_rubric_id": 2899,
+    "entitlement_required": false,
+    "is_career": false,
+    "recruitment_family_id": 5,
+    "created_at": "2018-09-27T23:42:03.414Z",
+    "updated_at": "2021-03-27T05:54:38.793Z",
+    "price": "5.5",
+    "ungradeable_price": "3.0",
+    "audit_price": "0.0"
+  }
+}

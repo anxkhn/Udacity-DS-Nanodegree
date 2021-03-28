@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.901 --> 00:00:04.738
+O QUE É UM EXPERIMENTO?
+PARTE 2
+
+00:00:05.272 --> 00:00:08.441
+Algumas vezes, você pode não
+conseguir fazer um experimento real
+
+00:00:08.475 --> 00:00:11.878
+para testar sua hipótese
+por não ter vários grupos
+
+00:00:11.912 --> 00:00:15.582
+ou por não poder controlar
+a atribuição aleatória aos grupos.
+
+00:00:15.615 --> 00:00:19.123
+Isso exigirá planejamentos
+de estudo alternativos.
+
+00:00:20.226 --> 00:00:23.525
+Podemos pensar nos tipos de estudo
+como um espectro
+
+00:00:23.558 --> 00:00:28.127
+baseado na quantidade de controle
+que temos das variáveis em jogo.
+
+00:00:28.161 --> 00:00:32.531
+Na extremidade com alto nível
+de controle, temos um experimento.
+
+00:00:32.565 --> 00:00:35.901
+No lado completamente oposto,
+em que não temos controle,
+
+00:00:35.935 --> 00:00:39.238
+temos um estudo observacional.
+
+00:00:39.272 --> 00:00:43.976
+Um exemplo clássico disso está
+nos riscos decorrentes do fumo.
+
+00:00:44.009 --> 00:00:47.846
+A hipótese é que o tabagismo
+aumenta a probabilidade
+
+00:00:47.880 --> 00:00:51.350
+de desenvolver doenças
+como câncer de pulmão.
+
+00:00:51.383 --> 00:00:54.686
+Devido ao risco dos envolvidos
+desenvolverem, de fato, uma doença,
+
+00:00:54.720 --> 00:00:58.089
+seria irracional,
+para não dizer antiético,
+
+00:00:58.123 --> 00:00:59.991
+fazer as pessoas fumarem
+
+00:01:00.025 --> 00:01:03.928
+em prol de um experimento
+para testar nossa hipótese.
+
+00:01:03.962 --> 00:01:07.899
+Em vez disso, precisamos
+coletar dados passivamente,
+
+00:01:07.932 --> 00:01:11.236
+fazendo conexões entre taxas
+de fumo e incidência de doenças
+
+00:01:11.269 --> 00:01:15.406
+com base em grupos
+ou indivíduos correspondentes.
+
+00:01:15.440 --> 00:01:18.209
+Estabelecer causalidade
+é muito difícil,
+
+00:01:18.243 --> 00:01:21.979
+talvez até impossível,
+com um estudo observacional.
+
+00:01:22.013 --> 00:01:25.616
+Mas, se o recurso de interesse
+for algo que o pesquisador não possa
+
+00:01:25.649 --> 00:01:27.451
+ou não deva manipular,
+
+00:01:27.485 --> 00:01:32.256
+o design observacional
+pode ser o único caminho.
+
+00:01:32.289 --> 00:01:34.491
+Também pode haver estudos
+que fiquem
+
+00:01:34.525 --> 00:01:38.495
+entre estudos observacionais
+e experimentos.
+
+00:01:38.529 --> 00:01:41.598
+Se o estudo tiver algum,
+mas não todo o controle
+
+00:01:41.632 --> 00:01:43.767
+exigido
+para um experimento real,
+
+00:01:43.800 --> 00:01:47.187
+temos um quase-experimento.
+
+00:01:47.221 --> 00:01:51.241
+Um exemplo disso é quando uma
+empresa de videogame lança um patch
+
+00:01:51.274 --> 00:01:54.811
+para modificar atributos
+de personagens e itens.
+
+00:01:54.844 --> 00:01:59.476
+Isso pode afetar a popularidade
+dos personagens e itens.
+
+00:01:59.509 --> 00:02:02.252
+Como todos são afetados
+da mesma forma,
+
+00:02:02.285 --> 00:02:04.821
+trata-se
+de um quase-experimento.
+
+00:02:04.854 --> 00:02:09.394
+Só temos um grupo para acompanhar,
+e não há grupo de controle.
+
+00:02:09.427 --> 00:02:12.895
+Em nossa análise, só podemos
+comparar o ecossistema do jogo
+
+00:02:12.928 --> 00:02:16.732
+antes do patch
+e depois do patch.
+
+00:02:16.765 --> 00:02:21.003
+Se virmos mudanças, existe
+a possibilidade de outros fatores
+
+00:02:21.037 --> 00:02:25.474
+terem causado as mudanças,
+e não só o patch.
+
+00:02:25.507 --> 00:02:28.177
+Nesse cenário,
+não deveríamos executar o patch
+
+00:02:28.210 --> 00:02:30.137
+como um experimento real.
+
+00:02:30.171 --> 00:02:32.123
+Se dividirmos
+aleatoriamente os usuários
+
+00:02:32.157 --> 00:02:34.616
+entre grupos pré-patch
+e pós-patch,
+
+00:02:34.649 --> 00:02:38.753
+essa divisão pode causar fricção
+na base de usuários.
+
+00:02:38.787 --> 00:02:40.855
+Amigos podem acabar
+em versões diferentes
+
+00:02:40.889 --> 00:02:43.558
+e impossibilitados
+de jogar juntos.
+
+00:02:43.591 --> 00:02:45.894
+Mesmo que disponibilizássemos
+um patch beta
+
+00:02:45.927 --> 00:02:47.828
+para os jogadores testarem
+as mudanças,
+
+00:02:47.862 --> 00:02:49.764
+ainda não seria
+um experimento real,
+
+00:02:49.797 --> 00:02:54.002
+pois os jogadores
+se autosselecionariam para o teste.
+
+00:02:54.035 --> 00:02:57.738
+É bem possível que os jogadores
+que quisessem testar o novo patch
+
+00:02:57.772 --> 00:03:00.575
+fossem diferentes dos jogadores
+da população em geral,
+
+00:03:00.608 --> 00:03:04.709
+limitando nossa capacidade de tirar
+conclusões sobre o efeito do patch.
+

@@ -1,0 +1,255 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Types of Experiment</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Concepts in Experiment Design</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is an Experiment.html">02. What is an Experiment?</a>
+    </li>
+    <li class="">
+      <a href="03. Types of Experiment.html">03. Types of Experiment</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Sampling.html">04. Types of Sampling</a>
+    </li>
+    <li class="">
+      <a href="05. Measuring Outcomes.html">05. Measuring Outcomes</a>
+    </li>
+    <li class="">
+      <a href="06. Creating Metrics.html">06. Creating Metrics</a>
+    </li>
+    <li class="">
+      <a href="07. Controlling Variables.html">07. Controlling Variables</a>
+    </li>
+    <li class="">
+      <a href="08. Checking Validity.html">08. Checking Validity</a>
+    </li>
+    <li class="">
+      <a href="09. Checking Bias.html">09. Checking Bias</a>
+    </li>
+    <li class="">
+      <a href="10. Ethics in Experimentation.html">10. Ethics in Experimentation</a>
+    </li>
+    <li class="">
+      <a href="11. A SMART Mnemonic for Experiment Design.html">11. A SMART Mnemonic for Experiment Design</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Conclusion.html">12. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Types of Experiment</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Types Of Experiments</p></h3>
+  <video controls>
+  <source src="03. Types Of Experiments-7ihDj4M7EiU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Types Of Experiments-7ihDj4M7EiU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Types Of Experiments-7ihDj4M7EiU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Types Of Experiments-7ihDj4M7EiU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="types-of-experiment">Types of Experiment</h2>
+<p>Most of the time, when you think of an experiment, you think of a<br />
+<strong>between-subjects</strong> experiment. In a between-subjects experiment, each unit<br />
+only participates in, or sees, one of the conditions being used in the<br />
+experiment. The simplest of these has just two groups or conditions to compare.<br />
+In one group, we have either no manipulation, or maintenance of the status quo.<br />
+This is like providing a known drug treatment, or an old version of a<br />
+website. This is known as the <strong>control group</strong>. The other group includes the<br />
+manipulation we wish to test, such as a new drug or new website layout. This is<br />
+known as our <strong>experimental group</strong>. We can compare the outcomes between groups<br />
+(e.g. recovery time or click-through rate) in order to make a judgement about<br />
+the effect of our manipulation. (Since we have an experiment, we'll randomly<br />
+assign each unit to either the control or experimental group.) For web-based<br />
+experiments, this kind of basic experiment design is called an <strong>A/B test</strong>:<br />
+the "A" group representing the old control, and "B" representing the new<br />
+experimental change.</p>
+<p>We aren't limited to just two groups. We could have multiple experimental<br />
+groups to compare, rather than just one control group and one experimental<br />
+group. This could form an A/B/C test for a web-based experiment, with control<br />
+group "A" and experimental groups "B" and "C".</p>
+<p>If an individual completes all conditions, rather than just one, this is known<br />
+as a <strong>within-subjects</strong> design. Within-subjects designs are also known as<br />
+<em>repeated measures</em> designs. By measuring an individual's output in all<br />
+conditions, we <em>know</em> that the distribution of features in the groups will be<br />
+equivalent. We can account for individuals' aptitudes or inclinations in our<br />
+analysis. For example, if an individual rates three different color palettes<br />
+for a product, we can know if a high rating for one palette is particularly<br />
+good compared to the others (e.g. 10 vs. 5, 6) or if it's not a major<br />
+distinction (e.g. 10 vs. 8, 9).</p>
+<p>Randomization still has a part in the within-subjects design in the order in <br />
+which individuals complete conditions. This is important to reduce potential<br />
+bias effects, as will be discussed later in the lesson. One other downside of<br />
+the within-subjects design is that it's not always possible to pull off a<br />
+within-subjects design. For example, when a user visits a website and completes<br />
+their session, we usually can't guarantee when they'll come back. The purpose<br />
+of their following visit also might not be comparable to their first. It can<br />
+take a lot more effort in control in order to set up an effective<br />
+within-subjects design.</p>
+<h3 id="side-note-factorial-designs">Side Note: Factorial Designs</h3>
+<p><em>Factorial designs</em> manipulate the value of multiple features of interest. For<br />
+example, with two independent manipulations "X" and "Y", we have four<br />
+conditions: "control", "X only", "Y only", "X and Y". Experimental designs<br />
+where multiple features are manipulated simultaneously are more frequently seen<br />
+in engineering and physical sciences domains, where the system units tend to be<br />
+under stricter control. They're less seen in the social and medical realms,<br />
+where individual differences can impede experiment creation and analysis.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Types of Sampling.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Types of Experiment')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

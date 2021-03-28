@@ -1,0 +1,171 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.934 --> 00:00:04.812
+MEDINDO RESULTADOS
+PARTE 2
+
+00:00:06.053 --> 00:00:08.216
+Tempo assistindo,
+classificação do vídeo
+
+00:00:08.250 --> 00:00:12.741
+e número de buscas são todos
+exemplos de métricas de avaliação.
+
+00:00:12.775 --> 00:00:14.648
+Todas fornecem
+uma maneira objetiva
+
+00:00:14.682 --> 00:00:17.626
+de medir o resultado
+que esperamos ver.
+
+00:00:17.660 --> 00:00:21.421
+Enquanto a ideia de melhorar
+o desempenho em si é vaga,
+
+00:00:21.455 --> 00:00:26.332
+uma métrica de avaliação torna
+o sucesso concreto e mensurável.
+
+00:00:26.366 --> 00:00:32.088
+Em tempo assistindo, o sucesso vem
+do usuário ficar mais tempo no site.
+
+00:00:32.122 --> 00:00:33.441
+Em classificação do vídeo,
+
+00:00:33.475 --> 00:00:37.655
+queremos ver a classificação média
+dos vídeos selecionados subir,
+
+00:00:37.689 --> 00:00:39.761
+e, se os usuários fazem
+mais buscas,
+
+00:00:39.795 --> 00:00:41.396
+talvez seja uma forma
+de declarar
+
+00:00:41.430 --> 00:00:44.991
+a eficácia do mecanismo
+de recomendação.
+
+00:00:45.025 --> 00:00:47.665
+Mas cada uma das métricas
+de avaliação propostas
+
+00:00:47.699 --> 00:00:50.843
+também tem seu possível
+lado negativo.
+
+00:00:50.877 --> 00:00:52.625
+Se medirmos o sucesso
+pelo tempo
+
+00:00:52.659 --> 00:00:54.976
+que os usuários passam
+assistindo a vídeos,
+
+00:00:55.010 --> 00:00:57.573
+o mecanismo de recomendação
+pode preferir recomendar
+
+00:00:57.607 --> 00:01:00.488
+vídeos mais longos, fazendo
+com que os criadores de vídeos
+
+00:01:00.522 --> 00:01:03.407
+enviem vídeos
+com duração falsa.
+
+00:01:03.441 --> 00:01:05.406
+Para a medida
+de classificação do vídeo,
+
+00:01:05.440 --> 00:01:08.003
+um mecanismo equivocado
+pode incluir deliberadamente
+
+00:01:08.037 --> 00:01:10.702
+vídeos menos relevantes,
+com classificação mais baixa,
+
+00:01:10.736 --> 00:01:13.701
+para enfatizar os vídeos
+com classificação mais alta.
+
+00:01:13.735 --> 00:01:19.239
+O número de buscas provavelmente
+tem a maior desvantagem potencial.
+
+00:01:19.273 --> 00:01:22.038
+Apesar de usuários
+que fazem mais buscas
+
+00:01:22.072 --> 00:01:24.601
+possivelmente terem
+maior envolvimento com o site,
+
+00:01:24.635 --> 00:01:27.864
+isso também pode indicar
+que o mecanismo está com dificuldade
+
+00:01:27.898 --> 00:01:31.370
+para fornecer os vídeos
+que os usuários querem.
+
+00:01:31.404 --> 00:01:33.466
+Se os usuários saírem do site
+por isso,
+
+00:01:33.500 --> 00:01:37.019
+isso pode ter um efeito prejudicial
+a longo prazo.
+
+00:01:38.600 --> 00:01:41.683
+Isso mostra a importância
+de considerar os objetivos do estudo
+
+00:01:41.717 --> 00:01:44.814
+separadamente
+das métricas de avaliação.
+
+00:01:44.848 --> 00:01:47.759
+Primeiro, queremos
+que as medidas estejam alinhadas
+
+00:01:47.793 --> 00:01:49.991
+com os objetivos
+que definimos.
+
+00:01:50.025 --> 00:01:53.367
+Observar uma mudança na métrica
+não é o ponto principal do estudo.
+
+00:01:53.401 --> 00:01:55.459
+São as implicações
+dessa mudança
+
+00:01:55.493 --> 00:01:59.244
+em relação aos objetivos do estudo
+que realmente importam.
+
+00:01:59.278 --> 00:02:01.652
+Segundo, considerar
+o objetivo em si
+
+00:02:01.686 --> 00:02:04.716
+pode trazer um propósito central
+ao estudo.
+
+00:02:04.750 --> 00:02:07.766
+Se você não tiver um bom motivo
+para realizar um experimento,
+
+00:02:07.800 --> 00:02:10.760
+ele pode acabar sendo
+um desperdício de tempo e recursos.
+

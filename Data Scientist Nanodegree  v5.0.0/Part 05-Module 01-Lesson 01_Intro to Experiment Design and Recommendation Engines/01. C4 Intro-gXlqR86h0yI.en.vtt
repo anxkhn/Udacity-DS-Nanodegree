@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.990 --> 00:00:11.995
+Welcome to this course on experimental design and recommendation engines. I'm Mike.
+
+00:00:11.994 --> 00:00:16.079
+And I'm Josh. Experiment design and recommendation engines
+
+00:00:16.079 --> 00:00:21.719
+represent two of the most popular and practical applications for data science.
+
+00:00:21.719 --> 00:00:27.309
+For recommendation engines, many companies rely on recommendations to engage their users.
+
+00:00:27.309 --> 00:00:30.539
+Amazon recommends us items we might want to purchase,
+
+00:00:30.539 --> 00:00:33.179
+Netflix recommends movies we might enjoy watching,
+
+00:00:33.179 --> 00:00:36.234
+and Spotify recommends music we might enjoy listening to.
+
+00:00:36.234 --> 00:00:38.219
+These companies need to use
+
+00:00:38.219 --> 00:00:42.625
+data science techniques to build systems that make good recommendations.
+
+00:00:42.625 --> 00:00:48.130
+Designing experiments can play a big part in how web pages and mobile apps are designed.
+
+00:00:48.130 --> 00:00:50.959
+You might have heard of something called AB testing,
+
+00:00:50.959 --> 00:00:54.440
+which is one way of testing different page designs against one another.
+
+00:00:54.439 --> 00:00:59.184
+This can help a company make decisions on things like how pages should be laid out.
+
+00:00:59.185 --> 00:01:04.710
+Experiments might even be run to test out the quality of recommendations made to users.
+
+00:01:04.709 --> 00:01:09.804
+This part of data science actually underlies a lot about how we interact with the web.
+
+00:01:09.805 --> 00:01:14.065
+But experiments and recommendations aren't limited to just the web.
+
+00:01:14.064 --> 00:01:18.140
+For example, the same types of algorithms are used in health care
+
+00:01:18.140 --> 00:01:22.680
+to understand what drug treatments might be best for certain patients.
+
+00:01:22.680 --> 00:01:26.930
+Experiment style testing is used on manufacturing lines to make
+
+00:01:26.930 --> 00:01:31.205
+sure that machines and processes are meeting specifications.
+
+00:01:31.204 --> 00:01:34.310
+Knowing how to lay out products in a physical store,
+
+00:01:34.310 --> 00:01:36.740
+like a supermarket, is the same type of
+
+00:01:36.739 --> 00:01:40.209
+recommendation application that's used to lay out a web page.
+
+00:01:40.209 --> 00:01:43.294
+Also, it sounds like we have a lot to learn.
+
+00:01:43.295 --> 00:01:45.204
+With that, on the next page,
+
+00:01:45.204 --> 00:01:50.039
+we'll take a closer look at what exactly you'll be looking at in this course.
+

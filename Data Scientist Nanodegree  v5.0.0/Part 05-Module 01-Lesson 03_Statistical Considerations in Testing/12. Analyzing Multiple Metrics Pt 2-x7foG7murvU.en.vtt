@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.129 --> 00:00:07.359
+We assumed two independent metrics,
+
+00:00:07.360 --> 00:00:10.480
+each with a five per cent chance of a type one error.
+
+00:00:10.480 --> 00:00:13.304
+This means that under the null hypothesis,
+
+00:00:13.304 --> 00:00:16.170
+there is a 90.25 percent chance that
+
+00:00:16.170 --> 00:00:22.145
+both metric sample means aren't statistically significant and a 9.75 percent chance,
+
+00:00:22.144 --> 00:00:24.914
+that one or both make a type one error.
+
+00:00:24.914 --> 00:00:28.724
+We'd be making almost twice our desired number of type one errors
+
+00:00:28.725 --> 00:00:32.939
+if we made a decision based on just seeing one significant metric.
+
+00:00:32.939 --> 00:00:35.554
+This example is highly simplified,
+
+00:00:35.554 --> 00:00:37.965
+but it illustrates a potential problem with making
+
+00:00:37.965 --> 00:00:41.390
+too many errors if we make multiple comparisons.
+
+00:00:41.390 --> 00:00:45.530
+To overcome this, we need to perform a correction on the error rate for
+
+00:00:45.530 --> 00:00:50.245
+each test to keep the overall error rate below some threshold.
+
+00:00:50.244 --> 00:00:54.349
+The simplest of these corrections is the Bonferroni correction,
+
+00:00:54.350 --> 00:00:58.605
+which divides the overall error rate by the number of test to be performed.
+
+00:00:58.604 --> 00:01:03.515
+For our example, this means dividing 0.05 by two.
+
+00:01:03.515 --> 00:01:08.495
+Each of the individual tests will be run at a 2.5 percent significance level.
+
+00:01:08.495 --> 00:01:11.120
+Assuming independence between tests,
+
+00:01:11.120 --> 00:01:15.120
+this results in an overall error rate of just under five percent.
+
+00:01:15.120 --> 00:01:18.590
+Different corrections are possible and can depend on the number of
+
+00:01:18.590 --> 00:01:22.320
+evaluation metrics you have and the desired pattern of results.
+

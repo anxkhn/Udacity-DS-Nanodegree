@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.190 --> 00:00:06.975
+While an experiment is running,
+
+00:00:06.974 --> 00:00:11.099
+you'll probably be tempted at some point to take a peek at how it's going.
+
+00:00:11.099 --> 00:00:14.820
+If you see from that peak that the experiment is going well,
+
+00:00:14.820 --> 00:00:17.204
+you might then be tempted to just end the experiment
+
+00:00:17.204 --> 00:00:20.599
+early and deploy the tested changes right away.
+
+00:00:20.600 --> 00:00:23.670
+It's important to resist these temptations since
+
+00:00:23.670 --> 00:00:27.060
+this peaking will increase your overall error rate.
+
+00:00:27.059 --> 00:00:31.585
+Take for example, a case where you analyze the data in two places,
+
+00:00:31.585 --> 00:00:33.250
+once at the halfway point,
+
+00:00:33.250 --> 00:00:35.840
+and once at the end of the scheduled runtime.
+
+00:00:35.840 --> 00:00:40.535
+Let's run a bunch of simulations for outcomes under the null hypothesis.
+
+00:00:40.534 --> 00:00:44.814
+If we used a five percent significance level at each checkpoint,
+
+00:00:44.814 --> 00:00:47.659
+then it's not too surprising that about five percent of
+
+00:00:47.659 --> 00:00:51.609
+the simulations get marked as statistically significant at each one.
+
+00:00:51.609 --> 00:00:54.884
+That's a natural outcome of our type one error rate.
+
+00:00:54.884 --> 00:00:57.920
+However, less than two percent of all the tests are
+
+00:00:57.920 --> 00:01:00.770
+statistically significant at both the halfway point,
+
+00:01:00.770 --> 00:01:02.240
+and at the end.
+
+00:01:02.240 --> 00:01:05.390
+Most of the simulations that were statistically significant at
+
+00:01:05.390 --> 00:01:09.754
+the halfway point would end up non-significant at the end.
+
+00:01:09.754 --> 00:01:12.739
+If we decided to stop the experiment early
+
+00:01:12.739 --> 00:01:15.949
+from seeing a significant difference at the halfway point,
+
+00:01:15.950 --> 00:01:21.685
+then we would end up with an overall error rate around 8.6 percent, not five percent.
+
+00:01:21.685 --> 00:01:25.945
+That's not to say that we can't do a peek ahead to make an early decision,
+
+00:01:25.944 --> 00:01:28.654
+we just need to account for it in our design.
+
+00:01:28.655 --> 00:01:30.140
+If you're willing to wait,
+
+00:01:30.140 --> 00:01:31.909
+there is some additional math for it,
+
+00:01:31.909 --> 00:01:35.104
+you can find formulas and other resources to help you come up with
+
+00:01:35.105 --> 00:01:40.400
+early stopping rules without compromising the integrity of your experimental design.
+

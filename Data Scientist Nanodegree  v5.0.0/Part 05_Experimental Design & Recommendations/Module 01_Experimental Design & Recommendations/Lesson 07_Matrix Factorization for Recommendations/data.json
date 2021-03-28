@@ -1,0 +1,1562 @@
+{
+  "data": {
+    "lesson": {
+      "id": 665332,
+      "key": "012dcc67-eace-483d-99ff-8a580aa39050",
+      "title": "Matrix Factorization for Recommendations",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn how machine learning is being used to make recommendations.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/012dcc67-eace-483d-99ff-8a580aa39050/665332/1540515255194/Matrix+Factorization+for+Recommendations+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/012dcc67-eace-483d-99ff-8a580aa39050/665332/1540515249865/Matrix+Factorization+for+Recommendations+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 698592,
+          "key": "207da6c2-b592-4802-9415-15d290b311d4",
+          "title": "Video: Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "207da6c2-b592-4802-9415-15d290b311d4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 752113,
+              "key": "ca0ce57f-6c98-45dd-b9c8-af3fe054e987",
+              "title": "Lesson Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rw3YaQ2CTNQ",
+                "china_cdn_id": "rw3YaQ2CTNQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 698594,
+          "key": "6d2b4ca7-73d2-4f75-a0f5-b0610d8155c9",
+          "title": "Text: What's Ahead",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6d2b4ca7-73d2-4f75-a0f5-b0610d8155c9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 698595,
+              "key": "698451c0-eeeb-4ca0-9717-d77b3ac11611",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Topics\n\nIn this lesson, you will learn about three main topics:\n\n1. We will look from a high level at how you might go about validating your recommendations. \n2. We will look at matrix factorization as a method to use machine learning to make recommendations.\n3. We will look at combining recommendation techniques to make predictions to existing and new users and for existing and new items.\n\nAs we go through this lesson, you will come to realize that there are a lot of difficulties in working with recommendation engines which make them still an exciting field to study!  This is especially true when you combine your recommendations with a specific product type.  \n\nRecommending movies, recommending restaurants, or recommending clothing might happen in a number of different ways.  However, the techniques you will learn in this lesson are often extendable to any of these cases.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 698596,
+          "key": "c9e1ac73-1292-4162-b465-d2c2183c02ad",
+          "title": "Video: How Do We Know Our Recommendations Are Good?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c9e1ac73-1292-4162-b465-d2c2183c02ad",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 751577,
+              "key": "caf01bba-82b6-4281-ba1c-0b17efc8bb58",
+              "title": "How Do We Know Our Recs Are Good",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "D0H_fjJ35CU",
+                "china_cdn_id": "D0H_fjJ35CU.mp4"
+              }
+            },
+            {
+              "id": 714647,
+              "key": "1a251637-894d-4545-b9a1-f47d6985826a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Training and Testing Data For Recommendations\n\nIn the last lesson, you were making recommendations by providing a list of popular items, or a list of items that the user hadn't observed but that someone with similar tastes had observed. However, understanding if these recommendations are good in practice means that you have to deploy these recommendations to users and see how it impacts your metrics (sales, higher engagement, clicks, conversions, etc.).  \n\nYou may not want your recommendations to go live to understand how well they work.  In these cases, you will want to split your data into training and testing portions. In these cases, you can train your recommendation engine on a subset of the data, then you can test how well your recommendation engine performs on a test set of data before deploying your model to the world.  \n\nHowever, the cases you saw in the last lesson, where just a list of recommendations was provided, don't actually lend themselves very well to training and testing methods of evaluation.  In the next upcoming pages, you will be introduced to matrix factorization, which actually does work quite well for these situations.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 698603,
+          "key": "0f1c8cf0-579e-40a2-9a27-22931d5fd3f6",
+          "title": "Text: Validating Your Recommendations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f1c8cf0-579e-40a2-9a27-22931d5fd3f6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 698609,
+              "key": "2fb133b6-e79e-4bad-bb90-cf14c8e5a09e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Validating Your Recommendations\n\n### Online Testing\n\nFor online methods of testing a recommender's performance, many of the methods you saw in the previous lesson work very well - you can deploy your recommendations and just watch your metrics carefully. It is common in practice to set up online recommendations to have an \"old\" version of recommended items, which is compared to a new page that uses a new recommendation strategy.  \n\nAll ideas associated with A/B testing that you learned in the earlier lessons are critical to watching your metrics in online learning, and ultimately, choosing a recommendation strategy that works best for your products and customers.\n\n### Offline Testing\n\nIn many cases, a company might not let you simply deploy your recommendations out into the real world any time you feel like it. Testing out your recommendations in a training-testing environment prior to deploying them is called **offline** testing.\n\nThe recommendation methods you built in the previous lesson actually don't work very well for offline testing.  In offline testing, it is ideal to not just obtain a list of recommendations for each individual, because we ultimately don't know if a user doesn't use an item because they don't like it, or because they just haven't used it yet (but would like it). Rather, it would be great if we have an idea of how much each user would like each item using a predicted rating. Then we can compare this predicted rating to the actual rating any individual gives to an item in the future.\n\nIn the previous video, you saw an example of a user to whom we gave a list of movies that they still hadn't seen. Therefore, we couldn't tell how well we were doing with our recommendations. Techniques related to matrix factorization lend themselves nicely to solving this problem.\n\n### User Groups\n\nThe final (possible) method of validating your recommendations is by having user groups give feedback on items you would recommend for them. Obtaining good user groups that are representative of your customers can be a challenge on its own. This is especially true when you have a lot of products and a very large consumer base.  ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 698610,
+          "key": "4f4b486f-782e-4aaf-ba4b-810b0814bed9",
+          "title": "Quiz: Regression Metrics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4f4b486f-782e-4aaf-ba4b-810b0814bed9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714652,
+              "key": "a9d74c75-1a82-4fc3-8ab1-943bcc04ac79",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a9d74c75-1a82-4fc3-8ab1-943bcc04ac79",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "For each metric below, identify whether the metric is generally used for **regression** or **classification**.  In offline methods of  looking at the results of our recommendations systems, we often are able to use the metrics associated with regression or classification algorithms."
+                },
+                "concepts_label": "Metric",
+                "answers_label": "Regression or Classification",
+                "concepts": [
+                  {
+                    "text": "Accuracy",
+                    "correct_answer": {
+                      "id": "a1536886170558",
+                      "text": "Classification"
+                    }
+                  },
+                  {
+                    "text": "Mean-Squared Error (MSE)",
+                    "correct_answer": {
+                      "id": "a1536886818187",
+                      "text": "Regression"
+                    }
+                  },
+                  {
+                    "text": "Precision",
+                    "correct_answer": {
+                      "id": "a1536886835517",
+                      "text": "Classification"
+                    }
+                  },
+                  {
+                    "text": "Recall",
+                    "correct_answer": {
+                      "id": "a1536886841667",
+                      "text": "Classification"
+                    }
+                  },
+                  {
+                    "text": "R-Squared",
+                    "correct_answer": {
+                      "id": "a1536886848489",
+                      "text": "Regression"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1536886818187",
+                    "text": "Regression"
+                  },
+                  {
+                    "id": "a1536886170558",
+                    "text": "Classification"
+                  },
+                  {
+                    "id": "a1536886848489",
+                    "text": "Regression"
+                  },
+                  {
+                    "id": "a1536886835517",
+                    "text": "Classification"
+                  },
+                  {
+                    "id": "a1536887979381",
+                    "text": "Regression"
+                  },
+                  {
+                    "id": "a1536887970683",
+                    "text": "Classification"
+                  },
+                  {
+                    "id": "a1536886841667",
+                    "text": "Classification"
+                  },
+                  {
+                    "id": "a1536887975788",
+                    "text": "Regression"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 698612,
+          "key": "974c93af-6419-47b1-bef4-b0a1bbcd58e0",
+          "title": "Video: Why SVD?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "974c93af-6419-47b1-bef4-b0a1bbcd58e0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737803,
+              "key": "fcdef11b-2abd-4c46-8ccd-53dc4c09ad39",
+              "title": "Why SVD",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WdW1-rRQrLk",
+                "china_cdn_id": "WdW1-rRQrLk.mp4"
+              }
+            },
+            {
+              "id": 714654,
+              "key": "5f3720bb-d35d-4d81-98ea-13629a8d1633",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Singular Value Decomposition\n\nIn the next part of this lesson, you will first get exposure to Singular Value Decomposition, or SVD.  We will soon see why this technique falls short for many recommendation problems. However, understanding traditional SVD approaches to matrix factorization is useful as a start to a number of matrix factorization techniques that are possible in practice.\n\nIn order to implement SVD for many recommendation engines, we will need to use a slightly modified approach known as FunkSVD.  This approach proved to work incredibly well during the [Netflix competition](https://en.wikipedia.org/wiki/Netflix_Prize), and therefore, it is one of the most popular recommendation approaches in use today.\n\nLet's first take a closer look at traditional SVD.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 698614,
+          "key": "aeab8348-cf4d-4749-a469-a95ee6d81397",
+          "title": "Video: Latent Factors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aeab8348-cf4d-4749-a469-a95ee6d81397",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737804,
+              "key": "086fbd95-0532-494f-b50f-de2201457b95",
+              "title": "Latent Factors",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jZz7tFEF2Dc",
+                "china_cdn_id": "jZz7tFEF2Dc.mp4"
+              }
+            },
+            {
+              "id": 714656,
+              "key": "3ef11ab1-c6d3-4f92-8390-7e74a4fe2b9f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Latent Factors\n\nWhen performing SVD, we create a matrix of users by items (or customers by movies in our specific example), with user ratings for each item scattered throughout the matrix.  An example is shown in the image below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714657,
+              "key": "aa6d17d8-3ef9-4cbc-b804-2a19bf501343",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b9b0faf_screen-shot-2018-09-13-at-6.32.03-pm/screen-shot-2018-09-13-at-6.32.03-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/aa6d17d8-3ef9-4cbc-b804-2a19bf501343",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 500,
+              "instructor_notes": null
+            },
+            {
+              "id": 714659,
+              "key": "40f46ab2-54e3-4e6a-9886-bdc2e6a53a66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You can see that this matrix doesn't have any specific information about the users or items. Rather, it just holds the ratings that each user gave to each item. Using SVD on this matrix, we can find **latent features** related to the movies and customers. This is amazing because the dataset doesn't contain any information about the customers or movies!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 698616,
+          "key": "8efc863e-69cb-45b1-8c02-648c8f77ef5f",
+          "title": "Quiz: Latent Factors",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8efc863e-69cb-45b1-8c02-648c8f77ef5f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714662,
+              "key": "d3ba0c1b-95c6-4c72-a839-df72d2721467",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Latent Factors\n\nBefore we get our hands on SVD, let's make sure the idea of latent factors is well understood using the quizzes below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714660,
+              "key": "c0a7f4ef-6b39-4a28-b58f-370e8e97860a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c0a7f4ef-6b39-4a28-b58f-370e8e97860a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Check the appropriate definition for `latent factor`.",
+                "answers": [
+                  {
+                    "id": "a1536890843692",
+                    "text": "Values that are not directly observable in our data, but may be recognized when looking at relationships and trends that exist between observed data values.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1536890893699",
+                    "text": "Data that take on categorical values like 'tall', 'medium', 'short'.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536890943238",
+                    "text": "Data that take on values with decimals like 1.0, 2.0, or 4.5.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536890979892",
+                    "text": "A piece of data that doesn't have any meaning.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 714661,
+              "key": "f352ceac-137e-4842-8ead-647bcd02ef4e",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f352ceac-137e-4842-8ead-647bcd02ef4e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Imagine a situation in which you collect 1-5 ratings data from a bunch of people related to how they feel about lots of different animals (birds, horses, cats, dogs, etc.). What are some examples of possible latent factors you might observe in this ratings data?",
+                "answers": [
+                  {
+                    "id": "a1536891229673",
+                    "text": "The observed ratings values.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536891306004",
+                    "text": "The size of the animal.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1536891341662",
+                    "text": "How many legs the animal has.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1536891356159",
+                    "text": "Whether the animal can fly or not.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 698618,
+          "key": "061da3f0-9a6b-466b-b616-bd4cca0d7888",
+          "title": "Video: Singular Value Decomposition",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "061da3f0-9a6b-466b-b616-bd4cca0d7888",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737805,
+              "key": "da323b0f-1e31-4008-b974-1c8d9eab735b",
+              "title": "SVD",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "t2XTuHq6-xc",
+                "china_cdn_id": "t2XTuHq6-xc.mp4"
+              }
+            },
+            {
+              "id": 714664,
+              "key": "0b7c07ff-827b-42ca-be28-c77dfdab857b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Singular Value Decomposition\n\nLet's do a quick check of understanding.   If we let  <span class=\"mathquill\">A </span> be our user-item matrix, we can write the decomposition of that matrix in the following way.<br>\n\n<span class=\"mathquill\">A = U \\Sigma V^T</span>\n\nUse the quizzes below to test your understanding of what these matrices represent, as well as the dimensions of these matrices.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714665,
+              "key": "f9d1b845-a1e5-4a7d-9fb6-80239883f459",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f9d1b845-a1e5-4a7d-9fb6-80239883f459",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match each matrix to the appropriate statement about it."
+                },
+                "concepts_label": "Statement",
+                "answers_label": "Matrix",
+                "concepts": [
+                  {
+                    "text": "A matrix that provides how users feel about latent features.",
+                    "correct_answer": {
+                      "id": "a1536892639279",
+                      "text": "U"
+                    }
+                  },
+                  {
+                    "text": "A matrix that provides weights in descending order with how much each latent feature matters towards reconstructing the original user-item matrix.",
+                    "correct_answer": {
+                      "id": "a1536892770520",
+                      "text": "Sigma"
+                    }
+                  },
+                  {
+                    "text": "A matrix that provides how items (movies in this case) relate to each latent feature .",
+                    "correct_answer": {
+                      "id": "a1536892774100",
+                      "text": "V"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1536892639279",
+                    "text": "U"
+                  },
+                  {
+                    "id": "a1536892770520",
+                    "text": "Sigma"
+                  },
+                  {
+                    "id": "a1536892774100",
+                    "text": "V"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 714666,
+              "key": "136a7f52-1a9c-4b38-9684-c0a87a419dc2",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "136a7f52-1a9c-4b38-9684-c0a87a419dc2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Let **k** be the number of **latent features** used, **n** be the number of **users**, and **m** be the number of **items**.  With this in mind, match each matrix to its corresponding dimensions.  For the below, consider **rows-columns** as the structure."
+                },
+                "concepts_label": "Matrix",
+                "answers_label": "Dimensions",
+                "concepts": [
+                  {
+                    "text": "U",
+                    "correct_answer": {
+                      "id": "a1536893086585",
+                      "text": "n-k"
+                    }
+                  },
+                  {
+                    "text": "Sigma",
+                    "correct_answer": {
+                      "id": "a1536893209133",
+                      "text": "k-k"
+                    }
+                  },
+                  {
+                    "text": "V",
+                    "correct_answer": {
+                      "id": "a1536893211756",
+                      "text": "m-k"
+                    }
+                  },
+                  {
+                    "text": "V-transpose",
+                    "correct_answer": {
+                      "id": "a1536893213982",
+                      "text": "k-m"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1536893211756",
+                    "text": "m-k"
+                  },
+                  {
+                    "id": "a1536893213982",
+                    "text": "k-m"
+                  },
+                  {
+                    "id": "a1536893086585",
+                    "text": "n-k"
+                  },
+                  {
+                    "id": "a1536893291772",
+                    "text": "k-by-n"
+                  },
+                  {
+                    "id": "a1536893209133",
+                    "text": "k-k"
+                  },
+                  {
+                    "id": "a1536893263587",
+                    "text": "n-by-m"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 698620,
+          "key": "b769abcf-d0c2-40be-a03e-79682f415e46",
+          "title": "Notebook: SVD Practice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b769abcf-d0c2-40be-a03e-79682f415e46",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 698621,
+              "key": "b4cd83ef-2a96-4d49-8b88-d08582d63984",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view9qadl8i8k4",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-frzwftiro46",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/1_Intro_to_SVD.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 698622,
+          "key": "c1bb2383-db27-484a-b089-f343d3b81d97",
+          "title": "Screencast: SVD Practice Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c1bb2383-db27-484a-b089-f343d3b81d97",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737821,
+              "key": "5e41d4d3-df3a-4314-86ca-35c637e5b190",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is available in three videos below.  Remember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737820,
+              "key": "ad732e04-3d85-4293-9e5b-6464fd1b3277",
+              "title": "Recommendations 2 10 0424 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "x-End5px36M",
+                "china_cdn_id": "x-End5px36M.mp4"
+              }
+            },
+            {
+              "id": 737822,
+              "key": "466b33a2-54c4-4a62-995d-4eb7286a5b79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737823,
+              "key": "4058d660-1334-4fea-b952-837e0d9c9bd7",
+              "title": "Recommendations 2 10 4321430 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zVGhBQNgbc4",
+                "china_cdn_id": "zVGhBQNgbc4.mp4"
+              }
+            },
+            {
+              "id": 737824,
+              "key": "c55e2ee3-d461-4ae3-a56c-236c20102914",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part III",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737825,
+              "key": "886ea253-e408-49c0-9c4d-e2859ff3dc55",
+              "title": "Recommendations 2 10 14502145 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cvQngTUOWbM",
+                "china_cdn_id": "cvQngTUOWbM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 698624,
+          "key": "57e321f7-7376-4301-b58a-0484318f839f",
+          "title": "Video: SVD Practice Takeaways",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "57e321f7-7376-4301-b58a-0484318f839f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737808,
+              "key": "32dba6b1-52d4-4bca-9292-91031dda2a53",
+              "title": "SVD Practice Takeaways",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2er0HUDum7k",
+                "china_cdn_id": "2er0HUDum7k.mp4"
+              }
+            },
+            {
+              "id": 714670,
+              "key": "8933c917-3afc-4e23-917d-fdd01efffd73",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Singular Value Decomposition Takeaways\n\nThree main takeaways from the previous notebook:\n\n1. The latent factors retrieved from SVD aren't actually labeled.\n2. We can get an idea of how many latent factors we might want to keep by using the Sigma matrix.\n3. SVD in NumPy will not work when our matrix has missing values.  **This makes this technique less than useful for our current user-movie matrix.**\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 703435,
+          "key": "92a0f44f-0b42-43ac-8482-42b7d4ab9ac4",
+          "title": "Text: SVD Closed Form Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "92a0f44f-0b42-43ac-8482-42b7d4ab9ac4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 703438,
+              "key": "ad391d7e-bc12-45f1-9b38-637325e004da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### SVD Closed Form Solution\n\n#### What Is A Closed Form Solution?\n\nA closed form solution is one where you can directly find the solution values (unlike iterative solutions, which are commonly used in practice).  There isn't an iterative approach to solving a particular equation.  One of the most popular examples of a closed form solution is the solution for multiple linear regression.  That is if we want to find an estimate for <span class=\"mathquill\">\\beta</span> in the following situation:\n\n\n <span class=\"mathquill\">y = X\\beta</span>\n\nWe can find it by computing the **Best Linear Unbiased Estimate (BLUE)**.  It can be found **in closed form** using the equation:\n\n<span class=\"mathquill\">\\hat{\\beta} = (X'X)^-X'y</span>\n\nwhere **X** is a matrix of explanatory inputs and **y** is a response vector.\n\nAnother common example of a closed form solution is the quadratic equation.  If we want to find **x** that solves:\n\n<span class=\"mathquill\">ax^2 + bx + c = 0</span>\n\nWe can find these values using the quadratic formula:\n\n<span class=\"mathquill\">x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}</span>\n\n**Each of these is an example of a closed form solution, because in each case we have an equation that allows us to solve directly for our values of interest.**\n\n#### Closed Form Solutions for SVD\n\nIt turns out there is a closed form solution for Singular Value Decomposition that can be used to identify each of the matrices of interest (<span class=\"mathquill\">U, \\Sigma, V</span>).  The most straightforward explanation of this closed form solution can be found at [this MIT link](http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition.htm).\n\nAs put in the paper -\n\n\"Calculating the SVD consists of finding the eigenvalues and eigenvectors of <span class=\"mathquill\">AA'</span> and <span class=\"mathquill\">A'A</span>. The eigenvectors of <span class=\"mathquill\">A'A</span> make up the columns of <span class=\"mathquill\">V </span>, the eigenvectors of <span class=\"mathquill\">AA'</span>  make up the columns of <span class=\"mathquill\">U</span>. Also, the singular values in <span class=\"mathquill\">\\Sigma</span> are square roots of eigenvalues from <span class=\"mathquill\">AA'</span> or <span class=\"mathquill\">A'A</span>.  The singular values are the diagonal entries of the <span class=\"mathquill\">\\sigma</span> matrix and are arranged in descending order. The singular values are always real numbers. If the matrix <span class=\"mathquill\">A</span> is a real matrix, then <span class=\"mathquill\">U</span> and <span class=\"mathquill\">V </span> are also real.\"\n\nAgain, you can see a fully worked example of the closed form solution at the [MIT Link here](http://web.mit.edu/be.400/www/SVD/Singular_Value_Decomposition.htm).\n\n#### A More Common Approach\n\nThe main issue with the closed form solution (especially for us) is that it doesn't actually work when we have missing data.  Instead, Simon Funk (and then many followers) came up with other solutions for finding our matrices of interest in these cases using **gradient descent**.\n\nSo all of this is to say, people don't really use the closed form solution for SVD, and therefore, we aren't going to spend a lot of time on it either.  The link above is all you need to know.  Now, we are going to look at the main way that the matrices in SVD are estimated, as this is what is used for estimating values in FunkSVD.\n\n#### Additional Resources\n\nBelow are some additional resources in case you are looking for others that go beyond what was shown in the simplified MIT paper.\n\n* [Stanford Discussion on SVD](http://infolab.stanford.edu/~ullman/mmds/ch11.pdf)\n\n* [Why are Singular Values Always Positive on StackExchange](https://math.stackexchange.com/questions/2060572/why-are-singular-values-always-non-negative)\n\n* [An additional resource for SVD in Python](https://machinelearningmastery.com/singular-value-decomposition-for-machine-learning/)\n\n* [Using Missing Values to Improve Recommendations in SVD](https://www.hindawi.com/journals/mpe/2015/380472/)\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 703390,
+          "key": "e9cd79c8-2f90-4099-87c7-0bff66ef49bf",
+          "title": "Video: FunkSVD",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e9cd79c8-2f90-4099-87c7-0bff66ef49bf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 751633,
+              "key": "539cf79e-d90d-430d-9961-e34c028f6468",
+              "title": "14 Funk SVD",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "H8gdwXy_npI",
+                "china_cdn_id": "H8gdwXy_npI.mp4"
+              }
+            },
+            {
+              "id": 714702,
+              "key": "7026c79b-318c-4d2d-979b-3ee4befaa903",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Funk SVD Practice\n\nIn the notebook on the next page, you will be writing the code to implement Funk SVD.  Before you dive in, let's do a practice run here.\n\nFirst, consider we have a user-item matrix that looks like the matrix below, where we want to make an update of **U** and **V** matrices based on the 4 highlighted.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714707,
+              "key": "a414498e-cca0-4917-904c-2459f2b86608",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b9beced_screen-shot-2018-09-14-at-10.16.10-am/screen-shot-2018-09-14-at-10.16.10-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a414498e-cca0-4917-904c-2459f2b86608",
+              "caption": "",
+              "alt": "",
+              "width": 500,
+              "height": 500,
+              "instructor_notes": null
+            },
+            {
+              "id": 714705,
+              "key": "1aeddfe0-a113-44e6-90cb-e61eaf6a4bd2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Also consider we have the following **U** and **V** matrices:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714706,
+              "key": "85d6b251-e08a-47c2-af1c-61525ae04cb5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b9bebcd_screen-shot-2018-09-14-at-10.11.13-am/screen-shot-2018-09-14-at-10.11.13-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/85d6b251-e08a-47c2-af1c-61525ae04cb5",
+              "caption": "",
+              "alt": "",
+              "width": 1478,
+              "height": 604,
+              "instructor_notes": null
+            },
+            {
+              "id": 714708,
+              "key": "b6514fa6-485c-42c8-b845-c38db332df3b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "First, use the quiz below to identify what your current prediction would be for the 4 rating (highlighted in the first image above) based on the current values in the **U** and **V** matrices.  Notice, this should be the prediction for the third user on the movie AI.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714729,
+              "key": "48e2ca9f-25f7-4c9e-a03d-44dccb05467b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "48e2ca9f-25f7-4c9e-a03d-44dccb05467b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "The predicted value for the `third user` on the movie `AI` based on the current U and V matrices.",
+                "answers": [
+                  {
+                    "id": "a1536945701952",
+                    "text": "1.8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536959059603",
+                    "text": "-1.8",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1536959061257",
+                    "text": "2.4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536959063064",
+                    "text": "2.1",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 714732,
+              "key": "44e062df-1334-489d-a062-5689ee8bc8dd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Next, let's look at updating the value `0.4` as shown in the **U** matrix below.  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 714734,
+              "key": "02f20622-6e4d-40a6-955d-e4d584910c90",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5b9c2c5a_screen-shot-2018-09-14-at-2.25.01-pm/screen-shot-2018-09-14-at-2.25.01-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/02f20622-6e4d-40a6-955d-e4d584910c90",
+              "caption": "",
+              "alt": "",
+              "width": 400,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 714737,
+              "key": "97eaa43d-fc21-4aa2-bff6-bb41f0e5282c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "97eaa43d-fc21-4aa2-bff6-bb41f0e5282c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select the formula that would be used to give the new, updated value that would replace the 0.4 value.  Consider we use a learning rate of 0.01.  ",
+                "answers": [
+                  {
+                    "id": "a1536961738544",
+                    "text": "new_val = 0.01(4 - 1.8)1.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536962183451",
+                    "text": "new_val = 0.4 + 0.01`*`2`*`(4 - 1.8)`*`1.2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1536962272641",
+                    "text": "new_val = 0.4 + 0.01`*`2`*`(4 + 1.8)`*`1.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536962273810",
+                    "text": "new_val = 0.4 - 0.01`*`2`*`(4 + 1.8)`*`1.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1536962274949",
+                    "text": "None of the above.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 704340,
+          "key": "e9265087-7140-41f4-a2bf-72b10a7ae504",
+          "title": "Notebook: Implementing FunkSVD",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e9265087-7140-41f4-a2bf-72b10a7ae504",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704351,
+              "key": "dd4d9ffd-ea7e-4af9-8def-37011350bc57",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view9qadl8i8k4",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-swsfbp4br9",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/2_Implementing_FunkSVD.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 704341,
+          "key": "3b32e242-5f45-4e23-bd4a-c43f5c0d05f2",
+          "title": "Screencast: Implementing FunkSVD",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b32e242-5f45-4e23-bd4a-c43f5c0d05f2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737829,
+              "key": "ea92dd90-0026-4a3f-93ea-ce59e8806497",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is provided in two videos below. Again, you may find the solution notebook itself by going back to the workspace on the previous page, and clicking on the orange Jupyter Notebook icon.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737827,
+              "key": "63b4730a-e4dc-4ae0-b9d3-660de5fcd1c1",
+              "title": "Recommendations 2 16 1051320 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_4N6h82szWo",
+                "china_cdn_id": "_4N6h82szWo.mp4"
+              }
+            },
+            {
+              "id": 737833,
+              "key": "cd36c778-a169-41d1-8812-ef3cc0a0fe2c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737834,
+              "key": "0d883b3b-32a6-42e3-a602-c184f6b5a7b7",
+              "title": "Recommendations 2 16 23242831 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WqNi0B_oRuA",
+                "china_cdn_id": "WqNi0B_oRuA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704558,
+          "key": "0b4caf39-3413-46a1-9409-d8e7fc2e42b4",
+          "title": "Video: FunkSVD Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0b4caf39-3413-46a1-9409-d8e7fc2e42b4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737811,
+              "key": "4376e930-7285-4d2a-aa08-6ecd5f5ad686",
+              "title": "Funk SVD Review",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nc3GMIrISHE",
+                "china_cdn_id": "nc3GMIrISHE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704560,
+          "key": "f1759511-9018-4a6e-bd7d-a5ddcb4c7768",
+          "title": "Notebook: How Are We Doing?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f1759511-9018-4a6e-bd7d-a5ddcb4c7768",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704561,
+              "key": "7810abb3-95f3-4555-b006-dc303029b839",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view9qadl8i8k4",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-qwyfjvhasu",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/3_How_Are_We_Doing.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 704562,
+          "key": "c245cb94-7b54-4ae3-8204-cd37f0e1b303",
+          "title": "Screencast: How Are We Doing?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c245cb94-7b54-4ae3-8204-cd37f0e1b303",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737835,
+              "key": "a5fd14d1-41a6-4694-8a2f-e232980e8bf2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is shown below in three videos.  If you would like to check your answers against the solution, you can see the solution by clicking the orange, Jupyter icon in the top left of your classroom workspace.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737836,
+              "key": "f213c21d-57ca-4281-9ce8-03f242bcefa8",
+              "title": "Recommendations 2 18 0435 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "oRhrOShUM6w",
+                "china_cdn_id": "oRhrOShUM6w.mp4"
+              }
+            },
+            {
+              "id": 737837,
+              "key": "656a152f-c079-4bab-b00a-f70e19375314",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737838,
+              "key": "58be7fdf-e317-4dff-a25c-a94800cb36b1",
+              "title": "Recommendations 2 18 4381128 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "B6bELCg6gMs",
+                "china_cdn_id": "B6bELCg6gMs.mp4"
+              }
+            },
+            {
+              "id": 737839,
+              "key": "d9493330-752c-4546-a857-a2072a971b70",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part III \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 751578,
+              "key": "5975fcbd-115a-427b-afcb-7e3bebb79ee1",
+              "title": "Recommendations 2 18 11442204 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8kdRNQnqSGA",
+                "china_cdn_id": "8kdRNQnqSGA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704563,
+          "key": "abc607f6-c7e8-4c9e-ab26-6d4a8fb218b0",
+          "title": "Video: The Cold Start Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "abc607f6-c7e8-4c9e-ab26-6d4a8fb218b0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737812,
+              "key": "8c4d8d2e-8a28-4a01-9316-2159317e5dd0",
+              "title": "The Cold Start Problem",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DNz7aywJVzA",
+                "china_cdn_id": "DNz7aywJVzA.mp4"
+              }
+            },
+            {
+              "id": 714741,
+              "key": "792cbbee-10a5-4b83-b284-05f5c7914b69",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### The Cold Start Problem\n\nThe **cold start problem** is the problem that new users and new items to a platform don't have any ratings.  Because these users and items don't have any ratings, it is impossible to use collaborative filtering methods to make recommendations.\n\nTherefore, methods you used in the previous lesson like (rank-based and content-based recommenders) are the only way to get started with making recommendations for these individuals.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 704564,
+          "key": "b5456370-1a8e-4200-9bd3-cd514d879061",
+          "title": "Notebook: The Cold Start Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b5456370-1a8e-4200-9bd3-cd514d879061",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 707823,
+              "key": "e734207e-db4c-403c-be2e-d84314658f0c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view9qadl8i8k4",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-y1z1eavj2a9",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/4_Cold_Start_Problem.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 704565,
+          "key": "33c80714-1faf-4753-bb40-fe3d0c1de7a0",
+          "title": "Screencast: The Cold Start Problem",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "33c80714-1faf-4753-bb40-fe3d0c1de7a0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737853,
+              "key": "475243a7-5acd-4ceb-91b6-3c966fac9f66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nBelow you can find the solution to the previous notebook split between two videos.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737854,
+              "key": "7d6da08f-d3c4-4102-8aab-4d9942fd2bd5",
+              "title": "Recommendations 2 21a 01725 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UFmfDAiaOmw",
+                "china_cdn_id": "UFmfDAiaOmw.mp4"
+              }
+            },
+            {
+              "id": 737855,
+              "key": "9a5747b1-c5dd-4fb7-9733-483440199804",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737856,
+              "key": "4aa53aa3-12ec-45ea-89f4-d1e70d290016",
+              "title": "Recommendations 2 21a 18003113 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2M-WX2X2ts4",
+                "china_cdn_id": "2M-WX2X2ts4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704566,
+          "key": "2fd60cc5-fe6a-4022-962c-08b9d0b525f3",
+          "title": "Video: Putting It All Together",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2fd60cc5-fe6a-4022-962c-08b9d0b525f3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737814,
+              "key": "18578d40-4418-4674-9a80-40690cf1195b",
+              "title": "Putting It All Together",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "r5jfD2uKnbQ",
+                "china_cdn_id": "r5jfD2uKnbQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 708470,
+          "key": "b741b6fe-532e-424c-a395-339ed5b77e7e",
+          "title": "Screencast: Code Walkthrough",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b741b6fe-532e-424c-a395-339ed5b77e7e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737863,
+              "key": "7f5c4361-6680-4f8f-a0f8-fff495cae6da",
+              "title": "Recommendations 2 25 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zgz5WYlI5fE",
+                "china_cdn_id": "zgz5WYlI5fE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704567,
+          "key": "2f80135d-73fd-4f91-8b2b-22d12ddf5a34",
+          "title": "Workspace: Recommender Module",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2f80135d-73fd-4f91-8b2b-22d12ddf5a34",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728702,
+              "key": "ed74bea3-a51b-4eee-a2dd-87079e71ada0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewz5nuuoh9ug",
+              "pool_id": "webterminal",
+              "view_id": "generic-e5nw0pyngth",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "allowSubmit": false
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 704569,
+          "key": "9e117cb3-b9d7-4455-a210-fd9c53dd9383",
+          "title": "Video: Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e117cb3-b9d7-4455-a210-fd9c53dd9383",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 751576,
+              "key": "96ac8abb-faf7-4b09-a926-e62a142993f2",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "R5-OYqKk9Ys",
+                "china_cdn_id": "R5-OYqKk9Ys.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 704572,
+          "key": "abf2eab2-f3b2-472d-ab2f-56a73544c37a",
+          "title": "Text: Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "abf2eab2-f3b2-472d-ab2f-56a73544c37a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 704573,
+              "key": "b9f7336b-257d-4c02-af3d-088f8714d14b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Conclusion\n\nIn this lesson, you got your hands on some of the most important ideas associated with recommendation systems:\n\n#### Recommender Validation\n\nYou looked at methods for validating your recommendations (when possible) using offline methods.  In these cases, you could split your data into training and testing data.  Frequently this split is based on time, where events earlier in time are in the training data, and events later in time are in a testing dataset.\n\nWe also quickly introduced the idea of being able to see how well your recommendation engine works by simply throwing it out into the world to directly see the impact.\n\n#### Matrix Factorization with SVD\n\nNext, we looked at matrix factorization as a technique for making recommendations.  Traditional singular value decomposition a technique can be used when your matrices have no missing values.  In this decomposition technique, a user-item (**A**) can be decomposed as follows:\n\n<div class=\"mathquill\">A = U\\Sigma V^T</div>\n\nWhere \n* <span class=\"mathquill\">U</span> gives information about how users are related to latent features.\n* <span class=\"mathquill\">\\Sigma</span> gives information about how much latent features matter towards recreating the user-item matrix.\n* <span class=\"mathquill\">V^T</span> gives information about how much each movie is related to latent features.\n\nSince this traditional decomposition doesn't actually work when our matrices have missing values, we looked at another method for decomposing matrices.\n\n\n#### FunkSVD\n\nFunkSVD was a new method that you found to be useful for matrices with missing values.  With this matrix factorization you decomposed a user-item (**A**) as follows:\n\n<div class=\"mathquill\">A = UV^T</div>\n\nWhere \n* <span class=\"mathquill\">U</span> gives information about how users are related to latent features.\n* <span class=\"mathquill\">V^T</span> gives information about how much each movie is related to latent features.\n\nYou found that you could iterate to find the latent features in each of these matrices using gradient descent.  You wrote a function to implement gradient descent to find the values within these two matrices.  \n\nUsing this method, you were able to make a prediction for any user-movie pair in your dataset.  You also could use it to test how well your predictions worked on a train-test split of the data.  However, this method fell short with new users or movies.\n\n#### The Cold Start Problem\n\nCollaborative filtering using FunkSVD still wasn't helpful for new users and new movies.  In order to recommend these items, you implemented content based and ranked based recommendations along with your FunkSVD implementation.\n\n##### Author's Note\n\nThere are so many ways to make recommendations, and this course provides you a very strong mind and skill set to tackle building your own recommendation systems in practice.  ",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

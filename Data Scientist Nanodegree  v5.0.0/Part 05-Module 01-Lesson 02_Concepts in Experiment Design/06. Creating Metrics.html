@@ -1,0 +1,295 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creating Metrics</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Concepts in Experiment Design</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is an Experiment.html">02. What is an Experiment?</a>
+    </li>
+    <li class="">
+      <a href="03. Types of Experiment.html">03. Types of Experiment</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Sampling.html">04. Types of Sampling</a>
+    </li>
+    <li class="">
+      <a href="05. Measuring Outcomes.html">05. Measuring Outcomes</a>
+    </li>
+    <li class="">
+      <a href="06. Creating Metrics.html">06. Creating Metrics</a>
+    </li>
+    <li class="">
+      <a href="07. Controlling Variables.html">07. Controlling Variables</a>
+    </li>
+    <li class="">
+      <a href="08. Checking Validity.html">08. Checking Validity</a>
+    </li>
+    <li class="">
+      <a href="09. Checking Bias.html">09. Checking Bias</a>
+    </li>
+    <li class="">
+      <a href="10. Ethics in Experimentation.html">10. Ethics in Experimentation</a>
+    </li>
+    <li class="">
+      <a href="11. A SMART Mnemonic for Experiment Design.html">11. A SMART Mnemonic for Experiment Design</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Conclusion.html">12. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Creating Metrics</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Creating Metrics</p></h3>
+  <video controls>
+  <source src="06. Creating Metrics-__7tzDUY870.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Creating Metrics-__7tzDUY870.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Creating Metrics-__7tzDUY870.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="06. Creating Metrics-__7tzDUY870.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="creating-metrics">Creating Metrics</h2>
+<h3 id="funnels">Funnels</h3>
+<p>There are additional concepts and terms that are commonly used for designing<br />
+experiments, especially for web-based studies. In a web experiment, you'll<br />
+often think of the user <strong>funnel</strong>. A funnel is the flow of steps you expect a<br />
+user of your product to take. Typically, the funnel ends at the place where<br />
+your main evaluation metric is recorded, and includes a step where your<br />
+experimental manipulation can be performed. For example, we might think of the<br />
+following steps for someone to purchase a product in an online store:</p>
+<ul>
+<li>Visit the site homepage</li>
+<li>Search for a desired product or click on a product category</li>
+<li>Click on a product image</li>
+<li>Add the product to the cart</li>
+<li>Check out and finalize purchase</li>
+</ul>
+<p>One property to note about user funnels is that typically there will be some<br />
+dropoff in the users that move from step to step. This is much like how an<br />
+actual funnel narrows from a large opening to a small exit. Outside of an<br />
+experiment, funnels can be used to analyze user flows. Observations from these<br />
+flows can then be used to motivate experiments to try and improve the dropoff<br />
+rates.</p>
+<p>It's also worth noting that the flow through a funnel might be idealized<br />
+compared to actual user practice. In the above example, users might perform<br />
+multiple searches in a single session, or want to purchase multiple things. A<br />
+user might access the site through a specific link, subverting the top part of<br />
+the funnel. Refining the funnel and being specific about the kinds of events<br />
+that are expected can help you create a consistent, reliable design and<br />
+analysis.</p>
+<h3 id="unit-of-diversion">Unit of Diversion</h3>
+<p>Once you have a funnel, think about how you can implement your experimental<br />
+manipulation in the funnel. If the goal of the above experiment was to change<br />
+the way the site looks after a user clicks on a product image, we need to<br />
+figure out a way to assign users to either a control group or experimental<br />
+group. The place in which you make this assignment is known as the <strong>unit of
+diversion</strong>. Depending on the type of experiment you have, you might have<br />
+different options for diversion, each with its own pros and cons:</p>
+<ul>
+<li>Event-based diversion (e.g. pageview): Each time a user loads up the page of<br />
+interest, the experimental condition is randomly rolled. Since this ignores<br />
+previous visits, this can create an inconsistent experience, if the condition<br />
+causes a user-visible change.</li>
+<li>Cookie-based diversion: A cookie is stored on the user's device, which<br />
+determines their experimental condition as long as the cookie remains on the<br />
+device. Cookies don't require a user to have an account or be logged in, but<br />
+can be subverted through anonymous browsing or a user just clearing out cookies.</li>
+<li>Account-based diversion (e.g. User ID): User IDs are randomly divided into<br />
+conditions. Account-based diversions are reliable, but requires users to <em>have</em><br />
+accounts and be logged in. This means that our pool of data might be limited in<br />
+scope, and you'll need to consider the risks of using personally-identifiable<br />
+information.</li>
+</ul>
+<p>When it comes to selecting a unit of diversion, the consistency of the<br />
+experience required can be a major factor to consider. For the example provided,<br />
+we need something more consistent than pageview events. So we then consider the<br />
+cookie-based diversion. If the differences in interface between control and<br />
+experiment are fairly minor, then we're probably okay with cookie-based<br />
+diversion. But if we think that users will notice the change and we believe<br />
+that it will have a major effect on experience, then we might be inclined to<br />
+choose an account-based diversion.</p>
+<h3 id="invariant-and-evaluation-metrics">Invariant and Evaluation Metrics</h3>
+<p>A funnel will also be of benefit when it comes to deciding on metrics to track<br />
+and analyze as part of the experiment. The immediate features that come out of<br />
+a funnel come in the form of counts and ratios. For example, we could count the<br />
+number of times a search results in a product being selected (a count), or the<br />
+ratio of selections to searches as adjacent slices in the funnel (a ratio).</p>
+<p>There are two major categories that we can consider features: as <em>evaluation
+metrics</em> or as <em>invariant metrics</em>. <strong>Evaluation metrics</strong> were mentioned in <br />
+the previous page as the metrics by which we compare groups. Ideally, we hope <br />
+to see a difference between groups that will tell us if our manipulation was <br />
+a success. We might want to see an increased click-through-rate from search <br />
+results to products, or an increase in overall revenue. On the flip side, <br />
+<strong>invariant metrics</strong> are metrics that we hope will <em>not</em> be different between <br />
+groups. Metrics in this category serve to check that the experiment is running <br />
+as expected. For example, in an experiment with cookie-based diversion, the <br />
+number of cookies generated for each condition would be a good invariant metric. <br />
+Another metric could compare the distribution of times in which cookies were <br />
+generated, to check the bias in the randomization procedure.</p>
+<p>We're not limited to tracking just one metric of each type. It's not unusual <br />
+to track multiple invariant metrics as checks on the system's integrity, or <br />
+multiple evaluation metrics to check different potential facets of a <br />
+manipulation's effects. Don't think that you need to track every possible <br />
+metric, however. It's better to focus on a few key metrics, ignoring features <br />
+that might be less reliable or highly correlated to other, more informative <br />
+features. We'll discuss statistical considerations surrounding metrics in the <br />
+next lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Controlling Variables.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Creating Metrics')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

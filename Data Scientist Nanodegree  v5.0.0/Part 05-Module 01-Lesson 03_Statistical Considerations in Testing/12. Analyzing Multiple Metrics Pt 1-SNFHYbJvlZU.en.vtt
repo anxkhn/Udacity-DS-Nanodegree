@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.250 --> 00:00:08.769
+If you have multiple evaluation metrics to track in your experiment,
+
+00:00:08.769 --> 00:00:13.344
+then you should be careful to specify the criteria for calling your experiment a success,
+
+00:00:13.345 --> 00:00:16.769
+so that you don't make excessive errors in your judgment.
+
+00:00:16.769 --> 00:00:19.875
+For example, let's take this experiment
+
+00:00:19.875 --> 00:00:22.925
+with an online store front with two evaluation metrics.
+
+00:00:22.925 --> 00:00:24.830
+The probability of adding a product to
+
+00:00:24.829 --> 00:00:28.409
+the cart and the probability of actually completing checkout.
+
+00:00:28.410 --> 00:00:30.964
+Although, these measures are correlated,
+
+00:00:30.964 --> 00:00:34.579
+we'll simplify the example by assuming that they're independent.
+
+00:00:34.579 --> 00:00:37.414
+Let's say that we call the experiment a success
+
+00:00:37.414 --> 00:00:40.504
+if either metric is statistically significant.
+
+00:00:40.505 --> 00:00:43.185
+At a five percent type one error rate,
+
+00:00:43.185 --> 00:00:46.870
+what is the probability that we falsely called the experiment is success,
+
+00:00:46.869 --> 00:00:50.519
+assuming that there is no actual effect of our changes?
+

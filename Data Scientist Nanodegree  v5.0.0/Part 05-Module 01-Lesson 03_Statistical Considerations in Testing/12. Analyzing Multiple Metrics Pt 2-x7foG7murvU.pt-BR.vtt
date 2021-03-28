@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.968 --> 00:00:04.105
+ANALISANDO MÚLTIPLAS MÉTRICAS
+PARTE 2
+
+00:00:04.829 --> 00:00:07.360
+Tomamos duas
+métricas independentes,
+
+00:00:07.393 --> 00:00:10.480
+cada uma com uma chance
+de 5% de erro tipo I.
+
+00:00:10.897 --> 00:00:13.296
+Isso significa que,
+sob a hipótese nula,
+
+00:00:13.329 --> 00:00:15.747
+há uma chance de 90,25%
+
+00:00:15.780 --> 00:00:17.922
+de que ambas as médias
+das amostras métricas
+
+00:00:17.955 --> 00:00:19.716
+não tenham
+significância estatística
+
+00:00:19.749 --> 00:00:24.915
+e uma chance de 9,75% de que uma
+ou ambas tenham um erro tipo I.
+
+00:00:24.948 --> 00:00:28.725
+Teríamos quase o dobro do número
+de erros tipo I desejados
+
+00:00:28.758 --> 00:00:32.940
+se tomássemos uma decisão baseados
+apenas em uma métrica significante.
+
+00:00:32.973 --> 00:00:35.555
+Esse exemplo
+é altamente simplificado,
+
+00:00:35.588 --> 00:00:39.056
+mas ilustra um problema em potencial
+em cometer muitos erros
+
+00:00:39.089 --> 00:00:41.390
+se fizermos várias comparações.
+
+00:00:41.753 --> 00:00:45.268
+Para superar isso, precisamos
+fazer uma correção na taxa de erros
+
+00:00:45.301 --> 00:00:50.245
+em cada teste para manter a taxa
+de erros geral abaixo de um limite.
+
+00:00:50.574 --> 00:00:54.350
+A correção mais simples
+é a correção de Bonferroni,
+
+00:00:54.383 --> 00:00:58.605
+que divide a taxa de erros geral
+pelo número de testes.
+
+00:00:58.999 --> 00:01:03.515
+No nosso exemplo, isso significa
+dividir 0,05 por 2.
+
+00:01:03.548 --> 00:01:08.495
+Cada teste individual será executado
+num nível de significância de 2,5%.
+
+00:01:08.528 --> 00:01:11.120
+Presumindo uma independência
+entre os testes,
+
+00:01:11.153 --> 00:01:15.120
+isso resulta em uma taxa de erros
+abaixo de 5%.
+
+00:01:15.522 --> 00:01:18.540
+Diferentes correções são possíveis
+e podem depender do número
+
+00:01:18.573 --> 00:01:22.320
+de métricas de avaliação que se tem,
+e do padrão de resultados desejado.
+

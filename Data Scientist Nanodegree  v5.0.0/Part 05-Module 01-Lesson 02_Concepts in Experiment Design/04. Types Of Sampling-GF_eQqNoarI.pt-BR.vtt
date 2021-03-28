@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.776 --> 00:00:04.734
+TIPOS DE AMOSTRAGEM
+
+00:00:05.207 --> 00:00:07.979
+Imagine que você trabalha
+para uma repartição do governo
+
+00:00:08.013 --> 00:00:09.927
+que está tentando entender
+os problemas
+
+00:00:09.960 --> 00:00:12.704
+dos residentes da região.
+
+00:00:12.738 --> 00:00:17.760
+Seria muito trabalhoso
+obter feedback de cada pessoa.
+
+00:00:17.794 --> 00:00:20.883
+Em casos como esse,
+em que há mais pessoas disponíveis
+
+00:00:20.917 --> 00:00:22.846
+do que você pode incluir
+no estudo,
+
+00:00:22.880 --> 00:00:28.071
+é bom saber fazer amostragem
+como parte do seu design.
+
+00:00:28.105 --> 00:00:30.290
+Uma forma de obter
+uma amostra da população
+
+00:00:30.324 --> 00:00:33.399
+é selecionar aleatoriamente
+pessoas da população total
+
+00:00:33.433 --> 00:00:36.415
+até chegar
+a 1.000 participantes.
+
+00:00:36.449 --> 00:00:39.203
+Todos têm a mesma chance
+de serem selecionados,
+
+00:00:39.237 --> 00:00:41.955
+então devemos esperar
+que a amostra seja representativa
+
+00:00:41.989 --> 00:00:44.595
+da população como um todo.
+
+00:00:44.629 --> 00:00:48.372
+Esse tipo de amostragem chama-se
+"amostragem aleatória simples",
+
+00:00:48.406 --> 00:00:50.206
+e é o que a maioria
+das pessoas pensa
+
+00:00:50.240 --> 00:00:54.050
+quando a amostragem aleatória
+é usada sozinha.
+
+00:00:54.084 --> 00:00:56.250
+Mas e se estivermos
+interessados
+
+00:00:56.284 --> 00:00:59.364
+em uma característica
+específica da população?
+
+00:00:59.398 --> 00:01:02.589
+Imagine que há três subdivisões
+para a região:
+
+00:01:02.623 --> 00:01:05.487
+uma área urbana densa,
+com muitas pessoas, aqui,
+
+00:01:05.521 --> 00:01:08.312
+uma área suburbana
+moderadamente densa aqui
+
+00:01:08.346 --> 00:01:11.970
+e uma área rural
+de baixa densidade aqui.
+
+00:01:12.004 --> 00:01:15.059
+Queremos garantir
+uma opinião representativa
+
+00:01:15.093 --> 00:01:18.088
+dos residentes da área rural.
+
+00:01:18.122 --> 00:01:20.100
+Mas, com a amostragem
+aleatória simples,
+
+00:01:20.134 --> 00:01:24.886
+podemos acabar com uma amostra
+insuficiente dessa área.
+
+00:01:24.920 --> 00:01:28.846
+Isso é indesejável se o objetivo for
+entender cada região separadamente,
+
+00:01:28.880 --> 00:01:30.979
+bem como o todo.
+
+00:01:31.013 --> 00:01:33.379
+Então, como abordagem
+de amostragem alternativa,
+
+00:01:33.413 --> 00:01:35.264
+podemos pegar
+uma amostra especificada
+
+00:01:35.298 --> 00:01:38.424
+de cada subdivisão
+da população.
+
+00:01:38.458 --> 00:01:40.212
+Se precisamos
+de 1.000 pessoas,
+
+00:01:40.246 --> 00:01:43.189
+e 50% das pessoas estão
+na região urbana,
+
+00:01:43.223 --> 00:01:45.614
+30% na região suburbana
+
+00:01:45.648 --> 00:01:48.302
+e 20% na região rural,
+
+00:01:48.336 --> 00:01:51.874
+pegaríamos como amostra
+500 pessoas da região urbana,
+
+00:01:51.908 --> 00:01:53.913
+300 da região suburbana
+
+00:01:53.947 --> 00:01:57.066
+e 200 da região rural.
+
+00:01:57.100 --> 00:01:58.812
+Isso garantiria
+
+00:01:58.846 --> 00:02:02.106
+o nível de conhecimento
+desejado de cada região,
+
+00:02:02.140 --> 00:02:06.242
+em vez de deixar a variabilidade
+ao acaso.
+
+00:02:06.276 --> 00:02:09.362
+Dividir a população
+em subgrupos distintos
+
+00:02:09.396 --> 00:02:11.329
+e pegar amostras
+de cada um deles
+
+00:02:11.363 --> 00:02:14.154
+chama-se "amostragem
+aleatória estratificada".
+

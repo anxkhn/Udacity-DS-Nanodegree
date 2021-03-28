@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:08.460
+When you explain the outcomes of a study to others,
+
+00:00:08.460 --> 00:00:12.425
+you want to make sure that they truly say what you truly mean.
+
+00:00:12.425 --> 00:00:16.500
+In a single word, you want the outcomes to be valid.
+
+00:00:16.500 --> 00:00:19.454
+Validity is simply how well your experiment
+
+00:00:19.454 --> 00:00:22.634
+actually accomplishes what it sets out to perform.
+
+00:00:22.635 --> 00:00:27.745
+There are three major ways for our experiment to be valid: through construct validity,
+
+00:00:27.745 --> 00:00:31.435
+internal validity, and external validity.
+
+00:00:31.434 --> 00:00:37.004
+First, you want to make sure that your metrics are aligned with your study's goals.
+
+00:00:37.005 --> 00:00:40.105
+This is called construct validity.
+
+00:00:40.104 --> 00:00:45.319
+You've seen an example of a metric with poor construct validity earlier in the lesson.
+
+00:00:45.320 --> 00:00:48.814
+Recall the proposed metric citing that the number of searches
+
+00:00:48.814 --> 00:00:52.625
+as an indicator of the goodness of a recommendation engine.
+
+00:00:52.625 --> 00:00:55.070
+Since the metric might be measuring something
+
+00:00:55.070 --> 00:00:57.395
+that is not aligned with the engine's quality,
+
+00:00:57.395 --> 00:01:02.140
+using it would lower the experiment's construct validity.
+
+00:01:02.759 --> 00:01:08.715
+Secondly, you want to make sure that claims of causality are supported by the analysis.
+
+00:01:08.715 --> 00:01:11.585
+This is called internal validity.
+
+00:01:11.584 --> 00:01:16.324
+You've also seen aspects of poor internal validity in a previous video.
+
+00:01:16.325 --> 00:01:19.549
+Poor internal validity can be demonstrated by saying
+
+00:01:19.549 --> 00:01:23.069
+that ice cream sales cause an increase in crime rates.
+
+00:01:23.069 --> 00:01:28.750
+Simply taking the correlation between the two as a causal relationship without accounting
+
+00:01:28.750 --> 00:01:34.724
+for other variables like temperature is a sign that internal validity has not been met.
+
+00:01:34.724 --> 00:01:38.414
+The third and final branch, external validity,
+
+00:01:38.415 --> 00:01:41.500
+is concerned with the ability to generalize the results of
+
+00:01:41.500 --> 00:01:45.930
+an experiment to the population at large or to other groups.
+
+00:01:45.930 --> 00:01:50.545
+This differs from construct validity since in experiment's metric might
+
+00:01:50.545 --> 00:01:55.715
+appropriately apply towards a project goal but only towards a narrow group.
+
+00:01:55.715 --> 00:01:58.480
+For example, let's say we tested out
+
+00:01:58.480 --> 00:02:01.180
+an alternative instruction method on a group of
+
+00:02:01.180 --> 00:02:05.320
+college students and saw a huge improvement in their test scores.
+
+00:02:05.319 --> 00:02:07.984
+With respect to external validity,
+
+00:02:07.984 --> 00:02:11.794
+we need to consider if those results could be generalized to students at
+
+00:02:11.794 --> 00:02:17.559
+other colleges or even a wider audience outside of academic institutions.
+

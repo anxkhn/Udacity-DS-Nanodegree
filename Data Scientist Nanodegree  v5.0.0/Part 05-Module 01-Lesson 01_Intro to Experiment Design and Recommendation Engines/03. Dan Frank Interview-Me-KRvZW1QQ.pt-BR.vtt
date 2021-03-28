@@ -1,0 +1,280 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.212 --> 00:00:03.148
+Antes de aprendermos
+a implementar as técnicas
+
+00:00:03.181 --> 00:00:07.200
+do design experimental
+e dos mecanismos de recomendação,
+
+00:00:07.233 --> 00:00:10.448
+veremos uma entrevista com o Dan,
+que foi cientista de dados
+
+00:00:10.481 --> 00:00:14.166
+do Twitter, do Airbnb
+e agora está no Coinbase.
+
+00:00:14.199 --> 00:00:18.912
+Ele falará de algumas
+experiências com os experimentos.
+
+00:00:18.945 --> 00:00:21.800
+Uma das razões para
+a experimentação ser tão difícil
+
+00:00:21.833 --> 00:00:27.817
+é que não há um algoritmo único
+que usaremos para todos os testes,
+
+00:00:27.850 --> 00:00:29.375
+isso não acontece.
+
+00:00:29.408 --> 00:00:32.879
+Sorte dos cientistas de dados,
+que terão sempre trabalho.
+
+00:00:32.912 --> 00:00:35.367
+Em vez disso...
+
+00:00:35.400 --> 00:00:39.942
+Reconhecemos isso e deixamos
+os cientistas de dados configurarem
+
+00:00:39.975 --> 00:00:43.850
+algumas soluções
+e revelarem os dados subjacentes.
+
+00:00:43.883 --> 00:00:47.799
+Podemos dizer: "Aqui está o ID
+de usuário, as coisas observadas,
+
+00:00:47.832 --> 00:00:49.775
+e eles estão
+no grupo de tratamento."
+
+00:00:49.808 --> 00:00:53.662
+Esses são dados de nível baixo
+com os quais construímos soluções,
+
+00:00:53.695 --> 00:00:55.630
+se isso for algo necessário.
+
+00:00:55.663 --> 00:00:58.662
+Imagine um grupo de tratamento
+e um grupo de controle
+
+00:00:58.695 --> 00:01:02.654
+para uma alteração
+de uma página de destino
+
+00:01:02.687 --> 00:01:04.643
+ou para a alteração
+de uma página.
+
+00:01:04.676 --> 00:01:06.834
+O usuário decidirá
+
+00:01:06.867 --> 00:01:09.985
+que o que alguém do grupo
+de tratamento verá será diferente
+
+00:01:10.018 --> 00:01:12.820
+de alguém
+do grupo de controle.
+
+00:01:13.652 --> 00:01:16.181
+Obtemos os resultados.
+
+00:01:16.214 --> 00:01:21.689
+Quando determinamos o fim,
+quando temos dados suficientes
+
+00:01:21.722 --> 00:01:23.534
+para terminar o experimento
+
+00:01:23.567 --> 00:01:26.847
+e para sabermos
+que esta é a página certa?
+
+00:01:26.880 --> 00:01:31.227
+Quando configuramos experimentos,
+algo que incentivamos
+
+00:01:31.260 --> 00:01:35.063
+é a configuração de tempo
+para obtenção das métricas
+
+00:01:35.096 --> 00:01:39.303
+e a configuração de uma ou duas
+métricas que sejam decisivas.
+
+00:01:39.336 --> 00:01:42.387
+Basicamente, dizemos:
+
+00:01:42.420 --> 00:01:46.454
+"Se esta métrica funcionar
+conforme o esperado,
+
+00:01:46.487 --> 00:01:52.007
+se as métricas reagirem
+de forma positiva, e não negativa,
+
+00:01:52.040 --> 00:01:56.165
+então teremos uma situação
+confortável de lançamento."
+
+00:01:56.781 --> 00:02:01.165
+Dito isso, precisamos garantir
+que as métricas
+
+00:02:01.198 --> 00:02:02.643
+tenham dados suficientes.
+
+00:02:02.676 --> 00:02:05.124
+Temos algumas opções.
+
+00:02:05.157 --> 00:02:07.906
+Podemos fazer cálculos de potência
+de antemão
+
+00:02:07.939 --> 00:02:10.154
+garantindo que teremos
+usuários suficientes
+
+00:02:10.187 --> 00:02:11.706
+para tomarmos as decisões.
+
+00:02:11.739 --> 00:02:14.404
+Por exemplo, podemos dizer
+de antemão:
+
+00:02:14.437 --> 00:02:18.587
+"Não queremos que as vendas
+mudem mais do que 1%."
+
+00:02:18.620 --> 00:02:20.486
+Quantos usuários
+serão necessários?
+
+00:02:20.519 --> 00:02:22.787
+Quantas pessoas
+acessam a página de destino?
+
+00:02:22.820 --> 00:02:25.036
+Faça uma projeção simples
+para poder dizer:
+
+00:02:25.069 --> 00:02:27.377
+"Executaremos isso
+durante duas semanas
+
+00:02:27.410 --> 00:02:30.482
+e, depois disso, observaremos
+as métricas designadas."
+
+00:02:30.515 --> 00:02:32.714
+Nesse momento -
+
+00:02:32.747 --> 00:02:35.322
+embora isso varie
+por equipes -,
+
+00:02:35.355 --> 00:02:37.839
+você conversa com alguém
+
+00:02:37.872 --> 00:02:41.803
+mostrando os dados obtidos...
+
+00:02:41.836 --> 00:02:44.908
+Você toma a decisão e diz:
+"Esta é nossa recomendação."
+
+00:02:44.941 --> 00:02:49.202
+Precisamos trabalhar
+com várias partes do negócio.
+
+00:02:49.235 --> 00:02:51.122
+É você quem toma as decisões,
+
+00:02:51.155 --> 00:02:53.876
+outra pessoa toma as decisões
+ou é algo em equipe,
+
+00:02:53.909 --> 00:02:55.437
+em muitas empresas?
+
+00:02:56.101 --> 00:02:58.652
+Boa pergunta.
+Há uma grande variação,
+
+00:02:58.685 --> 00:03:02.526
+mas, no geral, as equipes
+de produtos
+
+00:03:02.559 --> 00:03:05.140
+geralmente executam
+esses experimentos
+
+00:03:05.173 --> 00:03:07.571
+e os cientistas de dados
+podem informar
+
+00:03:07.604 --> 00:03:10.396
+as coisas relevantes
+para a métrica,
+
+00:03:10.429 --> 00:03:12.347
+e é assim que mediremos
+
+00:03:12.380 --> 00:03:14.635
+tanto da perspectiva
+do fluxo de dados
+
+00:03:14.668 --> 00:03:16.266
+como do estatístico.
+
+00:03:16.299 --> 00:03:19.008
+No fim das contas, geralmente,
+o gerente de produtos
+
+00:03:19.041 --> 00:03:20.347
+toma a decisão final
+
+00:03:20.380 --> 00:03:22.885
+a partir do input
+dos cientistas de dados
+
+00:03:22.918 --> 00:03:24.572
+e dos engenheiros.
+
+00:03:24.605 --> 00:03:27.030
+Se eles precisarem coordenar
+as equipes,
+
+00:03:27.063 --> 00:03:30.341
+no caso de a alteração comprometer
+a métrica de outra equipe,
+
+00:03:30.374 --> 00:03:32.933
+poderá haver uma conversa
+com a outra equipe.
+
+00:03:32.966 --> 00:03:35.829
+Isso traz muitos componentes
+de comunicação
+
+00:03:35.862 --> 00:03:38.192
+para o papel
+do cientista de dados,
+
+00:03:38.225 --> 00:03:42.496
+algo que as pessoas talvez
+não imaginem.
+
+00:03:42.529 --> 00:03:43.714
+Isso é interessante.
+

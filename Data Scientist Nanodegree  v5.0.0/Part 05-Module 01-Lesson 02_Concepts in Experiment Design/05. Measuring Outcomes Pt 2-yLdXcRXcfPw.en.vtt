@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.150 --> 00:00:08.220
+Watch time, video ranking,
+
+00:00:08.220 --> 00:00:12.625
+and number of search queries are all examples of evaluation metrics.
+
+00:00:12.625 --> 00:00:17.115
+All of them provide an objective way of measuring the outcome we hope to see.
+
+00:00:17.114 --> 00:00:21.229
+While the idea of improving performance on its own is vague,
+
+00:00:21.230 --> 00:00:25.704
+an evaluation metric makes success concrete and measurable.
+
+00:00:25.704 --> 00:00:31.669
+For watch time, success comes from user staying on the site for longer periods of time.
+
+00:00:31.670 --> 00:00:37.320
+For video ranking, we want to see the average ranking of selected videos go up,
+
+00:00:37.320 --> 00:00:39.719
+and if users make more searches,
+
+00:00:39.719 --> 00:00:44.320
+perhaps that's a way of declaring the recommendation engines effectiveness.
+
+00:00:44.320 --> 00:00:50.384
+But each of the proposed evaluation metrics also has its possible negative side.
+
+00:00:50.384 --> 00:00:54.780
+If we measure success by the amount of time users spend watching videos,
+
+00:00:54.780 --> 00:00:58.820
+the recommendation engine could prefer recommending longer videos,
+
+00:00:58.820 --> 00:01:02.814
+causing video creators to submit videos with padded lengths.
+
+00:01:02.814 --> 00:01:05.269
+For the video ranking metric,
+
+00:01:05.269 --> 00:01:07.670
+a misguided engine might deliberately include
+
+00:01:07.670 --> 00:01:13.144
+less relevant videos lower in the ranking to emphasize the higher rank videos.
+
+00:01:13.144 --> 00:01:18.754
+The number of search queries metric probably has the biggest potential downside.
+
+00:01:18.754 --> 00:01:21.185
+While it might be that users that make
+
+00:01:21.185 --> 00:01:24.290
+more searches have increased engagement with the site,
+
+00:01:24.290 --> 00:01:27.020
+it might also indicate that the engine is having
+
+00:01:27.019 --> 00:01:30.920
+a hard time serving videos that users really want.
+
+00:01:30.920 --> 00:01:33.530
+If users leave the site due to this,
+
+00:01:33.530 --> 00:01:37.239
+then this could have a detrimental long-term effect.
+
+00:01:37.650 --> 00:01:40.730
+This points to why it's important to consider
+
+00:01:40.730 --> 00:01:44.424
+the study goals separately from the evaluation metrics.
+
+00:01:44.424 --> 00:01:49.510
+First, we want to make sure that our metrics are aligned with the goals that we've set.
+
+00:01:49.510 --> 00:01:53.210
+Observing a change in the metric isn't the main point of a study;
+
+00:01:53.209 --> 00:01:58.659
+it's the implications of that change with regards to the study goals that really matters.
+
+00:01:58.659 --> 00:02:04.295
+Second, considering the goal on its own can provide a central purpose to your study.
+
+00:02:04.295 --> 00:02:07.390
+If you don't have a good reason for running an experiment,
+
+00:02:07.390 --> 00:02:11.560
+then it might end up being a waste of time and resources.
+

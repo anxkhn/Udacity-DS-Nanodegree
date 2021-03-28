@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:07.650
+Practical significance is useful not only
+
+00:00:07.650 --> 00:00:10.225
+for making a decision at the end of the experiment,
+
+00:00:10.224 --> 00:00:13.844
+but also for actually setting up the experiment scope.
+
+00:00:13.845 --> 00:00:17.730
+Let's consider an AB test where we want to see if changing
+
+00:00:17.730 --> 00:00:22.109
+the layout of a homepage brings more visitors to a digital storefront.
+
+00:00:22.109 --> 00:00:26.850
+The current click-through rate is 10 percent and the practical significance boundary we
+
+00:00:26.850 --> 00:00:31.795
+want to see what the new layout is a twopercent absolute increase to 12 percent.
+
+00:00:31.795 --> 00:00:34.664
+How many data points do we need to record in
+
+00:00:34.664 --> 00:00:37.914
+order to reliably detect that kind of change?
+
+00:00:37.914 --> 00:00:41.945
+The concept you should recall here is statistical power.
+
+00:00:41.945 --> 00:00:45.590
+Power is the probability that a hypothesis test will
+
+00:00:45.590 --> 00:00:49.795
+actually detect a particular true mean as different from the null.
+
+00:00:49.795 --> 00:00:52.429
+The curves on these two plots represent
+
+00:00:52.429 --> 00:00:54.950
+the expected distribution of the difference in sample
+
+00:00:54.950 --> 00:01:00.590
+means given 1,000 observations in each of the control group and experimental group.
+
+00:01:00.590 --> 00:01:03.545
+The top curve gives the distribution of differences
+
+00:01:03.545 --> 00:01:06.079
+if there was no effect on the new layout,
+
+00:01:06.079 --> 00:01:08.855
+and the bottom curve gives the distribution of differences
+
+00:01:08.855 --> 00:01:12.950
+assuming our desired two percent increase in click-through rate.
+
+00:01:12.950 --> 00:01:16.040
+On the top curve, a vertical line indicates
+
+00:01:16.040 --> 00:01:19.965
+the critical value for a type one error rate of five percent.
+
+00:01:19.965 --> 00:01:23.900
+Matching this critical value from the null hypothesis curve down to
+
+00:01:23.900 --> 00:01:27.290
+the desired alternative hypothesis curve allows us to see
+
+00:01:27.290 --> 00:01:31.715
+the power on the right of the line and the type two error rate on the left.
+
+00:01:31.715 --> 00:01:34.655
+Increasing the number of data points will narrow
+
+00:01:34.655 --> 00:01:37.885
+both curves, increasing statistical power.
+
+00:01:37.885 --> 00:01:40.555
+If we want a power of 0.8,
+
+00:01:40.555 --> 00:01:43.920
+or in other words, an 80 percent chance of rejecting the null,
+
+00:01:43.920 --> 00:01:46.465
+assuming a 12 percent true click-through rate,
+
+00:01:46.465 --> 00:01:49.420
+then we need at least 2,863
+
+00:01:49.420 --> 00:01:53.829
+observations in each of our control group and experimental group.
+
+00:01:53.829 --> 00:01:56.875
+We can then refer to our website's daily traffic
+
+00:01:56.875 --> 00:02:00.034
+to figure out about how long we should run the experiment.
+
+00:02:00.034 --> 00:02:03.039
+If we have about 500 visitors per day,
+
+00:02:03.040 --> 00:02:06.130
+then this means that we should run the experiment for about 12 days.
+
+00:02:06.129 --> 00:02:08.740
+Perhaps rounding up to a full two weeks to try and
+
+00:02:08.740 --> 00:02:11.920
+reduce potential effects of weekly cycles.
+
+00:02:11.919 --> 00:02:15.375
+After collecting data for this predetermined time period,
+
+00:02:15.375 --> 00:02:20.275
+we can then analyze the data to see the effectiveness of the website layout change.
+
+00:02:20.275 --> 00:02:24.020
+Checking for the expected experiment length is important since you
+
+00:02:24.020 --> 00:02:27.755
+want to be able to act on your findings while they're still relevant.
+
+00:02:27.754 --> 00:02:31.490
+If you find that the required time for a design is too long,
+
+00:02:31.490 --> 00:02:33.975
+then you might need to change statistical parameters.
+
+00:02:33.974 --> 00:02:37.519
+This might meet increasing the practical significance boundary or
+
+00:02:37.520 --> 00:02:41.165
+focusing your design into different metrics or populations.
+
+00:02:41.164 --> 00:02:46.560
+This will reduce variability in order to shorten the study to a more reasonable length.
+

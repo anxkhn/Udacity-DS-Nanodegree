@@ -1,0 +1,220 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.600
+Before we jump in and learn how to implement the techniques of
+
+00:00:03.600 --> 00:00:07.275
+experimental design and recommendation engines ourselves,
+
+00:00:07.275 --> 00:00:09.060
+we're going to hear from Dan,
+
+00:00:09.060 --> 00:00:11.440
+who's worked as a data scientist for Twitter,
+
+00:00:11.439 --> 00:00:14.064
+Airbnb, and now Coinbase.
+
+00:00:14.064 --> 00:00:18.524
+We'll get some insight on his experiences running experiments.
+
+00:00:18.524 --> 00:00:21.689
+One of the reasons why experimentation is so hard,
+
+00:00:21.690 --> 00:00:24.420
+there's not just a single algorithm that you can follow,
+
+00:00:24.420 --> 00:00:26.190
+to be like, "Okay, this is like the test.
+
+00:00:26.190 --> 00:00:29.115
+It always works no matter what." Not going to happen.
+
+00:00:29.114 --> 00:00:32.324
+Fortunately for data scientists. We stop jobs.
+
+00:00:32.325 --> 00:00:37.545
+So, instead, acknowledging those concerns and letting
+
+00:00:37.545 --> 00:00:43.814
+the data scientists configure certain solutions and also revealing the underlying data.
+
+00:00:43.814 --> 00:00:46.515
+So, I can say, "All right, here is user ID,
+
+00:00:46.515 --> 00:00:47.774
+number of things bought,
+
+00:00:47.774 --> 00:00:49.424
+and they were in the treatment group.
+
+00:00:49.424 --> 00:00:53.029
+That's like the low level data that you can then build your own solution on as well,
+
+00:00:53.030 --> 00:00:55.570
+if that's something you need to do for their case.
+
+00:00:55.570 --> 00:00:58.784
+Let's say you have some treatment, some control group,
+
+00:00:58.784 --> 00:01:02.929
+maybe that's for some change to your landing page, or something like that,
+
+00:01:02.929 --> 00:01:06.349
+or change to some page where a user's making a decision,
+
+00:01:06.349 --> 00:01:09.334
+and what someone in the treatment group gets
+
+00:01:09.334 --> 00:01:13.250
+looks different than what somebody in a control group gets or something like that.
+
+00:01:13.250 --> 00:01:15.515
+So, you get all of these results.
+
+00:01:15.515 --> 00:01:18.394
+How do you determine when you end?
+
+00:01:18.394 --> 00:01:19.670
+How do you determine, "Okay,
+
+00:01:19.670 --> 00:01:23.359
+now we have enough data let's turn off the experiment.
+
+00:01:23.359 --> 00:01:24.980
+Everyone should move to this page.
+
+00:01:24.980 --> 00:01:26.870
+We know that this is the better of the pages."
+
+00:01:26.870 --> 00:01:29.404
+Yes, definitely when setting up experiments,
+
+00:01:29.403 --> 00:01:32.060
+one of the things we encourage is people to set
+
+00:01:32.060 --> 00:01:34.954
+up all of the metrics that they can ahead of time.
+
+00:01:34.954 --> 00:01:39.545
+Especially, indicate one or two that are your decision metrics.
+
+00:01:39.545 --> 00:01:42.280
+So, basically, you've committed yourself to,
+
+00:01:42.280 --> 00:01:45.409
+"All right, if these metrics move in the way that I want them to,
+
+00:01:45.409 --> 00:01:48.769
+and are maybe are like core business metrics,
+
+00:01:48.769 --> 00:01:51.905
+either move positively or not negatively,
+
+00:01:51.905 --> 00:01:56.435
+then it's a situation where I can be pretty confident that I want to watch".
+
+00:01:56.435 --> 00:02:02.430
+That being said, we also need to make sure that those metrics have enough data.
+
+00:02:02.430 --> 00:02:05.040
+So, at that point, you have a couple options,
+
+00:02:05.040 --> 00:02:08.150
+first of is doing power calculations ahead of time and
+
+00:02:08.150 --> 00:02:11.319
+making sure that you have enough users to make those decisions.
+
+00:02:11.319 --> 00:02:14.394
+So, for example, you might want to say at that time, "All right,
+
+00:02:14.395 --> 00:02:18.755
+I want to make sure that sales doesn't move more than one percent."
+
+00:02:18.754 --> 00:02:20.449
+So, how many users do I need?
+
+00:02:20.449 --> 00:02:22.669
+Roughly how many people hit my landing page?
+
+00:02:22.669 --> 00:02:25.399
+I can make a pretty simple projection, just say, "All right,
+
+00:02:25.400 --> 00:02:27.310
+I'm going to need to run this for two weeks,
+
+00:02:27.310 --> 00:02:30.860
+and at that point it can look at the metrics site designated
+
+00:02:30.860 --> 00:02:34.730
+At that point, I think this gets into the teams,
+
+00:02:34.729 --> 00:02:38.549
+but at that point are you talking to someone else and saying,
+
+00:02:38.550 --> 00:02:41.320
+"Here's the data that we have regarding this.
+
+00:02:41.319 --> 00:02:43.014
+Now, you make a decision.
+
+00:02:43.014 --> 00:02:44.964
+Here's our recommendations."
+
+00:02:44.965 --> 00:02:48.409
+Obviously, there are a lot of parts of the business that you're working with.
+
+00:02:48.409 --> 00:02:51.199
+So, do you ultimately make those decisions?
+
+00:02:51.199 --> 00:02:52.789
+Does someone else make those decisions?
+
+00:02:52.789 --> 00:02:55.759
+Is that team thing in a lot of companies?
+
+00:02:55.759 --> 00:02:58.699
+That's a great question. I think there's a lot of variation.
+
+00:02:58.699 --> 00:03:04.484
+But largely, product teams typically are running these experiments.
+
+00:03:04.485 --> 00:03:07.400
+The data scientists responsible for saying,
+
+00:03:07.400 --> 00:03:10.235
+"Okay, these are the things that are relevant to measure,
+
+00:03:10.235 --> 00:03:12.740
+and here's how we're going to measure them both
+
+00:03:12.740 --> 00:03:16.400
+from data flow perspective and a statistical perspective."
+
+00:03:16.400 --> 00:03:20.330
+At the end, often a product manager ends up making the final decision
+
+00:03:20.330 --> 00:03:24.605
+with input from the data scientist, engineering implications.
+
+00:03:24.604 --> 00:03:27.109
+Also, if they do need to coordinate across teams,
+
+00:03:27.110 --> 00:03:30.125
+if say my change is hurting some other teams metric,
+
+00:03:30.125 --> 00:03:32.819
+there can be a conversation with that other team.
+
+00:03:32.819 --> 00:03:37.549
+That really brings in a lot of communication components to your role as a data scientist,
+
+00:03:37.550 --> 00:03:40.250
+that maybe a lot of people don't think that they'll be
+
+00:03:40.250 --> 00:03:44.460
+doing on a regular basis, which is interesting.
+

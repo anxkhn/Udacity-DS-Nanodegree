@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.150 --> 00:00:10.970
+The final principle is to maintain good data sensitivity and privacy.
+
+00:00:10.970 --> 00:00:15.269
+If you're collecting information about individuals that could identify them,
+
+00:00:15.269 --> 00:00:18.179
+then you need to be careful that the data you collect is kept
+
+00:00:18.179 --> 00:00:22.379
+secure and only made available to those who need to see it.
+
+00:00:22.379 --> 00:00:25.884
+Sensitive information includes fields like name,
+
+00:00:25.885 --> 00:00:30.790
+account number, street address, pictures, and timestamps.
+
+00:00:30.789 --> 00:00:35.359
+If you need to publish findings that make use of sensitive information,
+
+00:00:35.359 --> 00:00:38.565
+make sure that it has been anonymized and perhaps
+
+00:00:38.564 --> 00:00:42.864
+aggregated so that individuals can't be backtraced from the data.
+
+00:00:42.865 --> 00:00:47.505
+Sometimes, just basic anonymization isn't always enough.
+
+00:00:47.505 --> 00:00:50.855
+An America Online data leak from 2006,
+
+00:00:50.854 --> 00:00:56.544
+accidentally released information about search terms by users over a three month period.
+
+00:00:56.545 --> 00:00:58.910
+Although there weren't names specifically
+
+00:00:58.909 --> 00:01:01.969
+attached to the searches made by each account ID,
+
+00:01:01.969 --> 00:01:05.314
+the searches were enough information for the New York Times
+
+00:01:05.314 --> 00:01:09.549
+to identify specific people from the released dataset.
+
+00:01:09.640 --> 00:01:13.790
+Handling ethical issues isn't always cut and dry.
+
+00:01:13.790 --> 00:01:19.325
+Sometimes, the dividing line between acceptable and unacceptable is hard to decide.
+
+00:01:19.325 --> 00:01:22.100
+In the medical and social science fields,
+
+00:01:22.099 --> 00:01:26.390
+Institutional Review Boards or IRBs have been set up to
+
+00:01:26.390 --> 00:01:30.980
+review experiment proposals to make sure that the risks have been properly considered,
+
+00:01:30.980 --> 00:01:34.025
+and the benefits line up appropriately.
+
+00:01:34.025 --> 00:01:38.130
+But unless you're conducting research through one of those institutions,
+
+00:01:38.129 --> 00:01:43.364
+it's likely that you will not have IRB oversight on your own experiments.
+
+00:01:43.364 --> 00:01:46.939
+So, it's very important to be aware of these issues,
+
+00:01:46.939 --> 00:01:48.859
+so that you do not put undue risk on
+
+00:01:48.859 --> 00:01:53.329
+your users when you make potentially impactful changes.
+

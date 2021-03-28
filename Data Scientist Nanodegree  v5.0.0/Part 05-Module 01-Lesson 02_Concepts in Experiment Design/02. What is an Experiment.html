@@ -1,0 +1,489 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What is an Experiment?</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Concepts in Experiment Design</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. What is an Experiment.html">02. What is an Experiment?</a>
+    </li>
+    <li class="">
+      <a href="03. Types of Experiment.html">03. Types of Experiment</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Sampling.html">04. Types of Sampling</a>
+    </li>
+    <li class="">
+      <a href="05. Measuring Outcomes.html">05. Measuring Outcomes</a>
+    </li>
+    <li class="">
+      <a href="06. Creating Metrics.html">06. Creating Metrics</a>
+    </li>
+    <li class="">
+      <a href="07. Controlling Variables.html">07. Controlling Variables</a>
+    </li>
+    <li class="">
+      <a href="08. Checking Validity.html">08. Checking Validity</a>
+    </li>
+    <li class="">
+      <a href="09. Checking Bias.html">09. Checking Bias</a>
+    </li>
+    <li class="">
+      <a href="10. Ethics in Experimentation.html">10. Ethics in Experimentation</a>
+    </li>
+    <li class="">
+      <a href="11. A SMART Mnemonic for Experiment Design.html">11. A SMART Mnemonic for Experiment Design</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Conclusion.html">12. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. What is an Experiment?</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>What Is An Experiment</p></h3>
+  <video controls>
+  <source src="02. What Is An Experiment-fH_xF5_SDCE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. What Is An Experiment-fH_xF5_SDCE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. What Is An Experiment-fH_xF5_SDCE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. What Is An Experiment-fH_xF5_SDCE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What Is An Experiment Pt 2</p></h3>
+  <video controls>
+  <source src="02. What Is An Experiment Pt 2-PYzN1usi7QY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. What Is An Experiment Pt 2-PYzN1usi7QY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. What Is An Experiment Pt 2-PYzN1usi7QY.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. What Is An Experiment Pt 2-PYzN1usi7QY.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="types-of-study">Types of Study</h2>
+<p>There are many ways in which data can be collected in order to test or<br />
+understand the relationship between two variables of interest. These methods<br />
+can be put into three main bins, based on the amount of control that you hold<br />
+over the variables in play:</p>
+<ul>
+<li>If you have a lot of control over features, then you have an <strong>experiment</strong>.</li>
+<li>If you have no control over the features, then you have an <strong>observational study</strong>.</li>
+<li>If you have some control, then you have a <strong>quasi-experiment</strong>.</li>
+</ul>
+<p>While the experiment is the main focus of this course, it's also useful to know<br />
+about the other types of study so that you can use them in effective ways, <br />
+especially if an experiment cannot be run.</p>
+<h3 id="experiments">Experiments</h3>
+<p>In the social and medical sciences, an experiment is defined by comparing <br />
+outcomes between two or more groups, and ensuring equivalence between the <br />
+compared groups <em>except</em> for the manipulation that we want to test. Our <br />
+interest in an experiment is to see if a change in one feature has an effect in <br />
+the value of a second feature, like seeing if changing the layout of a button <br />
+on a website <em>causes</em> more visitors to click on it. Having multiple groups is <br />
+necessary in order to compare the outcome for when we apply the manipulation to <br />
+when we do not (e.g. old vs. new website layout), or to compare different <br />
+levels of manipulation (e.g. drug dosages). We also need equivalence between <br />
+groups so that we can be as sure as possible that the differences in the <br />
+outcomes were only due to the difference in our manipulated feature.</p>
+<p>Equivalence between groups is typically carried out through some kind of<br />
+randomization procedure. A <strong>unit of analysis</strong> is the entity under study,<br />
+like a page view or a user in a web experiment. If we randomly assign our units<br />
+of analysis to each group, then on the whole, we should expect the feature<br />
+distributions between groups to be about the same. This theoretically isolates<br />
+the changes in the outcome to the changes in our manipulated feature. Of course,<br />
+we can always dig deeper afterwards to see if certain other features worked in<br />
+tandem with, or against, our manipulation.</p>
+<h3 id="observational-studies">Observational Studies</h3>
+<p>In an experiment, we exert a lot of control on a system in order to narrow down <br />
+the changes in our system from one source to one output. Observational studies, <br />
+on the other hand, are defined by a lack of control. Observational studies are <br />
+also known as naturalistic or correlational studies. In an observational study, <br />
+no control is exerted on the variables of interest, perhaps due to ethical <br />
+concerns or a lack of power to enact the manipulation. This often comes up in <br />
+medical studies. For example, if we want to look at the effects of smoking on <br />
+health, the potential risks make it unethical to force people into smoking <br />
+behaviors. Instead, we need to rely on existing data or groups to make our <br />
+determinations.</p>
+<p>We typically cannot infer causality in an observational study due to our lack <br />
+of control over the variables. Any relationship observed between variables may <br />
+be due to unobserved features, or the direction of causality might be uncertain. <br />
+(We'll discuss this more later in the lesson.) But simply because an <br />
+observational study does not imply causation does not mean that it is not <br />
+useful. An interesting relationship might be the spark needed to perform <br />
+additional studies or to collect more data. These studies can help strengthen <br />
+the understanding of the relationship we're interested in by ruling out more <br />
+and more alternative hypotheses.</p>
+<h3 id="quasi-experiments">Quasi-Experiments</h3>
+<p>In between the observational study and the experiment is the quasi-experiment. <br />
+This is where some, but not all, of the control requirements of a true <br />
+experiment are met. For example, rolling out a new website interface to all <br />
+users to see how much time they spend on it might be considered a <br />
+quasi-experiment. While the manipulation is controlled by the experimenter, <br />
+there aren't multiple groups to compare. The experimenter can still use the <br />
+behavior of the population pre-change and compare that to behaviors post-change, <br />
+to make judgment on the effects of the change. However, there is the <br />
+possibility that there are other effects outside of the manipulation that <br />
+caused the observed changes in behavior. For the example earlier in this <br />
+paragraph, it might be that users would have naturally gravitated to higher <br />
+usage rates, regardless of the website interface.</p>
+<p>As another example, we might have two different groups upon which to make a <br />
+comparison of outcomes, but the original groups themselves might not be <br />
+equivalent. A classic example of this is if a researcher wants to test some new <br />
+supplemental materials for a high school course. If they select two different <br />
+schools, one with the new materials and one without, we have a quasi-experiment <br />
+since the differing qualities of students or teachers at those schools might <br />
+have an effect on the outcomes. Ideally, we'd like to match the two schools <br />
+before the test as closely as possible, but we can't call it a true experiment <br />
+since the assignment of student to school can't be considered random.</p>
+<p>While a quasi-experiment may not have the same strength of causality inference <br />
+as a true experiment, the results can still provide a strong amount of <br />
+evidence for the relationship being investigated. This is especially true if <br />
+some kind of matching is performed to identify similar units or groups. Another <br />
+benefit of quasi-experimental designs is that the relaxation of requirements <br />
+makes the quasi-experiment more flexible and easier to set up.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Types of Study</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match each description below to the type of study it describes: a (true) experiment, a quasi-experiment, or an observational study.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+  <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+  <button class="btn btn-primary"><p>Observational Study</p></button>
+  <button class="btn btn-primary"><p>Experiment</p></button>
+  <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+  <button class="btn btn-primary"><p>Experiment</p></button>
+  <button class="btn btn-primary"><p>Observational Study</p></button>
+  <button class="btn btn-primary"><p>Observational Study</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Study Description</p>
+      </th>
+      <th>
+        <p>Type of Study</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>A blogger tries out a celebrity diet and exercise regimen, and documents their changes in weight and energy.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>An online retailer sends out personal coupon codes to half of their mailing list.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Historic data is collected to compare the effect of local curfew ordinances and downtown foot traffic.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>A regional store chain tests out a promotional discount at some of their stores to see if it increases sales.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Researchers compare the race times for runners based on the type of shoe that they wear.</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Study Description</p>
+        </th>
+        <th>
+          <p>Type of Study</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>A blogger tries out a celebrity diet and exercise regimen, and documents their changes in weight and energy.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A regional store chain tests out a promotional discount at some of their stores to see if it increases sales.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A blogger tries out a celebrity diet and exercise regimen, and documents their changes in weight and energy.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A regional store chain tests out a promotional discount at some of their stores to see if it increases sales.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Historic data is collected to compare the effect of local curfew ordinances and downtown foot traffic.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Researchers compare the race times for runners based on the type of shoe that they wear.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>An online retailer sends out personal coupon codes to half of their mailing list.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A blogger tries out a celebrity diet and exercise regimen, and documents their changes in weight and energy.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A regional store chain tests out a promotional discount at some of their stores to see if it increases sales.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Quasi-Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>An online retailer sends out personal coupon codes to half of their mailing list.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Experiment</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Historic data is collected to compare the effect of local curfew ordinances and downtown foot traffic.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Researchers compare the race times for runners based on the type of shoe that they wear.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Historic data is collected to compare the effect of local curfew ordinances and downtown foot traffic.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Researchers compare the race times for runners based on the type of shoe that they wear.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Observational Study</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="additional-reading">Additional Reading</h3>
+<p><a href="https://www.nytimes.com/interactive/2018/07/18/upshot/nike-vaporfly-shoe-strava.html" rel="noopener noreferrer" target="_blank">This</a> fascinating New York Times article details different ways of investigating the claim that Nike's Vaporfly running shoes provide a significant advantage in running speed, despite not being able to run a true, randomized experiment.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Types of Experiment.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. What is an Experiment?')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

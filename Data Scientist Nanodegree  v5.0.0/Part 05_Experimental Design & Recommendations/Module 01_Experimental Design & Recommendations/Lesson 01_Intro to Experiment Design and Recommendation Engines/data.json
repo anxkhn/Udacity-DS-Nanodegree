@@ -1,0 +1,174 @@
+{
+  "data": {
+    "lesson": {
+      "id": 729740,
+      "key": "845f6346-72ba-4028-b2e4-06c36b5202a0",
+      "title": "Intro to Experiment Design and Recommendation Engines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Why do we care about experiment design and recommendation engines? In this lesson, you'll get an overview of the topics you'll learn in this course.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/845f6346-72ba-4028-b2e4-06c36b5202a0/729740/1560325389954/Intro+to+Experiment+Design+and+Recommendation+Engines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/845f6346-72ba-4028-b2e4-06c36b5202a0/729740/1560325387717/Intro+to+Experiment+Design+and+Recommendation+Engines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 729741,
+          "key": "2c1dda15-f59b-46ec-af25-d0edb12f480f",
+          "title": "Intro to Experiment Design and Recommendation Engines",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2c1dda15-f59b-46ec-af25-d0edb12f480f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730109,
+              "key": "4def8604-de0b-4f5f-bb2b-943189c31486",
+              "title": "C4 Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gXlqR86h0yI",
+                "china_cdn_id": "gXlqR86h0yI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 729742,
+          "key": "49bb47bd-9411-4ef4-be7a-60d5760135c4",
+          "title": "Course Syllabus",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "49bb47bd-9411-4ef4-be7a-60d5760135c4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730111,
+              "key": "15b0265f-c402-4fd1-8ecd-8e4cd1be4c96",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Experimental Design & Recommendation Engines\n\nThe upcoming course is comprised of two broad topics: **experimental design** and **recommendation engines**.  \n\n_____\n\n### Experimental Design\nWithin the **experimental design** portion of this course, there are three lessons:\n\n**I. Concepts of Experiment Design** <br>\nHere you will learn about what it means to run an experiment, and how this differs from observational studies. Topics include not only what to include in an experimental design, but also what to watch out for when designing an experiment. \n\n**II. Statistical Considerations in Testing** <br>\nIn this lesson, you will learn about statistical techniques and considerations used when evaluating the data collected during an experiment. It is expected that you come into the course with knowledge about inferential statistics; the content here will see you applying that knowledge in different ways.\n\n**III. A/B Testing Case Study**<br>\nHere, you will put your skills to work to analyze data related to a change on a web page designed to increase purchasers of software.\n\n\nAt the end of these lessons, you can complete an optional **Portfolio Exercise** in coordination with our industry partner Starbucks.  In the project, you will learn more about how Starbucks conducts experiments.  You will also get access to data related to a hiring screen that was once conducted by Starbucks to test ideas related to experimental design and statistical metrics.\n\n_____\n\n### Recommendation Engines\nThe **recommendation engines** portion of the course has two lessons:\n\n**I. Introduction to Recommendation Engines**<br>\nIn this lesson, you will learn about the main ideas associated with recommendation engines.  This includes techniques and measures of effectiveness.\n\n**II.  Matrix Factorization for Recommendations** <br>\nExtending on the previous lesson, you will learn about one of the most popular techniques for recommendation engines known as FunkSVD.  You will also complete a class that brings together a number of techniques to make recommendations for a number of different scenarios.\n\n______\n\n### Project\n\nAt the end of this course, you will complete a project that uses data from the IBM Watson Studio platform to make recommendations for which articles a user should engage with!  Hope you are excited to get started!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 729743,
+          "key": "2fdd1216-655c-42a9-93e6-c28c736e9482",
+          "title": "Interview: Dan [Coinbase]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2fdd1216-655c-42a9-93e6-c28c736e9482",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730113,
+              "key": "91c6c9df-9860-477e-8022-c0a630254488",
+              "title": "Dan Frank Interview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Me-KRvZW1QQ",
+                "china_cdn_id": "Me-KRvZW1QQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 751606,
+          "key": "b0f685da-47dc-41a2-9ef1-ff438baae550",
+          "title": "Interview: Richard [Starbucks]",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b0f685da-47dc-41a2-9ef1-ff438baae550",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 751607,
+              "key": "bb050ebb-4d9b-454e-9554-8e1a972212ab",
+              "title": "Experimental Design Insights With Richard Sharp",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XDBw2nfOrsU",
+                "china_cdn_id": "XDBw2nfOrsU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 729744,
+          "key": "c58ab537-9709-4a40-9e28-fee7911057c4",
+          "title": "Lesson Outro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c58ab537-9709-4a40-9e28-fee7911057c4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730108,
+              "key": "8afa9bc7-6f59-4179-a90e-2a4a7bb923a8",
+              "title": "Outro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "dVrYQ7o8a-k",
+                "china_cdn_id": "dVrYQ7o8a-k.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

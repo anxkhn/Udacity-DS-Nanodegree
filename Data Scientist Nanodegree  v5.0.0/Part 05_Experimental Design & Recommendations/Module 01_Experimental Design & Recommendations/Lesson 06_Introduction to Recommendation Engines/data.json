@@ -1,0 +1,1845 @@
+{
+  "data": {
+    "lesson": {
+      "id": 665331,
+      "key": "e4d1dfe0-b39b-4e19-93be-b577f7beb6e6",
+      "title": "Introduction to Recommendation Engines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn about the different methods used to create recommendation engines.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/e4d1dfe0-b39b-4e19-93be-b577f7beb6e6/665331/1540515248897/Introduction+to+Recommendation+Engines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/e4d1dfe0-b39b-4e19-93be-b577f7beb6e6/665331/1540515242609/Introduction+to+Recommendation+Engines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 665789,
+          "key": "3da7beae-f548-4922-ab6b-fda8527df0e6",
+          "title": "Video: Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3da7beae-f548-4922-ab6b-fda8527df0e6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737445,
+              "key": "f019be4b-f644-4d0e-8b3d-4a488e67bf71",
+              "title": "Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "svCesgAQ46Q",
+                "china_cdn_id": "svCesgAQ46Q.mp4"
+              }
+            },
+            {
+              "id": 689971,
+              "key": "e449e29f-0435-4534-b633-f0e767697c2a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Introduction\n\nRecommendations are being used to recommend everything from movies to music to friends to new destinations.  There are three main methods for implementing recommendations that you will become familiar with throughout this lesson:\n\n* Knowledge Based Recommendations\n* Collaborative Filtering Based Recommendations\n* Content Based Recommendations\n\nAfter completing this lesson, you will be ready for the upcoming lessons where you will\n* Learn about more advanced techniques.\n* Deploy your recommendations in a web application.\n\nThese three lessons will aim to be extremely practical.  The lessons will require that you write code to implement a number of different recommendation techniques.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 665798,
+          "key": "18d91132-1f28-4e40-bd7e-bbbecdc492b2",
+          "title": "Video + Text: Example Recommendation Engines",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "18d91132-1f28-4e40-bd7e-bbbecdc492b2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737452,
+              "key": "3b6f9e9e-8208-433b-93fd-99c5484033af",
+              "title": "Identifying Recommendation Engines",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "KwegrgvV-V4",
+                "china_cdn_id": "KwegrgvV-V4.mp4"
+              }
+            },
+            {
+              "id": 690310,
+              "key": "646a3144-99bc-48f6-b9e9-dccb356c439e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Example Recommendations\n\n* #### LinkedIn and Facebook \n\nBoth LinkedIn and Facebook have recommendations for connections (business of friends) similar to what is shown below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690311,
+              "key": "65463f3d-c6d0-4117-a5fa-81454d0cf7ef",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6a23b3_new-pymk-925x1024/new-pymk-925x1024.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/65463f3d-c6d0-4117-a5fa-81454d0cf7ef",
+              "caption": "",
+              "alt": "",
+              "width": 925,
+              "height": 1024,
+              "instructor_notes": null
+            },
+            {
+              "id": 665799,
+              "key": "84bc63f2-f575-461d-9309-b0f5ab163afd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "* #### AirBnB Experiences and Destinations\n\nAirBnB uses recommendations to determine experiences and destinations for their users.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690316,
+              "key": "a4b27d00-8786-41fb-a76b-6f3fa4865647",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6a298f_collage2/collage2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a4b27d00-8786-41fb-a76b-6f3fa4865647",
+              "caption": "",
+              "alt": "",
+              "width": 1300,
+              "height": 1080,
+              "instructor_notes": null
+            },
+            {
+              "id": 690317,
+              "key": "b55f9d37-eee7-49ac-9c14-9e77c96be4e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "* #### Walmart, Amazon, and Other Retailers\n\nAs humans on the Internet, we all get pinged with constant recommendations from retailers.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690318,
+              "key": "ec265d49-369b-4e21-813f-e9c99b9e76e6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6a2cd4_screen-shot-2018-08-07-at-4.35.30-pm/screen-shot-2018-08-07-at-4.35.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ec265d49-369b-4e21-813f-e9c99b9e76e6",
+              "caption": "",
+              "alt": "",
+              "width": 310,
+              "height": 848,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 668653,
+          "key": "b11eb677-cd0b-4750-99b0-81824ad5a043",
+          "title": "Text: What's Ahead?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b11eb677-cd0b-4750-99b0-81824ad5a043",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 668654,
+              "key": "b16bb40c-25e8-4694-a75c-9d35bbb2ba1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ### What's Ahead\n\n#### Types of Recommendations\n\nIn this lesson, you will be working with the MovieTweetings data to apply each of the three methods of recommendations:\n\n1. Knowledge Based Recommendations\n2. Collaborative Filtering Based Recommendations\n3. Content Based Recommendations\n\nWithin Collaborative Filtering, there are two main branches:\n\n1. Model Based Collaborative Filtering\n2. Neighborhood Based Collaborative Filtering\n\nIn this lesson, you will implement Neighborhood Based Collaborative Filtering.  In the next lesson, you will implement Model Based Collaborative Filtering.  \n\n#### Similarity Metrics\n\nIn order to implement Neighborhood Based Collaborative Filtering, you will learn about some common ways to measure the similarity between two users (or two items) including:\n\n1. Pearson's correlation coefficient\n2. Spearman's correlation coefficient\n3. Kendall's Tau\n4. Euclidean Distance\n5. Manhattan Distance\n\nYou will learn why sometimes one metric works better than another by looking at a specific situation where one metric provides more information than another.\n\n#### Business Cases For Recommendations\n\nFinally, you will look at the four ideas needed for businesses to implement successful recommendations to drive revenue, which include:\n\n1. Relevance\n2. Novelty\n3. Serendipity\n4. Increased Diversity\n\nAt the end of this lesson, you will have gained a ton of skills to build upon or to start creating your own recommendations in practice.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 665801,
+          "key": "9cbc0b37-b446-457e-9594-f1ace8ff850c",
+          "title": "Video: Introduction to MovieTweetings",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9cbc0b37-b446-457e-9594-f1ace8ff850c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737454,
+              "key": "4f4061d7-2499-4bbb-ae33-5663ab4a04c8",
+              "title": "Intro To MovieTweetings",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cuXvLIkq_W8",
+                "china_cdn_id": "cuXvLIkq_W8.mp4"
+              }
+            },
+            {
+              "id": 689975,
+              "key": "184a3414-3539-48cd-8a42-0b81f763c9c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### MovieTweetings\n\nIf you would like additional information about the MovieTweetings data, you can find more information at the links provided here:\n\n* [The MovieTweetings white paper.](http://crowdrec2013.noahlab.com.hk/papers/crowdrec2013_Dooms.pdf)\n* [A Github account set up for MovieTweetings](https://github.com/sidooms/MovieTweetings)\n* [A slide deck by Simon Doom about MovieTweetings.](https://www.slideshare.net/simondooms/movie-tweetings-a-movie-rating-dataset-collected-from-twitter)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 665334,
+          "key": "7a21c21d-e482-4b95-b714-3b59a8d71c65",
+          "title": "Notebook: MovieTweeting Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7a21c21d-e482-4b95-b714-3b59a8d71c65",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 665335,
+              "key": "72ba6cbb-4627-46d2-b1ef-cc4f574ed89c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3f484599",
+              "pool_id": "jupyter",
+              "view_id": "3f484599-f1d4-43a2-af54-dc340582baf3",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": {
+                      "id": "data-science-datasets",
+                      "paths": [
+                        {
+                          "src": "/",
+                          "dest": "/home/workspace/data"
+                        }
+                      ]
+                    },
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Introduction%20to%20the%20Recommendation%20Data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 667223,
+          "key": "1b90f7fa-cdbb-4b64-9a14-9e61fc429eed",
+          "title": "Screencast: Solution MovieTweeting Data ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1b90f7fa-cdbb-4b64-9a14-9e61fc429eed",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766579,
+              "key": "425677e9-423f-4ba5-8463-2385cea8a8bf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is available in two videos below.  Remember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I: Data Characteristics",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766571,
+              "key": "9500fc31-c77a-4f00-bd1b-bb82e88899c3",
+              "title": "Recommendations 1 6 0950 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yrNZ0sQwNcs",
+                "china_cdn_id": "yrNZ0sQwNcs.mp4"
+              }
+            },
+            {
+              "id": 766580,
+              "key": "9c0d7e04-856c-42d0-8ec2-22e29f601d26",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II: Data Cleaning",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766581,
+              "key": "c9da8438-b970-4544-9561-3515c6d523c5",
+              "title": "Recommendations 1 6 11123244 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QlILlYuWF9U",
+                "china_cdn_id": "QlILlYuWF9U.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 665806,
+          "key": "1d5b4a42-b16e-4cd9-9d28-c369003637be",
+          "title": "Video: Ways to Recommend: Knowledge Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1d5b4a42-b16e-4cd9-9d28-c369003637be",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737447,
+              "key": "081446aa-33db-42b2-9348-16f45da2372d",
+              "title": "Knowledge Based Recommendations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "C_vU1tjQHZI",
+                "china_cdn_id": "C_vU1tjQHZI.mp4"
+              }
+            },
+            {
+              "id": 690333,
+              "key": "a1086712-1588-4f83-9288-e4b3c1ed2a23",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Knowledge Based Recommendations\n\nA knowledge based recommendation is one in which knowledge about the item or user preferences are used to make a recommendation.  \n\nKnowledge based recommendations are pretty common when purchasing luxury items.  Take a look at the filters available on Zillow in the image below.  This is an example of building in a knowledge based recommendation, as users can add their own preferences to the items that are provided.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690332,
+              "key": "37c7235c-88ba-48ae-bffe-839632e490d9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6a4153_screen-shot-2018-08-07-at-6.02.41-pm/screen-shot-2018-08-07-at-6.02.41-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/37c7235c-88ba-48ae-bffe-839632e490d9",
+              "caption": "",
+              "alt": "",
+              "width": 487,
+              "height": 488,
+              "instructor_notes": null
+            },
+            {
+              "id": 690334,
+              "key": "25cc7e95-f45b-41e1-bb90-42787c263f79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Often a rank based algorithm is provided along with knowledge based recommendations to bring the most popular items in particular categories to the user's attention.\n\nIn the next concept, you will get some practice implementing this type of recommendation for the MovieTweetings dataset.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 667221,
+          "key": "ac6a6b1f-54e7-4965-bdd3-95f557a883ef",
+          "title": "Notebook: Knowledge Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ac6a6b1f-54e7-4965-bdd3-95f557a883ef",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 667802,
+              "key": "c74b9b58-d5af-4c88-928b-90b5d3d143fe",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3f484599",
+              "pool_id": "jupyter",
+              "view_id": "1a112568-6d49-418d-a9ef-b250598e3c89",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": {
+                      "id": "data-science-datasets",
+                      "paths": [
+                        {
+                          "src": "/",
+                          "dest": "/home/workspace/data"
+                        }
+                      ]
+                    },
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Most_Popular_Recommendations.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 667800,
+          "key": "a17ea89a-f840-4616-90c0-4eb68ab907a6",
+          "title": "Screencast: Solution Knowledge Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a17ea89a-f840-4616-90c0-4eb68ab907a6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766586,
+              "key": "f690d528-6a25-4f20-9447-353af2964ee2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is available in two videos below.  Remember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I: Ranked Based Recommendations",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766584,
+              "key": "dbcd5510-6be4-4b10-a3fe-ace8d1fa6578",
+              "title": "Recommendations 1 9 03362 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MwRSg5RASoc",
+                "china_cdn_id": "MwRSg5RASoc.mp4"
+              }
+            },
+            {
+              "id": 766589,
+              "key": "3af6604f-c3e9-42bc-a15b-e7c625346632",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II: Knowledge Based Recommendations (Creating Filters)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766587,
+              "key": "31c95fc1-aea9-4baf-84f7-e37e3ccf6a83",
+              "title": "Recommendations 1 9 33514421 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TCaeEdrbYRc",
+                "china_cdn_id": "TCaeEdrbYRc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 667817,
+          "key": "80bc90c8-5007-40ed-b321-671492b64597",
+          "title": "Video: More Personalized Recommendations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80bc90c8-5007-40ed-b321-671492b64597",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737448,
+              "key": "91bd55fc-783d-4daf-993f-a062b744aa44",
+              "title": "More Personalized Recommendations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9l8mi7i6iW4",
+                "china_cdn_id": "9l8mi7i6iW4.mp4"
+              }
+            },
+            {
+              "id": 690339,
+              "key": "114be53d-606f-4f99-acdb-acff83f436b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### More Personalized Recommendations\n\nIn some cases, we need to be able to send recommendations without a user telling us exactly what they want or in a more personalized way than simply the top items. Imagine you want to send an email of recommendations or place recommendations within a web page (the side of a blog or as a banner advertisement); in these cases, it is often useful to implement information that we know about users or items to make these recommendations.  This leads to some additional recommendation methods!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 667908,
+          "key": "002d5a34-7a0d-4b71-9182-364d5dbc431e",
+          "title": "Video: Ways to Recommend: Collaborative Filtering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "002d5a34-7a0d-4b71-9182-364d5dbc431e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737455,
+              "key": "4b9793a9-6a4f-429f-aa7c-846a74af8cae",
+              "title": "Intro To Collab Filtering",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wGq7dUgJpsc",
+                "china_cdn_id": "wGq7dUgJpsc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689506,
+          "key": "196c9469-d25f-41f6-8911-2d93f20ed114",
+          "title": "Video + Quiz: Collaborative Filtering & Content Based Recs",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "196c9469-d25f-41f6-8911-2d93f20ed114",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737449,
+              "key": "3116e316-25b4-4fcc-8364-91d36c7be4eb",
+              "title": "Types Of Collaborative Filtering",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "fZhkWHHP6SM",
+                "china_cdn_id": "fZhkWHHP6SM.mp4"
+              }
+            },
+            {
+              "id": 690342,
+              "key": "04f466ca-0321-4563-b2ff-81684c16c00e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Collaborative Filtering and Content Based Recommendations\n\n**Collaborative filtering** is a method of making recommendations based only on the interactions between users and items.  \n\nAlternatively, **content based recommendations** are when we use information about the users or items to assist in our recommendations.  \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 690357,
+              "key": "adefb878-5241-44f5-8153-dc476f109469",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "adefb878-5241-44f5-8153-dc476f109469",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "For each of the scenarios below, match the type of recommender that is being implemented."
+                },
+                "concepts_label": "Situation",
+                "answers_label": "Recommender",
+                "concepts": [
+                  {
+                    "text": "From a drop down menu Natasha chooses that she is only interested in purchasing items located in Wisconsin.  This is an example of a ...",
+                    "correct_answer": {
+                      "id": "a1533712669659",
+                      "text": "Knowledge Based Recommendation"
+                    }
+                  },
+                  {
+                    "text": "An ad agency noticed that Erica was reading about robotics, and therefore, found additional robotics items she might like.  This is an example of a ...",
+                    "correct_answer": {
+                      "id": "a1533712677283",
+                      "text": "Content Based Recommendation"
+                    }
+                  },
+                  {
+                    "text": "We know that Pradeep and Mike both have similar tastes in books. If we recommend a book Mike has read to Pradeep, this is an example of a...",
+                    "correct_answer": {
+                      "id": "a1533712678209",
+                      "text": "Collaborative Filtering Based Recommendation"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1533712678209",
+                    "text": "Collaborative Filtering Based Recommendation"
+                  },
+                  {
+                    "id": "a1533712669659",
+                    "text": "Knowledge Based Recommendation"
+                  },
+                  {
+                    "id": "a1533712677283",
+                    "text": "Content Based Recommendation"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 689507,
+          "key": "7309e2c2-d588-423c-a764-e19d2627a4d5",
+          "title": "Video + Text: Measuring Similarity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7309e2c2-d588-423c-a764-e19d2627a4d5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737450,
+              "key": "9afa9cdc-d131-4420-95a7-20e1e8a23ad6",
+              "title": "Measuring SImilarity",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "G_Y6IPmp7Xs",
+                "china_cdn_id": "G_Y6IPmp7Xs.mp4"
+              }
+            },
+            {
+              "id": 690359,
+              "key": "cb09ff51-d123-4b24-ad75-f7eafe6679a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Collaborative Filtering\n\nThere are two main ways to implement collaborative filtering:\n\n1. **Model Based Collaborative Filtering**\n2. **Neighborhood Based Collaborative Filtering**\n\nIn this lesson, we will cover Neighborhood Based Collaborative Filtering, which is used to identify items or users that are \"neighbors\" with one another.\n\nThere are a number of ways we might go about finding an individual's closest neighbors - the metrics we will take a closer look at include:\n\n1. Pearson's correlation coefficient\n2. Spearman's correlation coefficient\n3. Kendall's Tau\n4. Euclidean Distance\n5. Manhattan Distance\n\nOn the next page, you will work through a few examples to get more familiar with how each of these metrics is computed, and why you might use one over another.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689508,
+          "key": "1bee73b8-dc55-4023-a8cd-59d6a4f7cc8d",
+          "title": "Notebook: Measuring Similarity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1bee73b8-dc55-4023-a8cd-59d6a4f7cc8d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690549,
+              "key": "b01d00f2-7048-42c9-825a-bae9398c08fe",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3f484599",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-By6vaRdHQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": {
+                      "id": "data-science-datasets",
+                      "paths": [
+                        {
+                          "src": "/",
+                          "dest": "/home/workspace/data"
+                        }
+                      ]
+                    },
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Measuring%20Similarity.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 689511,
+          "key": "bddb9617-17fe-446e-9f3d-c2b2ff5c0717",
+          "title": "Screencast: Solution Measuring Similarity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bddb9617-17fe-446e-9f3d-c2b2ff5c0717",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766596,
+              "key": "a6b53974-366c-4af5-9275-4b62a380f71d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is available in three videos below.  Remember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I: Pearson's Correlation Coefficient",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766599,
+              "key": "0bf0b23c-ffde-4d03-bb8a-6c3cd08b6b17",
+              "title": "Recommendations 1 14 012725 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Y1dN-mB39rM",
+                "china_cdn_id": "Y1dN-mB39rM.mp4"
+              }
+            },
+            {
+              "id": 691149,
+              "key": "0a628b75-d906-4f00-9f2c-62762596d4dd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II: Spearman's Correlation Coefficient",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766602,
+              "key": "63bf6674-26c0-4196-9803-b31071148fd3",
+              "title": "Recommendations 1 14 7251010 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sVZ5S1nnRf8",
+                "china_cdn_id": "sVZ5S1nnRf8.mp4"
+              }
+            },
+            {
+              "id": 766603,
+              "key": "bac4b2f8-40ed-4dd3-9591-8e2e3e2ade77",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part III: Kendall's Tau",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766601,
+              "key": "cc0f0798-1eb1-4ac7-9563-7e3af108aec3",
+              "title": "Recommendations 1 14 10131720 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DWHYK0XSI70",
+                "china_cdn_id": "DWHYK0XSI70.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689615,
+          "key": "c01ff04f-8b45-4a9c-acd6-f8105c5fa094",
+          "title": "Video: Identifying Recommendations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c01ff04f-8b45-4a9c-acd6-f8105c5fa094",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737453,
+              "key": "7d0b5fe6-1338-456b-8575-e38266acb94e",
+              "title": "Identifying Recommendations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "P60qvS_OTMg",
+                "china_cdn_id": "P60qvS_OTMg.mp4"
+              }
+            },
+            {
+              "id": 689898,
+              "key": "9185702b-ffa6-4553-b838-90b9f3d4a410",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n### Making Recommendations\n\nFinalizing our neighborhood based recommendations, we need to use the ratings from our neighbors to influence the ratings we provide to other users.\n\nThere are a few ways to do this, but a simple method would be to:\n\n1. Remove movies our user has already seen.\n2. Find ratings of the neighbors that are high.\n3. Recommend movies to each user where both 1 and 2 above hold.\n\nOther methods for making recommendations using collaborative filtering are based on weighting of the neighbors' ratings based on the 'closeness' of the neighbors.\n\nYou can use each of the following two papers to learn more about this technique:\n\n1. [Domino Data Lab Paper](https://blog.dominodatalab.com/recommender-systems-collaborative-filtering/)\n2. [Semantic Scholar Paper On Weighted Ratings](https://pdfs.semanticscholar.org/3e9e/bcd9503ef7375c7bb334511804d1e45127e9.pdf)\n\nIn the next notebook, you will implement the three-step process above to make recommendations for every user in the dataset. For computational reasons, you will notice that iterating this approach through all users has been done for you. But you will go through the process of implementing for individual pairs of users, which could easily be extended via looping to all users.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 668655,
+          "key": "3bcba49e-09a6-425d-bdf0-a081e641fb99",
+          "title": "Notebook: Collaborative Filtering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3bcba49e-09a6-425d-bdf0-a081e641fb99",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691265,
+              "key": "c9e233ff-cf71-4ba7-98a4-58abde9b664a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3f484599",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-dxw51eeoc7g",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": {
+                      "id": "data-science-datasets",
+                      "paths": [
+                        {
+                          "src": "/",
+                          "dest": "/home/workspace/data/"
+                        }
+                      ]
+                    },
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Collaborative%20Filtering.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 668656,
+          "key": "917dce3c-5528-4b63-b2f5-8f1038caae1c",
+          "title": "Screencast: Solution Collaborative Filtering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "917dce3c-5528-4b63-b2f5-8f1038caae1c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 690560,
+              "key": "4a53026c-0acf-4309-b77c-ee3d8694edce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nGiven all the moving parts of the previous notebook, the solution is available in nine videos (5 on this page, and the remaining 4 on the following page).  For the final portion of the notebook, each function received a video to ensure reasonable time was provided to walk through how the function was created. \n\nRemember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766801,
+              "key": "eb9a72d1-0c69-410a-8c73-11bf1b66c051",
+              "title": "Recommendations 1 17a 0422 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "J4MOXJhMGGA",
+                "china_cdn_id": "J4MOXJhMGGA.mp4"
+              }
+            },
+            {
+              "id": 766802,
+              "key": "d1ca20fc-e8c2-47ea-bb9d-88b6e971f209",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II",
+              "instructor_notes": ""
+            },
+            {
+              "id": 790614,
+              "key": "2c598c67-9550-4558-a8cd-e3aeec218e74",
+              "title": "Recommendations 1 17a 4422330 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DJfwhP_vvh4",
+                "china_cdn_id": "DJfwhP_vvh4.mp4"
+              }
+            },
+            {
+              "id": 766816,
+              "key": "75da7ce2-c62a-4553-ba29-05bc867447df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part III: ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766815,
+              "key": "85b285f4-b4a3-4f2d-906b-62220f8e577c",
+              "title": "Recommendations 1 17a 23313044 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pcaaBWbe34Y",
+                "china_cdn_id": "pcaaBWbe34Y.mp4"
+              }
+            },
+            {
+              "id": 766839,
+              "key": "ee5301cc-c1a7-484e-93b8-2d6a51e2bac3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part IV:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766823,
+              "key": "227a0039-d902-4bb2-b197-9e387cab70d7",
+              "title": "Recommendations 1 17b 5451216 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lf2Q0AE5esk",
+                "china_cdn_id": "lf2Q0AE5esk.mp4"
+              }
+            },
+            {
+              "id": 766818,
+              "key": "d001b5c1-c076-4655-bfcc-eba8ee98cf71",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part V:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766824,
+              "key": "f18b00da-9e3d-4906-9c50-0f0259c166dc",
+              "title": "Recommendations 1 17b 15022032 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "N9ytffw5AMg",
+                "china_cdn_id": "N9ytffw5AMg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 766831,
+          "key": "710464c5-b060-4f89-abd0-b61b71602310",
+          "title": "Screencast: Solutions for Collaborative Filtering",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "710464c5-b060-4f89-abd0-b61b71602310",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766833,
+              "key": "22b2b391-0cdf-4724-a7f6-8591cc14457b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution (Continued)\n\nHere you can find four videos that show how each of the final functions was created, as well as the solution to the final dictionaries of the notebook based on conceptual ideas.\n\nRemember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part VI: Movies Liked & Movie Names",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766838,
+              "key": "5ad77aed-6e96-4564-8faf-62f6334b5228",
+              "title": "Recommendations 1 17b 20332637 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UnDocJ9VUec",
+                "china_cdn_id": "UnDocJ9VUec.mp4"
+              }
+            },
+            {
+              "id": 766842,
+              "key": "bfac138a-0c9d-4310-9b26-65c3066ce14b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part VII",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766843,
+              "key": "7e9b3e38-a44e-4361-aee8-82eaa657cc37",
+              "title": "Recommendations 1 17b 26423140 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "uNQHtPrfi4o",
+                "china_cdn_id": "uNQHtPrfi4o.mp4"
+              }
+            },
+            {
+              "id": 766836,
+              "key": "a00b00c3-4367-4069-9f27-6c79ad885f27",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part VIII",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766841,
+              "key": "f7f05f62-ee79-4d32-9a45-e5cecab7e747",
+              "title": "Recommendations 1 17b 31423505 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "A0uOjClDnW8",
+                "china_cdn_id": "A0uOjClDnW8.mp4"
+              }
+            },
+            {
+              "id": 766837,
+              "key": "a06d2ccc-8de7-4170-af8b-b7c8fd689272",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part IX",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766840,
+              "key": "ac4e3aab-bc0f-473c-b777-688920af19eb",
+              "title": "Recommendations 1 17b 36044330 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "b5gFe8Ij-g0",
+                "china_cdn_id": "b5gFe8Ij-g0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 668657,
+          "key": "e1969ea7-a421-4a95-9c1c-aa03572a63f9",
+          "title": "Video: Ways to Recommend: Content Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e1969ea7-a421-4a95-9c1c-aa03572a63f9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737457,
+              "key": "76c3dee3-d98a-4a6b-88c5-96fd256768ea",
+              "title": "Content Based Recommendations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pnGHpB77Mys",
+                "china_cdn_id": "pnGHpB77Mys.mp4"
+              }
+            },
+            {
+              "id": 691152,
+              "key": "c9e24345-1947-493b-aef8-9db58e1ae33b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Content Based Recommendations\n\nIn the previous notebook, you implemented collaborative filtering to make recommendations based on finding similar users.  However, there were a number of users who did not receive recommendations when using this technique.  For this reason, we might use other recommendation techniques to find items to recommend to users.  \n\nAnother popular technique for making recommendations is called **content based** recommendations.  In this recommendation technique, we use information that is known about the user or item to make recommendations.  This method of making recommendations is particularly useful when we do not have a lot of user-item connections available in our dataset.  \n\nIt might be the case that content based and collaborative filtering based techniques come up with similar recommendations, but the methods by which data scientists approach these recommendations are very different.  In collaborative filtering, you are using the connections of users and items (as you did before).  In content based techniques, you are using information about the users and items, but not connections (hence the usefulness when you do not have a lot of internal data already available to use).\n\nLet's take a look at how we might implement this method with the MovieTweetings data.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 668658,
+          "key": "1de05f15-874c-425c-b40e-0c69e52a51f0",
+          "title": "Notebook: Content Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1de05f15-874c-425c-b40e-0c69e52a51f0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691650,
+              "key": "baa71801-50ed-4f3b-84ec-ddef820f67c9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3f484599",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-cvnncdbabke",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": {
+                      "id": "data-science-datasets",
+                      "paths": [
+                        {
+                          "src": "/",
+                          "dest": "/home/workspace/data"
+                        }
+                      ]
+                    },
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Content%20Based%20Recommendations.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 668659,
+          "key": "3f6fdf4e-2209-4887-aabe-1ec38068237a",
+          "title": "Screencast: Solution Content Based",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3f6fdf4e-2209-4887-aabe-1ec38068237a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766631,
+              "key": "e319a9b2-bbae-4253-a1e3-7bbe179e0dc2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution\n\nThe solution to the previous notebook is available in four videos below.  Remember you can access the solution notebooks from within the classroom workspaces by clicking on the orange, Jupyter Notebook icon in the upper left hand corner.\n\n### Solution Part I",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766634,
+              "key": "bc504fcc-2e2e-4b02-9b01-1de97900265d",
+              "title": "Recommendations 1 20 0425 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vPpX7ITgb3g",
+                "china_cdn_id": "vPpX7ITgb3g.mp4"
+              }
+            },
+            {
+              "id": 691651,
+              "key": "23ec928f-b560-44af-a933-ae8d478ba147",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part II",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766635,
+              "key": "bbdf40a6-8d58-4537-92fb-496d03bf1b29",
+              "title": "Recommendations 1 20 4271048 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2On65U7Panw",
+                "china_cdn_id": "2On65U7Panw.mp4"
+              }
+            },
+            {
+              "id": 766632,
+              "key": "ad811bab-5fc4-4bab-ae76-b41cda5aa22a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part III ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766932,
+              "key": "1170e0ca-8e23-43e3-ad87-070eb740fb5c",
+              "title": "Recommendations 1 20 10491855 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "BafXxtTuZgQ",
+                "china_cdn_id": "BafXxtTuZgQ.mp4"
+              }
+            },
+            {
+              "id": 766633,
+              "key": "705caba4-baff-4a4a-a1dc-f677ce863cba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Part IV",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766803,
+              "key": "5a601a1a-8910-44bd-a0d2-580043913139",
+              "title": "Recommendations 1 20 10491855 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pjoxB00grHw",
+                "china_cdn_id": "pjoxB00grHw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 766662,
+          "key": "c2df17ba-b03f-4cd9-9347-5ff1faea0d67",
+          "title": "Video: Three Types of Recommendation Systems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c2df17ba-b03f-4cd9-9347-5ff1faea0d67",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766664,
+              "key": "4c1833c0-98b2-484d-a62f-991c4ac55d3b",
+              "title": "Types Of Recommendations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "uoXF81AO21E",
+                "china_cdn_id": "uoXF81AO21E.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 668660,
+          "key": "17f50fe0-00be-402b-9787-23e9d39b05af",
+          "title": "Text: More Recommendation Technniques",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "17f50fe0-00be-402b-9787-23e9d39b05af",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691157,
+              "key": "14d02057-4271-4f70-9acb-d98db38c758c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Three Types of Recommendations\n\nThere are three methods that you have now implemented for making recommendations.  These are the three most recognized methods in industry:\n\n`1.` Knowledge Based Recommendations\n\nKnowledge based recommendations frequently are implemented using filters, and are extremely common amongst luxury based goods.  Filters that you might see when purchasing items like cars or homes are examples of knowledge based recommendations. In knowledge based recommendations, users provide information about the types of recommendations they would like back.\n\n`2.` Collaborative Filtering Based Recommendations\n\nCollaborative filtering uses the connections between users and items to make recommendations. Even the content based recommendation you just implemented used some collaborative filtering techniques, as you were not treating items and users independent from one another. In this lesson, you used neighborhood based collaborative filtering to find users who were alike and then recommend new movies based on these similar users.  \n\nEven in the content based recommendation, you were using collaborative filtering.  You were finding items that were similar and making recommendations of new items based on the highest ratings of a user. Because you were still using the user ratings of an item, this was an example of a blend between content and collaborative filtering based techniques.\n\n`3.` Content Based Recommendations\n\nIn the previous notebook, you created a matrix of similarities between items (movies) based only on the content related to those movies (year and genre). The similarity matrix that was used, was completely created using only the items (movies).  There was no information used about the users implemented. For any movie, you would be able to determine the most related additional movies based only on the genre and the year of the movie. This is the premise of how a completely content based recommendation would be made.\n\nOften blended techniques of all three types are used in practice to provide the the best recommendation for a particular circumstance.  \n\nThere are still more advanced techniques that are related to the methods that you learned about here, and they will most likely fall in one of the three buckets below.  \n\n* [AirBnB uses embeddings in their recommendation, which you can read more about here](https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e).\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691653,
+              "key": "214cc385-2d6a-44f0-acbb-46c0b80fdcdf",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6f3e96_screen-shot-2018-08-11-at-12.52.21-pm/screen-shot-2018-08-11-at-12.52.21-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/214cc385-2d6a-44f0-acbb-46c0b80fdcdf",
+              "caption": "",
+              "alt": "",
+              "width": 596,
+              "height": 712,
+              "instructor_notes": null
+            },
+            {
+              "id": 691654,
+              "key": "ee7c134d-b9bb-4b46-bab3-08d63b9baaf7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "* [As our smart phones become more addicting every day, it is easy to see why location based recommendations will be more and more popular.  You can read more about these types of recommendations here.](https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-17885-1_1580)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691655,
+              "key": "f091cacd-a46c-4898-ad2f-49b04a122489",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6f3eb7_screen-shot-2018-08-11-at-12.52.03-pm/screen-shot-2018-08-11-at-12.52.03-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f091cacd-a46c-4898-ad2f-49b04a122489",
+              "caption": "",
+              "alt": "",
+              "width": 775,
+              "height": 281,
+              "instructor_notes": null
+            },
+            {
+              "id": 691656,
+              "key": "462ec81e-2867-4287-a9b0-00f115f2114e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "* [Many companies are also exploring deep learning use cases in recommendation systems.](https://ebaytech.berlin/deep-learning-for-recommender-systems-48c786a20e1a)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691657,
+              "key": "1d9a500f-b5e0-44c6-bcfb-c21ccb69ce00",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b6f3f18_screen-shot-2018-08-11-at-12.54.48-pm/screen-shot-2018-08-11-at-12.54.48-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1d9a500f-b5e0-44c6-bcfb-c21ccb69ce00",
+              "caption": "",
+              "alt": "",
+              "width": 738,
+              "height": 422,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 668915,
+          "key": "1f7188a7-29a2-4fe2-ba20-52f7be6e3454",
+          "title": "Quiz: Recommendation Methods",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f7188a7-29a2-4fe2-ba20-52f7be6e3454",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669313,
+              "key": "dbe6b842-a15e-4b68-be04-59ef5ce0145a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Self Check\n\nNow that you have gained exposure to each of the different types of recommendation techniques, let's see if you can tell what type of recommendation engine is being used in each of the below cases.  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691660,
+              "key": "c9f6061c-2271-41e7-8d3f-7b0b2f2e757a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c9f6061c-2271-41e7-8d3f-7b0b2f2e757a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You are interested in purchasing a new shirt.  You go through and look at a number of shirts online.  The next day while you are surfing the web, an advertisement pops up that says other users who liked the shirts you were looking at also liked these shirts (with new shirts shown).  This is an example of...",
+                "answers": [
+                  {
+                    "id": "a1534032834877",
+                    "text": "Knowledge Based",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534032872213",
+                    "text": "Collaborative Filtering",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534032886981",
+                    "text": "Content Based",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534032891050",
+                    "text": "A mix of the above methods.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 691661,
+              "key": "f1a9d158-18c4-47de-b11e-49c18ae366d5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f1a9d158-18c4-47de-b11e-49c18ae366d5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You are interested in purchasing a new shirt.  You go through and look at a number of shirts online.  The next day while you are surfing the web, an advertisement pops up that says here are some other items that were like the items you viewed yesterday.  This is an example of...",
+                "answers": [
+                  {
+                    "id": "a1534033137892",
+                    "text": "Knowledge Based",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534033216779",
+                    "text": "Collaborative Filtering",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534033222402",
+                    "text": "Content Based",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534033226079",
+                    "text": "A mix of the above methods.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 691662,
+              "key": "9a9c66ba-7cdf-4de4-89d3-2750a4ec3f26",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9a9c66ba-7cdf-4de4-89d3-2750a4ec3f26",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You are interested in purchasing a new shirt. You know you want a red shirt.  You use a filter to select that you only want red shirts. This is an example of...",
+                "answers": [
+                  {
+                    "id": "a1534033346280",
+                    "text": "Knowledge Based ",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534033795717",
+                    "text": "Collaborative Filtering",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534033804486",
+                    "text": "Content Based",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534033807812",
+                    "text": "A mix of the above methods.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 668916,
+          "key": "9642476d-533d-443f-971d-cc662d746774",
+          "title": "Video: Types of Ratings",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9642476d-533d-443f-971d-cc662d746774",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737800,
+              "key": "5bd07b0b-4705-4a75-8e07-57ce27857a1a",
+              "title": "Types Of Ratings",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "fMjqe4sxBlQ",
+                "china_cdn_id": "fMjqe4sxBlQ.mp4"
+              }
+            },
+            {
+              "id": 691658,
+              "key": "2e9b26a7-f062-4a4b-9b2e-14a0a42acd13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Different Scales\n\nIf you are in control of choosing your rating scale, think of what might be most beneficial to your scenario. If you are working alongside a team TO design the interfaces for how data will be collected, there are number of ideas to keep in mind.  \n\n* Do you need to ask questions of your user or can you collect data about their interactions with items?\n* If you need to ask questions, how many do you ask?\n* How do you word the questions?\n* And finally, the question in the above video: what type of scale should you use?\n\nIn general, I suggest using the simplest rating that allows you to get whatever questions of interest you have, but there are some important ideas to keep in mind when choosing a particular type of rating.  Ratings are a necessary part of working with different recommendation systems, but they aren't a central part of our focus.  A good overview of types of ratings and when to use them is also provided [here](https://conversionxl.com/blog/survey-response-scales/).  \n\nMost of these ideas are specific to your use case, and are easy to notice in hindsight.  It is simply important to think of this in advance and not completely gloss over possible issues with the data you are collecting and how it connects to the questions you want answered.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 669317,
+          "key": "1bfe8132-06b7-4e0a-ac47-ad635e5b7f95",
+          "title": "Video: Goals of Recommendation Systems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1bfe8132-06b7-4e0a-ac47-ad635e5b7f95",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737456,
+              "key": "68598214-af9b-45d9-8937-8b175c4a6dbe",
+              "title": "Goals Of Recommendation Systems",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WzelOlFeDmU",
+                "china_cdn_id": "WzelOlFeDmU.mp4"
+              }
+            },
+            {
+              "id": 691659,
+              "key": "46f18e6e-3945-4ca1-87f6-ac74144bac13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Business Goals of Recommendations\n\nIn general, recommendations are important because they are often central to driving revenue for a company.  In the new world of the Internet, you don't always need a friend to personally recommend you an item you never heard of - instead, the recommendations can do this.\n\nThere are ultimately 4 goals to keep in mind when performing recommendations:\n\n1. **Relevance**\n2. **Novelty**\n3. **Serendipity**\n4. **Diversity**  \n\nOften people only think of the first goal, and it is a good reminder that focusing only on **relevance** can lead to drops in use, and therefore loss of revenue. We also need to consider the other three goals, so that recommendations can be most effective in driving sales. [In this article, Lab41 shows how they worked to quantify these metrics.](https://gab41.lab41.org/recommender-systems-its-not-all-about-the-accuracy-562c7dceeaff)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 766665,
+          "key": "22062061-240a-4528-89fb-2987fa217991",
+          "title": "Quiz: Types of Ratings & Goals of Recommendation Systems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "22062061-240a-4528-89fb-2987fa217991",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 766682,
+              "key": "665fccf5-f435-4b79-985e-20a82296af67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Self Check\n\nRating scales and recommendation system goals are good things to have in the back of your mind when you are first implementing ways to collect data and make recommendations.  Test your knowledge on these topics with the quizzes below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 766668,
+              "key": "8c43ffa0-a205-459c-a7ff-4e5b0654c89f",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8c43ffa0-a205-459c-a7ff-4e5b0654c89f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You want to make sure that when a user gives you an item rating you are able to clearly identify if they like the item or not, which of the following are possible rating scales for this situation? (Select all that apply)",
+                "answers": [
+                  {
+                    "id": "a1540250157440",
+                    "text": "1 for like, 0 for dislike",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540250183739",
+                    "text": "Scale 1-7, where 1 is the totally dissatisfied and 7 is completely satisfied",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540250237624",
+                    "text": "Scale 1-4, where 1 is the totally dissatisfied and 4 is completely satisfied",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1540250252252",
+                    "text": "Scale 1-3, where 1 is the totally dissatisfied and 3 is completely satisfied",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 766679,
+              "key": "870282c2-0ce5-49ee-9f26-164a65f48b59",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "870282c2-0ce5-49ee-9f26-164a65f48b59",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "With respect to each of the four business aspects we look to impact with a recommendation system, which aspect do each of the recommendation engines in this lesson **most** optimize for?",
+                "answers": [
+                  {
+                    "id": "a1540251165826",
+                    "text": "serendipity",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540251246338",
+                    "text": "novelty",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540251250320",
+                    "text": "diversity",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1540251256069",
+                    "text": "relevance",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 669324,
+          "key": "04b41431-ff92-4b40-8f9b-79fba85b1b72",
+          "title": "Video: Outro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "04b41431-ff92-4b40-8f9b-79fba85b1b72",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737802,
+              "key": "1ff47a7a-6b1b-47c4-a732-9490ce9baa94",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zX5jZH2y8d8",
+                "china_cdn_id": "zX5jZH2y8d8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 669328,
+          "key": "baa371c8-8501-40a6-9067-939b68dc4781",
+          "title": "Text: Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "baa371c8-8501-40a6-9067-939b68dc4781",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 669329,
+              "key": "f6978954-19a0-468b-a78a-7c87f496246f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ### Recap\n\n#### Types of Recommendations\n\nIn this lesson, you worked with the MovieTweetings data to apply each of the three methods of recommendations:\n\n1. Knowledge Based Recommendations\n2. Collaborative Filtering Based Recommendations\n3. Content Based Recommendations\n\nWithin Collaborative Filtering, there are two main branches:\n\n1. Model Based Collaborative Filtering\n2. Neighborhood Based Collaborative Filtering\n\nIn this lesson, you implemented Neighborhood Based Collaborative Filtering. In the next lesson, you will implement Model Based Collaborative Filtering.  \n\n#### Similarity Metrics\n\nIn order to implement Neighborhood Based Collaborative Filtering, you were introduced to and applied a few techniques to assess how similar or distant two users were from one another:\n\n1. Pearson's correlation coefficient\n2. Spearman's correlation coefficient\n3. Kendall's Tau\n4. Euclidean Distance\n5. Manhattan Distance\n\n#### Types of Ratings\n\nWe took a quick look at different types of ratings:\n\n1. Did the user interact with an item or not.\n2. Did the user like an item or not.\n3. More granular scales 1-7, 1-10, etc.\n\nIt is important to understand what the data might be used for, and what type of granularity might be important for a particular case. One of the main considerations is whether you want to have neutrality available, in which case an odd number of possible values in your scale will provide a value in the middle. Another common question is, how many levels do you really need to understand how much a user likes a particular product? Again, this is largely up to individual preference and specific use cases.\n\n\n#### Business Cases For Recommendations\n\nFinally, you looked at the four ideas needed for businesses to implement successful recommendations to drive revenue, which include:\n\n1. Relevance\n2. Novelty\n3. Serendipity\n4. Increased Diversity\n\nAt the end of this lesson, you will have gained a ton of skills to build upon or to start creating your own recommendations in practice.\n\n###  Next Lesson\n\nIn the upcoming lesson, we will take a closer look at model based collaborative filtering, different methods for dealing with the cold start problem, and how to assess how well our model is performing.  Then as a final touch, you will have the opportunity to deploy your recommendations to the web!",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

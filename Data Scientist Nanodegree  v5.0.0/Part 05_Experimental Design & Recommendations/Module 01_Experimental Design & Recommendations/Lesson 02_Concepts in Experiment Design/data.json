@@ -1,0 +1,712 @@
+{
+  "data": {
+    "lesson": {
+      "id": 689336,
+      "key": "5e1eadf0-45b9-4af0-a186-7f811c8b5d21",
+      "title": "Concepts in Experiment Design",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn about conceptual topics that must be considered when designing and running an experiment, in order to ensure good, interpretable results.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/5e1eadf0-45b9-4af0-a186-7f811c8b5d21/689336/1581969385625/Concepts+in+Experiment+Design+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/5e1eadf0-45b9-4af0-a186-7f811c8b5d21/689336/1581969380030/Concepts+in+Experiment+Design+Subtitles.zip"
+          },
+          {
+            "name": "Concepts in Experiment Design",
+            "uri": "https://video.udacity-data.com/topher/2021/March/6041386a_dsnd-concepts-in-experiment-design/dsnd-concepts-in-experiment-design.pdf"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 689337,
+          "key": "78776123-8c54-4ab9-bb08-22a8ffa07db9",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78776123-8c54-4ab9-bb08-22a8ffa07db9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689423,
+              "key": "54c5d5f9-9c4c-4eac-9ad5-3aa696ffe3e6",
+              "title": "Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RVcFzwBXI2M",
+                "china_cdn_id": "RVcFzwBXI2M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 689339,
+          "key": "bd0a2571-c825-41a1-a6b6-d8fd4da6644e",
+          "title": "What is an Experiment?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bd0a2571-c825-41a1-a6b6-d8fd4da6644e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689414,
+              "key": "c089a930-69ff-4e6e-8601-741b72e3d7a7",
+              "title": "What Is An Experiment",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "fH_xF5_SDCE",
+                "china_cdn_id": "fH_xF5_SDCE.mp4"
+              }
+            },
+            {
+              "id": 689415,
+              "key": "ed8ade56-2e9a-4883-afc1-5411c36495c5",
+              "title": "What Is An Experiment Pt 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PYzN1usi7QY",
+                "china_cdn_id": "PYzN1usi7QY.mp4"
+              }
+            },
+            {
+              "id": 701939,
+              "key": "15208bc8-4892-4c2a-855b-6d4b8941443c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Types of Study\n\nThere are many ways in which data can be collected in order to test or\nunderstand the relationship between two variables of interest. These methods\ncan be put into three main bins, based on the amount of control that you hold\nover the variables in play:\n\n- If you have a lot of control over features, then you have an **experiment**.\n- If you have no control over the features, then you have an **observational study**.\n- If you have some control, then you have a **quasi-experiment**.\n\nWhile the experiment is the main focus of this course, it's also useful to know\nabout the other types of study so that you can use them in effective ways, \nespecially if an experiment cannot be run.\n\n### Experiments\n\nIn the social and medical sciences, an experiment is defined by comparing \noutcomes between two or more groups, and ensuring equivalence between the \ncompared groups _except_ for the manipulation that we want to test. Our \ninterest in an experiment is to see if a change in one feature has an effect in \nthe value of a second feature, like seeing if changing the layout of a button \non a website _causes_ more visitors to click on it. Having multiple groups is \nnecessary in order to compare the outcome for when we apply the manipulation to \nwhen we do not (e.g. old vs. new website layout), or to compare different \nlevels of manipulation (e.g. drug dosages). We also need equivalence between \ngroups so that we can be as sure as possible that the differences in the \noutcomes were only due to the difference in our manipulated feature.\n\nEquivalence between groups is typically carried out through some kind of\nrandomization procedure. A **unit of analysis** is the entity under study,\nlike a page view or a user in a web experiment. If we randomly assign our units\nof analysis to each group, then on the whole, we should expect the feature\ndistributions between groups to be about the same. This theoretically isolates\nthe changes in the outcome to the changes in our manipulated feature. Of course,\nwe can always dig deeper afterwards to see if certain other features worked in\ntandem with, or against, our manipulation.\n\n### Observational Studies\n\nIn an experiment, we exert a lot of control on a system in order to narrow down \nthe changes in our system from one source to one output. Observational studies, \non the other hand, are defined by a lack of control. Observational studies are \nalso known as naturalistic or correlational studies. In an observational study, \nno control is exerted on the variables of interest, perhaps due to ethical \nconcerns or a lack of power to enact the manipulation. This often comes up in \nmedical studies. For example, if we want to look at the effects of smoking on \nhealth, the potential risks make it unethical to force people into smoking \nbehaviors. Instead, we need to rely on existing data or groups to make our \ndeterminations.\n\nWe typically cannot infer causality in an observational study due to our lack \nof control over the variables. Any relationship observed between variables may \nbe due to unobserved features, or the direction of causality might be uncertain. \n(We'll discuss this more later in the lesson.) But simply because an \nobservational study does not imply causation does not mean that it is not \nuseful. An interesting relationship might be the spark needed to perform \nadditional studies or to collect more data. These studies can help strengthen \nthe understanding of the relationship we're interested in by ruling out more \nand more alternative hypotheses.\n\n### Quasi-Experiments\n\nIn between the observational study and the experiment is the quasi-experiment. \nThis is where some, but not all, of the control requirements of a true \nexperiment are met. For example, rolling out a new website interface to all \nusers to see how much time they spend on it might be considered a \nquasi-experiment. While the manipulation is controlled by the experimenter, \nthere aren't multiple groups to compare. The experimenter can still use the \nbehavior of the population pre-change and compare that to behaviors post-change, \nto make judgment on the effects of the change. However, there is the \npossibility that there are other effects outside of the manipulation that \ncaused the observed changes in behavior. For the example earlier in this \nparagraph, it might be that users would have naturally gravitated to higher \nusage rates, regardless of the website interface.\n\nAs another example, we might have two different groups upon which to make a \ncomparison of outcomes, but the original groups themselves might not be \nequivalent. A classic example of this is if a researcher wants to test some new \nsupplemental materials for a high school course. If they select two different \nschools, one with the new materials and one without, we have a quasi-experiment \nsince the differing qualities of students or teachers at those schools might \nhave an effect on the outcomes. Ideally, we'd like to match the two schools \nbefore the test as closely as possible, but we can't call it a true experiment \nsince the assignment of student to school can't be considered random.\n\nWhile a quasi-experiment may not have the same strength of causality inference \nas a true experiment, the results can still provide a strong amount of \nevidence for the relationship being investigated. This is especially true if \nsome kind of matching is performed to identify similar units or groups. Another \nbenefit of quasi-experimental designs is that the relaxation of requirements \nmakes the quasi-experiment more flexible and easier to set up.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 702027,
+              "key": "f13fd836-e4cb-47b1-a7c0-90a2038adec4",
+              "title": "Types of Study",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f13fd836-e4cb-47b1-a7c0-90a2038adec4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match each description below to the type of study it describes: a (true) experiment, a quasi-experiment, or an observational study."
+                },
+                "concepts_label": "Study Description",
+                "answers_label": "Type of Study",
+                "concepts": [
+                  {
+                    "text": "A blogger tries out a celebrity diet and exercise regimen, and documents their changes in weight and energy.",
+                    "correct_answer": {
+                      "id": "a1535403305860",
+                      "text": "Quasi-Experiment"
+                    }
+                  },
+                  {
+                    "text": "An online retailer sends out personal coupon codes to half of their mailing list.",
+                    "correct_answer": {
+                      "id": "a1535403359219",
+                      "text": "Experiment"
+                    }
+                  },
+                  {
+                    "text": "Historic data is collected to compare the effect of local curfew ordinances and downtown foot traffic.",
+                    "correct_answer": {
+                      "id": "a1535403361024",
+                      "text": "Observational Study"
+                    }
+                  },
+                  {
+                    "text": "A regional store chain tests out a promotional discount at some of their stores to see if it increases sales.",
+                    "correct_answer": {
+                      "id": "a1535403361662",
+                      "text": "Quasi-Experiment"
+                    }
+                  },
+                  {
+                    "text": "Researchers compare the race times for runners based on the type of shoe that they wear.",
+                    "correct_answer": {
+                      "id": "a1535403362349",
+                      "text": "Observational Study"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1535403305860",
+                    "text": "Quasi-Experiment"
+                  },
+                  {
+                    "id": "a1535403361662",
+                    "text": "Quasi-Experiment"
+                  },
+                  {
+                    "id": "a1535403365711",
+                    "text": "Observational Study"
+                  },
+                  {
+                    "id": "a1535403359219",
+                    "text": "Experiment"
+                  },
+                  {
+                    "id": "a1535403364740",
+                    "text": "Quasi-Experiment"
+                  },
+                  {
+                    "id": "a1535403364062",
+                    "text": "Experiment"
+                  },
+                  {
+                    "id": "a1535403362349",
+                    "text": "Observational Study"
+                  },
+                  {
+                    "id": "a1535403361024",
+                    "text": "Observational Study"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 729548,
+              "key": "15e091f1-805b-403f-9225-095c85ea4b2b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Additional Reading\n\n[This](https://www.nytimes.com/interactive/2018/07/18/upshot/nike-vaporfly-shoe-strava.html) fascinating New York Times article details different ways of investigating the claim that Nike's Vaporfly running shoes provide a significant advantage in running speed, despite not being able to run a true, randomized experiment.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689340,
+          "key": "3818002c-75f8-4a23-a807-672deefdb0de",
+          "title": "Types of Experiment",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3818002c-75f8-4a23-a807-672deefdb0de",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689406,
+              "key": "ebc45b25-146e-46a7-8a26-9fc5981c12c6",
+              "title": "Types Of Experiments",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7ihDj4M7EiU",
+                "china_cdn_id": "7ihDj4M7EiU.mp4"
+              }
+            },
+            {
+              "id": 689410,
+              "key": "b3d13fd3-f949-42d2-9f93-39b39bcc87a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Types of Experiment\n\nMost of the time, when you think of an experiment, you think of a\n**between-subjects** experiment. In a between-subjects experiment, each unit\nonly participates in, or sees, one of the conditions being used in the\nexperiment. The simplest of these has just two groups or conditions to compare.\nIn one group, we have either no manipulation, or maintenance of the status quo.\nThis is like providing a known drug treatment, or an old version of a\nwebsite. This is known as the **control group**. The other group includes the\nmanipulation we wish to test, such as a new drug or new website layout. This is\nknown as our **experimental group**. We can compare the outcomes between groups\n(e.g. recovery time or click-through rate) in order to make a judgement about\nthe effect of our manipulation. (Since we have an experiment, we'll randomly\nassign each unit to either the control or experimental group.) For web-based\nexperiments, this kind of basic experiment design is called an **A/B test**:\nthe \"A\" group representing the old control, and \"B\" representing the new\nexperimental change.\n\nWe aren't limited to just two groups. We could have multiple experimental\ngroups to compare, rather than just one control group and one experimental\ngroup. This could form an A/B/C test for a web-based experiment, with control\ngroup \"A\" and experimental groups \"B\" and \"C\".\n\nIf an individual completes all conditions, rather than just one, this is known\nas a **within-subjects** design. Within-subjects designs are also known as\n_repeated measures_ designs. By measuring an individual's output in all\nconditions, we _know_ that the distribution of features in the groups will be\nequivalent. We can account for individuals' aptitudes or inclinations in our\nanalysis. For example, if an individual rates three different color palettes\nfor a product, we can know if a high rating for one palette is particularly\ngood compared to the others (e.g. 10 vs. 5, 6) or if it's not a major\ndistinction (e.g. 10 vs. 8, 9).\n\nRandomization still has a part in the within-subjects design in the order in \nwhich individuals complete conditions. This is important to reduce potential\nbias effects, as will be discussed later in the lesson. One other downside of\nthe within-subjects design is that it's not always possible to pull off a\nwithin-subjects design. For example, when a user visits a website and completes\ntheir session, we usually can't guarantee when they'll come back. The purpose\nof their following visit also might not be comparable to their first. It can\ntake a lot more effort in control in order to set up an effective\nwithin-subjects design.\n\n### Side Note: Factorial Designs\n\n_Factorial designs_ manipulate the value of multiple features of interest. For\nexample, with two independent manipulations \"X\" and \"Y\", we have four\nconditions: \"control\", \"X only\", \"Y only\", \"X and Y\". Experimental designs\nwhere multiple features are manipulated simultaneously are more frequently seen\nin engineering and physical sciences domains, where the system units tend to be\nunder stricter control. They're less seen in the social and medical realms,\nwhere individual differences can impede experiment creation and analysis.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689341,
+          "key": "7d877844-fa40-407d-af76-e70e04610716",
+          "title": "Types of Sampling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7d877844-fa40-407d-af76-e70e04610716",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689401,
+              "key": "6e73a920-f3c9-4a37-a8d8-f9889e8d695e",
+              "title": "Types Of Sampling",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GF_eQqNoarI",
+                "china_cdn_id": "GF_eQqNoarI.mp4"
+              }
+            },
+            {
+              "id": 689404,
+              "key": "791d45af-49a6-46e6-bdaa-4e910315f3f2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Types of Sampling\n\nWhile web and other online experiments have an easy time collecting data,\ncollecting data from traditional methods involving real populations is a much\nmore difficult proposition. If you need to perform a survey of a population, it\ncould be unreasonable in both time and money costs to try and collect thoughts\nfrom every single person in the population. This is where sampling comes in.\nThe goal of sampling is to only take a subset of the population, using the\nresponses from that subset to make an inference about the whole population.\nHere, we'll cover two basic probabilistic techniques that are commonly used.\n\nThe simplest of these approaches is **simple random sampling**. In a simple\nrandom sample, each individual in the population has an equal chance of being\nselected. We just randomly make draws from the population until we have the\nsample size desired; your sample size depends on the level of uncertainty you\nare willing to have about the collected data. Since everyone has an equal\nchance of being drawn, we can expect the feature distribution of selected units\nto be similar to the distribution of the population as a whole. In addition, a\nsimple random sample is easy to set up.\n\nHowever, it is possible that certain groups are underrepresented in a simple\nrandom sample, especially those that make up a low proportion of the population.\nIf there are certain rarer subgroups of interest, it can be worth adding one\nadditional step and performing **stratified random sampling**. In a\nstratified random sample, we need to first divide the entire population into\ndisjoint groups, or strata. That is, each individual must be a part of one\ngroup, and only one group. For example, you could divide people by gender (male,\nfemale, other), or age (e.g. 18-25, 26-35, etc.).\n\nThen, from each group, you take a simple random sample. In a _proportional\nsample_, the sample size is proportional to how large the group is in the full\npopulation. For example, if you require 1000 data points, and stratified\nindividuals of proportion {0.5, 0.3, 0.2}, then you would take 500 people from\nthe first group, 300 from the second, and 200 from the third. This guarantees a\ncertain level of knowledge from each subset, and theoretically a more \nrepresentative overall inference on the population.\n\nAn alternative approach is to take a _nonproportional sample_ from each group.\nFor example, we could simply sample 500 people from each group. Computing the\noverall statistics in this case requires weighting each group separately, but\nthis extra effort offers a higher understanding of each subgroup in a deeper\ninvestigation.\n\n### Side Note: Non-Probabilistic Sampling\n\nAs noted at the start, the goal of sampling is to use a subset of the whole\npopulation to make inferences about the full population, so that we didn't need\nto record data from everyone. To that end, probabilistic sampling techniques\nwere described above to try and obtain a sample that was representative of the\nwhole. However, it's useful to note that there also exist non-probabilistic\nsampling techniques that simplify the sampling process, at the risk of harming \nthe validity of your results. (We'll discuss the term 'validity' later in the\nlesson.)\n\nFor example, a _convenience sample_ records information from readily available\nunits. Studies performed in the social sciences at colleges often fall into\nthis kind of sampling. The people participating in these tasks are often just\ncollege students, rather than representatives of the population at large. When\nperforming inferences from this type of study, it's important to consider how\nwell your results might apply to the population at large.\n\nOne notable example of a convenience sample resulting in a grave error comes\nfrom the prediction made by magazine \"The Literary Digest\" on the 1936 U.S.\npresidential election. While they predicted a healthy victory by candidate\nAlf Landon, the final result ended with a landslide victory by opposing\ncandidate Franklin D. Roosevelt. This major error is attributed to their\nmethods capturing a non-representative sample of the population, which included\nlooking at the results of a mail-in survey from their magazine readers. Since\nthe mail-ins were voluntary, and the magazine subscribers were already not \nwell-representative of the general population, focusing on the people who returned\nsurveys gave a large bias toward Landon.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689342,
+          "key": "be4fce99-60c8-4e5d-af8e-eccea735314f",
+          "title": "Measuring Outcomes",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "be4fce99-60c8-4e5d-af8e-eccea735314f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689392,
+              "key": "38eb8744-ed75-4cd1-b200-e6ee9fac44dc",
+              "title": "Measuring Outcomes Pt 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HPmMEkbT2uE",
+                "china_cdn_id": "HPmMEkbT2uE.mp4"
+              }
+            },
+            {
+              "id": 703352,
+              "key": "d81d40e4-1266-434b-bc9e-c5bc83156579",
+              "title": "How should we measure performance?",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d81d40e4-1266-434b-bc9e-c5bc83156579",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "After watching the above video, let's pause for a moment. Think about each of the proposed ways of measuring the effectiveness of the video recommendation engine. Mark all the methods that seem like they would be potentially good representations of the engine performance.",
+                "answers": [
+                  {
+                    "id": "a1535491421793",
+                    "text": "Video watch time",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1535491423488",
+                    "text": "Video ranking",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1535491424173",
+                    "text": "Number of search queries",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 689393,
+              "key": "7e47c724-91dd-487c-95f1-d49c5df907e0",
+              "title": "Measuring Outcomes Pt 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yLdXcRXcfPw",
+                "china_cdn_id": "yLdXcRXcfPw.mp4"
+              }
+            },
+            {
+              "id": 703385,
+              "key": "569eea1f-f66c-4dc8-aa2c-1adf302341a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Measuring Outcomes\n\nThe goals of your study may not be the same as the way you evaluate the study's\nsuccess. Perhaps this is because the goal is something that can't be measured\ndirectly. Let's say that you have an idea of a website addition that improves\nuser satisfaction. How should we measure this? In order to evaluate whether\nor not this improvement has happened, you need to have a way to objectively\nmeasure the effect of the addition. For example, you might include a survey to\nrandom users to have them rate their website experience on a 1-10 scale. If the\naddition is helpful, then we should expect the average rating to be higher for\nthose users who are given the addition, versus those who are not. The rating\nscale acts as a concrete way of measuring user satisfaction. These objective\nfeatures by which you evaluate performance are known as **evaluation\nmetrics**.\n\nAs a rule of thumb, it's a good idea to consider the goals of a study separate\nfrom the evaluation metrics. This provides a couple of useful benefits. First,\nthis makes it clear that the metric isn't the main point of a study: it's the\n_implications_ of the metric relative to the goal that matters. This is\nespecially important if a metric isn't directly attached to the goal. For\nexample, measuring students' confidence going into a standardized test might be\na proxy for the goal of test preparedness, in the absence of being able to get\ntheir test scores directly or in a timely fashion.\n\nSecondly, having the metric separate from the goal can clarify the purpose of\nconducting the study or experiment. It makes sure we can answer the question of\n_why_ we want to run a study or experiment. From the above example, we aren't\nmeasuring confidence just to make people feel good about themselves: we're\ndoing it to try and improve their actual performances.\n\n### Side Note: Alternate Terminology\n\nYou might hear other terminology for goals and evaluation metrics than those\nused in this course. In the social sciences, it's common to hear a \"construct\"\nas analogous to the goal or objective under investigation, and the \"operational\ndefinition\" as the way outcomes are measured. For example, the construct of \n\"reaction time\" could be operationally defined as \"time in milliseconds to \nclick on the correctly indicated button.\"\n\nIn general company operations, you  might encounter the terms \"key results\"\n(KRs) or \"key performance indicators\"  (KPIs) as ways of measuring progress\nagainst quarterly or annual \"objectives.\" These objectives and KRs / KPIs serve \na similar purpose as study goals and evaluation metrics, and might even be \ndriving factors in the creation of an experiment.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 703391,
+              "key": "c42c3a62-dddc-4cb2-9088-046c8fa368f0",
+              "title": "Objective or Metric?",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c42c3a62-dddc-4cb2-9088-046c8fa368f0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "For each of the options below, fill in the checkbox if the option refers to an evaluation metric, and leave the box unfilled if it refers to a goal or conceptual objective.",
+                "answers": [
+                  {
+                    "id": "a1535498776836",
+                    "text": "Total microtransaction revenue",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1535498851135",
+                    "text": "Improve freshness of produce",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1535498851898",
+                    "text": "Increase follower participation",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1535498852576",
+                    "text": "Number of newly registered users",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1535498853390",
+                    "text": "Difference between predicted and actual performance",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 729544,
+              "key": "f084386d-4adb-426b-99ed-6da1c1fc5b15",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### References\n\nInspiration for the \"number of searches\" metric shown in the video above came from [this Hackernoon article](https://hackernoon.com/when-you-experiment-with-the-wrong-metrics-85c51cc594ee) on the Bing search engine.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689343,
+          "key": "937651e0-6f4f-4cd0-aee4-686cf633161c",
+          "title": "Creating Metrics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "937651e0-6f4f-4cd0-aee4-686cf633161c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689470,
+              "key": "09a2da91-1e3a-4468-a656-8145397c991e",
+              "title": "Creating Metrics",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "__7tzDUY870",
+                "china_cdn_id": "__7tzDUY870.mp4"
+              }
+            },
+            {
+              "id": 703883,
+              "key": "5da27d73-348f-407d-a3c7-310fa01f7512",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Creating Metrics\n\n### Funnels\n\nThere are additional concepts and terms that are commonly used for designing\nexperiments, especially for web-based studies. In a web experiment, you'll\noften think of the user **funnel**. A funnel is the flow of steps you expect a\nuser of your product to take. Typically, the funnel ends at the place where\nyour main evaluation metric is recorded, and includes a step where your\nexperimental manipulation can be performed. For example, we might think of the\nfollowing steps for someone to purchase a product in an online store:\n\n- Visit the site homepage\n- Search for a desired product or click on a product category\n- Click on a product image\n- Add the product to the cart\n- Check out and finalize purchase\n\nOne property to note about user funnels is that typically there will be some\ndropoff in the users that move from step to step. This is much like how an\nactual funnel narrows from a large opening to a small exit. Outside of an\nexperiment, funnels can be used to analyze user flows. Observations from these\nflows can then be used to motivate experiments to try and improve the dropoff\nrates.\n\nIt's also worth noting that the flow through a funnel might be idealized\ncompared to actual user practice. In the above example, users might perform\nmultiple searches in a single session, or want to purchase multiple things. A\nuser might access the site through a specific link, subverting the top part of\nthe funnel. Refining the funnel and being specific about the kinds of events\nthat are expected can help you create a consistent, reliable design and\nanalysis.\n\n### Unit of Diversion\n\nOnce you have a funnel, think about how you can implement your experimental\nmanipulation in the funnel. If the goal of the above experiment was to change\nthe way the site looks after a user clicks on a product image, we need to\nfigure out a way to assign users to either a control group or experimental\ngroup. The place in which you make this assignment is known as the **unit of\ndiversion**. Depending on the type of experiment you have, you might have\ndifferent options for diversion, each with its own pros and cons:\n\n- Event-based diversion (e.g. pageview): Each time a user loads up the page of\ninterest, the experimental condition is randomly rolled. Since this ignores\nprevious visits, this can create an inconsistent experience, if the condition\ncauses a user-visible change.\n- Cookie-based diversion: A cookie is stored on the user's device, which\ndetermines their experimental condition as long as the cookie remains on the\ndevice. Cookies don't require a user to have an account or be logged in, but\ncan be subverted through anonymous browsing or a user just clearing out cookies.\n- Account-based diversion (e.g. User ID): User IDs are randomly divided into\nconditions. Account-based diversions are reliable, but requires users to _have_\naccounts and be logged in. This means that our pool of data might be limited in\nscope, and you'll need to consider the risks of using personally-identifiable\ninformation.\n\nWhen it comes to selecting a unit of diversion, the consistency of the\nexperience required can be a major factor to consider. For the example provided,\nwe need something more consistent than pageview events. So we then consider the\ncookie-based diversion. If the differences in interface between control and\nexperiment are fairly minor, then we're probably okay with cookie-based\ndiversion. But if we think that users will notice the change and we believe\nthat it will have a major effect on experience, then we might be inclined to\nchoose an account-based diversion.\n\n### Invariant and Evaluation Metrics\n\nA funnel will also be of benefit when it comes to deciding on metrics to track\nand analyze as part of the experiment. The immediate features that come out of\na funnel come in the form of counts and ratios. For example, we could count the\nnumber of times a search results in a product being selected (a count), or the\nratio of selections to searches as adjacent slices in the funnel (a ratio).\n\nThere are two major categories that we can consider features: as _evaluation\nmetrics_ or as _invariant metrics_. **Evaluation metrics** were mentioned in \nthe previous page as the metrics by which we compare groups. Ideally, we hope \nto see a difference between groups that will tell us if our manipulation was \na success. We might want to see an increased click-through-rate from search \nresults to products, or an increase in overall revenue. On the flip side, \n**invariant metrics** are metrics that we hope will _not_ be different between \ngroups. Metrics in this category serve to check that the experiment is running \nas expected. For example, in an experiment with cookie-based diversion, the \nnumber of cookies generated for each condition would be a good invariant metric. \nAnother metric could compare the distribution of times in which cookies were \ngenerated, to check the bias in the randomization procedure.\n\nWe're not limited to tracking just one metric of each type. It's not unusual \nto track multiple invariant metrics as checks on the system's integrity, or \nmultiple evaluation metrics to check different potential facets of a \nmanipulation's effects. Don't think that you need to track every possible \nmetric, however. It's better to focus on a few key metrics, ignoring features \nthat might be less reliable or highly correlated to other, more informative \nfeatures. We'll discuss statistical considerations surrounding metrics in the \nnext lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689344,
+          "key": "6c11a0c6-fb32-4365-8739-ae20be60e7e3",
+          "title": "Controlling Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6c11a0c6-fb32-4365-8739-ae20be60e7e3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689471,
+              "key": "cb517095-ea75-4341-9046-19cec7167af0",
+              "title": "Controlling Variables",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pLTneSg2MRY",
+                "china_cdn_id": "pLTneSg2MRY.mp4"
+              }
+            },
+            {
+              "id": 689380,
+              "key": "b0993f30-7761-4bde-a510-ab0340f10d17",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Controlling Variables\n\nIf we want to determine causality between two features, there are two main\nthings to control. First of all, we need to enact the manipulation on one of the\nfeatures of interest, so that we know that it is causing the change in the other\nfeature. In order to know that it was our manipulated variable and not any\nother, the second major control point is that we want to make sure that all\nother features are accounted for. These two requirements make the arguments for\ncausality much stronger with an experiment compared to a quasi-experiment or\nobservational study.\n\nIf we aren't able to control all features or there is a lack of equivalence\nbetween groups, then we may be susceptible to **confounding variables**. The\ncorrelation observed between two variables might be due to changes in a third\nvariable, rather than one causing the other. Another possibility is that there\nis a causal relationship between the two features, but it is an indirect\nrelationship mediated by a third, intermediate variable. This intermediate\nvariable might be a larger driver of the changes in the output, with the\nmanipulated variable only having a direct effect on the intermediate feature.\n\nFor the case where we see a relationship but don't perform a manipulation, we\nalso need to be careful about the direction of effect. A relationship between\nvariables \"A\" and \"B\" might be due to \"A\" having an effect on \"B\" or the\nreverse, \"B\" having an effect on \"A\". It might even be the case that \"A\" and \"B\"\nare related through some other function like a third variable.\n\n### Additional Reference\n\nWikipedia: [Correlation does not imply causation](https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation) - Reference page with examples of how an observed correlation between two features might come about.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689345,
+          "key": "98fe2ef3-1209-4724-93eb-a883c6ef4cc2",
+          "title": "Checking Validity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "98fe2ef3-1209-4724-93eb-a883c6ef4cc2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689475,
+              "key": "d712febb-28a8-465e-abb9-04edfa4ea7d5",
+              "title": "Checking Validity",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "H3H1SZXqDmQ",
+                "china_cdn_id": "H3H1SZXqDmQ.mp4"
+              }
+            },
+            {
+              "id": 704403,
+              "key": "c4f58aa7-a385-4632-b7fc-37037a472766",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Checking Validity\n\nWhen designing an experiment, it's important to keep in mind validity, which\nconcerns how well conclusions can be supported. There are three major\nconceptual dimensions upon which validity can be assessed:\n\n- Construct Validity\n- Internal Validity\n- External Validity\n\n### Construct Validity\n\nConstruct validity is tied to the earlier discussion of how well one's goals\nare aligned to the evaluation metrics used to evaluate it. Poor construct\nvalidity can come about when an evaluation metric does not actually measure\nsomething related to the desired outcome concept. Alternatively, it might be\nthat a metric is ill-constructed, such that it does not make clear distinctions\non the outcome concept.\n\n### Internal Validity\n\nInternal validity refers to the degree to which a causal relationship can be\nderived from an experiment's results. Controlling for and accounting for other\nvariables is key to maintaining good internal validity. The previous page on \ncontrolling variables shows ways in which internal validity might not be met.\n\n### External Validity\n\nExternal validity is concerned with the ability of an experimental outcome to\nbe generalized to a broader population. This is most relevant with experiments\nthat involve sampling: how representative is the sample to the whole? For\nstudies at academic institutions, a frequent question is if data collected\nusing only college students can be generalized to other age or socioeconomic\ngroups.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689346,
+          "key": "fe4c4195-f39e-4f11-a589-2fbda71a7e1d",
+          "title": "Checking Bias",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fe4c4195-f39e-4f11-a589-2fbda71a7e1d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689476,
+              "key": "75f7ba1e-8c71-4ba5-8d3c-e5f42ed1c63f",
+              "title": "Checking Bias",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ppjNNY4DhPw",
+                "china_cdn_id": "ppjNNY4DhPw.mp4"
+              }
+            },
+            {
+              "id": 689372,
+              "key": "60157d73-5153-4ca4-aff6-8395e2cfaa4d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Checking Bias\n\nBiases in experiments are systematic effects that interfere with the\ninterpretation of experimental results, mostly in terms of internal validity.\nJust as humans can have a lot of different [biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases),\nthere are numerous ways in which an experiment can become unbalanced.\n\n### Sampling Bias\n\nMany experimental biases fall under the sampling bias umbrella. Sampling biases\nare those that cause our observations to not be representative of the\npopulation. For example, if assignment to experimental groups is done in an\narbitrary fashion (as opposed to random assignment or matched groups), we risk\nour outcomes being based less on the experimental manipulation and more on the\ncomposition of the underlying groups.\n\nStudies that use surveys to collect data often have to deal with the\n**self-selection bias**. The types of people that respond to a survey might be\nqualitatively very different from those that do not. A straight average of\nresponses would not necessarily reflect the feelings of the full population;\nweighting responses based on the differences between the observed responses and \nproperties of the target population may be needed to come to reasonable\nconclusions.\n\nOne type of sampling bias related to missing data is the **survivor bias**.\nSurvivor bias is one where losses or dropout of observed units is not accounted\nfor in an analysis. A key example of this was in British World War II operations\nresearch, where engineers _avoided_ using survivor bias when they considered where\nto add armor to their planes. Rather than add armor to the spots where\nreturning planes had bullet holes, armor was added to the spots where the\nplanes _didn't_ have bullet holes. That's because the planes that took shots to\nthose places probably crashed, due to those locations being more vital for\nmaintaining flight, so they didn't \"survive\" and weren't available for observation.\n\n### Novelty Bias\n\nA novelty effect is one that causes observers to change their behavior simply\nbecause they're seeing something new. We might not be able to gauge the true\neffect of a manipulation until after the novelty wears off and population\nmetrics return to a level that actually reflects the changes made. This will be\nimportant for cases where we want to track changes over time, such as trying to\nget users to re-visit a webpage or use an app more frequently. Novelty is\nprobably not a concern (or perhaps what we hope for) when it comes to\nmanipulations that are expected to only have a one-shot effect.\n\n### Order Biases\n\nThere are a couple of biases to be aware of when running a within-subjects\nexperiment. Recall that in a within-subjects design, each participant performs\na task or makes a rating in multiple experimental conditions, rather than just\none. The order in which conditions are completed could have an effect on\nparticipant responses. A **primacy effect** is one that affects early\nconditions, perhaps biasing them to be recalled better or to serve as anchor\nvalues for later conditions. A **recency effect** is one that affects later\nconditions, perhaps causing bias due to being fresher in memory or task fatigue.\n\nAn easy way of getting around order biases is to simply randomize the order of\nconditions. If we have three conditions, then each of the six ways of\ncompleting the task (ABC, ACB, BAC, BCA, CAB, CBA) should be equally likely.\nWhile there still might end up being order effects like carry-over effects,\nwhere a particular condition continues to have an effect on future conditions,\nthis will be much easier to detect than if every participant completed the task\nin the exact same order of conditions.\n\n### Experimenter Bias\n\nOne bias to watch out for, especially in face-to-face experiments, is the\nexperimenter bias. This is where the presence or knowledge of the experimenter\ncan affect participants' behaviors or performance. If an experimenter knows\nwhat condition a participant is in, they might subtly nudge the participant\ntowards their expected result with their interactions with the participant. In\naddition, participants may act differently in the presence of an experimenter,\nto try and act in the 'right' way – regardless of if a subject _actually_ knows\nwhat the experimenter is looking for or not.\n\nThis is where design steps like blinding are important. In\n[blinding](https://en.wikipedia.org/wiki/Blinded_experiment), the administrator\nof a procedure or the participant do not know the condition being used, to \navoid that subconscious bias from having an effect. In particular, the\n**double-blind** design hides condition information from both the administrator\n_and_ participant in order to have a strong rein on experimenter-based biases.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689347,
+          "key": "5f5b24d5-1297-43c2-9f47-bccf90872c50",
+          "title": "Ethics in Experimentation",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5f5b24d5-1297-43c2-9f47-bccf90872c50",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689477,
+              "key": "1e99a3db-78d7-4154-b499-f68034612bb0",
+              "title": "Ethics In Experimentation Pt1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cWB1jQgcQ1g",
+                "china_cdn_id": "cWB1jQgcQ1g.mp4"
+              }
+            },
+            {
+              "id": 689612,
+              "key": "cec8b725-418e-4e52-9ac1-fd2d3e71444a",
+              "title": "Ethics In Experimentation Pt 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0qcJ_oggdKw",
+                "china_cdn_id": "0qcJ_oggdKw.mp4"
+              }
+            },
+            {
+              "id": 689613,
+              "key": "26fb8168-cf7c-467d-b802-f911bd93a256",
+              "title": "Ethics In Experimentation Pt3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_HTolKktaC4",
+                "china_cdn_id": "_HTolKktaC4.mp4"
+              }
+            },
+            {
+              "id": 689365,
+              "key": "a89dce6f-e589-4022-9e94-d002baf74449",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Ethics in Experimentation\n\nBefore you run an experiment, it's important to consider the ethical treatments\nto which you subject your participants. Through the mid-20th century, exposure\nof questionable and clearly unethical research in the social and medical\nsciences spurred the creation of guidelines for ethical treatment of human\nsubjects in studies and experiments. While different fields have developed\ndifferent standards, they still have a number of major points in common:\n\n- **Minimize participant risk**: Experimenters are obligated to construct\nexperiments that minimize the risks to participants in the study. Risk of harm\nisn't just in the physical sense, but also the mental sense. If an experimental \ncondition has potential to negatively affect a participant's emotions or \nmentality, then it's worth thinking about if the risks are really necessary to \nperform the desired investigation.\n\n- **Have clear benefits for risks taken**: In some cases, risks may be \nunavoidable, and so they must be weighed against the benefits that may come \nfrom performing the study. When expectations for the study are not clearly \ndefined, this throws into question the purpose of exposing subjects to risk. \nHowever, if the benefits are shown to be worth the risks, then it is still \npossible for the study to be run. This often comes up in medicine, where test \ntreatments should show worthy potential against alternative approaches.\n\n- **Provide informed consent**: Building up somewhat from the previous two \npoints, subjects should be informed of and agree to the risks and benefits of \nparticipation before they join the study or experiment. This is also an \nopportunity for a participant to opt out of participation. However, there are \nsome cases where deception is necessary. This might be to avoid biasing the \nparticipant's behavior by seeding their expectations, or if there is a dummy \ntask surrounding the actual test to be performed. In cases like this, it's \nimportant to include a debriefing after the subject's participation so that \nthey don't come away from the task feeling mislead.\n\n- **Handle sensitive data appropriately**: If you're dealing with identifiable \ninformation in your study, make sure that you take appropriate steps to protect \ntheir anonymity from others. Sensitive information includes things like names, \naddresses, pictures, timestamps, and other links from personal identifiers to \naccount information and history. Collected data should be anonymized as much as \npossible; surveys and census results are often also aggregated to avoid tracing \noutcomes back to any one person.\n\nIn the formal sciences, an experiment proposal must go through a review board \nbefore it can be run, to ensure that ethical principles have been followed. \nIt's likely that you won't have a review board to submit your designs to prior \nto running an experiment. You'll need to evaluate these principles for yourself \nor with your colleagues to check for potential ethical issues before going \nforward with a study design.\n\nOne particular point worth further discussion is that of informed consent for\nweb-based experiments. It's often the case that when an experiment is run,\nusers who are included in an experiment often don't know that they're\nparticipating in an experiment. If a manipulation carries no risk and is so\nminor as to be hidden away from the user (e.g. a change in recommendation\nengine), perhaps there is no need for informed consent. And when it comes to\nbias, it's known that peoples' behaviors can change when they know they are \nunder observation. In practice, informed consent is often not considered when \nperforming a web experiment.\n\nHowever, informed consent is still an important ethical principle, so there is \ncontinuing debate on how to best obtain consent for users of a website. One \noption could be to allow users to opt out of experiment participation, with the \ndefault user agreement implying consent to participation in unobtrusive \nexperiments. An opposing option would only run experiments on users who opt-_in_\nto participation, asking the user to set their preference on their initial \nvisit or registration. The opt-in approach is more in line with the core idea \nof informed consent, but also risks fewer users available for testing changes.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 729671,
+              "key": "d1de2879-06f6-454a-84db-1061b01345c7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Examples in Experimental Ethics\n\nHere are three studies in the social and medical sciences that are often \nbrought up as examples of violations of experimental ethics and progenitors of \nthe movement to establish ethics guidelines and boards:\n\n- [Tuskegee Syphilis Study](https://en.wikipedia.org/wiki/Tuskegee_syphilis_experiment): \nThis study was started in 1932, where hundreds of African-American men were \ntracked over the course of up to forty years to study the natural progression \nof syphilis. The subjects were denied treatment, even after the development of \neffective syphilis treatments like penicillin, and there were active steps taken \nto hide the truth of their conditions and treatments to the subjects.\n- [Milgram obedience study](https://en.wikipedia.org/wiki/Milgram_experiment):\nDuring the mid 1960s, psychologist Stanley Milgram tested to what degree people \nfollow authority figures. Participants were asked to administer gradually \nincreasing shocks to an acting confederate participant at the behest of a lead \nexperimenter based on mistakes made on a dummy memory test used as a cover \nstory. While no shocks were _actually_ administered, the study did bing forth \nquestions on what constitutes adequate debriefing and what level of information \nand informed consent needs to be provided to a participant in a study that \nincludes necessary deceptive elements.\n- [Stanford Prison Experiment](https://en.wikipedia.org/wiki/Stanford_prison_experiment):\nThis 1971 study conducted by psychologist Philip Zimbardo was built to test the \ndynamics and effects of power differences, using a prison scenario. Study \nvolunteers were divided into prisoner and guard groups and their dynamics \nobserved; the study had to be ended after less than a week due to the \nincreasingly harsh conditions the 'guards' had settled into treating the \n'prisoners'. It has since served as a major ground for ethical criticisms, \nviolating now-established guidelines around risks to participants and clarity \nof purpose. There are also methodological criticisms, as experimenter biases \nmay have shaped the behavior of the 'guards' group in their interactions with \n'prisoners'.\n\nAnd here's a [Techcrunch article](https://techcrunch.com/2014/06/29/ethics-in-a-data-driven-world/) \ndiscussing the ethics of the 2014-published Facebook study on the impact of \nchanging the affect of posts seen on users' feeds to their own posting habits.\n\n### Additional Resources\n\nFor further reading, here are a few links to documents both historical and \ncurrent on how to conduct experiments involving humans:\n\n- [Nuremberg Code](https://history.nih.gov/research/downloads/nuremberg.pdf) - \nTen principles for human subjects research stemming from the Nuremberg Trials \npublished in 1949. \n- [The Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html) - \n1979 report laying out general principles for research involving human subjects\n- [APA Ethics Code](https://www.apa.org/ethics/code/) - Guidelines published by \nthe American Psychological Association for general psychological practices (not \njust research)\n- [BPS Code for Human Research Ethics](https://www.bps.org.uk/news-and-policy/bps-code-human-research-ethics-2nd-edition-2014) -\nCode for human-subjects research published by the British Psychological Society",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689348,
+          "key": "333f3f18-7818-4fcf-b8b9-2fa50a40aca9",
+          "title": "A SMART Mnemonic for Experiment Design",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "333f3f18-7818-4fcf-b8b9-2fa50a40aca9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689354,
+              "key": "43e5cead-9730-4c7f-b0da-d57cb0ecbf69",
+              "title": "SMART Mnemonic",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "B0Bnxyu2aKM",
+                "china_cdn_id": "B0Bnxyu2aKM.mp4"
+              }
+            },
+            {
+              "id": 689355,
+              "key": "f8eb7da5-a31f-4dcf-b301-d41a968def4c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## SMART Mnemonic for Experiment Design\n\nThere's a mnemonic called **SMART** for teams to plan out projects that also happens to apply pretty well for creating experiments. The letters of SMART stand for:\n\n- **S**pecific: Make sure the goals of your experiment are specific.\n- **M**easurable: Outcomes must be measurable using objective metrics\n- **A**chievable: The steps taken for the experiment and the goals must be realistic.\n- **R**elevant: The experiment needs to have purpose behind it.\n- **T**imely: Results must be obtainable in a reasonable time frame.\n\nThere are also other words possible for the mnemonic, such as **A**ctionable and **R**ealistic. Ultimately, however, the message is pretty much the same, with the dimensions switched around a bit. Note, however, that the mnemonic doesn't cover certain considerations important to experiment design. Considerations of ethical issues or bias will need to be considered separately, so don't just take the mnemonic as the final judge of whether your experiment is ready to proceed!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 689349,
+          "key": "3476d1c0-c458-4ac0-a1dc-2bd69430d3dc",
+          "title": "Lesson Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3476d1c0-c458-4ac0-a1dc-2bd69430d3dc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 689351,
+              "key": "8ccea3d3-df4b-453a-bfb0-4eaee0bd47b9",
+              "title": "Conclusions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yMRRXDKb428",
+                "china_cdn_id": "yMRRXDKb428.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

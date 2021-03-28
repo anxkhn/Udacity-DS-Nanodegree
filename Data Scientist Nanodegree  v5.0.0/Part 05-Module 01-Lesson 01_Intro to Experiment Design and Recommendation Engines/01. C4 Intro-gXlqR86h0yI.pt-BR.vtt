@@ -1,0 +1,132 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.727 --> 00:00:05.926
+INTRODUÇÃO AO DESIGN EXPERIMENTAL
+E AOS MECANISMOS DE RECOMENDAÇÃO
+
+00:00:06.775 --> 00:00:09.191
+Bem-vindo ao curso
+de design experimental
+
+00:00:09.224 --> 00:00:11.924
+e de mecanismos de recomendação.
+Eu sou o Mike.
+
+00:00:11.957 --> 00:00:15.997
+Eu sou o Josh. O design experimental
+e os mecanismos de recomendação
+
+00:00:16.030 --> 00:00:20.378
+representam duas das aplicações
+mais populares e práticas
+
+00:00:20.411 --> 00:00:21.781
+da Ciência de Dados.
+
+00:00:21.814 --> 00:00:25.373
+Muitas empresas usam
+os mecanismos de recomendação
+
+00:00:25.406 --> 00:00:27.253
+para envolver os usuários.
+
+00:00:27.286 --> 00:00:30.375
+A Amazon recomenda os itens
+que podemos querer comprar,
+
+00:00:30.408 --> 00:00:33.077
+a Netflix recomenda filmes
+para assistirmos
+
+00:00:33.110 --> 00:00:36.468
+e o Spotify recomenda músicas
+que podemos gostar de ouvir.
+
+00:00:36.501 --> 00:00:39.480
+Essas empresas precisam usar
+técnicas de Ciência de Dados
+
+00:00:39.513 --> 00:00:42.901
+para construir sistemas
+que façam boas recomendações.
+
+00:00:42.934 --> 00:00:46.461
+O design experimental é a forma
+como as páginas na internet
+
+00:00:46.494 --> 00:00:48.430
+e aplicativos móveis
+são projetados.
+
+00:00:48.463 --> 00:00:50.989
+Você deve conhecer
+o teste A/B,
+
+00:00:51.022 --> 00:00:54.685
+que é uma maneira de comparar
+designs de páginas.
+
+00:00:54.718 --> 00:00:56.622
+Isso ajuda a empresa
+a tomar decisões
+
+00:00:56.655 --> 00:00:59.502
+sobre como as páginas
+devem ser apresentadas.
+
+00:00:59.535 --> 00:01:04.998
+As experiências podem até testar a
+qualidade das recomendações feitas.
+
+00:01:05.031 --> 00:01:09.949
+Esta parte da Ciência de Dados
+mostra a interação com a internet.
+
+00:01:09.982 --> 00:01:14.318
+Os experimentos e as recomendações
+não se limitam à internet.
+
+00:01:14.351 --> 00:01:18.141
+Os mesmos tipos de algoritmos
+são usados em serviços de saúde
+
+00:01:18.174 --> 00:01:22.781
+para entender quais tratamentos
+podem ser melhores.
+
+00:01:22.814 --> 00:01:26.431
+O teste de estilo experimental
+é usado em linhas de produção
+
+00:01:26.464 --> 00:01:29.117
+para garantir que as máquinas
+e que os processos
+
+00:01:29.150 --> 00:01:31.332
+atendam às especificações.
+
+00:01:31.365 --> 00:01:34.286
+A distribuição de produtos
+em uma loja física -
+
+00:01:34.319 --> 00:01:37.846
+como em um supermercado -
+é o mesmo tipo de recomendação
+
+00:01:37.879 --> 00:01:40.519
+usado para criar
+uma página da internet.
+
+00:01:40.552 --> 00:01:43.477
+Legal!
+Parece que temos muito a aprender.
+
+00:01:43.510 --> 00:01:45.181
+Com isso, na próxima página,
+
+00:01:45.214 --> 00:01:49.609
+veremos o que exatamente
+aprenderemos neste curso.
+

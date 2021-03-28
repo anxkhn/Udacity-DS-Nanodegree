@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.835 --> 00:00:04.972
+ANALISANDO MÚLTIPLAS MÉTRICAS
+PARTE 1
+
+00:00:05.005 --> 00:00:08.756
+Se há métricas de avaliação demais
+para controlar em seu experimento,
+
+00:00:08.789 --> 00:00:11.612
+então você deve ter o cuidado
+de especificar os critérios
+
+00:00:11.645 --> 00:00:13.738
+para considerar
+seu experimento um sucesso,
+
+00:00:13.771 --> 00:00:16.560
+para que não cometa
+erros excessivos de julgamento.
+
+00:00:17.305 --> 00:00:21.192
+Por exemplo, temos o experimento
+de uma loja on-line
+
+00:00:21.225 --> 00:00:22.925
+com duas métricas
+de avaliação.
+
+00:00:22.958 --> 00:00:25.477
+A probabilidade de adicionar
+um produto ao carrinho
+
+00:00:25.510 --> 00:00:28.410
+e a probabilidade
+de completar o check-out.
+
+00:00:28.443 --> 00:00:30.965
+Por mais que essas métricas
+estejam relacionadas,
+
+00:00:30.998 --> 00:00:34.580
+vamos simplificar o exemplo
+tratando-as como independentes.
+
+00:00:34.613 --> 00:00:37.448
+Digamos que o experimento
+seja considerado um sucesso
+
+00:00:37.481 --> 00:00:40.505
+se alguma das métricas
+tiver significância estatística.
+
+00:00:40.880 --> 00:00:43.185
+Com uma taxa
+de erro tipo I de 5%,
+
+00:00:43.218 --> 00:00:46.870
+qual é a probabilidade de errarmos
+ao chamar o experimento de sucesso,
+
+00:00:46.903 --> 00:00:50.520
+presumindo que não haja
+efeito das nossas mudanças?
+

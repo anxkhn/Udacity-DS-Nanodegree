@@ -1,0 +1,240 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.869 --> 00:00:04.692
+CRIANDO MÉTRICAS
+
+00:00:05.414 --> 00:00:08.417
+Vamos voltar mais uma vez
+para o exemplo anterior,
+
+00:00:08.451 --> 00:00:11.795
+em que adicionamos o overlay de
+visualização rápida à loja on-line,
+
+00:00:11.829 --> 00:00:15.710
+e detalhar o design
+com um pouco de terminologia.
+
+00:00:15.744 --> 00:00:19.187
+Nós hipotetizamos que adicionar
+um overlay de visualização rápida
+
+00:00:19.221 --> 00:00:21.531
+às imagens dos produtos
+após uma busca
+
+00:00:21.565 --> 00:00:24.706
+poderia aumentar o total de compras
+feitas pelos usuários.
+
+00:00:26.216 --> 00:00:27.820
+Uma coisa que você deve fazer
+
+00:00:27.854 --> 00:00:30.735
+é descrever como um usuário vai
+de visitar o site
+
+00:00:30.769 --> 00:00:33.507
+até concluir a compra.
+
+00:00:33.541 --> 00:00:36.229
+Pense em como você compraria
+algo no site.
+
+00:00:36.263 --> 00:00:37.844
+Começando pela página inicial,
+
+00:00:37.878 --> 00:00:40.707
+você digitaria o produto desejado
+na barra de busca
+
+00:00:40.741 --> 00:00:43.505
+e obteria
+uma lista de produtos.
+
+00:00:43.539 --> 00:00:45.360
+Após clicar
+na imagem de um produto,
+
+00:00:45.394 --> 00:00:48.707
+você seria levado à página
+de informações do produto.
+
+00:00:48.741 --> 00:00:51.148
+Então, você poderia colocar
+o produto no carrinho
+
+00:00:51.182 --> 00:00:54.520
+e continuar comprando
+ou finalizar a compra.
+
+00:00:54.554 --> 00:01:00.319
+Esse caminho esperado, do início
+ao fim, é o funil do usuário.
+
+00:01:00.353 --> 00:01:03.899
+Como o funil muda quando
+implementamos o novo overlay?
+
+00:01:03.933 --> 00:01:05.775
+Para usuários
+no grupo experimental,
+
+00:01:05.809 --> 00:01:07.776
+ou do overlay
+de visualização rápida,
+
+00:01:07.810 --> 00:01:12.288
+o funil adiciona os overlays
+de resumo às imagens dos produtos.
+
+00:01:12.322 --> 00:01:15.631
+Usuários nessa condição podem usar
+o overlay de visualização rápida
+
+00:01:15.665 --> 00:01:19.825
+para adicionar produtos ao carrinho,
+além das páginas padrão de produtos.
+
+00:01:21.049 --> 00:01:23.718
+Agora, temos que decidir
+em que ponto desse caminho
+
+00:01:23.752 --> 00:01:26.957
+dividir os usuários
+em dois grupos.
+
+00:01:26.991 --> 00:01:28.757
+Uma forma de realizar
+o experimento
+
+00:01:28.791 --> 00:01:31.598
+é atribuir a cada visitante
+um cookie
+
+00:01:31.632 --> 00:01:34.474
+assim que eles entrarem
+no site.
+
+00:01:34.508 --> 00:01:36.605
+O cookie permanece
+ao longo da sessão
+
+00:01:36.639 --> 00:01:40.492
+e determina qual versão do site
+o visitante vê.
+
+00:01:40.526 --> 00:01:45.179
+Podemos descrever esse método
+com o termo "unidade de desvio".
+
+00:01:45.213 --> 00:01:48.348
+A unidade de desvio,
+nesse caso, o cookie,
+
+00:01:48.382 --> 00:01:52.541
+é essencialmente o ponto
+onde dividimos as observações.
+
+00:01:52.575 --> 00:01:55.843
+A partir daí, escolhemos
+as métricas de avaliação,
+
+00:01:55.877 --> 00:01:59.704
+que vamos usar
+para comparar os dois grupos.
+
+00:01:59.738 --> 00:02:04.696
+Esses são os valores que dirão
+se o experimento foi um sucesso.
+
+00:02:04.730 --> 00:02:06.241
+Exemplos de boas métricas
+
+00:02:06.275 --> 00:02:09.375
+incluem o valor líquido total
+feito por usuário
+
+00:02:09.409 --> 00:02:11.143
+ou apenas a proporção
+de visitantes
+
+00:02:11.177 --> 00:02:13.153
+que fizeram uma compra
+em cada condição.
+
+00:02:13.187 --> 00:02:15.322
+Não estamos limitados
+a apenas uma métrica.
+
+00:02:15.356 --> 00:02:16.887
+Podemos acompanhar ambas,
+
+00:02:16.921 --> 00:02:20.118
+caso o overlay não as altere
+da mesma forma.
+
+00:02:20.152 --> 00:02:22.529
+Também devemos acompanhar
+métricas que esperamos
+
+00:02:22.563 --> 00:02:25.230
+que não mudem entre grupos.
+
+00:02:25.264 --> 00:02:27.208
+Essas métricas são úteis
+para verificar
+
+00:02:27.242 --> 00:02:29.348
+se os grupos de controle
+e experimental
+
+00:02:29.382 --> 00:02:31.118
+são comparáveis um ao outro,
+
+00:02:31.152 --> 00:02:34.683
+exceto pela condição
+experimental.
+
+00:02:34.717 --> 00:02:37.548
+As métricas que apenas verificam
+essas equivalências
+
+00:02:37.582 --> 00:02:41.468
+são chamadas
+de "métricas invariantes".
+
+00:02:41.502 --> 00:02:44.193
+Um exemplo de métrica invariante
+nesse caso
+
+00:02:44.227 --> 00:02:48.251
+seria o número de cookies
+gerados por cada grupo.
+
+00:02:48.285 --> 00:02:50.997
+Se a randomização estiver
+funcionando corretamente,
+
+00:02:51.031 --> 00:02:53.603
+devemos esperar
+que o mesmo número de visitantes
+
+00:02:53.637 --> 00:02:56.419
+seja atribuído
+a cada condição.
+
+00:02:56.453 --> 00:02:58.921
+Também podemos contar
+o número de usuários logados
+
+00:02:58.955 --> 00:03:00.710
+que foram atribuídos
+a cada condição
+
+00:03:00.744 --> 00:03:04.373
+para controlar desequilíbrios no
+comportamento histórico de compras.
+

@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.885 --> 00:00:04.767
+VERIFICANDO VIÉS
+
+00:00:05.740 --> 00:00:07.527
+Além de verificar a validade,
+
+00:00:07.561 --> 00:00:11.567
+você deve verificar fontes de viés
+em seus designs experimentais.
+
+00:00:11.601 --> 00:00:14.361
+Para humanos,
+vieses costumam ser malvistos,
+
+00:00:14.395 --> 00:00:19.412
+mas adaptativamente, podem ajudar a
+tomar decisões rápidas e eficientes.
+
+00:00:19.446 --> 00:00:23.066
+Para um experimento,
+viés é sempre ruim.
+
+00:00:23.100 --> 00:00:26.295
+Viés em um experimento
+refere-se a erros sistemáticos
+
+00:00:26.329 --> 00:00:29.751
+que afetam a interpretabilidade
+dos resultados.
+
+00:00:29.785 --> 00:00:32.343
+Aqui, vamos abordar
+alguns dos principais vieses
+
+00:00:32.377 --> 00:00:34.537
+que podem estar presentes
+em um experimento.
+
+00:00:35.884 --> 00:00:38.823
+Um tipo de viés
+é o viés de amostragem,
+
+00:00:38.857 --> 00:00:40.915
+em que a amostra
+não é representativa
+
+00:00:40.949 --> 00:00:43.282
+da população como um todo.
+
+00:00:43.316 --> 00:00:45.936
+Isso acontece muito
+em não-experimentos.
+
+00:00:46.950 --> 00:00:49.162
+Pessoas que trabalham
+com pesquisa de opinião
+
+00:00:49.196 --> 00:00:52.388
+frequentemente lidam
+com vieses em autosseleção,
+
+00:00:52.422 --> 00:00:54.328
+em que os respondentes
+frequentemente
+
+00:00:54.362 --> 00:00:57.453
+não respondem
+a solicitações de pesquisa.
+
+00:00:57.487 --> 00:00:59.556
+É possível que as pessoas
+que responderam
+
+00:00:59.590 --> 00:01:03.134
+sejam qualitativamente diferentes
+das que não responderam.
+
+00:01:03.168 --> 00:01:05.691
+Talvez tenham mais tempo
+para responder pesquisas,
+
+00:01:05.725 --> 00:01:09.586
+ou talvez estejam mais envolvidas
+com o tópico da pesquisa.
+
+00:01:09.620 --> 00:01:12.632
+Uma correspondência cuidadosa
+dos dados coletados à população
+
+00:01:12.666 --> 00:01:16.768
+é necessária para eliminar
+esse tipo de efeito de viés.
+
+00:01:17.292 --> 00:01:20.776
+Mas o viés de amostragem
+não se limita a não-experimentos.
+
+00:01:20.810 --> 00:01:24.935
+Também pode ocorrer em experimentos
+se não formos cuidadosos.
+
+00:01:24.969 --> 00:01:26.921
+Imagine que vamos
+realizar o experimento
+
+00:01:26.955 --> 00:01:28.667
+do overlay
+de visualização rápida,
+
+00:01:28.701 --> 00:01:31.464
+mas temos um problema
+com a atribuição aleatória.
+
+00:01:31.498 --> 00:01:34.701
+E se os clientes forem atribuídos
+ao grupo de controle
+
+00:01:34.735 --> 00:01:37.037
+entre meia-noite e meio-dia,
+
+00:01:37.071 --> 00:01:41.452
+e ao grupo experimental
+entre meio-dia e meia-noite?
+
+00:01:41.486 --> 00:01:44.914
+As pessoas que acessam o site
+nesses períodos
+
+00:01:44.948 --> 00:01:47.008
+podem não ser equivalentes
+umas às outras,
+
+00:01:47.042 --> 00:01:50.380
+introduzindo um viés
+na análise dos resultados.
+
+00:01:52.069 --> 00:01:55.482
+Outro tipo de viés
+é o viés de novidade.
+
+00:01:55.516 --> 00:01:57.679
+Como você deve ter adivinhado,
+esse viés vem
+
+00:01:57.713 --> 00:02:01.016
+da introdução de algo novo
+aos clientes.
+
+00:02:01.050 --> 00:02:03.268
+No exemplo do overlay
+de visualização rápida,
+
+00:02:03.302 --> 00:02:06.238
+você pode ver um aumento
+ou diminuição inicial do uso
+
+00:02:06.272 --> 00:02:09.881
+devido ao simples fato
+de o overlay ser algo novo.
+
+00:02:09.915 --> 00:02:12.841
+Talvez os clientes não se acostumem
+ao overlay a princípio,
+
+00:02:12.875 --> 00:02:17.001
+o que faz com que adiem
+temporariamente as compras.
+
+00:02:17.035 --> 00:02:18.752
+Contudo, após algum tempo,
+
+00:02:18.786 --> 00:02:23.233
+a novidade vai passar e os usuários
+vão se acostumar às mudanças.
+
+00:02:23.267 --> 00:02:28.116
+Isso permitirá ver o efeito real
+da manipulação experimental.
+
+00:02:28.150 --> 00:02:32.101
+Para experimentos dentro de grupos,
+há alguns vieses relacionados
+
+00:02:32.135 --> 00:02:34.640
+baseados na ordem
+das condições.
+
+00:02:34.674 --> 00:02:37.796
+O viés de primazia está um pouco
+relacionado ao de novidade,
+
+00:02:37.830 --> 00:02:42.188
+e refere-se a mudanças devido a
+uma condição vir primeiro na ordem.
+
+00:02:42.222 --> 00:02:45.570
+Opostamente, o viés de recência
+refere-se a mudanças
+
+00:02:45.604 --> 00:02:48.600
+devido a uma condição vir
+em último na ordem.
+
+00:02:48.634 --> 00:02:52.603
+Por exemplo, ao apresentar algumas
+amostras de produtos a testadores
+
+00:02:52.637 --> 00:02:54.929
+e pedir que avaliem
+cada uma delas,
+
+00:02:54.963 --> 00:02:58.401
+os testadores podem basear
+as avaliações no valor da primeira,
+
+00:02:58.435 --> 00:03:00.382
+um viés de primazia.
+
+00:03:00.416 --> 00:03:03.342
+Opostamente, os testadores podem
+favorecer a última amostra
+
+00:03:03.376 --> 00:03:07.588
+por estar mais fresca na memória,
+um viés de recência.
+
+00:03:07.622 --> 00:03:10.395
+A presença desses efeitos
+de primazia e recência
+
+00:03:10.429 --> 00:03:14.728
+mostra a importância de equilibrar
+a ordem das condições.
+

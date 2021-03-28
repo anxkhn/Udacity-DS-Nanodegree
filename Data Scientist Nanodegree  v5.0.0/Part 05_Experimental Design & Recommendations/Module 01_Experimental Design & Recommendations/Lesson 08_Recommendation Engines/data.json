@@ -1,0 +1,176 @@
+{
+  "data": {
+    "lesson": {
+      "id": 569226,
+      "key": "ed510bc1-30c8-42a0-9849-46d44291916f",
+      "title": "Recommendation Engines",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Put your skills to work to make recommendations for IBM Watson Studio's data platform.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/ed510bc1-30c8-42a0-9849-46d44291916f/569226/1540515260114/Recommendation+Engines+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/ed510bc1-30c8-42a0-9849-46d44291916f/569226/1540515257891/Recommendation+Engines+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "a8e34af1-5a64-4dec-9e72-75b94ef3ea6c",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 47520,
+        "semantic_type": "Project",
+        "title": "Recommendations with IBM",
+        "description": "This project will ensure you have mastered the subjects covered in the recommendations lessons.  Good luck!\n\n# Gather Submission Materials\n\nEither submit your project from the workspace OR here - not both.\n\nOnce you are satisfied with the status of your Notebook, you should save it in a format that will make it easy for others to read. You can use the __File -> Download as -> HTML (.html)__ menu to save your notebook as an .html file. If you get an error about \"No module name\", then open a terminal and try installing the missing module using `pip install <module_name>` (don't include the \"<\" or \">\" or any words following a period in the module name).\n\nYou will submit both your original Notebook and an HTML or PDF copy of the Notebook for review. There is no need for you to include any data files with your submission. If you made reference to other websites, books, and other resources to help you in solving tasks in the project, make sure that you document them. It is recommended that you either add a \"Resources\" section in a Markdown cell at the end of the Notebook report, or you can include a `readme.txt` file documenting your sources.\n\n# Submit the Project\n\nWhen you're ready, **double check the project [rubric](https://review.udacity.com/#!/rubrics/2322/view)**, make revisions as needed, then click on the \"Submit Project\" button to go to the project submission page. You can submit your files as a .zip archive or you can link to a GitHub repository containing your project files. If you go with GitHub, note that your submission will be a snapshot of the linked repository at time of submission. It is recommended that you keep each project in a separate repository to avoid any potential confusion: if a reviewer gets multiple folders representing multiple projects, there might be confusion regarding what project is to be evaluated.\n\nIt can take us up to a week to grade the project, but in most cases it is much faster. You will get an email once your submission has been reviewed. In the meantime, you should feel free to continue on with your learning journey by continuing on to the next module in the program.",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "2322",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 634686,
+          "key": "b9b0d2a9-af2b-44d3-9567-4aaf6535bf0a",
+          "title": "Project Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b9b0d2a9-af2b-44d3-9567-4aaf6535bf0a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 634687,
+              "key": "2074d5a3-c470-449f-93a8-ad8497f60106",
+              "title": "IBM Project Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XP_f64c07Gc",
+                "china_cdn_id": "XP_f64c07Gc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 715074,
+          "key": "b18d9903-a776-4e25-bbca-70109fa2f754",
+          "title": "Project Details",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b18d9903-a776-4e25-bbca-70109fa2f754",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715081,
+              "key": "693c4019-1360-40f6-9d5c-80e668f05168",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Recommendations with IBM\n\n#### Introduction\n\nFor this project you will analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles you think they will like.  Below you can see an example of what the dashboard could look like displaying articles on the IBM Watson Platform.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 715106,
+              "key": "2ba058cf-0c59-403f-9885-8f36409985e4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5ba02d6d_screen-shot-2018-09-17-at-3.40.30-pm/screen-shot-2018-09-17-at-3.40.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2ba058cf-0c59-403f-9885-8f36409985e4",
+              "caption": "",
+              "alt": "",
+              "width": 891,
+              "height": 502,
+              "instructor_notes": null
+            },
+            {
+              "id": 715127,
+              "key": "2fdecc5c-27c7-4b03-b82f-00eb49680b08",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Though the above dashboard is just showing the newest articles, you could imagine having a recommendation board available here that shows the articles that are most pertinent to a specific user.  \n\nIn order to determine which articles to show to each user, you will be performing a study of the data available on the IBM Watson Studio platform.  You can create your own account to become a part of their community, and get a better understanding of their data [by creating an account on the platform here](https://dataplatform.cloud.ibm.com/).\n\n### Your Tasks\n\nYour project will be divided into the following tasks\n\nI. **Exploratory Data Analysis**<br>\n\nBefore making recommendations of any kind, you will need to explore the data you are working with for the project.  Dive in to see what you can find.  There are some basic, required questions to be answered about the data you are working with throughout the rest of the notebook.  Use this space to explore, before you dive into the details of your recommendation system in the later sections.\n\nII. **Rank Based Recommendations**<br>\n\nTo get started in building recommendations, you will first find the most popular articles simply based on the most interactions.  Since there are no ratings for any of the articles, it is easy to assume the articles with the most interactions are the most popular.  These are then the articles we might recommend to new users (or anyone depending on what we know about them).\n\nIII. **User-User Based Collaborative Filtering**<br>\n\nIn order to build better recommendations for the users of IBM's platform, we could look at users that are similar in terms of the items they have interacted with.  These items could then be recommended to the similar users.  This would be a step in the right direction towards more personal recommendations for the users.  You will implement this next.\n\nIV. **Content Based Recommendations (EXTRA - NOT REQUIRED)**<br>\n\nGiven the amount of content available for each article, there are a number of different ways in which someone might choose to implement a content based recommendations system.  Using your NLP skills, you might come up with some extremely creative ways to develop a content based recommendation system.  You are encouraged to complete a content based recommendation system, but not required to do so to complete this project.\n\nV. **Matrix Factorization**<br>\n\nFinally, you will complete a machine learning approach to building recommendations.  Using the user-item interactions, you will build out a matrix decomposition.  Using your decomposition, you will get an idea of how well you can predict new articles an individual might interact with (spoiler alert - it isn't great).  You will finally discuss which methods you might use moving forward, and how you might test how well your recommendations are working for engaging users.\n\n\nBefore you submit your work, check the [RUBRIC](https://review.udacity.com/#!/rubrics/2322/view) to make sure you meet all of the rubric items.\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 715082,
+          "key": "5049b23a-b4c3-4e00-a637-44fa0963184c",
+          "title": "Project Workspace",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5049b23a-b4c3-4e00-a637-44fa0963184c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 715092,
+              "key": "f1246e6e-5a6b-4693-969e-ffdb1762097f",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewjl3tmhc1yl",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-jrj5hc0zvcf",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": true,
+                    "defaultPath": "/notebooks/Recommendations_with_IBM.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

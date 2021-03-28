@@ -1,0 +1,840 @@
+{
+  "data": {
+    "lesson": {
+      "id": 704639,
+      "key": "c7680ea6-0eb0-4998-87ff-26668cffa8c0",
+      "title": "A/B Testing Case Study",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will go through an A/B Testing case study to see how the conceptual and statistical concepts covered in the previous lessons can be applied in experiment designs.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/c7680ea6-0eb0-4998-87ff-26668cffa8c0/704639/1581407056277/A/B+Testing+Case+Study+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/c7680ea6-0eb0-4998-87ff-26668cffa8c0/704639/1581407053783/A/B+Testing+Case+Study+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 718676,
+          "key": "4e54a9bc-1e75-40e2-a646-1743022847f5",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4e54a9bc-1e75-40e2-a646-1743022847f5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 729133,
+              "key": "a67de7fe-ec15-4902-a596-1b284274b3fe",
+              "title": "Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "28mN6RvGXDM",
+                "china_cdn_id": "28mN6RvGXDM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 718678,
+          "key": "73aacc1f-0b4b-40f7-815b-02e00f36c953",
+          "title": "Scenario Description",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "73aacc1f-0b4b-40f7-815b-02e00f36c953",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 729679,
+              "key": "0ab96ead-2b63-47c6-9bcc-52138886c72d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Scenario Description\n\nLet's say that you're working for a fictional productivity software company\nthat is looking for ways to increase the number of people who pay for their\nsoftware. The way that the software is currently set up, users can download and\nuse the software free of charge, for a 7-day trial. After the end of the trial,\nusers are required to pay for a license to continue using the software.\n\nOne idea that the company wants to try is to change the layout of the homepage\nto emphasize more prominently and higher up on the page that there is a 7-day\ntrial available for the company's software. The current fear is that some\npotential users are missing out on using the software because of a lack of\nawareness of the trial period. If more people download the software and use it\nin the trial period, the hope is that this entices more people to make a\npurchase after seeing what the software can do.\n\nIn this case study, you'll go through steps for planning out an experiment to \ntest the new homepage. You will start by constructing a user funnel and \ndeciding on metrics to track. You'll also perform experiment sizing to see how \nlong it should be run. Afterwards, you'll be given some data collected for the \nexperiment, perform statistical tests to analyze the results, and come to \nconclusions regarding how effective the new homepage changes were for bringing \nin more users.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718679,
+          "key": "06f71709-26ce-4008-951a-74246741e11b",
+          "title": "Building a Funnel",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "06f71709-26ce-4008-951a-74246741e11b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 729737,
+              "key": "b7b91ecc-5307-47d2-86ca-7f4f39d216f4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Building a Funnel\n\nBefore we do anything else, the first thing we should do is specify the objective or goal of our study:\n\n> Revising the structure of the homepage will increase the number of people\nthat download the software and, ultimately, the number of people that purchase\na license.\n\nNow, we should think about the activities that a user will take on the site that are relevant to measuring our objective. This path or funnel will help us figure out how we will create experimental condition groups and which metrics we'll need to track to measure the experiment's effect. To help you construct the funnel, here's some information about the way the company's website is structured, and how the software induces users to purchase a license.\n\nThe company's website has five main sections: \n1. the homepage; \n2. a section with additional information, gallery, and examples; \n3. a page for users to download the software; \n4. a page for users to purchase a license; and \n5. a  support sub-site with documentation and FAQs for the software. \n\nFor the software itself, the website requires that users create an account in order to download \nthe software program. The program is usable freely for seven days after download. When the trial period is hit, the program will bring up a dialog box that takes the user to the license page. After purchasing a license, the user will receive a unique code associated with their site account. This code can then be used with the program to register it with that user, and the program can be used thereafter without issue.\n\nUsing the information above, fill in your responses to the questions below regarding the construction of a user funnel, then check on the next page for my thoughts.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 729934,
+              "key": "8842c10c-d146-486b-92e6-d0d5cb9e24b3",
+              "title": "An expected flow",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8842c10c-d146-486b-92e6-d0d5cb9e24b3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What steps do you expect typical visitors to take from their initial visit to the webpage through purchasing a license for continued use of the program? Are there any 'typical' steps that certain visitors might not take?",
+                "matchers": [
+                  {
+                    "expression": ".+"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 729951,
+              "key": "f26cd052-344b-4785-8d9e-e6783f76d02f",
+              "title": "Atypical events",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f26cd052-344b-4785-8d9e-e6783f76d02f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the webpage as a whole. What kinds of events might occur outside of the expected flow for the experiment that might interfere with measuring the effects of our manipulation?",
+                "matchers": [
+                  {
+                    "expression": ".+"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 729949,
+          "key": "73cbc96a-9abc-4b5d-9ca0-fa2d860ea24d",
+          "title": "Building a Funnel - Discussion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "73cbc96a-9abc-4b5d-9ca0-fa2d860ea24d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730110,
+              "key": "c2be4e81-03f1-4e47-9a58-f1b2b0cedcc4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: An expected flow\n\nA straightforward flow might include the following steps:\n\n- Visit homepage\n- Visit download page\n- Sign up for an account\n- Download software\n- After 7-day trial, software takes user to license-purchase page\n- Purchase license\n\nNote that it is possible for the visitor to drop from the flow after each step, forming a funnel. There might be additional steps that a user might take between visiting the homepage and visiting the download page that aren't accounted for in the above flow. For example, someone might want to check out the additional informational pages before visiting the download page, or even visit the license purchase page to check the license price before even deciding to download. Considering the amount of browsing that a visitor could perform on the page, it might be simplest just to track whether or not a user gets to the download page at some point, without worrying about the many paths that they could have taken to get there.\n\n## Re: Atypical events\n\nThere are a few events in the expected flow that might not correspond with the visitors we want to target. For example, there might be users on the homepage who aren't new users. Users who already have a license might just be visiting the homepage as a way to access the support sub-site. A user who wants to buy a license might also come in to the license page through the homepage, rather than directly from the software.\n\nWhen it comes to license purchasing, it's possible that users don't come back after exactly seven days. Some users might come back early and make their purchase during their trial period. Alternatively, a user might end up taking more than seven days to decide to make their purchase, coming back days after the end of the trial. Anticipating scenarios like this can be useful for planning the design, and coming up with metrics that come as close as possible to measuring desired effects.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718680,
+          "key": "55cbdf45-c621-4119-8eb5-714660b31bb0",
+          "title": "Deciding on Metrics - Part I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "55cbdf45-c621-4119-8eb5-714660b31bb0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730179,
+              "key": "3944e64e-05e9-4352-8fe2-13d0951070a2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Deciding on Metrics\n\nFrom our user funnel, we should consider two things: where and how we\nshould split users into experiment groups, and what metrics we will use to\ntrack the success or failure of the experimental manipulation. The choice of\nunit of diversion (the point at which we divide observations into groups) may\naffect what metrics we can use, and whether the metrics we record should be\nconsidered invariant or evaluation metrics. To start, decide on a unit of\ndiversion and brainstorm some ideas for metrics to capture.\n\nTo be clear, the overall plan is to test the effect of the new homepage using a\ntrue experiment; in particular, we'll be using an A/B testing framework. This\nmeans that prospective users should be split into two groups. The control, or\n'A' group, will see the old homepage, while the experimental, or 'B' group,\nwill see the new homepage that emphasizes the 7-day trial.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 730159,
+              "key": "ac371d2d-eb3f-4432-8979-61d203f667b9",
+              "title": "Unit of Diversion",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ac371d2d-eb3f-4432-8979-61d203f667b9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "By which means should we divide visitors into our experimental and control groups?",
+                "answers": [
+                  {
+                    "id": "a1538613013006",
+                    "text": "Event-based diversion (i.e. pageview)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1538613021705",
+                    "text": "Cookie-based diversion",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1538613022319",
+                    "text": "Account-based diversion (i.e. User ID)",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 730197,
+              "key": "47853fce-46d3-471a-bf15-d592dc6fa156",
+              "title": "Brainstorm Potential Metrics",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "47853fce-46d3-471a-bf15-d592dc6fa156",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write down some potential metrics or ways of objectively measuring things related to evaluating the success of the experiment. You don't need to decide on invariant or evaluation metrics here: that'll be discussed on the next page.",
+                "matchers": [
+                  {
+                    "expression": ".+"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 730191,
+          "key": "067e9391-82b5-4c60-ad41-70cfbbbfc052",
+          "title": "Deciding on Metrics - Part II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "067e9391-82b5-4c60-ad41-70cfbbbfc052",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730192,
+              "key": "b1480ac2-342c-4ba4-95f5-720ca671b2ab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Unit of Diversion\n\nThree main categories of diversion were presented in the course: event-based \ndiversion, cookie-based diversion, and account-based diversion.\n\nAn event-based diversion (like a pageview) can provide many observations to\ndraw conclusions from, but doesn't quite hit the mark for this case. If the\ncondition changes on each pageview, then a visitor might get a different\nexperience on each homepage visit. Event-based diversion is much better when \nthe changes aren't as easily visible to users, to avoid disruption of \nexperience. In addition, pageview-based diversion would let us know how many \ntimes the download page was accessed from each condition, but can't go any \nfurther in tracking how many actual downloads were generated from each \ncondition.\n\nDiverting based on account or user ID can be stable, but it's not the right\nchoice in this case. Since visitors only register after getting to the download\npage, this is too late to introduce the new homepage to people who should be\nassigned to the experimental condition.\n\nSo this leaves the consideration of cookie-based diversion, which feels like \nthe right choice. We can assign a cookie to each visitor upon their first page \nhit, which allows them to be separated into the control and experimental groups.\nCookies also allow tracking of each visitor hitting each page, recording whether or \nnot they eventually hit the download page and then whether or not they actually register an \naccount and perform the download.\n\nThat's not to say that the cookie-based diversion is perfect. The usual \ncookie-based diversion issues apply: we can get some inconsistency in counts \nif users enter the site via incognito window, different browsers, or cookies \nthat expire or get deleted before they make a download. This kind of assignment \n'dilution' could dampen the true effect of our experimental manipulation. As a \nsimplification, however, we'll assume that this kind of assignment dilution \nwill be small, and ignore its potential effects.\n\n## Re: Brainstorm Potential Metrics\n\nIn terms of metrics, we might want to keep track of the number of cookies that\nare recorded in different parts of the website. In particular, the number of\ncookies on the homepage, download page, and account registration page (in order\nto actually make the download) could prove useful. We can track the number of\nlicenses purchased through the user accounts, each of which can be linked back\nto a particular condition. Though it hasn't been specified, it's also possible\nthat the software includes usage statistics that we could track.\n\nThe above metrics are all based on absolute counts. We could instead \nperform our analysis on ratios of those counts. For example, we could be \ninterested in the proportion of downloads out of all homepage visits.\nLicense purchases could be stated as a ratio against the number of registered \nusers (downloads) or the original number of cookies.\n\nBelow, you will decide for each of the proposed metrics whether or not you \nwould want to use them as an invariant metric or an evaluation metric. To recap,\nan invariant metric is an objective measure that you should expect will not \nvary between conditions and that indicate equivalence between groups.\nEvaluation metrics, on the other hand, represent measures where you expect there will be\ndifferences between groups, and whose differences should say something \nmeaningful about your experimental manipulation.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 730223,
+              "key": "08f0dfec-b59a-44ec-95d5-8569ff91de54",
+              "title": "Selecting Invariant and Evaluation Metrics",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "08f0dfec-b59a-44ec-95d5-8569ff91de54",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "For each metric below, select whether you would use it as an invariant metric, evaluation metric, or neither."
+                },
+                "concepts_label": "Proposed Metric",
+                "answers_label": "Metric Type",
+                "concepts": [
+                  {
+                    "text": "Number of cookies @ homepage",
+                    "correct_answer": {
+                      "id": "a1538693584923",
+                      "text": "Invariant Metric"
+                    }
+                  },
+                  {
+                    "text": "Number of cookies @ download page",
+                    "correct_answer": {
+                      "id": "a1538695385848",
+                      "text": "Neither"
+                    }
+                  },
+                  {
+                    "text": "Number of user ids / downloads",
+                    "correct_answer": {
+                      "id": "a1538695386593",
+                      "text": "Neither"
+                    }
+                  },
+                  {
+                    "text": "Number of license purchases",
+                    "correct_answer": {
+                      "id": "a1538695387256",
+                      "text": "Neither"
+                    }
+                  },
+                  {
+                    "text": "Mean software usage time during trial",
+                    "correct_answer": {
+                      "id": "a1538695388802",
+                      "text": "Neither"
+                    }
+                  },
+                  {
+                    "text": "Ratio: # downloads / # cookies",
+                    "correct_answer": {
+                      "id": "a1538695389904",
+                      "text": "Evaluation Metric"
+                    }
+                  },
+                  {
+                    "text": "Ratio: # licenses / # cookies",
+                    "correct_answer": {
+                      "id": "a1538695390537",
+                      "text": "Evaluation Metric"
+                    }
+                  },
+                  {
+                    "text": "Ratio: # licenses / # user IDs",
+                    "correct_answer": {
+                      "id": "a1538696374255",
+                      "text": "Neither"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1538695385848",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538695389904",
+                    "text": "Evaluation Metric"
+                  },
+                  {
+                    "id": "a1538695388802",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538693584923",
+                    "text": "Invariant Metric"
+                  },
+                  {
+                    "id": "a1538693589447",
+                    "text": "Evaluation Metric"
+                  },
+                  {
+                    "id": "a1538693591371",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538695387256",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538695390537",
+                    "text": "Evaluation Metric"
+                  },
+                  {
+                    "id": "a1538696374255",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538695386593",
+                    "text": "Neither"
+                  },
+                  {
+                    "id": "a1538693592109",
+                    "text": "Invariant Metric"
+                  },
+                  {
+                    "id": "a1538693590678",
+                    "text": "Invariant Metric"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 730238,
+          "key": "8ab5c4a8-7473-4997-be28-9e238fa6ef26",
+          "title": "Deciding on Metrics - Discussion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ab5c4a8-7473-4997-be28-9e238fa6ef26",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730239,
+              "key": "b1a07eb8-9828-4a10-b668-43bc8ba85191",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Selecting Invariant and Evaluation Metrics\n\nThere's one invariant metric that really stands out here, and that's the number\nof cookies that hit the homepage. If we've done things correctly, each visitor\nshould have an equal chance of seeing each homepage, and that means that the\nnumber of cookies assigned to each group should be about the same. Since\nvisitors come in without any additional information (e.g. account info) and\nthe change effected by the experimental manipulation comes in right at the\nstart, there aren't other invariant metrics we should worry about.\n\nSelecting evaluation metrics is a trickier proposition. Count-based metrics at\nother parts of the process seem like natural choices: the number of times the\nsoftware was downloaded and the number of licenses purchased are exactly what\nwe want to change with the new homepage. The issue is that even though we\nexpect the number of cookies assigned to each group to be _about_ the same,\nit's much more likely than not they they won't be _exactly_ the same. Instead,\nwe should prefer using the download rate (# downloads / # cookies) and purchase\nrate (# licenses / # cookies) relative to the number of cookies as evaluation\nmetrics. Using these ratios allows us to account for slight imbalances between\ngroups.\n\nAs for the other proposed metrics, the ratio between the number of licenses and\nnumber of downloads is potentially interesting, but not as direct as the other\ntwo ratios discussed above. It's possible that the manipulation increases both\nthe number of downloads and number of licenses, but increases the former to a\nmuch higher rate. In this case, the licenses-to-downloads ratio might be worse\noff for the new homepage compared to the old, even though the new homepage has\nour desired effects. There's no such inconsistency issue with the ratios that\nuse the number of cookies in the denominator.\n\nProduct usage statistics like the average time the software was used in the\ntrial period are potentially interesting features, but aren't directly related\nto our experiment. We might not have a strong feeling about what kind of effect\nthe homepage will have on people that actually download the software. Stated\ndifferently, product usage isn't a direct target of the homepage manipulation.\nCertainly, these statistics might help us dig deeper into the reasons for\nobserved effects after an experiment is complete. They might even point toward\nfuture changes and experiments to conduct. But in terms of experiment success,\nproduct usage shouldn't be considered an invariant or evaluation metric.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718681,
+          "key": "d60f317e-d3c7-445b-b43d-e6c2bfe0d1fc",
+          "title": "Experiment Sizing",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d60f317e-d3c7-445b-b43d-e6c2bfe0d1fc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730348,
+              "key": "a69a19b1-a58c-44e6-beda-b1e9115d1e2b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Experiment Sizing\n\nNow that we have our main metrics selected: number of cookies as an invariant\nmetric, and the download rate and license purchase rate (relative to number of\ncookies) as evaluation metrics, we should take a look at the feasibility of the\nexperiment in terms of the amount of time it will take to run. We can use\nhistorical data as a baseline to see what it might take to detect our desired\nlevels of change.\n\nRecent history shows that there are about 3250 unique visitors per day, with\nslightly more visitors on Friday through Monday, than the rest of the week.\nThere are about 520 software downloads per day (a .16 rate) and about 65\nlicenses purchased each day (a .02 rate). In an ideal case, both the download\nrate and license purchase rate should increase with the new homepage; a\nstatistically significant negative change should be a sign to not deploy the\nhomepage change. However, if only one of our metrics shows a statistically \nsignificant positive change we should be happy enough to deploy the new \nhomepage.\n\nUse the above information to answer the questions below.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 730885,
+              "key": "6b64b584-56ad-4a3d-8af3-19f3863beabc",
+              "title": "Significance Level",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6b64b584-56ad-4a3d-8af3-19f3863beabc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider that we want to preserve a maximum 5% Type I error rate for falsely deploying the homepage without any actual effect. Should we apply the Bonferroni correction in this case?",
+                "answers": [
+                  {
+                    "id": "a1538982870618",
+                    "text": "Yes!",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1538982965369",
+                    "text": "No!",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1538983195916",
+                    "text": "Maybe?",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 730364,
+              "key": "2a82ba77-325b-4d9d-bbd0-aa1da224a02e",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2a82ba77-325b-4d9d-bbd0-aa1da224a02e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Detecting change in downloads",
+                "prompt": "Let's say that we want to detect an increase of 50 downloads per day (up to 570 per day, or a .175 rate). How many days of data would we need to collect in order to get enough visitors to detect this new rate at an overall 5% Type I error rate and at 80% power?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5505567337086976"
+              },
+              "answer": null
+            },
+            {
+              "id": 730369,
+              "key": "e6edf635-7709-4938-847d-4ae2bb9c34aa",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "e6edf635-7709-4938-847d-4ae2bb9c34aa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Detecting change in licenses",
+                "prompt": "What if we wanted to detect an increase of 10 license purchases per day (up to 75 per day, or a .023 rate). How many days of data would we need to collect in order to get enough visitors to detect this new rate at an overall 5% Type I error rate and at 80% power?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "6202228950564864"
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 730349,
+          "key": "7037040c-0a72-43e9-9f3b-f95dd43d4e26",
+          "title": "Experiment Sizing - Discussion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7037040c-0a72-43e9-9f3b-f95dd43d4e26",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 730886,
+              "key": "dde8a75a-c851-475b-8f18-c289a8b0c03c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Experiment Sizing\n\nBecause we have two evaluation metrics of interest, we should make sure that we \nare choosing an appropriate significance level to conduct each test, in order \nto preserve a maximum overall Type I error rate of .05. Since we would be happy \nto deploy the new homepage if either download rate or license purchase \nrate showed a statistically significant increase, performing both individual \ntests at a .05 error rate carries the risk of making too many Type I errors. As \nsuch, we'll apply the Bonferroni correction to run each test at a .025 error \nrate so as to protect against making too many errors. If it were the case that \nwe needed to see both metrics with a statistically significant increase, then \nwe wouldn't need to include the correction on the individual tests.\n\nFor an overall 5% Type I error rate with Bonferroni correction and 80% power, \nwe should require 6 days (rounded up from 5.55) to reliably detect a 50 \ndownload increase per day and 21 days (rounded up from 20.44) to detect an \nincrease of 10 license purchases per day. 21 days is actually a convenient \nnumber since the three-week timespan helps to account for weekly cycles. In \naddition, the 21-day data collection period is a short enough timeframe that \nrunning the experiment is a reasonable proposition. If the required experiment \nlength were a few weeks longer, then we might have needed to forego measuring \nthe license purchasing rate as a critical metric.\n\nOne thing that isn't accounted for in the base experiment length calculations \nis that there is going to be a delay between when users download the software \nand when they actually purchase a license. That is, when we start the \nexperiment, there could be about seven days before a user account associated \nwith a cookie actually comes back to make their purchase. Any purchases \nobserved within the first week might not be attributable to either experimental \ncondition. As a way of accounting for this, we'll run the experiment for about\none week longer to allow those users who come in during the third week a\nchance to come back and be counted in the license purchases tally.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 733879,
+              "key": "3d2ced42-1905-4df1-8259-653f170c672b",
+              "title": "Validity, Bias, and Ethics",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3d2ced42-1905-4df1-8259-653f170c672b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Before you go on to the next part to analyze some simulated data, do you think that there would be any issues with the experiment in terms of validity, bias, or ethical guidelines?",
+                "matchers": [
+                  {
+                    "expression": ".+"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 733880,
+          "key": "a8fbee2f-b499-49b6-8cba-362b3ff17268",
+          "title": "Validity, Bias, and Ethics - Discussion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a8fbee2f-b499-49b6-8cba-362b3ff17268",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 733881,
+              "key": "a56db513-af40-495d-8efc-57e6c03c747c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Validity, Bias, and Ethics\n\nBefore getting to the data and its analysis, let's review a few of the\nconceptual points that go into creation of an experiment: validity, bias, and\nethics.\n\nWe probably don't have too much to worry about in terms of validity. For\nconceptual validity, the evaluation metrics are directly aligned with the\nexperimental goals, no abstraction needed. Internal validity is maintained by\nperforming an experiment with properly-handled randomization and controls. We\ndon't really need to answer to external validity since we're drawing from the\nfull site population and there's no other population we're looking to\ngeneralize to.\n\nAs for biases, we might think of novelty bias as being a potential issue.\nHowever, we don't expect users to come back to the homepage regularly.\nDownloading and license purchasing are actions we expect to only occur once per\nuser, so there's no real 'return rate' to worry about. One possibility,\nhowever, is that if more people download the software under the new homepage,\nthe expanded user base is qualitatively different from the people who came to\nthe page under the original homepage. This might cause more homepage hits from\npeople looking for the support pages on the site, causing the number of unique\ncookies under each condition to differ. If we do see something wrong or out of\nplace in the invariant metric (number of cookies), then this might be an area\nto explore in further investigations.\n\nFinally, for ethical issues, the changes to the homepage should be benign and\npresent no risk to users. Our experiment objectives are also clearly stated.\nConsidering the low risks of the experiment, informed consent is at worst a\nminor concern; a standard popup to let visitors know that cookies are used to\ntrack user experience on the site will likely suffice. The largest ethics\nprinciple we should be concerned about is data sensitivity. We shouldn't get\nany sensitive data out of the cookie assignment and collection, though some\ninformation will be collected from the user when they go to download the\nsoftware. No sensitive data is required for the metrics we've laid out, so what\nwe should do is just aggregate daily visits, downloads, and purchase counts\nwithout looking at any individual outcomes.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718683,
+          "key": "36bbb13b-839b-42b0-aff5-15ee7e50c396",
+          "title": "Analyze Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "36bbb13b-839b-42b0-aff5-15ee7e50c396",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "homepage_experiment_data.csv",
+                "uri": "https://video.udacity-data.com/topher/2018/October/5bbbcebf_homepage-experiment-data/homepage-experiment-data.csv"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 734456,
+              "key": "81f8e1a9-a21d-4350-868a-cb594cf2e59c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Analyze Data\n\nLet's assume that the experiment was given the green light to go ahead, and\ndata was collected for 29 days. As a reminder of the discussion on experiment\nsizing, it was found that a three-week period was needed to collect enough\nvisitors to achieve our desired power level. Eight additional days of\ncollection were added to allow visitors in the last week to complete their\ntrials and come back to make a purchase – if you look at the data linked in the\nnext paragraph, you will see that it takes about eight days before the license\npurchases reaches its steady level.\n\nThe collected data can be found [here](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/October/5bbbcebf_homepage-experiment-data/homepage-experiment-data.csv).\nThe data file reports the daily counts for the number of unique cookies, number\nof downloads, and number of license purchases attributed to each group:\nthe experimental group with the new homepage, or the control group with the old homepage. The number of license purchases only includes purchases by users who joined after the\nstart of the experiment, so there will be some time before the counts reach\ntheir steady state. As noted earlier, we'll assume that the potentially\nmuddying effects of visits across multiple days, established user visits, and\n'lost' cookie tracking will be ignorable, at least unless we find reason to\ndoubt our findings.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 734485,
+              "key": "c796edac-9dc1-48fd-b6fd-04bd17d2627a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Invariant Metric\n\nFirst, we should check our invariant metric, the number of cookies assigned to \neach group. If there is a statistically significant difference detected, then \nwe shouldn't move on to the evaluation metrics right away. We'd need to first \ndig deeper to see if there was an issue with the group-assignment procedure, or \nif there is something about the manipulation that affected the number of \ncookies observed, before we feel secure about analyzing and interpreting the \nevaluation metrics.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 734481,
+              "key": "5c80eba2-b22b-4f3f-9b01-a6c0b1519c1c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5c80eba2-b22b-4f3f-9b01-a6c0b1519c1c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Checking the Invariant Metric",
+                "prompt": "What is the p-value for the test on the number of cookies assigned to each group?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "6408821575122944"
+              },
+              "answer": null
+            },
+            {
+              "id": 734493,
+              "key": "60648cd1-139c-4b89-bb79-22a996762849",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Evaluation Metrics\n\nAssuming that the invariant metric passed inspection, we can move on to the \nevaluation metrics: download rate and license purchasing rate. For a refresher, \nthe download rate is the total number of downloads divided by the number of \ncookies, and the license purchasing rate the number of licenses divided by the \nnumber of cookies.\n\nOne tricky point to consider is that there is a seven or eight day delay \nbetween when most people download the software and when they make a purchase. \nThere's no direct way of attributing cookies all the way through license \npurchases due to the daily aggregation of results, so the best we can do is to \nmake a justified argument for handling the data. To answer the question below \nabout the license purchasing rate, you should only take the cookies observed \nthrough day 21 as the denominator of the ratio as being responsible for all of \nthe license purchases observed. (A more informed model of license purchasing \ncould come up with a different handling of the data, such as including part of \nthe day 22 cookies in the denominator.) (Note that we don't need to perform \nthis kind of correction for the download rate, since the link between homepage \nvisits and downloads is much closer.)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 734482,
+              "key": "ab4b22cb-8231-4c85-b88b-231a8a1505d3",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ab4b22cb-8231-4c85-b88b-231a8a1505d3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Checking the Evaluation Metric I",
+                "prompt": "What is the p-value for the test on the download rate between groups?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5894049712701440"
+              },
+              "answer": null
+            },
+            {
+              "id": 734494,
+              "key": "80d7d2d9-c82f-4989-9638-b30abd40e03c",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "80d7d2d9-c82f-4989-9638-b30abd40e03c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Checking the Evaluation Metric II",
+                "prompt": "What is the p-value for the test on the license purchasing rate between groups?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5869330800181248"
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 718686,
+          "key": "ca832eda-0b45-4fe4-a6c6-45777938fb5e",
+          "title": "Draw Conclusions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ca832eda-0b45-4fe4-a6c6-45777938fb5e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 734529,
+              "key": "990c43da-2e84-4390-bcbe-a818dd5dca66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Analyze Data\n\nFor the test of the invariant metric, number of cookies, there were a larger\nnumber of cookies recorded in the experiment group, 47 346 vs. 46 851. This \nends up generating a p-value of 0.107 (z = -1.61), which is within a \nreasonable range under the null hypothesis. Since we lack sufficient reason to \nreject the null, we can continue on to evaluating the evaluation metrics. \n(Note that this doesn't mean that there _wasn't_ something actually different \nabout the cookie counts between groups, only that we couldn't detect it if such \na difference existed.)\n\nFor the first evaluation metric, download rate, there was an extremely \nconvincing effect. An absolute increase from 0.1612 to 0.1805 results in a \nz-score of 7.87, well beyond any standard significance bound. However, the \nsecond evaluation metric, license purchasing rate, only shows a small increase \nfrom 0.0210 to 0.0213 (following the assumption that only the first 21 days of \ncookies account for all purchases). This results in a p-value of 0.398\n(z = 0.26).",
+              "instructor_notes": null
+            },
+            {
+              "id": 734530,
+              "key": "22b47773-e684-4afa-9b07-370438bd7887",
+              "title": "Draw Conclusions",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "22b47773-e684-4afa-9b07-370438bd7887",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Should we deploy the new homepage or not? Do you have any other thoughts about the results of the experiment?",
+                "matchers": [
+                  {
+                    "expression": ".+"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 718684,
+          "key": "836893af-66aa-44a4-94a3-e1efbf1a6dd1",
+          "title": "Draw Conclusions - Discussion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "836893af-66aa-44a4-94a3-e1efbf1a6dd1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 737054,
+              "key": "6a1b8b8e-7c43-4326-9e6c-103c188f82e0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Re: Draw Conclusions\n\nDespite the fact that statistical significance wasn't obtained for the number\nof licenses purchased, the new homepage appeared to have a strong effect on the\nnumber of downloads made. Based on our goals, this seems enough to suggest\nreplacing the old homepage with the new homepage. Establishing whether there was a significant increase in the number of license purchases, either through the rate or the increase in the \nnumber of homepage visits, will need to wait for further experiments or data \ncollection.\n\nOne inference we might like to make is that the new homepage attracted new\nusers who would not normally try out the program, but that these new users\ndidn't convert to purchases at the same rate as the existing user base. This is\na nice story to tell, but we can't actually say that with the data as given. In \norder to make this inference, we would need more detailed information about \nindividual visitors that isn't available. However, if the software did have the \ncapability of reporting usage statistics, that might be a way of seeing if \ncertain profiles are more likely to purchase a license. This might then open \nadditional ideas for improving revenue.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 718677,
+          "key": "1a5c76a6-8e3f-4ba2-a0d3-b99d2afb41ee",
+          "title": "Lesson Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1a5c76a6-8e3f-4ba2-a0d3-b99d2afb41ee",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 729134,
+              "key": "01776a77-4ffe-4e77-aaea-15012c88ff8d",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2G6x3oQnjy4",
+                "china_cdn_id": "2G6x3oQnjy4.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

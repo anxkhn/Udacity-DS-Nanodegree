@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.700 --> 00:00:07.140
+So far in this lesson,
+
+00:00:07.139 --> 00:00:09.330
+you'll learn about different facets surrounding
+
+00:00:09.330 --> 00:00:12.179
+the building up of an experiment or study.
+
+00:00:12.179 --> 00:00:14.419
+In the second half of this lesson,
+
+00:00:14.419 --> 00:00:19.559
+you'll start learning about potential problems that can weaken a study's usefulness.
+
+00:00:19.559 --> 00:00:21.979
+Recall from the start of the lesson,
+
+00:00:21.980 --> 00:00:26.195
+that the ability to say that changes in one variable cause changes in a second,
+
+00:00:26.195 --> 00:00:30.035
+comes from controlling for the effects of our other variables.
+
+00:00:30.035 --> 00:00:34.590
+Ideally, we would like the distribution of all of our variables to remain the same
+
+00:00:34.590 --> 00:00:39.595
+across our groups except for the one that we manipulated to be different.
+
+00:00:39.594 --> 00:00:45.339
+Failure to pay attention to this means that we could fall into some analysis traps.
+
+00:00:45.399 --> 00:00:48.379
+For example, let's say that you have
+
+00:00:48.380 --> 00:00:52.810
+some observational data that shows that in months where there are higher ice cream sales,
+
+00:00:52.810 --> 00:00:55.835
+there are also higher volume of crimes committed.
+
+00:00:55.835 --> 00:01:00.600
+Does this mean that ice cream consumption is causing people to commit more crimes,
+
+00:01:00.600 --> 00:01:03.950
+and that we should stop ice cream from being sold?
+
+00:01:03.950 --> 00:01:06.530
+If we look at the data more carefully,
+
+00:01:06.530 --> 00:01:11.989
+we can find a variable that is modulating both of them; the average temperature.
+
+00:01:11.989 --> 00:01:16.649
+In the summer months, the higher heat causes there to be more ice cream sales.
+
+00:01:16.650 --> 00:01:21.945
+At the same time the heat causes higher unrest and more crimes to be committed.
+
+00:01:21.944 --> 00:01:26.404
+The temperature is an example of a confounding variable.
+
+00:01:26.405 --> 00:01:30.890
+A confounding variable is one that is not part of the variables of interest,
+
+00:01:30.890 --> 00:01:35.629
+but nonetheless has an interaction with those variables that we do care about.
+
+00:01:35.629 --> 00:01:40.159
+Accounting for or controlling for these potential confounds are
+
+00:01:40.159 --> 00:01:45.200
+vital for establishing a relationship between our variables of interest.
+

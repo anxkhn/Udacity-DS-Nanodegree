@@ -1,0 +1,119 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.975 --> 00:00:04.434
+PARADA PRECOCE
+
+00:00:05.090 --> 00:00:08.554
+Enquanto um experimento é executado,
+você provavelmente ficará tentado
+
+00:00:08.587 --> 00:00:11.100
+em algum momento
+a espiar como está indo.
+
+00:00:11.133 --> 00:00:14.820
+Se vir nessa espiada
+que o experimento está indo bem,
+
+00:00:14.853 --> 00:00:17.783
+você pode ficar tentado
+a encerrar o experimento antes
+
+00:00:17.816 --> 00:00:20.600
+e aplicar as mudanças testadas
+imediatamente.
+
+00:00:20.633 --> 00:00:23.670
+É importante resistir
+a essa tentação,
+
+00:00:23.703 --> 00:00:27.060
+já que essas espiadas irão aumentar
+sua taxa de erros geral.
+
+00:00:27.309 --> 00:00:31.585
+Por exemplo, veja um caso onde você
+analisa seus dados duas vezes,
+
+00:00:31.618 --> 00:00:35.840
+uma vez na metade, e outra ao final
+do tempo de execução agendado.
+
+00:00:35.873 --> 00:00:40.535
+Vamos executar várias simulações
+de resultados sob a hipótese nula.
+
+00:00:40.568 --> 00:00:44.815
+Se usarmos um nível de significância
+de 5% cada vez que checarmos,
+
+00:00:44.848 --> 00:00:48.292
+então não surpreende muito
+que, em média, 5% das simulações
+
+00:00:48.325 --> 00:00:51.610
+fiquem marcadas como tendo
+significância estatística.
+
+00:00:51.643 --> 00:00:55.281
+Isso é um resultado natural
+de nossa taxa de erros tipo I.
+
+00:00:55.314 --> 00:00:59.078
+Porém, menos de 2% dos testes
+têm significância estatística
+
+00:00:59.111 --> 00:01:02.240
+tanto no ponto central
+quanto no fim.
+
+00:01:02.273 --> 00:01:05.390
+A maioria das simulações
+que tinham significância estatística
+
+00:01:05.423 --> 00:01:09.755
+no ponto central acabaram
+não tendo significância ao final.
+
+00:01:10.153 --> 00:01:12.740
+Se decidirmos parar
+o experimento antes
+
+00:01:12.773 --> 00:01:15.727
+de ver uma diferença significativa
+no ponto central,
+
+00:01:15.760 --> 00:01:21.685
+então acabamos com uma taxa de erros
+em torno de 8,6%, não 5%.
+
+00:01:21.921 --> 00:01:24.619
+Isso não quer dizer
+que não podemos espiar antes
+
+00:01:24.652 --> 00:01:26.247
+para tomar
+uma decisão adiantada,
+
+00:01:26.280 --> 00:01:29.051
+só precisamos manter isso em mente
+durante nosso design.
+
+00:01:29.084 --> 00:01:32.042
+Se estiver disposto a lidar
+com matemática extra para isso,
+
+00:01:32.075 --> 00:01:34.722
+pode encontrar fórmulas
+e outros recursos que o ajudem
+
+00:01:34.755 --> 00:01:36.382
+a criar regras
+de parada precoce
+
+00:01:36.415 --> 00:01:40.125
+sem comprometer a integridade
+do seu design experimental.
+

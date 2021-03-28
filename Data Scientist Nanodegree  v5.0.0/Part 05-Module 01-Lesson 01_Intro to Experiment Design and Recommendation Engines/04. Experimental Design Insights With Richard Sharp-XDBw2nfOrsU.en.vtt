@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:07.309 --> 00:00:10.879
+First thing we do is we work closely with our marketing partners.
+
+00:00:10.880 --> 00:00:15.330
+They are interested in a number of different things that might be tested.
+
+00:00:15.330 --> 00:00:17.070
+There's always new ideas,
+
+00:00:17.070 --> 00:00:20.230
+and there are a couple different categories of those new ideas too,
+
+00:00:20.230 --> 00:00:25.199
+or the major requests so a new feature in the app or
+
+00:00:25.199 --> 00:00:28.439
+a substantial change to the loyalty program would
+
+00:00:28.440 --> 00:00:32.020
+mean quite a bit of work not just on the data science side,
+
+00:00:32.020 --> 00:00:33.190
+not just on the modeling side,
+
+00:00:33.189 --> 00:00:36.689
+but also everyone around the building would be impacted,
+
+00:00:36.689 --> 00:00:38.879
+and more importantly, customers and the partners and
+
+00:00:38.880 --> 00:00:41.250
+our stores would be impacted by it too.
+
+00:00:41.250 --> 00:00:46.000
+So, first question is the customer going to get it, right?
+
+00:00:46.000 --> 00:00:49.579
+Pretty much any customer facing change that we produce is
+
+00:00:49.579 --> 00:00:53.004
+going to end up being a question that goes to a barista somewhere.
+
+00:00:53.005 --> 00:00:56.045
+So, is this experiment going to
+
+00:00:56.045 --> 00:01:00.829
+impact the operations in the stores is another thing that we have to be considering.
+
+00:01:02.140 --> 00:01:04.430
+So, we do have a lot of data.
+
+00:01:04.430 --> 00:01:07.100
+We have data coming in from different sources,
+
+00:01:07.099 --> 00:01:10.009
+we have data coming in from the stores themselves,
+
+00:01:10.010 --> 00:01:13.840
+there's inventory data, there's data from the registers,
+
+00:01:13.840 --> 00:01:16.540
+there's data comes in from the app.
+
+00:01:16.540 --> 00:01:18.750
+It comes in from many places.
+
+00:01:18.750 --> 00:01:25.045
+We do take a look at this and try and decide is there some sort of historical precedent?
+
+00:01:25.045 --> 00:01:28.945
+Is there some reason for hope this idea is going to work out?
+
+00:01:28.944 --> 00:01:31.664
+Next question, can we measure the result?
+
+00:01:31.665 --> 00:01:34.780
+Any great idea, we can put it out there,
+
+00:01:34.780 --> 00:01:36.799
+but are we going to be able to tell if it worked or not?
+
+00:01:36.799 --> 00:01:39.899
+So, another operational constraint there.
+
+00:01:39.900 --> 00:01:45.020
+I would hope that most of the time,
+
+00:01:45.019 --> 00:01:46.884
+most experiments would fail.
+
+00:01:46.885 --> 00:01:49.370
+It's pretty normal.
+
+00:01:49.370 --> 00:01:53.050
+If we had an idea that we were so certain would work,
+
+00:01:53.049 --> 00:01:56.504
+and if we had 10 such ideas like that and nine of them worked,
+
+00:01:56.504 --> 00:01:58.155
+why weren't we already doing them?
+
+00:01:58.155 --> 00:01:59.620
+Those are the obvious things.
+
+00:01:59.620 --> 00:02:02.430
+Data science is here to uncover the less obvious.
+
+00:02:02.430 --> 00:02:03.620
+So, yes.
+
+00:02:03.620 --> 00:02:05.540
+We run experiments all the time.
+
+00:02:05.540 --> 00:02:08.375
+Now, they don't typically fail in grand fashion.
+
+00:02:08.375 --> 00:02:10.490
+It's not usually a disaster,
+
+00:02:10.490 --> 00:02:14.500
+but very often, the result is little to minimal change.
+
+00:02:14.500 --> 00:02:17.189
+Even if you get a somewhat positive result,
+
+00:02:17.189 --> 00:02:22.960
+is it worth the effort to take that experiment and lift it into the production setting?
+
+00:02:24.650 --> 00:02:28.230
+Demographic feature is a broadly term.
+
+00:02:28.229 --> 00:02:31.509
+So, how long has someone been a member of the program, for example.
+
+00:02:31.509 --> 00:02:33.664
+Then, treatment history.
+
+00:02:33.664 --> 00:02:36.299
+What have we tried showing you before?
+
+00:02:36.569 --> 00:02:42.579
+So, somebody, maybe not specifically which exact to offer have we shown you before,
+
+00:02:42.580 --> 00:02:46.580
+but somebody who is in a group that is used to receiving offers
+
+00:02:46.580 --> 00:02:50.960
+behaves differently than somebody in a group who's not used to receiving offers.
+
+00:02:50.960 --> 00:02:53.750
+Time is a variable that matters an awful lot to us.
+
+00:02:53.750 --> 00:02:58.175
+In fact, we're about to enter your holiday period.
+
+00:02:58.175 --> 00:03:01.250
+People behave very differently at Starbucks between Thanksgiving and
+
+00:03:01.250 --> 00:03:05.694
+Christmas in the US than they do during the rest of the year.
+
+00:03:05.694 --> 00:03:12.039
+So, a control that is somebody might make a good control in October,
+
+00:03:12.039 --> 00:03:16.289
+but a poor control in November for those sorts of reasons.
+

@@ -1,0 +1,141 @@
+{
+  "data": {
+    "lesson": {
+      "id": 722514,
+      "key": "f3191984-c26c-4927-9ec4-a55ffd40b9c5",
+      "title": "Portfolio Exercise: Starbucks ",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will analyze data that was originally used in screening interviews for data scientists at Starbucks.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f3191984-c26c-4927-9ec4-a55ffd40b9c5/722514/1555959405480/Portfolio+Exercise%3A+Starbucks++Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f3191984-c26c-4927-9ec4-a55ffd40b9c5/722514/1555959402954/Portfolio+Exercise%3A+Starbucks++Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 722521,
+          "key": "532e8a60-e520-4578-ab0e-bef16554919b",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "532e8a60-e520-4578-ab0e-bef16554919b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 751587,
+              "key": "d8a2d814-166d-4654-92df-c9dc18116b0e",
+              "title": "Starbucks Lab",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QPKRboscAf4",
+                "china_cdn_id": "QPKRboscAf4.mp4"
+              }
+            },
+            {
+              "id": 722522,
+              "key": "9f8cfeb1-8a7d-49be-aa3d-fabca25fcc13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n\n## This portfolio exercise is optional\nYou do not need to complete this portfolio exercise to satisfy the requirements of the Nanodegree program. But it will give you more great experience and insights into some new metrics that you may not have seen before, and be a valuable addition to your career portfolio, so we recommend you do it! ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 722548,
+          "key": "fcf195d7-5a72-43b6-a44b-7f9fed1014ed",
+          "title": "Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fcf195d7-5a72-43b6-a44b-7f9fed1014ed",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 722549,
+              "key": "9358d199-58e8-4e67-96e7-eb3794958d84",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Portfolio Exercise: Starbucks\n<br>\n\n<p style=\"text-align:center\"><img src=\"https://opj.ca/wp-content/uploads/2018/02/New-Starbucks-Logo-1200x969.jpg\" width=\"200\" height=\"200\"></p>\n<br>\n<br>\n \n#### Background Information\n\nThe dataset you will be provided in this portfolio exercise was originally used as a take-home assignment provided by Starbucks for their job candidates. The data for this exercise consists of about 120,000 data points split in a 2:1 ratio among training and test files. In the experiment simulated by the data, an advertising promotion was tested to see if it would bring more customers to purchase a specific product priced at $10. Since it costs the company 0.15 to send out each promotion, it would be best to limit that promotion only to those that are most receptive to the promotion. Each data point includes one column indicating whether or not an individual was sent a promotion for the product, and one column indicating whether or not that individual eventually purchased that product. Each individual also has seven additional features associated with them, which are provided abstractly as V1-V7.\n\n#### Optimization Strategy\n\nYour task is to use the training data to understand what patterns in V1-V7 indicate that a promotion should be provided to a user. Specifically, your goal is to maximize the following metrics:\n\n* **Incremental Response Rate (IRR)** \n\nIRR depicts how many more customers purchased the product with the promotion, as compared to if they didn't receive the promotion. Mathematically, it's the ratio of the number of purchasers in the promotion group to the total number of customers in the purchasers group (_treatment_) minus the ratio of the number of purchasers in the non-promotional group to the total number of customers in the non-promotional group (_control_).\n\n<span class='mathquill'>IRR = \\frac{purch_{treat}}{cust_{treat}} - \\frac{purch_{ctrl}}{cust_{ctrl}}</span>\n\n\n* **Net Incremental Revenue (NIR)**\n\nNIR depicts how much is made (or lost) by sending out the promotion. Mathematically, this is 10 times the total number of purchasers that received the promotion minus 0.15 times the number of promotions sent out, minus 10 times the number of purchasers who were not given the promotion.\n\n<span class='mathquill'>NIR = (10\\cdot purch_{treat} - 0.15 \\cdot cust_{treat}) - 10 \\cdot purch_{ctrl}</span>\n\nFor a full description of what Starbucks provides to candidates see the [instructions available here](https://drive.google.com/open?id=18klca9Sef1Rs6q8DW4l7o349r8B70qXM).\n\nYou can find the data in the workspace on the next page. Explore the data and different optimization strategies.\n\n#### How To Test Your Strategy?\n\nWhen you feel like you have an optimization strategy, complete the `promotion_strategy` function to pass to the `test_results` function.  \nFrom past data, we know there are four possible outcomes:\n\nTable of actual promotion vs. predicted promotion customers:  \n\n|                 | Actual  |       |\n|-----------------|---------|-------|\n| **Predicted**   | Yes     | No    |  \n| Yes             | **I**   | **II**|  \n| No              | **III** | **IV**|  \n\nThe metrics are only being compared for the individuals we predict should obtain the promotion – that is, quadrants I and II.  Since the first set of individuals that receive the promotion (in the training set) receive it randomly, we can expect that quadrants I and II will have approximately equivalent participants.  \n\nComparing quadrant I to II then gives an idea of how well your promotion strategy will work in the future. \n\nSee how each variable or combination of variables along with a promotion influences the chance of purchasing.  When you feel like you have a strategy for who should receive a promotion, test your strategy against the test dataset used in the final `test_results` function.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 722550,
+          "key": "e202df31-f5a7-4077-908b-117ce1a6b57d",
+          "title": "Workspace",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e202df31-f5a7-4077-908b-117ce1a6b57d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 722612,
+              "key": "93c01451-d9aa-49f7-9097-0158419cb87c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8oq647kz9r",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-hrpbvutpob",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Starbucks.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

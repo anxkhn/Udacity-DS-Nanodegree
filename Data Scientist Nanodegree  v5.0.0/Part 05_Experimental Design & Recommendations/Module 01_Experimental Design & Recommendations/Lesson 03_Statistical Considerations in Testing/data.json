@@ -1,0 +1,926 @@
+{
+  "data": {
+    "lesson": {
+      "id": 691200,
+      "key": "d64ebb3c-218c-4194-ba95-e50a19683be4",
+      "title": "Statistical Considerations in Testing",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn how statistics can be used to benefit the design of an experiment, as well as additional statistical tests that can be used to analyze results.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/d64ebb3c-218c-4194-ba95-e50a19683be4/691200/1581969480726/Statistical+Considerations+in+Testing+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/d64ebb3c-218c-4194-ba95-e50a19683be4/691200/1581969476915/Statistical+Considerations+in+Testing+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 691201,
+          "key": "9b81befe-0398-4020-98c0-0a29019c16d5",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9b81befe-0398-4020-98c0-0a29019c16d5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691354,
+              "key": "b0cdc353-8d46-4dbf-9fd2-a670b12967f0",
+              "title": "Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EBGMcpWe8-U",
+                "china_cdn_id": "EBGMcpWe8-U.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 691203,
+          "key": "61c023a1-3969-4286-bd96-54b93f896954",
+          "title": "Practice: Statistical Significance",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "61c023a1-3969-4286-bd96-54b93f896954",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691353,
+              "key": "d821e7e3-a800-4e5d-8158-4d2def596688",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This lesson assumes that you already know about basic inferential statistics. In particular, you should know how to perform a statistical test for the difference in means between two groups, and for comparing the mean of a single group against a reference value. Use the workspace below to check your knowledge and as a review.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 708467,
+              "key": "9f7673c4-9dab-4117-bb1b-1f24d127a3e0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-d5zuavf9qrp",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/L2_Statistical_Significance.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 728843,
+              "key": "2759dc74-d029-4d93-8fae-88381948f645",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2759dc74-d029-4d93-8fae-88381948f645",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Checking the Invariant Metric",
+                "prompt": "What is the p-value for the test on the invariant metric (number of visitors assigned to each group)?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5747662832402432"
+              },
+              "answer": null
+            },
+            {
+              "id": 728853,
+              "key": "f0e34e1c-dea1-4bd4-afe0-89b1dd89cd28",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f0e34e1c-dea1-4bd4-afe0-89b1dd89cd28",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Checking the Evaluation Metric",
+                "prompt": "What is the p-value for the test on the evaluation metric (difference in click-through rates across groups)?",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5882492727459840"
+              },
+              "answer": null
+            },
+            {
+              "id": 728816,
+              "key": "884f951a-3649-4206-9856-746e6ae32180",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Additional Resources\n\nIf you need a refresher on statistics, check out the content linked in the extracurricular materials for the **Practical Statistics** course. You might also like to try [Think Stats](http://greenteapress.com/wp/think-stats-2e/), a book that takes a simulation-based approach to hypothesis testing.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 728705,
+          "key": "ba72b67d-4635-4811-a649-263ff104aff3",
+          "title": "Statistical Significance - Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ba72b67d-4635-4811-a649-263ff104aff3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728712,
+              "key": "65feb439-683e-4e17-9690-7a6afe70ac86",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-kf1hye10o",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/solutions/L2_Statistical_Significance_Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 691204,
+          "key": "4ddaf078-35ad-4556-b9dc-b9a671d0d662",
+          "title": "Practical Significance",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4ddaf078-35ad-4556-b9dc-b9a671d0d662",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691350,
+              "key": "509031ff-9ade-4340-9e10-6930a4a2d64e",
+              "title": "Practical Significance",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eJ3idt3AJ7E",
+                "china_cdn_id": "eJ3idt3AJ7E.mp4"
+              }
+            },
+            {
+              "id": 691357,
+              "key": "0ac8d28c-e5c5-46a4-bd28-625759a67279",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Practical Significance\n\nEven if an experiment result shows a statistically significant difference in an\nevaluation metric between control and experimental groups, that does not\nnecessarily mean that the experiment was a success. If there are any costs\nassociated with deploying a change, those costs might outweigh the benefits\nexpected based on the experiment results. **Practical significance** refers to\nthe level of effect that you need to observe in order for the experiment to be\ncalled a true success and implemented in truth. Not all experiments imply a \npractical significance boundary, but it's an important factor in the \ninterpretation of outcomes where it is relevant.\n\nIf you consider the confidence interval for an evaluation metric statistic\nagainst the null baseline and practical significance bound, there are a few\ncases that can come about.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737138,
+              "key": "18f6e02b-29a3-4825-9cd4-24dbd7beb7b1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Confidence interval is fully in practical significance region\n\n(Below, <span class='mathquill'>m_0</span> indicates the null statistic value, <span class='mathquill'>d_{min}</span> the practical significance bound, and the blue line the confidence interval for the observed statistic. We assume that we're looking for a positive change, ignoring the negative equivalent for <span class='mathquill'>d_{min}</span>.)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 728790,
+              "key": "3213522b-1dfa-48ca-9b81-3ee41e46d817",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5bad451e_c03-practicalsignificance-01/c03-practicalsignificance-01.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3213522b-1dfa-48ca-9b81-3ee41e46d817",
+              "caption": "",
+              "alt": "",
+              "width": 400,
+              "height": 89,
+              "instructor_notes": null
+            },
+            {
+              "id": 728793,
+              "key": "709d9d76-9b9f-4f8d-bbd0-640dd58a3b22",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If the confidence interval for the statistic does not include the null or\nthe practical significance level, then the experimental manipulation can be \nconcluded to have a statistically and practically significant effect. It is\nclearest in this case that the manipulation should be implemented as a success.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737139,
+              "key": "86672db7-c2e6-4d07-9d51-0bb2956eb357",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Confidence interval completely excludes any part of practical significance region",
+              "instructor_notes": ""
+            },
+            {
+              "id": 728796,
+              "key": "e13e798f-d2ad-4dce-a039-71f16a9815bb",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5bad45b9_c03-practicalsignificance-02/c03-practicalsignificance-02.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e13e798f-d2ad-4dce-a039-71f16a9815bb",
+              "caption": "",
+              "alt": "",
+              "width": 400,
+              "height": 119,
+              "instructor_notes": null
+            },
+            {
+              "id": 728794,
+              "key": "ff191896-ed60-45a4-a864-e20dc86f1216",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If the confidence interval does not include any values that would be considered\npractically significant, this is a clear case for us to not implement the\nexperimental change. This includes the case where the metric is statistically\nsignificant, but whose interval does not extend past the practical significance\nbounds. With such a low chance of practical significance being achieved on the\nmetric, we should be wary of implementing the change.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 737140,
+              "key": "c858cca2-3210-47e6-94d4-50164a2f8388",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Confidence interval includes points both inside and outside practical significance bounds",
+              "instructor_notes": ""
+            },
+            {
+              "id": 728797,
+              "key": "2e96a4f7-e51c-4b59-ae82-b2fc276088c5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5bad45c7_c03-practicalsignificance-03/c03-practicalsignificance-03.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2e96a4f7-e51c-4b59-ae82-b2fc276088c5",
+              "caption": "",
+              "alt": "",
+              "width": 400,
+              "height": 149,
+              "instructor_notes": null
+            },
+            {
+              "id": 728795,
+              "key": "af8ce56b-1975-4c83-9858-8ea321470a5f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This leaves the trickiest cases to consider, where the confidence interval\nstraddles the practical significance bound. In each of these cases, there is\nan uncertain possibility of practical significance being achieved. In an ideal\nworld, you would be able to collect more data to reduce our uncertainty,\nreducing the scenario to one of the previous cases. Outside of this, you'll\nneed to consider the risks carefully in order to make a recommendation on\nwhether or not to follow through with a tested change. Your analysis might also\nreveal subsets of the population or aspects of the manipulation that __do__ work,\nin order to refine further studies or experiments.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 691205,
+          "key": "b9598b3e-6d45-40dd-914d-6c0ddf391b19",
+          "title": "Experiment Size",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b9598b3e-6d45-40dd-914d-6c0ddf391b19",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691278,
+              "key": "30aae408-f88b-4efa-8bfc-913d07657449",
+              "title": "Experiment Size",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sImRm8e01jA",
+                "china_cdn_id": "sImRm8e01jA.mp4"
+              }
+            },
+            {
+              "id": 708651,
+              "key": "5feae0c9-053f-462f-91f4-2c6c3f88ea36",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-v47xvy4fyg",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/L2_Experiment_Size.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 708806,
+              "key": "bceb577c-d185-4cff-b819-9b7d0b435223",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "After computing the number of observations needed for an experiment to reliably \ndetect a specified level of experimental effect (i.e. statistical power), we \nneed to divide by the expected number of observations per day in order to get \na minimum experiment length. We want to make sure that an experiment \ncan be completed in a reasonable time frame so that if we do have a successful \neffect, it can be deployed as soon as possible and resources can be \nfreed up to run new experiments. What a 'reasonable time frame' means will \ndepend on how important a change will be, but if the length of time is beyond a month \nor two, that's probably a sign that it's too long.\n\nThere are a few ways that an experiment's duration can be reduced. We could, of \ncourse, change our statistical parameters. Accepting higher Type I or Type II \nerror rates will reduce the number of observations needed. So too will \nincreasing the effect size: it's much easier to detect larger changes.\n\nAnother option is to change the unit of diversion. A 'wider' unit of diversion \nwill result in more observations being generated. For example, you could \nconsider moving from a cookie-based diversion in a web-based experiment to an \nevent-based diversion like pageviews. The tradeoff is that event-based \ndiversion could create inconsistent website experiences for users who visit \nthe site multiple times.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 728713,
+          "key": "59d26033-cb6e-49f1-9c0c-0fcda0825c90",
+          "title": "Experiment Size - Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "59d26033-cb6e-49f1-9c0c-0fcda0825c90",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728714,
+              "key": "8b7f2efc-57c6-42d6-9d38-95227f2859b3",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-tcudyd2wft",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/solutions/L2_Experiment_Size_Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 691206,
+          "key": "7e01e3fa-28c7-4304-86e2-accff3e13f9d",
+          "title": "Using Dummy Tests",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7e01e3fa-28c7-4304-86e2-accff3e13f9d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691276,
+              "key": "8d3be112-c2ae-40a0-a946-4d4cccb7b2db",
+              "title": "Using Dummy Tests",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rURTLjh3Hlc",
+                "china_cdn_id": "rURTLjh3Hlc.mp4"
+              }
+            },
+            {
+              "id": 691277,
+              "key": "7a27a856-e6ed-4863-9633-a17bf158cd91",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Using Dummy Tests\n\nWhen it comes to designing an experiment, it might be useful to run a dummy \ntest as a predecessor to or as part of that process. In a dummy test, you will\nimplement the same steps that you would in an actual experiment to assign the \nexperimental units into groups. However, the experimental manipulation won't \nactually be implemented, and the groups will be treated equivalently.\n\nThere are multiple reasons to run a dummy test. First, a dummy test can expose\nif there are any errors in the randomization or assignment procedures. A short \ndummy test can be worth the investment if an invariant metric is found to have \na statistically significant difference, or if some other systematic bias is \nidentified, because it can help avoid larger problems down the line. A second reason to run a \ndummy test is to collect data on metrics' behaviors. If historic data is not \nenough to predict the outcome of recorded metrics or allow for experiment \nduration to be computed, then a dummy test can be useful for getting baselines.\n\nOf course, performing a dummy test requires an investment of resources, the most \nimportant of which is time. If time is of the essence, then you may need to \njust go ahead with the experiment, keeping an eye on invariant metrics for any \ntrouble. An alternative approach is to perform a hybrid test. In the A/B \ntesting paradigm, this can take the form of an A/A/B test. That is, we split \nthe data into three groups: two control and one experimental. A comparison \nbetween control groups can be used to learn about null-environment properties \nbefore making inferences on the effect of the experimental manipulation.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 691207,
+          "key": "8adeaf08-8de6-4d05-923f-eaad07199517",
+          "title": "Non-Parametric Tests Part I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8adeaf08-8de6-4d05-923f-eaad07199517",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714901,
+              "key": "6bfd435d-2c94-4875-a1a5-52dd144817b4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-yjgd60tzzdc",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/L2_Non-Parametric_Tests_Part_1.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 728715,
+          "key": "257f3336-b19d-44c8-a5fa-98b68e28fb48",
+          "title": "Non-Parametric Tests Part I - Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "257f3336-b19d-44c8-a5fa-98b68e28fb48",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728719,
+              "key": "3c3977db-7de8-48ce-9ac6-c58827b7be74",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-yad1muf723b",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/solutions/L2_Non-Parametric_Tests_Part_1_Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 713969,
+          "key": "1ffd7615-a1e8-4bd4-8994-6c6beab37257",
+          "title": "Non-Parametric Tests Part II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1ffd7615-a1e8-4bd4-8994-6c6beab37257",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 714900,
+              "key": "e6534e6a-1faf-420e-8076-f2d93b4f7669",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-eneoksx6gff",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/L2_Non-Parametric_Tests_Part_2.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 728720,
+          "key": "9003ec7e-f27c-4e21-b068-6e4e6162022c",
+          "title": "Non-Parametric Tests Part II - Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9003ec7e-f27c-4e21-b068-6e4e6162022c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728721,
+              "key": "6cdb6cbb-4dbb-4a6d-aad1-743dccb0ecc8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-d9a895kx73j",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/solutions/L2_Non-Parametric_Tests_Part_2_Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 691209,
+          "key": "83ca614f-acbc-4123-8ec2-5739d12b97e9",
+          "title": "Analyzing Multiple Metrics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "83ca614f-acbc-4123-8ec2-5739d12b97e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691246,
+              "key": "02f6c10e-8083-45a8-b5df-10a9f69a323d",
+              "title": "Analyzing Multiple Metrics Pt 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "SNFHYbJvlZU",
+                "china_cdn_id": "SNFHYbJvlZU.mp4"
+              }
+            },
+            {
+              "id": 708728,
+              "key": "c8a19fcb-4a3c-4a41-8762-5afe6b3bf669",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "c8a19fcb-4a3c-4a41-8762-5afe6b3bf669",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "How likely are we to make an error?",
+                "prompt": "How likely are we to falsely declare some kind of significant effect if we have two metrics, each set up with a 5% Type I error rate? (You can input your response as a decimal or as a percentage.)",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "4504773435457536"
+              },
+              "answer": null
+            },
+            {
+              "id": 691252,
+              "key": "3f3e2b4b-c846-4a14-995e-4b77ba80ef0c",
+              "title": "Analyzing Multiple Metrics Pt 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "x7foG7murvU",
+                "china_cdn_id": "x7foG7murvU.mp4"
+              }
+            },
+            {
+              "id": 691261,
+              "key": "6ba32464-2dc9-48d4-b45f-4e8551ce99e6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##  Analyzing Multiple Metrics\n\nIf you're tracking multiple evaluation metrics, make sure that you're aware of \nhow the Type I error rates on individual metrics can affect the overall chance \nof making some kind of Type I error. The simplest case we can consider is if we \nhave _n_ independent evaluation metrics, and that seeing one with a \nstatistically significant result would be enough to call the manipulation a \nsuccess. In this case, the probability of making at least one Type I error is \ngiven by <span class='mathquill'>\\alpha_{over} = 1 - (1-\\alpha_{ind})^n</span>, \nillustrated in the below image for individual \n<span class='mathquill'>\\alpha_{ind} = .05</span> and <span class='mathquill'>\\alpha_{ind} = .01</span>:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 722599,
+              "key": "3202d882-7c59-4e13-bc9e-5e84882535b7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5ba577ae_c08-multimetrics-01/c08-multimetrics-01.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3202d882-7c59-4e13-bc9e-5e84882535b7",
+              "caption": "",
+              "alt": "",
+              "width": 404,
+              "height": 276,
+              "instructor_notes": null
+            },
+            {
+              "id": 722598,
+              "key": "3c5b4b76-7e6c-4f56-a1dc-197e8dbfc9ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To protect against this, we need to introduce a correction factor on the \nindividual test error rate so that the overall error rate is at most the \ndesired level. A conservative approach is to divide the overall error rate by \nthe number of metrics tested:\n\n<span class='mathquill'>\\alpha_{ind} = \\alpha_{over}/n</span>\n\nThis is known as the **Bonferroni correction**. If we assume independence \nbetween metrics, we can do a little bit better with the **Šidák correction**:\n\n<span class='mathquill'>\\alpha_{ind} = 1-(1-\\alpha_{over})^{1/n}</span>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 722611,
+              "key": "64bfd9ca-0681-42f4-9610-6d7a561a080f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/September/5ba577be_c08-multimetrics-02/c08-multimetrics-02.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/64bfd9ca-0681-42f4-9610-6d7a561a080f",
+              "caption": "The Šidák correction is only slightly higher than the line drawn by the Bonferroni correction.",
+              "alt": "",
+              "width": 414,
+              "height": 276,
+              "instructor_notes": null
+            },
+            {
+              "id": 722613,
+              "key": "7d89e8c5-d588-4ba4-8a75-a5d37d17251c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In real life, evaluation scenarios are rarely so straightforward. Metrics will\nlikely be correlated in some way, rather than being independent. If a positive\ncorrelation exists, then knowing the outcome of one metric will make it more\nlikely for a correlated metric to also point in the same way. In this case, the\ncorrections above will be more conservative than necessary, resulting in an\noverall error rate smaller than the desired level. (In cases of negative\ncorrelation, the true error rate could go either way, depending on the types of\ntests performed.)\n\nIn addition, we might need multiple metrics to show statistical significance to\ncall an experiment a success, or there may be different degrees of success\ndepending on which metrics appear to be moved by the manipulation. One metric\nmay not be enough to make it worth deploying a change tested in an experiment.\nReducing the individual error rate will make it harder for a truly significant\neffect to show up as statistically significant. That is, reducing the Type I error\nrate will also increase the Type II error rate – another conservative shift.\n\nUltimately, there is a small balancing act when it comes to selecting an\nerror-controlling scheme. Being fully conservative with one of the simple\ncorrections above means that you increase the risk of failing to roll out\nchanges that actually have an impact on metrics. Consider the level of\ndependence between metrics and what results are needed to declare a success to\ncalibrate the right balance in error rates. If you need to see a significant\nchange in all of your metrics to proceed with it, you might not need a\ncorrection factor at all. You can also use dummy test results, bootstrapping,\nand permutation approaches to plan significance thresholds. Finally, don't\nforget that practical significance can be an all-important quality that\noverrides other statistical significance findings.\n\nWhile the main focus of this page has been on interpretation of evaluation\nmetrics, it's worth noting that these cautions also apply to invariant metrics.\nThe more invariant metrics you test, the more likely it will be that some test\nwill show a statistically significant difference even if the groups tested are\ndrawn from equivalent populations. However, it might not be a good idea to\napply a correction factor to individual tests since we want to avoid larger\nissues with interpretation later on. As mentioned previously, a single\ninvariant metric showing a statistically significant difference is not\nnecessarily cause for alarm, but it is something that merits follow-up in case\nit does have an effect on our analysis.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 691210,
+          "key": "db9724dc-605b-45d7-951e-4730e1678dd2",
+          "title": "Early Stopping",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "db9724dc-605b-45d7-951e-4730e1678dd2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691234,
+              "key": "14cdeca1-2477-4da6-ab10-2a0157ea75f5",
+              "title": "Early Stopping",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "taIJZMNwRsI",
+                "china_cdn_id": "taIJZMNwRsI.mp4"
+              }
+            },
+            {
+              "id": 718674,
+              "key": "174cd0fd-8273-44ad-8a0e-5d3bdd9355fb",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-ido1ewdiwl",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/L2_Early_Stopping.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 718675,
+              "key": "4d8f5d8e-078e-4ea0-a8af-d5e1b0b4700f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Early Stopping\n\nAs the above workspace shows, there are significant risks for peeking ahead and\nmaking an early decision if it is not planned for in the design. If you haven't\naccounted for the effects of peeking on your error rate, then it's best to\nresist the temptation to look at the results early, and only perform a final\nanalysis at the end of the experiment. This is another reason why it's\nimportant to design an experiment ahead of any data collection.\n\nNote that there _are_ ways of putting together a design to allow for making an\nearly decision on an experiment. In the workspace, we showed how to treat the\nproblem like a multiple comparisons problem, adjusting the individual test-wise\nerror rate to preserve an overall error rate. For continuous tracking,\n[this page](https://www.evanmiller.org/sequential-ab-testing.html) describes a\nrule of thumb for rate-based metrics, tracking the number of successes in each\ngroup and stopping the experiment once the counts' sum or difference exceeds\nsome threshold. More generally, tests like the\n[sequential probability ratio test](https://en.wikipedia.org/wiki/Sequential_probability_ratio_test)\ncan be developed to make an early stopping decision while an experiment is\nrunning, if it looks statistically unlikely for a metric to move past or fall\nback against the statistical significance bound.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 728722,
+          "key": "588de45d-5419-4c46-957b-99e49260b86a",
+          "title": "Early Stopping - Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "588de45d-5419-4c46-957b-99e49260b86a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 728723,
+              "key": "136962b9-31f3-4438-b8de-63537258ee0a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewvrgyb1g8sx9",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-euanta21kbr",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/solutions/L2_Early_Stopping_Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 691211,
+          "key": "0a2065b4-acab-425f-a590-a3ef57384cd6",
+          "title": "Lesson Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0a2065b4-acab-425f-a590-a3ef57384cd6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691232,
+              "key": "b4c4678b-ca7d-45a1-9715-a749d8190a4b",
+              "title": "Conclusions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "3IFF1GzUq0Y",
+                "china_cdn_id": "3IFF1GzUq0Y.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

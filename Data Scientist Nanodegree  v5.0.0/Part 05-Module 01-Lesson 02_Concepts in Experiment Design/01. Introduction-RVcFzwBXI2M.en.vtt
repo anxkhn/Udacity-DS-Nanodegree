@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.200 --> 00:00:10.315
+What if I told you that lawyers in New York were driving up the price of apples.
+
+00:00:10.314 --> 00:00:12.189
+Take a look at this chart,
+
+00:00:12.189 --> 00:00:16.524
+tracking both of these values from 1992 to 2006.
+
+00:00:16.524 --> 00:00:20.195
+Since they increase and decrease in a similar pattern,
+
+00:00:20.195 --> 00:00:24.039
+maybe lawyers like to eat apples so much that apples are forced
+
+00:00:24.039 --> 00:00:28.064
+to cost more or maybe it's the other way around.
+
+00:00:28.065 --> 00:00:30.375
+The more expensive apples are,
+
+00:00:30.375 --> 00:00:33.734
+more people welcome lawyers to pay for them.
+
+00:00:33.734 --> 00:00:36.500
+This seems kind of silly, doesn't it?
+
+00:00:36.500 --> 00:00:40.840
+It's a big leap of logic to say that the number of lawyers is directly
+
+00:00:40.840 --> 00:00:45.920
+connected to the price of apples simply because they have a mathematical relationship.
+
+00:00:45.920 --> 00:00:50.640
+After all, there might be other variables that we haven't considered.
+
+00:00:50.640 --> 00:00:55.390
+The population of New York has steadily increased over the same time frame,
+
+00:00:55.390 --> 00:01:00.060
+and inflation will naturally increase the price of goods as time goes on.
+
+00:01:00.060 --> 00:01:06.025
+So, the relationship that we see in the original plot might simply be a coincidence.
+
+00:01:06.025 --> 00:01:09.680
+The number of lawyers and the price of apples might
+
+00:01:09.680 --> 00:01:13.785
+both be going up based on other factors across time.
+
+00:01:13.784 --> 00:01:17.000
+It's relationships like this that give meaning to
+
+00:01:17.000 --> 00:01:21.079
+the phrase that correlation does not imply causation.
+
+00:01:21.079 --> 00:01:25.039
+Just because you see that two variables are related to one another
+
+00:01:25.040 --> 00:01:29.405
+doesn't mean that when one changes the other one is cost to change as well.
+
+00:01:29.405 --> 00:01:32.540
+However, there will be cases where you do want to
+
+00:01:32.540 --> 00:01:35.665
+say that one variable causes another to change.
+
+00:01:35.665 --> 00:01:41.660
+You might want to say that changes to your website cause visitors to make more purchases
+
+00:01:41.659 --> 00:01:44.479
+or maybe you want to show that changes to
+
+00:01:44.480 --> 00:01:49.145
+your recommendation engine provide better search results to your users.
+
+00:01:49.144 --> 00:01:51.429
+To test your hypotheses,
+
+00:01:51.430 --> 00:01:54.340
+you should run an experiment.
+
+00:01:54.340 --> 00:01:58.930
+This is why experiment design is so important for data scientists to know about
+
+00:01:58.930 --> 00:02:04.960
+to understand the scope of conclusions that they can make from their data.
+
+00:02:05.069 --> 00:02:09.745
+In this lesson, you'll learn what it takes to build an experiment.
+
+00:02:09.745 --> 00:02:12.444
+You will learn about the types of experiments,
+
+00:02:12.444 --> 00:02:14.280
+ways of measuring outcomes,
+
+00:02:14.280 --> 00:02:17.879
+and pitfalls to check for when designing an experiment.
+
+00:02:17.879 --> 00:02:19.794
+By the end of this lesson,
+
+00:02:19.794 --> 00:02:21.709
+you will know what is required to create
+
+00:02:21.710 --> 00:02:25.700
+experiments that effectively addressed your goals.
+

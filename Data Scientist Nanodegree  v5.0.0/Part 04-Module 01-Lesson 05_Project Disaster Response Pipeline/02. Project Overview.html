@@ -1,0 +1,268 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Overview</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Disaster Response Pipeline</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Overview.html">02. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Project Details.html">03. Project Details</a>
+    </li>
+    <li class="">
+      <a href="04. Project Workspace - ETL.html">04. Project Workspace - ETL</a>
+    </li>
+    <li class="">
+      <a href="05. Project Workspace - ML Pipeline.html">05. Project Workspace - ML Pipeline</a>
+    </li>
+    <li class="">
+      <a href="06. Project Workspace IDE.html">06. Project Workspace IDE</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Disaster Response Pipelines.html">Project Description - Disaster Response Pipelines</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Disaster Response Pipelines.html">Project Rubric - Disaster Response Pipelines</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Project Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Disaster Relief Project Preview</p></h3>
+  <video controls>
+  <source src="02. Disaster Relief Project Preview-DuwYAjqGM3E.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Disaster Relief Project Preview-DuwYAjqGM3E.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Disaster Relief Project Preview-DuwYAjqGM3E.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Disaster Relief Project Preview-DuwYAjqGM3E.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-overview">Project Overview</h1>
+<p>In this course, you've learned and built on your data engineering skills to expand your opportunities and potential as a data scientist. In this project, you'll apply these skills to analyze disaster data from <a href="https://www.figure-eight.com/" rel="noopener noreferrer" target="_blank">Figure Eight</a> to build a model for an API that classifies disaster messages.</p>
+<p>In the Project Workspace, you'll find a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.</p>
+<p>Your project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. This project will show off your software skills, including your ability to create basic data pipelines and write clean, organized code!</p>
+<p>Below are a few screenshots of the web app.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/disaster-response-project1.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/disaster-response-project2.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="project-components">Project Components</h1>
+<p>There are three components you'll need to complete for this project. </p>
+<h3 id="1-etl-pipeline">1. ETL Pipeline</h3>
+<p>In a Python script, <code>process_data.py</code>, write a data cleaning pipeline that:</p>
+<ul>
+<li>Loads the <code>messages</code> and <code>categories</code> datasets</li>
+<li>Merges the two datasets</li>
+<li>Cleans the data </li>
+<li>Stores it in a SQLite database</li>
+</ul>
+<h3 id="2-ml-pipeline">2. ML Pipeline</h3>
+<p>In a Python script, <code>train_classifier.py</code>, write a machine learning pipeline that:</p>
+<ul>
+<li>Loads data from the SQLite database</li>
+<li>Splits the dataset into training and test sets</li>
+<li>Builds a text processing and machine learning pipeline</li>
+<li>Trains and tunes a model using GridSearchCV</li>
+<li>Outputs results on the test set</li>
+<li>Exports the final model as a pickle file</li>
+</ul>
+<h3 id="3-flask-web-app">3. Flask Web App</h3>
+<p>We are providing much of the flask web app for you, but feel free to add extra features depending on your knowledge of flask, html, css and javascript. For this part, you'll need to:</p>
+<ul>
+<li>Modify file paths for database and model as needed</li>
+<li>Add data visualizations using Plotly in the web app. One example is provided for  you</li>
+</ul>
+<h3 id="github-and-code-quality">Github and Code Quality</h3>
+<p>Your project will also be graded based on the following:</p>
+<ul>
+<li>Use of Git and Github</li>
+<li>Strong documentation</li>
+<li>Clean and modular code</li>
+</ul>
+<p>Follow the <a href="https://review.udacity.com/#!/rubrics/1565/view" rel="noopener noreferrer" target="_blank">RUBRIC</a> when you work on your project to assure you meet all of the necessary criteria for developing the pipelines and web app.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Project Details.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Project Overview')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

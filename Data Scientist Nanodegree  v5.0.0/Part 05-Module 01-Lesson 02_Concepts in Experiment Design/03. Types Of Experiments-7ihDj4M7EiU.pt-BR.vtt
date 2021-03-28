@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.920 --> 00:00:04.566
+TIPOS DE EXPERIMENTOS
+
+00:00:05.118 --> 00:00:07.403
+Dentro do tipo de estudo
+"experimentos",
+
+00:00:07.437 --> 00:00:10.188
+há diferentes tipos
+de experimentos.
+
+00:00:10.222 --> 00:00:13.506
+Neste vídeo,
+vamos estudar alguns deles.
+
+00:00:13.540 --> 00:00:18.698
+Vamos rever o exemplo anterior
+da loja on-line.
+
+00:00:18.732 --> 00:00:22.381
+Queríamos testar os efeitos
+da inclusão de um overlay de resumo
+
+00:00:22.415 --> 00:00:27.212
+quando o usuário clica na imagem
+de um produto após uma busca.
+
+00:00:27.246 --> 00:00:29.405
+A configuração experimental
+que tínhamos lá
+
+00:00:29.439 --> 00:00:32.713
+era um exemplo
+de um teste A/B.
+
+00:00:32.747 --> 00:00:35.298
+Para cada cliente,
+jogamos um dado.
+
+00:00:35.332 --> 00:00:39.440
+Se cair par,
+o cliente vai para o grupo A.
+
+00:00:39.474 --> 00:00:42.534
+Esses participantes
+não verão mudanças.
+
+00:00:42.568 --> 00:00:44.631
+Eles verão
+os resultados de produtos
+
+00:00:44.665 --> 00:00:47.172
+sem o overlay
+de visualização rápida.
+
+00:00:47.206 --> 00:00:52.214
+Os participantes do grupo A
+fazem parte do grupo de controle.
+
+00:00:52.248 --> 00:00:54.649
+Por outro lado,
+se o dado der ímpar,
+
+00:00:54.683 --> 00:00:57.849
+o cliente vai para o grupo B.
+
+00:00:57.883 --> 00:01:01.576
+Esse grupo verá as mudanças no site
+e poderá ver a visualização rápida
+
+00:01:01.610 --> 00:01:04.800
+para qualquer produto retornado
+por uma busca.
+
+00:01:04.834 --> 00:01:10.160
+Os participantes do grupo B
+farão parte do grupo experimental.
+
+00:01:10.194 --> 00:01:12.203
+Após coletarmos
+todos os dados,
+
+00:01:12.237 --> 00:01:14.320
+poderemos fazer
+uma inferência no overlay,
+
+00:01:14.354 --> 00:01:17.608
+comparando as compras
+no novo site, do grupo B,
+
+00:01:17.642 --> 00:01:21.603
+às compras no site antigo,
+do grupo A.
+
+00:01:21.637 --> 00:01:24.471
+O teste A/B que acabei de descrever
+também é um exemplo
+
+00:01:24.505 --> 00:01:27.381
+de planejamento entre grupos.
+
+00:01:27.415 --> 00:01:29.411
+Em um experimento desse tipo,
+
+00:01:29.445 --> 00:01:32.933
+cada pessoa só participa
+de uma condição.
+
+00:01:32.967 --> 00:01:34.418
+No exemplo do site,
+
+00:01:34.452 --> 00:01:37.982
+os clientes só veem
+o site A ou o site B,
+
+00:01:38.016 --> 00:01:39.976
+mas nunca ambos.
+
+00:01:40.010 --> 00:01:42.552
+Em contraste, podemos usar
+um tipo de experimento
+
+00:01:42.586 --> 00:01:46.206
+em que os participantes passam por
+todas as condições do experimento.
+
+00:01:46.240 --> 00:01:49.622
+Isso se chama
+"planejamento dentro de grupo".
+
+00:01:49.656 --> 00:01:52.895
+Por exemplo, imagine que quiséssemos
+conduzir um teste de sabor
+
+00:01:52.929 --> 00:01:55.858
+entre duas fórmulas
+de refrigerantes.
+
+00:01:55.892 --> 00:01:57.959
+Em um experimento
+entre grupos,
+
+00:01:57.993 --> 00:02:00.475
+cada participante avaliaria
+aleatoriamente
+
+00:02:00.509 --> 00:02:04.556
+a fórmula A ou a fórmula B.
+
+00:02:04.590 --> 00:02:07.545
+Se fosse um planejamento
+dentro de grupo,
+
+00:02:07.579 --> 00:02:10.223
+cada participante avaliaria
+ambas as fórmulas,
+
+00:02:10.257 --> 00:02:14.117
+A, depois B, ou B, depois A.
+
+00:02:14.151 --> 00:02:16.133
+O benefício desse tipo
+de planejamento
+
+00:02:16.167 --> 00:02:20.091
+é que podemos levar em conta
+o gosto geral de cada indivíduo.
+
+00:02:20.125 --> 00:02:22.502
+Se uma pessoa só experimentasse
+a fórmula A
+
+00:02:22.536 --> 00:02:26.545
+e desse nota 8, não saberíamos
+necessariamente que parte
+
+00:02:26.579 --> 00:02:29.583
+se deve à inclinação da pessoa
+por refrigerantes,
+
+00:02:29.617 --> 00:02:32.778
+e que parte se deve
+à fórmula do refrigerante.
+
+00:02:32.812 --> 00:02:36.037
+Se essa pessoa fizesse
+uma avaliação adicional para B,
+
+00:02:36.071 --> 00:02:39.425
+isso nos permitiria levar em conta
+as preferências gerais da pessoa,
+
+00:02:39.459 --> 00:02:42.785
+reduzindo a variância
+nos dados a serem analisados.
+
+00:02:42.819 --> 00:02:47.660
+Mas nem sempre é possível executar
+um planejamento dentro de grupo.
+
+00:02:47.694 --> 00:02:51.241
+Considerando o exemplo anterior
+do site de compras,
+
+00:02:51.275 --> 00:02:53.508
+não há um jeito de fazer
+com que o comprador
+
+00:02:53.542 --> 00:02:56.524
+veja as duas versões do site.
+
+00:02:56.558 --> 00:02:58.508
+Depois que o comprador
+realiza a compra,
+
+00:02:58.542 --> 00:03:00.329
+não há como voltar no tempo
+
+00:03:00.363 --> 00:03:02.488
+e fazê-lo realizar
+a mesma compra de novo
+
+00:03:02.522 --> 00:03:05.020
+na versão que ele não viu.
+
+00:03:05.054 --> 00:03:08.683
+Também não há garantia
+de que ele voltará a tempo
+
+00:03:08.717 --> 00:03:11.390
+de ver a outra versão do site.
+
+00:03:11.424 --> 00:03:16.267
+E não faz sentido ter duas versões
+aleatoriamente na mesma sessão.
+
+00:03:16.301 --> 00:03:17.855
+Em ambos os exemplos,
+
+00:03:17.889 --> 00:03:20.506
+dividimos as pessoas
+entre duas condições:
+
+00:03:20.540 --> 00:03:22.346
+os dois diferentes fluxos
+do site
+
+00:03:22.380 --> 00:03:24.690
+ou as duas diferentes fórmulas
+de refrigerante.
+
+00:03:24.724 --> 00:03:29.070
+Mas também é possível criar
+planejamentos com mais condições.
+
+00:03:29.104 --> 00:03:34.013
+Por exemplo, um grupo de controle
+e dois grupos experimentais.
+
+00:03:34.047 --> 00:03:38.284
+Também há planejamentos com formas
+diferentes de coletar dados.
+
+00:03:38.318 --> 00:03:42.142
+Veja mais desses outros
+planejamentos experimentais abaixo.
+

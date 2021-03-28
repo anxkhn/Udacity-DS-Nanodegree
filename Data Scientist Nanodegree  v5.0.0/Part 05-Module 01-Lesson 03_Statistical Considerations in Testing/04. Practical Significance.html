@@ -1,0 +1,329 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practical Significance</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Statistical Considerations in Testing</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Practice Statistical Significance.html">02. Practice: Statistical Significance</a>
+    </li>
+    <li class="">
+      <a href="03. Statistical Significance - Solution.html">03. Statistical Significance - Solution</a>
+    </li>
+    <li class="">
+      <a href="04. Practical Significance.html">04. Practical Significance</a>
+    </li>
+    <li class="">
+      <a href="05. Experiment Size.html">05. Experiment Size</a>
+    </li>
+    <li class="">
+      <a href="06. Experiment Size - Solution.html">06. Experiment Size - Solution</a>
+    </li>
+    <li class="">
+      <a href="07. Using Dummy Tests.html">07. Using Dummy Tests</a>
+    </li>
+    <li class="">
+      <a href="08. Non-Parametric Tests Part I.html">08. Non-Parametric Tests Part I</a>
+    </li>
+    <li class="">
+      <a href="09. Non-Parametric Tests Part I - Solution.html">09. Non-Parametric Tests Part I - Solution</a>
+    </li>
+    <li class="">
+      <a href="10. Non-Parametric Tests Part II.html">10. Non-Parametric Tests Part II</a>
+    </li>
+    <li class="">
+      <a href="11. Non-Parametric Tests Part II - Solution.html">11. Non-Parametric Tests Part II - Solution</a>
+    </li>
+    <li class="">
+      <a href="12. Analyzing Multiple Metrics.html">12. Analyzing Multiple Metrics</a>
+    </li>
+    <li class="">
+      <a href="13. Early Stopping.html">13. Early Stopping</a>
+    </li>
+    <li class="">
+      <a href="14. Early Stopping - Solution.html">14. Early Stopping - Solution</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Conclusion.html">15. Lesson Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Practical Significance</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Practical Significance</p></h3>
+  <video controls>
+  <source src="04. Practical Significance-eJ3idt3AJ7E.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Practical Significance-eJ3idt3AJ7E.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. Practical Significance-eJ3idt3AJ7E.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. Practical Significance-eJ3idt3AJ7E.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="practical-significance">Practical Significance</h2>
+<p>Even if an experiment result shows a statistically significant difference in an<br />
+evaluation metric between control and experimental groups, that does not<br />
+necessarily mean that the experiment was a success. If there are any costs<br />
+associated with deploying a change, those costs might outweigh the benefits<br />
+expected based on the experiment results. <strong>Practical significance</strong> refers to<br />
+the level of effect that you need to observe in order for the experiment to be<br />
+called a true success and implemented in truth. Not all experiments imply a <br />
+practical significance boundary, but it's an important factor in the <br />
+interpretation of outcomes where it is relevant.</p>
+<p>If you consider the confidence interval for an evaluation metric statistic<br />
+against the null baseline and practical significance bound, there are a few<br />
+cases that can come about.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="confidence-interval-is-fully-in-practical-significance-region">Confidence interval is fully in practical significance region</h4>
+<p>(Below, <span class="mathquill ud-math">m_0</span> indicates the null statistic value, <span class="mathquill ud-math">d_{min}</span> the practical significance bound, and the blue line the confidence interval for the observed statistic. We assume that we're looking for a positive change, ignoring the negative equivalent for <span class="mathquill ud-math">d_{min}</span>.)</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/c03-practicalsignificance-01.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If the confidence interval for the statistic does not include the null or<br />
+the practical significance level, then the experimental manipulation can be <br />
+concluded to have a statistically and practically significant effect. It is<br />
+clearest in this case that the manipulation should be implemented as a success.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="confidence-interval-completely-excludes-any-part-of-practical-significance-region">Confidence interval completely excludes any part of practical significance region</h4>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/c03-practicalsignificance-02.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If the confidence interval does not include any values that would be considered<br />
+practically significant, this is a clear case for us to not implement the<br />
+experimental change. This includes the case where the metric is statistically<br />
+significant, but whose interval does not extend past the practical significance<br />
+bounds. With such a low chance of practical significance being achieved on the<br />
+metric, we should be wary of implementing the change.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="confidence-interval-includes-points-both-inside-and-outside-practical-significance-bounds">Confidence interval includes points both inside and outside practical significance bounds</h4>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/c03-practicalsignificance-03.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>This leaves the trickiest cases to consider, where the confidence interval<br />
+straddles the practical significance bound. In each of these cases, there is<br />
+an uncertain possibility of practical significance being achieved. In an ideal<br />
+world, you would be able to collect more data to reduce our uncertainty,<br />
+reducing the scenario to one of the previous cases. Outside of this, you'll<br />
+need to consider the risks carefully in order to make a recommendation on<br />
+whether or not to follow through with a tested change. Your analysis might also<br />
+reveal subsets of the population or aspects of the manipulation that <strong>do</strong> work,<br />
+in order to refine further studies or experiments.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Experiment Size.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Practical Significance')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

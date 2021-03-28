@@ -1,0 +1,245 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.357 --> 00:00:04.605
+INSIGHTS SOBRE DESIGN EXPERIMENTAL
+COM RICHARD SHARP DA STARBUCKS
+
+00:00:06.118 --> 00:00:08.157
+COMO DECIDEM O QUE TESTAR?
+
+00:00:08.190 --> 00:00:10.932
+Trabalhamos
+com a equipe de marketing.
+
+00:00:10.965 --> 00:00:15.161
+Eles querem testar
+várias coisas,
+
+00:00:15.194 --> 00:00:16.746
+há sempre novas ideias
+
+00:00:17.434 --> 00:00:20.268
+e algumas categorias
+dessas novas ideias
+
+00:00:21.034 --> 00:00:24.855
+são as principais solicitações,
+seja algum recurso no aplicativo
+
+00:00:24.888 --> 00:00:27.872
+ou alguma mudança substancial
+no programa de fidelidade,
+
+00:00:27.905 --> 00:00:31.833
+e que significam muito trabalho
+não só de Ciência de Dados,
+
+00:00:31.866 --> 00:00:34.087
+não apenas de modelagem,
+
+00:00:34.120 --> 00:00:36.723
+mas que gerariam um impacto
+para todo mundo,
+
+00:00:36.756 --> 00:00:39.934
+e, além disso, os clientes,
+os parceiros e as lojas
+
+00:00:39.967 --> 00:00:41.655
+também seriam afetados.
+
+00:00:41.688 --> 00:00:45.983
+Então, a primeira pergunta
+é se o cliente entenderá.
+
+00:00:46.016 --> 00:00:49.478
+Qualquer cliente que enfrente
+uma mudança que produzimos
+
+00:00:49.511 --> 00:00:53.212
+acabará gerando uma pergunta
+para um barista em algum lugar,
+
+00:00:53.245 --> 00:00:57.531
+então esse experimento
+impactará as operações nas lojas?
+
+00:00:57.564 --> 00:01:00.070
+Isso é outra coisa
+que temos que considerar.
+
+00:01:00.103 --> 00:01:03.116
+NO QUE PENSAM
+QUANDO DESENVOLVEM UM NOVO TESTE?
+
+00:01:03.149 --> 00:01:04.410
+Temos muitos dados,
+
+00:01:04.443 --> 00:01:07.115
+dados de diferentes fontes,
+
+00:01:07.148 --> 00:01:09.922
+dados vindos
+das próprias lojas,
+
+00:01:09.955 --> 00:01:13.612
+dados dos inventários,
+dados dos caixas,
+
+00:01:13.645 --> 00:01:16.475
+dados do aplicativo,
+
+00:01:16.508 --> 00:01:18.198
+eles vêm de muitos lugares.
+
+00:01:19.067 --> 00:01:22.608
+Nós damos uma olhada nisso
+e tentamos decidir
+
+00:01:22.641 --> 00:01:24.968
+se existe algum tipo
+de precedente histórico,
+
+00:01:25.001 --> 00:01:29.031
+e se existe alguma razão
+para esperar que isso funcione.
+
+00:01:29.064 --> 00:01:32.207
+A próxima pergunta será:
+Podemos medir o resultado?
+
+00:01:32.240 --> 00:01:34.717
+Qualquer grande ideia
+pode ser lançada,
+
+00:01:34.750 --> 00:01:37.262
+mas será que saberemos
+se ela funcionou ou não?
+
+00:01:37.902 --> 00:01:40.300
+Essa é outra
+restrição operacional.
+
+00:01:40.333 --> 00:01:43.446
+OS EXPERIMENTOS
+COSTUMAM FALHAR?
+
+00:01:43.479 --> 00:01:47.340
+Eu espero que, na maioria das vezes,
+a maioria dos experimentos falhe.
+
+00:01:47.373 --> 00:01:48.814
+É bem normal.
+
+00:01:49.709 --> 00:01:52.878
+Se tivermos certeza
+sobre uma ideia
+
+00:01:53.486 --> 00:01:56.500
+e se tivermos 10 dessas ideias
+e nove delas funcionarem,
+
+00:01:56.533 --> 00:01:58.341
+por que não estamos
+fazendo ainda?
+
+00:01:58.374 --> 00:01:59.821
+Essas são as coisas óbvias,
+
+00:01:59.854 --> 00:02:03.413
+mas a Ciência de Dados
+nos mostra o menos óbvio.
+
+00:02:03.446 --> 00:02:05.534
+Nós experimentamos
+o tempo todo.
+
+00:02:05.567 --> 00:02:08.379
+Não costumam falhar
+de maneira grandiosa,
+
+00:02:08.412 --> 00:02:10.379
+geralmente
+não são um desastre,
+
+00:02:10.412 --> 00:02:14.499
+mas, muitas vezes, o resultado
+é uma mudança mínima.
+
+00:02:14.532 --> 00:02:17.444
+Mesmo com um resultado
+positivo,
+
+00:02:17.477 --> 00:02:20.332
+vale a pena o esforço
+de continuar com o experimento
+
+00:02:20.365 --> 00:02:22.132
+e de produzi-lo?
+
+00:02:22.165 --> 00:02:25.605
+COMO GARANTIR QUE SE PODE COMPARAR
+UM GRUPO DE CONTROLE E UM DE TESTE?
+
+00:02:25.638 --> 00:02:28.402
+Com recursos demográficos,
+que é um termo amplo -
+
+00:02:28.435 --> 00:02:31.493
+há quanto tempo alguém faz parte
+do programa, por exemplo -
+
+00:02:31.526 --> 00:02:33.667
+e o histórico de tratamento.
+
+00:02:33.700 --> 00:02:35.861
+O que tentamos mostrar antes?
+
+00:02:37.395 --> 00:02:42.451
+Não exatamente
+o que oferecemos antes,
+
+00:02:42.484 --> 00:02:46.386
+mas alguém que está em um grupo
+que costuma receber promoções
+
+00:02:46.419 --> 00:02:48.077
+se comporta
+de maneira diferente
+
+00:02:48.110 --> 00:02:50.987
+de alguém de um grupo
+que não costuma recebê-las.
+
+00:02:51.020 --> 00:02:54.151
+O tempo é uma variável
+muito importante.
+
+00:02:54.184 --> 00:02:58.040
+Na verdade, estamos prestes
+a entrar no período de festas,
+
+00:02:58.073 --> 00:03:00.236
+e as pessoas ficam
+diferentes na Starbucks
+
+00:03:00.269 --> 00:03:03.059
+entre o Dia de Ação de Graças
+e o Natal, nos EUA,
+
+00:03:03.092 --> 00:03:05.778
+do que no resto do ano.
+
+00:03:05.811 --> 00:03:06.948
+Então...
+
+00:03:06.981 --> 00:03:11.986
+alguém pode fazer
+um bom controle em outubro,
+
+00:03:12.019 --> 00:03:15.660
+mas um mau controle em novembro,
+por esse motivo.
+

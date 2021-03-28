@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.889 --> 00:00:04.792
+CONTROLANDO VARIÁVEIS
+
+00:00:05.572 --> 00:00:09.267
+Até agora, nesta aula, você aprendeu
+sobre as facetas que cercam
+
+00:00:09.301 --> 00:00:12.562
+a construção de um experimento
+ou estudo.
+
+00:00:12.596 --> 00:00:14.501
+Na segunda metade desta aula,
+
+00:00:14.535 --> 00:00:16.698
+você vai aprender
+sobre problemas potenciais
+
+00:00:16.732 --> 00:00:20.254
+que podem enfraquecer
+a utilidade de um estudo.
+
+00:00:20.288 --> 00:00:22.022
+Lembrando do início da aula,
+
+00:00:22.056 --> 00:00:24.651
+a capacidade de dizer
+que mudanças em uma variável
+
+00:00:24.685 --> 00:00:26.343
+causam mudanças em outra
+
+00:00:26.377 --> 00:00:30.544
+vem do controle dos efeitos
+das outras variáveis.
+
+00:00:30.578 --> 00:00:33.810
+Idealmente, gostaríamos que
+a distribuição de todas as variáveis
+
+00:00:33.844 --> 00:00:36.074
+fosse igual
+em todos os grupos,
+
+00:00:36.108 --> 00:00:40.063
+exceto no que manipulamos
+para ser diferente.
+
+00:00:40.097 --> 00:00:41.797
+Ao não prestar atenção nisso,
+
+00:00:41.831 --> 00:00:44.370
+podemos cair em algumas
+armadilhas de análise.
+
+00:00:46.309 --> 00:00:49.767
+Por exemplo, imagine que você tenha
+dados observacionais
+
+00:00:49.801 --> 00:00:52.973
+que mostrem que, nos meses em que
+aumentam as vendas de sorvete,
+
+00:00:53.007 --> 00:00:56.309
+também aumenta
+a incidência de crimes cometidos.
+
+00:00:56.343 --> 00:00:58.435
+Isso quer dizer
+que o consumo de sorvete
+
+00:00:58.469 --> 00:01:00.815
+está fazendo as pessoas cometerem
+mais crimes,
+
+00:01:00.849 --> 00:01:04.503
+e que devemos proibir
+a venda de sorvete?
+
+00:01:04.537 --> 00:01:06.701
+Se observarmos os dados
+com mais cautela,
+
+00:01:06.735 --> 00:01:09.734
+descobriremos uma variável
+que está modulando ambos:
+
+00:01:09.768 --> 00:01:12.514
+a temperatura média.
+
+00:01:12.548 --> 00:01:13.726
+Nos meses de verão,
+
+00:01:13.760 --> 00:01:16.932
+o calor faz aumentar
+as vendas de sorvete.
+
+00:01:16.966 --> 00:01:19.721
+Ao mesmo tempo,
+o calor aumenta a inquietação,
+
+00:01:19.755 --> 00:01:22.444
+o que faz com que mais crimes
+sejam cometidos.
+
+00:01:22.478 --> 00:01:26.902
+A temperatura é um exemplo
+de variável de confusão.
+
+00:01:26.936 --> 00:01:30.935
+Uma variável de confusão não faz
+parte das variáveis de interesse,
+
+00:01:30.969 --> 00:01:36.130
+no entanto, tem uma interação
+com as variáveis de interesse.
+
+00:01:36.164 --> 00:01:39.865
+Considerar ou controlar
+essas confusões potenciais
+
+00:01:39.899 --> 00:01:42.431
+é vital para estabelecer
+uma relação
+
+00:01:42.465 --> 00:01:44.666
+entre nossas variáveis
+de interesse.
+

@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.884 --> 00:00:04.830
+VERIFICANDO A VALIDADE
+
+00:00:05.313 --> 00:00:08.365
+Ao explicar os resultados
+de um estudo para outros,
+
+00:00:08.399 --> 00:00:12.770
+você quer ter certeza de que eles
+digam o que você quer dizer.
+
+00:00:12.804 --> 00:00:16.923
+Em uma única palavra, você quer
+que os resultados sejam válidos.
+
+00:00:16.957 --> 00:00:20.764
+Validade é simplesmente quão bem
+o experimento realiza
+
+00:00:20.798 --> 00:00:23.021
+seu objetivo inicial.
+
+00:00:23.055 --> 00:00:26.256
+Há três formas principais
+de um experimento ser válido:
+
+00:00:26.290 --> 00:00:27.772
+por validade de construto,
+
+00:00:27.806 --> 00:00:30.851
+validade interna
+e validade externa.
+
+00:00:32.184 --> 00:00:35.141
+Primeiro, certifique-se
+de que as métricas estão alinhadas
+
+00:00:35.175 --> 00:00:37.194
+aos objetivos do estudo.
+
+00:00:37.228 --> 00:00:40.563
+Isso se chama
+"validade de construto".
+
+00:00:40.597 --> 00:00:43.752
+Você viu um exemplo de métrica
+com baixa validade de construto
+
+00:00:43.786 --> 00:00:45.729
+anteriormente nesta aula.
+
+00:00:45.763 --> 00:00:48.786
+Relembrando, é a métrica
+que citava o número de buscas
+
+00:00:48.820 --> 00:00:53.102
+como indicador da eficiência
+de um mecanismo de recomendação.
+
+00:00:53.136 --> 00:00:55.060
+Como a métrica pode estar
+medindo algo
+
+00:00:55.094 --> 00:00:57.540
+que não está alinhado
+à qualidade do mecanismo,
+
+00:00:57.574 --> 00:01:01.696
+usá-la baixaria a validade
+de construto do experimento.
+
+00:01:03.651 --> 00:01:06.722
+Segundo, certifique-se
+de que afirmações de causalidade
+
+00:01:06.756 --> 00:01:08.912
+sejam suportadas pela análise.
+
+00:01:08.946 --> 00:01:11.953
+Isso se chama
+"validade interna".
+
+00:01:11.987 --> 00:01:16.809
+Você já viu aspectos de baixa
+validade interna em outro vídeo.
+
+00:01:16.843 --> 00:01:19.668
+Baixa validade interna
+pode ser demonstrada dizendo
+
+00:01:19.702 --> 00:01:23.430
+que vendas de sorvete causam
+aumento de criminalidade.
+
+00:01:23.464 --> 00:01:27.940
+Simplesmente assumir a correlação
+entre eles como uma relação causal,
+
+00:01:27.974 --> 00:01:30.887
+sem levar em conta outras variáveis,
+como temperatura,
+
+00:01:30.921 --> 00:01:35.244
+é sinal de que a validade interna
+não foi atingida.
+
+00:01:35.278 --> 00:01:38.403
+A terceira e última,
+validade externa,
+
+00:01:38.437 --> 00:01:42.400
+trata da capacidade de generalizar
+os resultados de um experimento
+
+00:01:42.434 --> 00:01:46.332
+para a população em geral
+ou para outros grupos.
+
+00:01:46.366 --> 00:01:48.763
+Isso é diferente
+de validade de construto,
+
+00:01:48.797 --> 00:01:51.853
+pois a métrica de um experimento
+pode se aplicar adequadamente
+
+00:01:51.887 --> 00:01:56.226
+ao objetivo de um projeto,
+mas só para um grupo pequeno.
+
+00:01:56.260 --> 00:02:00.471
+Por exemplo, imagine que testamos
+um método de instrução alternativo
+
+00:02:00.505 --> 00:02:02.363
+em um grupo de universitários
+
+00:02:02.397 --> 00:02:05.822
+e vimos uma grande melhora
+nas notas deles.
+
+00:02:05.856 --> 00:02:08.065
+Em relação à validade externa,
+
+00:02:08.099 --> 00:02:10.107
+precisamos considerar
+se esses resultados
+
+00:02:10.141 --> 00:02:13.119
+poderiam ser generalizados
+para alunos de outras faculdades,
+
+00:02:13.153 --> 00:02:17.057
+ou até para um público mais amplo,
+fora do meio acadêmico.
+
