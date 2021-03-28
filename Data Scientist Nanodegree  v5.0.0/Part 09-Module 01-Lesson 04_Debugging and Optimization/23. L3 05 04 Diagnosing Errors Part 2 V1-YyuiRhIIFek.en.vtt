@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.400 --> 00:00:07.845
+Next, let's focus on some core metrics for
+
+00:00:07.844 --> 00:00:11.279
+understanding the current state of the Sparkify business.
+
+00:00:11.279 --> 00:00:14.250
+These numbers would be so important to your entire team.
+
+00:00:14.250 --> 00:00:16.410
+They'd be displayed on dashboards throughout
+
+00:00:16.410 --> 00:00:19.260
+your company and every team would check them regularly.
+
+00:00:19.260 --> 00:00:21.750
+In fact, your CEO would probably check
+
+00:00:21.750 --> 00:00:24.780
+them first thing every morning when she eats her breakfast.
+
+00:00:24.780 --> 00:00:28.484
+The first key metric is monthly active users.
+
+00:00:28.484 --> 00:00:33.179
+The number of unique users who listened to at least one song in the past month.
+
+00:00:33.179 --> 00:00:36.064
+Rather than looking at the total number of accounts,
+
+00:00:36.064 --> 00:00:37.789
+this number gives you a better sense of
+
+00:00:37.789 --> 00:00:41.439
+how many people are using your site on a regular basis.
+
+00:00:41.439 --> 00:00:46.774
+We'll also calculate the daily active users for each day in the past month.
+
+00:00:46.774 --> 00:00:51.454
+Both the total number and the percentage of the monthly active users.
+
+00:00:51.454 --> 00:00:56.015
+The daily actives help your team understand how engaged your users are.
+
+00:00:56.015 --> 00:00:58.609
+Do they casually use Sparkify every now and
+
+00:00:58.609 --> 00:01:02.299
+then or does your service keep them coming back every day?
+
+00:01:02.299 --> 00:01:04.640
+We'll also calculate the total number of
+
+00:01:04.640 --> 00:01:10.025
+paid and unpaid users as well as the total ads served in the past month.
+
+00:01:10.025 --> 00:01:14.580
+These metrics tied directly to the monthly revenue that Sparkify earns.
+

@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.070 --> 00:00:07.919
+In the previous lessons, we went through examples
+
+00:00:07.919 --> 00:00:11.910
+of how you can clean your dataset and handle missing values.
+
+00:00:11.910 --> 00:00:16.515
+Before we can start feeding our features into any machine learning algorithm,
+
+00:00:16.515 --> 00:00:20.640
+we need to make sure that our input is in the correct format.
+
+00:00:20.640 --> 00:00:23.880
+Just as most other machine learning libraries,
+
+00:00:23.879 --> 00:00:26.460
+Spark cannot expects numeric input values.
+
+00:00:26.460 --> 00:00:30.929
+So if you are dealing with categorical variables or free-form text,
+
+00:00:30.929 --> 00:00:33.344
+we need to transform our features first.
+
+00:00:33.344 --> 00:00:36.390
+Even for numeric data, we might need to risk here
+
+00:00:36.390 --> 00:00:41.384
+that particular feature to enhance certain algorithms performance.
+
+00:00:41.384 --> 00:00:45.349
+So let's start with scanning numeric features.
+
+00:00:45.350 --> 00:00:49.115
+Our raw features might be on a very different scales.
+
+00:00:49.115 --> 00:00:53.255
+Think for example, about how many songs a user listened to
+
+00:00:53.255 --> 00:00:58.250
+in the past hour versus how many days ago they started using our service?
+
+00:00:58.250 --> 00:01:01.609
+If you use a classifier that calculates the distance
+
+00:01:01.609 --> 00:01:04.954
+between two data points based on Euclidean distance,
+
+00:01:04.954 --> 00:01:08.870
+the feature with divided strange may dominate the result.
+
+00:01:08.870 --> 00:01:12.844
+This is why we need to normalize our features to the same range
+
+00:01:12.844 --> 00:01:17.734
+typically in between zero and one or minus one and one.
+
+00:01:17.734 --> 00:01:22.039
+Spark supports many different scaling approaches including
+
+00:01:22.040 --> 00:01:28.485
+normalizer, StandardScaler, MinMaxScaler, and MaxAbsScaler,
+
+00:01:28.484 --> 00:01:31.019
+which you can find links to below.
+
+00:01:31.019 --> 00:01:34.228
+Spark also supports String Indexer,
+
+00:01:34.228 --> 00:01:39.939
+Index to String, and Vector Indexer which you can find links to below.
+
+00:01:39.939 --> 00:01:45.269
+We will also do some work on text processing later in this lesson.
+

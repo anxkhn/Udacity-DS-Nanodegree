@@ -1,0 +1,295 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.754
+In the next few videos,
+
+00:00:01.754 --> 00:00:06.764
+we'll use a dataset that contains questions from the tech exchange site.
+
+00:00:06.764 --> 00:00:09.779
+Each question has an ID, title field,
+
+00:00:09.779 --> 00:00:14.519
+a body field describing the content of the question and a list of tags.
+
+00:00:14.519 --> 00:00:17.759
+We will use this dataset to create some features,
+
+00:00:17.760 --> 00:00:20.220
+and train various machine learning models.
+
+00:00:20.219 --> 00:00:21.524
+I should mention though,
+
+00:00:21.524 --> 00:00:26.174
+that the purpose of these examples is not to actually find the best features,
+
+00:00:26.175 --> 00:00:28.574
+or to train the most accurate models.
+
+00:00:28.574 --> 00:00:32.189
+I'll show you some generic techniques that you can leverage when you
+
+00:00:32.189 --> 00:00:35.669
+need to compute features and green walls on large data sets.
+
+00:00:35.670 --> 00:00:41.655
+Some of these cost limpets were heavily inspired by the spiral documentation.
+
+00:00:41.655 --> 00:00:43.300
+I would encourage you,
+
+00:00:43.299 --> 00:00:45.844
+whenever you are watching these videos to
+
+00:00:45.844 --> 00:00:48.679
+open up the documentation and checkout these parts,
+
+00:00:48.679 --> 00:00:54.774
+you will find a lot more information about what's available in Sparks ML library.
+
+00:00:54.774 --> 00:00:58.164
+First, let me import a few functions via need layer,
+
+00:00:58.164 --> 00:01:01.129
+then I just specified the S3 bucket.
+
+00:01:01.130 --> 00:01:03.440
+But the data currently assigns,
+
+00:01:03.439 --> 00:01:07.384
+the file is called, "Train_onetag_small.jason."
+
+00:01:07.385 --> 00:01:13.425
+This is a smaller sample of this file with about a 100,000 rows.
+
+00:01:13.424 --> 00:01:17.299
+I decided to use the smaller dataset to cut
+
+00:01:17.299 --> 00:01:21.259
+down the time we will need to compute things in this video,
+
+00:01:21.260 --> 00:01:24.650
+but everything I show here should work on the bigger dataset as well.
+
+00:01:24.650 --> 00:01:28.475
+The records of these datasets are stored in json format.
+
+00:01:28.474 --> 00:01:35.944
+So, we can use the read.json method to load the dataset into a Spark DataFrame called df.
+
+00:01:35.944 --> 00:01:38.134
+We have our DataFrame,
+
+00:01:38.135 --> 00:01:40.730
+you can see the different columns.
+
+00:01:40.730 --> 00:01:46.585
+There's body, ID, tags, title and oneTag.
+
+00:01:46.584 --> 00:01:49.259
+If we look at the head of the DataFrame,
+
+00:01:49.260 --> 00:01:52.425
+the first question is about,
+
+00:01:52.424 --> 00:01:56.674
+"How to check if an uploaded file is an image without mime type",
+
+00:01:56.674 --> 00:01:58.804
+it has a few tags,
+
+00:01:58.805 --> 00:02:04.950
+php image-processing, file-upload, upload and mime-types.
+
+00:02:04.950 --> 00:02:07.980
+As a first step, we will create a few features.
+
+00:02:07.980 --> 00:02:12.030
+Let's start with the lengths of the description of the question.
+
+00:02:12.030 --> 00:02:17.444
+To compute this, first you need to tokenize the text to break it into words,
+
+00:02:17.444 --> 00:02:21.120
+we can use the ML libraries regexTokenizer,
+
+00:02:21.120 --> 00:02:26.705
+to turn the body into all lowercase words where they only keep diverge themselves,
+
+00:02:26.705 --> 00:02:30.005
+but no other punctuation or special characters.
+
+00:02:30.004 --> 00:02:33.588
+This pattern parameter describes this behavior.
+
+00:02:33.588 --> 00:02:40.504
+So, we took the column body and created a column coordinates.
+
+00:02:40.504 --> 00:02:42.544
+If you look at the first record,
+
+00:02:42.544 --> 00:02:47.159
+we can see that we have a new field indeed codewords,
+
+00:02:47.159 --> 00:02:52.189
+and it is just a list of the words we se in the questions body.
+
+00:02:52.189 --> 00:02:55.419
+In certain cases, for example I'd,
+
+00:02:55.419 --> 00:03:03.659
+pre-created i and d separately since we omitted all the punctuations.
+
+00:03:03.659 --> 00:03:08.829
+Now, we can write a user-defined function to compute the lengths of this list,
+
+00:03:08.830 --> 00:03:12.105
+and we can just call this column body_length,
+
+00:03:12.104 --> 00:03:15.590
+we need to use an underscore instead of a dash.
+
+00:03:15.590 --> 00:03:19.694
+So, we created this user-defined function and we will adjust,
+
+00:03:19.694 --> 00:03:20.989
+add a column called,
+
+00:03:20.990 --> 00:03:26.615
+"BodyLength", by applying this function to the words-column in our data frame.
+
+00:03:26.615 --> 00:03:28.189
+Let's take a look at third,
+
+00:03:28.189 --> 00:03:29.689
+as you can see it,
+
+00:03:29.689 --> 00:03:33.099
+it's 83 in this particular first example.
+
+00:03:33.099 --> 00:03:38.409
+We can also use the Python regex_library and write some regex_patterns, for example,
+
+00:03:38.409 --> 00:03:44.020
+we can check how many paragraphs or links we have in the body.
+
+00:03:44.020 --> 00:03:49.875
+We can use the paragraph and link closing tags as a proxy for that.
+
+00:03:49.875 --> 00:03:51.639
+So, for example this one,
+
+00:03:51.639 --> 00:03:55.309
+so we just wrote a regex_pattern and we are
+
+00:03:55.310 --> 00:03:58.789
+looking for the occurrence of these closing tags.
+
+00:03:58.789 --> 00:04:04.009
+Let's add NumParagraphs and NumLinks columns to our DataFrame.
+
+00:04:04.009 --> 00:04:05.870
+If you look at the head again,
+
+00:04:05.870 --> 00:04:10.879
+we can see that in both of these examples we have number of
+
+00:04:10.879 --> 00:04:16.894
+paragraphs of two and no links in these particular questions.
+
+00:04:16.894 --> 00:04:19.189
+Then we've have numeric features.
+
+00:04:19.189 --> 00:04:22.069
+For many models, we need to normalize their values
+
+00:04:22.069 --> 00:04:24.925
+to make sure that they span across the same range.
+
+00:04:24.925 --> 00:04:26.889
+After devising the distance function,
+
+00:04:26.889 --> 00:04:30.649
+typically the feature with the highest values will dominate the results.
+
+00:04:30.649 --> 00:04:36.924
+Sparks ML library has several options such as normalizers standard scaler and MSQL.
+
+00:04:36.925 --> 00:04:40.384
+All these functions require vector rows as an input.
+
+00:04:40.384 --> 00:04:42.004
+So, before we can use them,
+
+00:04:42.004 --> 00:04:46.399
+we need to convert our numeric columns to Sparks vector type.
+
+00:04:46.399 --> 00:04:51.185
+We can use VectorAssembler from the Spark ML feature library.
+
+00:04:51.185 --> 00:04:54.530
+I'll show you the effect of using normalizer and standard
+
+00:04:54.529 --> 00:04:58.250
+scalar on the vector of our current three features,
+
+00:04:58.250 --> 00:05:01.670
+BodyLength, NumParagraphs and NumLinks.
+
+00:05:01.670 --> 00:05:04.525
+As we can see in this first record,
+
+00:05:04.524 --> 00:05:09.724
+Num features is now a DenseVector of these trigonometric values.
+
+00:05:09.725 --> 00:05:13.250
+So, the number of words in the question,
+
+00:05:13.250 --> 00:05:16.185
+the number of paragraphs and number of links.
+
+00:05:16.185 --> 00:05:21.314
+So, let's see what happens if we use normalizer.
+
+00:05:21.314 --> 00:05:27.350
+Normalizer is a transformer which transforms a dataset or vector rows,
+
+00:05:27.350 --> 00:05:30.785
+normalizing each vector to have unit norm.
+
+00:05:30.785 --> 00:05:33.830
+So, as you can see here,
+
+00:05:33.829 --> 00:05:40.479
+normalizer kept the ratio of these values and now they sum up to one.
+
+00:05:40.480 --> 00:05:46.925
+Standard scaler normalizes each feature to have unit standard deviation and and a 0 mean,
+
+00:05:46.925 --> 00:05:51.715
+depending on the value of the bit standard and bit mean.
+
+00:05:51.714 --> 00:05:54.334
+Once we take a look at the first few rows,
+
+00:05:54.334 --> 00:05:56.659
+you can clearly see the difference.
+
+00:05:56.660 --> 00:05:59.150
+For example, in the first checkered,
+
+00:05:59.149 --> 00:06:04.584
+scaledNumFeatures were these, as we saw it before.
+
+00:06:04.584 --> 00:06:07.319
+After using the standard scalar,
+
+00:06:07.319 --> 00:06:09.959
+we get a result of this,
+
+00:06:09.959 --> 00:06:13.569
+and then another example in the second row.
+

@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.410 --> 00:00:06.810
+Welcome to the last lesson of this course.
+
+00:00:06.809 --> 00:00:10.829
+We will spend this whole lesson learning about machine learning in Spark.
+
+00:00:10.830 --> 00:00:13.019
+We have worked too many examples of
+
+00:00:13.019 --> 00:00:16.679
+different components of a typical machine learning pipeline including;
+
+00:00:16.679 --> 00:00:20.504
+feature creation, model training, and hyper-parameter tuning.
+
+00:00:20.504 --> 00:00:24.494
+We've covered Spark's capabilities and its limitations.
+
+00:00:24.495 --> 00:00:26.370
+By completing this lesson,
+
+00:00:26.370 --> 00:00:29.115
+you will be able to scale up your machine learning tasks,
+
+00:00:29.114 --> 00:00:31.629
+and train models at scale.
+

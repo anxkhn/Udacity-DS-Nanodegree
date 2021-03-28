@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.860
+In the previous videos,
+
+00:00:01.860 --> 00:00:04.799
+we used many transformers and estimators.
+
+00:00:04.799 --> 00:00:08.504
+Just to recall, a transformer implements
+
+00:00:08.505 --> 00:00:12.810
+a method transform that turns a data frame into another URL.
+
+00:00:12.810 --> 00:00:15.945
+We use a transformer method to organize text,
+
+00:00:15.945 --> 00:00:19.410
+scale some columns, and assemble reactors.
+
+00:00:19.410 --> 00:00:23.295
+An estimator on the other hand pits or trains on data.
+
+00:00:23.295 --> 00:00:27.300
+It implements methods fit, which accepts a data frame
+
+00:00:27.300 --> 00:00:30.780
+and produces a mole which is a transformer.
+
+00:00:30.780 --> 00:00:35.310
+So for example, if we check the type of model
+
+00:00:35.310 --> 00:00:38.385
+that we trained in the previous video,
+
+00:00:38.384 --> 00:00:42.210
+we can see that it's a logistic regression model.
+
+00:00:42.210 --> 00:00:45.439
+So it is a transformer.
+
+00:00:45.439 --> 00:00:49.309
+If we check the type of layer two,
+
+00:00:49.310 --> 00:00:53.329
+you will see that it is logistic regression,
+
+00:00:53.329 --> 00:00:57.155
+but it doesn't really say that it is an estimator.
+
+00:00:57.155 --> 00:00:59.990
+Let's build an actual pipeline.
+
+00:00:59.990 --> 00:01:03.620
+So in Spark, similarly to other frameworks,
+
+00:01:03.619 --> 00:01:07.549
+for example circuit-learn, we can chain
+
+00:01:07.549 --> 00:01:09.590
+transformers and estimators
+
+00:01:09.590 --> 00:01:13.130
+after one another to build a whole pipeline.
+
+00:01:13.129 --> 00:01:17.329
+In Spark, the only restriction is that these steps
+
+00:01:17.329 --> 00:01:20.674
+need to form a directed acyclic graph.
+
+00:01:20.674 --> 00:01:23.989
+If you recall what that means is that
+
+00:01:23.989 --> 00:01:28.114
+there isn't any cycle in these dependencies.
+
+00:01:28.114 --> 00:01:33.155
+So as we go from stage to stage,
+
+00:01:33.155 --> 00:01:39.394
+we should not get back to the point where we started out.
+
+00:01:39.394 --> 00:01:44.119
+So let just recreate our logistic regression model,
+
+00:01:44.120 --> 00:01:46.340
+but by building a pipeline.
+
+00:01:46.340 --> 00:01:49.265
+I will create a new clean data frame
+
+00:01:49.265 --> 00:01:52.790
+just by importing the same data set we have been using.
+
+00:01:52.790 --> 00:01:56.405
+So we have our data frame with the columns.
+
+00:01:56.405 --> 00:01:58.280
+We are already familiar with.
+
+00:01:58.280 --> 00:02:00.890
+Now, we need to define all the stages
+
+00:02:00.890 --> 00:02:05.540
+that we go into this plan. All right.
+
+00:02:05.540 --> 00:02:08.180
+So we will need a RegexTokenizer
+
+00:02:08.180 --> 00:02:13.105
+that turns the body into a list of words.
+
+00:02:13.104 --> 00:02:16.500
+Then we will have a CountVectorizer,
+
+00:02:16.500 --> 00:02:22.534
+they will transform the words into term frequencies.
+
+00:02:22.534 --> 00:02:25.609
+For this example, I chose a bigger
+
+00:02:25.610 --> 00:02:28.730
+vocabulary size with 10,000 words.
+
+00:02:28.729 --> 00:02:31.579
+Then we have our IDF that turns
+
+00:02:31.580 --> 00:02:34.445
+term frequencies into TF-IDF,
+
+00:02:34.444 --> 00:02:38.074
+and the output column of that will be called features,
+
+00:02:38.074 --> 00:02:40.444
+so we can spare step.
+
+00:02:40.444 --> 00:02:44.344
+So with changing regexTokenizers CV and IDF together,
+
+00:02:44.344 --> 00:02:46.055
+we can create the features.
+
+00:02:46.055 --> 00:02:53.510
+We will also need to transform the string tags into numeric values,
+
+00:02:53.509 --> 00:02:55.594
+and we will call that column label.
+
+00:02:55.594 --> 00:03:00.004
+Afterwards, we can define our logistic regression model.
+
+00:03:00.004 --> 00:03:03.444
+We will use the same parameters as we used earlier.
+
+00:03:03.444 --> 00:03:07.655
+Then the last step is to define the actual pipeline object.
+
+00:03:07.655 --> 00:03:10.610
+In case steps are dependent on each other,
+
+00:03:10.610 --> 00:03:12.800
+we will need to maintain their order.
+
+00:03:12.800 --> 00:03:16.630
+So for example, here we need to start with the regexTokenizer,
+
+00:03:16.629 --> 00:03:18.734
+and then the countVectorizer,
+
+00:03:18.735 --> 00:03:22.305
+and then finally we can end the idea.
+
+00:03:22.305 --> 00:03:27.170
+Since the stringIndexer returns a string labels of numeric values,
+
+00:03:27.169 --> 00:03:30.919
+it's independent from these previous steps.
+
+00:03:30.919 --> 00:03:34.280
+So we could have put the indexer in the very beginning,
+
+00:03:34.280 --> 00:03:39.094
+but I chose to put it after these three steps,
+
+00:03:39.094 --> 00:03:44.750
+and then we can finally include the model itself.
+
+00:03:44.750 --> 00:03:46.789
+Now that we have the pipeline,
+
+00:03:46.789 --> 00:03:51.289
+we just need to end it. Our model is ready.
+
+00:03:51.289 --> 00:03:54.620
+The recycle returns transformer that we can use
+
+00:03:54.620 --> 00:03:57.319
+to get the prediction on the data set.
+
+00:03:57.319 --> 00:04:02.150
+I just use the training data set to see
+
+00:04:02.150 --> 00:04:03.955
+what the link is going to be.
+
+00:04:03.955 --> 00:04:06.555
+So if you look at the first record,
+
+00:04:06.555 --> 00:04:10.069
+we can see that there are two new columns.
+
+00:04:10.069 --> 00:04:13.549
+So we have this probability column
+
+00:04:13.550 --> 00:04:18.395
+as well as the prediction itself.
+
+00:04:18.394 --> 00:04:21.019
+So if we look back,
+
+00:04:21.019 --> 00:04:26.384
+you can see that the probability of the third label,
+
+00:04:26.384 --> 00:04:30.875
+the count starts at zero is actually pretty high.
+
+00:04:30.875 --> 00:04:32.720
+It's about 85 percent.
+
+00:04:32.720 --> 00:04:36.725
+So this became our predicted label.
+
+00:04:36.725 --> 00:04:44.395
+So let's just check how this model predicted the labels.
+
+00:04:44.394 --> 00:04:48.539
+So here, I'm just filtering the rules and the label,
+
+00:04:48.540 --> 00:04:51.660
+and the prediction are the same,
+
+00:04:51.660 --> 00:04:54.945
+and then count the number of these rows.
+
+00:04:54.944 --> 00:05:01.134
+So out of our 100,000 rows,
+
+00:05:01.134 --> 00:05:04.969
+more than half of it got the prediction right,
+
+00:05:04.970 --> 00:05:07.370
+but of course, this accuracy
+
+00:05:07.370 --> 00:05:10.129
+is measured on the training set itself.
+
+00:05:10.129 --> 00:05:13.519
+So it is expected to be a bit inflated.
+
+00:05:13.519 --> 00:05:16.279
+In the next section, maybe I'll take a look
+
+00:05:16.279 --> 00:05:21.349
+at how the string addressed properly our models.
+

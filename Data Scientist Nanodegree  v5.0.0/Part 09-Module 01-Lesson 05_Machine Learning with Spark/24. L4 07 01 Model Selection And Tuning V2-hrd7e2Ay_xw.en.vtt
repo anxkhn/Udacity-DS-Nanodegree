@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.470 --> 00:00:06.820
+So far, we have covered how to prepare
+
+00:00:06.820 --> 00:00:09.970
+features and train different machine learning models.
+
+00:00:09.970 --> 00:00:13.390
+In practice, we often need to explore both
+
+00:00:13.390 --> 00:00:17.289
+the number of algorithms as well as their parameter combinations.
+
+00:00:17.289 --> 00:00:22.570
+Spark allows Hyperparameter tuning through both a single train validation split,
+
+00:00:22.570 --> 00:00:25.435
+as well as through k-fold cross-validation.
+
+00:00:25.434 --> 00:00:29.109
+We can tune a single estimator or whole pipeline.
+
+00:00:29.109 --> 00:00:32.185
+We just need to specify two additional objects.
+
+00:00:32.185 --> 00:00:35.664
+The first is the Parameter Grid we would like to explore.
+
+00:00:35.664 --> 00:00:38.454
+The second is the Evaluator.
+
+00:00:38.454 --> 00:00:41.573
+The Evaluator as its name suggests,
+
+00:00:41.573 --> 00:00:46.149
+defines the metric we were used to evaluate the results on the test set.
+
+00:00:46.149 --> 00:00:48.609
+It's worth noting that after identifying
+
+00:00:48.609 --> 00:00:52.895
+the best parameter combination using the built-in cross validation methods,
+
+00:00:52.895 --> 00:00:58.180
+Spark fix the estimator using this best parameter map and the entire dataset.
+
+00:00:58.179 --> 00:01:02.500
+Up until Version 2.3, the models corresponding to different points on
+
+00:01:02.500 --> 00:01:05.004
+the perimeter grid are trained sequentially,
+
+00:01:05.004 --> 00:01:07.689
+which might be inefficient even when for the training for
+
+00:01:07.689 --> 00:01:10.870
+a single model is distributed across the cluster.
+
+00:01:10.870 --> 00:01:13.395
+Starting from version 2.3,
+
+00:01:13.394 --> 00:01:16.435
+models can be trained and evaluated in parallel.
+
+00:01:16.435 --> 00:01:19.549
+This way better utilizing the available resources.
+
+00:01:19.549 --> 00:01:24.429
+Serial training will still be the default configuration at least initially,
+
+00:01:24.430 --> 00:01:29.210
+but this behavior now can be changed through the parallelism parameter.
+

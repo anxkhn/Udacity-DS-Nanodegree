@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.589 --> 00:00:08.774
+The second big category in machine learning is unsupervised algorithms,
+
+00:00:08.775 --> 00:00:11.250
+where we don't have any labeled data points,
+
+00:00:11.250 --> 00:00:16.515
+we typically try to find clusters based on how similar records are to one another.
+
+00:00:16.515 --> 00:00:19.649
+The Spark ML API includes K-means,
+
+00:00:19.649 --> 00:00:24.989
+Latent Dirichlet Allocation, and Gaussian Mixture Model clustering algorithms.
+
+00:00:24.989 --> 00:00:28.529
+In real life, problems don't necessarily fit strictly
+
+00:00:28.530 --> 00:00:31.964
+in either the supervised or unsupervised category.
+
+00:00:31.964 --> 00:00:34.709
+So there has been a lot of development on techniques
+
+00:00:34.709 --> 00:00:37.200
+that implement hybrid approaches.
+
+00:00:37.200 --> 00:00:42.135
+Spark at this point, has limited support for semi-supervised learning.
+
+00:00:42.134 --> 00:00:45.890
+As I mentioned earlier, Spark primary supports algorithms
+
+00:00:45.890 --> 00:00:48.740
+that scale linearly with the number of records.
+
+00:00:48.740 --> 00:00:51.710
+So if you need to use more expensive algorithms
+
+00:00:51.710 --> 00:00:54.364
+such as connectivity based clustering,
+
+00:00:54.363 --> 00:00:59.059
+which typically scarce quadratic or even cubic with the number of records,
+
+00:00:59.060 --> 00:01:00.890
+you need to implement your own methods
+
+00:01:00.890 --> 00:01:04.299
+or consider using some other framework.
+

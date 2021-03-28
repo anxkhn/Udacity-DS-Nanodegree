@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.549 --> 00:00:07.049
+At the time of this recording,
+
+00:00:07.049 --> 00:00:10.289
+Spark's latest release version 2.2.1
+
+00:00:10.289 --> 00:00:12.613
+supports two machine learning libraries,
+
+00:00:12.614 --> 00:00:15.015
+Spark ML and Spark MLlib.
+
+00:00:15.015 --> 00:00:18.103
+Spark MLlib is an additive base library
+
+00:00:18.103 --> 00:00:21.585
+and it has been in maintenance board since version 2.2.
+
+00:00:21.585 --> 00:00:23.475
+According to the current plans,
+
+00:00:23.475 --> 00:00:26.115
+Spark ML, the DataFrames API,
+
+00:00:26.114 --> 00:00:28.859
+will be feature complete by version 2.3,
+
+00:00:28.859 --> 00:00:33.329
+and then the order Spark MLlib will be removed in Spark 3.2.
+
+00:00:33.329 --> 00:00:36.854
+So currently, we might need to use a mixture of these two libraries,
+
+00:00:36.854 --> 00:00:38.129
+but as time goes on,
+
+00:00:38.130 --> 00:00:40.020
+you should focus on Spark ML,
+
+00:00:40.020 --> 00:00:43.455
+as It's becoming Sparks standard machine learning library.
+
+00:00:43.454 --> 00:00:45.979
+Just as Spark DataFrames were designed closely
+
+00:00:45.979 --> 00:00:48.199
+mimicking Python and R DataFrames,
+
+00:00:48.200 --> 00:00:51.020
+the Spark ML library resembles Scikit-learn.
+
+00:00:51.020 --> 00:00:54.560
+It supports pipelines where we can stitch together data
+
+00:00:54.560 --> 00:00:59.420
+cleaning and feature engineering steps with moral training and prediction.
+
+00:00:59.420 --> 00:01:05.155
+Spark in general, handles algorithms that scale linearly with the input data size.
+
+00:01:05.155 --> 00:01:08.480
+In the library, we find support for the most common
+
+00:01:08.480 --> 00:01:12.469
+linear algorithms such as linear and logistic regression,
+
+00:01:12.469 --> 00:01:15.260
+Random Forest and k-means clustering.
+
+00:01:15.260 --> 00:01:19.355
+Spark ML also has utilities for feature computation,
+
+00:01:19.355 --> 00:01:22.640
+hyperparameter tuning, and model evaluation.
+
+00:01:22.640 --> 00:01:25.519
+Then we think about Distributed Machine Learning,
+
+00:01:25.519 --> 00:01:28.734
+there are two different ways to achieve parallelization,
+
+00:01:28.734 --> 00:01:31.909
+data parallelization, and task parallelization.
+
+00:01:31.909 --> 00:01:34.280
+We can use a large dataset and train
+
+00:01:34.280 --> 00:01:37.685
+the same model on smaller subsets of the data in parallel.
+
+00:01:37.685 --> 00:01:39.850
+This is bugs before behavior.
+
+00:01:39.849 --> 00:01:42.890
+The Driver Program acts as a perimeter server for
+
+00:01:42.890 --> 00:01:47.704
+most algorithms where the partial results of each iteration gets combined.
+
+00:01:47.704 --> 00:01:50.629
+We can also think about training many models in
+
+00:01:50.629 --> 00:01:54.724
+parallel on a dataset small enough to fit on a single machine.
+
+00:01:54.724 --> 00:01:58.489
+We will cover Spark's current and future options on tuning
+
+00:01:58.489 --> 00:02:03.299
+models in parallel in the section about hyperparameter tuning.
+

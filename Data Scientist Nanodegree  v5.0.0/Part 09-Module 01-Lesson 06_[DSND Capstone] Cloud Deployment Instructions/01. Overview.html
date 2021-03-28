@@ -1,0 +1,228 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Overview</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>[DSND Capstone] Cloud Deployment Instructions</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Overview.html">01. Overview</a>
+    </li>
+    <li class="">
+      <a href="02. [AWS] Launch EMR Cluster and Notebook.html">02. [AWS] Launch EMR Cluster and Notebook</a>
+    </li>
+    <li class="">
+      <a href="03. [AWS] Starter Code.html">03. [AWS] Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Monitor your AWS Costs and Credits.html">04. Monitor your AWS Costs and Credits</a>
+    </li>
+    <li class="">
+      <a href="05. [IBM] Create an IBM Watson account and Watson project.html">05. [IBM] Create an IBM Watson account and Watson project</a>
+    </li>
+    <li class="">
+      <a href="06. [IBM] Launch IBM Cluster and Notebook.html">06. [IBM] Launch IBM Cluster and Notebook</a>
+    </li>
+    <li class="">
+      <a href="07. [IBM] Starter Code.html">07. [IBM] Starter Code</a>
+    </li>
+    <li class="">
+      <a href="08. [IBM] Avoid Paying Unexpected Costs.html">08. [IBM] Avoid Paying Unexpected Costs</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Capstone Project.html">Project Description - Capstone Project</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Capstone Project.html">Project Rubric - Capstone Project</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="cloud-deployment-instructions-for-dsnd-capstone-project">Cloud Deployment Instructions for DSND Capstone Project</h1>
+<p>This course taught you the basics of Spark to prepare you for <em>Sparkify</em>, one of the <a href="https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059" rel="noopener noreferrer" target="_blank">Capstone Project</a> options available in the Data Scientist Nanodegree. Here's the link to the <a href="https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059/modules/80c955ce-72f2-403a-9bf5-cc58636dab9d/lessons/d6285247-6bc0-4783-b118-6f41981b9469/concepts/47d96c80-82da-4640-9fff-54415f2a21df" rel="noopener noreferrer" target="_blank">Sparkify Project Overview page</a>.</p>
+<p>This deployment is an optional part of the capstone project. Here, you'll find instructions to do this with Amazon Web Services (AWS) or IBM Cloud. If you choose to use AWS, you can use the full 12GB dataset hosted on our public S3 bucket, and expect to use about $30 dollars to run this cluster while you build your project for a week. If you choose to use IBM Cloud, you'll use a medium-sized 23 MB dataset we provide for you to download here. You will still deploy your application on a Spark cluster, but this will not cost you any money.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/amazon-emr.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/watson-studio.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We will provide instructions for using <a href="https://aws.amazon.com/emr/" rel="noopener noreferrer" target="_blank">Amazon EMR</a> (Amazon Elastic MapReduce) and <a href="https://www.ibm.com/cloud/watson-studio" rel="noopener noreferrer" target="_blank">IBM Watson Studio</a> to set up our Spark cluster and notebook. Both are great options for data scientists who want to spin up Spark clusters for projects without going through the complicated steps of setting them up manually, which would require some data engineering. With these tools, you'll be able to quickly create a Jupyter notebook, attach it to a Spark cluster, and open the notebook directly from the console.</p>
+<p>Go to the "Create an account" page either for the AWS or the IBM option.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. [AWS] Launch EMR Cluster and Notebook.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Overview')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

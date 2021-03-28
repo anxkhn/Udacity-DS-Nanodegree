@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.330 --> 00:00:07.964
+We'll start with some simple stats,
+
+00:00:07.964 --> 00:00:11.175
+to tell us how Sparkify customers use our service.
+
+00:00:11.175 --> 00:00:14.730
+Let's begin with the daily listening time, for an average user.
+
+00:00:14.730 --> 00:00:16.740
+In other words, how long is
+
+00:00:16.739 --> 00:00:20.534
+the average Sparkify user actually listening to music per day.
+
+00:00:20.535 --> 00:00:24.240
+After that, we'll calculate the number of songs per day,
+
+00:00:24.239 --> 00:00:28.479
+including any repeat or partial listens, for the average user.
+

@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.129 --> 00:00:08.789
+Spark ML Pipeline API was inspired by scikit-learn,
+
+00:00:08.789 --> 00:00:10.889
+and just like scikit-learn, it allows
+
+00:00:10.890 --> 00:00:12.839
+combining several data processing
+
+00:00:12.839 --> 00:00:16.050
+and other training steps into a single workflow.
+
+00:00:16.050 --> 00:00:21.315
+Pipelines have two main components, Transformers and Estimators.
+
+00:00:21.315 --> 00:00:26.789
+The transformer is an algorithm that transforms one data frame to another.
+
+00:00:26.789 --> 00:00:30.660
+There are two common places that transformers are used.
+
+00:00:30.660 --> 00:00:33.579
+The first is in feature transformations,
+
+00:00:33.579 --> 00:00:36.320
+like you saw earlier, we're changing categorical
+
+00:00:36.320 --> 00:00:39.200
+or text variables to numeric columns.
+
+00:00:39.200 --> 00:00:44.000
+The second is making predictions for supervised learning models by
+
+00:00:44.000 --> 00:00:48.844
+transforming your features using a model into the predicted outcomes.
+
+00:00:48.844 --> 00:00:52.609
+Estimators, on the other hand, fit algorithm parameters
+
+00:00:52.609 --> 00:00:55.575
+on a dataframe to create a transformer.
+
+00:00:55.575 --> 00:01:03.000
+A pipeline chains multiple transformers and estimators together to pacify an MR workflow.
+

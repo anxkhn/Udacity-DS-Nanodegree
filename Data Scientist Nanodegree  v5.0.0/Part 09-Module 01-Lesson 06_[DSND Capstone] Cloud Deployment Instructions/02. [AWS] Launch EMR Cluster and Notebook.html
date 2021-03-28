@@ -1,0 +1,386 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[AWS] Launch EMR Cluster and Notebook</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>[DSND Capstone] Cloud Deployment Instructions</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Overview.html">01. Overview</a>
+    </li>
+    <li class="">
+      <a href="02. [AWS] Launch EMR Cluster and Notebook.html">02. [AWS] Launch EMR Cluster and Notebook</a>
+    </li>
+    <li class="">
+      <a href="03. [AWS] Starter Code.html">03. [AWS] Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Monitor your AWS Costs and Credits.html">04. Monitor your AWS Costs and Credits</a>
+    </li>
+    <li class="">
+      <a href="05. [IBM] Create an IBM Watson account and Watson project.html">05. [IBM] Create an IBM Watson account and Watson project</a>
+    </li>
+    <li class="">
+      <a href="06. [IBM] Launch IBM Cluster and Notebook.html">06. [IBM] Launch IBM Cluster and Notebook</a>
+    </li>
+    <li class="">
+      <a href="07. [IBM] Starter Code.html">07. [IBM] Starter Code</a>
+    </li>
+    <li class="">
+      <a href="08. [IBM] Avoid Paying Unexpected Costs.html">08. [IBM] Avoid Paying Unexpected Costs</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Capstone Project.html">Project Description - Capstone Project</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Capstone Project.html">Project Rubric - Capstone Project</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. [AWS] Launch EMR Cluster and Notebook</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="launch-emr-cluster-and-notebook">Launch EMR Cluster and Notebook</h1>
+<p>Follow the instructions below to launch your EMR cluster and notebook.</p>
+<ul>
+<li>Open a regular AWS account (if you don't already have one) following the instructions via the <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/" rel="noopener noreferrer" target="_blank">Amazon Web Service Help Center</a></li>
+<li>Go to the <a href="https://console.aws.amazon.com/elasticmapreduce/" rel="noopener noreferrer" target="_blank">Amazon EMR Console</a></li>
+<li>Select "Clusters" in the menu on the left, and click the "Create cluster" button.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/create-cluster-button.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-1-configure-your-cluster-with-the-following-settings">Step 1: Configure your cluster with the following settings:</h1>
+<ul>
+<li>Release: <code>emr-5.20.0</code> or later</li>
+<li>Applications: <code>Spark</code>: Spark 2.4.0 on Hadoop 2.8.5 YARN with Ganglia 3.7.2 and Zeppelin 0.8.0</li>
+<li>Instance type: <code>m3.xlarge</code></li>
+<li>Number of instance: <code>3</code></li>
+<li>EC2 key pair: <code>Proceed without an EC2 key pair</code> or feel free to use one if you'd like</li>
+</ul>
+<p>You can keep the remaining default setting and click "Create cluster" on the bottom right.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/configure-cluster.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-2-wait-for-cluster--waiting-status">Step 2: Wait for Cluster  "Waiting" Status</h1>
+<p>Once you create the cluster, you'll see a status next to your cluster name that says <em>Starting</em>. Wait a short time for this status to change to <em>Waiting</em> before moving on to the next step.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/cluster-waiting.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-3-create-notebook">Step 3: Create Notebook</h1>
+<p>Now that you launched your cluster successfully, let's create a notebook to run Spark on that cluster.</p>
+<p>Select "Notebooks" in the menu on the left, and click the "Create notebook" button.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/create-notebook-button.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-4-configure-your-notebook">Step 4: Configure your notebook</h1>
+<ul>
+<li>Enter a name for your notebook</li>
+<li>Select "Choose an existing cluster" and choose the cluster you just created</li>
+<li>Use the default setting for "AWS service role" - this should be "EMR_Notebooks_DefaultRole" or "Create default role" if you haven't done this before.</li>
+</ul>
+<p>You can keep the remaining default settings and click "Create notebook" on the bottom right.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/configure-notebook.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-5-wait-for-notebook--ready-status-then-open">Step 5: Wait for Notebook  "Ready" Status, Then Open</h1>
+<p>Once you create an EMR notebook, you'll need to wait a short time before the notebook status changes from <em>Starting</em> or <em>Pending</em> to <em>Ready.</em> Once your notebook status is <em>Ready</em>, click the "Open" button to open the notebook.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/notebook-ready.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="start-coding">Start Coding!</h1>
+<p>Now you can run Spark code for your project in this notebook, which EMR will run on your cluster. In the next page, you'll find starter code to create a spark session and read in the full 12GB dataset for the DSND Capstone project.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/empty-notebook.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="download-notebook">Download Notebook</h1>
+<p>When you are finished with your notebook, click <code>File</code> &gt; <code>Download as</code> &gt; <code>Notebook</code> to download it to your computer. On your local computer, create a git repository including this notebook and a README file. Submit the URL to your github repository to submit this project. See more details in the <a href="https://classroom.udacity.com/nanodegrees/nd025/parts/84260e1f-2926-4127-895f-cc4432b05059/modules/80c955ce-72f2-403a-9bf5-cc58636dab9d/lessons/d6285247-6bc0-4783-b118-6f41981b9469/concepts/47d96c80-82da-4640-9fff-54415f2a21df" rel="noopener noreferrer" target="_blank">Sparkify Project Overview page</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/download-notebook.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For more information on EMR notebooks, click <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html" rel="noopener noreferrer" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="pricing---be-careful">Pricing - Be Careful!</h1>
+<p>From this point on, AWS will charge you for running your EMR cluster. See details on this and how to manage your resources to avoid unexpected costs in the "Managing Resources" section at the end of this lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. [AWS] Starter Code.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. [AWS] Launch EMR Cluster and Notebook')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.429 --> 00:00:08.400
+Another reason Spark might have trouble with larger data sets,
+
+00:00:08.400 --> 00:00:10.769
+is a bad algorithm in your code.
+
+00:00:10.769 --> 00:00:14.744
+For some calculations, adding data doesn't make it much harder.
+
+00:00:14.744 --> 00:00:18.660
+Remember when we calculated the daily listening time for sparkify users,
+
+00:00:18.660 --> 00:00:20.265
+earlier in this lesson.
+
+00:00:20.265 --> 00:00:23.054
+Spark had to look through every line on the data,
+
+00:00:23.054 --> 00:00:26.925
+and use the listening time for each record to calculate the average.
+
+00:00:26.925 --> 00:00:30.644
+Let's say it takes 30 seconds when your data is relatively small.
+
+00:00:30.644 --> 00:00:33.975
+Now what happens if your data doubles in size,
+
+00:00:33.975 --> 00:00:36.539
+and you have to repeat the whole calculation?
+
+00:00:36.539 --> 00:00:40.534
+Since you still have to look at every record once to calculate the average,
+
+00:00:40.534 --> 00:00:44.209
+the calculation should take twice as long, a full minute.
+
+00:00:44.210 --> 00:00:45.980
+If it doubled again,
+
+00:00:45.979 --> 00:00:48.949
+the trend would continue and it would take two minutes.
+
+00:00:48.950 --> 00:00:52.760
+If you plot the calculation time versus the data size,
+
+00:00:52.759 --> 00:00:54.604
+you get a nice straight line.
+
+00:00:54.604 --> 00:00:56.539
+As the dataset increases,
+
+00:00:56.539 --> 00:00:59.615
+the computational time increases linearly.
+
+00:00:59.615 --> 00:01:03.200
+Spark can handle this by adding more workers to your cluster,
+
+00:01:03.200 --> 00:01:05.495
+or simply waiting twice as long.
+
+00:01:05.495 --> 00:01:07.400
+But for some calculations,
+
+00:01:07.400 --> 00:01:09.740
+doubling the data doesn't just double the time.
+
+00:01:09.739 --> 00:01:11.554
+It makes it a lot harder.
+
+00:01:11.555 --> 00:01:16.590
+In some cases, more data makes the calculation practically impossible.
+

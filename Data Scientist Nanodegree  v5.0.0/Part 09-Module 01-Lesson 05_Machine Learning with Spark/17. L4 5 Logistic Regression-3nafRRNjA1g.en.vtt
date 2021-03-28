@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.234
+As an example for a classification problem,
+
+00:00:03.234 --> 00:00:06.540
+we will predict a tag for the questions.
+
+00:00:06.540 --> 00:00:10.064
+For this task, we will use the one tag field,
+
+00:00:10.064 --> 00:00:13.859
+I already talked a bit about in the previous video.
+
+00:00:13.859 --> 00:00:19.689
+So, one tag is just the most common tag a question has.
+
+00:00:19.690 --> 00:00:26.655
+So, we can simplify this multi-target problem into a single target one.
+
+00:00:26.655 --> 00:00:34.655
+As our feature, let's just use the TF-IDF we computed in one of the earlier videos,
+
+00:00:34.655 --> 00:00:38.359
+and train a basic logistic regression model.
+
+00:00:38.359 --> 00:00:45.045
+If you recall, we created label from the one.com earlier.
+
+00:00:45.045 --> 00:00:52.385
+So, label has a numeric value as well as TF-IDF already is sparse vector,
+
+00:00:52.384 --> 00:00:57.104
+so this will work for our model just like this.
+
+00:00:57.104 --> 00:01:02.299
+The dataset has 301 different tags.
+
+00:01:02.299 --> 00:01:05.149
+So, our model missus side which one of
+
+00:01:05.150 --> 00:01:08.245
+these is the most likely for a particular question.
+
+00:01:08.245 --> 00:01:12.175
+All right? Our model has been trained.
+
+00:01:12.174 --> 00:01:15.439
+So now, we can check its parameters.
+
+00:01:15.439 --> 00:01:19.039
+Since we are dealing with a multi-class classification problem,
+
+00:01:19.040 --> 00:01:25.150
+we will have a coefficient matrix rather than just a vector of coefficients,
+
+00:01:25.150 --> 00:01:30.155
+and then intercept vector instead of just a single value on intercept.
+
+00:01:30.155 --> 00:01:35.510
+So, we have a matrix here with 301 rows,
+
+00:01:35.510 --> 00:01:40.195
+and it has some columns as well as the intercept vector.
+
+00:01:40.194 --> 00:01:43.639
+Let's show the accuracy of our model.
+
+00:01:43.640 --> 00:01:46.290
+All right, so with using
+
+00:01:46.290 --> 00:01:50.150
+only the TF-IDF of the most common thousand words in the questions,
+
+00:01:50.150 --> 00:01:54.340
+but we get an accuracy of around 36 percent.
+
+00:01:54.340 --> 00:01:56.555
+So, how good is this result?
+
+00:01:56.555 --> 00:02:01.610
+We have about a 100,000 rows in our dataset,
+
+00:02:01.609 --> 00:02:05.260
+and 301 different tags.
+
+00:02:05.260 --> 00:02:10.444
+So, if the tags were uniformly distributed in our dataset,
+
+00:02:10.444 --> 00:02:18.745
+the random chance of getting the deck right would be one over 301,
+
+00:02:18.745 --> 00:02:21.935
+that's a bigger number around three percent,
+
+00:02:21.935 --> 00:02:26.550
+but there are certainly tags that are more common than other ones.
+
+00:02:26.550 --> 00:02:32.854
+The most common tag is assigned to about five percent of the records.
+
+00:02:32.854 --> 00:02:36.030
+So, still 36 percent isn't too bad.
+
+00:02:36.030 --> 00:02:39.724
+We could of course, explore how including more features,
+
+00:02:39.724 --> 00:02:43.405
+different model parameters might improve this result,
+
+00:02:43.405 --> 00:02:46.759
+but we will leave this for another time.
+
+00:02:46.759 --> 00:02:53.489
+I would also like to mention that we computed this accuracy on the dataset,
+
+00:02:53.490 --> 00:02:54.985
+we trained the model.
+
+00:02:54.985 --> 00:02:58.510
+So, of course this is probably a bit too optimistic.
+
+00:02:58.509 --> 00:03:01.870
+We will see how to do this more properly in a later video
+

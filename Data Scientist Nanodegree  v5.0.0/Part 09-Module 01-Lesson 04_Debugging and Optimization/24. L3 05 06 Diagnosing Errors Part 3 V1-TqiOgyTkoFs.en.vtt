@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.519 --> 00:00:07.649
+Next, you'll tackle a common approach for
+
+00:00:07.650 --> 00:00:11.040
+understanding how your users interact with your service over time.
+
+00:00:11.039 --> 00:00:12.839
+Cohort analysis.
+
+00:00:12.839 --> 00:00:16.019
+The main idea of cohort analysis is that someone who joins
+
+00:00:16.019 --> 00:00:20.320
+Sparkify a year ago probably behaves differently than a brand new user.
+
+00:00:20.320 --> 00:00:24.949
+So, you should analyze them in separate groups which we'll call cohorts.
+
+00:00:24.949 --> 00:00:31.140
+For example, all the users who joined Sparkify in January 2018 will be one cohort.
+
+00:00:31.140 --> 00:00:33.179
+We'll compare their activity to
+
+00:00:33.179 --> 00:00:37.125
+previous cohorts like the users who joined in December 2017,
+
+00:00:37.125 --> 00:00:39.869
+November 2017, and so on.
+
+00:00:39.869 --> 00:00:43.969
+For each cohort, we'll calculate two metrics: the percentage
+
+00:00:43.969 --> 00:00:47.600
+of users who upgrade to paid accounts within their first three months,
+
+00:00:47.600 --> 00:00:50.840
+and the percentage who cancel within three months.
+

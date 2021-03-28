@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.350 --> 00:00:06.660
+Congratulations. You have made it through.
+
+00:00:06.660 --> 00:00:10.185
+In this lesson, we have learned a lot about Sparks ML API.
+
+00:00:10.185 --> 00:00:13.425
+You have learned how to calculate and transform features,
+
+00:00:13.425 --> 00:00:16.859
+how to train Machine Learning Models supported in the API,
+
+00:00:16.859 --> 00:00:20.519
+how to build pipelines from Transformers and Estimators,
+
+00:00:20.519 --> 00:00:23.939
+and how to select the optimal model for your problem.
+
+00:00:23.940 --> 00:00:28.800
+This foundation will help you to train ML models on big data instead of
+
+00:00:28.800 --> 00:00:35.020
+constraining yourself to the data sets that can fit on a single machine. Good job.
+
