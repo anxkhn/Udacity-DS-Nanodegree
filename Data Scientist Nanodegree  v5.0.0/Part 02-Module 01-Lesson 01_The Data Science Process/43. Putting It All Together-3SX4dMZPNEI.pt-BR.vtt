@@ -1,0 +1,514 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.766
+Aqui vamos juntar vários pontos
+de nossa aula.
+
+00:00:04.799 --> 00:00:06.366
+Nesta primeira parte,
+
+00:00:06.399 --> 00:00:10.433
+estamos lendo as bibliotecas
+e o conjunto de dados usados.
+
+00:00:10.466 --> 00:00:12.866
+Vou pular algumas questões
+
+00:00:12.899 --> 00:00:16.366
+que eram só para preencher
+as lacunas.
+
+00:00:16.399 --> 00:00:18.933
+Mas o principal
+que quero mostrar
+
+00:00:18.966 --> 00:00:22.099
+são algumas partes
+que não vimos antes.
+
+00:00:22.133 --> 00:00:25.699
+Aqui você tinha que escrever
+uma função
+
+00:00:25.733 --> 00:00:28.199
+que basicamente segue
+estes passos.
+
+00:00:28.233 --> 00:00:32.466
+Você faz o drop das linhas
+associadas com salário,
+
+00:00:32.499 --> 00:00:36.333
+você divide a resposta,
+
+00:00:36.366 --> 00:00:40.466
+você também faz o drop
+de várias coisas
+
+00:00:40.499 --> 00:00:43.533
+e cria uma nova matriz X.
+
+00:00:43.566 --> 00:00:46.933
+Você pega as variáveis numéricas
+e preenche a média.
+
+00:00:46.966 --> 00:00:49.466
+Várias coisas
+que fizemos antes.
+
+00:00:49.499 --> 00:00:51.899
+Nós preenchemos a média
+numa parte anterior.
+
+00:00:51.933 --> 00:00:54.466
+Aqui você cria dummy
+nas variáveis categóricas,
+
+00:00:54.499 --> 00:00:56.433
+você também já fez isto antes.
+
+00:00:56.466 --> 00:01:00.066
+E você só estava criando
+esta matriz X e y
+
+00:01:00.099 --> 00:01:04.033
+ou uma matriz X e um vetor y.
+
+00:01:04.066 --> 00:01:09.233
+E a última parte disto é olhar
+como o modelo se ajusta
+
+00:01:09.266 --> 00:01:12.399
+com diferentes truncamentos
+para X e y.
+
+00:01:12.433 --> 00:01:16.333
+Você vai notar que isso vem
+de um outro arquivo,
+
+00:01:16.366 --> 00:01:21.233
+e eu só quero ver
+como este arquivo é.
+
+00:01:21.266 --> 00:01:25.566
+E você vai ver que está executando
+a função find_optimal_lm.
+
+00:01:25.599 --> 00:01:29.266
+Veja que estes são
+os inputs que ela contém.
+
+00:01:29.299 --> 00:01:32.866
+Mas aqui está criando
+várias coisas vazias
+
+00:01:32.899 --> 00:01:35.633
+que vão funcionar
+ao longo do processo.
+
+00:01:35.666 --> 00:01:37.999
+Vai executar
+por vários truncamentos,
+
+00:01:38.033 --> 00:01:42.333
+que são basicamente
+quantos dados faltavam
+
+00:01:42.366 --> 00:01:44.066
+numa linha em particular.
+
+00:01:44.099 --> 00:01:47.033
+Quanto menores
+os truncamentos,
+
+00:01:47.066 --> 00:01:49.766
+maiores os recursos
+que acabam na sua matriz X,
+
+00:01:49.799 --> 00:01:52.333
+e quanto maiores
+os truncamentos,
+
+00:01:52.366 --> 00:01:55.866
+menos recursos acabam
+em sua matriz X.
+
+00:01:56.229 --> 00:01:59.199
+Veja que é
+o que está acontecendo aqui,
+
+00:01:59.233 --> 00:02:02.666
+você está reduzindo
+a matriz X.
+
+00:02:02.699 --> 00:02:05.666
+Então, (X sum(). E não é a soma
+dos dados ausentes,
+
+00:02:05.699 --> 00:02:07.633
+é a proporção
+dos dados ausentes.
+
+00:02:07.666 --> 00:02:10.333
+Se X tinha vários 1,
+
+00:02:10.366 --> 00:02:15.333
+espero que isto signifique
+que temos variabilidade o bastante
+
+00:02:15.366 --> 00:02:17.466
+para distinguir
+um grupo do outro.
+
+00:02:17.499 --> 00:02:19.633
+Se houvesse apenas três 1,
+
+00:02:19.666 --> 00:02:22.633
+seria difícil usar
+este recurso
+
+00:02:22.666 --> 00:02:25.333
+para prever
+algum tipo de resposta contínua.
+
+00:02:25.366 --> 00:02:27.733
+É provável que seja um recurso
+
+00:02:27.766 --> 00:02:29.699
+que ajuda o modelo
+a sobreajustar.
+
+00:02:29.733 --> 00:02:33.366
+Aqui, estamos fazendo um treino
+para dividir.
+
+00:02:33.399 --> 00:02:34.633
+Ajustamos o modelo.
+
+00:02:34.666 --> 00:02:38.233
+Ajustamos o modelo
+com o X reduzido aqui,
+
+00:02:38.266 --> 00:02:41.033
+e ele está anexando
+os valores r2 dele.
+
+00:02:41.066 --> 00:02:46.833
+Ele vai executar este processo
+por várias matrizes X diferentes,
+
+00:02:46.866 --> 00:02:50.666
+e este é o gráfico
+que você vai receber no final,
+
+00:02:50.699 --> 00:02:52.199
+se quiser fazer um gráfico.
+
+00:02:52.233 --> 00:02:56.899
+Vai retornar todos os r2
+no treino em conjuntos de teste
+
+00:02:56.933 --> 00:02:59.899
+e vai retornar
+o modelo linear,
+
+00:02:59.933 --> 00:03:03.366
+o X de treino, X de teste,
+y de treino e y de teste,
+
+00:03:03.399 --> 00:03:05.666
+para o melhor modelo.
+
+00:03:05.699 --> 00:03:09.766
+Estas partes só vão voltar
+para o melhor modelo
+
+00:03:09.799 --> 00:03:15.666
+em cada execução
+pelos diferentes truncamentos.
+
+00:03:15.699 --> 00:03:19.352
+Aqui diz: "Só escolha o X
+
+00:03:19.386 --> 00:03:23.333
+de onde houve
+o melhor truncamento."
+
+00:03:23.366 --> 00:03:26.272
+Basicamente onde o valor de r2
+
+00:03:26.306 --> 00:03:29.599
+foi o melhor
+no conjunto de teste.
+
+00:03:29.633 --> 00:03:32.333
+Queremos ver como
+isto se estende a novos dados.
+
+00:03:32.366 --> 00:03:36.766
+Espero que o que acontece
+nesta função faça sentido.
+
+00:03:36.799 --> 00:03:39.166
+Vamos executar esta função.
+
+00:03:39.199 --> 00:03:41.599
+Vamos passar todos os X e y.
+
+00:03:41.633 --> 00:03:45.333
+Ela vai nos devolver
+as melhores partes para isto,
+
+00:03:45.366 --> 00:03:50.133
+e todos os r2
+para cada um dos limites.
+
+00:03:50.166 --> 00:03:52.233
+Quanto mais alto o valor...
+
+00:03:52.266 --> 00:03:54.333
+Pode parecer um retrocesso,
+
+00:03:54.366 --> 00:03:57.166
+mas esta é a quantidade de 1
+que uma coluna precisa ter.
+
+00:03:57.199 --> 00:04:00.233
+Quanto maior o valor,
+
+00:04:00.266 --> 00:04:02.933
+menor o número de recursos
+no modelo.
+
+00:04:02.966 --> 00:04:08.399
+Quanto menor o valor,
+mais recursos ficam na matriz X.
+
+00:04:08.433 --> 00:04:12.133
+E ele faz loop por tudo isto,
+então pode levar um tempo.
+
+00:04:12.166 --> 00:04:14.699
+Mas você verá algo parecido
+com isto.
+
+00:04:14.733 --> 00:04:17.233
+À medida
+que o número de recursos aumenta,
+
+00:04:17.266 --> 00:04:18.866
+ele melhora até um ponto.
+
+00:04:18.899 --> 00:04:24.199
+Mas, quando você fica
+com muitos recursos na matriz X,
+
+00:04:24.233 --> 00:04:27.266
+começa a sobreajustar,
+e os dados de teste começam a cair.
+
+00:04:27.299 --> 00:04:31.033
+E se você diminuir
+isto um pouco mais,
+
+00:04:31.066 --> 00:04:32.799
+se você mudar
+para algo como 20,
+
+00:04:32.833 --> 00:04:36.866
+teremos grandes quedas
+nos dados de teste.
+
+00:04:36.899 --> 00:04:40.599
+O conjunto de dados de treino
+continuou indo em direção a 1
+
+00:04:40.633 --> 00:04:41.966
+ou atingiu 1.
+
+00:04:41.999 --> 00:04:43.266
+Mas nos dados de teste,
+
+00:04:43.299 --> 00:04:47.066
+vai cair até um
+número negativo bem louco.
+
+00:04:47.099 --> 00:04:50.466
+Mas é um padrão bem comum
+para r2.
+
+00:04:50.499 --> 00:04:53.799
+Para o erro quadrático médio,
+você vê o oposto.
+
+00:04:53.833 --> 00:04:57.833
+O que queremos ver é como ele
+se ajusta ao conjunto de teste.
+
+00:04:57.866 --> 00:05:02.766
+O melhor no conjunto de teste
+está aqui nestas partes.
+
+00:05:02.799 --> 00:05:06.466
+Com isto, podemos responder
+estas questões aqui.
+
+00:05:06.499 --> 00:05:09.499
+Por estarmos usando
+um modelo de regressão de cume,
+
+00:05:09.533 --> 00:05:11.566
+um dos melhores jeitos
+de dizer
+
+00:05:11.599 --> 00:05:15.666
+qual recurso de X importa
+no nosso modelo,
+
+00:05:15.699 --> 00:05:18.633
+é ver o peso
+dos seus coeficientes.
+
+00:05:18.666 --> 00:05:21.199
+Como nossos recursos
+são normalizados,
+
+00:05:21.233 --> 00:05:25.099
+podemos ver o quanto
+o coeficiente é grande.
+
+00:05:25.133 --> 00:05:29.433
+Então o negativo ou o positivo
+ainda está associado com a direção,
+
+00:05:29.466 --> 00:05:33.066
+o impacto direcional
+na resposta associada
+
+00:05:33.099 --> 00:05:35.166
+com aquela variável
+em particular,
+
+00:05:35.199 --> 00:05:38.466
+e o tamanho do coeficiente é
+o impacto que ele tem
+
+00:05:38.499 --> 00:05:40.399
+mesmo depois
+de ser normalizado.
+
+00:05:40.432 --> 00:05:43.466
+Veja, em termos de ser
+um desenvolvedor,
+
+00:05:43.499 --> 00:05:47.699
+o país parece ter
+muita influência,
+
+00:05:47.732 --> 00:05:49.799
+assim como quantos
+anos de experiência.
+
+00:05:49.832 --> 00:05:54.066
+Mas não é o caso de, quanto
+mais anos de experiência você tiver,
+
+00:05:54.099 --> 00:05:56.199
+mais alto será seu pagamento.
+
+00:05:56.232 --> 00:05:59.066
+Parece que, se você tem mais
+de 20 anos de experiência,
+
+00:05:59.099 --> 00:06:02.966
+o que é bem alto, ou de 18 a 19,
+isto tem um maior impacto.
+
+00:06:02.999 --> 00:06:07.132
+Mas temos os com 12 a 13 anos
+
+00:06:07.166 --> 00:06:09.999
+que ganham mais
+do que este com 19 a 20 anos,
+
+00:06:10.032 --> 00:06:14.432
+e mais que um com 13 a 14,
+e mais que um com 15 a 16 anos.
+
+00:06:14.466 --> 00:06:18.566
+Então não é diretamente relacionado,
+de acordo com este modelo.
+
+00:06:18.599 --> 00:06:22.632
+E você vai notar que,
+onde você vive,
+
+00:06:22.666 --> 00:06:25.099
+determina seu salário
+como desenvolvedor.
+
+00:06:25.132 --> 00:06:29.099
+Existem alguns países onde você é
+melhor pago como desenvolvedor
+
+00:06:29.132 --> 00:06:30.766
+do que em outros países.
+
+00:06:30.799 --> 00:06:34.532
+Estes parecem ser
+os dois maiores indicadores.
+
+00:06:34.566 --> 00:06:37.832
+E, com isto, você pode usar
+esta informação
+
+00:06:37.866 --> 00:06:40.132
+para ajudar a preencher
+algumas partes.
+
+00:06:40.166 --> 00:06:44.266
+Mas a maior lição desta última parte
+é basicamente esta imagem,
+
+00:06:44.299 --> 00:06:46.766
+e a ideia
+que está associada a ela.
+
+00:06:46.799 --> 00:06:51.232
+Ter mais recursos
+não significa ter um modelo
+
+00:06:51.266 --> 00:06:53.166
+que funciona melhor
+na prática.
+
+00:06:53.199 --> 00:06:56.066
+Em vez disso, você deve ter
+um modelo que tenha recursos
+
+00:06:56.099 --> 00:06:58.732
+que sejam indicadores
+da resposta
+
+00:06:58.766 --> 00:07:01.966
+e indicadores de como influenciam
+a resposta.
+
+00:07:01.999 --> 00:07:06.266
+E, se você continuar colocando
+mais e mais coisas no seu modelo,
+
+00:07:06.299 --> 00:07:09.399
+em algum ponto,
+ele pode sobreajustar a um ponto
+
+00:07:09.432 --> 00:07:12.966
+que você não poderá estender bem
+seu modelo para novos dados,
+
+00:07:12.999 --> 00:07:15.399
+ele só vai prever bem
+nos dados de treino.
+

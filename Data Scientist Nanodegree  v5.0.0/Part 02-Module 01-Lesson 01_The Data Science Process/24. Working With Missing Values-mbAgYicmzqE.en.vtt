@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.379 --> 00:00:07.139
+We just saw how missing values and working with
+
+00:00:07.139 --> 00:00:10.379
+categorical variables introduced some complications
+
+00:00:10.380 --> 00:00:13.030
+for fitting machine learning models with scikit-learn.
+
+00:00:13.029 --> 00:00:15.384
+Let's see how we might find a solution.
+
+00:00:15.384 --> 00:00:20.024
+There isn't just one way to work with these missing values and categorical variables.
+
+00:00:20.024 --> 00:00:21.839
+There are actually lots of ways.
+
+00:00:21.839 --> 00:00:25.480
+So, scikit-learn doesn't want to just choose one way
+
+00:00:25.480 --> 00:00:29.875
+for you because it might not be the best for the data that you're working with.
+
+00:00:29.875 --> 00:00:33.539
+Here are three strategies for working with missing data.
+
+00:00:33.539 --> 00:00:38.060
+First, we could remove or drop the rows or columns.
+
+00:00:38.060 --> 00:00:41.495
+Second, we might choose to impute values.
+
+00:00:41.494 --> 00:00:44.359
+Third, we can work around that.
+
+00:00:44.359 --> 00:00:49.439
+Let's take a closer look at the first of these three, removing data.
+

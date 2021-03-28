@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.620 --> 00:00:06.540
+When considering dropping columns,
+
+00:00:06.540 --> 00:00:10.830
+it's useful to consider what proportion of the column is missing.
+
+00:00:10.830 --> 00:00:13.699
+If only 5 percent of a column is missing,
+
+00:00:13.699 --> 00:00:16.375
+then it probably isn't one that you want to drop.
+
+00:00:16.375 --> 00:00:21.600
+Especially, if it's a particularly interesting column for the questions that you have.
+
+00:00:21.600 --> 00:00:23.890
+It would be a shame to drop it.
+
+00:00:23.890 --> 00:00:27.399
+However, if say, 90 percent of the column is missing,
+
+00:00:27.399 --> 00:00:30.695
+well, now we have a reason to consider dropping that column.
+
+00:00:30.695 --> 00:00:34.079
+What if there's 50 percent of the values missing?
+
+00:00:34.079 --> 00:00:35.674
+Should we remove this column?
+
+00:00:35.674 --> 00:00:38.239
+Will we lose a bunch of information by removing it?
+
+00:00:38.240 --> 00:00:40.579
+No matter how much data is missing,
+
+00:00:40.579 --> 00:00:43.339
+attempting to create an informative feature of
+
+00:00:43.340 --> 00:00:46.420
+the missing information is a useful strategy.
+
+00:00:46.420 --> 00:00:48.800
+You may want to create a dummy variable,
+
+00:00:48.799 --> 00:00:52.234
+that indicates which rows have missing values.
+
+00:00:52.234 --> 00:00:57.015
+Here, this new column is a one if the original had a missing value,
+
+00:00:57.015 --> 00:00:58.829
+and a zero otherwise.
+
+00:00:58.829 --> 00:01:04.155
+This may very well improve your predictions over a model that simply remove this column.
+
+00:01:04.155 --> 00:01:06.859
+If it doesn't, then at least you tried,
+
+00:01:06.859 --> 00:01:08.269
+and we can feel confident that
+
+00:01:08.269 --> 00:01:12.159
+the missing information wasn't a useful indicator for prediction.
+

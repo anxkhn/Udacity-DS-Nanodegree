@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.610 --> 00:00:11.609
+In other cases, it might be acceptable to drop values associated with data entry errors,
+
+00:00:11.609 --> 00:00:16.454
+mechanical issues or because the missing data isn't useful for our question of interest.
+
+00:00:16.454 --> 00:00:17.879
+An example of this,
+
+00:00:17.879 --> 00:00:22.059
+might be if we were measuring running pace of an individual based on GPS.
+
+00:00:22.059 --> 00:00:25.854
+They go through a wooded area without a GPS signal,
+
+00:00:25.855 --> 00:00:31.204
+dropping these values might be better than imputing the values that actually aren't true.
+
+00:00:31.204 --> 00:00:34.274
+Imputing values here is basically just lying.
+
+00:00:34.274 --> 00:00:36.979
+Lukma aren't super-fast today,
+
+00:00:36.979 --> 00:00:41.519
+were not real, but I made numbers that makes it look like I did.
+
+00:00:41.520 --> 00:00:46.280
+Dropping these values would be reasonable and depending on how much data you collect,
+
+00:00:46.280 --> 00:00:48.094
+it might not matter much at all.
+
+00:00:48.094 --> 00:00:52.265
+Another example, might be if we were interested in predicting the price,
+
+00:00:52.265 --> 00:00:53.850
+people pay for cars.
+
+00:00:53.850 --> 00:00:55.990
+But some people don't own cars.
+
+00:00:55.990 --> 00:00:59.085
+Well now, we can drop these rows, no problem.
+
+00:00:59.085 --> 00:01:02.530
+These individuals do not help answer our question of interest.
+
+00:01:02.530 --> 00:01:08.219
+In this case, the NaN value is useful as an indicator for people who don't have cars.
+
+00:01:08.219 --> 00:01:12.439
+These two cases are both acceptable cases for dropping missing values.
+

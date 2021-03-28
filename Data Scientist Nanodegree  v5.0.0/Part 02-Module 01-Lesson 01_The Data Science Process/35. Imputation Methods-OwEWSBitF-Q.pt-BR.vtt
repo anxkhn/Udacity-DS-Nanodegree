@@ -1,0 +1,539 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.777
+Neste vídeo, veremos
+alguns métodos de imputação.
+
+00:00:03.810 --> 00:00:09.060
+Aqui você pode ver alguns meios
+bastante comuns de imputar valores.
+
+00:00:09.093 --> 00:00:14.324
+Aqui há alguns recursos úteis, com
+link na parte superior do notebook.
+
+00:00:14.357 --> 00:00:17.652
+Para começar, vamos criar
+nosso conjunto de dados
+
+00:00:17.685 --> 00:00:20.241
+e ler
+as bibliotecas necessárias.
+
+00:00:20.274 --> 00:00:23.330
+Para imputação,
+nesse exemplo,
+
+00:00:23.363 --> 00:00:27.299
+vamos trabalhar com Pandas,
+e não scikit-learn,
+
+00:00:27.332 --> 00:00:30.257
+mas a biblioteca
+de pré-processamento da scikit-learn
+
+00:00:30.290 --> 00:00:33.977
+é bem útil e geralmente usada com
+algoritmo de aprendizado de máquina.
+
+00:00:34.010 --> 00:00:38.100
+Eu acho Pandas
+muito intuitiva e fácil de usar,
+
+00:00:38.133 --> 00:00:41.984
+então é o que vamos
+usar neste exemplo.
+
+00:00:42.017 --> 00:00:45.072
+Porém, você também pode usar
+a biblioteca de pré-processamento
+
+00:00:45.105 --> 00:00:46.913
+se preferir.
+
+00:00:46.946 --> 00:00:49.214
+Tudo bem.
+Então a primeira pergunta era:
+
+00:00:49.247 --> 00:00:51.794
+"Use o dicionário abaixo
+para etiquetar as colunas
+
+00:00:51.827 --> 00:00:53.880
+com o tipo de dados
+apropriado."
+
+00:00:53.913 --> 00:00:57.199
+Dando uma olhada,
+parece que a coluna A
+
+00:00:57.232 --> 00:01:00.464
+é de natureza numérica
+ou quantitativa,
+
+00:01:00.497 --> 00:01:02.625
+a coluna B
+também é quantitativa,
+
+00:01:02.658 --> 00:01:07.165
+mas A parece um float,
+se isso importa,
+
+00:01:07.198 --> 00:01:09.105
+B é um número inteiro,
+
+00:01:09.138 --> 00:01:13.559
+C é toda NaN,
+então pode ser qualquer um.
+
+00:01:13.592 --> 00:01:16.417
+D parece um booleano,
+
+00:01:16.450 --> 00:01:20.064
+e a E também parece
+de natureza categórica.
+
+00:01:20.097 --> 00:01:22.109
+Tem sim, não e talvez.
+
+00:01:22.142 --> 00:01:26.204
+Então vamos em frente
+e preencher isso.
+
+00:01:26.237 --> 00:01:29.207
+Então A é quantitativa,
+
+00:01:29.240 --> 00:01:32.430
+B também é quantitativa,
+
+00:01:32.463 --> 00:01:36.190
+C não sabemos,
+porque é NaN.
+
+00:01:36.223 --> 00:01:41.009
+D é um booleano, então podemos
+tratar como quantitativa,
+
+00:01:41.042 --> 00:01:43.721
+pode ser como 1, 0,
+para quantitativa,
+
+00:01:43.754 --> 00:01:48.051
+ou pode ser verdadeiro/falso
+ou sim/não.
+
+00:01:48.084 --> 00:01:50.804
+Então pode ser qualquer um,
+mas é um booleano.
+
+00:01:50.837 --> 00:01:54.245
+E então E é categórico.
+
+00:01:54.278 --> 00:01:58.560
+Então tudo bem.
+E parece que funcionou bem.
+
+00:01:58.593 --> 00:02:03.010
+E "Há outras colunas ou linhas
+que você ache que pode apagar?"
+
+00:02:03.043 --> 00:02:07.770
+Em geral, acho que não teremos
+problema em apagar essa coluna.
+
+00:02:07.803 --> 00:02:12.384
+Não há linhas
+com todos os dados ausentes,
+
+00:02:12.417 --> 00:02:15.009
+então, provavelmente, não queremos
+apagar nenhuma delas,
+
+00:02:15.042 --> 00:02:19.148
+mas, com certeza, podemos
+apagar essa coluna C.
+
+00:02:19.181 --> 00:02:23.804
+Então, se tirarmos mesmo,
+estamos criando esse novo DataFrame.
+
+00:02:23.837 --> 00:02:27.629
+Vamos tirar essa coluna C,
+e o axis=1
+
+00:02:27.662 --> 00:02:31.188
+especifica que é a coluna
+e não a linha. Legal.
+
+00:02:31.221 --> 00:02:34.590
+Então usando new_df,
+escrevi uma função lambda
+
+00:02:34.623 --> 00:02:37.794
+que você pode usar para imputar
+a média das colunas no DataFrame
+
+00:02:37.827 --> 00:02:39.107
+usando o método apply.
+
+00:02:39.140 --> 00:02:43.871
+Basicamente,
+temos esse col.mean,
+
+00:02:44.000 --> 00:02:48.974
+fillna,
+e fazemos isso nas linhas,
+
+00:02:49.007 --> 00:02:51.579
+passando por todas as linhas.
+
+00:02:51.612 --> 00:02:55.950
+Veja o que você precisa
+para responder a pergunta abaixo.
+
+00:02:55.983 --> 00:02:57.899
+Por que quebrou?
+
+00:02:59.151 --> 00:03:04.011
+Vamos pegar a coluna,
+pegar a média e preencher,
+
+00:03:04.044 --> 00:03:09.799
+e mandar fazer isso
+para cada coluna.
+
+00:03:09.832 --> 00:03:14.320
+Então ele preenche a média,
+mas não faz sentido, dá erro.
+
+00:03:14.353 --> 00:03:17.900
+Tudo bem. E devemos olhar para isso
+coluna a coluna.
+
+00:03:17.933 --> 00:03:20.555
+Digamos que estamos tentando
+preencher a média.
+
+00:03:20.588 --> 00:03:24.194
+Se tentarmos preencher a média,
+deve dar certo.
+
+00:03:24.227 --> 00:03:27.563
+Pegamos a média
+de 2, 0, 7, 10 e 15,
+
+00:03:27.596 --> 00:03:29.654
+e devemos colocar
+esses dois valores aqui.
+
+00:03:29.687 --> 00:03:33.174
+A coluna B não tem dados ausentes,
+então não precisamos nos preocupar.
+
+00:03:33.207 --> 00:03:38.047
+A coluna C, não sei o que vai fazer
+quando tentarmos preencher a média
+
+00:03:38.080 --> 00:03:40.246
+porque não temos
+nenhum número para usar.
+
+00:03:40.750 --> 00:03:42.285
+Na coluna D,
+
+00:03:42.318 --> 00:03:47.310
+se tratarmos como números,
+devemos receber 0,5.
+
+00:03:47.343 --> 00:03:50.228
+Mas o que significa isso
+em termos de verdadeiro ou falso?
+
+00:03:50.261 --> 00:03:52.064
+Não faz muito sentido.
+
+00:03:52.097 --> 00:03:54.002
+Então a coluna D
+não faz muito sentido.
+
+00:03:54.035 --> 00:03:57.054
+A coluna C não tenho certeza.
+A coluna A deve ficar certa,
+
+00:03:57.087 --> 00:04:00.141
+e a coluna E, novamente,
+tirar a média
+
+00:04:00.174 --> 00:04:03.943
+não sei como funcionaria
+porque tem um sim, não e um talvez,
+
+00:04:03.976 --> 00:04:05.997
+então não sei
+como imputar a média.
+
+00:04:06.030 --> 00:04:10.424
+A única em que faz sentido
+imputar a média é a coluna A.
+
+00:04:10.457 --> 00:04:13.908
+E a coluna C nós apagamos, então não
+precisamos nos preocupar com ela.
+
+00:04:13.941 --> 00:04:19.379
+Então a coluna A, faz sentido.
+Não deve haver problema.
+
+00:04:19.412 --> 00:04:21.555
+Deve ser preenchida.
+
+00:04:21.588 --> 00:04:26.300
+A coluna E foi a sim, não, talvez,
+e essa provavelmente dá o erro,
+
+00:04:26.333 --> 00:04:29.100
+porque não sabemos muito
+o que está acontecendo.
+
+00:04:29.133 --> 00:04:33.605
+Então com o verdadeiro/falso,
+vai falhar na média, mas será 0,5.
+
+00:04:33.638 --> 00:04:36.216
+O que isso significa em termos
+de verdadeiro e falso?
+
+00:04:36.249 --> 00:04:37.379
+Não faz muito sentido.
+
+00:04:37.412 --> 00:04:43.155
+Então, há um comentário que faz
+você entender por que é verdade.
+
+00:04:43.188 --> 00:04:47.019
+Só na primeira
+a média faz sentido.
+
+00:04:47.052 --> 00:04:51.136
+O verdadeiro/falso devolve 0,5,
+o que não faz muito sentido
+
+00:04:51.169 --> 00:04:53.490
+no campo
+de verdadeiro e falso.
+
+00:04:53.523 --> 00:04:56.574
+E então a coluna B quebra,
+
+00:04:56.607 --> 00:05:00.444
+porque não podemos tirar a média
+de coisas categóricas.
+
+00:05:00.477 --> 00:05:02.449
+Certo.
+Então dados os resultados acima,
+
+00:05:02.482 --> 00:05:04.849
+pode fazer mais sentido
+preencher com a moda.
+
+00:05:04.882 --> 00:05:09.060
+Diz aqui: "Escreva uma função
+para imputar a moda",
+
+00:05:09.093 --> 00:05:13.456
+e há uma documentação
+que podemos usar.
+
+00:05:13.489 --> 00:05:19.099
+Parece que podemos
+tirar assim.
+
+00:05:19.132 --> 00:05:24.310
+Então, para cada coluna,
+queremos pegar a moda assim.
+
+00:05:24.343 --> 00:05:29.764
+E, voltando aqui,
+vou chamar isso de fill_mode,
+
+00:05:29.797 --> 00:05:35.750
+e vai ser uma expressão lambda
+similar ao que tínhamos ali em cima.
+
+00:05:36.095 --> 00:05:39.620
+Então vou usar a mesma ideia.
+
+00:05:40.140 --> 00:05:41.877
+Usando o fill_mode,
+
+00:05:41.910 --> 00:05:48.689
+devemos fazer alguma coisa
+onde usamos isso.
+
+00:05:48.722 --> 00:05:53.202
+Parece que é col.fillna
+
+00:05:53.235 --> 00:05:58.055
+e então col.mode.
+
+00:05:58.088 --> 00:06:03.314
+E parece que saiu algo
+um pouco diferente.
+
+00:06:03.900 --> 00:06:07.800
+Então pegaram a coluna moda
+e fizeram um índice de 0.
+
+00:06:07.833 --> 00:06:12.754
+Então você pode ter
+que fazer algo assim, parece.
+
+00:06:14.019 --> 00:06:16.904
+Então vou dizer
+fill_mode.
+
+00:06:17.157 --> 00:06:21.902
+Certo. Agora, na verdade,
+vamos olhar o conjunto de dados.
+
+00:06:21.935 --> 00:06:25.728
+Então new_df.
+Certo.
+
+00:06:25.761 --> 00:06:28.144
+Se olharmos aqui,
+
+00:06:28.177 --> 00:06:34.399
+quando vemos a moda de A,
+na verdade, não há,
+
+00:06:34.432 --> 00:06:40.910
+então imputei 0 nesses valores,
+mas 0 na verdade não é a moda.
+
+00:06:40.943 --> 00:06:43.040
+É só um dos números.
+
+00:06:44.773 --> 00:06:48.110
+Na verdade, não os imputa.
+
+00:06:50.086 --> 00:06:53.870
+Não há uma moda, então ele meio
+que escolhe um dos números.
+
+00:06:53.903 --> 00:06:56.000
+Não tenho certeza
+de como isso aconteceu.
+
+00:06:56.033 --> 00:06:59.055
+Poderíamos olhar os documentos
+e ver como aconteceu.
+
+00:06:59.088 --> 00:07:03.214
+E então preencher a coluna D.
+É meio interessante novamente.
+
+00:07:03.247 --> 00:07:05.007
+Ela não preencheu
+a moda também
+
+00:07:05.040 --> 00:07:08.009
+porque havia um número par
+de verdadeiros e falsos antes.
+
+00:07:08.042 --> 00:07:13.209
+Olhando aqui,
+há dois falsos e dois verdadeiros.
+
+00:07:13.242 --> 00:07:16.918
+Então temos dois valores verdadeiros
+e dois falsos,
+
+00:07:16.951 --> 00:07:20.818
+e ele só mostra o falso
+e preencheu o falso.
+
+00:07:20.851 --> 00:07:23.217
+Não havia uma moda aqui.
+
+00:07:23.250 --> 00:07:29.104
+Ele só preencheu como falso
+para todos esses valores.
+
+00:07:29.137 --> 00:07:32.705
+Talvez tenha algo
+na documentação que diz:
+
+00:07:32.738 --> 00:07:36.847
+"Escolha o número mais baixo
+e preencha se todos forem iguais"
+
+00:07:36.880 --> 00:07:39.168
+e, então, "escolha o mais baixo
+alfabeticamente
+
+00:07:39.201 --> 00:07:41.816
+e preencha se todos
+forem iguais."
+
+00:07:42.494 --> 00:07:46.769
+Ou isso é considerado valor 0
+também, talvez só preencha 0.
+
+00:07:46.802 --> 00:07:50.720
+Mas, de qualquer modo,
+esses dois não preencheram a moda,
+
+00:07:50.753 --> 00:07:54.500
+então sim, se olharmos
+para isso novamente...
+
+00:07:54.533 --> 00:07:58.129
+Sim aparece aqui, então não,
+talvez e então sim.
+
+00:07:58.162 --> 00:08:01.279
+Há dois sim
+e só um não e um talvez.
+
+00:08:01.312 --> 00:08:05.045
+Pelo menos aqui, se há um sim,
+sim, sim, preencheu a moda.
+
+00:08:05.078 --> 00:08:08.689
+Ou seja, ele preencheu
+o que mais aconteceu.
+
+00:08:08.722 --> 00:08:15.187
+A moda de uma variável categórica
+é só a que ocorreu mais.
+
+00:08:15.220 --> 00:08:18.050
+Isso é verdade.
+
+00:08:18.083 --> 00:08:22.513
+Novamente, devemos ter
+muito cuidado ao imputar a média
+
+00:08:22.546 --> 00:08:24.555
+porque há casos
+que não funcionam
+
+00:08:24.588 --> 00:08:28.738
+e, ao imputar a moda
+há casos que "funcionam"
+
+00:08:28.771 --> 00:08:31.596
+mas não fazem sentido,
+
+00:08:32.279 --> 00:08:36.094
+ou podem não ser
+o melhor para nossa situação,
+
+00:08:36.127 --> 00:08:41.019
+mesmo que preencha
+e que tenhamos resultados.
+

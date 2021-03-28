@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.730
+Given the large number
+
+00:00:05.730 --> 00:00:09.495
+of industries and problems that fall under the umbrella of Data Science,
+
+00:00:09.494 --> 00:00:12.989
+there are a lot of different tools and individual nuances of
+
+00:00:12.990 --> 00:00:16.875
+a particular company or industry for finding solutions.
+
+00:00:16.875 --> 00:00:22.875
+However, there's actually a common process used to find many solutions in Data Science.
+
+00:00:22.875 --> 00:00:29.339
+This process is known as the Cross Industry Standard Process for Data Mining or CRISP-DM.
+
+00:00:29.339 --> 00:00:32.549
+This process has been an industry standard for analyzing data
+
+00:00:32.549 --> 00:00:35.884
+for years and it has six major phases.
+
+00:00:35.884 --> 00:00:38.849
+First, developing business understanding.
+
+00:00:38.850 --> 00:00:41.575
+Second, developing data understanding.
+
+00:00:41.575 --> 00:00:44.675
+Third, prepping your data to be analyzed.
+
+00:00:44.674 --> 00:00:46.894
+Fourth, modeling the data.
+
+00:00:46.895 --> 00:00:52.280
+Fifth, evaluating the results to answer your questions of interest and finally,
+
+00:00:52.280 --> 00:00:55.454
+deploying changes based on the results of your analysis.
+
+00:00:55.454 --> 00:01:00.320
+We will look at each of these phases a bit closer in upcoming lessons.
+

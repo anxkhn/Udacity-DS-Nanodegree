@@ -1,0 +1,304 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.520
+So, for the last two questions regarding
+
+00:00:02.520 --> 00:00:07.265
+the relationships of the other variables with salary and job satisfaction,
+
+00:00:07.264 --> 00:00:11.782
+we'll probably want to build some sort of predictive model.
+
+00:00:11.782 --> 00:00:15.570
+So we read in the data set and did
+
+00:00:15.570 --> 00:00:20.385
+this.describe to get just a basic summary of a lot of the aspects of the data.
+
+00:00:20.385 --> 00:00:24.720
+And then, this first question is about matching
+
+00:00:24.719 --> 00:00:30.269
+these values to their description down below based on sort of what we can see up here.
+
+00:00:30.269 --> 00:00:34.137
+So, a column just listing an index for each row,
+
+00:00:34.137 --> 00:00:36.689
+that's the respondent column.
+
+00:00:36.689 --> 00:00:40.640
+So it's just a number if you were to look at that in the header.
+
+00:00:40.640 --> 00:00:43.410
+So, if you look at that in the header you can see respondents just one, two, three, four,
+
+00:00:43.409 --> 00:00:48.329
+five and it continues that numbering if you were to look at it further down.
+
+00:00:48.329 --> 00:00:57.269
+The maximum satisfaction on the scales for the survey, the maximum satisfaction.
+
+00:00:57.270 --> 00:01:02.275
+So, there are multiple things related to satisfaction.
+
+00:01:02.274 --> 00:01:04.468
+So, there's job, and career,
+
+00:01:04.468 --> 00:01:08.466
+and stack overflow, and the maximum for that is 10.
+
+00:01:08.465 --> 00:01:12.899
+So the maximum satisfaction on each of these scales for
+
+00:01:12.900 --> 00:01:18.353
+the survey is 10 or e. The column with the most missing values,
+
+00:01:18.353 --> 00:01:21.274
+so we can actually see this from the count up here.
+
+00:01:21.274 --> 00:01:25.343
+So the one with the smallest count is the one with the most missing values.
+
+00:01:25.343 --> 00:01:30.450
+So that would be the expected salary
+
+00:01:30.450 --> 00:01:35.332
+has the most missing values and then the variable with the highest spread of values.
+
+00:01:35.332 --> 00:01:37.409
+The highest spread means that it has
+
+00:01:37.409 --> 00:01:42.539
+the largest standard deviation or the largest distance between the max and the min,
+
+00:01:42.540 --> 00:01:44.740
+that's another way we could do it.
+
+00:01:44.739 --> 00:01:49.334
+I'm just going to look at the standard deviations and you can see here,
+
+00:01:49.334 --> 00:01:54.625
+40,753, it looks like salary has the highest spread.
+
+00:01:54.625 --> 00:01:58.239
+Sometimes, a picture can tell us more so we can run this list.
+
+00:01:58.239 --> 00:02:00.734
+You can see that career satisfaction is left skewed,
+
+00:02:00.734 --> 00:02:02.359
+and job satisfaction is left skewed,
+
+00:02:02.359 --> 00:02:05.474
+salaries right skewed, hours per week is right skewed,
+
+00:02:05.474 --> 00:02:08.272
+stack overflow satisfaction is left skewed,
+
+00:02:08.272 --> 00:02:11.370
+expected salaries kind of right skewed,
+
+00:02:11.370 --> 00:02:14.250
+and the respondents really even because there's just one of
+
+00:02:14.250 --> 00:02:18.104
+them for every single individual, okay.
+
+00:02:18.104 --> 00:02:22.814
+And then, there's also this really nice picture called the heatmap.
+
+00:02:22.814 --> 00:02:26.789
+In general, here you can see that the darker ones are closer to zero.
+
+00:02:26.789 --> 00:02:30.269
+So, all the dark squares here sort of
+
+00:02:30.270 --> 00:02:33.920
+suggests that there's not high correlations between certain things.
+
+00:02:33.919 --> 00:02:37.559
+So, this is like the correlation between expected salary and
+
+00:02:37.560 --> 00:02:39.420
+the respondent number which we don't expect
+
+00:02:39.419 --> 00:02:42.082
+anything with the respondent number to be very high.
+
+00:02:42.082 --> 00:02:47.280
+But you can see this one between job satisfaction and career satisfaction as the highest.
+
+00:02:47.280 --> 00:02:49.515
+Anything off of the diagonal basically,
+
+00:02:49.514 --> 00:02:52.379
+anything in this top right is essentially the same as the bottom
+
+00:02:52.379 --> 00:02:55.889
+left so you only have to look at half of this to get the information.
+
+00:02:55.889 --> 00:03:01.589
+Yeah. Not a lot of high correlations and you can see that there are some missing points.
+
+00:03:01.590 --> 00:03:06.569
+So, if someone marked a career satisfaction they didn't mark an expected salary.
+
+00:03:06.569 --> 00:03:09.889
+If someone marked a job satisfaction they didn't mark an expected salary.
+
+00:03:09.889 --> 00:03:13.004
+And if somebody marked a salary they didn't mark an expected salary.
+
+00:03:13.004 --> 00:03:16.462
+So there's a number of things where there's missing data if.
+
+00:03:16.462 --> 00:03:20.000
+If you don't have an expected salary then you have these three things.
+
+00:03:20.000 --> 00:03:23.564
+If you have one of these three things it doesn't look like you have an expected salary,
+
+00:03:23.564 --> 00:03:24.914
+there's no overlap there.
+
+00:03:24.914 --> 00:03:29.340
+So, the column with the strongest correlation with salary, let's see here.
+
+00:03:29.340 --> 00:03:31.740
+So, here is salary.
+
+00:03:31.740 --> 00:03:38.334
+The one with the highest correlation looks like this 0.15 which is career satisfaction.
+
+00:03:38.334 --> 00:03:42.091
+So I'm going to mark this
+
+00:03:42.091 --> 00:03:46.135
+as f. The data suggests more hours work relates to higher salary,
+
+00:03:46.134 --> 00:03:47.544
+I'm going to mark that as a,
+
+00:03:47.544 --> 00:03:55.164
+no, because if we look at things associated with salary none of them are very high,
+
+00:03:55.164 --> 00:03:59.145
+hours per week is actually negatively related, so there's that.
+
+00:03:59.145 --> 00:04:04.839
+Data in the blank column meant missing data and two other columns.
+
+00:04:04.840 --> 00:04:07.360
+So, actually, three other columns,
+
+00:04:07.360 --> 00:04:10.655
+but I'm going mark c. Yes.
+
+00:04:10.655 --> 00:04:16.360
+So, if you had a missing data and expected salary column,
+
+00:04:16.360 --> 00:04:21.520
+then there was missing data in actually three other columns but also two other columns.
+
+00:04:21.519 --> 00:04:25.669
+And then, the strongest negative relationship had what correlation?
+
+00:04:25.670 --> 00:04:31.400
+So, the strongest negative relationship had what correlation?
+
+00:04:31.399 --> 00:04:36.864
+So, I see a negative 0.15 that looks like the lowest.
+
+00:04:36.865 --> 00:04:42.840
+So, the lowest one they have is negative 0.12 but I think it should be negative 0.15.
+
+00:04:42.839 --> 00:04:45.099
+So, I'll get that changed as well.
+
+00:04:45.100 --> 00:04:47.585
+Catching all of the errors in this video.
+
+00:04:47.584 --> 00:04:49.189
+Cool. So that looks great.
+
+00:04:49.189 --> 00:04:50.884
+The next part was to fit our model.
+
+00:04:50.884 --> 00:04:54.560
+So, we subset our data to only the quantitative variables,
+
+00:04:54.560 --> 00:04:56.564
+and then, we were trying to predict salary.
+
+00:04:56.564 --> 00:04:58.000
+We split this into the training and
+
+00:04:58.000 --> 00:05:01.509
+test set and then there's basically four steps that we wanted to do.
+
+00:05:01.509 --> 00:05:04.029
+So, we fit our linear model,
+
+00:05:04.029 --> 00:05:05.449
+so we instantiate our model,
+
+00:05:05.449 --> 00:05:06.723
+and then we try to fit it,
+
+00:05:06.723 --> 00:05:11.318
+and when we do all of this you can see it breaks.
+
+00:05:11.317 --> 00:05:17.384
+And so, using results above to match each variable as the appropriate key in to this.
+
+00:05:17.384 --> 00:05:20.319
+So, what is the reason that the fit method broke?
+
+00:05:20.319 --> 00:05:24.430
+And the reason it broke is because we have missing values in the X matrix.
+
+00:05:24.430 --> 00:05:28.415
+So, asking learn fit methods cannot accept none values.
+
+00:05:28.415 --> 00:05:33.895
+That's d. What does the random state parameter do for the training test split?
+
+00:05:33.894 --> 00:05:39.669
+So, what it does is it makes sure that if multiple people run this code,
+
+00:05:39.670 --> 00:05:42.930
+we all get the same training and test sets.
+
+00:05:42.930 --> 00:05:50.230
+So, it assures the train and test split will occur,
+
+00:05:50.230 --> 00:05:53.245
+the same train and test split will occur for multiple users.
+
+00:05:53.245 --> 00:05:58.129
+So b, and what is the purpose of creating a train test split?
+
+00:05:58.129 --> 00:06:01.079
+And the purpose of creating the train to split is to make sure that
+
+00:06:01.079 --> 00:06:04.409
+your model extends well to new situations.
+
+00:06:04.410 --> 00:06:07.150
+So, not only does it fit well on the data that it sought to
+
+00:06:07.149 --> 00:06:11.654
+train but it extends well to testing data or data it hasn't seen before.
+
+00:06:11.654 --> 00:06:14.349
+So, I'm going to say, a.
+
+00:06:14.350 --> 00:06:16.314
+And it looks great.
+
+00:06:16.314 --> 00:06:19.000
+So, it's like we're ready for the next thing.
+

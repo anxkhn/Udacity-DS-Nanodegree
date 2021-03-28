@@ -1,0 +1,304 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.705
+Estou aqui com o Robert, do Airbnb.
+Obrigado por vir.
+
+00:00:03.738 --> 00:00:05.085
+Obrigado por me receber.
+
+00:00:05.118 --> 00:00:07.300
+Primeiro, pode nos dar
+algum conselho
+
+00:00:07.333 --> 00:00:11.170
+sobre como entrar
+na área da ciência de dados?
+
+00:00:11.203 --> 00:00:13.395
+Muitos dos nossos alunos
+estão começando.
+
+00:00:13.428 --> 00:00:18.090
+Diria que a primeira coisa é
+focar nas bases.
+
+00:00:18.123 --> 00:00:23.090
+Acho que é um campo muito novo
+e há várias inovações,
+
+00:00:23.123 --> 00:00:27.220
+nova tecnologia aparecendo
+praticamente toda semana.
+
+00:00:27.253 --> 00:00:32.915
+Então é quase impossível
+acompanhar tudo.
+
+00:00:33.353 --> 00:00:36.415
+Você sempre pode aprender mais
+se tiver uma boa base.
+
+00:00:36.448 --> 00:00:40.520
+Quais são as áreas fundamentais
+que você recomendaria?
+
+00:00:40.553 --> 00:00:45.555
+Boa pergunta.
+Conhecimento básico de estatística
+
+00:00:45.588 --> 00:00:50.000
+e conhecimento básico funcional
+sobre computadores.
+
+00:00:50.033 --> 00:00:55.135
+Podem ser coisas como
+saber consultar dados,
+
+00:00:55.168 --> 00:00:58.095
+saber interagir com uma ferramenta
+de linha de comando.
+
+00:00:58.128 --> 00:01:00.577
+Podemos falar um pouco
+sobre os diferentes papeis
+
+00:01:00.610 --> 00:01:02.677
+dos cientistas de dados
+na sua equipe?
+
+00:01:02.710 --> 00:01:06.335
+O que eles fazem?
+O que diferencia suas habilidades?
+
+00:01:06.860 --> 00:01:08.879
+Não sei se você
+faz parte da contratação,
+
+00:01:08.912 --> 00:01:10.940
+mas o que procura
+quando está contratando
+
+00:01:10.973 --> 00:01:14.315
+candidatos que caem em certos
+grupos de ciência de dados?
+
+00:01:14.348 --> 00:01:18.185
+Então temos físicos,
+antigos físicos,
+
+00:01:18.218 --> 00:01:23.700
+temos antigos cientistas sociais,
+pessoas que estudam estatística,
+
+00:01:23.733 --> 00:01:26.140
+ciência da computação,
+pesquisa operacional,
+
+00:01:26.173 --> 00:01:27.705
+temos um pouco de tudo.
+
+00:01:28.420 --> 00:01:31.072
+Acho que o ponto em comum
+
+00:01:31.106 --> 00:01:34.676
+é que as pessoas passaram
+muito tempo
+
+00:01:34.709 --> 00:01:39.535
+fazendo trabalhos analíticos, e são
+bem voltados a análises, ou a dados.
+
+00:01:39.735 --> 00:01:41.520
+Essa é a cultura?
+
+00:01:41.553 --> 00:01:45.990
+É. São essas coisas
+que realmente procuramos.
+
+00:01:46.318 --> 00:01:50.476
+Não procuramos alguém
+que se formou
+
+00:01:50.509 --> 00:01:52.965
+em uma universidade
+ou área específicas.
+
+00:01:53.244 --> 00:01:57.295
+Mas deixe-me descrever um pouco
+como pensamos no Airbnb.
+
+00:01:57.692 --> 00:01:59.717
+No Airbnb temos três áreas.
+
+00:02:00.505 --> 00:02:04.283
+A primeira se chama "Análise".
+Tipicamente são as pessoas
+
+00:02:04.316 --> 00:02:06.944
+muito focadas
+em inteligência de negócios,
+
+00:02:06.977 --> 00:02:10.130
+tentando entender
+as tendências do mercado,
+
+00:02:10.163 --> 00:02:12.870
+como nossa empresa está indo.
+
+00:02:12.903 --> 00:02:15.565
+Então geralmente o nível é alto
+
+00:02:15.598 --> 00:02:21.330
+e os envolvidos geralmente
+são tomadores de decisões.
+
+00:02:21.363 --> 00:02:22.894
+Podem ser
+gerentes de produtos,
+
+00:02:22.927 --> 00:02:25.960
+ou o líder de todo
+um trabalho com produto.
+
+00:02:26.816 --> 00:02:29.205
+O tipo de trabalho
+que você faz geralmente
+
+00:02:29.238 --> 00:02:35.165
+é de nível um pouco mais alto.
+Essa é a Análise.
+
+00:02:35.198 --> 00:02:38.816
+Então temos as pessoas
+na área de Inferência.
+
+00:02:38.849 --> 00:02:42.699
+As pessoas da Inferência
+geralmente fazem
+
+00:02:42.733 --> 00:02:45.740
+muito design experimental.
+
+00:02:46.408 --> 00:02:49.780
+Você geralmente trabalha
+junto a um time completo,
+
+00:02:49.813 --> 00:02:54.755
+que é responsável por tentar
+diferentes iterações do produto.
+
+00:02:55.647 --> 00:02:59.665
+É bem comum atualmente empresas
+de tecnologia fazerem testes A/B.
+
+00:03:00.213 --> 00:03:03.958
+Então cientistas de dados são
+muito valiosos para ajudar
+
+00:03:03.991 --> 00:03:06.197
+a desenhar a criação
+do experimento,
+
+00:03:06.230 --> 00:03:10.349
+determinar o tempo
+do experimento
+
+00:03:10.382 --> 00:03:13.742
+e se certificar de que estamos
+rastreando a métrica certa
+
+00:03:13.775 --> 00:03:15.747
+para entender
+a mudança de comportamento
+
+00:03:15.780 --> 00:03:19.079
+entre o produto novo
+e o produto antigo,
+
+00:03:19.962 --> 00:03:21.515
+e fazer a análise de produto.
+
+00:03:21.548 --> 00:03:24.610
+Acho que isso é verdade tanto
+na Inferência quanto na Análise.
+
+00:03:24.643 --> 00:03:29.121
+Há várias análises
+
+00:03:29.155 --> 00:03:32.641
+de como usuários estão usando
+nossos produtos.
+
+00:03:33.373 --> 00:03:36.784
+Então temos a terceira categoria,
+o Algoritmo.
+
+00:03:38.762 --> 00:03:43.358
+É uma área onde as pessoas
+passam muito tempo
+
+00:03:43.391 --> 00:03:45.458
+construindo produtos de dados.
+
+00:03:45.658 --> 00:03:48.936
+Pode ser algo como
+um sistema de recomendação
+
+00:03:48.969 --> 00:03:53.270
+ou pode ser um modelo de imagem
+que faz classificação de imagens.
+
+00:03:54.519 --> 00:03:57.696
+Eles tipicamente
+são mais focados
+
+00:03:57.730 --> 00:04:00.817
+em projetos de modelagem
+específicos
+
+00:04:00.850 --> 00:04:06.300
+ou produtos de dados que em tentar
+explicar as tendências do negócio.
+
+00:04:06.740 --> 00:04:10.298
+Mas acho que o sistema de áreas
+é mais um guia.
+
+00:04:10.634 --> 00:04:15.715
+Diria que muitas pessoas
+no Airbnb fazem vários trabalhos.
+
+00:04:16.152 --> 00:04:19.490
+Com certeza já fiz
+todas as áreas.
+
+00:04:20.223 --> 00:04:25.554
+Acho que isso é da natureza
+de ser um cientista de dados:
+
+00:04:25.587 --> 00:04:29.846
+dependendo do quê...
+
+00:04:30.876 --> 00:04:33.050
+do produto
+que estamos construindo,
+
+00:04:33.630 --> 00:04:37.130
+você tenta usar a ferramenta certa
+para resolver o problema.
+
+00:04:37.163 --> 00:04:41.520
+Essa ferramenta pode ser análise,
+design experimental ou modelagem.
+
+00:04:41.553 --> 00:04:47.152
+Então ser capaz de usar diferentes
+ferramentas do seu conjunto
+
+00:04:47.185 --> 00:04:49.640
+é uma habilidade importante.
+-Legal.
+

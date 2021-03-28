@@ -1,0 +1,556 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.695
+For the last two questions,
+
+00:00:01.695 --> 00:00:04.338
+regarding which variables are related to salary?
+
+00:00:04.338 --> 00:00:06.030
+And job satisfaction?
+
+00:00:06.030 --> 00:00:10.440
+Each of these questions will involve not only building some sort of predictive model,
+
+00:00:10.439 --> 00:00:15.765
+but also finding an interpreting the influential components of whatever model we built.
+
+00:00:15.765 --> 00:00:17.550
+To get started, let's read in
+
+00:00:17.550 --> 00:00:20.894
+the necessary libraries and take a look at some of the columns of interest.
+
+00:00:20.894 --> 00:00:22.522
+So here are our libraries,
+
+00:00:22.522 --> 00:00:26.114
+you'll notice that we have NumPy and Pandas which we've already been using a lot.
+
+00:00:26.114 --> 00:00:29.369
+And then we have two libraries specific to
+
+00:00:29.370 --> 00:00:32.895
+visualizations and those are matplotlib and seaborn,
+
+00:00:32.895 --> 00:00:36.150
+and then we also have this matplotlib inline to
+
+00:00:36.149 --> 00:00:39.494
+make sure that our plots render within our notebooks.
+
+00:00:39.494 --> 00:00:44.489
+And then up here, these top three lines are basically used to build our predictive model.
+
+00:00:44.490 --> 00:00:46.469
+So, there's this train test split,
+
+00:00:46.469 --> 00:00:50.700
+which will split our data into training and test so that we can assure that
+
+00:00:50.700 --> 00:00:55.005
+whatever model we build on our training set will actually extend well into our test data.
+
+00:00:55.005 --> 00:00:56.609
+And then this metrics portion,
+
+00:00:56.609 --> 00:00:59.804
+these are some pretty common metrics to use with any sort of
+
+00:00:59.804 --> 00:01:04.515
+continuous response variable are the r2_score and the mean squared error.
+
+00:01:04.515 --> 00:01:08.430
+And then, right now I'm just using a simple linear model but
+
+00:01:08.430 --> 00:01:12.960
+there are lots of other predictive models that you could choose to fit to your data.
+
+00:01:12.959 --> 00:01:15.869
+And, depending on your background with machine learning,
+
+00:01:15.870 --> 00:01:17.490
+you might be really comfortable.
+
+00:01:17.489 --> 00:01:19.920
+With some of those, you'll be diving into the depths
+
+00:01:19.920 --> 00:01:23.939
+of how a lot of those work later on in this program.
+
+00:01:23.939 --> 00:01:25.769
+So, if we read in the data,
+
+00:01:25.769 --> 00:01:28.769
+we can take a quick look at the head of the data and what it looks
+
+00:01:28.769 --> 00:01:32.655
+like this is what you have already seen in a lot of the other videos.
+
+00:01:32.655 --> 00:01:39.810
+We can also get a quick look at the continuous variables so you can see,
+
+00:01:39.810 --> 00:01:43.350
+these are the variables that are considered continuous in the data set.
+
+00:01:43.349 --> 00:01:49.369
+And here's like, a quick rundown of basically the max the 75th percentile 50,
+
+00:01:49.370 --> 00:01:52.280
+25th, the min, the standard deviation I mean.
+
+00:01:52.280 --> 00:01:53.870
+And then this count is really useful,
+
+00:01:53.870 --> 00:01:59.240
+because it can show us how many of those values are actually missing in our data set.
+
+00:01:59.239 --> 00:02:05.824
+So, you can see that there's only 12,891 individuals to post the salary, and,
+
+00:02:05.825 --> 00:02:08.900
+they're also missing points in all of these two but,
+
+00:02:08.900 --> 00:02:12.590
+because the total number of respondents looks to be
+
+00:02:12.590 --> 00:02:16.594
+this 51,000 and we could get a quick look at that too.
+
+00:02:16.594 --> 00:02:20.229
+Yeah. So, 51,392 is the number of respondents.
+
+00:02:20.229 --> 00:02:23.834
+So, any column that doesn't have that many appear,
+
+00:02:23.835 --> 00:02:26.865
+essentially has some missing data in it.
+
+00:02:26.865 --> 00:02:30.360
+So, one of the easiest ways to get a look at some of
+
+00:02:30.360 --> 00:02:33.825
+these variables is also to build Instagram is like
+
+00:02:33.824 --> 00:02:37.500
+a really useful thing to do and I frequently
+
+00:02:37.500 --> 00:02:41.250
+put a semicolon to get rid of a lot of those gross things,
+
+00:02:41.250 --> 00:02:43.664
+but here you can sort of see,
+
+00:02:43.664 --> 00:02:45.929
+each respondent only shows up once so that's why,
+
+00:02:45.930 --> 00:02:47.969
+it's got this gross looking plot.
+
+00:02:47.969 --> 00:02:49.484
+But you can also see like,
+
+00:02:49.485 --> 00:02:51.780
+this is a left skewed distribution,
+
+00:02:51.780 --> 00:02:56.917
+another left skewed distribution around job satisfaction, stack overflow, satisfaction,
+
+00:02:56.917 --> 00:02:59.460
+a right skewed distribution around salary,
+
+00:02:59.460 --> 00:03:03.390
+a right skewed distribution around hours per week worked,
+
+00:03:03.389 --> 00:03:08.069
+and expected salary, and another left skewed distribution around career satisfaction.
+
+00:03:08.069 --> 00:03:10.469
+So, it looks like these people are pretty happy with their jobs and
+
+00:03:10.469 --> 00:03:15.359
+their careers and somehow avoid working a lot.
+
+00:03:15.360 --> 00:03:17.430
+So, that's one way that we could look at the data.
+
+00:03:17.430 --> 00:03:20.430
+Another really cool plot that I frequently make when
+
+00:03:20.430 --> 00:03:23.625
+starting out these analysis is, a heatmap.
+
+00:03:23.625 --> 00:03:25.680
+So, if we look at,
+
+00:03:25.680 --> 00:03:28.875
+so this S and S is the seaborn library,
+
+00:03:28.875 --> 00:03:30.930
+and it has a built-in heatmap.
+
+00:03:30.930 --> 00:03:33.810
+And if you pass in a correlation matrix,
+
+00:03:33.810 --> 00:03:38.564
+so you can get that by just running the core method on your dataframe.
+
+00:03:38.564 --> 00:03:41.159
+And, I'm going to add an annotation,
+
+00:03:41.159 --> 00:03:43.740
+so that it passes in the numbers.
+
+00:03:43.740 --> 00:03:52.020
+And then, this is basically just going to format my values to be only two decimal places.
+
+00:03:52.020 --> 00:03:59.070
+So, here this doesn't only and again I kind of put in a semicolon at the end of the this,
+
+00:03:59.069 --> 00:04:00.884
+so that I don't get that first part.
+
+00:04:00.884 --> 00:04:03.284
+But this gives you a correlation matrix
+
+00:04:03.284 --> 00:04:05.729
+of all the quantitative variables in your dataset.
+
+00:04:05.729 --> 00:04:08.504
+One of the first things that I try to do is,
+
+00:04:08.504 --> 00:04:12.509
+just create the dataframe of all of
+
+00:04:12.509 --> 00:04:17.108
+the columns I'm going to use to predict my response and then,
+
+00:04:17.108 --> 00:04:21.975
+the other thing that I want is just to poll the variable that I'm trying to predict.
+
+00:04:21.975 --> 00:04:23.205
+So in this case,
+
+00:04:23.204 --> 00:04:24.824
+I'm going to put salary, and why?
+
+00:04:24.824 --> 00:04:27.735
+Because its variable I'm trying to predict and I want to give
+
+00:04:27.735 --> 00:04:31.980
+a list of all the column names that I'm going to use to try to predict the response.
+
+00:04:31.980 --> 00:04:34.020
+So, to begin with,
+
+00:04:34.019 --> 00:04:37.889
+let's just pass in all the quantitative variables that we have up here.
+
+00:04:37.889 --> 00:04:41.019
+So that's the career satisfaction,
+
+00:04:41.019 --> 00:04:42.134
+so basically any of these.
+
+00:04:42.134 --> 00:04:44.355
+I'm not going to pass the respondent number because
+
+00:04:44.355 --> 00:04:47.375
+that doesn't actually mean anything to me.
+
+00:04:47.375 --> 00:04:55.490
+So, job satisfaction, hours per week and stack overflow satisfaction.
+
+00:04:55.490 --> 00:04:59.435
+It's also the case that in the built-in scikit-learn models,
+
+00:04:59.435 --> 00:05:02.089
+you have the ability to pass an intercept by
+
+00:05:02.089 --> 00:05:05.145
+default so you don't have to store it into the X matrix here,
+
+00:05:05.146 --> 00:05:07.790
+it's just an argument that you can pass to any of the models
+
+00:05:07.790 --> 00:05:10.865
+that you do have in scikit-learn.
+
+00:05:10.865 --> 00:05:12.800
+So, I'm not going to worry about that.
+
+00:05:12.800 --> 00:05:16.879
+And then, essentially, the next thing that I like to
+
+00:05:16.879 --> 00:05:21.194
+do is split my data set into training and test.
+
+00:05:21.194 --> 00:05:23.589
+The way that this works is,
+
+00:05:23.589 --> 00:05:26.319
+and I usually have to look at the documentation for this.
+
+00:05:26.319 --> 00:05:31.569
+Essentially, we can run this train test split which we read
+
+00:05:31.569 --> 00:05:37.704
+in up above and pass it our X Matrix and the response.
+
+00:05:37.704 --> 00:05:43.659
+And then we pass pass a test size and a lot of times,
+
+00:05:43.660 --> 00:05:46.780
+you can pass it like a random state.
+
+00:05:46.779 --> 00:05:52.334
+So, we do a random in the number 42 that's the answer to everything in the world.
+
+00:05:52.334 --> 00:05:54.169
+So, here you can see,
+
+00:05:54.170 --> 00:05:57.110
+what this is doing is it takes the x matrix that we just
+
+00:05:57.110 --> 00:06:00.830
+created up here which is basically all the variables that we want to use to predict.
+
+00:06:00.829 --> 00:06:03.079
+It takes the response which is this variable
+
+00:06:03.079 --> 00:06:06.439
+here and it's going to split these into two separate sets.
+
+00:06:06.439 --> 00:06:08.600
+So, it's going to randomly split this.
+
+00:06:08.600 --> 00:06:11.990
+So, that parts of it go into the training and parts of it go into the test,
+
+00:06:11.990 --> 00:06:13.730
+and it's going to randomly split this,
+
+00:06:13.730 --> 00:06:18.875
+so that parts of it going into the training and parts of it go into the test,
+
+00:06:18.875 --> 00:06:23.720
+and the parts that go into the y test will match the parts that go into the X test.
+
+00:06:23.720 --> 00:06:25.640
+And the parts that go into the y train,
+
+00:06:25.639 --> 00:06:29.055
+will match the rows that went into the X train.
+
+00:06:29.055 --> 00:06:32.290
+And this basically says, we want our test size to be
+
+00:06:32.290 --> 00:06:36.955
+30 percent of the original rows in these datasets.
+
+00:06:36.954 --> 00:06:40.269
+And, the random state is a useful thing to set
+
+00:06:40.269 --> 00:06:43.817
+just in case you decide to pass this dataset to someone else,
+
+00:06:43.817 --> 00:06:48.490
+and you want them to be able to get the exact same split of the data as you used.
+
+00:06:48.490 --> 00:06:50.379
+Whereas, if you don't set the random state,
+
+00:06:50.379 --> 00:06:53.199
+the rows that they end up with in their training and
+
+00:06:53.199 --> 00:06:56.740
+test could be completely different than the rows that you got.
+
+00:06:56.740 --> 00:06:59.139
+Then the next thing, that we'll want to do is just
+
+00:06:59.139 --> 00:07:01.952
+instantiate our linear regression model.
+
+00:07:01.952 --> 00:07:06.794
+The way that we fit any supervised learning model is you first instantiate.
+
+00:07:06.795 --> 00:07:10.395
+So, you first instantiate your model,
+
+00:07:10.394 --> 00:07:14.430
+you then fit the model to the training data.
+
+00:07:14.430 --> 00:07:18.329
+Then you predict on some test data
+
+00:07:18.329 --> 00:07:24.524
+and then you frequently will score your model on the test.
+
+00:07:24.524 --> 00:07:27.149
+That is, you compare what you
+
+00:07:27.149 --> 00:07:30.284
+know to be true on the test data to what you predict it to be true.
+
+00:07:30.285 --> 00:07:31.695
+And then that score,
+
+00:07:31.694 --> 00:07:36.939
+is a way to compare your predictions from one model to the next model.
+
+00:07:36.939 --> 00:07:40.730
+Okay. So, this is my usual go through and so the first thing that we want to do,
+
+00:07:40.730 --> 00:07:42.215
+is just this instantiate step.
+
+00:07:42.214 --> 00:07:44.989
+So, I'm just going to instantiate my linear model
+
+00:07:44.990 --> 00:07:50.165
+and we can do that with what you saw before.
+
+00:07:50.165 --> 00:07:51.965
+Another really important thing,
+
+00:07:51.964 --> 00:07:55.339
+is anytime you are working with
+
+00:07:55.339 --> 00:07:59.539
+these models is you frequently want to normalize the data somehow.
+
+00:07:59.540 --> 00:08:03.170
+So, it doesn't matter if you're building neural networks or you're
+
+00:08:03.170 --> 00:08:08.525
+building any supervised learning model and actually a lot of unsupervised models,
+
+00:08:08.524 --> 00:08:11.929
+this is true too, but you want to standardize or normalize your data.
+
+00:08:11.930 --> 00:08:14.937
+It's just a safe thing to do with almost any linear model.
+
+00:08:14.937 --> 00:08:16.235
+The only downside to this,
+
+00:08:16.235 --> 00:08:21.754
+is that it can lead to a reduction in your interpretation of the features,
+
+00:08:21.754 --> 00:08:26.060
+but I think that's like far outweighed in terms of
+
+00:08:26.060 --> 00:08:29.014
+just the ability of these models to pick up
+
+00:08:29.014 --> 00:08:32.480
+on what differences actually matter in your dataset.
+
+00:08:32.480 --> 00:08:34.789
+Then the next thing is, we should fit the model.
+
+00:08:34.789 --> 00:08:36.949
+Let's just do this,
+
+00:08:36.950 --> 00:08:38.629
+so we can take a look.
+
+00:08:38.629 --> 00:08:40.460
+So, if we look at X head,
+
+00:08:40.460 --> 00:08:46.460
+you can see that it has split our dataset and we have only those columns that we
+
+00:08:46.460 --> 00:08:52.934
+specified and it has all of them whereas if we look at like X train head.
+
+00:08:52.933 --> 00:08:59.250
+You'll notice that the top rows aren't index the same way and if we do the test set,
+
+00:08:59.250 --> 00:09:01.304
+will have a completely different set.
+
+00:09:01.304 --> 00:09:04.319
+And, if we look at the shape of those things,
+
+00:09:04.320 --> 00:09:09.518
+you'll notice that there are 15,000 rows in the test.
+
+00:09:09.518 --> 00:09:11.550
+And if we look at the training set,
+
+00:09:11.549 --> 00:09:16.740
+you'll notice that there are almost 36,000 close to in the training set.
+
+00:09:16.740 --> 00:09:22.169
+So, it's a much larger set and the same as sort of true of the y train and y test,
+
+00:09:22.169 --> 00:09:24.784
+so free do this.
+
+00:09:24.784 --> 00:09:31.219
+So, the y train has the exact same number of rows but it's only a single column.
+
+00:09:31.220 --> 00:09:36.620
+It's only one column and we can do the same thing with a test set,
+
+00:09:36.620 --> 00:09:38.975
+so you can see it's just the column and that
+
+00:09:38.975 --> 00:09:42.245
+those indices will match across the training and the test set.
+
+00:09:42.245 --> 00:09:44.715
+Okay. So now that we have that,
+
+00:09:44.715 --> 00:09:46.820
+let's go ahead and try to fit our model,
+
+00:09:46.820 --> 00:09:49.520
+and you'll notice we fit this on the training data.
+
+00:09:49.519 --> 00:09:55.504
+So, I should be passing this X train and y train.
+
+00:09:55.504 --> 00:09:58.654
+Right. And, that's it. Yeah. And it's in that order.
+
+00:09:58.654 --> 00:10:00.809
+We can also check the docs and on this stuff,
+
+00:10:00.809 --> 00:10:03.389
+so I frequently will either work with code that I've written
+
+00:10:03.389 --> 00:10:06.794
+before or I'm regularly checking the scikit-learn docs.
+
+00:10:06.794 --> 00:10:10.439
+You can always just run a question mark too. To see.
+
+00:10:10.440 --> 00:10:14.640
+Right. So, that lm_model.fit should take an X and y,
+
+00:10:14.639 --> 00:10:16.199
+and then some sort of sample weight,
+
+00:10:16.200 --> 00:10:18.000
+and then it tells you like what those things are,
+
+00:10:18.000 --> 00:10:19.649
+so it can be useful.
+
+00:10:19.649 --> 00:10:23.250
+So, it looks like this, looks like when I try to run that I get an error.
+
+00:10:23.250 --> 00:10:26.399
+So, this is where we're going to stop for
+
+00:10:26.399 --> 00:10:30.855
+this video and you're going to be doing some of this on your own,
+
+00:10:30.855 --> 00:10:33.670
+just to see what you think might have happened.
+

@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.900
+Now that you're more familiar with the data,
+
+00:00:06.900 --> 00:00:10.455
+you might have come up with some questions that you are interested in answering.
+
+00:00:10.455 --> 00:00:14.800
+This strategy is one of two ways to arrive at questions of interests.
+
+00:00:14.800 --> 00:00:17.984
+Alternatively, you might not have any data,
+
+00:00:17.984 --> 00:00:20.964
+but you might have questions that are particularly interesting,
+
+00:00:20.964 --> 00:00:24.335
+in which case, you will want to collect the necessary data,
+
+00:00:24.335 --> 00:00:26.375
+to be able to answer those questions.
+
+00:00:26.375 --> 00:00:28.719
+Here, were some that I came up with,
+
+00:00:28.719 --> 00:00:30.414
+as we were looking through the data.
+
+00:00:30.414 --> 00:00:35.784
+First, what do those employed in industry suggest to help others enter the field?
+
+00:00:35.784 --> 00:00:39.369
+Second, what does the data suggest about boot camp grads,
+
+00:00:39.369 --> 00:00:41.799
+in terms of job placement and salary?
+
+00:00:41.799 --> 00:00:44.769
+Third, what are the aspects of an individual,
+
+00:00:44.770 --> 00:00:46.665
+that best correlate to salary?
+
+00:00:46.664 --> 00:00:48.524
+How well can we predict salary,
+
+00:00:48.524 --> 00:00:50.664
+using the other columns in the dataset?
+
+00:00:50.664 --> 00:00:55.814
+And finally, what factors are most related to having high job satisfaction?
+
+00:00:55.814 --> 00:00:58.804
+We can then move these questions into the data.
+
+00:00:58.804 --> 00:01:03.729
+This first means that we'll need to take a closer look at the cousin education column.
+
+00:01:03.729 --> 00:01:09.140
+The second question uses the time after boot camp column and the salary column.
+
+00:01:09.140 --> 00:01:11.165
+Though we might need to control for
+
+00:01:11.165 --> 00:01:14.080
+other information that's available throughout the dataset,
+
+00:01:14.079 --> 00:01:17.164
+like years of experience or programming languages.
+
+00:01:17.165 --> 00:01:22.790
+The third and final questions might use any or all of the columns in the dataset.
+
+00:01:22.790 --> 00:01:28.335
+We will need to find a way to compare many of the columns in the dataset to one another.
+
+00:01:28.334 --> 00:01:31.219
+If you think you know how you might answer these questions,
+
+00:01:31.219 --> 00:01:33.170
+feel free to tackle them on your own.
+
+00:01:33.170 --> 00:01:38.439
+I'll show you my approach using the crispy-M process in the sections that follow.
+

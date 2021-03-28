@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.254
+So, I'm joined with Robert from Airbnb.
+
+00:00:02.254 --> 00:00:03.705
+Robert, thanks so much for joining us.
+
+00:00:03.705 --> 00:00:05.084
+Thank you for having me.
+
+00:00:05.084 --> 00:00:07.299
+Can you first, maybe give us some advice,
+
+00:00:07.299 --> 00:00:11.169
+about how you would go about breaking into the field of data science?
+
+00:00:11.169 --> 00:00:13.394
+A lot of our students are just starting out.
+
+00:00:13.394 --> 00:00:16.214
+I would say the first thing is,
+
+00:00:16.214 --> 00:00:18.089
+focus on the fundamentals.
+
+00:00:18.089 --> 00:00:23.089
+I think this is a relatively new field and there's sort of new innovations,
+
+00:00:23.089 --> 00:00:25.265
+new technology coming out,
+
+00:00:25.265 --> 00:00:27.219
+pretty much like every week.
+
+00:00:27.219 --> 00:00:32.914
+So, it's almost impossible to kind of keep up with things.
+
+00:00:32.914 --> 00:00:36.414
+You can always pick up more stuff if you have good fundamentals.
+
+00:00:36.414 --> 00:00:40.519
+Yeah, so what are the fundamental areas that you would push toward?
+
+00:00:40.520 --> 00:00:45.555
+Yes, that's a good question. Just basic knowledge around statistics,
+
+00:00:45.554 --> 00:00:50.000
+and basic working knowledge of just dealing with computers.
+
+00:00:50.000 --> 00:00:52.210
+So, these could be things like,
+
+00:00:52.210 --> 00:00:55.134
+knowing how to query data,
+
+00:00:55.134 --> 00:00:58.094
+knowing how to interact with a command line tool.
+
+00:00:58.094 --> 00:01:02.644
+Can we talk a little bit about the different roles of data scientists, on your teams?
+
+00:01:02.645 --> 00:01:03.965
+What do they do?
+
+00:01:03.965 --> 00:01:06.350
+What differentiates their skillset?
+
+00:01:06.349 --> 00:01:08.119
+I don't know if you're a part of hiring,
+
+00:01:08.120 --> 00:01:10.609
+but what are those things that you look for when you're hiring
+
+00:01:10.609 --> 00:01:14.314
+candidates that fall into certain data science teams?
+
+00:01:14.314 --> 00:01:18.185
+Yeah, we have physicists, former physicists,
+
+00:01:18.185 --> 00:01:20.765
+we have former social scientists,
+
+00:01:20.765 --> 00:01:23.700
+we have people who study statistics,
+
+00:01:23.700 --> 00:01:26.140
+computer science, operations research,
+
+00:01:26.140 --> 00:01:27.704
+and it's kind of all over the place.
+
+00:01:27.704 --> 00:01:35.840
+I think the common theme is that people have spent a lot of time doing analytical works,
+
+00:01:35.840 --> 00:01:39.605
+and they're very analytical-driven and very data-driven.
+
+00:01:39.605 --> 00:01:41.520
+So, that's like the whole culture?
+
+00:01:41.519 --> 00:01:45.989
+That's the whole culture. Those are the things that we really look for.
+
+00:01:45.989 --> 00:01:49.339
+So, we're not really looking at you know someone
+
+00:01:49.340 --> 00:01:52.965
+who's graduated from a particular score or degree.
+
+00:01:52.965 --> 00:01:57.295
+But let me describe a little bit how we think about it at Airbnb.
+
+00:01:57.295 --> 00:02:00.140
+At Airbnb we have three tracks;
+
+00:02:00.140 --> 00:02:02.435
+the first track is called Analytics.
+
+00:02:02.435 --> 00:02:06.944
+Typically these are people who focus a lot on business intelligence,
+
+00:02:06.944 --> 00:02:10.129
+trying to understand the trends of the business,
+
+00:02:10.129 --> 00:02:12.870
+how we're doing as a business.
+
+00:02:12.870 --> 00:02:15.564
+So, it's generally quite high level and
+
+00:02:15.564 --> 00:02:21.329
+your stakeholders are generally people who are decision makers.
+
+00:02:21.330 --> 00:02:22.630
+So, it could be product managers,
+
+00:02:22.629 --> 00:02:25.960
+it could be the lead of entire product work.
+
+00:02:25.960 --> 00:02:29.205
+The type of work that you do typically
+
+00:02:29.205 --> 00:02:35.165
+are sort of a little bit more high level. So that's Analytics.
+
+00:02:35.164 --> 00:02:38.584
+Then we have people who are on an inference track.
+
+00:02:38.585 --> 00:02:45.740
+For inference people, we typically do a lot of experiment design.
+
+00:02:45.740 --> 00:02:49.780
+You typically work very closely with a full-stack team
+
+00:02:49.780 --> 00:02:54.754
+where that team is responsible for trying out different product iterations.
+
+00:02:54.754 --> 00:02:59.664
+It's very common for tech companies now day to run AB tests.
+
+00:02:59.664 --> 00:03:06.289
+So, data scientists are very valuable in helping and design the experiment set up,
+
+00:03:06.289 --> 00:03:12.409
+determining how long the experiment should be run for and making sure that we're tracking
+
+00:03:12.409 --> 00:03:15.270
+the right metric so we can understand the behavioral change
+
+00:03:15.270 --> 00:03:19.445
+of the new product versus the old product,
+
+00:03:19.444 --> 00:03:21.514
+and in doing product analytics.
+
+00:03:21.514 --> 00:03:24.279
+I think this is true for both inference and analytics.
+
+00:03:24.280 --> 00:03:32.740
+There's a lot of analyses around how users are actually using our products.
+
+00:03:32.740 --> 00:03:36.520
+Then we have the third track, which is algorithm.
+
+00:03:38.090 --> 00:03:44.830
+This is a track where people spend a lot of time building data products.
+
+00:03:44.830 --> 00:03:47.530
+So, it could be something like
+
+00:03:47.530 --> 00:03:53.270
+a recommendation engine or it could be an image model that does image classification.
+
+00:03:53.750 --> 00:03:58.604
+So, they typically focus more on
+
+00:03:58.604 --> 00:04:00.819
+specific modelling projects or
+
+00:04:00.819 --> 00:04:06.299
+data products rather than trying to explain the trend of the business.
+
+00:04:06.300 --> 00:04:09.770
+But I will say the tracking system is more of a guidance.
+
+00:04:09.770 --> 00:04:15.715
+I will say a lot of people at Airbnb do cross-works.
+
+00:04:15.715 --> 00:04:19.490
+I certainly have done pretty much all tracks.
+
+00:04:19.490 --> 00:04:25.810
+I think that's kind of the nature of working as a data scientist which
+
+00:04:25.810 --> 00:04:33.050
+is depending on what product we're building,
+
+00:04:33.050 --> 00:04:37.129
+you would try to use the right tool to solve that problem.
+
+00:04:37.129 --> 00:04:38.659
+That tool could be analytics,
+
+00:04:38.660 --> 00:04:41.520
+could be experiment design, could be modelling.
+
+00:04:41.519 --> 00:04:44.519
+So, being able to kind of juggle around with
+
+00:04:44.519 --> 00:04:49.115
+the different tools in your tool set is an important skill to have.
+
+00:04:49.115 --> 00:04:49.639
+Cool.
+

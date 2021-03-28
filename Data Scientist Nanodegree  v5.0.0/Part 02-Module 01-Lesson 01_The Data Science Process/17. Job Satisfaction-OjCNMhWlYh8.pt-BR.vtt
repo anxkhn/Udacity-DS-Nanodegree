@@ -1,0 +1,502 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.911
+Neste notebook, exploraremos
+a satisfação com o trabalho
+
+00:00:02.944 --> 00:00:04.694
+de acordo com a pesquisa.
+
+00:00:04.727 --> 00:00:08.054
+Você vai notar que isto será
+um pouco mais aberto
+
+00:00:08.087 --> 00:00:11.311
+do que alguns
+dos últimos notebooks.
+
+00:00:11.344 --> 00:00:15.766
+Podemos começar observando
+as duas primeiras perguntas
+
+00:00:15.799 --> 00:00:19.397
+e trabalhando
+com as células abertas acima
+
+00:00:19.430 --> 00:00:22.180
+para responder às perguntas
+que encontraremos abaixo.
+
+00:00:22.213 --> 00:00:24.598
+A primeira pergunta aqui é:
+
+00:00:24.631 --> 00:00:26.814
+"Qual é a proporção
+de valores ausentes
+
+00:00:26.847 --> 00:00:28.878
+na coluna Job Satisfaction?"
+
+00:00:28.911 --> 00:00:34.547
+Vamos pegar JobSatisfaction.
+
+00:00:34.580 --> 00:00:36.619
+Vejamos...
+
+00:00:36.652 --> 00:00:41.596
+A proporção dos valores ausentes
+é realmente nula.
+
+00:00:41.629 --> 00:00:46.179
+Usamos isnull - e isso nos dará
+verdadeiros e falsos -
+
+00:00:46.212 --> 00:00:50.163
+e podemos pegar a média de um monte
+de valores verdadeiros e falsos.
+
+00:00:50.196 --> 00:00:51.422
+Legal.
+
+00:00:51.455 --> 00:00:57.420
+A proporção dos valores ausentes
+deve ser de 0,2.
+
+00:00:57.453 --> 00:01:00.282
+Deveria ser 0,2014.
+
+00:01:00.315 --> 00:01:02.306
+Aposto que...
+
+00:01:02.339 --> 00:01:06.426
+Deve ser de 0,2014.
+
+00:01:06.459 --> 00:01:09.794
+Diz para usar a letra,
+então usarei "b".
+
+00:01:09.827 --> 00:01:12.275
+Deve ser 0,2014.
+
+00:01:12.308 --> 00:01:15.970
+Então... "De acordo
+com o status do cargo,
+
+00:01:16.003 --> 00:01:19.500
+qual grupo tem a maior média
+de satisfação com o trabalho?"
+
+00:01:19.533 --> 00:01:24.092
+Queremos observar
+o status de emprego.
+
+00:01:25.708 --> 00:01:31.636
+Usarei a contagem de valor
+ou value_counts.
+
+00:01:31.837 --> 00:01:35.624
+Vemos que existem
+grupos diferentes...
+
+00:01:36.305 --> 00:01:38.983
+"De acordo
+com o status de emprego,
+
+00:01:39.016 --> 00:01:42.518
+qual grupo tem a maior média
+de satisfação com o trabalho?"
+
+00:01:42.551 --> 00:01:47.068
+Farei um groupby para agrupar
+
+00:01:47.101 --> 00:01:49.621
+pelo EmploymentStatus.
+
+00:01:49.654 --> 00:01:53.192
+Na função groupby -
+
+00:01:53.225 --> 00:01:56.184
+é um método,
+porque ele está no dataframe -
+
+00:01:56.217 --> 00:01:58.728
+podemos passar uma string
+com o nome da coluna
+
+00:01:58.761 --> 00:02:03.120
+ou uma lista com os nomes
+das colunas para esse groupby.
+
+00:02:03.153 --> 00:02:05.264
+Podemos dizer:
+
+00:02:05.297 --> 00:02:07.969
+"Nos dê a média."
+
+00:02:08.002 --> 00:02:11.043
+Queremos saber
+sobre a satisfação com o trabalho.
+
+00:02:11.076 --> 00:02:14.978
+Ótimo. "De acordo
+com o status de emprego,
+
+00:02:15.011 --> 00:02:17.769
+qual grupo tem a maior
+satisfação com o trabalho?"
+
+00:02:17.802 --> 00:02:21.378
+Vemos este contratante
+independente
+
+00:02:21.411 --> 00:02:25.776
+e um monte de NaNs.
+
+00:02:25.809 --> 00:02:28.422
+Parece que isso deve ser "d".
+
+00:02:28.455 --> 00:02:29.623
+"Em geral,
+
+00:02:29.656 --> 00:02:33.546
+as empresas menores parecem ter
+funcionários mais satisfeitos?"
+
+00:02:33.579 --> 00:02:39.510
+Imagino que haja algo associado
+com o tamanho...
+
+00:02:39.543 --> 00:02:43.607
+Algo ligado ao tamanho...
+Achei, CompanySize.
+
+00:02:43.640 --> 00:02:44.902
+Legal.
+
+00:02:44.935 --> 00:02:47.597
+Espero que apareça,
+caso contrário,
+
+00:02:47.630 --> 00:02:49.368
+teremos que vasculhar a lista.
+
+00:02:50.264 --> 00:02:53.252
+Vamos fazer a mesma coisa.
+Faremos um groupby,
+
+00:02:53.285 --> 00:02:56.463
+agrupando por CompanySize
+
+00:02:56.496 --> 00:02:59.200
+e, em seguida,
+pegaremos a média
+
+00:02:59.233 --> 00:03:03.280
+para obtermos
+a satisfação com o trabalho.
+
+00:03:03.313 --> 00:03:07.057
+Isso dará a satisfação média com
+o trabalho por tamanho de empresa.
+
+00:03:07.719 --> 00:03:12.631
+Acredito que podemos usar
+sort_values nisso.
+
+00:03:12.664 --> 00:03:15.527
+Parece que o mais alto disse:
+
+00:03:15.560 --> 00:03:17.622
+"prefiro não responder."
+
+00:03:17.655 --> 00:03:22.007
+"Em geral, as empresas menores
+parecem ter funcionários mais..."
+
+00:03:22.040 --> 00:03:24.895
+Essas pessoas não sabem,
+
+00:03:24.928 --> 00:03:26.409
+essas preferem não responder,
+
+00:03:26.442 --> 00:03:28.536
+mas de 10 a 19...
+
+00:03:29.666 --> 00:03:31.998
+As maiores empresas
+têm o menor
+
+00:03:32.031 --> 00:03:34.319
+e a segunda maior
+tem o segundo menor,
+
+00:03:34.352 --> 00:03:36.783
+a terceira maior
+tem o terceiro menor...
+
+00:03:36.816 --> 00:03:39.575
+Vemos as empresas
+de médio porte,
+
+00:03:39.608 --> 00:03:43.095
+as que são bem pequenas...
+
+00:03:43.128 --> 00:03:45.231
+Esta é uma empresa
+muito pequena.
+
+00:03:45.264 --> 00:03:49.717
+Em geral, estas empresas -
+
+00:03:49.750 --> 00:03:52.667
+um, dois, três,
+quatro, cinco -,
+
+00:03:52.700 --> 00:03:56.484
+estas cinco são menores
+do que estas três.
+
+00:03:56.517 --> 00:03:59.300
+Em geral,
+parece que esse é o caso.
+
+00:03:59.333 --> 00:04:01.492
+É um pouco difícil de dizer,
+mas eu diria
+
+00:04:01.525 --> 00:04:03.911
+que há informações suficientes
+para dizer
+
+00:04:03.944 --> 00:04:08.958
+que estas três são as maiores
+e tem menor satisfação
+
+00:04:08.991 --> 00:04:12.557
+do que estas cinco,
+que são as menores.
+
+00:04:12.590 --> 00:04:17.108
+"Em geral, as empresas menores
+parecem ter funcionários..."
+
+00:04:17.141 --> 00:04:18.588
+Direi que sim.
+
+00:04:18.621 --> 00:04:23.788
+"Use o espaço acima para relacionar
+cada variável a, b ou c
+
+00:04:23.821 --> 00:04:25.173
+como a chave apropriada."
+
+00:04:25.206 --> 00:04:28.874
+"Indivíduos que programam fora
+do trabalho são mais satisfeitos?"
+
+00:04:28.907 --> 00:04:33.061
+"A flexibilidade para trabalhar fora
+do escritório parece influenciar?"
+
+00:04:33.860 --> 00:04:37.199
+"Um amigo diz que um doutorado
+
+00:04:37.232 --> 00:04:39.878
+aumenta a chance de ter
+um emprego que você gosta.
+
+00:04:39.911 --> 00:04:41.149
+Isso parece verdade?"
+
+00:04:41.182 --> 00:04:44.861
+Então, há muitos itens
+ligados à satisfação com o trabalho.
+
+00:04:44.894 --> 00:04:47.549
+Estamos individualmente
+observando muitos deles,
+
+00:04:47.582 --> 00:04:51.766
+estamos desenhando
+algumas hipóteses
+
+00:04:52.455 --> 00:04:56.453
+e encontrando estatísticas
+descritivas relacionadas a elas
+
+00:04:56.486 --> 00:04:58.156
+para dar palpites.
+
+00:04:58.189 --> 00:05:00.626
+Provavelmente faríamos
+algo mais rigoroso
+
+00:05:00.659 --> 00:05:03.737
+para prever a satisfação
+com o trabalho, se quiséssemos ter
+
+00:05:03.770 --> 00:05:06.957
+uma ideia melhor
+do que realmente gera isso,
+
+00:05:06.990 --> 00:05:11.796
+mas obtivemos
+algumas evidências descritivas
+
+00:05:11.829 --> 00:05:13.421
+em alguns desses casos.
+
+00:05:13.454 --> 00:05:15.878
+"As pessoas que programam
+fora do trabalho...?"
+
+00:05:15.911 --> 00:05:20.261
+Deixarei o df.columns.
+
+00:05:20.294 --> 00:05:23.524
+Há esta coluna ProgramHobby...
+
+00:05:23.557 --> 00:05:25.765
+Deixarei isso aqui.
+
+00:05:25.798 --> 00:05:30.372
+"A flexibilidade para trabalhar fora
+do escritório parece influenciar?"
+
+00:05:30.405 --> 00:05:32.566
+Eu não sei o que está havendo.
+
+00:05:32.599 --> 00:05:34.389
+Está demorando muito.
+
+00:05:34.422 --> 00:05:37.069
+Existe esse item
+chamado "HomeRemote".
+
+00:05:37.102 --> 00:05:40.989
+Suponho que isso possa ter a ver
+com a segunda parte.
+
+00:05:41.022 --> 00:05:45.348
+É, parece que os menos
+satisfeitos com o trabalho
+
+00:05:45.381 --> 00:05:47.276
+não programam como hobby,
+
+00:05:47.309 --> 00:05:50.452
+e os mais satisfeitos
+programam.
+
+00:05:50.485 --> 00:05:53.205
+Faz sentido que -
+mesmo fazendo isso por diversão -
+
+00:05:53.238 --> 00:05:56.820
+você provavelmente tenha
+uma probabilidade maior
+
+00:05:56.853 --> 00:05:58.925
+de gostar do que faz
+no trabalho.
+
+00:05:58.958 --> 00:06:04.877
+Direi que eles parecem ter
+mais satisfação com o trabalho.
+
+00:06:04.910 --> 00:06:08.732
+A flexibilidade para trabalhar fora
+do escritório parece ter
+
+00:06:08.765 --> 00:06:12.421
+algum tipo de evidência que sugira
+maior satisfação com o trabalho?
+
+00:06:12.454 --> 00:06:15.136
+As pessoas...
+Trabalho remoto,
+
+00:06:15.169 --> 00:06:18.650
+trabalho remoto, trabalho
+remoto, trabalho remoto...
+
+00:06:18.683 --> 00:06:23.036
+O mais baixo
+nunca trabalhou remotamente,
+
+00:06:23.069 --> 00:06:25.085
+mas, essencialmente,
+o resto trabalhou.
+
+00:06:25.118 --> 00:06:26.806
+Então o grupo mais baixo -
+
+00:06:26.839 --> 00:06:31.829
+especialmente das pessoas que fazem
+isso quase que o tempo todo -
+
+00:06:31.862 --> 00:06:36.254
+tem uma diferença de valor
+muito alta.
+
+00:06:36.287 --> 00:06:40.375
+Poderíamos tentar fazer algo
+para provar a significância
+
+00:06:40.408 --> 00:06:42.727
+por meio de métodos
+inferenciais.
+
+00:06:42.760 --> 00:06:45.421
+Direi que isso parece
+ser verdadeiro.
+
+00:06:45.454 --> 00:06:49.573
+"Um amigo diz
+que o doutorado aumenta..."
+
+00:06:49.606 --> 00:06:54.598
+Isso tem a ver com a formação.
+
+00:06:54.631 --> 00:06:56.214
+Vamos fazer isso também.
+
+00:06:56.247 --> 00:06:59.126
+Colocarei isso
+nesta parte agora.
+
+00:06:59.159 --> 00:07:00.974
+Vamos dar uma olhada.
+
+00:07:01.007 --> 00:07:04.373
+O doutorado tende
+a ser mais alto,
+
+00:07:04.406 --> 00:07:09.174
+e parece que isso é bem substancial
+comparado aos outros grupos.
+
+00:07:09.207 --> 00:07:11.903
+De 1 a 2 pontos mais alto,
+
+00:07:11.936 --> 00:07:15.862
+especialmente comparado
+aos com diploma de bacharel,
+
+00:07:15.895 --> 00:07:17.323
+que é o menor.
+
+00:07:17.356 --> 00:07:23.270
+Direi que isso parece
+ser verdadeiro também.
+
+00:07:23.303 --> 00:07:26.494
+Tudo isso
+parece ser verdadeiro
+
+00:07:26.527 --> 00:07:29.267
+e parece que foi isso
+que descobriram também.
+

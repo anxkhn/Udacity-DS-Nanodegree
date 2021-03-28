@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.780
+Imputing values into a data set
+
+00:00:06.780 --> 00:00:11.129
+is probably the most common way professionals work with missing values.
+
+00:00:11.130 --> 00:00:14.485
+However, it's important to understand its drawbacks.
+
+00:00:14.484 --> 00:00:18.850
+First, let's look at some common methods for imputing missing values.
+
+00:00:18.850 --> 00:00:21.850
+These include imputing the mean, the median,
+
+00:00:21.850 --> 00:00:25.670
+or the mode for any particular column with missing values.
+
+00:00:25.670 --> 00:00:30.860
+We could also just predict missing values using other columns in our dataset.
+
+00:00:30.859 --> 00:00:35.310
+This could use any supervised learning approach you're already familiar with,
+
+00:00:35.310 --> 00:00:38.385
+from linear regression to a tree-based approach.
+
+00:00:38.384 --> 00:00:42.859
+Or we could find rows that are most similar in the values that are not
+
+00:00:42.859 --> 00:00:47.304
+missing and then fill the missing values with the values from these rows.
+
+00:00:47.304 --> 00:00:49.030
+In this case notice,
+
+00:00:49.030 --> 00:00:53.829
+all of these columns have matching values but here we're missing this point.
+
+00:00:53.829 --> 00:00:57.799
+So we might fill it with the value that we find for this individual.
+
+00:00:57.799 --> 00:01:02.140
+This is like a k-nearest neighbors approach to filling in missing values.
+
+00:01:02.140 --> 00:01:05.575
+It's important to remember that by imputing these values,
+
+00:01:05.575 --> 00:01:07.510
+using any of these methods,
+
+00:01:07.510 --> 00:01:10.335
+you're diluting the importance of the feature.
+
+00:01:10.334 --> 00:01:13.099
+Variability in the features is what allows
+
+00:01:13.099 --> 00:01:16.094
+you to use them to predict any variable better.
+
+00:01:16.094 --> 00:01:20.989
+By imputing values, you have the pro and that you are removing data,
+
+00:01:20.989 --> 00:01:26.210
+however you have the con that you're diluting the power of your features to predict well,
+
+00:01:26.209 --> 00:01:29.199
+by reducing the variability in those features.
+
+00:01:29.200 --> 00:01:33.320
+As an example, consider you are interested in using age,
+
+00:01:33.319 --> 00:01:35.424
+a mother's height, and a father's height,
+
+00:01:35.424 --> 00:01:37.004
+to predict a child's height.
+
+00:01:37.004 --> 00:01:40.769
+If you don't have a mother or father's height or an age,
+
+00:01:40.769 --> 00:01:42.849
+you could just fill these in with the mean,
+
+00:01:42.849 --> 00:01:45.439
+the median, or the mode for each column.
+
+00:01:45.439 --> 00:01:50.090
+We can take the average for each column and fill the missing ages and heights with
+
+00:01:50.090 --> 00:01:53.600
+this calculated value but now we have made
+
+00:01:53.599 --> 00:01:57.765
+these rows more similar when actually we don't know this to be true.
+
+00:01:57.765 --> 00:02:02.390
+This is diluting our ability to accurately predict the child's height,
+
+00:02:02.390 --> 00:02:05.620
+based on things that we actually know to be true and the data.
+
+00:02:05.620 --> 00:02:09.139
+For both imputing and removing missing values,
+
+00:02:09.139 --> 00:02:13.930
+you should be very cautious of the final impact this will have on your model.
+

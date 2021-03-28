@@ -1,0 +1,547 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.828
+Neste notebook,
+vamos entender melhor
+
+00:00:03.862 --> 00:00:06.363
+os dados que usaremos
+nesta aula.
+
+00:00:06.397 --> 00:00:09.873
+Uma observação:
+
+00:00:09.907 --> 00:00:14.204
+ao clicar no ícone do Jupyter
+na esquerda,
+
+00:00:14.238 --> 00:00:17.091
+você verá uma lista
+de todos os notebooks
+
+00:00:17.125 --> 00:00:21.131
+que serão usados nesta aula,
+além das soluções.
+
+00:00:21.165 --> 00:00:25.251
+Se escolher baixar todos
+para o seu computador,
+
+00:00:25.285 --> 00:00:28.091
+pode fazer as coisas
+lado a lado,
+
+00:00:28.125 --> 00:00:30.834
+em vez de trabalhar
+no Espaço de Trabalho.
+
+00:00:30.868 --> 00:00:32.412
+É outra opção.
+
+00:00:32.446 --> 00:00:36.179
+Temos um notebook,
+e a solução correspondente,
+
+00:00:36.213 --> 00:00:39.181
+outro notebook,
+a solução dele,
+
+00:00:39.215 --> 00:00:40.989
+e assim por diante.
+
+00:00:41.023 --> 00:00:45.742
+Há também os arquivos
+solution1.py e test1.py,
+
+00:00:45.776 --> 00:00:48.748
+que são usados para verificar
+
+00:00:48.782 --> 00:00:51.907
+as soluções de cada notebook.
+
+00:00:52.554 --> 00:00:56.724
+Voltando ao notebook
+"A Look at the Data".
+
+00:00:56.758 --> 00:00:59.971
+Primeiro vou ler
+as bibliotecas.
+
+00:01:00.005 --> 00:01:04.077
+Aqui está escrito
+"import test1 as t".
+
+00:01:04.111 --> 00:01:08.373
+Esse é aquele arquivo test1.py
+que vimos antes.
+
+00:01:08.407 --> 00:01:13.268
+Aqui lemos o conjunto de dados
+e armazenamos em "df".
+
+00:01:13.302 --> 00:01:15.803
+Quando tivermos mais
+sobre esses dados,
+
+00:01:15.837 --> 00:01:19.300
+saberemos
+que a célula executou
+
+00:01:19.334 --> 00:01:21.388
+e poderemos continuar.
+
+00:01:21.422 --> 00:01:24.197
+Se o Espaço de Trabalho
+não for o melhor lugar
+
+00:01:24.231 --> 00:01:26.412
+para executar o código
+e acompanhar,
+
+00:01:26.446 --> 00:01:28.500
+pode fazer isso
+no computador.
+
+00:01:28.534 --> 00:01:32.364
+Aqui vemos os resultados
+dos dados com que trabalhamos.
+
+00:01:33.519 --> 00:01:35.732
+A primeira questão
+é dar o número
+
+00:01:35.766 --> 00:01:37.971
+de linhas e colunas
+no conjunto de dados.
+
+00:01:38.005 --> 00:01:40.147
+Se executarmos esta célula,
+ela diz:
+
+00:01:40.181 --> 00:01:44.433
+"Bom trabalho, há tantas linhas
+e tantas colunas."
+
+00:01:44.467 --> 00:01:49.136
+Ele executa uma verificação:
+"t.check_rows_cols"
+
+00:01:49.170 --> 00:01:51.761
+com os dois nomes
+das variáveis.
+
+00:01:51.795 --> 00:01:55.481
+Basicamente,
+esse "t" é aquele arquivo de teste,
+
+00:01:55.515 --> 00:01:58.888
+e há uma função nele,
+"check_rows_cols",
+
+00:01:58.922 --> 00:02:03.698
+para verificar o número de linhas
+e colunas que temos
+
+00:02:03.732 --> 00:02:07.185
+em comparação à solução.
+
+00:02:07.219 --> 00:02:09.961
+Se houvesse um erro,
+
+00:02:09.995 --> 00:02:14.097
+você veria: "Isso não parece
+o que estávamos esperando."
+
+00:02:14.131 --> 00:02:17.384
+Neste caso, foi
+só uma inversão.
+
+00:02:17.418 --> 00:02:22.480
+Aqui o primeiro elemento, "0",
+são as linhas,
+
+00:02:22.514 --> 00:02:26.321
+e o segundo elemento, "1",
+são as colunas.
+
+00:02:26.355 --> 00:02:30.830
+Quando os invertemos,
+achamos as respostas erradas,
+
+00:02:30.864 --> 00:02:33.441
+e, quando os comparamos
+à solução
+
+00:02:33.475 --> 00:02:35.856
+e à função "check_rows_cols",
+
+00:02:35.890 --> 00:02:40.729
+ele diz no feedback
+que estávamos errados.
+
+00:02:40.763 --> 00:02:46.161
+Além disso, há uma docstring
+em cada uma das funções
+
+00:02:46.195 --> 00:02:49.394
+que compara
+com as suas soluções.
+
+00:02:49.428 --> 00:02:53.617
+Se fizer isso, pode ter uma ideia
+do que ele quer.
+
+00:02:53.651 --> 00:02:56.735
+Aqui diz que o input deveria ser
+o número de linhas,
+
+00:02:56.769 --> 00:03:00.232
+que deveria ser um enésimo
+do número de linhas no DataFrame.
+
+00:03:00.266 --> 00:03:03.880
+E "num_cols" deveria ser
+um enésimo do número de colunas.
+
+00:03:03.914 --> 00:03:09.602
+Cada uma dessas funções
+do arquivo test1
+
+00:03:09.636 --> 00:03:13.456
+tem uma docstring com a qual
+se verifica a informação.
+
+00:03:13.490 --> 00:03:18.249
+Depois disso, você terá que fazer
+algumas tarefas sozinho.
+
+00:03:18.283 --> 00:03:22.121
+"Dê um grupo de colunas
+com 0 dados ausentes."
+
+00:03:23.404 --> 00:03:28.168
+Às vezes, talvez seja bom
+criar uma célula
+
+00:03:28.202 --> 00:03:30.719
+em que você pode
+trabalhar sozinho.
+
+00:03:30.753 --> 00:03:33.407
+Vou inserir
+uma célula acima.
+
+00:03:33.441 --> 00:03:38.807
+Vou escrever: "df.isnull"...
+
+00:03:39.471 --> 00:03:43.983
+Vemos várias colunas...
+Vamos ver aqui.
+
+00:03:44.623 --> 00:03:47.655
+"isnull pandas".
+
+00:03:48.023 --> 00:03:51.482
+De acordo
+com os documentos...
+
+00:03:52.395 --> 00:03:56.396
+Acho que podemos dar
+as linhas e as colunas,
+
+00:03:56.430 --> 00:03:59.883
+com "axis=1", talvez?
+
+00:04:00.795 --> 00:04:04.309
+Acho que não,
+então vamos fazer...
+
+00:04:05.764 --> 00:04:08.080
+Beleza, com um "np.sum",
+
+00:04:08.113 --> 00:04:11.123
+vemos que,
+quando não há dados ausentes,
+
+00:04:11.157 --> 00:04:12.741
+fica desta forma.
+
+00:04:12.775 --> 00:04:18.116
+Quando há dados ausentes,
+o número é especificado.
+
+00:04:19.076 --> 00:04:22.060
+Vou digitar "== 0".
+
+00:04:23.444 --> 00:04:25.972
+Legal, aparece
+"true" e "false".
+
+00:04:26.006 --> 00:04:28.094
+Imagino que possamos
+fazer algo,
+
+00:04:28.128 --> 00:04:32.868
+tipo "df.columns",
+para puxar
+
+00:04:32.902 --> 00:04:34.572
+onde está o "true".
+
+00:04:34.606 --> 00:04:37.764
+Aqui puxamos as colunas
+
+00:04:37.798 --> 00:04:42.100
+em que a soma dos valores nulos
+é igual a zero.
+
+00:04:43.041 --> 00:04:48.333
+Nossa tarefa é dar um conjunto
+de colunas com 0 dados ausentes.
+
+00:04:48.367 --> 00:04:53.599
+Eu pego isto,
+especifico como um conjunto,
+
+00:04:53.633 --> 00:04:59.001
+então digito "set of".
+
+00:04:59.858 --> 00:05:04.143
+Legal. Se estiver certo, vemos...
+Vou abaixar esta caixa.
+
+00:05:04.177 --> 00:05:07.848
+Se estiver certo, aparece:
+"Bom trabalho, parece estar certo."
+
+00:05:07.882 --> 00:05:13.326
+Se tivéssemos errado, tipo...
+
+00:05:13.360 --> 00:05:17.799
+Isso não funcionou
+porque quebrou o código, mas...
+
+00:05:18.990 --> 00:05:21.854
+Podemos tentar...
+
+00:05:23.966 --> 00:05:26.119
+"Não parece ser
+um conjunto sem 0 dados.
+
+00:05:26.153 --> 00:05:28.270
+Deveria haver 7 colunas
+na lista."
+
+00:05:28.304 --> 00:05:31.093
+Voltando aqui,
+podemos mudar isso.
+
+00:05:31.127 --> 00:05:34.527
+Eu deveria trabalhar
+no que isso manda.
+
+00:05:34.561 --> 00:05:38.005
+Não é algo ótimo,
+
+00:05:38.039 --> 00:05:40.805
+mas faz sentido
+não ter dado certo, não é?
+
+00:05:40.839 --> 00:05:43.494
+Vou voltar
+e mudar essa string.
+
+00:05:43.528 --> 00:05:46.375
+Certo, na 3ª pergunta,
+temos:
+
+00:05:46.409 --> 00:05:48.385
+"Quais colunas têm
+mais dados ausentes?
+
+00:05:48.419 --> 00:05:50.377
+Crie um conjunto
+dos nomes das colunas
+
+00:05:50.411 --> 00:05:53.650
+que têm mais de 75%
+dos dados ausentes."
+
+00:05:53.684 --> 00:05:58.622
+Podemos usar muito
+do que fizemos aqui em cima.
+
+00:05:58.656 --> 00:06:01.678
+Vou transformar isto
+em comentário.
+
+00:06:01.712 --> 00:06:04.678
+Vou colocar 0 no valor.
+
+00:06:04.712 --> 00:06:07.551
+Na verdade, vou deixar assim.
+
+00:06:08.558 --> 00:06:11.414
+Então aqui...
+
+00:06:11.448 --> 00:06:14.661
+Vimos que isto nos deu
+este resultado.
+
+00:06:15.460 --> 00:06:20.986
+Se dividirmos
+por "df. shape[0]",
+
+00:06:21.020 --> 00:06:23.080
+temos várias porcentagens,
+
+00:06:23.114 --> 00:06:27.409
+que podemos verificar
+se são maiores que 0,75%.
+
+00:06:27.443 --> 00:06:32.338
+Se for "true", tem mais
+de 75% de dados ausentes.
+
+00:06:32.372 --> 00:06:35.585
+Então podemos
+puxar isso das colunas.
+
+00:06:35.619 --> 00:06:40.578
+É o número de dados ausentes
+
+00:06:40.612 --> 00:06:43.049
+dividido pelo número total
+de colunas possível.
+
+00:06:43.083 --> 00:06:47.041
+Se for maior que 75%,
+ele exibe o nome da coluna.
+
+00:06:47.075 --> 00:06:49.145
+Acho que é suficiente.
+
+00:06:49.179 --> 00:06:53.657
+Vou colocar como comentário
+por enquanto.
+
+00:06:53.691 --> 00:06:57.322
+Também precisa de um "set"
+na frente.
+
+00:06:58.226 --> 00:06:59.386
+Ótimo.
+
+00:06:59.420 --> 00:07:01.561
+A próxima tarefa é criar
+uma Pandas Series
+
+00:07:01.595 --> 00:07:04.323
+do total
+de cada estado profissional.
+
+00:07:04.357 --> 00:07:08.764
+Acho que podemos inserir
+"Professional"
+
+00:07:09.491 --> 00:07:13.571
+e uma coisa bacana
+chamada "value_counts".
+
+00:07:14.387 --> 00:07:17.508
+Isso é útil para qualquer
+variável de categoria.
+
+00:07:17.542 --> 00:07:20.764
+Então se esta coluna
+
+00:07:20.798 --> 00:07:24.259
+é um conjunto
+de variáveis de categoria,
+
+00:07:24.293 --> 00:07:27.019
+o "value_counts" vai contar
+quantas são
+
+00:07:27.053 --> 00:07:30.588
+e devolver uma Panda Series
+com a contagem de cada um.
+
+00:07:30.622 --> 00:07:34.052
+Vamos executar rapidinho
+para você ver.
+
+00:07:34.086 --> 00:07:37.132
+Então, 13 mil
+desenvolvedores profissionais,
+
+00:07:37.166 --> 00:07:40.524
+2.800 estudantes,
+e por aí vai.
+
+00:07:40.558 --> 00:07:43.202
+Se executarmos isso...
+
+00:07:43.731 --> 00:07:46.251
+Espero ver um gráfico.
+
+00:07:46.285 --> 00:07:48.562
+"Que tipo de desenvolvedor
+é você?"
+
+00:07:48.596 --> 00:07:54.066
+Com um gráfico que mostra
+que 70% são profissionais,
+
+00:07:54.100 --> 00:07:56.283
+uns 15%, estudantes.
+
+00:07:56.317 --> 00:08:00.594
+E esta pede uma Panda Series
+do estado de educação formal.
+
+00:08:00.628 --> 00:08:04.210
+É bem similar ao que acabamos
+de fazer.
+
+00:08:04.244 --> 00:08:09.529
+"FormalEducation",
+"value_counts".
+
+00:08:10.529 --> 00:08:14.601
+Quando executamos,
+vemos um gráfico.
+
+00:08:14.635 --> 00:08:16.322
+Parece estar certo.
+
+00:08:16.356 --> 00:08:19.329
+Por fim, o país deles.
+
+00:08:21.041 --> 00:08:24.315
+"df('Country').
+
+00:08:24.349 --> 00:08:27.842
+value_counts".
+
+00:08:27.876 --> 00:08:29.595
+Isso é muito útil.
+
+00:08:29.629 --> 00:08:31.848
+Temos os 10 primeiros
+do ranking.
+
+00:08:31.882 --> 00:08:36.657
+Esses são os países
+mais representados nos dados.
+
+00:08:36.691 --> 00:08:39.969
+E você também pode continuar
+analisando os dados
+
+00:08:40.003 --> 00:08:42.800
+e ver outras colunas
+pelas quais se interesse.
+

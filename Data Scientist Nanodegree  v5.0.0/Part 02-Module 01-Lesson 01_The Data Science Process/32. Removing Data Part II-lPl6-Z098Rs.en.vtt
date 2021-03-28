@@ -1,0 +1,436 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.410
+So, you've now seen how we can fit a model by dropping the rows with missing values,
+
+00:00:04.410 --> 00:00:07.285
+and that's great because now we have models that don't break.
+
+00:00:07.285 --> 00:00:10.740
+However, this means that future observations that are missing those values,
+
+00:00:10.740 --> 00:00:12.734
+we're not going to be able to predict for.
+
+00:00:12.734 --> 00:00:18.030
+In this notebook, we'll take a closer look at this and answer a few questions.
+
+00:00:18.030 --> 00:00:21.420
+So, I've read in the data and you can
+
+00:00:21.420 --> 00:00:24.580
+see there's a whole bunch of missing values across the quantitative columns,
+
+00:00:24.579 --> 00:00:29.864
+and this says, "What proportion of individuals in the dataset reported a salary?"
+
+00:00:29.864 --> 00:00:36.699
+Do we want, I'm just going to take the num-vars part and salary,
+
+00:00:37.240 --> 00:00:44.370
+isnull.mean, and if we take one minus that.
+
+00:00:44.369 --> 00:00:51.349
+So, isnull gives us trues and falses of whether or not a cell is null and this.
+
+00:00:51.350 --> 00:00:53.570
+So, we get a vector back of trues and falses,
+
+00:00:53.570 --> 00:00:56.445
+and then taking the mean of that gives us the proportion,
+
+00:00:56.445 --> 00:01:00.594
+and then taking one minus that proportion should give us the proportion.
+
+00:01:00.594 --> 00:01:03.660
+So, it looks like about 26.2 percent,
+
+00:01:03.659 --> 00:01:06.769
+and it looks like that matches here,
+
+00:01:06.769 --> 00:01:11.759
+and then, the next question is remove the rows associated with nan values and salary,
+
+00:01:11.760 --> 00:01:14.900
+and only salary from the dataframe with num-vars.
+
+00:01:14.900 --> 00:01:17.390
+So, if you've go to num_vars,
+
+00:01:17.390 --> 00:01:19.924
+and there's a drop NA.
+
+00:01:19.924 --> 00:01:21.784
+We saw this subset,
+
+00:01:21.784 --> 00:01:23.069
+which can be really useful,
+
+00:01:23.069 --> 00:01:26.269
+where we can pass any number of
+
+00:01:26.269 --> 00:01:31.189
+columns that we want to just look for nans in those particular ones.
+
+00:01:31.189 --> 00:01:37.004
+How is any, so I'm going to leave that and axis is 0.
+
+00:01:37.004 --> 00:01:41.284
+So, we can see that the thing we get back only has,
+
+00:01:41.284 --> 00:01:45.060
+they have salaries even though there's nans over here and over here.
+
+00:01:45.060 --> 00:01:48.019
+It looks like these ones lined up, okay?
+
+00:01:48.019 --> 00:01:51.229
+It looks like that matches the solution as well,
+
+00:01:51.230 --> 00:01:53.880
+and then, let's see here, it says,
+
+00:01:53.879 --> 00:02:00.329
+"using sal_rm, create X to be a dataframe or matrix of all the numeric features".
+
+00:02:00.329 --> 00:02:03.575
+So you cell RM.
+
+00:02:03.575 --> 00:02:07.174
+Create x to be a dataframe with the numeric features.
+
+00:02:07.174 --> 00:02:09.585
+I'm just going to steal this from up at the top.
+
+00:02:09.585 --> 00:02:17.330
+So basically, these are all the numeric features and if we pull out this part,
+
+00:02:17.330 --> 00:02:22.850
+the part that we want to predict is the salary and the way that we
+
+00:02:22.849 --> 00:02:29.044
+want to do that is with all the rest of these features, right?
+
+00:02:29.044 --> 00:02:31.409
+So, we're going to input these as
+
+00:02:31.409 --> 00:02:34.495
+our x variables and then we're going to predict the salary.
+
+00:02:34.495 --> 00:02:38.629
+Then it looks like here they're just splitting that into training and test.
+
+00:02:38.629 --> 00:02:41.865
+They're using a 30 percent test size and setting a random state,
+
+00:02:41.865 --> 00:02:43.939
+and then we're fitting a linear model,
+
+00:02:43.939 --> 00:02:46.550
+where we basically subtract the mean and divide by
+
+00:02:46.550 --> 00:02:49.580
+the standard deviation for each column,
+
+00:02:49.580 --> 00:02:53.425
+and then we're going to try to fit that model to our training and test set,
+
+00:02:53.425 --> 00:02:55.250
+and you can see, if it doesn't work,
+
+00:02:55.250 --> 00:02:57.449
+we get this exception that says, "no, it doesn't work".
+
+00:02:57.449 --> 00:03:03.685
+So, reasons for that could be Python just likes to break sometimes for no reason at all.
+
+00:03:03.685 --> 00:03:06.949
+When I'm frustrated, sometimes it feels like that's true
+
+00:03:06.949 --> 00:03:10.399
+but I don't think that's actually the case here.
+
+00:03:10.400 --> 00:03:12.780
+It worked because Python's magic.
+
+00:03:12.780 --> 00:03:15.360
+That would be great, but it didn't work,
+
+00:03:15.360 --> 00:03:18.990
+and C it broke because we still have missing values in X.
+
+00:03:18.990 --> 00:03:21.170
+So, we tried to fit this model and we
+
+00:03:21.169 --> 00:03:23.869
+saw up here that we still have these missing values,
+
+00:03:23.870 --> 00:03:27.064
+and so it looks like it's still broke because of them.
+
+00:03:27.064 --> 00:03:29.719
+So, I'm going to go C. So,
+
+00:03:29.719 --> 00:03:31.580
+there's missing values in the X matrix, right?
+
+00:03:31.580 --> 00:03:35.275
+So, there's missing values in these columns here,
+
+00:03:35.275 --> 00:03:38.219
+are still breaking our modeling.
+
+00:03:38.219 --> 00:03:47.294
+So, all_rm wants to be a dataframe with rows for,
+
+00:03:47.294 --> 00:03:50.984
+and actually, this is suggesting that it should be
+
+00:03:50.985 --> 00:03:55.820
+with the rows removed for any column with missing data, right?
+
+00:03:55.819 --> 00:03:58.474
+So, nan values in any column groups.
+
+00:03:58.474 --> 00:04:03.159
+If there's nan values in any column in here, remove them, right?
+
+00:04:03.159 --> 00:04:05.564
+So, this is a dataframe with rows for.
+
+00:04:05.564 --> 00:04:14.004
+So, num_vars.dropna, and I think we could use all the defaults.
+
+00:04:14.004 --> 00:04:19.730
+I'm just going to do safe, axis equals 0.
+
+00:04:19.759 --> 00:04:22.110
+And if we run that,
+
+00:04:22.110 --> 00:04:23.639
+and we look at the results,
+
+00:04:23.639 --> 00:04:25.669
+it says, "Nice job. That looks right".
+
+00:04:25.670 --> 00:04:28.580
+And it does look like if we didn't specify anything,
+
+00:04:28.579 --> 00:04:31.144
+it would have just dropped the ones that we thought,
+
+00:04:31.144 --> 00:04:33.029
+and now use this.
+
+00:04:33.029 --> 00:04:35.089
+So, this all_rm.
+
+00:04:35.089 --> 00:04:39.769
+Let's use this all_rm. Again, we're just subsetting it down.
+
+00:04:39.769 --> 00:04:42.254
+So, we want this,
+
+00:04:42.254 --> 00:04:44.314
+this is going to be our x matrix again,
+
+00:04:44.314 --> 00:04:47.759
+and then we're going to try to predict salary.
+
+00:04:48.819 --> 00:04:53.420
+So then, we're going to again just run basically the same code we had before.
+
+00:04:53.420 --> 00:04:54.975
+We're going to do a train test split.
+
+00:04:54.975 --> 00:04:57.835
+We're going to fit our- we're instantiating our model,
+
+00:04:57.834 --> 00:04:59.154
+we're going to try to fit it,
+
+00:04:59.154 --> 00:05:00.649
+and if it doesn't work,
+
+00:05:00.649 --> 00:05:01.949
+it should tell us so.
+
+00:05:01.949 --> 00:05:03.589
+Well, we didn't get that print statement,
+
+00:05:03.589 --> 00:05:06.389
+so that means it didn't break.
+
+00:05:06.389 --> 00:05:10.769
+So, that's A and C. And I guess Python,
+
+00:05:10.769 --> 00:05:15.849
+being magic, is as good a reason as any for us to call this a success.
+
+00:05:15.850 --> 00:05:20.990
+Then it says use lm_2 to predict y_2_test response values,
+
+00:05:20.990 --> 00:05:22.790
+and then obtain the r-squared.
+
+00:05:22.790 --> 00:05:27.069
+So, LM2 to is the model that we want to use,
+
+00:05:27.069 --> 00:05:28.485
+and we want to predict,
+
+00:05:28.485 --> 00:05:30.814
+and when we predict what we need to use,
+
+00:05:30.814 --> 00:05:33.245
+is we need to use the X,
+
+00:05:33.245 --> 00:05:37.489
+and then we're basically passing all of those inputs
+
+00:05:37.488 --> 00:05:42.484
+into this model so that it can give us what we think should be the predictions,
+
+00:05:42.485 --> 00:05:45.830
+and then what we want to do is we want to compare those predictions to
+
+00:05:45.829 --> 00:05:55.185
+the actual value and we want to compare it to the y_test_preds.
+
+00:05:55.185 --> 00:05:58.834
+And if we look at that, it looks like here's R-squared value we get.
+
+00:05:58.834 --> 00:06:00.185
+It's almost two percent.
+
+00:06:00.185 --> 00:06:05.014
+So, almost two percent of the variability and the response can be explained by our model,
+
+00:06:05.014 --> 00:06:08.649
+and then it looks like that matches the solution,
+
+00:06:08.649 --> 00:06:11.154
+and then there's just this last part.
+
+00:06:11.154 --> 00:06:14.059
+So, the number of reported salaries in the original dataset.
+
+00:06:14.060 --> 00:06:18.720
+So, we can take a look at that in the original dataset,
+
+00:06:18.720 --> 00:06:24.680
+and so not null should give us basically trues,
+
+00:06:24.680 --> 00:06:26.035
+so if they're not null,
+
+00:06:26.035 --> 00:06:27.990
+and if we look at how many there are,
+
+00:06:27.990 --> 00:06:29.829
+it looks like there's 5,009,
+
+00:06:29.829 --> 00:06:35.454
+so that's an A, and then we can get rid of this letter so this doesn't break.
+
+00:06:35.454 --> 00:06:38.664
+The number of salaries predicted using our model,
+
+00:06:38.665 --> 00:06:45.239
+so if we look at the length of y_test_pred,
+
+00:06:45.529 --> 00:06:48.449
+y_test_pred is not defined.
+
+00:06:48.449 --> 00:06:51.709
+Preds, y_test_preds.
+
+00:06:51.709 --> 00:06:54.689
+It looks like it's 645.
+
+00:06:54.689 --> 00:06:56.629
+So at least in the test set,
+
+00:06:56.629 --> 00:06:59.870
+the number of salaries that we are predicting was 645, right?
+
+00:06:59.870 --> 00:07:04.639
+So, if we take this plus the length
+
+00:07:04.639 --> 00:07:08.939
+of y_train,
+
+00:07:09.790 --> 00:07:20.740
+y_2_train, y_2_test.
+
+00:07:20.740 --> 00:07:24.884
+So we're predicting 2147 of them,
+
+00:07:24.884 --> 00:07:29.404
+so we're still dropping a whole bunch from the total number of salaries here,
+
+00:07:29.404 --> 00:07:31.549
+so we're not predicting for all of the salaries.
+
+00:07:31.550 --> 00:07:36.160
+Basically if they had any missing values in any of the columns we ended up dropping them,
+
+00:07:36.160 --> 00:07:40.620
+so we're still missing about 3,000 of the salaries that we could have had.
+
+00:07:40.620 --> 00:07:45.920
+Okay, if an individual does not rate stack overflow but has a salary.
+
+00:07:45.920 --> 00:07:47.879
+We still want to predict that salary.
+
+00:07:47.879 --> 00:07:49.459
+We're not currently doing it,
+
+00:07:49.459 --> 00:07:50.979
+as we can see here.
+
+00:07:50.980 --> 00:07:53.819
+We're not currently predicting them.
+
+00:07:54.459 --> 00:07:58.219
+So, we still would like to predict that salary and if
+
+00:07:58.220 --> 00:08:01.490
+an individual does not have a job satisfaction but has a salary,
+
+00:08:01.490 --> 00:08:03.965
+we still want to be able to predict that.
+
+00:08:03.964 --> 00:08:07.319
+These are D's and not C's.
+
+00:08:07.319 --> 00:08:09.930
+So, we still want to predict those salaries,
+
+00:08:09.930 --> 00:08:12.610
+we just aren't able to with current model,
+
+00:08:12.610 --> 00:08:17.319
+and then our model predicts salaries for these two individuals described above.
+
+00:08:17.319 --> 00:08:23.279
+So, for these two individuals here and that is false.
+
+00:08:23.279 --> 00:08:26.824
+So, unfortunately right now we're dropping a whole bunch of values still
+
+00:08:26.824 --> 00:08:30.709
+and so in upcoming sections we'll look at how we can impute values,
+
+00:08:30.709 --> 00:08:33.514
+and then we can get predictions for all of these.
+
+00:08:33.514 --> 00:08:36.409
+But there are also some things that we need to
+
+00:08:36.409 --> 00:08:39.600
+be careful of when we start doing imputation.
+

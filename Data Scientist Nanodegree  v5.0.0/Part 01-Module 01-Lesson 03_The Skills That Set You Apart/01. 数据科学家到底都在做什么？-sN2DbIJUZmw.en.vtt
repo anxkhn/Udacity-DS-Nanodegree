@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.540
+You're about to start this data scientists nanodegree program,
+
+00:00:03.540 --> 00:00:05.019
+but before we get started,
+
+00:00:05.019 --> 00:00:09.914
+it's probably important to talk a little bit about what do data scientists actually do.
+
+00:00:09.914 --> 00:00:11.454
+So, to do that,
+
+00:00:11.455 --> 00:00:16.065
+Juno and I both have experience working as data scientists in practice,
+
+00:00:16.065 --> 00:00:18.420
+and Juno, can you give the students
+
+00:00:18.420 --> 00:00:21.485
+a little insight into what your role look like as a data scientist?
+
+00:00:21.484 --> 00:00:24.390
+Sure. So I was a data scientist at a smaller startup.
+
+00:00:24.390 --> 00:00:25.894
+So, I had a few different roles.
+
+00:00:25.894 --> 00:00:29.355
+About 20 percent of my role was more in business analytics,
+
+00:00:29.355 --> 00:00:32.250
+and actually I worked a lot with the software development team,
+
+00:00:32.250 --> 00:00:34.880
+to make sure that before I did any data science,
+
+00:00:34.880 --> 00:00:39.929
+the data that was being recorded was clean and standardized so that it made sense.
+
+00:00:39.929 --> 00:00:42.530
+I gave things like activity reports on
+
+00:00:42.530 --> 00:00:45.255
+what kind of users and products were happening at the time.
+
+00:00:45.255 --> 00:00:49.280
+About 80 percent of my role was on longer-term data science projects,
+
+00:00:49.280 --> 00:00:51.590
+where I worked on a recommender system,
+
+00:00:51.590 --> 00:00:53.855
+that recommended different products to users,
+
+00:00:53.854 --> 00:00:58.250
+and also just making sense of the information we have in our database,
+
+00:00:58.250 --> 00:01:01.140
+such as clusters of similar products we had,
+
+00:01:01.140 --> 00:01:03.350
+or insights for our users.
+
+00:01:03.350 --> 00:01:06.180
+I heard your role as a data scientist was a bit different,
+
+00:01:06.180 --> 00:01:07.730
+could you share a little bit about that?
+
+00:01:07.730 --> 00:01:11.219
+Yes. So, I was a data scientist at a larger company,
+
+00:01:11.219 --> 00:01:15.709
+and the communication and your role sounds like it was mostly with software developers.
+
+00:01:15.709 --> 00:01:15.949
+Yeah.
+
+00:01:15.950 --> 00:01:17.730
+Mine was very customer facing,
+
+00:01:17.730 --> 00:01:19.299
+and so that meant,
+
+00:01:19.299 --> 00:01:22.200
+most of the time my audience was a less technical audience,
+
+00:01:22.200 --> 00:01:24.540
+and it was important for me to make sure that they
+
+00:01:24.540 --> 00:01:29.070
+understood what they were going to get from what we were working on,
+
+00:01:29.069 --> 00:01:30.479
+from a business perspective.
+
+00:01:30.480 --> 00:01:33.359
+The tools that we were using were probably very similar.
+
+00:01:33.359 --> 00:01:37.500
+I used things related to natural language processing and clustering,
+
+00:01:37.500 --> 00:01:39.969
+used sort of a Python toolkit,
+
+00:01:39.969 --> 00:01:42.525
+something that students will be learning in this program.
+
+00:01:42.525 --> 00:01:47.620
+From there, it's probably important that we give more insight than just ours.
+
+00:01:47.620 --> 00:01:50.030
+So, you'll hear from some of our partners,
+
+00:01:50.030 --> 00:01:53.500
+and they'll give you some insight into what they do as data scientists
+
+00:01:53.500 --> 00:01:57.400
+as well as what they look for in candidates when they're hiring data scientists.
+

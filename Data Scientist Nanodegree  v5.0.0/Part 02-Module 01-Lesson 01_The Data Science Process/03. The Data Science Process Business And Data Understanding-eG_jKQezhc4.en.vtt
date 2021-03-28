@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.560 --> 00:00:05.759
+In the previous video,
+
+00:00:05.759 --> 00:00:09.925
+you received a quick look at the six steps of the CRISP-DM process.
+
+00:00:09.925 --> 00:00:14.700
+Let's take a look at the first two steps of this process in a bit more detail.
+
+00:00:14.699 --> 00:00:18.509
+First, CRISP-DM says you need business understanding,
+
+00:00:18.510 --> 00:00:22.660
+but I think of data science as being more general than just business context,
+
+00:00:22.660 --> 00:00:24.859
+you need to understand the problem.
+
+00:00:24.859 --> 00:00:27.359
+Are you interested in acquiring new customers?
+
+00:00:27.359 --> 00:00:28.829
+Are you interested in assessing of
+
+00:00:28.829 --> 00:00:32.189
+a new cancer treatment outperforms existing treatments?
+
+00:00:32.189 --> 00:00:34.849
+Are you interested in finding a better way to communicate,
+
+00:00:34.850 --> 00:00:37.649
+or travel, or retain information?
+
+00:00:37.649 --> 00:00:41.699
+Each of these questions falls under business understanding.
+
+00:00:41.700 --> 00:00:46.150
+The second step of the CRISP-DM process is data understanding.
+
+00:00:46.149 --> 00:00:48.710
+This means you need to gain an understanding of
+
+00:00:48.710 --> 00:00:51.439
+the data necessary to answer your question.
+
+00:00:51.439 --> 00:00:54.500
+Sometimes you might have a mountain of data at
+
+00:00:54.500 --> 00:00:57.895
+your disposal that you need to dig through to find insights.
+
+00:00:57.895 --> 00:01:00.690
+Other times you may need to collect data,
+
+00:01:00.689 --> 00:01:03.409
+which means you will have to understand what kind of
+
+00:01:03.409 --> 00:01:07.179
+data we'll be able to provide you with the insights you need.
+
+00:01:07.180 --> 00:01:10.010
+This is often difficult to know ahead of time,
+
+00:01:10.010 --> 00:01:14.750
+which is why businesses tend to collect all the data they can first,
+
+00:01:14.750 --> 00:01:19.680
+so they can later identify which data they need to use to find their insights.
+

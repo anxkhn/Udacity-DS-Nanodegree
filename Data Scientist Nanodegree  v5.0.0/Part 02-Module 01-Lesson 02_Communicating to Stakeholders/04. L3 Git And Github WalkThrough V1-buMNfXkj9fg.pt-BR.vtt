@@ -1,0 +1,171 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.174 --> 00:00:03.661
+Neste vídeo, veremos
+como publicar o trabalho
+
+00:00:03.694 --> 00:00:06.084
+para que outras pessoas
+o vejam no GitHub.
+
+00:00:06.117 --> 00:00:09.860
+Nesta primeira parte,
+vemos que, nos meus repositórios,
+
+00:00:09.893 --> 00:00:11.844
+tenho um projeto stackoverflow
+
+00:00:11.877 --> 00:00:15.237
+relacionado às informações
+que vimos na aula anterior.
+
+00:00:15.270 --> 00:00:17.884
+Para postar meu trabalho
+como vemos aqui,
+
+00:00:17.917 --> 00:00:22.296
+segui alguns passos
+que você seguirá comigo.
+
+00:00:22.329 --> 00:00:24.695
+Se voltarmos para a página
+dos repositórios,
+
+00:00:24.728 --> 00:00:27.632
+veremos que há um botão
+aqui chamado "New".
+
+00:00:27.665 --> 00:00:29.288
+Clicando no botão,
+
+00:00:29.321 --> 00:00:32.567
+podemos digitar o nome
+do repositório que desejamos criar
+
+00:00:32.600 --> 00:00:34.192
+em relação ao projeto,
+
+00:00:34.225 --> 00:00:36.895
+uma breve descrição
+e, se a conta for paga,
+
+00:00:36.928 --> 00:00:40.993
+podemos escolher entre ser
+um repositório privado ou público.
+
+00:00:43.286 --> 00:00:46.026
+Depois de criarmos o repositório,
+veremos esta página
+
+00:00:46.059 --> 00:00:49.958
+com instruções sobre
+como começar na máquina local.
+
+00:00:49.991 --> 00:00:54.903
+Copiando esta parte aqui
+ou clicando na parte do README,
+
+00:00:54.936 --> 00:00:57.874
+podemos criar um repositório.
+
+00:00:57.907 --> 00:01:00.113
+Vou copiar este URL
+
+00:01:00.146 --> 00:01:02.603
+e, na máquina local -
+
+00:01:02.636 --> 00:01:07.489
+estou no meu desktop -
+usando git clone com o URL,
+
+00:01:07.522 --> 00:01:10.434
+posso clonar este repositório
+para o meu local.
+
+00:01:10.467 --> 00:01:13.146
+Vemos um aviso que diz
+que não há nada aqui,
+
+00:01:13.179 --> 00:01:15.289
+pois estamos começando
+
+00:01:15.322 --> 00:01:19.393
+e moveremos os arquivos de projeto
+para o repositório depois.
+
+00:01:19.426 --> 00:01:24.194
+Project-1 é um lugar
+para onde podemos seguir,
+
+00:01:24.227 --> 00:01:26.304
+que está vazio.
+
+00:01:26.337 --> 00:01:28.604
+Vamos supor
+que adicionemos alguns arquivos.
+
+00:01:28.637 --> 00:01:30.257
+Agora temos esses arquivos
+
+00:01:30.290 --> 00:01:32.537
+e podemos adicioná-los
+ao projeto.
+
+00:01:32.570 --> 00:01:34.986
+Vamos usar o comando
+git add.
+
+00:01:35.019 --> 00:01:38.889
+Usamos asterisco para adicionar
+tudo o que está no repositório.
+
+00:01:38.922 --> 00:01:42.041
+Caso contrário,
+podemos listá-los individualmente.
+
+00:01:42.074 --> 00:01:43.403
+Se verificarmos o status,
+
+00:01:43.436 --> 00:01:45.706
+veremos que ainda
+não há commits.
+
+00:01:45.739 --> 00:01:47.634
+Podemos fazer isso assim
+
+00:01:47.667 --> 00:01:52.161
+e então adicionar "-m" para criar
+a mensagem ao mesmo tempo.
+
+00:01:52.194 --> 00:01:54.049
+Vemos que houve o commit,
+
+00:01:54.082 --> 00:01:58.074
+porém, os arquivos não existem
+neste repositório remoto.
+
+00:01:58.107 --> 00:02:02.290
+Podemos adicioná-los a este
+repositório acessível a todos
+
+00:02:02.323 --> 00:02:04.802
+usando o comando git push.
+
+00:02:04.835 --> 00:02:08.106
+Depois disso, teremos uma página
+semelhante a esta,
+
+00:02:08.139 --> 00:02:13.265
+na qual veremos cada um dos arquivos
+colocados aqui.
+
+00:02:13.298 --> 00:02:16.065
+A página pode solicitar
+o nome de usuário e senha
+
+00:02:16.098 --> 00:02:18.964
+relacionados ao GitHub
+para concluir o processo final.
+

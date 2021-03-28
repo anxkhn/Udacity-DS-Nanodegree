@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+Okay, so you now have some experience working
+
+00:00:02.910 --> 00:00:06.935
+with missing values and impeding based on some common methods.
+
+00:00:06.934 --> 00:00:10.469
+And in this video we'll go through,
+
+00:00:10.470 --> 00:00:12.675
+and see if we can use those imputation methods,
+
+00:00:12.675 --> 00:00:16.365
+to do better than the dropping method that we used before.
+
+00:00:16.364 --> 00:00:20.549
+And one big problem with dropping that we had before,
+
+00:00:20.550 --> 00:00:24.074
+was that we didn't actually predict on all of
+
+00:00:24.074 --> 00:00:30.179
+the values because if you didn't have a particular value in the X matrix,
+
+00:00:30.179 --> 00:00:32.564
+then we basically just said we can't predict on you.
+
+00:00:32.564 --> 00:00:34.974
+We're just going to drop you from the data set.
+
+00:00:34.975 --> 00:00:40.170
+Whereas with imputation we can put in something into those X values,
+
+00:00:40.170 --> 00:00:43.945
+and therefore predict a particular response.
+
+00:00:43.945 --> 00:00:47.939
+So, here's sort of the results that we had from before,
+
+00:00:47.939 --> 00:00:51.006
+using the dropping method,
+
+00:00:51.006 --> 00:00:57.754
+and now let's see if we can't do better by following the directions here.
+
+00:00:57.755 --> 00:01:04.725
+So using the data frame from dropping the missing values according to the salary,
+
+00:01:04.724 --> 00:01:07.484
+fill all the missing values with the mean,
+
+00:01:07.484 --> 00:01:10.250
+drop the rows with missing salaries.
+
+00:01:10.250 --> 00:01:13.905
+So using the num_vars data frame,
+
+00:01:13.905 --> 00:01:16.034
+drop the missing values,
+
+00:01:16.034 --> 00:01:21.689
+drop the rows with missing values of the response.
+
+00:01:21.689 --> 00:01:25.265
+So, when you use num_vars,
+
+00:01:25.265 --> 00:01:33.450
+we want to drop NA on the subset equal to the salary,
+
+00:01:33.450 --> 00:01:37.189
+and we want to drop the rows associated with that.
+
+00:01:37.189 --> 00:01:39.524
+So X equals zero.
+
+00:01:39.525 --> 00:01:42.045
+So drop the rows with missing salaries,
+
+00:01:42.045 --> 00:01:46.045
+and then if we look at the results, okay that looks okay.
+
+00:01:46.045 --> 00:01:48.135
+And then we can double check that that's right.
+
+00:01:48.135 --> 00:01:54.510
+And here we want to fill in all of these NAs with the mean.
+
+00:01:54.510 --> 00:01:57.050
+So let's see if we can,
+
+00:01:57.049 --> 00:02:00.375
+so we can use what we did before.
+
+00:02:00.375 --> 00:02:05.219
+So I'm just going to do fill_mean equals
+
+00:02:05.219 --> 00:02:14.397
+lambda col: col.fillna(col.mean).
+
+00:02:14.397 --> 00:02:17.290
+So if we take the mean of that column,
+
+00:02:17.290 --> 00:02:20.614
+we fill it into that column, I think that should work.
+
+00:02:20.614 --> 00:02:38.414
+And so if we do this with drop_sal_df.apply(fill_mean, axis=1).
+
+00:02:38.414 --> 00:02:41.655
+So it looks like that worked.
+
+00:02:41.655 --> 00:02:42.840
+That wasn't what we expected,
+
+00:02:42.840 --> 00:02:45.254
+lets try axis equals zero.
+
+00:02:45.254 --> 00:02:47.299
+There we go.
+
+00:02:47.300 --> 00:02:50.210
+Yeah, so axis equals zero.
+
+00:02:50.210 --> 00:02:53.724
+We'll actually take the mean of the columns which is kind of strange,
+
+00:02:53.724 --> 00:02:56.634
+but I always get those confused.
+
+00:02:56.634 --> 00:02:58.689
+So if we take axis equals zero.
+
+00:02:58.689 --> 00:03:02.658
+We can see that we're filling in, let's see.
+
+00:03:02.658 --> 00:03:03.883
+So these shouldn't have changed,
+
+00:03:03.883 --> 00:03:07.719
+we're taking the average number of hours per week,
+
+00:03:07.719 --> 00:03:11.759
+that people work which is apparently two point four four but
+
+00:03:11.759 --> 00:03:15.891
+if axis equals one, we should see.
+
+00:03:15.891 --> 00:03:18.879
+Yeah, so this doesn't really make sense,
+
+00:03:18.879 --> 00:03:21.210
+28,000 hours per week.
+
+00:03:21.210 --> 00:03:22.985
+That would be rough,
+
+00:03:22.985 --> 00:03:25.098
+it doesn't make sense.
+
+00:03:25.098 --> 00:03:27.030
+So when we did this,
+
+00:03:27.030 --> 00:03:29.844
+we're getting the average by the columns.
+
+00:03:29.844 --> 00:03:31.419
+And now it says,
+
+00:03:31.419 --> 00:03:35.254
+use fill_df to predict the salary for the quantitative variable.
+
+00:03:35.254 --> 00:03:39.954
+So the idea is now that we filled in all of these missing points,
+
+00:03:39.955 --> 00:03:43.760
+unlike what we had before where we had to drop all of these,
+
+00:03:43.759 --> 00:03:46.294
+we should now be able to predict the salaries.
+
+00:03:46.294 --> 00:03:49.000
+Whereas before, our earlier model couldn't
+
+00:03:49.000 --> 00:03:52.745
+predict the salaries because we had missing values here and here.
+
+00:03:52.745 --> 00:03:56.620
+And so we'd actually end up dropping all of these as well.
+
+00:03:56.620 --> 00:03:59.200
+But now we have values filled in for those,
+
+00:03:59.199 --> 00:04:04.030
+even if they're just averages for those particular columns we should be able to predict.
+
+00:04:04.030 --> 00:04:08.069
+So split into explanatory and response.
+
+00:04:08.069 --> 00:04:15.549
+So I'm just going to call X equal to fill_df and we want just the X variables.
+
+00:04:15.550 --> 00:04:23.816
+And then Y equal to fill_df_['salary'].
+
+00:04:23.815 --> 00:04:28.750
+So here we're grabbing those X variables then we are pulling off the response,
+
+00:04:28.750 --> 00:04:31.420
+and then we want to split this into training and test.
+
+00:04:31.420 --> 00:04:37.610
+So I always forget how this works and luckily there's an example up here.
+
+00:04:37.610 --> 00:04:41.199
+And most of this should actually work the same.
+
+00:04:41.199 --> 00:04:44.289
+So once we call it X and Y,
+
+00:04:44.290 --> 00:04:46.405
+then X and Y get past to this,
+
+00:04:46.404 --> 00:04:48.454
+this happens, this happens,
+
+00:04:48.454 --> 00:04:50.074
+all of this stuff happens.
+
+00:04:50.074 --> 00:04:53.043
+And if we label it all the same, yes,
+
+00:04:53.043 --> 00:04:56.057
+so they call it R-squared score.
+
+00:04:56.057 --> 00:04:57.935
+So we can get this,
+
+00:04:57.935 --> 00:05:00.490
+and then they want that length_Y_test,
+
+00:05:00.490 --> 00:05:10.995
+so len(y_test_preds), and the R squared value should be this.
+
+00:05:10.995 --> 00:05:16.393
+So these are basically the two parts that are in this string they wanted.
+
+00:05:16.392 --> 00:05:20.719
+And we still need to predict and score it.
+
+00:05:20.720 --> 00:05:28.535
+Okay, so predict and score, and then they also want the length stored in here.
+
+00:05:28.535 --> 00:05:31.280
+I'm just going to put that all into this part.
+
+00:05:31.279 --> 00:05:38.514
+So it looks like we're predicting on 1,503 values which is more than the 645 from before.
+
+00:05:38.514 --> 00:05:41.009
+And this only had
+
+00:05:41.009 --> 00:05:47.000
+2% of the variability explained by the response where now we're getting 3.2%.
+

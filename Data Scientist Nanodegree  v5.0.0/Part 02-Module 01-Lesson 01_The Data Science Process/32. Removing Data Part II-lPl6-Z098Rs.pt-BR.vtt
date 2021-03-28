@@ -1,0 +1,545 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.410
+Você já sabe ajustar um modelo
+removendo linhas com dados ausentes,
+
+00:00:04.443 --> 00:00:07.285
+e isso é ótimo, porque agora temos
+modelos que não quebram.
+
+00:00:07.318 --> 00:00:10.740
+Mas isso significa que observações
+futuras com esses dados ausentes
+
+00:00:10.773 --> 00:00:12.734
+nós não vamos
+conseguir prever.
+
+00:00:12.767 --> 00:00:18.030
+Neste notebook, vamos falar disso
+e responder algumas perguntas.
+
+00:00:18.596 --> 00:00:21.597
+Eu já li os dados,
+e você pode ver
+
+00:00:21.630 --> 00:00:24.580
+que há vários dados ausentes
+nas colunas quantitativas.
+
+00:00:24.613 --> 00:00:27.860
+Aqui diz: "Qual proporção
+de indivíduos no conjunto de dados
+
+00:00:27.893 --> 00:00:29.926
+informou o salário?"
+
+00:00:29.959 --> 00:00:31.104
+Então queremos...
+
+00:00:31.730 --> 00:00:36.185
+Só vou pegar o num_vars
+e Salary,
+
+00:00:36.218 --> 00:00:39.360
+isnull().mean,
+
+00:00:39.393 --> 00:00:44.370
+e tirar 1 menos isso.
+
+00:00:45.258 --> 00:00:51.250
+Isnull nos dá verdadeiros e falsos
+se uma cela for nula nisso.
+
+00:00:51.283 --> 00:00:53.735
+Então recebemos um vetor
+de verdadeiros e falsos,
+
+00:00:53.768 --> 00:00:56.445
+e tirar a média
+nos dá a proporção,
+
+00:00:56.478 --> 00:01:00.594
+e tirar 1 menos essa proporção
+deve dar a proporção.
+
+00:01:00.627 --> 00:01:06.769
+Então parece aproximadamente 26,2%,
+e parece que é o mesmo aqui.
+
+00:01:06.802 --> 00:01:11.759
+A próxima questão é: "Remova linhas
+associadas a valores NaN em Salary,
+
+00:01:11.792 --> 00:01:14.900
+e somente Salary do DataFrame
+com num_vars."
+
+00:01:14.933 --> 00:01:19.924
+Se você for em num_vars,
+há um "dropna".
+
+00:01:19.957 --> 00:01:23.069
+Vimos esse subconjunto
+que pode ser bem útil,
+
+00:01:23.102 --> 00:01:27.910
+em que podemos inserir o número
+de colunas que quisermos
+
+00:01:27.943 --> 00:01:31.189
+e procurar por NaNs
+nessas colunas específicas.
+
+00:01:31.222 --> 00:01:37.004
+How é any, então vou deixar isso
+e o axis=0.
+
+00:01:37.037 --> 00:01:41.284
+Podemos ver que o que recebemos
+só informa que eles têm salários,
+
+00:01:41.317 --> 00:01:45.060
+mesmo havendo NaNs
+aqui e aqui.
+
+00:01:45.093 --> 00:01:48.019
+Parece que esses
+se alinharam, certo?
+
+00:01:48.052 --> 00:01:51.229
+Parece que isso também
+combina com a solução,
+
+00:01:51.262 --> 00:01:53.880
+então, vamos ver aqui
+onde diz:
+
+00:01:53.913 --> 00:01:58.022
+"Usando sal_rm, crie X
+para ser um DataFrame
+
+00:01:58.055 --> 00:02:00.722
+(matriz) de todos
+os recursos numéricos."
+
+00:02:00.755 --> 00:02:03.575
+Então usamos sal_rm
+
+00:02:03.608 --> 00:02:07.174
+criar x para ser um DataFrame
+com todos os recursos numéricos.
+
+00:02:07.207 --> 00:02:09.585
+Eu vou só roubar isso
+lá de cima.
+
+00:02:09.618 --> 00:02:14.173
+Basicamente,
+esses são os recursos numéricos e,
+
+00:02:14.206 --> 00:02:17.330
+se tirarmos essa parte,
+
+00:02:17.363 --> 00:02:21.592
+a parte que queremos prever
+é o Salary
+
+00:02:21.625 --> 00:02:24.678
+e a forma
+como vamos fazer isso
+
+00:02:24.711 --> 00:02:29.044
+é com o resto dos recursos,
+certo?
+
+00:02:29.077 --> 00:02:32.965
+Então vamos inserir esses
+como nossas variáveis x
+
+00:02:32.998 --> 00:02:34.495
+e, então, vamos
+prever o salário.
+
+00:02:34.528 --> 00:02:38.629
+Parece que aqui estão se dividindo
+em treinamento e teste.
+
+00:02:38.662 --> 00:02:41.865
+Usando um tamanho de teste de 30%
+e colocando um estado aleatório
+
+00:02:41.898 --> 00:02:43.939
+e, então, encaixando
+um modelo linear
+
+00:02:43.972 --> 00:02:46.550
+onde basicamente subtraímos
+a média e dividimos
+
+00:02:46.583 --> 00:02:49.580
+pelo desvio padrão
+para cada coluna.
+
+00:02:49.613 --> 00:02:51.524
+Então, vamos tentar
+ajustar o modelo
+
+00:02:51.557 --> 00:02:53.677
+ao nosso conjunto
+de treinamento e de teste.
+
+00:02:53.710 --> 00:02:55.382
+E, como pode ver,
+se não funcionar,
+
+00:02:55.415 --> 00:02:57.680
+aparece essa exceção
+que diz que não funciona.
+
+00:02:59.761 --> 00:03:03.685
+Motivos para isso podem ser
+"Python às vezes quebra sem motivo."
+
+00:03:04.155 --> 00:03:06.949
+Quando estou frustrado,
+às vezes, isso parece verdade,
+
+00:03:06.982 --> 00:03:10.399
+mas não acho que seja
+o caso aqui.
+
+00:03:10.432 --> 00:03:12.780
+"Funcionou por causa
+da mágica do Python."
+
+00:03:12.813 --> 00:03:15.360
+Seria ótimo,
+mas não funcionou.
+
+00:03:16.075 --> 00:03:18.990
+E o C: "Quebrou porque ainda temos
+dados ausentes em X."
+
+00:03:19.023 --> 00:03:21.170
+Tentamos ajustar
+esse modelo e vimos
+
+00:03:21.203 --> 00:03:23.869
+que aqui ainda temos
+esses dados ausentes,
+
+00:03:23.902 --> 00:03:27.064
+e parece que não funcionou
+por causa deles.
+
+00:03:27.097 --> 00:03:29.719
+Então eu vou até C.
+
+00:03:29.752 --> 00:03:31.580
+Há dados ausentes
+na matriz x, certo?
+
+00:03:31.613 --> 00:03:35.339
+Há dados ausentes
+nessas colunas aqui
+
+00:03:35.372 --> 00:03:38.219
+quebrando nossa modelagem.
+
+00:03:38.252 --> 00:03:47.294
+all_rm quer ser um DataFrame
+com linhas para...
+
+00:03:47.327 --> 00:03:53.496
+Na verdade, isso está sugerindo
+que deveria ser com linhas removidas
+
+00:03:53.529 --> 00:03:55.820
+de qualquer coluna
+com dados ausentes, certo?
+
+00:03:55.853 --> 00:03:58.474
+Então os valores NaN
+em qualquer coluna.
+
+00:03:58.507 --> 00:04:03.159
+Se há valores NaN em qualquer
+coluna remova, certo?
+
+00:04:03.192 --> 00:04:11.884
+Isso é um DataFrame com colunas
+para num_vars.dropna,
+
+00:04:11.917 --> 00:04:14.004
+e acho que podemos usar todos
+os padrões.
+
+00:04:14.037 --> 00:04:19.631
+Vou fazer o mais seguro,
+axis=0.
+
+00:04:19.664 --> 00:04:20.755
+Legal.
+
+00:04:20.788 --> 00:04:23.639
+E, ao executarmos
+e olharmos para os resultados,
+
+00:04:23.672 --> 00:04:25.669
+diz: "Bom trabalho.
+Parece certo."
+
+00:04:25.702 --> 00:04:28.580
+E parece que, se não
+especificássemos nada,
+
+00:04:28.613 --> 00:04:31.144
+ele teria só deletado
+os que pensamos.
+
+00:04:31.177 --> 00:04:36.942
+E agora usamos isso.
+Esse all_rm. Vamos usá-lo.
+
+00:04:36.975 --> 00:04:39.769
+Novamente, estamos só
+colocando no subconjunto.
+
+00:04:41.537 --> 00:04:44.314
+Queremos isso, essa vai ser
+nossa matriz x novamente
+
+00:04:44.347 --> 00:04:47.759
+e, então, vamos tentar
+prever o Salary.
+
+00:04:49.891 --> 00:04:53.420
+Vamos novamente executar
+o mesmo código de antes.
+
+00:04:53.453 --> 00:04:55.305
+Fazer um corte
+de treinamento e teste.
+
+00:04:55.338 --> 00:04:58.914
+Vamos instanciar nosso modelo
+e tentar ajustá-lo,
+
+00:04:59.381 --> 00:05:01.949
+e, se não funcionar,
+ele vai nos dizer.
+
+00:05:01.982 --> 00:05:06.389
+Bom, não apareceu a frase escrita,
+isso significa que não quebrou.
+
+00:05:06.422 --> 00:05:11.546
+Então são o A e o C.
+E acho que a magia do Python
+
+00:05:11.579 --> 00:05:15.849
+é tão bom motivo como qualquer outro
+para considerarmos um sucesso.
+
+00:05:15.882 --> 00:05:20.990
+Então diz: "Use lm_2 para prever
+valores de resposta de y_2_test,
+
+00:05:21.023 --> 00:05:22.790
+e, então, obtenha o R²."
+
+00:05:22.823 --> 00:05:28.485
+lm_2 é o modelo que queremos
+usar e prever,
+
+00:05:28.518 --> 00:05:33.245
+e, ao prever o que precisamos usar,
+precisamos do x,
+
+00:05:33.278 --> 00:05:38.886
+e basicamente passamos
+todos esses inputs pelo modelo
+
+00:05:38.919 --> 00:05:42.484
+para ele dar o que achamos
+que seriam as predições.
+
+00:05:42.517 --> 00:05:46.841
+Depois, queremos comparar
+essas predições ao valor real,
+
+00:05:46.874 --> 00:05:50.694
+então y_2_test
+
+00:05:50.727 --> 00:05:55.185
+e comparar ao y_test_preds.
+
+00:05:55.218 --> 00:06:00.185
+E, ao olharmos, parece que aqui está
+o valor R² que obtemos. É quase 2%.
+
+00:06:00.218 --> 00:06:03.363
+Quase 2% de variabilidade
+na resposta
+
+00:06:03.396 --> 00:06:05.263
+podem ser explicados
+por nosso modelo,
+
+00:06:05.296 --> 00:06:08.649
+e parece que combina
+com a solução.
+
+00:06:09.285 --> 00:06:11.154
+E, então, há só
+essa última parte.
+
+00:06:11.187 --> 00:06:14.059
+O número de salários informados
+no conjunto de dados original,
+
+00:06:14.092 --> 00:06:18.720
+vamos olhar
+no conjunto original...
+
+00:06:21.231 --> 00:06:26.035
+Então notnull deve nos dar a maioria
+verdadeiros, se eles não são nulos.
+
+00:06:26.068 --> 00:06:29.829
+Se olharmos quantos há,
+parece que há 5.009,
+
+00:06:29.862 --> 00:06:35.454
+isso é um A, e podemos tirar
+essa letra para não quebrar.
+
+00:06:35.487 --> 00:06:38.664
+O número de salários previstos
+usando nosso modelo...
+
+00:06:38.697 --> 00:06:45.239
+Se olharmos para o comprimento
+de y_test_pred,
+
+00:06:45.529 --> 00:06:48.449
+y_test_pred
+não está definido.
+
+00:06:48.482 --> 00:06:51.709
+Preds,
+y_test_preds.
+
+00:06:52.274 --> 00:06:54.689
+Parece que é 645.
+
+00:06:55.208 --> 00:06:57.770
+Pelo menos no conjunto de teste
+o número de salários
+
+00:06:57.803 --> 00:06:59.870
+que estávamos prevendo
+era 645, certo?
+
+00:06:59.903 --> 00:07:08.939
+Se pegarmos isso
+mais o comprimento de y_train,
+
+00:07:08.972 --> 00:07:13.215
+y_2_train,
+
+00:07:15.035 --> 00:07:20.740
+y_2_test.
+
+00:07:22.270 --> 00:07:24.884
+Estamos prevendo 2.147,
+
+00:07:24.917 --> 00:07:29.404
+ainda tiramos vários
+do número total de salários.
+
+00:07:29.437 --> 00:07:31.549
+Não vamos prever
+todos os salários.
+
+00:07:31.582 --> 00:07:35.030
+Basicamente se havia dados ausentes
+em alguma das colunas,
+
+00:07:35.063 --> 00:07:36.460
+elas acabaram
+sendo apagadas.
+
+00:07:36.493 --> 00:07:40.620
+Ainda faltam uns 3.000 salários
+que poderíamos ter.
+
+00:07:40.653 --> 00:07:45.920
+Se o indivíduo não tem
+o Stack Overflow mas tem um salário,
+
+00:07:45.953 --> 00:07:47.879
+ainda queremos prevê-lo.
+
+00:07:47.912 --> 00:07:50.979
+Não estamos fazendo isso no momento,
+como podemos ver aqui.
+
+00:07:51.012 --> 00:07:53.819
+Não estamos prevendo
+no momento.
+
+00:07:55.957 --> 00:07:58.219
+Ainda gostaríamos
+de prever esse salário,
+
+00:07:58.252 --> 00:08:01.490
+e se o indivíduo não tem
+job_satisfaction mas tem um salário,
+
+00:08:01.523 --> 00:08:03.965
+ainda queremos prever isso.
+
+00:08:03.998 --> 00:08:07.319
+Esses são D, e não C.
+
+00:08:08.121 --> 00:08:09.930
+Ainda queremos
+prever esses salários,
+
+00:08:09.963 --> 00:08:12.610
+mas não conseguimos
+com nosso modelo atual.
+
+00:08:12.643 --> 00:08:17.319
+Nosso modelo prevê salários
+para os dois indivíduos acima.
+
+00:08:17.352 --> 00:08:23.279
+Para esses dois indivíduos aqui.
+E isso é falso.
+
+00:08:24.103 --> 00:08:26.923
+Infelizmente agora ainda estamos
+retirando vários valores,
+
+00:08:27.744 --> 00:08:30.709
+então, nas sessões seguintes,
+vamos ver como imputar valores,
+
+00:08:30.742 --> 00:08:33.514
+para podermos ter predições
+para todos eles.
+
+00:08:33.876 --> 00:08:37.001
+Mas também há algumas coisas
+em que precisamos prestar atenção
+
+00:08:37.034 --> 00:08:39.600
+quando começarmos
+a fazer a imputação.
+

@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:06.170 --> 00:00:09.660
+There's not really a typical day as a data scientist.
+
+00:00:09.660 --> 00:00:16.630
+But there's always some component where we are working with the other teams around us,
+
+00:00:16.630 --> 00:00:19.925
+mainly that means the marketing team,
+
+00:00:19.925 --> 00:00:22.450
+or the technology team.
+
+00:00:22.450 --> 00:00:24.370
+You can make the greatest model in the world,
+
+00:00:24.370 --> 00:00:27.050
+but if you can't deliver it,
+
+00:00:27.050 --> 00:00:29.955
+and nobody wants it, then what's the point?
+
+00:00:29.955 --> 00:00:32.005
+There some part of the day that's for writing code,
+
+00:00:32.005 --> 00:00:34.350
+and that's anything from SQL for data exploration,
+
+00:00:34.350 --> 00:00:38.600
+to Python, or Spark for more media work.
+
+00:00:40.430 --> 00:00:43.000
+Two important parts that you're going to wear,
+
+00:00:43.000 --> 00:00:45.310
+you're going to have to end up wearing a couple of hats;
+
+00:00:45.310 --> 00:00:49.045
+one is of course just the technical abilities.
+
+00:00:49.045 --> 00:00:51.550
+So, familiarity with statistics,
+
+00:00:51.550 --> 00:00:54.970
+comfortable with mathematics in general, but the next trick,
+
+00:00:54.970 --> 00:00:59.120
+and this one comes up a lot especially from talking to other mathematicians,
+
+00:00:59.120 --> 00:01:02.500
+the ability to program is essential,
+
+00:01:02.500 --> 00:01:05.290
+it's mainly to gathering and clean your data.
+
+00:01:05.290 --> 00:01:08.960
+Data Science gets its 80 percent data munching,
+
+00:01:08.960 --> 00:01:10.250
+it's 90 percent data munching,
+
+00:01:10.250 --> 00:01:11.510
+less numbers get thrown around,
+
+00:01:11.510 --> 00:01:13.040
+but there's a lot of data munching.
+
+00:01:13.040 --> 00:01:15.890
+Just putting your hands on that data and working with it is
+
+00:01:15.890 --> 00:01:19.925
+something you need to be able to do by yourself to really start to appreciate.
+
+00:01:19.925 --> 00:01:24.650
+Does that mean you have to be a professional programmer in order to do Data Science?
+
+00:01:24.650 --> 00:01:27.260
+I don't consider myself a professional programmer.
+
+00:01:27.260 --> 00:01:29.995
+I've actually no formal training in code,
+
+00:01:29.995 --> 00:01:35.040
+but I have spent a large portion of my life writing code one way or another.
+

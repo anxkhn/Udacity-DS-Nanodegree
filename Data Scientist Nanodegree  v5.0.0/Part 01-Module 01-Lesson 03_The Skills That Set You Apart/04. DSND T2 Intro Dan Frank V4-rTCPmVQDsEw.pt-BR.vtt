@@ -1,0 +1,289 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.231 --> 00:00:03.228
+Do Airbnb, onde você estava
+antes da Coinbase,
+
+00:00:03.261 --> 00:00:07.070
+pode falar sobre...
+
+00:00:07.103 --> 00:00:10.701
+cadeias de comando,
+em termos dos analistas de dados
+
+00:00:10.734 --> 00:00:13.238
+e os tipos de problema
+com os quais eles trabalham,
+
+00:00:13.271 --> 00:00:18.090
+ou cientistas de dados
+que fazem isso ou aquilo,
+
+00:00:18.123 --> 00:00:22.299
+e sobre como você escolhe
+quando está contratando alguém
+
+00:00:22.332 --> 00:00:25.005
+ou o conjunto de habilidades
+que busca nessas pessoas?
+
+00:00:25.038 --> 00:00:27.912
+Uma das coisas que recomendo
+a qualquer um
+
+00:00:27.945 --> 00:00:29.691
+buscando a área
+da ciência de dados
+
+00:00:29.724 --> 00:00:31.695
+é tentar descobrir
+o que isso significa,
+
+00:00:31.728 --> 00:00:34.946
+porque podem ser coisas diferentes,
+e muda a cada empresa
+
+00:00:34.979 --> 00:00:37.365
+que está contratando
+cientistas de dados.
+
+00:00:37.398 --> 00:00:42.165
+Então vou tentar especificar
+um pouco primeiro.
+
+00:00:42.198 --> 00:00:46.971
+Empresas têm cientistas de algoritmo
+ou de aprendizado de máquina.
+
+00:00:47.004 --> 00:00:51.320
+Eles cuidam especificamente
+de um algoritmo muito valioso
+
+00:00:51.353 --> 00:00:53.683
+que a empresa precisa
+para sobreviver.
+
+00:00:53.716 --> 00:00:57.440
+Pode ser, por exemplo,
+um algoritmo de busca.
+
+00:00:57.473 --> 00:00:59.630
+No Airbnb, quando
+se digita um local,
+
+00:00:59.663 --> 00:01:03.950
+aquela lista ordenada é de grande
+influência para o negócio.
+
+00:01:03.983 --> 00:01:07.491
+Há uma equipe de cientistas de dados
+e engenheiros que trabalham nisso.
+
+00:01:07.524 --> 00:01:09.640
+Isso é a maior parte
+do que fazem.
+
+00:01:10.171 --> 00:01:12.295
+Esse tipo de algoritmo
+em ciência de dados
+
+00:01:12.328 --> 00:01:14.287
+ou algoritmos
+em aprendizado de máquina.
+
+00:01:14.320 --> 00:01:18.123
+Há algo que discutimos
+em relação a experimentos,
+
+00:01:18.156 --> 00:01:21.423
+que é: "Estamos dispostos
+a fazer mudanças.
+
+00:01:21.456 --> 00:01:24.670
+O que deveríamos medir, como ter
+certeza de que os dados terminem
+
+00:01:24.703 --> 00:01:26.513
+em um lugar onde
+possam ser medidos?"
+
+00:01:26.546 --> 00:01:29.737
+Esse tipo de função,
+que é um pouco generalista
+
+00:01:29.770 --> 00:01:32.832
+no sentido de que é necessário
+ter experiência em estatística,
+
+00:01:32.865 --> 00:01:35.125
+você precisa saber
+de engenharia de dados
+
+00:01:35.158 --> 00:01:38.370
+e também ter as habilidades
+de comunicação que discutimos antes.
+
+00:01:38.403 --> 00:01:40.890
+Talvez haja até
+uma terceira camada,
+
+00:01:40.923 --> 00:01:45.215
+que é mais concentrada na
+análise de negócios de alto nível,
+
+00:01:45.248 --> 00:01:49.430
+chegando a ser mais próxima da
+análise de planejamento financeiro
+
+00:01:49.463 --> 00:01:52.416
+ou analistas de negócios
+e que podem ser
+
+00:01:52.449 --> 00:01:54.970
+analistas de dados
+ou cientistas de dados,
+
+00:01:55.003 --> 00:01:57.134
+mas nesse momento
+você já está pensando
+
+00:01:57.749 --> 00:02:01.120
+nas métricas com valores altos,
+os cortes certos para essas métricas
+
+00:02:01.153 --> 00:02:05.330
+e em apresentar essas métricas
+para os executivos ou outros líderes
+
+00:02:05.363 --> 00:02:10.665
+e verificar, por exemplo, se sabemos
+quando essas coisas mudam,
+
+00:02:10.698 --> 00:02:13.577
+se podemos explicar o que houve,
+esse tipo de pergunta.
+
+00:02:13.610 --> 00:02:17.066
+Muito esclarecedor.
+Pode falar sobre as ferramentas
+
+00:02:17.099 --> 00:02:19.278
+que essas pessoas têm
+e suas diferenças?
+
+00:02:19.311 --> 00:02:23.416
+A primeira pessoa de algoritmos
+precisa saber C++,
+
+00:02:23.449 --> 00:02:26.505
+precisa ter habilidades
+em CS muito boas.
+
+00:02:26.538 --> 00:02:28.590
+A segunda talvez seja
+mais do Python,
+
+00:02:28.623 --> 00:02:33.225
+e a terceira de plataformas
+como o Tableau
+
+00:02:33.258 --> 00:02:34.367
+e coisas assim.
+
+00:02:34.400 --> 00:02:36.873
+Essas são as básicas
+ou há ferramentas diferentes
+
+00:02:36.906 --> 00:02:38.767
+que você já viu
+nessas funções?
+
+00:02:38.800 --> 00:02:43.560
+Por exemplo, pelo lado
+do aprendizado de máquina
+
+00:02:43.594 --> 00:02:46.170
+você vai ver diferentes
+ferramentas sendo usadas.
+
+00:02:46.757 --> 00:02:50.213
+Definitivamente vai ver mais C++
+nos lugares onde precisam
+
+00:02:50.246 --> 00:02:53.355
+de uma performance muito boa,
+ou talvez em sistemas integrados.
+
+00:02:53.388 --> 00:02:57.010
+Direção autônoma é
+um exemplo recente bem claro.
+
+00:02:57.260 --> 00:03:01.820
+Mas podem ser também pessoas
+usando algo como o scikit-learn,
+
+00:03:01.853 --> 00:03:06.505
+TensorFlow ou alguma dessas
+ferramentas Python, por exemplo.
+
+00:03:07.007 --> 00:03:09.755
+As ferramentas generalistas,
+acho que tanto elas
+
+00:03:09.788 --> 00:03:11.950
+quanto
+o aprendizado de máquina
+
+00:03:11.983 --> 00:03:14.557
+seriam parte das ferramentas
+da engenharia de dados,
+
+00:03:14.590 --> 00:03:19.330
+que são tanto as camadas
+de abstração como Airflow
+
+00:03:19.363 --> 00:03:24.010
+e também tipos de mecanismos
+como SQL distribuído,
+
+00:03:24.043 --> 00:03:28.696
+Hive, Presto
+e coisas como o Spark, Flink,
+
+00:03:28.729 --> 00:03:31.703
+esses tipos de trabalhos,
+para obter os dados de que precisa
+
+00:03:31.736 --> 00:03:33.506
+e colocar onde precisa
+que estejam.
+
+00:03:33.539 --> 00:03:37.944
+Então você vê mais da camada
+de visualização e análise
+
+00:03:37.977 --> 00:03:42.176
+para o cenário de alto nível,
+que podem ser ferramentas
+
+00:03:42.210 --> 00:03:45.390
+como Tableau,
+Looker, Superset.
+
+00:03:45.424 --> 00:03:47.427
+E você sabe,
+
+00:03:47.461 --> 00:03:49.820
+a camada de acesso de dados
+é provavelmente SQL,
+
+00:03:49.853 --> 00:03:53.080
+-mas também há outras opções.
+-Legal.
+
+00:03:53.113 --> 00:03:56.401
+PROGRAMA
+NANODEGREE DATA SCIENTIST
+

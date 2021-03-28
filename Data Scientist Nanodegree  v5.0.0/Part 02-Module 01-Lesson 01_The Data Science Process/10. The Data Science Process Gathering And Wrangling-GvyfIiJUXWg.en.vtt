@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.229 --> 00:00:05.310
+In the previous video,
+
+00:00:05.309 --> 00:00:08.459
+you were introduced to the four questions that we'll focus on
+
+00:00:08.460 --> 00:00:12.050
+while working on the remaining steps in the CRISP-DM process.
+
+00:00:12.050 --> 00:00:15.615
+The next step in the process is about gathering the data
+
+00:00:15.615 --> 00:00:19.769
+and organizing it in a way that will allow us to answer our questions of interests.
+
+00:00:19.769 --> 00:00:23.704
+Fortunately for us, Stack Overflow already gathered the data.
+
+00:00:23.704 --> 00:00:26.224
+However, to answer our questions of interests,
+
+00:00:26.225 --> 00:00:29.260
+there are still some steps we'll need to perform.
+
+00:00:29.260 --> 00:00:33.105
+The wrangling process is said to be the most time-consuming,
+
+00:00:33.104 --> 00:00:36.979
+often taking 80 percent of the data analysis process.
+
+00:00:36.979 --> 00:00:39.569
+Let's dive in and take a look at what we'll need to
+
+00:00:39.570 --> 00:00:42.560
+do with some of the data to find the insights.
+

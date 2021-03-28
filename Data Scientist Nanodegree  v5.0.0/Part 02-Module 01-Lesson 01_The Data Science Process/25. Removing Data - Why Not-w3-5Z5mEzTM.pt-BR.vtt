@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.893 --> 00:00:04.490
+REMOVER DADOS -
+POR QUE NÃO?
+
+00:00:04.524 --> 00:00:05.751
+No último vídeo,
+
+00:00:05.785 --> 00:00:08.769
+vimos três métodos para trabalhar
+com dados ausentes.
+
+00:00:08.803 --> 00:00:10.667
+O primeiro deles
+
+00:00:10.701 --> 00:00:14.807
+era remover linhas ou colunas
+que contivessem os dados ausentes.
+
+00:00:14.841 --> 00:00:19.303
+Primeiro, é útil se perguntar
+por que esses dados estão ausentes.
+
+00:00:19.337 --> 00:00:21.511
+Eliminar dados
+do seu conjunto de dados
+
+00:00:21.545 --> 00:00:23.369
+pode levar
+a modelos enviesados.
+
+00:00:23.403 --> 00:00:26.438
+Isso também vale
+para imputar pontos de dados.
+
+00:00:26.472 --> 00:00:30.320
+Não há um método universal
+para trabalhar com dados ausentes,
+
+00:00:30.354 --> 00:00:33.163
+logo, explorar opções diferentes
+pode ajudar a determinar
+
+00:00:33.197 --> 00:00:35.427
+qual o melhor
+para a sua situação.
+
+00:00:35.461 --> 00:00:37.914
+Se os dados ausentes ocorrerem
+devido a indivíduos
+
+00:00:37.948 --> 00:00:39.973
+não dispostos a compartilhar
+informações,
+
+00:00:40.007 --> 00:00:43.318
+e você construir um modelo
+apenas excluindo esses indivíduos,
+
+00:00:43.352 --> 00:00:45.697
+é provável que não obtenha
+bons resultados.
+
+00:00:45.731 --> 00:00:48.251
+Considere uma pesquisa
+que faz aos participantes
+
+00:00:48.285 --> 00:00:51.692
+150 perguntas sobre o tipo
+de personalidade deles.
+
+00:00:51.726 --> 00:00:55.970
+Não sei você, mas eu provavelmente
+desistiria após 2 ou 3 perguntas.
+
+00:00:56.004 --> 00:00:58.233
+Se você fizer perguntas
+sobre relacionamentos
+
+00:00:58.267 --> 00:01:00.080
+ou finanças na pesquisa,
+
+00:01:00.114 --> 00:01:02.388
+uma ausência de resposta
+a essas perguntas
+
+00:01:02.422 --> 00:01:05.892
+pode indicar
+um tipo de personalidade.
+
+00:01:05.926 --> 00:01:08.960
+Eliminar esses dados ausentes
+removeria informações
+
+00:01:08.994 --> 00:01:11.560
+que poderíamos usar.
+
+00:01:11.594 --> 00:01:14.616
+Por exemplo, poderíamos criar
+uma coluna para monitorar
+
+00:01:14.650 --> 00:01:17.987
+quais perguntas cada indivíduo
+deixou em branco,
+
+00:01:18.021 --> 00:01:21.313
+ou poderíamos monitorar
+o número de dados ausentes
+
+00:01:21.347 --> 00:01:23.319
+que ocorreram
+para cada respondente.
+
+00:01:23.353 --> 00:01:26.399
+Nesses casos, estamos usando
+os dados ausentes
+
+00:01:26.433 --> 00:01:28.502
+para melhorar as predições.
+
+00:01:28.536 --> 00:01:32.172
+Contudo, remover indivíduos
+ou colunas com dados ausentes
+
+00:01:32.206 --> 00:01:34.135
+provavelmente prejudicaria
+as predições
+
+00:01:34.169 --> 00:01:35.976
+devido à redução
+de informações.
+

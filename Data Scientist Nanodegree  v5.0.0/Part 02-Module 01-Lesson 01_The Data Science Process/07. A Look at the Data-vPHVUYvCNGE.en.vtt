@@ -1,0 +1,463 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.725
+So in this notebook,
+
+00:00:01.725 --> 00:00:03.089
+we are going to get
+
+00:00:03.089 --> 00:00:06.134
+a better understanding of the data we'll be using throughout this lesson.
+
+00:00:06.134 --> 00:00:14.214
+And a few quick notes are that by clicking up here on the Jupyter icon in the top left,
+
+00:00:14.214 --> 00:00:17.280
+you can actually get a list of all the notebooks that will
+
+00:00:17.280 --> 00:00:21.095
+be used throughout this lesson as well as the solutions.
+
+00:00:21.094 --> 00:00:23.294
+If you choose to download them all,
+
+00:00:23.295 --> 00:00:25.215
+and keep them on your local machine,
+
+00:00:25.214 --> 00:00:27.000
+you can also do things side by
+
+00:00:27.000 --> 00:00:30.629
+side as opposed to working in the workspaces in the classroom.
+
+00:00:30.629 --> 00:00:32.299
+So that's also an option for you.
+
+00:00:32.299 --> 00:00:33.719
+So you'll notice that,
+
+00:00:33.719 --> 00:00:36.149
+here's a notebook, here's its corresponding solution,
+
+00:00:36.149 --> 00:00:37.934
+here's a notebook, here's its solution,
+
+00:00:37.935 --> 00:00:40.875
+notebook, solution, so on and so forth back here.
+
+00:00:40.875 --> 00:00:44.130
+And then you'll also see there's solution1.py file,
+
+00:00:44.130 --> 00:00:45.810
+and this test1.py file,
+
+00:00:45.810 --> 00:00:48.795
+and these are basically used to check
+
+00:00:48.795 --> 00:00:52.410
+the solutions that you have in your individual notebooks.
+
+00:00:52.409 --> 00:00:56.564
+So if we go back to "A Look at the Data" notebook,
+
+00:00:56.564 --> 00:00:59.964
+and first just read in our libraries,
+
+00:00:59.965 --> 00:01:03.510
+you'll see that right here this import test1 as
+
+00:01:03.509 --> 00:01:08.129
+t is basically that test1.py file that was sitting in the back.
+
+00:01:08.129 --> 00:01:11.265
+And then here, we're actually just reading in that dataset,
+
+00:01:11.265 --> 00:01:13.049
+and storing it and df,
+
+00:01:13.049 --> 00:01:17.354
+and once we get ahead of that data,
+
+00:01:17.355 --> 00:01:19.359
+we know that this cell has executed,
+
+00:01:19.359 --> 00:01:21.194
+and we can sort of keep going.
+
+00:01:21.194 --> 00:01:26.459
+If the workspaces aren't the best place for you to run the code and follow along,
+
+00:01:26.459 --> 00:01:28.569
+you can do it on your local machine.
+
+00:01:28.569 --> 00:01:32.429
+So here you can see the results of the data that we'll be working with.
+
+00:01:32.430 --> 00:01:35.100
+And the first question here says,
+
+00:01:35.099 --> 00:01:37.649
+to provide the number of rows and columns on the dataset.
+
+00:01:37.650 --> 00:01:39.180
+And if we run the cell,
+
+00:01:39.180 --> 00:01:40.765
+you'll see it says, "Nice job,
+
+00:01:40.765 --> 00:01:43.469
+there are this many rows and there are this many
+
+00:01:43.469 --> 00:01:46.254
+columns," And you'll notice that it runs this check.
+
+00:01:46.254 --> 00:01:49.125
+So it says t.check_rows_cols,
+
+00:01:49.125 --> 00:01:51.799
+and then it passes in these two variable names.
+
+00:01:51.799 --> 00:01:55.420
+So basically this t is that file that's in the back,
+
+00:01:55.420 --> 00:01:59.159
+and there's a function in it called check_rows and cols,
+
+00:01:59.159 --> 00:02:02.909
+that's checking the number of rows and columns that are
+
+00:02:02.909 --> 00:02:07.170
+provided here against what the solution thinks should be there.
+
+00:02:07.170 --> 00:02:09.942
+If alternatively there was a mistake,
+
+00:02:09.942 --> 00:02:11.340
+you'll see it says "Oh,
+
+00:02:11.340 --> 00:02:12.870
+that doesn't look like we were what we were
+
+00:02:12.870 --> 00:02:14.789
+expecting for the number of rows, or columns."
+
+00:02:14.789 --> 00:02:17.054
+And you'll see that that just was like a flip rate.
+
+00:02:17.055 --> 00:02:18.465
+So here the df shape,
+
+00:02:18.465 --> 00:02:22.599
+the first element, or the zeroth element is the rows.
+
+00:02:22.599 --> 00:02:23.884
+And the second element,
+
+00:02:23.884 --> 00:02:26.250
+that the labeled one element is the columns.
+
+00:02:26.250 --> 00:02:28.694
+And so, when we flip those two,
+
+00:02:28.694 --> 00:02:31.037
+basically, it gives us the wrong answers.
+
+00:02:31.038 --> 00:02:35.927
+And when we check them against the solution in the check_rows_cols function,
+
+00:02:35.927 --> 00:02:40.740
+it tells us in the feedback that what we got was wrong.
+
+00:02:40.740 --> 00:02:46.254
+Additionally, there's a dock string in each of the function solutions,
+
+00:02:46.254 --> 00:02:49.379
+and that check against your solutions in the back,
+
+00:02:49.379 --> 00:02:50.669
+so if you run that,
+
+00:02:50.669 --> 00:02:53.594
+you can get an idea of what it wants you to provide.
+
+00:02:53.594 --> 00:02:55.830
+So, it says your input should be the number of
+
+00:02:55.830 --> 00:02:59.625
+rows and that should be an int of the number of rows in your data frame,
+
+00:02:59.625 --> 00:03:04.205
+and num_cols should be an int of the number of columns in your data frame.
+
+00:03:04.205 --> 00:03:07.620
+So each of these functions that are in
+
+00:03:07.620 --> 00:03:13.250
+this test file have a docstring that you can check the information against.
+
+00:03:13.250 --> 00:03:15.270
+So, then after that,
+
+00:03:15.270 --> 00:03:18.325
+you're asked to sort of do some of this yourself.
+
+00:03:18.324 --> 00:03:23.174
+So it says "Provide a set of columns with zero missing values," and
+
+00:03:23.175 --> 00:03:30.460
+sometimes you might just want to create a cell to work on your own.
+
+00:03:30.460 --> 00:03:33.000
+So I'm just going to insert a cell above.
+
+00:03:33.000 --> 00:03:39.080
+And if we do like df is null,
+
+00:03:39.080 --> 00:03:43.480
+you'll see we get a whole bunch of columns, let's here.
+
+00:03:43.479 --> 00:03:51.109
+So, isnull pandas by looking at the documentation, I guessing,
+
+00:03:51.110 --> 00:03:56.260
+I was thinking that we could give this like the rows or the columns,
+
+00:03:56.259 --> 00:04:00.199
+so maybe like axis equals one, or something.
+
+00:04:00.199 --> 00:04:02.209
+It's not.
+
+00:04:02.210 --> 00:04:04.338
+So, let's do.
+
+00:04:04.338 --> 00:04:07.000
+Okay. Cool. So if we run np.sum,
+
+00:04:07.000 --> 00:04:12.469
+you can see that there when there's no missing values that looks like this.
+
+00:04:12.469 --> 00:04:15.430
+And when there are missing values,
+
+00:04:15.430 --> 00:04:18.459
+then it specifies the number.
+
+00:04:18.459 --> 00:04:23.799
+So if we do like equals, equals zero, cool.
+
+00:04:23.800 --> 00:04:25.860
+And then there is a true or false.
+
+00:04:25.860 --> 00:04:30.069
+And I'm guessing that we could do something like df.columns,
+
+00:04:30.069 --> 00:04:33.954
+and just poll where that's true.
+
+00:04:33.954 --> 00:04:36.219
+Cool. So, if we go in,
+
+00:04:36.220 --> 00:04:42.030
+we're pulling the columns where basically the sum of the null values is equal to zero.
+
+00:04:42.029 --> 00:04:44.125
+And what it says,
+
+00:04:44.125 --> 00:04:48.334
+"Provide a set of the columns with zero missing values."
+
+00:04:48.334 --> 00:04:50.470
+So, I'm just going to take this,
+
+00:04:50.470 --> 00:04:53.690
+and it says to specify this as a set.
+
+00:04:53.689 --> 00:04:54.925
+So I'm just going to go in,
+
+00:04:54.925 --> 00:04:59.375
+and say, set of this.
+
+00:04:59.375 --> 00:05:01.610
+Cool. And if we get it right,
+
+00:05:01.610 --> 00:05:04.069
+you'll see again, get rid of this box.
+
+00:05:04.069 --> 00:05:07.849
+But if we get it right, you'll see it says "Nice job that looks right!"
+
+00:05:07.850 --> 00:05:09.590
+And if we were to have gotten this wrong,
+
+00:05:09.589 --> 00:05:14.174
+so let's say we just like some "thing" Yes.
+
+00:05:14.175 --> 00:05:16.985
+So not only that didn't work because it broke it,
+
+00:05:16.985 --> 00:05:22.069
+but I mean, we could try.
+
+00:05:22.069 --> 00:05:26.079
+That doesn't look like the set of no_nulls,
+
+00:05:26.079 --> 00:05:28.152
+there should be seven columns in your list, right?
+
+00:05:28.153 --> 00:05:30.390
+So if we were to go back up here, we could change it.
+
+00:05:30.389 --> 00:05:33.625
+Yeah, I should work on what that says.
+
+00:05:33.625 --> 00:05:38.629
+But it's not a great thing but hopefully,
+
+00:05:38.629 --> 00:05:40.784
+it makes sense that that didn't work, right?
+
+00:05:40.785 --> 00:05:43.729
+I'll go back and change that string.
+
+00:05:43.728 --> 00:05:48.014
+Okay. Question Three says "Which columns have the most missing values?
+
+00:05:48.014 --> 00:05:50.449
+Provide a set of the column names that
+
+00:05:50.449 --> 00:05:53.629
+have more than 75 percent of their values missing."
+
+00:05:53.629 --> 00:05:58.889
+So, we can use a lot of what we just did up here,
+
+00:05:58.889 --> 00:06:01.169
+and let's just comment this out.
+
+00:06:01.170 --> 00:06:04.016
+I'm going to take this back to zero.
+
+00:06:04.016 --> 00:06:07.935
+Actually, this is fine.
+
+00:06:07.935 --> 00:06:15.269
+And then here, we saw that this gave us something like this.
+
+00:06:15.269 --> 00:06:22.969
+If we divide by the df.shape zero that gives us a bunch of percentages,
+
+00:06:22.970 --> 00:06:27.860
+we could check if that's greater than 0.75, right?
+
+00:06:27.860 --> 00:06:29.970
+So, that gives us a true,
+
+00:06:29.970 --> 00:06:32.310
+if there's more than 75 percent missing.
+
+00:06:32.310 --> 00:06:35.800
+And then again, we could pull that from the columns, right?
+
+00:06:35.800 --> 00:06:40.574
+So, this says, basically take the number of missing values,
+
+00:06:40.574 --> 00:06:42.964
+divide it by the total number of rows possible,
+
+00:06:42.964 --> 00:06:45.022
+if that's greater than 75 percent,
+
+00:06:45.023 --> 00:06:46.671
+then give me the column name back.
+
+00:06:46.670 --> 00:06:49.360
+So I think this should do it.
+
+00:06:49.360 --> 00:06:53.555
+And I'm just going to get comment in front of this right now.
+
+00:06:53.555 --> 00:06:57.965
+And then, it needs a set around it.
+
+00:06:57.964 --> 00:07:00.469
+Cool. The next part says provide
+
+00:07:00.470 --> 00:07:04.310
+a pandas series of the counts for each Professional status.
+
+00:07:04.310 --> 00:07:13.714
+So, I think, if we get the professional and there's this nice thing called value_counts.
+
+00:07:13.714 --> 00:07:17.424
+So, this is really useful for any categorical variable.
+
+00:07:17.425 --> 00:07:24.275
+So basically, if this column is a set of categorical variables,
+
+00:07:24.274 --> 00:07:26.884
+then running this value counts will count how many there are,
+
+00:07:26.884 --> 00:07:30.519
+and give you back a panda series with a count for each one of them.
+
+00:07:30.519 --> 00:07:34.129
+We can run that up here really quick just so you can see what that looks like.
+
+00:07:34.129 --> 00:07:39.103
+So 13,000 are professional developers, 2800 are students,
+
+00:07:39.103 --> 00:07:44.180
+so on and so forth and if we run that hopefully,
+
+00:07:44.180 --> 00:07:46.139
+we see a bar chart.
+
+00:07:46.139 --> 00:07:48.199
+So it says, what kind of developer are you?
+
+00:07:48.199 --> 00:07:51.050
+And then there's a bar chart.
+
+00:07:51.050 --> 00:07:54.199
+And it says 70 percent are professionals,
+
+00:07:54.199 --> 00:07:57.507
+about 15 are students, and then this one says,
+
+00:07:57.507 --> 00:08:00.305
+a panda series of the FormalEducation status
+
+00:08:00.305 --> 00:08:03.949
+that's going to look really similar to what we just did before,
+
+00:08:03.949 --> 00:08:10.314
+"FormalEducation" and then value_counts.
+
+00:08:10.314 --> 00:08:16.084
+If we run that, you can again see we get a bar chart of this, so that looks right.
+
+00:08:16.084 --> 00:08:19.581
+And the last one is for Country.
+
+00:08:19.581 --> 00:08:25.625
+So, df Country, and again,
+
+00:08:25.625 --> 00:08:29.345
+can run value_counts, it's really useful,
+
+00:08:29.345 --> 00:08:31.430
+and it plots the top 10.
+
+00:08:31.430 --> 00:08:36.615
+So you can see that these are the most represented countries in the dataset.
+
+00:08:36.615 --> 00:08:39.889
+And then it says, you can also continue looking through the dataset,
+
+00:08:39.889 --> 00:08:43.000
+so you might look at other columns that you're interested in. Things like that.
+

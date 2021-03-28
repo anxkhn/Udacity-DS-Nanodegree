@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.873 --> 00:00:04.580
+REMOVER DADOS -
+OUTRAS CONSIDERAÇÕES
+
+00:00:04.614 --> 00:00:06.599
+Ao considerar
+eliminar colunas,
+
+00:00:06.633 --> 00:00:11.007
+é útil considerar qual proporção
+da coluna está ausente.
+
+00:00:11.041 --> 00:00:13.698
+Se apenas 5% de uma coluna
+estiver ausente,
+
+00:00:13.732 --> 00:00:16.508
+provavelmente
+você não deve eliminá-la.
+
+00:00:16.542 --> 00:00:19.959
+Especialmente se for uma coluna
+particularmente interessante
+
+00:00:19.993 --> 00:00:21.830
+para as suas perguntas.
+
+00:00:21.864 --> 00:00:24.117
+Seria um desperdício
+eliminá-la.
+
+00:00:24.151 --> 00:00:27.448
+Contudo, se 90% da coluna
+estiver ausente,
+
+00:00:27.482 --> 00:00:31.096
+aí temos um motivo
+para considerar eliminá-la.
+
+00:00:31.130 --> 00:00:34.046
+E se 50% dos dados
+estiverem ausentes?
+
+00:00:34.080 --> 00:00:35.774
+Devemos remover a coluna?
+
+00:00:35.808 --> 00:00:38.420
+Vamos perder muitas informações
+se a removermos?
+
+00:00:38.454 --> 00:00:40.906
+Independentemente
+da quantidade de dados ausentes,
+
+00:00:40.940 --> 00:00:44.539
+tentar criar um recurso informativo
+das informações ausentes
+
+00:00:44.573 --> 00:00:46.603
+é uma estratégia útil.
+
+00:00:46.637 --> 00:00:48.836
+Talvez seja bom criar
+uma variável dummy
+
+00:00:48.870 --> 00:00:52.423
+que indique quais linhas
+têm dados ausentes.
+
+00:00:52.457 --> 00:00:55.162
+Aqui, esta nova coluna é 1
+
+00:00:55.196 --> 00:00:58.984
+se a original tiver dados ausentes,
+e 0 se não tiver.
+
+00:00:59.018 --> 00:01:01.644
+Isso pode melhorar
+suas predições
+
+00:01:01.678 --> 00:01:04.407
+mais do que um modelo
+que simplesmente remova a coluna.
+
+00:01:04.441 --> 00:01:06.850
+Se não melhorar,
+pelo menos você tentou,
+
+00:01:06.884 --> 00:01:09.558
+e teremos certeza
+de que as informações ausentes
+
+00:01:09.592 --> 00:01:12.003
+não eram um indicador útil
+para predição.
+

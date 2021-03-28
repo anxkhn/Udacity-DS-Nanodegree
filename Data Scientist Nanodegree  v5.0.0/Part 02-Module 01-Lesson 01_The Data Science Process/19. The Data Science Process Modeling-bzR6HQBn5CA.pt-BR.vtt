@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.873 --> 00:00:04.501
+O PROCESSO DE DATA SCIENCE -
+MODELAGEM
+
+00:00:04.534 --> 00:00:07.503
+Para as duas primeiras perguntas
+sobre técnicas de estudo
+
+00:00:07.536 --> 00:00:08.881
+e intensivos,
+
+00:00:08.914 --> 00:00:13.480
+precisamos organizar os dados
+e usar a estatística descritiva
+
+00:00:13.513 --> 00:00:16.215
+para encontrar as soluções
+para as questões.
+
+00:00:16.248 --> 00:00:19.168
+Também usamos
+um pouco de inferência
+
+00:00:19.201 --> 00:00:21.992
+para observar
+a diferença salarial significativa.
+
+00:00:22.025 --> 00:00:26.280
+Não precisamos usar modelagem
+para responder às duas perguntas,
+
+00:00:26.313 --> 00:00:28.496
+então pulamos essa parte.
+
+00:00:28.529 --> 00:00:32.977
+No entanto, para prever a satisfação
+ou o salário de um indivíduo,
+
+00:00:33.010 --> 00:00:34.920
+precisaremos reunir os dados
+
+00:00:34.953 --> 00:00:37.897
+e introduzir a próxima
+etapa do processo:
+
+00:00:37.930 --> 00:00:39.940
+a da criação
+de um modelo preditivo,
+
+00:00:39.973 --> 00:00:43.388
+que é um tipo de algoritmo
+de aprendizado de máquina
+
+00:00:43.421 --> 00:00:45.856
+conhecido como "aprendizado
+supervisionado".
+
+00:00:45.889 --> 00:00:47.914
+A modelagem,
+para o cientista de dados,
+
+00:00:47.947 --> 00:00:50.804
+é geralmente considerada
+a parte divertida do trabalho,
+
+00:00:50.837 --> 00:00:53.691
+por conta de bibliotecas
+como scikit-learn e Python.
+
+00:00:53.724 --> 00:00:56.803
+Vejamos como usar isso
+nessa situação.
+
+00:00:56.836 --> 00:00:59.956
+Um processo simplificado
+de quatro etapas de modelagem
+
+00:00:59.989 --> 00:01:03.388
+usando o scikit-learn
+deverá instanciar o modelo,
+
+00:01:03.421 --> 00:01:06.596
+ajustá-lo
+aos dados de treinamento,
+
+00:01:06.629 --> 00:01:10.965
+prever usando o modelo ajustado
+em alguns dados de teste
+
+00:01:10.998 --> 00:01:12.268
+e, finalmente,
+
+00:01:12.301 --> 00:01:14.394
+pontuar o modelo
+usando uma métrica
+
+00:01:14.427 --> 00:01:16.745
+para avaliar o desempenho.
+
+00:01:16.778 --> 00:01:19.801
+Vejamos como podemos usar
+a modelagem nesse processo
+
+00:01:19.834 --> 00:01:22.351
+para prever o salário
+neste conjunto de dados.
+

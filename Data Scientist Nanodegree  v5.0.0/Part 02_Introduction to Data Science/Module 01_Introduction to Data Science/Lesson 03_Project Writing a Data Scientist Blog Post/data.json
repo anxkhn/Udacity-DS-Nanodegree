@@ -1,0 +1,114 @@
+{
+  "data": {
+    "lesson": {
+      "id": 952114,
+      "key": "93967fc6-1c57-407a-888e-2a8e676eb994",
+      "title": "Project: Writing a Data Scientist Blog Post",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/93967fc6-1c57-407a-888e-2a8e676eb994/952114/1582018168076/Project%3A+Writing+a+Data+Scientist+Blog+Post+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/93967fc6-1c57-407a-888e-2a8e676eb994/952114/1582018165022/Project%3A+Writing+a+Data+Scientist+Blog+Post+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "87248e5a-df7c-42dd-a63f-ab2cdfe832a7",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 28800,
+        "semantic_type": "Project",
+        "title": "Write A Data Science Blog Post",
+        "description": "### Before you submit:\n\nYour project needs to **Meet Specifications** in all categories of the [Project Rubric](https://review.udacity.com/#!/rubrics/1507/view) in order to pass. So before you submit, do a self-assessment of your work using the rubric, and you'll probably find some revisions you want to make first. \n\nAll you need to submit for this project is two links - one for your GitHub repo and one for your blog post. Your GitHub repo should contain your code, dataset, and README.md files. \n\nIt can take us up to a week to grade the project, but in most cases it is much faster. You will get an email once your submission has been reviewed. In the meantime, you should feel free to proceed with your learning journey by continuing on to the next module in the program.\n",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1507",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 527691,
+          "key": "dccb9a15-c3f9-42fd-a59d-1ba478e91f55",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dccb9a15-c3f9-42fd-a59d-1ba478e91f55",
+            "completed_at": "2020-05-31T07:17:06.884Z",
+            "last_viewed_at": "2020-05-31T07:17:06.747Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672362,
+              "key": "4838d125-aa53-4ef1-bcdf-2b1a4c7be99f",
+              "title": "Blogging for Data Science",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WrvGpRN5XQI",
+                "china_cdn_id": "WrvGpRN5XQI.mp4"
+              }
+            },
+            {
+              "id": 527696,
+              "key": "87c80f6b-1063-4ae6-be57-1bc77e40b744",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\n\nFor this project, you will be creating a blog post and Github repository to begin building a data science portfolio of your own.  You can gain some inspiration from Robert's posts [here](https://medium.com/@rchang).\n\n* Come up with three questions you are interested in answering.\n* Extract the necessary data to answer these questions.\n* Perform necessary cleaning, analysis, and modeling.\n* Evaluate your results.\n* Share your insights with stakeholders.\n\n## Where to Start\n\nThere are two components that are required for project completion.  \n\n* A **Github repository** for your code. \n* A **blog post** of your findings.\n\nYour **Github repository** must have the following contents:\n * A README.md.\n * Your code in a Jupyter notebook, with appropriate comments, analysis, and documentation.\n\nYou may also provide any other necessary documentation you find necessary.  Your **blog must** provide the following:\n\n * A clear and engaging title and image.\n * Your questions of interest.\n * Your findings for those questions with a supporting statistic(s), table, or visual.\n\nThe purpose of this project is for you to show off your technical skills, but more importantly for you to begin putting together a portfolio that shows your ability to effectively communicate technical results.  Your technical skills will be built up as the program progresses, but for this project the main focus should be on communicating effectively the results of your analysis.\n\nIn this project follow the [RUBRIC](https://review.udacity.com/#!/rubrics/1507/view) to assure you meet all of the necessary criteria for communicating your findings both as a developer and as a business professional.\n ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 527695,
+          "key": "d0f0c9ed-424d-4360-aa59-811b52c54304",
+          "title": "Project Motivation and Details",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0f0c9ed-424d-4360-aa59-811b52c54304",
+            "completed_at": "2020-05-31T07:17:03.962Z",
+            "last_viewed_at": "2020-05-31T07:20:19.113Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 527732,
+              "key": "1fa4e595-e402-4ef6-9fe4-065d5e7f89a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Data\n\nFor this project, you will pick a dataset.  Inspired by Robert, there are a few public datasets from AirBnB available below, but you may also choose a dataset similar to what was used in the lessons, or an entirely different dataset.  Using your dataset, you will choose 3 questions you aspire to answer from the data.  \n\n### [Stack Overflow Data - 2017 Survey](https://www.kaggle.com/stackoverflow/so-survey-2017) \nYou might have different questions about the 2017 StackOverflow survey data than I looked at earlier in the course. If you choose this dataset, you can not use the same questions that were analyzed earlier in the classroom. \n\nAlternatively, if you felt pretty confident with the techniques in this lesson, you might be looking to push the envelope. In this case, you may choose to retrieve all of the [Stack Overflow Survey - Multiple Years](https://insights.stackoverflow.com/survey) results. From this data, you could analyze trends over time. What languages were most popular in each year? What other changes can you observe over time?    \n\n### [Seattle AirBNB Data](https://www.kaggle.com/airbnb/seattle/data) \n\nThe Seattle AirBnB homes data can be used at the above link. You might pair this with the Boston AirBnB data, which can be found at the link below.\n\n### [Boston AirBNB Data](https://www.kaggle.com/airbnb/boston)\n\nIf you are looking to really challenge yourself, data from Seattle and Boston AirBNB homes can be used to understand how much AirBNB homes are earning in certain time frames and areas. You can compare rates between the two cities, or try to understand if there is anything about the properties that helps you predict price. Can you find negative and positive reviews based on text? This dataset requires a number of skills beyond those shown thus far in the course, but if you would like a challenge, this will certainly test your ability to work with messy, real world data.\n\nYou can find additional AirBnB data at the link [here](http://insideairbnb.com/get-the-data.html).\n\n### Choose A Dataset of Your Own\n\nYou are welcome to use Kaggle or another platform (or your own data) to create a blog and Github post instead of using the datasets discussed above.  \n\n### Key Steps for Project\n\nFeel free to be creative with your solutions, but do follow the CRISP-DM process in finding your solutions.\n\n1) Pick a dataset.\n\n2) Pose at least three questions related to business or real-world applications of how the data could be used.\n\n3) Create a Jupyter Notebook, using any associated packages you'd like, to:\n\n- Prepare data:\n * Gather necessary data to answer your questions\n * Handle categorical and missing data\n * Provide insight into the methods you chose and why you chose them\n  \n- Analyze, Model, and Visualize\n * Provide a clear connection between your business questions and how the data answers them.\n\n4) Communicate your business insights:\n  * Create a Github repository to share your code and data wrangling/modeling techniques, with a technical audience in mind\n  * Create a blog post to share your questions and insights with a non-technical audience \n\nYour **deliverables** will be a **Github repo** and a **blog post**.  Use the rubric [here](https://review.udacity.com/#!/rubrics/1507/view) to assist in successfully completing this project!\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

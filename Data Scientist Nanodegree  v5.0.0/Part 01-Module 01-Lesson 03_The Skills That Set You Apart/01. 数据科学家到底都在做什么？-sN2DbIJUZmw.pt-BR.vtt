@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:03.770
+Vamos iniciar o programa
+Nanodegree Data Scientist,
+
+00:00:03.804 --> 00:00:07.341
+mas, antes de começarmos,
+seria bom falar um pouco
+
+00:00:07.374 --> 00:00:09.910
+sobre o que os cientistas de dados
+realmente fazem.
+
+00:00:09.943 --> 00:00:11.411
+Para fazer isso,
+
+00:00:11.445 --> 00:00:13.787
+Juno e eu temos
+experiência prática
+
+00:00:13.820 --> 00:00:16.049
+trabalhando
+como cientistas de dados,
+
+00:00:16.083 --> 00:00:18.385
+e, Juno, você pode
+dar aos alunos
+
+00:00:18.418 --> 00:00:21.488
+uma pequena visão de qual é
+o seu papel como cientista de dados?
+
+00:00:21.522 --> 00:00:24.391
+Claro. Eu fui cientista de dados
+em uma startup pequena,
+
+00:00:24.424 --> 00:00:26.126
+então tive
+algumas funções diferentes.
+
+00:00:26.159 --> 00:00:29.329
+Mais ou menos 20% do meu trabalho
+era em análise de negócios.
+
+00:00:29.363 --> 00:00:32.533
+Na verdade, trabalhei com a equipe
+de desenvolvimento de software
+
+00:00:32.566 --> 00:00:35.002
+para me certificar, antes de aplicar
+a Ciência de Dados,
+
+00:00:35.035 --> 00:00:37.204
+de que os dados
+gravados eram limpos,
+
+00:00:37.237 --> 00:00:39.907
+padronizados e faziam sentido.
+
+00:00:39.940 --> 00:00:42.509
+Eu fazia coisas
+como relatórios de atividades
+
+00:00:42.543 --> 00:00:45.579
+sobre tipos de usuários e produtos
+que estavam acontecendo na época.
+
+00:00:45.612 --> 00:00:47.080
+Mais ou menos
+80% do meu trabalho
+
+00:00:47.114 --> 00:00:49.483
+era em projetos de Ciência de Dados
+de longo prazo,
+
+00:00:49.516 --> 00:00:51.652
+em que eu trabalhava
+em um sistema
+
+00:00:51.685 --> 00:00:53.854
+que recomendava
+diferentes produtos aos usuários
+
+00:00:53.887 --> 00:00:58.225
+e também organizando a informação
+que temos em nossa base de dados,
+
+00:00:58.258 --> 00:01:00.994
+como clusters
+de produtos similares que tínhamos
+
+00:01:01.028 --> 00:01:03.330
+ou insights para os usuários.
+
+00:01:03.363 --> 00:01:06.533
+O seu papel como cientista
+de dados era um pouco diferente.
+
+00:01:06.567 --> 00:01:07.768
+Pode dividir isso conosco?
+
+00:01:07.801 --> 00:01:11.171
+Posso. Eu era cientista de dados
+em uma empresa grande.
+
+00:01:11.205 --> 00:01:15.676
+A comunicação, no seu caso,
+se dava mais com desenvolvedores.
+
+00:01:15.709 --> 00:01:17.778
+-Verdade.
+-No meu, era com os clientes.
+
+00:01:17.811 --> 00:01:20.214
+Então isso significava
+que, na maior parte do tempo,
+
+00:01:20.247 --> 00:01:22.174
+meu público não era
+tão técnico
+
+00:01:22.207 --> 00:01:27.697
+e era importante ter certeza
+de que entendiam o que iam receber
+
+00:01:27.730 --> 00:01:30.747
+do nosso trabalho
+sob uma perspectiva de negócios.
+
+00:01:30.780 --> 00:01:31.992
+As ferramentas que usávamos
+
+00:01:32.025 --> 00:01:34.328
+provavelmente eram muito similares.
+Eu usava coisas
+
+00:01:34.361 --> 00:01:37.364
+relacionadas a processamento
+de linguagem natural e clustering.
+
+00:01:37.631 --> 00:01:42.536
+Usava um Python toolkit, algo
+que os alunos vão aprender no curso.
+
+00:01:42.569 --> 00:01:47.574
+Daí, provavelmente é importante
+dar outras visões além das nossas.
+
+00:01:47.608 --> 00:01:50.043
+Então você vai ouvir
+alguns dos nossos parceiros,
+
+00:01:50.077 --> 00:01:53.480
+e eles vão dar uma visão do que
+fazem como cientistas de dados
+
+00:01:53.514 --> 00:01:57.384
+e também o que procuram no candidato
+ao contratar cientistas de dados.
+

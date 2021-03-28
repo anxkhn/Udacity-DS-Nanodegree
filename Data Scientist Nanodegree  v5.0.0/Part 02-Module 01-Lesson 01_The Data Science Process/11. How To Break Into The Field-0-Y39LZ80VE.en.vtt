@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.679
+In the previous video, I brought up
+
+00:00:01.679 --> 00:00:04.889
+a few questions we'll be exploring throughout this lesson.
+
+00:00:04.889 --> 00:00:08.684
+First, let's take a look at the data and see how we might answer the first question
+
+00:00:08.685 --> 00:00:10.502
+about how to break into the field of
+
+00:00:10.502 --> 00:00:13.230
+becoming a developer according to the survey results.
+
+00:00:13.230 --> 00:00:16.140
+To get started, let's read in the necessary libraries,
+
+00:00:16.140 --> 00:00:19.024
+we will need to wrangle our data, pandas and numpy.
+
+00:00:19.024 --> 00:00:21.570
+If we decide to build some basic plots,
+
+00:00:21.570 --> 00:00:23.594
+we might also want matplotlib.
+
+00:00:23.594 --> 00:00:25.859
+Now, to look at the first question of interest,
+
+00:00:25.859 --> 00:00:30.089
+what are those important industries suggest to help others break into the field.
+
+00:00:30.089 --> 00:00:32.024
+Looking at the CousinEducation field,
+
+00:00:32.024 --> 00:00:36.295
+you can see exactly what these individuals would suggest to help others.
+
+00:00:36.295 --> 00:00:41.189
+Below, you can take a look at the full field that the survey participants would see.
+
+00:00:41.189 --> 00:00:44.054
+Let's take a look at what the participants had to say.
+
+00:00:44.054 --> 00:00:46.979
+"Oh this wasn't what I was expecting.
+
+00:00:46.979 --> 00:00:48.549
+Is grouping items together,
+
+00:00:48.549 --> 00:00:51.809
+if a participant provided more than just one answer."
+
+00:00:51.810 --> 00:00:53.655
+Let's see if we can clean this up.
+
+00:00:53.655 --> 00:00:58.219
+First, let's change this index column to have a more appropriate name.
+
+00:00:58.219 --> 00:00:59.850
+I'll change it to method.
+
+00:00:59.850 --> 00:01:02.605
+Now, with a quick look through the data,
+
+00:01:02.604 --> 00:01:06.780
+we can create a list of the individual methods that were marked by a user.
+
+00:01:06.780 --> 00:01:09.314
+I also can find this in the documentation.
+
+00:01:09.314 --> 00:01:12.899
+You could additionally write something that went in and parsed by
+
+00:01:12.900 --> 00:01:18.150
+semicolons that grab the distinct values within each of these blocks,
+
+00:01:18.150 --> 00:01:20.190
+and then basically just put them into a set,
+
+00:01:20.189 --> 00:01:22.769
+so that you only had one of each.
+
+00:01:22.769 --> 00:01:24.859
+Here's my list of values.
+
+00:01:24.859 --> 00:01:28.939
+Now, we want to see how often each of these individual values appears.
+
+00:01:28.939 --> 00:01:31.405
+I wrote this function to assist with the process.
+
+00:01:31.405 --> 00:01:33.810
+It isn't the best solution but it gets the job done and
+
+00:01:33.810 --> 00:01:37.650
+our dataset isn't large enough to computationally hurt us too much.
+
+00:01:37.650 --> 00:01:39.594
+Now, we can apply the function.
+
+00:01:39.594 --> 00:01:42.390
+Notice that I tried to provide a doc string that would allow
+
+00:01:42.390 --> 00:01:46.644
+a user to use this without really understanding what's going on in the code here.
+
+00:01:46.644 --> 00:01:51.780
+It provides the inputs for the user and then the specified output.
+
+00:01:51.780 --> 00:01:54.105
+This is a really important process for future
+
+00:01:54.105 --> 00:01:57.436
+you and other software engineers you might be working with.
+
+00:01:57.436 --> 00:01:59.360
+Here, I'm applying it,
+
+00:01:59.359 --> 00:02:00.739
+so you can see that I'm passing it,
+
+00:02:00.739 --> 00:02:02.969
+the study data frame that we had above,
+
+00:02:02.969 --> 00:02:06.054
+I'm passing it the method column, the count column,
+
+00:02:06.055 --> 00:02:11.175
+and then I'm passing it the possible value which is the list that I created up here.
+
+00:02:11.175 --> 00:02:14.010
+These are the two column names in the study data frame and
+
+00:02:14.009 --> 00:02:18.000
+then this is the list that we're looking for.
+
+00:02:18.000 --> 00:02:20.444
+Now, using our function to take a look at the results,
+
+00:02:20.444 --> 00:02:21.739
+it looks like good news for you, Dasidy.
+
+00:02:21.740 --> 00:02:25.260
+Most individuals think that you should take online courses,
+
+00:02:25.259 --> 00:02:28.704
+but we can actually look at this as a percent.
+
+00:02:28.705 --> 00:02:33.420
+You can see that almost 21 percent of the individuals suggested to take online courses,
+
+00:02:33.419 --> 00:02:35.899
+more than any of the other methods.
+
+00:02:35.900 --> 00:02:38.550
+We might want to take this one step further and say,
+
+00:02:38.550 --> 00:02:42.330
+we care more about the methods that are suggested by those who earn more,
+
+00:02:42.330 --> 00:02:44.905
+or by those who have higher job satisfaction.
+
+00:02:44.905 --> 00:02:48.099
+Let's take a stab at incorporating that into this analysis.
+
+00:02:48.099 --> 00:02:51.870
+I updated the function that we were using before to be able to look
+
+00:02:51.870 --> 00:02:56.795
+at how salary was related to each of these methods that we see here.
+
+00:02:56.794 --> 00:02:59.699
+I provided the code for you in the workspace on the next page.
+
+00:02:59.699 --> 00:03:03.564
+You can see, using this function in this case did hurt us.
+
+00:03:03.564 --> 00:03:05.639
+This function takes forever to run.
+
+00:03:05.639 --> 00:03:08.875
+Computationally, we need to find a better solution.
+
+00:03:08.875 --> 00:03:10.680
+Once that gets done running,
+
+00:03:10.680 --> 00:03:12.939
+we'll want to sort this by the mean column.
+
+00:03:12.939 --> 00:03:14.849
+That is, we want the highest value,
+
+00:03:14.849 --> 00:03:20.789
+the educational method with the highest average salary to show up before all the rest.
+
+00:03:20.789 --> 00:03:24.239
+The ending table that you get from the results should look like this.
+
+00:03:24.240 --> 00:03:28.460
+Here is the number of individuals that suggested this method.
+
+00:03:28.460 --> 00:03:30.990
+You can see that this is different than the results that we saw
+
+00:03:30.990 --> 00:03:34.070
+earlier and that's because not everyone had a salary.
+
+00:03:34.069 --> 00:03:37.164
+So those individuals were not included in this dataset.
+
+00:03:37.164 --> 00:03:42.000
+Here is the mean salary for the individuals who suggested this method,
+
+00:03:42.000 --> 00:03:43.469
+and then over here on the end,
+
+00:03:43.469 --> 00:03:47.685
+I provided a 95 percent confidence interval around this mean salary,
+
+00:03:47.685 --> 00:03:50.610
+as was the standard deviation and variance.
+
+00:03:50.610 --> 00:03:53.190
+By looking through these values,
+
+00:03:53.189 --> 00:03:55.439
+we can sort of see if there's overlap that
+
+00:03:55.439 --> 00:03:58.544
+suggests there is'nt a significant difference between the methods,
+
+00:03:58.544 --> 00:04:00.030
+whereas if there is an overlap,
+
+00:04:00.030 --> 00:04:02.430
+that does suggest that there's a significant difference.
+

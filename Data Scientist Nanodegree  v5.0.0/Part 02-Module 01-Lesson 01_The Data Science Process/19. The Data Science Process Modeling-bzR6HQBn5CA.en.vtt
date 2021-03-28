@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.910
+For the first two questions regarding studying techniques and coding boot camps,
+
+00:00:08.910 --> 00:00:12.030
+we need to wrangle our data and then we were mostly able to use
+
+00:00:12.029 --> 00:00:16.119
+descriptive statistics to find our solutions to our questions of interest.
+
+00:00:16.120 --> 00:00:21.810
+But we did also use a little inference to look at significant salary differences.
+
+00:00:21.809 --> 00:00:26.304
+We don't really need to use modeling to answer either of these two questions though,
+
+00:00:26.304 --> 00:00:28.265
+so we can skip this part.
+
+00:00:28.265 --> 00:00:33.030
+However, to make predictions of an individual's job satisfaction or salary,
+
+00:00:33.030 --> 00:00:35.070
+we're going to need to wrangle our data,
+
+00:00:35.070 --> 00:00:39.795
+and then introduce the next step of the process: building a predictive model.
+
+00:00:39.795 --> 00:00:43.524
+Predictive models are one type of machine learning algorithm,
+
+00:00:43.524 --> 00:00:45.679
+known as supervised machine learning.
+
+00:00:45.679 --> 00:00:49.534
+Modeling as a data scientist is often considered the fun part
+
+00:00:49.534 --> 00:00:53.509
+of the data science job because of libraries like scikit-learn and Python.
+
+00:00:53.509 --> 00:00:56.879
+Let's see how we can use that in this situation.
+
+00:00:56.880 --> 00:01:00.080
+A simplified four-step process for modeling using
+
+00:01:00.079 --> 00:01:03.369
+scikit-learn is to first instantiate our model.
+
+00:01:03.369 --> 00:01:06.519
+Second, to fit our model to the training data.
+
+00:01:06.519 --> 00:01:12.349
+Third, predict using your fitted model on some test data and then finally,
+
+00:01:12.349 --> 00:01:16.655
+score your model using a metric to evaluate how well it performs.
+
+00:01:16.655 --> 00:01:19.099
+Let's see how we might use modelling in
+
+00:01:19.099 --> 00:01:22.409
+this process to predict salary for an individual in this data set.
+

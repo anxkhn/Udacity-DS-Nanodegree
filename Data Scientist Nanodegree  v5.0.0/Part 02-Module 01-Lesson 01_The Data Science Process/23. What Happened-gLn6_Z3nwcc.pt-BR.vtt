@@ -1,0 +1,437 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.147 --> 00:00:02.580
+Para as duas últimas
+perguntas a respeito
+
+00:00:02.614 --> 00:00:07.592
+da relação das outras variáveis com
+salário e satisfação com o trabalho,
+
+00:00:07.626 --> 00:00:10.680
+provavelmente teremos
+que construir um modelo preditivo.
+
+00:00:10.714 --> 00:00:13.710
+Lemos o conjunto de dados
+
+00:00:13.744 --> 00:00:18.183
+e fizemos .describe
+para obter um resumo básico
+
+00:00:18.217 --> 00:00:20.854
+de vários aspectos dos dados.
+
+00:00:20.888 --> 00:00:26.002
+A primeira pergunta
+é sobre corresponder estes valores
+
+00:00:26.036 --> 00:00:28.348
+à sua descrição lá embaixo
+
+00:00:28.382 --> 00:00:30.654
+com base no que podemos ver
+aqui em cima.
+
+00:00:30.688 --> 00:00:34.443
+"Uma coluna listando
+um índice para cada linha."
+
+00:00:34.477 --> 00:00:36.774
+Esta é a coluna respondente.
+
+00:00:36.808 --> 00:00:40.637
+É só um número,
+se você olhar no cabeçalho.
+
+00:00:40.671 --> 00:00:44.342
+Ao olhar no cabeçalho, vemos
+respondentes como 1, 2, 3, 4, 5,
+
+00:00:44.376 --> 00:00:48.518
+e a numeração continua
+se você continuar olhando.
+
+00:00:48.552 --> 00:00:51.874
+"A satisfação máxima nas escalas
+
+00:00:51.908 --> 00:00:54.436
+para a pesquisa..."
+
+00:00:54.470 --> 00:00:56.767
+A satisfação máxima...
+
+00:00:57.198 --> 00:01:02.277
+Há várias coisas relacionadas
+à satisfação.
+
+00:01:02.311 --> 00:01:05.873
+Trabalho, carreira,
+Stack Overflow,
+
+00:01:05.907 --> 00:01:08.552
+e o máximo é 10.
+
+00:01:08.586 --> 00:01:13.616
+Então, a satisfação máxima em cada
+uma destas escalas para a pesquisa
+
+00:01:13.650 --> 00:01:16.082
+é 10, ou "e".
+
+00:01:16.116 --> 00:01:18.443
+"A coluna com mais
+dados ausentes."
+
+00:01:18.477 --> 00:01:21.149
+Vemos isto na contagem
+aqui em cima.
+
+00:01:21.183 --> 00:01:25.357
+A que tiver a menor contagem
+é a que tem mais dados ausentes.
+
+00:01:25.391 --> 00:01:27.689
+Então,
+
+00:01:27.723 --> 00:01:30.808
+o salário esperado
+
+00:01:30.842 --> 00:01:32.771
+tem mais dados ausentes.
+
+00:01:32.805 --> 00:01:35.245
+"A variável com maior
+propagação de valores."
+
+00:01:35.279 --> 00:01:39.133
+A maior propagação significa
+que ela tem o maior desvio padrão
+
+00:01:39.167 --> 00:01:42.541
+ou a maior distância
+entre o máximo e o mínimo.
+
+00:01:42.575 --> 00:01:44.713
+Essa é outra forma de fazer.
+
+00:01:44.747 --> 00:01:47.296
+Vou olhar os desvios padrão.
+
+00:01:47.330 --> 00:01:51.103
+Vemos aqui 40.753.
+
+00:01:51.137 --> 00:01:54.743
+Parece que salário tem
+a maior propagação.
+
+00:01:54.777 --> 00:01:58.363
+Às vezes, uma imagem diz mais,
+então vamos executar o histograma.
+
+00:01:58.397 --> 00:02:02.355
+Satisfação com a carreira e com
+o trabalho estão para a esquerda.
+
+00:02:02.389 --> 00:02:05.415
+Salário está para a direita,
+assim como horas por semana.
+
+00:02:05.449 --> 00:02:08.163
+Satisfação com o Stack Overflow
+está para a esquerda,
+
+00:02:08.197 --> 00:02:11.263
+salário esperado
+está para a direita,
+
+00:02:11.297 --> 00:02:15.170
+e respondentes está equilibrado
+porque só existe 1
+
+00:02:15.204 --> 00:02:18.027
+para cada indivíduo.
+
+00:02:18.061 --> 00:02:22.945
+E temos esta bela imagem
+chamada "mapa de calor".
+
+00:02:22.979 --> 00:02:26.754
+Em geral, veja que os mais escuros
+estão mais próximos de 0.
+
+00:02:26.788 --> 00:02:29.928
+Então, todos
+os quadrados escuros
+
+00:02:29.962 --> 00:02:33.745
+sugerem que não há altas
+correlações entre certas coisas.
+
+00:02:33.779 --> 00:02:38.431
+É como a correlação entre salário
+esperado e número de respondentes,
+
+00:02:38.465 --> 00:02:42.179
+e não esperamos que o número
+de respondentes seja alto.
+
+00:02:42.213 --> 00:02:45.005
+Mas veja que este,
+entre satisfação com o trabalho
+
+00:02:45.039 --> 00:02:47.218
+e satisfação com a carreira,
+é o mais alto.
+
+00:02:47.252 --> 00:02:50.861
+Qualquer coisa fora da diagonal,
+qualquer coisa no topo à direita
+
+00:02:50.895 --> 00:02:52.684
+é igual à parte de baixo
+à esquerda,
+
+00:02:52.718 --> 00:02:56.180
+então, basta olhar metade disto
+para obter as informações.
+
+00:02:56.214 --> 00:02:59.358
+Poucas correlações altas,
+
+00:02:59.392 --> 00:03:01.570
+e observe que há
+alguns pontos ausentes.
+
+00:03:01.604 --> 00:03:04.153
+Se alguém marcou
+satisfação com a carreira,
+
+00:03:04.187 --> 00:03:06.507
+não marcou salário esperado.
+
+00:03:06.541 --> 00:03:09.938
+Se marcou satisfação com o trabalho,
+não marcou salário esperado.
+
+00:03:09.972 --> 00:03:12.983
+E se alguém marcou salário,
+não marcou salário esperado.
+
+00:03:13.017 --> 00:03:17.091
+Há vários lugares
+em que faltam dados if.
+
+00:03:17.125 --> 00:03:19.979
+Se você não tem salário esperado,
+você tem essas 3 coisas.
+
+00:03:20.013 --> 00:03:23.625
+Se você tem uma dessas 3 coisas,
+você não tem salário esperado.
+
+00:03:23.659 --> 00:03:25.163
+Não há sobreposição.
+
+00:03:25.197 --> 00:03:28.813
+Logo, a coluna com a correlação
+mais forte com salário...
+
+00:03:28.847 --> 00:03:31.726
+Vamos ver aqui.
+Aqui está o salário.
+
+00:03:31.760 --> 00:03:35.169
+O que tem a maior correlação
+parece ser este 0,15,
+
+00:03:35.203 --> 00:03:37.597
+que é satisfação
+com a carreira.
+
+00:03:37.631 --> 00:03:41.740
+Então, vou marcar isto
+como "f".
+
+00:03:41.774 --> 00:03:44.444
+Os dados sugerem
+que mais horas de trabalho
+
+00:03:44.478 --> 00:03:46.499
+estão relacionadas
+a salários mais altos.
+
+00:03:46.533 --> 00:03:49.226
+Vou marcar esta como "não"
+
+00:03:49.260 --> 00:03:53.369
+porque, ao olharmos
+coisas associadas a salário,
+
+00:03:53.403 --> 00:03:55.359
+nenhuma é muito alta.
+
+00:03:55.393 --> 00:03:59.018
+"Horas por semana" está
+relacionado negativamente.
+
+00:03:59.052 --> 00:04:01.610
+"Dados em tal coluna
+significam
+
+00:04:01.644 --> 00:04:04.863
+dados ausentes
+em duas outras colunas."
+
+00:04:04.897 --> 00:04:07.449
+Na verdade,
+três outras colunas,
+
+00:04:07.483 --> 00:04:10.670
+mas vou marcar "c".
+
+00:04:10.704 --> 00:04:16.332
+Se houver dados ausentes
+na coluna salário esperado,
+
+00:04:16.366 --> 00:04:19.406
+então há dados faltando
+em três outras colunas,
+
+00:04:19.440 --> 00:04:21.722
+mas também
+em duas outras colunas.
+
+00:04:21.756 --> 00:04:25.701
+"E a relação negativa mais forte
+tinha qual correlação?"
+
+00:04:25.735 --> 00:04:28.870
+A relação negativa mais forte
+
+00:04:28.904 --> 00:04:31.399
+tinha qual correlação?
+
+00:04:31.433 --> 00:04:34.626
+Vejo -0,15,
+
+00:04:34.660 --> 00:04:36.942
+parece o mais baixo.
+
+00:04:36.976 --> 00:04:40.150
+O mais baixo que eles têm
+é -0,12,
+
+00:04:40.184 --> 00:04:42.815
+mas acho que deve ser -0,15.
+
+00:04:42.849 --> 00:04:45.040
+Então, vou mudar isto.
+
+00:04:45.074 --> 00:04:47.881
+Pegando todos os erros
+neste vídeo.
+
+00:04:47.915 --> 00:04:50.882
+Legal. Está ótimo. A parte seguinte
+era ajustar o modelo.
+
+00:04:50.916 --> 00:04:54.614
+Colocamos os dados como subconjuntos
+apenas das variáveis quantitativas.
+
+00:04:54.648 --> 00:04:56.613
+Depois, tentamos
+predizer salário.
+
+00:04:56.647 --> 00:04:59.062
+Dividimos em conjuntos
+de treinamento e de teste.
+
+00:04:59.096 --> 00:05:03.985
+Depois, havia quatro etapas.
+Ajustamos o modelo linear,
+
+00:05:04.019 --> 00:05:07.005
+instanciamos o modelo
+e tentamos ajustá-lo.
+
+00:05:07.039 --> 00:05:11.310
+Ao fazer tudo isso,
+vemos que ele quebra.
+
+00:05:11.344 --> 00:05:15.597
+Usando os resultados acima,
+vamos corresponder cada variável
+
+00:05:15.631 --> 00:05:17.581
+como a chave adequada.
+
+00:05:17.615 --> 00:05:20.572
+"Por que motivo
+o método de ajuste quebrou?"
+
+00:05:20.606 --> 00:05:24.370
+O motivo é que estão faltando
+valores na matriz X.
+
+00:05:24.404 --> 00:05:26.734
+"Métodos
+de ajuste scikit-learn
+
+00:05:26.768 --> 00:05:30.800
+não podem aceitar
+valores NAN." É d.
+
+00:05:30.834 --> 00:05:32.759
+"O que o parâmetro
+estado aleatório faz
+
+00:05:32.793 --> 00:05:34.843
+para a divisão
+entre treinamento e teste?"
+
+00:05:34.876 --> 00:05:39.839
+Ele garante que, se várias pessoas
+executarem o código,
+
+00:05:39.873 --> 00:05:44.791
+todas obterão os mesmos conjuntos
+de treinamento e teste.
+
+00:05:44.825 --> 00:05:50.770
+"Ele garante que a divisão entre
+treinamento e teste que vai ocorrer
+
+00:05:50.803 --> 00:05:55.320
+será a mesma
+para vários usuários." Então, b.
+
+00:05:55.354 --> 00:05:58.573
+"Qual o objetivo de criar a divisão
+entre treinamento e teste?"
+
+00:05:58.607 --> 00:06:00.482
+O objetivo de criar a divisão
+
+00:06:00.516 --> 00:06:04.483
+é garantir que seu modelo se estenda
+bem para novas situações.
+
+00:06:04.517 --> 00:06:07.766
+Ele não só se ajusta bem
+aos dados que deve treinar,
+
+00:06:07.800 --> 00:06:11.648
+mas se estende bem para dados de
+teste ou dados que nunca viu antes.
+
+00:06:11.682 --> 00:06:15.351
+Então, vou dizer "a".
+
+00:06:15.385 --> 00:06:18.932
+E ficou ótimo.
+Estamos prontos para a próxima.
+

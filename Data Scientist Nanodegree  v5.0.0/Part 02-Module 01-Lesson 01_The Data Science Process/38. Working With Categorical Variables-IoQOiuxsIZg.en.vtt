@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.234
+One of the most common methods
+
+00:00:08.234 --> 00:00:11.899
+for encoding categorical variables is with ones and zeros.
+
+00:00:11.900 --> 00:00:13.830
+There are advantages to this method.
+
+00:00:13.830 --> 00:00:16.289
+With linear models, you have the ability to
+
+00:00:16.289 --> 00:00:19.724
+easily interpret the weights on each of these values,
+
+00:00:19.725 --> 00:00:23.355
+and it provides a lot of flexibility in determining
+
+00:00:23.355 --> 00:00:27.640
+how each level of the categorical variable influences the response.
+
+00:00:27.640 --> 00:00:31.835
+On the downside, when a categorical variable has lots of levels,
+
+00:00:31.835 --> 00:00:34.700
+creating dummy variables encoded in this way,
+
+00:00:34.700 --> 00:00:37.370
+can add a lot of new columns into your dataset.
+
+00:00:37.369 --> 00:00:42.784
+In this dataset, we're working with 42,000 additional columns.
+
+00:00:42.784 --> 00:00:46.559
+If the number of columns were to exceed the number of rows,
+
+00:00:46.560 --> 00:00:51.270
+many machine learning algorithms will be unable to optimize for a solution at all.
+
+00:00:51.270 --> 00:00:55.490
+There are some additional techniques shown in the post and the links below.
+
+00:00:55.490 --> 00:00:59.480
+Let's try implementing this technique to see how it works out
+

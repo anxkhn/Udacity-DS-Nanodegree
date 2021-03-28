@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.429
+A quick look through
+
+00:00:05.429 --> 00:00:08.369
+the data set shows a number of factors that should be able to
+
+00:00:08.369 --> 00:00:11.820
+help us better understand more about an individual salary.
+
+00:00:11.820 --> 00:00:16.230
+They're quantitative factors like the number of hours a week and individual works,
+
+00:00:16.230 --> 00:00:19.365
+or how satisfied they are with their job or their career.
+
+00:00:19.364 --> 00:00:23.309
+They're also categorical variables like the country they live in,
+
+00:00:23.309 --> 00:00:26.539
+their company size, or formal education.
+
+00:00:26.539 --> 00:00:29.449
+When building supervised machine learning models,
+
+00:00:29.449 --> 00:00:35.314
+we're looking for a way to take all of these inputs and predict an individual value.
+
+00:00:35.314 --> 00:00:38.000
+In this case, the individual salary.
+
+00:00:38.000 --> 00:00:43.130
+We would like our model to find structure and how these inputs relate to some response
+
+00:00:43.130 --> 00:00:45.679
+variable so that we end up with predictions that
+
+00:00:45.679 --> 00:00:48.575
+are as close to the actual values as possible.
+
+00:00:48.575 --> 00:00:53.080
+Let's see how well different algorithms perform on this data set.
+

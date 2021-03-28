@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.620 --> 00:00:05.700
+In the last video,
+
+00:00:05.700 --> 00:00:08.660
+we saw three methods for working with missing data.
+
+00:00:08.660 --> 00:00:14.675
+The first of these methods was to remove rows or columns holding the missing values.
+
+00:00:14.675 --> 00:00:19.109
+First, it is useful to ask yourself why these values are missing.
+
+00:00:19.109 --> 00:00:23.244
+Often dropping data from your dataset can lead to bias models,
+
+00:00:23.245 --> 00:00:26.214
+this is also true for imputing data points.
+
+00:00:26.214 --> 00:00:30.250
+There isn't a universal best way for working with missing data,
+
+00:00:30.250 --> 00:00:35.174
+so exploring different options can help you determine what's best for your situation.
+
+00:00:35.174 --> 00:00:39.794
+If missing data occurs from individuals who are not willing to share information,
+
+00:00:39.795 --> 00:00:43.245
+and you build a model simply excluding those individuals,
+
+00:00:43.244 --> 00:00:45.489
+you are likely to get poor results.
+
+00:00:45.490 --> 00:00:51.530
+Consider a survey that asks participants 150 questions about their personality type.
+
+00:00:51.530 --> 00:00:52.890
+I don't know about you,
+
+00:00:52.890 --> 00:00:55.855
+but I'm likely to give up after two or three questions.
+
+00:00:55.854 --> 00:01:00.129
+If you ask questions about relationships or financials in the survey,
+
+00:01:00.130 --> 00:01:05.615
+a lack of response to these questions might indicate one personality type over another.
+
+00:01:05.614 --> 00:01:11.084
+Dropping these missing values would remove information that we might be able to use.
+
+00:01:11.084 --> 00:01:14.659
+For example, we could create a column to keep track
+
+00:01:14.659 --> 00:01:18.109
+of which questions each individual left blank,
+
+00:01:18.109 --> 00:01:23.090
+or we can keep track of the number of missing values that occurred for each respondent.
+
+00:01:23.090 --> 00:01:28.100
+In these cases, we're actually using the missing data to improve predictions.
+
+00:01:28.099 --> 00:01:31.399
+However, removing individuals or columns with
+
+00:01:31.400 --> 00:01:36.280
+missing data would likely hurt predictions due to the reduced information.
+

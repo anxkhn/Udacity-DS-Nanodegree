@@ -1,0 +1,772 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.132 --> 00:00:01.599
+Nos vídeos anteriores,
+
+00:00:01.633 --> 00:00:06.566
+já trabalhamos
+com dados ausentes,
+
+00:00:06.599 --> 00:00:09.833
+em termos de dropping
+ou inputing.
+
+00:00:09.866 --> 00:00:12.733
+Quando fizemos o input,
+ajustamos modelos
+
+00:00:12.766 --> 00:00:15.233
+para prever todos os salários.
+
+00:00:15.266 --> 00:00:19.266
+Mas ainda não estávamos usando
+todas as colunas categóricas.
+
+00:00:19.299 --> 00:00:20.966
+Então, neste vídeo,
+
+00:00:20.999 --> 00:00:23.599
+vamos aprender a usar
+estas colunas categóricas,
+
+00:00:23.633 --> 00:00:26.633
+e um dos principais modos é
+com codificações com 0 e 1.
+
+00:00:26.666 --> 00:00:29.633
+Há algumas vantagens
+nesta abordagem,
+
+00:00:29.666 --> 00:00:31.633
+por isto é tão popular.
+
+00:00:31.666 --> 00:00:35.366
+Mas existem alguns problemas
+de escalabilidade -
+
+00:00:35.399 --> 00:00:39.699
+que você verá no tempo de execução
+de algumas coisas neste notebook -,
+
+00:00:39.733 --> 00:00:43.233
+o que não é vantajoso
+quando se tem muitas variáveis,
+
+00:00:43.266 --> 00:00:46.299
+como aqui, que temos
+muitas variáveis categóricas,
+
+00:00:46.333 --> 00:00:49.466
+e isto leva a problemas
+de escalabilidade.
+
+00:00:49.499 --> 00:00:52.266
+Você verá isto neste notebook,
+
+00:00:52.299 --> 00:00:55.966
+e existem outros modos
+de consertar estes erros.
+
+00:00:55.999 --> 00:00:58.066
+Na primeira parte do notebook,
+
+00:00:58.099 --> 00:01:02.233
+estamos fazendo coisas
+que você já viu em outros vídeos:
+
+00:01:02.266 --> 00:01:05.299
+lemos os conjuntos de dados,
+vimos as variáveis numéricas,
+
+00:01:05.333 --> 00:01:08.733
+eliminamos as linhas
+que estão sem o salário,
+
+00:01:08.766 --> 00:01:12.666
+nós preenchemos a média
+para cada coluna
+
+00:01:12.699 --> 00:01:14.499
+que tem um valor faltando
+
+00:01:14.533 --> 00:01:17.799
+e preenchemos a média da coluna
+para este valor que está faltando.
+
+00:01:17.833 --> 00:01:19.766
+Nós dividimos em X e y,
+
+00:01:19.799 --> 00:01:22.399
+dividimos em treino e teste
+
+00:01:22.433 --> 00:01:25.633
+e vamos ver como o modelo se sai
+nos dados de teste.
+
+00:01:25.897 --> 00:01:28.129
+E você pode ver
+o resultado aqui.
+
+00:01:28.162 --> 00:01:31.766
+E, usando o resto do notebook,
+construiremos um modelo
+
+00:01:31.799 --> 00:01:35.233
+que se saia melhor que este
+usando as variáveis categóricas.
+
+00:01:35.433 --> 00:01:37.866
+Esta primeira parte diz:
+
+00:01:37.900 --> 00:01:42.600
+"Use df para identificar as colunas
+de natureza categórica
+
+00:01:42.633 --> 00:01:45.166
+e fazer o subconjunto
+para um dataframe
+
+00:01:45.200 --> 00:01:47.233
+só com as variáveis
+categóricas."
+
+00:01:47.266 --> 00:01:51.466
+E eles nos dão este link útil,
+que eu abri aqui.
+
+00:01:51.500 --> 00:01:55.400
+Tem uma parte bem legal
+no link que diz:
+
+00:01:55.433 --> 00:01:58.233
+"Selecione os tipos de dados
+de qualquer dataframe
+
+00:01:58.266 --> 00:02:02.266
+usando select_dtypes,
+e depois os passe."
+
+00:02:02.300 --> 00:02:06.600
+Aqui, você pode passar um int,
+float, objeto, booleano
+
+00:02:06.633 --> 00:02:10.366
+ou qualquer tipo de dado
+que você vir para cá.
+
+00:02:10.400 --> 00:02:13.866
+E isto vai fazer um subconjunto
+do dataframe apenas com eles.
+
+00:02:13.900 --> 00:02:15.342
+Ótimo. Então...
+
+00:02:15.697 --> 00:02:18.850
+Escrevo select_dtypes
+
+00:02:19.190 --> 00:02:22.866
+(include=
+
+00:02:22.900 --> 00:02:26.333
+e passo uma lista.
+Quero incluir um objeto.
+
+00:02:26.366 --> 00:02:29.333
+Vamos armazená-lo
+em uma nova parte.
+
+00:02:29.366 --> 00:02:34.233
+Ele diz que tem 147 colunas
+associadas a isto.
+
+00:02:34.266 --> 00:02:35.766
+Se der uma olhada aqui,
+
+00:02:35.800 --> 00:02:41.133
+verá que as colunas parecem ter
+natureza categórica.
+
+00:02:41.166 --> 00:02:43.100
+Se olharmos
+o dataframe original,
+
+00:02:43.133 --> 00:02:46.100
+temos esta parte respondente
+que foi eliminada.
+
+00:02:46.133 --> 00:02:50.633
+Temos o salário e o salário esperado
+aqui em baixo, no fim.
+
+00:02:50.666 --> 00:02:52.433
+Também foram eliminados.
+
+00:02:52.466 --> 00:02:54.533
+E podemos comparar isto
+com a solução.
+
+00:02:54.566 --> 00:02:56.900
+Diz: "Bom trabalho!
+Parece que fez tudo certo."
+
+00:02:56.933 --> 00:02:58.533
+Legal. Aqui diz:
+
+00:02:58.566 --> 00:03:01.600
+"Use o cat_df e as células abaixo
+para preencher o dicionário
+
+00:03:01.633 --> 00:03:03.666
+com o valor correto
+para cada instrução."
+
+00:03:03.700 --> 00:03:05.266
+A primeira instrução é:
+
+00:03:05.300 --> 00:03:07.966
+"Qual é o número de colunas
+com valores faltando?"
+
+00:03:08.000 --> 00:03:10.566
+Use cat_df,
+
+00:03:10.600 --> 00:03:14.733
+e queremos ver o número de colunas
+com dados ausentes.
+
+00:03:14.766 --> 00:03:16.366
+Então escrevo isnull.
+
+00:03:16.400 --> 00:03:18.133
+E, se executarmos isto,
+
+00:03:18.166 --> 00:03:20.800
+temos basicamente vários
+verdadeiros e falsos.
+
+00:03:20.833 --> 00:03:22.600
+E, se executarmos uma soma,
+
+00:03:22.633 --> 00:03:25.700
+se executarmos np.sum nisto,
+
+00:03:25.733 --> 00:03:28.733
+obtemos 0 ou algum número.
+
+00:03:28.766 --> 00:03:31.433
+É o número de dados ausentes
+para cada coluna.
+
+00:03:31.466 --> 00:03:32.933
+Veja que alguns são 0.
+
+00:03:32.966 --> 00:03:37.333
+Se pegarmos os que são 0,
+
+00:03:37.366 --> 00:03:41.066
+vemos vários Trues e Falses,
+e podemos pegar outra soma.
+
+00:03:41.100 --> 00:03:43.166
+Parece que são 6. Legal.
+
+00:03:43.200 --> 00:03:45.233
+A próxima parte pede
+o número de colunas
+
+00:03:45.266 --> 00:03:47.733
+com mais da metade
+da coluna ausente.
+
+00:03:47.766 --> 00:03:53.400
+Vamos usar algo bem similar
+ao que fizemos aqui.
+
+00:03:53.433 --> 00:03:57.466
+Mas isto era uma contagem.
+
+00:03:57.500 --> 00:04:01.266
+Basicamente,
+se quisermos uma proporção,
+
+00:04:01.300 --> 00:04:04.533
+podemos pegar
+o número de linhas.
+
+00:04:04.566 --> 00:04:06.133
+Obtemos o número de linhas
+
+00:04:06.166 --> 00:04:09.333
+tirando o primeiro elemento
+de shape.
+
+00:04:09.696 --> 00:04:12.000
+E isto vai nos dar
+as linhas.
+
+00:04:12.033 --> 00:04:15.200
+Se pegarmos o número total
+de dados ausentes
+
+00:04:15.233 --> 00:04:17.433
+dividido pelo número total
+de linhas,
+
+00:04:17.466 --> 00:04:19.800
+teremos a proporção
+de dados ausentes.
+
+00:04:19.833 --> 00:04:23.889
+Esta é a proporção
+de dados ausentes em cada parte.
+
+00:04:23.923 --> 00:04:29.739
+E, basicamente olhando
+se é maior que 0,5-,
+
+00:04:29.772 --> 00:04:31.600
+é o primeiro -,
+
+00:04:31.633 --> 00:04:34.133
+isto deve nos dar
+Trues e Falses.
+
+00:04:34.333 --> 00:04:37.233
+Isto nos dá valores verdadeiros
+e falsos.
+
+00:04:37.267 --> 00:04:41.733
+E somando tudo, obtemos 49.
+
+00:04:41.767 --> 00:04:47.600
+49 parecem ter mais da metade
+das colunas faltando.
+
+00:04:47.633 --> 00:04:51.300
+E o último é 75%.
+
+00:04:51.333 --> 00:04:56.467
+Vamos alterar aqui,
+e parece que temos 13.
+
+00:04:56.500 --> 00:04:58.433
+Fazemos isto
+com qualquer porcentagem.
+
+00:04:58.467 --> 00:05:03.867
+Podemos checar se 80% delas
+estão faltando, 90% ou só 5%.
+
+00:05:03.900 --> 00:05:05.367
+Na última parte,
+
+00:05:05.400 --> 00:05:08.133
+estamos trabalhando
+com o dataframe dummy_var.
+
+00:05:08.167 --> 00:05:11.167
+Veja que tem duas colunas:
+
+00:05:11.200 --> 00:05:15.600
+uma tem valores a e b,
+e a outra tem valores numéricos.
+
+00:05:15.633 --> 00:05:20.133
+E eu uso a célula
+para criar a variável dummy em col1.
+
+00:05:20.167 --> 00:05:23.100
+Queremos criar variáveis dummy
+
+00:05:23.133 --> 00:05:26.300
+para qualquer coluna
+que tenha valores categóricos.
+
+00:05:26.333 --> 00:05:27.600
+Neste caso, a col1.
+
+00:05:27.633 --> 00:05:31.033
+Mas não queremos uma variável dummy
+nesta variável numérica.
+
+00:05:31.067 --> 00:05:34.100
+Na maioria dos casos,
+poderíamos criar a variável dummy
+
+00:05:34.133 --> 00:05:35.933
+que diz se está faltando
+ou não.
+
+00:05:35.966 --> 00:05:39.800
+Podemos pensar em outro jeito
+de usar estes números
+
+00:05:39.833 --> 00:05:43.833
+assim como as informações
+se há dados ausentes.
+
+00:05:44.103 --> 00:05:46.501
+A primeira pergunta é:
+
+00:05:46.534 --> 00:05:48.966
+"Para qual coluna criamos
+uma variável dummy?"
+
+00:05:49.000 --> 00:05:52.000
+E seria a col1. Então é "d".
+
+00:05:52.033 --> 00:05:55.200
+"Ao usar a configuração padrão
+para criar variáveis dummy,
+
+00:05:55.233 --> 00:05:56.566
+quantas são criadas?"
+
+00:05:56.600 --> 00:06:01.366
+"Ao usar a configuração padrão
+para criar variáveis dummy,
+
+00:06:01.400 --> 00:06:02.800
+quantas são criadas?"
+
+00:06:02.833 --> 00:06:05.100
+Se executarmos isto,
+
+00:06:05.133 --> 00:06:08.200
+esta get_dummies vai criar
+variáveis dummy para nós.
+
+00:06:08.233 --> 00:06:11.033
+Vamos passar uma coluna
+para ela,
+
+00:06:11.066 --> 00:06:14.333
+e ela vai criar as variáveis dummy
+para esta coluna,
+
+00:06:14.366 --> 00:06:16.000
+vai criar a codificação
+1 e 0.
+
+00:06:16.033 --> 00:06:20.900
+E, neste caso,
+ela criou duas colunas por padrão.
+
+00:06:20.933 --> 00:06:23.733
+Depois, ele pergunta o que aconteceu
+com os valores NaN.
+
+00:06:23.766 --> 00:06:25.733
+Se dermos uma olhada,
+
+00:06:25.766 --> 00:06:31.433
+vemos que tinham valores NaN
+para o índice de 5 e o índice de 7.
+
+00:06:31.466 --> 00:06:36.166
+Veja que eles eram
+basicamente formados por 0.
+
+00:06:36.200 --> 00:06:38.533
+Então eles
+não foram eliminados,
+
+00:06:38.566 --> 00:06:41.433
+eles não se tornaram estes números
+ou algo assim,
+
+00:06:41.466 --> 00:06:45.333
+eles só foram
+sempre codificados com 0.
+
+00:06:45.366 --> 00:06:47.426
+Certo. Aqui diz:
+
+00:06:47.459 --> 00:06:51.133
+"Note que você pode usar get_dummies
+para codificar NaNs."
+
+00:06:51.166 --> 00:06:53.600
+Também tem este argumento
+dummy_na.
+
+00:06:53.633 --> 00:06:56.800
+Você pode usar
+este argumento dummy_na,
+
+00:06:56.833 --> 00:06:59.000
+que é essencialmente só
+um booleano.
+
+00:06:59.033 --> 00:07:02.300
+Se você olhar aqui
+na documentação,
+
+00:07:02.333 --> 00:07:04.333
+verá que dummy_na é
+um booleano
+
+00:07:04.366 --> 00:07:06.633
+e é, por padrão, False.
+
+00:07:06.666 --> 00:07:08.400
+Quando é False,
+
+00:07:08.433 --> 00:07:12.466
+os NaNs são ignorados,
+eles só se tornam 0.
+
+00:07:12.500 --> 00:07:16.733
+Mas, se adicionar um True,
+uma nova coluna é adicionada.
+
+00:07:16.766 --> 00:07:19.700
+Isto vai indicar os NaNs.
+
+00:07:19.733 --> 00:07:23.166
+Vamos ver
+se podemos usar isto.
+
+00:07:23.200 --> 00:07:28.166
+Queremos passar a primeira coluna
+para cá, col1.
+
+00:07:28.200 --> 00:07:29.933
+Passamos a primeira coluna
+
+00:07:29.966 --> 00:07:33.968
+e queremos que dummy_na
+
+00:07:34.001 --> 00:07:36.500
+seja True, certo?
+
+00:07:36.533 --> 00:07:40.500
+Aqui diz: "Faça algo com estes NaNs,
+para eu saber que eles existem."
+
+00:07:41.533 --> 00:07:44.633
+Veja que agora temos
+esta nova coluna
+
+00:07:44.666 --> 00:07:46.500
+que é responsável pelos NaNs.
+
+00:07:46.533 --> 00:07:48.433
+E tem um 1 aqui,
+
+00:07:48.466 --> 00:07:51.033
+onde antes só tinham
+estes dois zeros.
+
+00:07:51.066 --> 00:07:53.966
+Vamos comparar isto
+com a solução.
+
+00:07:54.000 --> 00:07:58.100
+Diz: "Bom trabalho!"
+Legal. Nesta última parte,
+
+00:07:58.133 --> 00:08:02.600
+queremos criar
+um novo dataframe
+
+00:08:02.633 --> 00:08:07.233
+que basicamente cuide
+de todas as colunas categóricas.
+
+00:08:07.266 --> 00:08:10.200
+Basicamente, queremos fazer
+este processo
+
+00:08:10.233 --> 00:08:14.066
+para todas as variáveis categóricas
+no dataframe
+
+00:08:14.100 --> 00:08:17.800
+e criar um novo dataframe
+que tenha estas características,
+
+00:08:17.833 --> 00:08:21.900
+que tenha variáveis dummy
+para cada variável categórica.
+
+00:08:21.933 --> 00:08:23.833
+Aqui diz que o novo dataframe
+
+00:08:23.866 --> 00:08:28.300
+deve ter todas as colunas
+não especificadas como categóricas.
+
+00:08:28.333 --> 00:08:31.466
+Isto significa que, se forem floats,
+ints ou algo assim,
+
+00:08:31.500 --> 00:08:34.100
+ainda queremos estas colunas
+no dataframe.
+
+00:08:34.133 --> 00:08:37.066
+Isto remove
+todas as colunas originais,
+
+00:08:37.100 --> 00:08:39.766
+então não precisamos
+das colunas categóricas,
+
+00:08:39.800 --> 00:08:41.832
+já que criamos
+variáveis dummy para elas.
+
+00:08:41.865 --> 00:08:45.466
+E as colunas dummy
+para cada variável categórica
+
+00:08:45.500 --> 00:08:48.600
+devem estar neste dataframe.
+E, se for especificado como True,
+
+00:08:48.633 --> 00:08:51.333
+também deve conter
+esta coluna extra.
+
+00:08:51.366 --> 00:08:54.433
+Como pode ver,
+só queremos passar o dataframe,
+
+00:08:54.466 --> 00:08:56.200
+as colunas que são categóricas
+
+00:08:56.233 --> 00:08:59.200
+e se queremos ou não
+criar variáveis dummy nelas.
+
+00:08:59.233 --> 00:09:05.000
+Veja como é uma solução
+de uma linha bem complexa.
+
+00:09:05.033 --> 00:09:09.933
+Essencialmente, estamos usando
+concat para concatenar
+
+00:09:09.966 --> 00:09:12.869
+as colunas categóricas
+
+00:09:12.903 --> 00:09:16.266
+e as não categóricas juntas.
+
+00:09:16.300 --> 00:09:19.629
+E precisamos escrever
+
+00:09:19.663 --> 00:09:22.833
+for col in cat_cols.
+
+00:09:22.866 --> 00:09:26.666
+Para cada coluna categórica,
+
+00:09:26.700 --> 00:09:29.466
+retire a coluna original.
+
+00:09:29.500 --> 00:09:35.133
+Este drop(col, axis=1)
+diz para retirar a coluna.
+
+00:09:35.166 --> 00:09:37.166
+Crie uma variável dummy
+para a coluna,
+
+00:09:37.200 --> 00:09:41.400
+e toda esta parte
+é como queremos
+
+00:09:41.433 --> 00:09:43.400
+que a coluna
+de variável dummy fique.
+
+00:09:43.433 --> 00:09:45.233
+Faça o drop da coluna.
+
+00:09:45.266 --> 00:09:48.666
+A parte dummy_na
+é True ou False,
+
+00:09:48.700 --> 00:09:51.600
+e é passada aqui em cima.
+
+00:09:51.633 --> 00:09:54.000
+Também estou dando um prefixo,
+
+00:09:54.033 --> 00:09:56.700
+que você pode escolher
+fazer ou não.
+
+00:09:56.733 --> 00:10:00.100
+E um separador para o prefixo.
+
+00:10:00.133 --> 00:10:03.000
+E queremos que...
+
+00:10:03.033 --> 00:10:05.000
+Esta parte, axis=1,
+
+00:10:05.033 --> 00:10:08.566
+vai voltar
+ao argumento concat.
+
+00:10:08.600 --> 00:10:11.266
+Para cada coluna categórica,
+
+00:10:11.300 --> 00:10:14.100
+faça o drop da coluna,
+
+00:10:14.133 --> 00:10:16.066
+crie a variável dummy para ela
+
+00:10:16.100 --> 00:10:18.933
+e concatene para o dataframe
+
+00:10:18.966 --> 00:10:21.366
+com a variável dummy
+em que foi feito o drop.
+
+00:10:21.400 --> 00:10:25.166
+E a retorne
+como este dataframe
+
+00:10:25.200 --> 00:10:27.700
+e faça isto
+para todas as colunas categóricas.
+
+00:10:27.733 --> 00:10:31.200
+Agora podemos usar isto
+para criar o novo dataframe,
+
+00:10:31.233 --> 00:10:33.333
+usando as colunas categóricas.
+
+00:10:33.366 --> 00:10:37.066
+Compare com o formato
+que você espera.
+
+00:10:37.100 --> 00:10:39.800
+E temos uma longa função.
+
+00:10:39.833 --> 00:10:41.333
+A parte boa é que,
+
+00:10:41.366 --> 00:10:44.133
+a maior parte do que você
+está fazendo
+
+00:10:44.166 --> 00:10:46.766
+é o que já aconteceu
+aqui em cima.
+
+00:10:46.800 --> 00:10:49.700
+Você está fazendo
+o que já fez aqui
+
+00:10:49.733 --> 00:10:51.433
+para finalizar a última parte.
+

@@ -1,0 +1,310 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.505
+Agora você já tem alguma experiência
+em trabalhar com dados ausentes
+
+00:00:04.538 --> 00:00:06.656
+e imputação
+baseada em métodos comuns.
+
+00:00:08.118 --> 00:00:10.469
+Neste vídeo, vamos continuar
+
+00:00:10.502 --> 00:00:12.873
+e ver se podemos usar
+esses métodos de imputação
+
+00:00:12.906 --> 00:00:16.365
+para ir melhor do que com o método
+de apagar que usamos antes.
+
+00:00:16.398 --> 00:00:20.549
+E um grande problema em apagar
+que tínhamos antes
+
+00:00:20.582 --> 00:00:25.680
+era que, na verdade, não prevíamos
+todos os valores
+
+00:00:25.713 --> 00:00:30.179
+porque, se não havia
+um valor específico na matriz x,
+
+00:00:30.212 --> 00:00:32.564
+basicamente dizíamos
+que não dava para prever.
+
+00:00:32.597 --> 00:00:34.974
+Só tirávamos
+do conjunto de dados.
+
+00:00:35.007 --> 00:00:40.170
+Enquanto com imputação podemos
+colocar algo nesses valores x,
+
+00:00:40.203 --> 00:00:43.945
+e, portanto, prever
+uma resposta específica.
+
+00:00:43.978 --> 00:00:47.939
+Aqui há alguns dos resultados
+que tivemos antes,
+
+00:00:47.972 --> 00:00:51.006
+usando o método de apagar,
+
+00:00:51.039 --> 00:00:57.754
+e agora vamos ver se fazemos melhor
+usando as diretivas aqui.
+
+00:00:57.787 --> 00:01:04.725
+Usando o DataFrame para tirar dados
+ausentes de acordo com o salário,
+
+00:01:04.758 --> 00:01:07.484
+preenchemos os dados
+ausentes com a média,
+
+00:01:07.517 --> 00:01:10.250
+apagamos as linhas
+com salários ausentes.
+
+00:01:11.809 --> 00:01:16.034
+Usando o DataFrame num_vars,
+apagamos os dados ausentes,
+
+00:01:16.067 --> 00:01:21.689
+apagamos as linhas
+com dados ausentes da resposta.
+
+00:01:21.722 --> 00:01:25.265
+Então usando num_vars,
+
+00:01:25.298 --> 00:01:27.610
+usamos dropna
+
+00:01:27.643 --> 00:01:33.450
+no subconjunto igual a Salary
+
+00:01:33.483 --> 00:01:37.189
+e tiramos as linhas
+associadas a isso.
+
+00:01:37.222 --> 00:01:39.524
+Logo, axis=0.
+
+00:01:39.557 --> 00:01:42.045
+Então apagamos as linhas
+com salários ausentes,
+
+00:01:42.078 --> 00:01:46.045
+e, vendo os resultados,
+parecem bons.
+
+00:01:46.078 --> 00:01:48.234
+E podemos checar duas vezes
+se está correto.
+
+00:01:48.267 --> 00:01:54.510
+Aqui vamos preencher
+todos os NaNs com a média.
+
+00:01:54.543 --> 00:02:00.375
+Vamos ver se conseguimos,
+podemos usar o que fizemos antes.
+
+00:02:00.408 --> 00:02:07.902
+Então eu vou fazer
+fill_mean=lambda col:
+
+00:02:07.935 --> 00:02:15.039
+col.fillna(col.mean()).
+
+00:02:15.073 --> 00:02:20.614
+Se tirarmos a média daquela coluna,
+preenchermos nela, deve funcionar.
+
+00:02:20.647 --> 00:02:38.414
+E fazemos isso com drop_sal_df.apply
+(fill_mean, axis=1).
+
+00:02:38.447 --> 00:02:41.655
+Parece que funcionou.
+
+00:02:41.688 --> 00:02:45.254
+Não era o que esperávamos,
+vamos tentar axis=0.
+
+00:02:46.264 --> 00:02:50.210
+Agora sim.
+É, então axis=0.
+
+00:02:50.243 --> 00:02:53.724
+Vamos tirar a média das colunas,
+o que é meio estranho,
+
+00:02:53.757 --> 00:02:56.634
+mas eu sempre confundo.
+
+00:02:56.667 --> 00:02:58.689
+Então, se tomarmos axis=0,
+
+00:02:58.722 --> 00:03:02.658
+podemos ver que estamos
+preenchendo, vejamos...
+
+00:03:02.691 --> 00:03:04.048
+Esses não devem ter mudado.
+
+00:03:04.081 --> 00:03:09.495
+Estamos pegando a média de horas
+que as pessoas trabalham por semana,
+
+00:03:09.528 --> 00:03:15.891
+que parece que é 2,44,
+mas se axis=1, devemos ver.
+
+00:03:15.924 --> 00:03:21.210
+É, não faz muito sentido,
+28.000 horas por semana.
+
+00:03:21.243 --> 00:03:25.098
+Seria difícil,
+não faz sentido.
+
+00:03:25.131 --> 00:03:29.844
+Então, quando fizemos isso,
+obtivemos a média pelas colunas.
+
+00:03:30.261 --> 00:03:34.281
+E agora diz:
+"Use fill_df para prever o salário
+
+00:03:34.314 --> 00:03:35.821
+para a variável
+quantitativa."
+
+00:03:35.854 --> 00:03:39.954
+A ideia agora é que preenchemos
+todos esses pontos ausentes.
+
+00:03:39.987 --> 00:03:43.760
+Ao contrário do que tínhamos antes,
+quando apagamos todos,
+
+00:03:44.438 --> 00:03:46.294
+devemos conseguir
+prever os salários.
+
+00:03:46.327 --> 00:03:50.319
+Nosso modelo anterior
+não conseguia prever os salários
+
+00:03:50.352 --> 00:03:52.745
+porque tínhamos dados ausentes
+aqui e aqui.
+
+00:03:52.778 --> 00:03:56.620
+Na verdade, acabávamos
+deletando esses também.
+
+00:03:57.100 --> 00:04:01.599
+Mas agora preenchemos os valores,
+mesmo sendo apenas médias
+
+00:04:01.632 --> 00:04:04.756
+para essas colunas específicas,
+então devemos conseguir prever.
+
+00:04:04.789 --> 00:04:08.069
+E então dividir
+em explicativa e resposta.
+
+00:04:08.102 --> 00:04:13.111
+Vou chamar x=fill_df,
+
+00:04:13.144 --> 00:04:15.549
+e só queremos as variáveis x,
+
+00:04:15.582 --> 00:04:17.538
+e, então,
+
+00:04:17.571 --> 00:04:23.816
+y=fill_df['Salary'].
+
+00:04:23.849 --> 00:04:28.750
+Vamos pegar essas variáveis x
+e retirar a resposta,
+
+00:04:28.783 --> 00:04:31.420
+e então dividir
+em treinamento e teste.
+
+00:04:32.311 --> 00:04:37.610
+Eu sempre esqueço como funciona,
+e, por sorte, há um exemplo aqui.
+
+00:04:37.643 --> 00:04:41.199
+E a maioria deve funcionar
+da mesma forma.
+
+00:04:41.232 --> 00:04:46.405
+Então chamamos x e y,
+eles vêm parar aqui,
+
+00:04:46.438 --> 00:04:50.074
+isso acontece, isso acontece,
+essas coisas todas acontecem.
+
+00:04:50.107 --> 00:04:56.057
+E, se etiquetarmos da mesma forma,
+são chamados de escore R².
+
+00:04:56.090 --> 00:05:00.490
+Podemos obter isso, e aí eles querem
+aquele teste do comprimento de y,
+
+00:05:00.523 --> 00:05:05.899
+então len(y_test_preds),
+
+00:05:05.932 --> 00:05:10.995
+e o valor R² deveria ser esse.
+
+00:05:11.028 --> 00:05:16.393
+Essas são basicamente as duas partes
+que estão nessa string que queriam.
+
+00:05:16.426 --> 00:05:21.455
+E ainda precisamos prever
+e marcar o escore.
+
+00:05:21.488 --> 00:05:24.113
+Eu vou prever
+e marcar o escore,
+
+00:05:24.146 --> 00:05:27.386
+e eles também querem
+o comprimento marcado aqui.
+
+00:05:28.535 --> 00:05:31.280
+Vou colocar tudo nessa parte.
+
+00:05:31.313 --> 00:05:36.233
+Parece que estamos prevendo
+1.503 valores,
+
+00:05:36.266 --> 00:05:38.402
+o que é mais do que os 645
+de antes.
+
+00:05:38.435 --> 00:05:45.215
+E só tínhamos 2% da variabilidade
+explicados pela resposta,
+
+00:05:45.248 --> 00:05:47.000
+agora estamos
+conseguindo 3,2%.
+

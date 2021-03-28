@@ -1,0 +1,370 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.650
+In this notebook, you'll be exploring job satisfaction according to the survey results.
+
+00:00:04.650 --> 00:00:07.800
+You'll notice that this was a little bit more open
+
+00:00:07.799 --> 00:00:11.355
+ended than some of the past notebooks that you worked through.
+
+00:00:11.355 --> 00:00:16.350
+And so, a place to start might just be to look at the first two questions and
+
+00:00:16.350 --> 00:00:22.105
+then work with the open cells above to answer the questions that you'll find below.
+
+00:00:22.105 --> 00:00:24.344
+So, the first question down here is just,
+
+00:00:24.344 --> 00:00:29.021
+what is the proportion of missing values in the job satisfaction column?
+
+00:00:29.021 --> 00:00:36.710
+So, I'm just going to pull in the job satisfaction and let's see.
+
+00:00:36.710 --> 00:00:42.893
+So, the proportion of missing value, is actually isnull.
+
+00:00:42.893 --> 00:00:46.176
+I think, we can do something like isnull, and this will give us trues and falses.
+
+00:00:46.176 --> 00:00:49.340
+And then, we can take a mean of a bunch of true and false values.
+
+00:00:49.340 --> 00:00:50.944
+So, cool.
+
+00:00:50.944 --> 00:00:56.297
+So, the proportion of missing value should be 0.2.
+
+00:00:56.296 --> 00:00:59.739
+This should be 0.2014.
+
+00:00:59.740 --> 00:01:03.486
+I wonder, I bet you that's not even going to give me,
+
+00:01:03.485 --> 00:01:06.299
+it should be 0.2014.
+
+00:01:06.299 --> 00:01:09.778
+And then, it says to give the letter, so l'm just going to do B.
+
+00:01:09.778 --> 00:01:11.897
+It should be 0.2014.
+
+00:01:11.897 --> 00:01:16.199
+And then, according to the employment status,
+
+00:01:16.200 --> 00:01:19.484
+which group has the highest average job satisfaction?
+
+00:01:19.484 --> 00:01:24.480
+So, we want to look at employment status
+
+00:01:24.480 --> 00:01:32.527
+and I'm just going to do count_values or value_counts.
+
+00:01:32.527 --> 00:01:37.054
+So, you can see that there are basically these different groups and they want,
+
+00:01:37.054 --> 00:01:39.090
+according to the employment status,
+
+00:01:39.090 --> 00:01:42.585
+which group has the highest average job satisfaction?
+
+00:01:42.584 --> 00:01:49.619
+So, I'm going to do a groupby and I'm going to groupby the Employment Status.
+
+00:01:49.620 --> 00:01:53.219
+So, in the groupby function you can,
+
+00:01:53.219 --> 00:01:56.200
+I guess, it's a method because it lives on the data frame,
+
+00:01:56.200 --> 00:01:59.655
+but you can pass either a string with the column name or a list
+
+00:01:59.655 --> 00:02:03.368
+of column names to that groupby.
+
+00:02:03.368 --> 00:02:05.310
+And then, we can say,
+
+00:02:05.310 --> 00:02:07.475
+"Give us the mean."
+
+00:02:07.474 --> 00:02:12.312
+And we care about job satisfaction, great.
+
+00:02:12.312 --> 00:02:15.104
+So, according to the employment status,
+
+00:02:15.104 --> 00:02:17.929
+which group has the highest job satisfaction?
+
+00:02:17.930 --> 00:02:25.020
+We can see it's this independent contractor and we have a bunch of NaNs as well.
+
+00:02:25.020 --> 00:02:28.200
+So, looks like this should be D, cool.
+
+00:02:28.199 --> 00:02:29.759
+And then in general,
+
+00:02:29.759 --> 00:02:33.375
+do smaller companies appear to have employees with higher job satisfaction?
+
+00:02:33.375 --> 00:02:39.375
+So, I imagine there's something associated with the size of,
+
+00:02:39.375 --> 00:02:42.034
+something along the lines of like companies,
+
+00:02:42.034 --> 00:02:43.780
+oh, company size, right there.
+
+00:02:43.780 --> 00:02:47.520
+Cool. So hopefully, it just shows up because otherwise,
+
+00:02:47.520 --> 00:02:49.755
+we'll have to dig through the whole list.
+
+00:02:49.754 --> 00:02:51.606
+And let's do the same thing.
+
+00:02:51.606 --> 00:02:53.050
+So, we'll do a groupby.
+
+00:02:53.050 --> 00:02:57.385
+We'll groupby the company size and then,
+
+00:02:57.384 --> 00:03:03.474
+I'll just take the mean and get the job satisfaction.
+
+00:03:03.474 --> 00:03:07.724
+So, this will give me the mean job satisfaction for each company size.
+
+00:03:07.724 --> 00:03:12.560
+And I believe we can do like a sort values on this.
+
+00:03:12.560 --> 00:03:15.495
+So, it looks like the highest said,
+
+00:03:15.495 --> 00:03:17.917
+they prefer not to answer.
+
+00:03:17.917 --> 00:03:22.094
+So, in general, do smaller companies appear to have employees with higher?
+
+00:03:22.094 --> 00:03:24.944
+So, these people I don't know,
+
+00:03:24.944 --> 00:03:26.324
+these prefer not to answer.
+
+00:03:26.324 --> 00:03:29.219
+But then, 10 to 19,
+
+00:03:29.219 --> 00:03:32.056
+the biggest companies have the lowest,
+
+00:03:32.056 --> 00:03:34.619
+and then the second biggest have the second lowest,
+
+00:03:34.620 --> 00:03:36.814
+the third biggest have the third lowest,
+
+00:03:36.814 --> 00:03:43.169
+then there's like middle sized companies and these are like super small company.
+
+00:03:43.169 --> 00:03:45.457
+This is a super small company.
+
+00:03:45.457 --> 00:03:49.724
+But in general, these companies here are,
+
+00:03:49.724 --> 00:03:52.842
+so the one, two, three, four, five,
+
+00:03:52.842 --> 00:03:56.734
+these five are all smaller than these three.
+
+00:03:56.735 --> 00:03:59.410
+So, in general, it kind of looks like that's the case.
+
+00:03:59.409 --> 00:04:01.525
+It's a little hard to tell but I would say,
+
+00:04:01.525 --> 00:04:06.330
+there's probably enough information to say these three are the biggest and they
+
+00:04:06.330 --> 00:04:12.530
+have lower job satisfaction than these five-ish that are the smallest.
+
+00:04:12.530 --> 00:04:18.569
+In general, do smaller companies appear to have employees? So, I'm going to say, yes.
+
+00:04:18.569 --> 00:04:22.759
+And then, use the space above to assist in matching each variable A,
+
+00:04:22.759 --> 00:04:25.139
+B, or C as the appropriate key.
+
+00:04:25.139 --> 00:04:29.044
+So, do individuals who program outside of work have higher job satisfaction?
+
+00:04:29.045 --> 00:04:34.064
+Does flexibility to work outside of the office appear to have an influence?
+
+00:04:34.064 --> 00:04:40.055
+A friend says a doctoral degree increases the chance of having a job that you like.
+
+00:04:40.055 --> 00:04:41.290
+Does that seem true?
+
+00:04:41.290 --> 00:04:44.745
+So, there's a bunch of things tied to job satisfaction.
+
+00:04:44.745 --> 00:04:47.745
+And right now, we're individually looking at a lot of them.
+
+00:04:47.745 --> 00:04:49.170
+We're kind of just like drawing
+
+00:04:49.170 --> 00:04:56.324
+some potential hypotheses and finding descriptive statistics that relate to them,
+
+00:04:56.324 --> 00:04:58.339
+just to build hunches.
+
+00:04:58.339 --> 00:05:02.319
+We probably want to do something more stringent to predict job satisfaction,
+
+00:05:02.319 --> 00:05:07.064
+if we want to have a better idea of what actually drives it.
+
+00:05:07.064 --> 00:05:09.519
+But we're getting some, at least,
+
+00:05:09.519 --> 00:05:13.464
+like descriptive evidence in some of these cases.
+
+00:05:13.464 --> 00:05:15.799
+So, do individuals who program outside of work?
+
+00:05:15.800 --> 00:05:20.395
+I'm going to just leave that df.columns.
+
+00:05:20.394 --> 00:05:23.504
+So, there's this ProgramHobby column,
+
+00:05:23.504 --> 00:05:26.050
+I'm just going to drop that in here.
+
+00:05:26.050 --> 00:05:30.579
+Does the flexibility to work outside of the office appear to have an influence?
+
+00:05:30.579 --> 00:05:32.205
+I don't know what that's doing.
+
+00:05:32.206 --> 00:05:34.540
+It's taking a long time.
+
+00:05:34.540 --> 00:05:36.610
+There's this thing called HomeRemote.
+
+00:05:36.610 --> 00:05:40.805
+I'm guessing that that might have to do with the second part.
+
+00:05:40.805 --> 00:05:45.235
+Yeah, so, it looks like the lowest job satisfaction
+
+00:05:45.235 --> 00:05:50.405
+doesn't program for a hobby and the highest job satisfaction of developers do.
+
+00:05:50.404 --> 00:05:52.929
+So, it kind of makes sense that if you even do this for fun,
+
+00:05:52.930 --> 00:05:58.900
+you probably have at least a higher probability of liking what you do at work.
+
+00:05:58.899 --> 00:06:03.214
+So, I'm just going to say, they appear to have a higher job satisfaction.
+
+00:06:03.214 --> 00:06:05.034
+That does appear to be true.
+
+00:06:05.035 --> 00:06:07.810
+Does flexibility to work outside the office appear to
+
+00:06:07.810 --> 00:06:12.331
+have any sort of evidence to suggest higher job satisfaction?
+
+00:06:12.331 --> 00:06:15.279
+So, these people work remote,
+
+00:06:15.279 --> 00:06:18.414
+work remote, work remote, work remote.
+
+00:06:18.415 --> 00:06:23.105
+The lowest, substantially lowest, never work remotely.
+
+00:06:23.105 --> 00:06:24.944
+But essentially, everyone else does.
+
+00:06:24.944 --> 00:06:27.909
+So the very lowest group and an actually,
+
+00:06:27.910 --> 00:06:31.825
+especially from the people who do it almost all the time
+
+00:06:31.824 --> 00:06:36.319
+have pretty high point value difference.
+
+00:06:36.319 --> 00:06:39.250
+We could, again, try to do something to prove that that was
+
+00:06:39.250 --> 00:06:42.552
+significant or not via like inferential methods.
+
+00:06:42.552 --> 00:06:45.300
+So, I'm going to say, that does appear to be true.
+
+00:06:45.300 --> 00:06:49.770
+Your friend says doctoral degrees increased.
+
+00:06:49.769 --> 00:06:54.799
+So, this has to do with formal education.
+
+00:06:54.800 --> 00:06:56.160
+So, let's do that as well.
+
+00:06:56.160 --> 00:06:59.475
+So, I'll drop that in this part now.
+
+00:06:59.475 --> 00:07:00.839
+Let's take a look at that.
+
+00:07:00.839 --> 00:07:05.889
+Yeah, so the doctoral degree tends to be the highest and it looks like,
+
+00:07:05.889 --> 00:07:08.870
+again, that's pretty substantial compared to the other groups.
+
+00:07:08.870 --> 00:07:12.939
+It's a full point two points higher especially compared
+
+00:07:12.939 --> 00:07:17.425
+to those with just a Bachelor's degree, it's the lowest.
+
+00:07:17.425 --> 00:07:23.675
+So, I'll say, that appears to be true as well.
+
+00:07:23.675 --> 00:07:29.410
+So, all of those kind of appear to be true and it looks like that's what they found.
+

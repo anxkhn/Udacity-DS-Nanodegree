@@ -1,0 +1,310 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.494
+No vídeo anterior,
+falei das perguntas
+
+00:00:02.528 --> 00:00:04.783
+que exploraremos nesta aula.
+
+00:00:04.817 --> 00:00:08.655
+Primeiro vamos ver nos dados
+como responder a primeira delas
+
+00:00:08.689 --> 00:00:11.462
+sobre como entrar no campo
+e se tornar desenvolvedor
+
+00:00:11.496 --> 00:00:13.342
+de acordo com a pesquisa.
+
+00:00:13.376 --> 00:00:16.151
+Para começar, vamos buscar
+as bibliotecas necessárias
+
+00:00:16.185 --> 00:00:19.638
+para preparar os dados:
+Pandas e NumPy.
+
+00:00:19.672 --> 00:00:21.718
+Se decidirmos criar
+diagramas básicos,
+
+00:00:21.752 --> 00:00:23.829
+podemos usar Matplotlib.
+
+00:00:23.863 --> 00:00:25.758
+Vamos voltar à pergunta.
+
+00:00:25.792 --> 00:00:29.757
+O que aqueles já na indústria
+sugerem para quem quer entrar.
+
+00:00:29.791 --> 00:00:32.566
+Pelo campo "CousinEducation",
+podemos ver
+
+00:00:32.600 --> 00:00:36.157
+exatamente o que os indivíduos
+sugeririam para ajudar.
+
+00:00:36.191 --> 00:00:38.580
+Abaixo podemos ver
+o campo completo
+
+00:00:38.614 --> 00:00:40.917
+que os participantes
+da pesquisa veriam.
+
+00:00:40.951 --> 00:00:44.356
+Vamos ver o que
+os participantes disseram.
+
+00:00:44.390 --> 00:00:46.894
+Isso não é
+o que eu esperava.
+
+00:00:46.928 --> 00:00:48.614
+Ele agrupou itens juntos,
+
+00:00:48.648 --> 00:00:51.894
+como se um participante tivesse
+dado mais que uma resposta.
+
+00:00:51.928 --> 00:00:53.831
+Vamos ver se podemos
+limpar isso.
+
+00:00:53.865 --> 00:00:56.477
+Primeiro vamos mudar
+a coluna "index"
+
+00:00:56.511 --> 00:00:58.189
+para um nome
+mais apropriado.
+
+00:00:58.223 --> 00:01:00.278
+Vou mudar para "method".
+
+00:01:00.312 --> 00:01:02.676
+Agora, vendo rapidamente
+os dados,
+
+00:01:02.710 --> 00:01:03.997
+podemos criar uma lista
+
+00:01:04.031 --> 00:01:06.718
+com os métodos individuais
+marcados pelo usuário.
+
+00:01:06.752 --> 00:01:09.462
+Também posso encontrar isso
+nos documentos.
+
+00:01:09.496 --> 00:01:13.918
+Também podemos agrupar
+mais de um dado com ponto e vírgula,
+
+00:01:13.952 --> 00:01:18.237
+tendo o valor distinto
+de cada bloco.
+
+00:01:18.271 --> 00:01:22.252
+Ele vira um conjunto,
+para termos um de cada.
+
+00:01:22.668 --> 00:01:24.837
+Esta é a minha lista de dados.
+
+00:01:24.871 --> 00:01:28.796
+Agora vamos ver a frequência
+com que esses valores aparecem.
+
+00:01:28.830 --> 00:01:31.229
+Escrevi essa função
+para ajudar no processo.
+
+00:01:31.263 --> 00:01:33.566
+Não é a melhor solução,
+mas resolve,
+
+00:01:33.600 --> 00:01:37.278
+e nossos dados não são grandes
+o bastante para nos atrapalhar.
+
+00:01:37.312 --> 00:01:39.440
+Podemos aplicar a função.
+
+00:01:39.474 --> 00:01:41.750
+Vejam que tentei fornecer
+uma docstring
+
+00:01:41.784 --> 00:01:46.518
+que permite que o usuário
+use isto sem entender o código.
+
+00:01:46.552 --> 00:01:49.317
+Isso fornece o "input"
+para o usuário
+
+00:01:49.351 --> 00:01:51.653
+e o "output" especificado.
+
+00:01:51.687 --> 00:01:54.502
+É um processo muito importante
+para o futuro
+
+00:01:54.536 --> 00:01:57.709
+para você e outros desenvolvedores
+com quem trabalhe.
+
+00:01:57.743 --> 00:01:59.492
+Aqui estou aplicando isso,
+
+00:01:59.526 --> 00:02:03.053
+passando o DataFrame "study"
+que está em cima,
+
+00:02:03.087 --> 00:02:05.853
+as colunas "method", "count"
+
+00:02:05.887 --> 00:02:10.990
+e "possible_vals",
+que é a lista que criei.
+
+00:02:11.024 --> 00:02:13.982
+São as duas colunas,
+o DataFrame "study"
+
+00:02:14.016 --> 00:02:17.557
+e a lista que vamos usar.
+
+00:02:17.909 --> 00:02:20.413
+Usando a função
+para ver os resultados,
+
+00:02:20.447 --> 00:02:22.236
+as notícias parecem boas
+para a Udacity.
+
+00:02:22.270 --> 00:02:25.308
+A maioria acha que se deve fazer
+cursos on-line.
+
+00:02:25.342 --> 00:02:28.453
+Mas podemos ver também
+como uma porcentagem.
+
+00:02:28.487 --> 00:02:33.462
+Vejam que quase 21% das pessoas
+sugeriram cursos on-line.
+
+00:02:33.496 --> 00:02:36.148
+Mais que os outros métodos.
+
+00:02:36.182 --> 00:02:38.468
+Vamos um pouco além e dizer
+
+00:02:38.502 --> 00:02:40.925
+que nos importamos mais
+com os métodos sugeridos
+
+00:02:40.959 --> 00:02:42.460
+por quem ganha mais
+
+00:02:42.494 --> 00:02:44.932
+ou por quem está
+mais satisfeito no trabalho.
+
+00:02:44.966 --> 00:02:47.972
+Vamos ver como podemos
+incorporar isso na análise.
+
+00:02:48.006 --> 00:02:50.573
+Eu atualizei a função
+que estávamos usando antes
+
+00:02:50.607 --> 00:02:56.143
+para poder ver como o salário
+está relacionado aos métodos.
+
+00:02:56.758 --> 00:02:59.990
+Forneci o código para você
+no Espaço de Trabalho.
+
+00:03:00.024 --> 00:03:03.542
+Vejam que usar essa função
+nos atrapalhou neste caso.
+
+00:03:03.576 --> 00:03:05.775
+Ela demora uma eternidade
+para executar.
+
+00:03:05.809 --> 00:03:09.054
+Precisamos encontrar
+uma solução melhor.
+
+00:03:09.088 --> 00:03:12.946
+Quando ela terminar de executar,
+vamos ordenar pela coluna "mean",
+
+00:03:12.980 --> 00:03:16.587
+ou seja, queremos
+que o método educacional
+
+00:03:16.621 --> 00:03:20.588
+com o maior salário médio
+apareça antes que o resto.
+
+00:03:20.622 --> 00:03:24.014
+A tabela final que encontramos
+deve ficar assim.
+
+00:03:24.048 --> 00:03:28.555
+Este é o número de pessoas
+que sugeriu este método.
+
+00:03:28.589 --> 00:03:31.691
+Vejam que é diferente
+dos resultados que vimos antes.
+
+00:03:31.725 --> 00:03:34.211
+E é porque nem todos
+informaram salário,
+
+00:03:34.245 --> 00:03:37.092
+então esses não foram incluídos
+nesses dados.
+
+00:03:37.126 --> 00:03:41.867
+Este é o salário médio
+dos que sugeriram este método.
+
+00:03:41.901 --> 00:03:46.131
+Aqui, no fim, dei
+um intervalo de confiança de 95%
+
+00:03:46.165 --> 00:03:47.868
+ao redor do salário médio,
+
+00:03:47.902 --> 00:03:50.708
+além do desvio padrão
+e da variância.
+
+00:03:50.742 --> 00:03:53.219
+Analisando esses dados,
+
+00:03:53.253 --> 00:03:55.308
+podemos ver se há
+uma sobreposição
+
+00:03:55.342 --> 00:03:58.675
+que sugira que não há diferença
+significativa entre os métodos
+
+00:03:58.709 --> 00:04:02.233
+ou se, pelo contrário,
+essa diferença existe.
+

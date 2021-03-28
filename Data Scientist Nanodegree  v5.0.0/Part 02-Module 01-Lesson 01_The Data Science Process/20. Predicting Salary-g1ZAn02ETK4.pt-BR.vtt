@@ -1,0 +1,78 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.103 --> 00:00:04.371
+PREDIÇÃO DE SALÁRIO
+
+00:00:04.405 --> 00:00:07.625
+Uma olhada rápida no conjunto
+de dados mostra alguns fatores
+
+00:00:07.659 --> 00:00:10.091
+que devem nos ajudar
+a entender mais
+
+00:00:10.125 --> 00:00:11.942
+sobre o salário
+de um indivíduo.
+
+00:00:11.976 --> 00:00:13.427
+Há fatores quantitativos,
+
+00:00:13.461 --> 00:00:16.107
+como quantas horas por semana
+o indivíduo trabalha,
+
+00:00:16.141 --> 00:00:19.478
+ou quão satisfeito ele está
+com seu trabalho ou carreira.
+
+00:00:19.512 --> 00:00:21.654
+Também há fatores categóricos,
+
+00:00:21.688 --> 00:00:23.223
+como o país onde mora,
+
+00:00:23.257 --> 00:00:27.055
+o tamanho da empresa
+ou a educação formal.
+
+00:00:27.089 --> 00:00:29.505
+Modelos de aprendizado
+de máquina supervisionados
+
+00:00:29.539 --> 00:00:32.708
+são uma tentativa
+de pegar todos esses inputs
+
+00:00:32.742 --> 00:00:35.490
+e predizer
+um valor individual,
+
+00:00:35.524 --> 00:00:38.219
+nesse caso,
+o salário do indivíduo.
+
+00:00:38.253 --> 00:00:40.600
+Queremos que nosso modelo
+descubra a estrutura
+
+00:00:40.634 --> 00:00:43.911
+e como os inputs estão relacionados
+a alguma variável de resposta,
+
+00:00:43.945 --> 00:00:45.655
+para obtermos predições
+
+00:00:45.689 --> 00:00:48.778
+mais próximas possíveis
+dos valores reais.
+
+00:00:48.812 --> 00:00:51.611
+Vamos ver o desempenho
+de algoritmos diferentes
+
+00:00:51.645 --> 00:00:52.884
+nesse conjunto de dados.
+

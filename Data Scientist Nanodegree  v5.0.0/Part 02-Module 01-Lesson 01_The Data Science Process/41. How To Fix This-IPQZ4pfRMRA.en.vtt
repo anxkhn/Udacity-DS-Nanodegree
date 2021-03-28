@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.470 --> 00:00:08.875
+We saw that our current results showed great fit for our model on the training data.
+
+00:00:08.875 --> 00:00:12.544
+However, these results are falling short on the test data.
+
+00:00:12.544 --> 00:00:15.644
+This is a prime example of overfitting.
+
+00:00:15.644 --> 00:00:17.879
+Overfitting is when we are able to
+
+00:00:17.879 --> 00:00:20.125
+build a model that will perform well on the data it has
+
+00:00:20.125 --> 00:00:24.734
+seen before but it isn't able to predict well on new situations.
+
+00:00:24.734 --> 00:00:26.850
+Consider we're trying to predict the height of
+
+00:00:26.850 --> 00:00:30.320
+individuals and we collect information from five people.
+
+00:00:30.320 --> 00:00:32.539
+We have their name, their gender,
+
+00:00:32.539 --> 00:00:34.585
+their dad's height, and their mom's height.
+
+00:00:34.585 --> 00:00:38.130
+If I want to predict the heights of people within this dataset,
+
+00:00:38.130 --> 00:00:42.260
+I'm going to use their name to predict the height because I can perfectly predict that
+
+00:00:42.259 --> 00:00:46.719
+Emily is 5'4 and Jim is 5'10 just by knowing their names.
+
+00:00:46.719 --> 00:00:50.689
+However, with the strategy for the next Emily I see,
+
+00:00:50.689 --> 00:00:54.844
+I will again expect that she's 5'4 and just based on the name,
+
+00:00:54.844 --> 00:00:57.394
+the next Jim I see will be 5'10.
+
+00:00:57.395 --> 00:01:01.490
+This will likely lead to some very poor predictions as
+
+00:01:01.490 --> 00:01:05.754
+the name of a person is not actually well correlated to their height in general.
+
+00:01:05.754 --> 00:01:09.789
+It was very specific to only the data we trained our model on.
+
+00:01:09.790 --> 00:01:15.050
+A better modeling technique for extending to new individuals would be to use
+
+00:01:15.049 --> 00:01:21.064
+these other features and find patterns that would extend to new Emilys and new Jims.
+
+00:01:21.064 --> 00:01:24.590
+By splitting our data into training and test sets,
+
+00:01:24.590 --> 00:01:28.700
+we can ensure that the features we find to be related to height in
+
+00:01:28.700 --> 00:01:31.640
+the training data are actually helpful for
+
+00:01:31.640 --> 00:01:35.135
+predicting height of individuals that aren't in our dataset.
+
+00:01:35.135 --> 00:01:40.130
+Notice using name wouldn't work well in this situation because what would we even do
+
+00:01:40.129 --> 00:01:42.319
+here with names in the training data
+
+00:01:42.319 --> 00:01:45.244
+that don't match any of the names in the testing data?
+
+00:01:45.245 --> 00:01:48.844
+We wouldn't be able to make any predictions on these observations
+
+00:01:48.844 --> 00:01:52.760
+with a model train only on these names of these individuals.
+
+00:01:52.760 --> 00:01:56.420
+However, this problem can be true in lots of cases.
+
+00:01:56.420 --> 00:01:59.540
+This is related to what we call the cold start problem.
+
+00:01:59.540 --> 00:02:02.280
+But we'll talk more about this later.
+

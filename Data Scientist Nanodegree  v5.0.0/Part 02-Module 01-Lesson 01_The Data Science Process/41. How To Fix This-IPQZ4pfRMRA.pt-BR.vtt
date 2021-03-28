@@ -1,0 +1,153 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.900 --> 00:00:04.433
+COMO CONSERTAR?
+
+00:00:04.466 --> 00:00:07.300
+Vimos que os resultados
+mostraram um grande ajuste
+
+00:00:07.333 --> 00:00:09.033
+para o modelo
+nos dados de treino.
+
+00:00:09.066 --> 00:00:12.633
+Mas os resultados estão falhando
+nos dados de teste.
+
+00:00:12.666 --> 00:00:15.733
+Este é o melhor exemplo
+de sobreajuste.
+
+00:00:15.766 --> 00:00:18.566
+Sobreajuste é quando você
+constrói um modelo
+
+00:00:18.600 --> 00:00:21.400
+que se sai bem em dados
+que já viu antes,
+
+00:00:21.433 --> 00:00:24.833
+mas que não prevê bem
+em novas situações.
+
+00:00:24.866 --> 00:00:27.933
+Pense que estamos tentando prever
+a altura dos indivíduos,
+
+00:00:27.966 --> 00:00:30.400
+e coletamos informações
+de cinco pessoas.
+
+00:00:30.433 --> 00:00:32.633
+Temos os nomes delas,
+os gêneros
+
+00:00:32.666 --> 00:00:34.666
+e a altura dos pais
+e das mães delas.
+
+00:00:34.700 --> 00:00:38.200
+Se quero prever a altura de pessoas
+neste conjunto de dados,
+
+00:00:38.233 --> 00:00:40.533
+vou usar o nome delas
+para prever a altura,
+
+00:00:40.566 --> 00:00:44.933
+porque posso prever
+que Emily tem 1,62m e Jim tem 1,78m
+
+00:00:44.966 --> 00:00:46.800
+só sabendo seus nomes.
+
+00:00:46.833 --> 00:00:50.766
+Mas, com essa estratégia,
+para a próxima Emily,
+
+00:00:50.800 --> 00:00:53.300
+vou esperar
+que ela tenha 1,62m.
+
+00:00:53.333 --> 00:00:57.466
+E, baseado no nome,
+o próximo Jim terá 1,78m.
+
+00:00:57.500 --> 00:01:01.333
+Isto vai levar
+a previsões bem ruins,
+
+00:01:01.366 --> 00:01:05.800
+porque o nome da pessoa
+não está relacionado à sua altura.
+
+00:01:05.833 --> 00:01:09.966
+Isso serve apenas para os dados
+em que treinamos nosso modelo.
+
+00:01:10.000 --> 00:01:14.166
+Uma técnica de modelagem melhor
+para estender a novos indivíduos
+
+00:01:14.200 --> 00:01:16.400
+seria usar outros recursos
+
+00:01:16.433 --> 00:01:21.100
+e achar padrões que serviriam
+para novas Emilys e novos Jims.
+
+00:01:21.133 --> 00:01:24.633
+Dividindo os dados
+em conjuntos de treino e de teste,
+
+00:01:24.666 --> 00:01:26.566
+podemos garantir
+que os recursos
+
+00:01:26.600 --> 00:01:29.733
+que achamos ter relação com a altura
+nos dados de treino
+
+00:01:29.766 --> 00:01:33.333
+são úteis para prever a altura
+de indivíduos
+
+00:01:33.366 --> 00:01:35.166
+que não estão
+no conjunto de dados.
+
+00:01:35.200 --> 00:01:38.500
+Note que o nome não funciona bem
+nesta situação,
+
+00:01:38.533 --> 00:01:42.333
+porque o que faremos
+com os nomes nos dados de treino
+
+00:01:42.366 --> 00:01:45.266
+que não correspondem a nenhum nome
+nos dados de teste?
+
+00:01:45.300 --> 00:01:48.866
+Não conseguiríamos fazer previsões
+nestas observações
+
+00:01:48.900 --> 00:01:52.766
+com um modelo treinado somente
+nos nomes destes indivíduos.
+
+00:01:52.800 --> 00:01:56.433
+Mas este problema pode acontecer
+em vários casos.
+
+00:01:56.466 --> 00:01:59.533
+Isto tem relação com o chamado
+"problema de cold-start".
+
+00:01:59.566 --> 00:02:02.300
+Mas falaremos
+mais sobre isto depois.
+

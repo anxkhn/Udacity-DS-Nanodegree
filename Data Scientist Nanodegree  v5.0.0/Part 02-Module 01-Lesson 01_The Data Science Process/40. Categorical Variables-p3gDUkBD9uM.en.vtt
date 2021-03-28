@@ -1,0 +1,589 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.635
+So, in the previous videos,
+
+00:00:01.635 --> 00:00:05.250
+we have already done some things to work with
+
+00:00:05.250 --> 00:00:09.884
+missing values in terms of dropping or imputing.
+
+00:00:09.884 --> 00:00:15.300
+When we impute it, we were able to fit models to predict all of the salaries.
+
+00:00:15.300 --> 00:00:19.320
+However, we still weren't making use of all of these categorical columns.
+
+00:00:19.320 --> 00:00:20.940
+And so, in this video,
+
+00:00:20.940 --> 00:00:23.730
+we're gonna go through how we can make use of those categorical columns,
+
+00:00:23.730 --> 00:00:26.565
+and one of the main ways is through zero, one encodings.
+
+00:00:26.565 --> 00:00:31.710
+There are few different advantages to this approach which is why it's pretty popular,
+
+00:00:31.710 --> 00:00:35.700
+but there are scalability issues which you'll
+
+00:00:35.700 --> 00:00:40.560
+see in some of the runtimes of things in this notebook that make
+
+00:00:40.560 --> 00:00:44.887
+it sort of a disadvantage when you have a lot of variables like in this dataset
+
+00:00:44.887 --> 00:00:49.575
+we have a lot of categorical variables and that can lead to scaling issues.
+
+00:00:49.575 --> 00:00:52.370
+So you'll see that throughout this notebook,
+
+00:00:52.369 --> 00:00:56.074
+and there are potentially other ways that could work around those scaling issues.
+
+00:00:56.075 --> 00:00:58.115
+So, in the first part of the notebook,
+
+00:00:58.115 --> 00:00:59.990
+we're basically just doing the things that
+
+00:00:59.990 --> 00:01:02.210
+you've already seen in some of the other screencast.
+
+00:01:02.210 --> 00:01:03.670
+So we read in the data set,
+
+00:01:03.670 --> 00:01:05.424
+we look at the numeric variables,
+
+00:01:05.424 --> 00:01:08.855
+we drop any of the rows that are missing the salary,
+
+00:01:08.855 --> 00:01:14.510
+we fill in the mean for each column that has a missing value,
+
+00:01:14.510 --> 00:01:17.930
+we fill in the mean of the column for that missing value.
+
+00:01:17.930 --> 00:01:19.910
+We split into X and y.
+
+00:01:19.909 --> 00:01:22.459
+We split it into training and test.
+
+00:01:22.459 --> 00:01:25.774
+And then, we see how well our model performs on the test data,
+
+00:01:25.775 --> 00:01:27.870
+and you can see that result here.
+
+00:01:27.870 --> 00:01:30.460
+And then, using the rest of this notebook,
+
+00:01:30.459 --> 00:01:32.619
+we're going to see if we can't build a model that does better than
+
+00:01:32.620 --> 00:01:35.380
+this by using all of the categorical variables.
+
+00:01:35.379 --> 00:01:37.765
+So, this first part says,
+
+00:01:37.765 --> 00:01:42.594
+use df to identify the columns that are categorical in nature,
+
+00:01:42.594 --> 00:01:47.155
+and basically subset to a dataframe only holding the categorical variables.
+
+00:01:47.155 --> 00:01:51.474
+And then, they give us this useful link which I have opened up here.
+
+00:01:51.474 --> 00:01:53.875
+And there's this really nice part within it,
+
+00:01:53.875 --> 00:01:55.299
+within this link that says,
+
+00:01:55.299 --> 00:02:00.006
+you can select the data types of any dataframe using this select dtypes,
+
+00:02:00.007 --> 00:02:02.260
+and then, basically, you pass in.
+
+00:02:02.260 --> 00:02:06.615
+You could pass an int, float, object, boolean,
+
+00:02:06.614 --> 00:02:08.370
+any of the data types that you might see,
+
+00:02:08.370 --> 00:02:10.289
+you could pass into this include part,
+
+00:02:10.289 --> 00:02:13.875
+and then that'll subset the data frame to only include those.
+
+00:02:13.875 --> 00:02:22.710
+Great. So, select dtypes and include equals,
+
+00:02:22.710 --> 00:02:26.370
+and then we pass it a list and we just want to include object.
+
+00:02:26.370 --> 00:02:29.355
+We're just going to store it in a new part.
+
+00:02:29.354 --> 00:02:34.049
+And it says, there are 147 columns that are associated with that,
+
+00:02:34.050 --> 00:02:35.805
+and if we wanted to look at this.
+
+00:02:35.805 --> 00:02:39.486
+And we can see that all of these columns look like they're
+
+00:02:39.486 --> 00:02:43.139
+categorical in nature whereas if we look at their original dataframe,
+
+00:02:43.139 --> 00:02:46.154
+we have this respondent part that got dropped from here.
+
+00:02:46.155 --> 00:02:52.349
+Yeah. We have the salary and expected salary down here at the end that also got dropped.
+
+00:02:52.349 --> 00:02:54.479
+And then, we can check that against the solution.
+
+00:02:54.479 --> 00:02:56.969
+Says, "Nice job, it looks like you did that right."
+
+00:02:56.969 --> 00:02:58.509
+Cool. And so then it says.
+
+00:02:58.509 --> 00:03:00.780
+"Use the cat_df and the cells below to fill in
+
+00:03:00.780 --> 00:03:03.645
+the dictionary with the correct value for each statement."
+
+00:03:03.645 --> 00:03:05.322
+So the first statement is,
+
+00:03:05.322 --> 00:03:08.028
+"What are the number of columns with missing values?"
+
+00:03:08.028 --> 00:03:11.099
+So, use cat_df, and we want to
+
+00:03:11.099 --> 00:03:14.643
+look at what are the number of columns with missing values?
+
+00:03:14.643 --> 00:03:18.215
+So, is null, and if we run this,
+
+00:03:18.215 --> 00:03:20.750
+basically, that's a bunch of trues and falses.
+
+00:03:20.750 --> 00:03:22.550
+And if we run a sum,
+
+00:03:22.550 --> 00:03:25.775
+if we run np.sum on this,
+
+00:03:25.775 --> 00:03:28.564
+we get zeros or some number.
+
+00:03:28.564 --> 00:03:31.219
+So, this is the number of missing values for each of these columns,
+
+00:03:31.219 --> 00:03:33.020
+and you can see some of them are zeros.
+
+00:03:33.020 --> 00:03:36.125
+And so, if we pull those, this wave,
+
+00:03:36.125 --> 00:03:37.444
+those are just zeros,
+
+00:03:37.444 --> 00:03:38.810
+we get trues and falses,
+
+00:03:38.810 --> 00:03:40.909
+and so we can take another sum.
+
+00:03:40.909 --> 00:03:43.085
+Looks like there's this, cool.
+
+00:03:43.085 --> 00:03:44.300
+And so then, the next part says,
+
+00:03:44.300 --> 00:03:47.855
+the number of columns with more than half of the column missing.
+
+00:03:47.854 --> 00:03:53.514
+And so, we're going to use something very similar to what we did here.
+
+00:03:53.514 --> 00:03:58.479
+But remember, this was a count, and basically,
+
+00:03:58.479 --> 00:04:01.405
+if we want to get a proportion,
+
+00:04:01.405 --> 00:04:04.599
+we can take the number of rows.
+
+00:04:04.599 --> 00:04:09.414
+So, we can get the number of rows by pulling the first element out of the shape.
+
+00:04:09.414 --> 00:04:11.889
+So, then that will give us the rows.
+
+00:04:11.889 --> 00:04:14.064
+And so, if we take this total number of
+
+00:04:14.064 --> 00:04:17.274
+missing values divided by the total number of rows,
+
+00:04:17.274 --> 00:04:19.929
+that'll give us the proportion of missing values.
+
+00:04:19.930 --> 00:04:23.275
+So this is the proportion of missing values in each part.
+
+00:04:23.274 --> 00:04:31.764
+And then, essentially by looking at if that's greater than 0.5 is the first one.
+
+00:04:31.764 --> 00:04:34.300
+This should give us trues and falses.
+
+00:04:34.300 --> 00:04:37.509
+Yeah, so this gives us true and false values, and then,
+
+00:04:37.509 --> 00:04:41.409
+by taking the sum of those, we get 49.
+
+00:04:41.410 --> 00:04:47.605
+So, 49 appear to have more than half of the column missing.
+
+00:04:47.605 --> 00:04:51.009
+And then, the last one is 75 percent.
+
+00:04:51.009 --> 00:04:53.709
+And so, that's a quick change of this,
+
+00:04:53.709 --> 00:04:56.364
+and it looks like there are 13.
+
+00:04:56.365 --> 00:04:58.780
+And we could do that with any percentage so we could say,
+
+00:04:58.779 --> 00:05:00.309
+are there 80 percent of them missing,
+
+00:05:00.310 --> 00:05:01.795
+or is there 90?
+
+00:05:01.795 --> 00:05:03.490
+Only five percent.
+
+00:05:03.490 --> 00:05:05.110
+So then, in this last part,
+
+00:05:05.110 --> 00:05:08.004
+we're working with this dummy var dataframe,
+
+00:05:08.004 --> 00:05:11.139
+and you can see that there are two columns,
+
+00:05:11.139 --> 00:05:14.079
+and one has these a and b values,
+
+00:05:14.079 --> 00:05:15.534
+and one has numeric.
+
+00:05:15.535 --> 00:05:19.540
+And I use the cell to basically dummy col1.
+
+00:05:19.540 --> 00:05:22.780
+So, we are interested in creating dummy variables
+
+00:05:22.779 --> 00:05:26.106
+for any columns that have categorical values,
+
+00:05:26.107 --> 00:05:30.700
+and so, that would be col1, but this numeric variable, we don't want a dummy in that.
+
+00:05:30.699 --> 00:05:35.620
+In most cases, we could create a dummy variable that just says is that missing or not.
+
+00:05:35.620 --> 00:05:39.519
+We might be able to come up with another way to actually be able to use these numbers
+
+00:05:39.519 --> 00:05:43.884
+as well as information about if there's missing values.
+
+00:05:43.884 --> 00:05:46.539
+So, the first question is just,
+
+00:05:46.540 --> 00:05:48.745
+which column should we create a dummy variable for?
+
+00:05:48.745 --> 00:05:51.355
+And that would be col1. So, that's b.
+
+00:05:51.355 --> 00:05:54.980
+When you use the default settings for creating dummy variables,
+
+00:05:54.980 --> 00:05:56.360
+how many are created?
+
+00:05:56.360 --> 00:06:02.675
+So when you use the default settings for creating dummy variables, how many are created?
+
+00:06:02.675 --> 00:06:05.000
+So, yeah, if we run this,
+
+00:06:05.000 --> 00:06:08.345
+so this get dummies will create dummy variables for us,
+
+00:06:08.345 --> 00:06:11.120
+and we pass it a column,
+
+00:06:11.120 --> 00:06:14.180
+and it'll create the dummy variables for that column,
+
+00:06:14.180 --> 00:06:16.189
+it'll create the one, zero encodings.
+
+00:06:16.189 --> 00:06:21.069
+And in this case, it created two columns by default.
+
+00:06:21.069 --> 00:06:23.490
+And then, it says, what happens with the Nan values.
+
+00:06:23.490 --> 00:06:25.620
+So, if we look back at this, basically,
+
+00:06:25.620 --> 00:06:31.680
+there were NaN values for the index of five and the index of seven,
+
+00:06:31.680 --> 00:06:33.555
+and if we look at those,
+
+00:06:33.555 --> 00:06:35.894
+basically, they were just always given as zero.
+
+00:06:35.894 --> 00:06:41.412
+So they weren't dropped that then become these numbers or anything like that,
+
+00:06:41.413 --> 00:06:45.074
+they were just always encoded with a zero.
+
+00:06:45.074 --> 00:06:47.639
+All right. So then, it says,
+
+00:06:47.639 --> 00:06:51.180
+notice use get_dummies to encode NaNs.
+
+00:06:51.180 --> 00:06:53.759
+There's also this dummy_na argument.
+
+00:06:53.759 --> 00:06:58.740
+And so, you can use this dummy_na argument which is essentially just a boolean.
+
+00:06:58.740 --> 00:07:00.225
+So if you look at this,
+
+00:07:00.225 --> 00:07:02.340
+if you look at the documentation,
+
+00:07:02.339 --> 00:07:04.469
+the dummy na is just a boolean,
+
+00:07:04.470 --> 00:07:06.765
+and it's by default, a false.
+
+00:07:06.764 --> 00:07:08.474
+And when it's false,
+
+00:07:08.475 --> 00:07:10.935
+then the NaNs are ignored,
+
+00:07:10.935 --> 00:07:12.540
+meaning they just become zeros.
+
+00:07:12.540 --> 00:07:14.025
+But if you add a true,
+
+00:07:14.024 --> 00:07:19.424
+then a new column is added that will indicate the NaNs.
+
+00:07:19.425 --> 00:07:23.009
+So, let's see if we can use this.
+
+00:07:23.009 --> 00:07:27.884
+We want to pass the first column to this column one.
+
+00:07:27.884 --> 00:07:29.805
+We're gonna pass the first column,
+
+00:07:29.805 --> 00:07:36.487
+and we want dummy_na to be true, right?
+
+00:07:36.487 --> 00:07:40.870
+So this says, do something with those NAs so that I know that they exist.
+
+00:07:40.870 --> 00:07:46.285
+And now you can see that we have this new column that's responsible for the NaNs,
+
+00:07:46.285 --> 00:07:48.685
+and there's a one over here,
+
+00:07:48.685 --> 00:07:51.235
+whereas before we just had these two zeros.
+
+00:07:51.235 --> 00:07:54.355
+And we can check that against the solution.
+
+00:07:54.355 --> 00:07:58.134
+Cool. So, then in this last part,
+
+00:07:58.134 --> 00:08:01.569
+what we're interested in doing is creating
+
+00:08:01.569 --> 00:08:06.879
+a new dataframe that essentially takes care of all of these categorical columns.
+
+00:08:06.879 --> 00:08:09.069
+So, essentially we want to do
+
+00:08:09.069 --> 00:08:14.240
+this process for all of the categorical variables in our dataframe and then
+
+00:08:14.240 --> 00:08:17.810
+create a new dataframe that has these characteristics that
+
+00:08:17.810 --> 00:08:21.964
+has these dummy variables for each of our categorical variables.
+
+00:08:21.964 --> 00:08:24.439
+So, it says, the new dataframe should
+
+00:08:24.439 --> 00:08:28.100
+have all the columns that were not specified as categorical.
+
+00:08:28.100 --> 00:08:30.455
+So that means if they were floats, or ints,
+
+00:08:30.454 --> 00:08:33.995
+or anything like that, we still want to have those columns in our dataframe.
+
+00:08:33.995 --> 00:08:36.995
+It removes all the original columns
+
+00:08:36.995 --> 00:08:41.404
+so we don't need any of the categorical columns once we dummy variable them.
+
+00:08:41.404 --> 00:08:46.528
+And then, the dummy columns for each categorical variable should be in this dataframe,
+
+00:08:46.528 --> 00:08:51.210
+and then, if this is specified as true it should also contain that extra column.
+
+00:08:51.210 --> 00:08:54.344
+So you can see, we just want to pass it the data frame,
+
+00:08:54.344 --> 00:08:59.055
+the columns that are categorical and whether or not we wanted dummy them.
+
+00:08:59.054 --> 00:09:05.354
+Here's what a pretty complex one line solution looks like.
+
+00:09:05.355 --> 00:09:10.259
+Essentially, we are using the concat to concatenate
+
+00:09:10.259 --> 00:09:16.169
+both the columns that are categorical as well as the non categorical columns together.
+
+00:09:16.169 --> 00:09:22.860
+And so, actually, we need to do this for col in cat_cols.
+
+00:09:22.860 --> 00:09:26.610
+So, for each column that's categorical,
+
+00:09:26.610 --> 00:09:31.154
+go in, drop that original column, and then,
+
+00:09:31.154 --> 00:09:35.220
+so this drop axis equals one just says drop the column,
+
+00:09:35.220 --> 00:09:37.004
+dummy variable that column,
+
+00:09:37.004 --> 00:09:39.509
+and then this whole part is basically
+
+00:09:39.509 --> 00:09:43.139
+just what we want that dummy variable column to look like.
+
+00:09:43.139 --> 00:09:45.330
+So drop the column,
+
+00:09:45.330 --> 00:09:48.120
+the dummy na part is either a true
+
+00:09:48.120 --> 00:09:51.350
+or false that actually gets passed in, appear at the top.
+
+00:09:51.350 --> 00:09:56.634
+And then, I'm also giving a prefix which you could choose to do or not do.
+
+00:09:56.634 --> 00:10:02.889
+Yeah. And then a separator for the prefix and that we want to,
+
+00:10:02.889 --> 00:10:08.394
+so this axis equals one part is just going back to the concat argument.
+
+00:10:08.394 --> 00:10:11.245
+So, for each categorical column,
+
+00:10:11.245 --> 00:10:14.049
+go in and drop the column,
+
+00:10:14.049 --> 00:10:15.954
+create the dummy variable for it,
+
+00:10:15.955 --> 00:10:21.280
+and then concatenate that back onto the dataframe with the dropped dummy variable.
+
+00:10:21.279 --> 00:10:23.934
+So, and then return that as
+
+00:10:23.934 --> 00:10:27.250
+this dataframe thing and do that for every single categorical column.
+
+00:10:27.250 --> 00:10:31.639
+So now, we can use this to create our new dataframe using
+
+00:10:31.639 --> 00:10:37.189
+the categorical columns and make sure that it checks against the shape that you'd expect.
+
+00:10:37.190 --> 00:10:39.650
+And then, there's this big long function.
+
+00:10:39.649 --> 00:10:41.299
+But the good part is,
+
+00:10:41.299 --> 00:10:46.564
+most of what you're doing is what happened up here.
+
+00:10:46.565 --> 00:10:48.770
+So, you're basically just using what you've already
+
+00:10:48.769 --> 00:10:51.470
+done up here to finish that last part out.
+

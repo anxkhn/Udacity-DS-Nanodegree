@@ -1,0 +1,481 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.810
+In this video, we'll look at some imputation methods.
+
+00:00:03.810 --> 00:00:09.060
+And up here, you can see some of the ways that are really common for imputing values.
+
+00:00:09.060 --> 00:00:11.700
+And then there are a few really useful resources
+
+00:00:11.699 --> 00:00:14.324
+linked here in the top part of the notebook.
+
+00:00:14.324 --> 00:00:20.189
+To get started, let's just create our dataset and read in the necessary libraries.
+
+00:00:20.190 --> 00:00:23.330
+For imputation, in this particular example,
+
+00:00:23.329 --> 00:00:27.299
+we will be working with pandas and not scikit-learn,
+
+00:00:27.300 --> 00:00:30.539
+but scikit-learn pre-processing library is really
+
+00:00:30.539 --> 00:00:33.960
+useful and is commonly done with machine learning algorithms.
+
+00:00:33.960 --> 00:00:38.100
+Pandas, I find really intuitive and pretty easy to use,
+
+00:00:38.100 --> 00:00:41.984
+so that'll be what we work with through this example.
+
+00:00:41.984 --> 00:00:43.259
+However, you could use
+
+00:00:43.259 --> 00:00:46.994
+the pre-processing library if you're more comfortable with that as well.
+
+00:00:46.994 --> 00:00:49.214
+Okay. So the first question said,
+
+00:00:49.215 --> 00:00:52.855
+"Use the dictionary below to label the columns with the appropriate data type."
+
+00:00:52.854 --> 00:00:55.164
+So just looking at this,
+
+00:00:55.164 --> 00:01:00.464
+it looks like column A is numeric or quantitative in nature,
+
+00:01:00.465 --> 00:01:02.625
+column B is also quantitative,
+
+00:01:02.625 --> 00:01:07.165
+but A, it looks like a float if that mattered,
+
+00:01:07.165 --> 00:01:09.105
+B is an integer,
+
+00:01:09.105 --> 00:01:10.865
+C is all NaNs,
+
+00:01:10.864 --> 00:01:13.559
+so that could go any way.
+
+00:01:13.560 --> 00:01:16.454
+D, it looks like Boolean,
+
+00:01:16.454 --> 00:01:20.064
+and then E looks like it's also categorical in nature.
+
+00:01:20.064 --> 00:01:22.109
+It has yes, no, and maybe.
+
+00:01:22.109 --> 00:01:26.204
+So let's go ahead and just fill those in.
+
+00:01:26.204 --> 00:01:28.920
+So A is quantitative.
+
+00:01:28.920 --> 00:01:32.430
+B is also quantitative.
+
+00:01:32.430 --> 00:01:36.190
+C, we can't tell because it's all NaNs.
+
+00:01:36.189 --> 00:01:41.009
+D is Boolean so we could treat that it's either quantitative.
+
+00:01:41.010 --> 00:01:42.570
+It could just be like one,
+
+00:01:42.569 --> 00:01:46.844
+zero for quantitative or it could be like true/false or like yes/no.
+
+00:01:46.844 --> 00:01:49.209
+So it could go either way,
+
+00:01:49.209 --> 00:01:50.804
+but it's a Boolean.
+
+00:01:50.805 --> 00:01:54.245
+And then E is categorical.
+
+00:01:54.245 --> 00:01:58.560
+So it's okay. And looks like that went through okay.
+
+00:01:58.560 --> 00:02:03.010
+And then our other columns or rows that you feel comfortable dropping,
+
+00:02:03.010 --> 00:02:07.770
+so in general, I think we should feel comfortable dropping this column.
+
+00:02:07.769 --> 00:02:12.384
+All the rows, there aren't any rows with all missing values,
+
+00:02:12.384 --> 00:02:14.745
+and so we probably don't want to drop any of those,
+
+00:02:14.745 --> 00:02:20.085
+but we could definitely drop this column C. And then,
+
+00:02:20.085 --> 00:02:21.795
+if we actually drop that,
+
+00:02:21.794 --> 00:02:23.804
+we're creating this new data frame,
+
+00:02:23.805 --> 00:02:25.890
+we're dropping column C,
+
+00:02:25.889 --> 00:02:30.250
+and axis equals one specifies that it's the column and not the row.
+
+00:02:30.250 --> 00:02:32.870
+Cool. So using new_df,
+
+00:02:32.870 --> 00:02:35.640
+I wrote a lambda function that you can use to impute
+
+00:02:35.639 --> 00:02:39.039
+the mean for the columns in the data frame using the apply method.
+
+00:02:39.039 --> 00:02:44.185
+So here, basically, we have this col.mean,
+
+00:02:44.185 --> 00:02:48.974
+fillna, and we're doing it across the rows,
+
+00:02:48.974 --> 00:02:51.579
+rippling it across the rows.
+
+00:02:51.580 --> 00:02:55.950
+So check what you need to answer the question below.
+
+00:02:55.949 --> 00:02:57.899
+So why did this break?
+
+00:02:57.900 --> 00:03:00.539
+So we're taking the column,
+
+00:03:00.539 --> 00:03:04.812
+we're taking the mean of the column and then we're filling it, and we're saying,
+
+00:03:04.812 --> 00:03:09.799
+"Do that for each of the columns."
+
+00:03:09.800 --> 00:03:11.186
+So it fills the mean,
+
+00:03:11.186 --> 00:03:12.974
+but that doesn't actually make sense.
+
+00:03:12.974 --> 00:03:17.900
+It gives an error. Okay. And we should look at this on a column by column basis.
+
+00:03:17.900 --> 00:03:20.555
+Okay. So let's say we're trying to fill the mean.
+
+00:03:20.555 --> 00:03:24.194
+So if we try to fill the mean of this, that should be fine.
+
+00:03:24.194 --> 00:03:26.477
+We'll take the mean of two, zero, seven,
+
+00:03:26.477 --> 00:03:29.634
+10, and 15, and we should put those two values here.
+
+00:03:29.634 --> 00:03:33.174
+Column B doesn't actually have any missing value so we don't have to worry about that.
+
+00:03:33.175 --> 00:03:36.300
+Column C, I don't know what that's going to
+
+00:03:36.300 --> 00:03:40.365
+do when we try to fill the mean because we don't have any numbers to work with.
+
+00:03:40.365 --> 00:03:44.445
+Column D, so if we treat these as numbers,
+
+00:03:44.444 --> 00:03:47.324
+we should get back like a 0.5 in there.
+
+00:03:47.324 --> 00:03:49.799
+But then, what does that mean in terms of true and false?
+
+00:03:49.800 --> 00:03:52.064
+That didn't really make a lot of sense.
+
+00:03:52.064 --> 00:03:53.639
+So column D doesn't really make sense.
+
+00:03:53.639 --> 00:03:55.539
+Column C, I'm not really sure.
+
+00:03:55.539 --> 00:03:57.054
+Column A should be fine,
+
+00:03:57.055 --> 00:03:58.980
+and column E again,
+
+00:03:58.979 --> 00:04:02.924
+taking the mean, I don't really know how that would work because there is a yes,
+
+00:04:02.925 --> 00:04:05.785
+no, and a maybe, so I don't know how to impute the mean.
+
+00:04:05.784 --> 00:04:10.424
+The only one that really makes sense to impute the mean on is column A.
+
+00:04:10.425 --> 00:04:12.105
+And Column C, we actually dropped,
+
+00:04:12.104 --> 00:04:13.479
+so we don't have to worry about that.
+
+00:04:13.479 --> 00:04:16.295
+So column A, it makes sense.
+
+00:04:16.295 --> 00:04:19.379
+So there should be no problem.
+
+00:04:19.379 --> 00:04:21.555
+It should fill that.
+
+00:04:21.555 --> 00:04:24.014
+Column E was the yes, no, maybe,
+
+00:04:24.014 --> 00:04:26.300
+and that one probably gives the error
+
+00:04:26.300 --> 00:04:29.100
+because we don't really know what's happening with that.
+
+00:04:29.100 --> 00:04:30.930
+And then with the true/false,
+
+00:04:30.930 --> 00:04:33.704
+it's going to fail what the mean but that's going to be a 0.5.
+
+00:04:33.704 --> 00:04:35.490
+So what does that mean in terms of true and false?
+
+00:04:35.490 --> 00:04:37.379
+It doesn't really make a lot of sense.
+
+00:04:37.379 --> 00:04:39.993
+And so then, there's a little comment but
+
+00:04:39.994 --> 00:04:43.155
+that can sort of make sure that you understand why that's true.
+
+00:04:43.154 --> 00:04:47.019
+So only the first one does the mean make any sense.
+
+00:04:47.019 --> 00:04:49.544
+The true/false gives you back a 0.5 which
+
+00:04:49.545 --> 00:04:53.490
+doesn't really make sense in the realm of true and false.
+
+00:04:53.490 --> 00:04:56.574
+And then column B just breaks
+
+00:04:56.574 --> 00:05:00.444
+because we can't take the mean of a bunch of categorical things.
+
+00:05:00.444 --> 00:05:02.449
+Okay. So given the results above,
+
+00:05:02.449 --> 00:05:05.550
+it might make more sense to follow what mode it says.
+
+00:05:05.550 --> 00:05:09.060
+So here, just write a function that imputes the mode,
+
+00:05:09.060 --> 00:05:13.456
+and then there's some documentation here we can use.
+
+00:05:13.456 --> 00:05:19.099
+Looks like we can get them out like this.
+
+00:05:19.100 --> 00:05:20.645
+So for each column,
+
+00:05:20.644 --> 00:05:24.310
+we want to take the mode in this way.
+
+00:05:24.310 --> 00:05:26.485
+And if we go back here,
+
+00:05:26.485 --> 00:05:29.764
+I'll just call this thing fill_mode,
+
+00:05:29.764 --> 00:05:35.750
+and then it's just going to be a lambda expression similar to what we had up here.
+
+00:05:35.750 --> 00:05:39.620
+So I'm just going to take the same idea.
+
+00:05:39.620 --> 00:05:41.689
+Okay. So if we do a fill mode,
+
+00:05:41.689 --> 00:05:48.689
+we should be able to do something where we use this.
+
+00:05:48.689 --> 00:05:52.219
+It's like they do called up fillna,
+
+00:05:52.220 --> 00:05:58.055
+and then I'm just going to say call mode,
+
+00:05:58.055 --> 00:06:03.314
+and it looks like they did something a little different.
+
+00:06:03.314 --> 00:06:07.800
+So they took the column mode and then they did an index of zero.
+
+00:06:07.800 --> 00:06:12.754
+So you might have to do something like that. Show you what it's like.
+
+00:06:12.754 --> 00:06:16.904
+And then I'm just going to say fill_mode.
+
+00:06:16.904 --> 00:06:19.274
+Okay. So now, actually,
+
+00:06:19.274 --> 00:06:22.742
+let's take a look at our dataset. So new_df.
+
+00:06:22.742 --> 00:06:25.728
+All right.
+
+00:06:25.728 --> 00:06:28.144
+So when we look at this,
+
+00:06:28.144 --> 00:06:32.495
+when we're looking at the mode of A,
+
+00:06:32.495 --> 00:06:34.399
+there actually wasn't one,
+
+00:06:34.399 --> 00:06:37.739
+so imputed zero into these values.
+
+00:06:37.740 --> 00:06:40.910
+But zero's not actually the mode.
+
+00:06:40.910 --> 00:06:43.040
+It's just one of the numbers.
+
+00:06:43.040 --> 00:06:45.995
+I want to say, does not impute them.
+
+00:06:45.995 --> 00:06:53.870
+There isn't a mode so it just like chooses one of the numbers.
+
+00:06:53.870 --> 00:06:56.000
+I'm not really sure how it did that.
+
+00:06:56.000 --> 00:06:59.055
+We could look in the docs and see how that happened.
+
+00:06:59.055 --> 00:07:01.560
+And then filling column D,
+
+00:07:01.560 --> 00:07:03.214
+it's kind of interesting again.
+
+00:07:03.214 --> 00:07:05.479
+This didn't fill the mode either because there was
+
+00:07:05.480 --> 00:07:08.004
+an even number of trues and falses before.
+
+00:07:08.004 --> 00:07:10.465
+So if we look up here,
+
+00:07:10.464 --> 00:07:13.209
+there's two falses and two trues.
+
+00:07:13.209 --> 00:07:15.424
+So we have two true values,
+
+00:07:15.425 --> 00:07:20.595
+two false values, and then it just shows false and filled-in false.
+
+00:07:20.595 --> 00:07:23.217
+So there wasn't a mode in this.
+
+00:07:23.216 --> 00:07:29.104
+It just sort of filled in false and it just filled in false for all of these values,
+
+00:07:29.105 --> 00:07:32.705
+which maybe, there's something in the documentation to say,
+
+00:07:32.704 --> 00:07:33.769
+"Choose the lowest number."
+
+00:07:33.769 --> 00:07:39.168
+and just fill that if there's all equal and then "Choose the lowest alphabetically."
+
+00:07:39.168 --> 00:07:44.840
+and fill that if they're all equal or this is considered a zero value, too.
+
+00:07:44.839 --> 00:07:46.769
+Maybe it just fills zero.
+
+00:07:46.769 --> 00:07:48.049
+But in either case,
+
+00:07:48.050 --> 00:07:50.720
+these two didn't really fill the mode and then,
+
+00:07:50.720 --> 00:07:54.500
+yes, if we go back and look at this again.
+
+00:07:54.500 --> 00:07:58.129
+So yes shows up here and then no, maybe, and then yes.
+
+00:07:58.129 --> 00:08:01.279
+So there's two yeses and then only one no one one maybe.
+
+00:08:01.279 --> 00:08:02.824
+So at least here, if there's a yes,
+
+00:08:02.824 --> 00:08:05.045
+yes, yes, it filled the mode.
+
+00:08:05.045 --> 00:08:08.689
+That is it filled the thing that happened the most.
+
+00:08:08.689 --> 00:08:15.187
+So the mode for a categorical variable is just the one that occurred the most.
+
+00:08:15.187 --> 00:08:18.050
+This is true.
+
+00:08:18.050 --> 00:08:21.170
+So again, here, we should be really careful
+
+00:08:21.170 --> 00:08:24.555
+when imputing the mean because there are some cases that just don't work,
+
+00:08:24.555 --> 00:08:25.819
+and when imputing the mode,
+
+00:08:25.819 --> 00:08:33.169
+there are some cases that "work" but they don't really make sense or they might not
+
+00:08:33.169 --> 00:08:36.094
+be exactly the best for our situation
+
+00:08:36.095 --> 00:08:41.019
+even if it actually fills in and we can get results from it.
+

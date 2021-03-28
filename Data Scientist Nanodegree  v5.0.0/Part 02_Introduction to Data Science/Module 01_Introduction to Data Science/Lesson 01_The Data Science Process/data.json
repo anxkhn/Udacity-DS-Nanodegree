@@ -1,0 +1,2471 @@
+{
+  "data": {
+    "lesson": {
+      "id": 495533,
+      "key": "f3e386bb-fe90-4e3c-8fc5-ad2db83e6cf6",
+      "title": "The Data Science Process",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will learn about CRISP-DM and how you can apply it to many data science problems.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f3e386bb-fe90-4e3c-8fc5-ad2db83e6cf6/495533/1538971436127/The+Data+Science+Process+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f3e386bb-fe90-4e3c-8fc5-ad2db83e6cf6/495533/1538971418755/The+Data+Science+Process+Subtitles.zip"
+          },
+          {
+            "name": "Survey Results Public",
+            "uri": "https://video.udacity-data.com/topher/2018/February/5a8cb606_survey-results-public/survey-results-public.csv"
+          },
+          {
+            "name": "Survey Results Schema",
+            "uri": "https://video.udacity-data.com/topher/2018/February/5a8cb663_survey-results-schema/survey-results-schema.csv"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 495536,
+          "key": "29899183-7f72-4016-bce9-90ee4e1ff582",
+          "title": "Video: Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "29899183-7f72-4016-bce9-90ee4e1ff582",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672480,
+              "key": "93d352e5-1c67-4f1d-a76a-3c18c6262c8b",
+              "title": "Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VpxATYHhKM8",
+                "china_cdn_id": "VpxATYHhKM8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 533898,
+          "key": "4eb6fe07-76c9-4b78-852a-85cd18bced62",
+          "title": "Video: CRISP-DM",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4eb6fe07-76c9-4b78-852a-85cd18bced62",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672482,
+              "key": "96e80758-6c25-427a-8b6e-9a6feb64410b",
+              "title": "CRISP-DM",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PaVwnGcqlSE",
+                "china_cdn_id": "PaVwnGcqlSE.mp4"
+              }
+            },
+            {
+              "id": 550799,
+              "key": "50544085-2bf3-403a-97ec-9f62f026bfca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### The CRISP-DM Process (Cross Industry Process for Data Mining)\n\nThe lessons leading up to the first project are about helping you go through CRISP-DM in practice from start to finish.  Even when we get into the weeds of coding, try to take a step back and realize what part of the process you are in, and assure that you remember the question you are trying answer and what a solution to that question looks like.\n\n`1.` Business Understanding\n\n`2.` Data Understanding\n\n`3.` Prepare Data\n\n`4.` Data Modeling\n\n`5.` Evaluate the Results\n\n`6.` Deploy\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 495537,
+          "key": "cfdcd9c4-458c-45b5-9756-1614aec085ca",
+          "title": "Video: The Data Science Process - Business & Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cfdcd9c4-458c-45b5-9756-1614aec085ca",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672483,
+              "key": "45f98d03-d383-4884-a924-1c90ede09b43",
+              "title": "The Data Science Process Business And Data Understanding",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eG_jKQezhc4",
+                "china_cdn_id": "eG_jKQezhc4.mp4"
+              }
+            },
+            {
+              "id": 550839,
+              "key": "b17ebce7-d121-4aa8-bb44-522c3edc0aad",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The first two steps of CRISP-DM are:\n\n`1.` **Business Understanding** - this means understanding the problem and questions you are interested in tackling in the context of whatever domain you're working in.  Examples include\n\n* How do we acquire new customers?\n* Does a new treatment perform better than an existing treatment?\n* How can improve communication?\n* How can we improve travel?\n* How can we better retain information?\n\n`2.` **Data Understanding** - at this step, you need to move the questions from **Business Understanding** to data.  You might already have data that could be used to answer the questions, or you might have to collect data to get at your questions of interest.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 495538,
+          "key": "88345cea-25ff-4c99-8123-1a96ea752bcc",
+          "title": "Video: Business & Data Understanding - Example",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "88345cea-25ff-4c99-8123-1a96ea752bcc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Survey Results Schema",
+                "uri": "https://video.udacity-data.com/topher/2018/February/5a8cb627_survey-results-schema/survey-results-schema.csv"
+              },
+              {
+                "name": "Survey Results Public",
+                "uri": "https://video.udacity-data.com/topher/2018/February/5a8cb654_survey-results-public/survey-results-public.csv"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 672486,
+              "key": "c36f1da3-dd61-4f6f-a63b-bec393c51833",
+              "title": "Business And Data Understanding - Example",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bXQTGS61BU8",
+                "china_cdn_id": "bXQTGS61BU8.mp4"
+              }
+            },
+            {
+              "id": 550841,
+              "key": "1f683b0a-5fd7-4255-88bc-033dacc2556b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Find the dataset that you will be using in this course at the bottom of this page, as well as in the workspaces throughout this lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 495539,
+          "key": "8f520f98-fa7d-45ee-a746-4d100e5a8c7f",
+          "title": "Screencast: Using Workspaces",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f520f98-fa7d-45ee-a746-4d100e5a8c7f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553629,
+              "key": "fd36820b-d192-458c-83db-6729d33f6ab6",
+              "title": "Using Workspaces",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "45N9NK6kQ0Y",
+                "china_cdn_id": "45N9NK6kQ0Y.mp4"
+              }
+            },
+            {
+              "id": 672546,
+              "key": "5066d4c0-fb0b-4977-b468-24e98e28419d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### You can access the code for this lesson (as well as the other lessons in DSND Term 2) in the Github repository [here](https://github.com/udacity/DSND_Term2).  The files for this specific lesson can be found in the `lessons/CRISP-DM` directory.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 495540,
+          "key": "1deb4152-ba5a-445e-89e3-58fe0041e1b1",
+          "title": "Quiz + Notebook: A Look at the Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1deb4152-ba5a-445e-89e3-58fe0041e1b1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 552492,
+              "key": "826055c7-205a-4428-a9d9-4b0852b6e557",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "5ccadf61-c3d9-4ba1-ba36-f532aa7d9932",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/A%20Look%20at%20the%20Data.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551767,
+          "key": "a439a03d-7458-47e2-a90e-86cf1b48c2f8",
+          "title": "Screencast: A Look at the Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a439a03d-7458-47e2-a90e-86cf1b48c2f8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553630,
+              "key": "01a025c9-a41a-4a70-9112-8ad022113c7d",
+              "title": "A Look at the Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vPHVUYvCNGE",
+                "china_cdn_id": "vPHVUYvCNGE.mp4"
+              }
+            },
+            {
+              "id": 555729,
+              "key": "513a5c5f-2ac7-4b72-9935-7c84b30126ea",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "6802ad05-185a-46e8-bec5-b922bf89e300",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/A%20Look%20at%20the%20Data%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 543240,
+          "key": "b1bdc6f4-76ff-448f-b2db-84ed9b95e36d",
+          "title": "What Should You Check?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b1bdc6f4-76ff-448f-b2db-84ed9b95e36d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543241,
+              "key": "c92a2f36-21dd-4d83-9fbc-2cd07dea2614",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c92a2f36-21dd-4d83-9fbc-2cd07dea2614",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Check all of the things you should check about your dataset when getting started.",
+                "answers": [
+                  {
+                    "id": "a1518463930376",
+                    "text": "Check each column is a variable, and each row is an individual.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1518464013986",
+                    "text": "Look at the number of rows and columns in the dataset.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1518464041645",
+                    "text": "Check if there are missing values in any of the rows or columns.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1518464062222",
+                    "text": "Check if any columns are of different data types than you would expect (ex: numbers showing as strings)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1518464123821",
+                    "text": "Build exploratory plots like bar charts, histograms, and scatterplots to better understand the data.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 502235,
+          "key": "803fb392-13c9-4044-b35d-eefa41ce94ad",
+          "title": "Video: Business & Data Understanding ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "803fb392-13c9-4044-b35d-eefa41ce94ad",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672488,
+              "key": "cf16c117-c388-41c5-86c7-e069d214bc45",
+              "title": "Business And Data Understanding - Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iInjuIgBWIo",
+                "china_cdn_id": "iInjuIgBWIo.mp4"
+              }
+            },
+            {
+              "id": 550881,
+              "key": "52cd8b8c-1598-43ca-afe4-21fc315afd38",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Business and Data Understanding\n\n#### Business Questions\n\n1. How do I break into the field?\n2. What are the placement and salaries of those who attended a coding bootcamp?\n3. How well can we predict an individual's salary?  What aspects correlate well to salary?\n4. How well can we predict an individual's job satisfaction? What aspects correlate well to job satisfaction?\n\n#### Data Understanding\n\nYou will be using the Stackoverflow survey data to get some insight into each of these questions.  In the rest of the lesson, you can work along with me to answer these questions, or you can take your own approach to see if the conclusions you draw are similar to those you would find throughout this lesson.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 550819,
+          "key": "bfa0e2b1-9f2b-4b2e-ab53-f932c99ea893",
+          "title": "Video: Gathering & Wrangling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bfa0e2b1-9f2b-4b2e-ab53-f932c99ea893",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672492,
+              "key": "aa4072d4-8b2a-4a09-99c4-bfbd6cec30dc",
+              "title": "The Data Science Process Gathering And Wrangling",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GvyfIiJUXWg",
+                "china_cdn_id": "GvyfIiJUXWg.mp4"
+              }
+            },
+            {
+              "id": 550888,
+              "key": "27d545dc-5f89-4243-bce3-4b9c397a7aaa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### The CRISP-DM Process (Cross Industry Process for Data Mining)\n\nWe have now defined the questions we want to answer and had a look through the data available to find the answers, that is, we have looked at the first two steps here:\n\n`1.` Business Understanding\n\n`2.` Data Understanding\n\n\nWe can now look at the third step of the process:\n\n\n`3.` Prepare Data\n\nLuckily stackoverflow has already collected the data for us.  However, we still need to wrangle the data in a way for us to answer our questions.  The wrangling and cleaning process is said to take 80% of the time of the data analysis process.  You will see that will hold true through this lesson, as a majority of the remaining parts of this lesson will be around basic data wrangling strategies.  \n\nWe will discuss the advantages and disadvantages of the strategies discussed in this lesson. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 502237,
+          "key": "3dc6128a-f725-4b7c-8a52-6a90de1ffedf",
+          "title": "Screencast: How To Break Into the Field?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3dc6128a-f725-4b7c-8a52-6a90de1ffedf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553631,
+              "key": "36d35982-849f-4671-89ea-21c44a57fd32",
+              "title": "How To Break Into The Field",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0-Y39LZ80VE",
+                "china_cdn_id": "0-Y39LZ80VE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 502238,
+          "key": "f83f3328-3c00-4d88-a366-0fd3e06e3a45",
+          "title": "Notebook + Quiz: How To Break Into the Field",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f83f3328-3c00-4d88-a366-0fd3e06e3a45",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543183,
+              "key": "306b2cf6-5596-4cc5-9e3c-78377077d0e4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "3c26839a-6894-4a80-ac74-28ed81020a3f",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/How%20To%20Break%20Into%20the%20Field.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551770,
+          "key": "e7e1afd3-3f64-42bb-b973-6fc77fc29780",
+          "title": "Screencast: How to Break Into the Field Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e7e1afd3-3f64-42bb-b973-6fc77fc29780",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553632,
+              "key": "b89282bd-eef7-4c4a-b9a0-5c2f4ae9576b",
+              "title": "How to Break Into the Field Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Db_2Lmwo4EY",
+                "china_cdn_id": "Db_2Lmwo4EY.mp4"
+              }
+            },
+            {
+              "id": 553653,
+              "key": "feb6d3f6-f81b-4ac7-bf0a-f498f5f5e2c7",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "c7a7c9b6-ce78-41e4-a5d0-1cbbdb7e823d",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/How%20To%20Break%20Into%20the%20Field%20-%20Solution%20.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 502239,
+          "key": "23e59577-21ab-4daa-b74d-f3389c432ad4",
+          "title": "Screencast: Bootcamps",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "23e59577-21ab-4daa-b74d-f3389c432ad4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553633,
+              "key": "2e3dc6b5-e651-46e8-a9b6-7c1df70bc7e4",
+              "title": "Bootcamps",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "l2tYmee3kxo",
+                "china_cdn_id": "l2tYmee3kxo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 543524,
+          "key": "329ec83b-f456-48ff-9418-087021842c60",
+          "title": "Quiz: Bootcamp Takeaways",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "329ec83b-f456-48ff-9418-087021842c60",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549125,
+              "key": "a5dbde69-66f1-46c1-9143-f381995c428e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Bootcamp Takeaways\n\nUse the images from the previous video to assist with the quizzes on this page.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 549128,
+              "key": "67d618fc-b643-4e5a-b015-b061346588a3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### What were your earnings for your job after the bootcamp?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 549126,
+              "key": "189d3fee-bcad-4c08-9509-de848fb42b06",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a847a5a_screen-shot-2018-02-14-at-10.03.16-am/screen-shot-2018-02-14-at-10.03.16-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/189d3fee-bcad-4c08-9509-de848fb42b06",
+              "caption": "",
+              "alt": "",
+              "width": 420,
+              "height": 290,
+              "instructor_notes": null
+            },
+            {
+              "id": 549132,
+              "key": "41f2b786-29a3-4447-b734-b6eb52704b2e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "41f2b786-29a3-4447-b734-b6eb52704b2e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What does the data suggest about earnings completing the bootcamp?",
+                "answers": [
+                  {
+                    "id": "a1518631849869",
+                    "text": "We can clearly see the bootcamp was worth it for these individuals in terms of earnings afterwards.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1518631870351",
+                    "text": "We can clearly see the bootcamp was **not** worth it for these individuals in terms of earnings.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1518631905344",
+                    "text": "Not a whole lot.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 549129,
+              "key": "3d784a14-eb52-4b48-9062-7c7763b9d03b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### How long until you earned a job after the bootcamp?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 549131,
+              "key": "2ef3c279-99d9-492e-985b-4f5a440f2cb9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a847b73_screen-shot-2018-02-14-at-10.08.56-am/screen-shot-2018-02-14-at-10.08.56-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2ef3c279-99d9-492e-985b-4f5a440f2cb9",
+              "caption": "",
+              "alt": "",
+              "width": 632,
+              "height": 189,
+              "instructor_notes": null
+            },
+            {
+              "id": 549130,
+              "key": "665d2fd8-e358-489e-b2fb-1b5a756967a0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "With those who already had roles as developers before the bootcamp removed, we have the following results.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 549133,
+              "key": "2e223c44-dac0-4cf3-be6a-91dd36ecb2a5",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2e223c44-dac0-4cf3-be6a-91dd36ecb2a5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select **all** of the statements that you can conclude to be true based on the data above.",
+                "answers": [
+                  {
+                    "id": "a1518632156267",
+                    "text": "Most of them were placed in jobs as developers because of the bootcamp very quickly.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1518632207740",
+                    "text": "At least 20% of individuals earned jobs as developers upon graduation or earlier.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1518632271434",
+                    "text": "Approximately 46% of bootcamp grads in the dataset already had jobs as developers before beginning the bootcamp.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 549127,
+              "key": "c78a9664-cd41-4f99-b3e1-ce7e7d7726b9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a847a95_screen-shot-2018-02-14-at-10.05.37-am/screen-shot-2018-02-14-at-10.05.37-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c78a9664-cd41-4f99-b3e1-ce7e7d7726b9",
+              "caption": "",
+              "alt": "",
+              "width": 595,
+              "height": 143,
+              "instructor_notes": null
+            },
+            {
+              "id": 549124,
+              "key": "47198e34-b6ae-42a0-92f9-da4e119b2926",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "47198e34-b6ae-42a0-92f9-da4e119b2926",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "There were some big takeaways from the last screencast.  Which statements were true about searching for results regarding bootcamp graduates? In case you want to look at the results of the previous screencast, the notebook is linked at the bottom of this page."
+                },
+                "concepts_label": "Statement",
+                "answers_label": "True or False",
+                "concepts": [
+                  {
+                    "text": "Bootcamp grads tended to earn similar salaries to one another upon bootcamp completion.",
+                    "correct_answer": {
+                      "id": "a1518630416303",
+                      "text": "False"
+                    }
+                  },
+                  {
+                    "text": "It was easy to bucket all bootcamp grads into when they were hired upon completing the bootcamp.",
+                    "correct_answer": {
+                      "id": "a1518630692915",
+                      "text": "False"
+                    }
+                  },
+                  {
+                    "text": "All bootcamp grads in the dataset were employed upon submitting their survey results.",
+                    "correct_answer": {
+                      "id": "a1518630768054",
+                      "text": "False"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1518630768054",
+                    "text": "False"
+                  },
+                  {
+                    "id": "a1518630889081",
+                    "text": "True"
+                  },
+                  {
+                    "id": "a1518630416303",
+                    "text": "False"
+                  },
+                  {
+                    "id": "a1518630894440",
+                    "text": "True"
+                  },
+                  {
+                    "id": "a1518630891829",
+                    "text": "True"
+                  },
+                  {
+                    "id": "a1518630692915",
+                    "text": "False"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 549134,
+          "key": "40039267-5edb-44a3-bd3a-9533672e2891",
+          "title": "Notebook + Quiz: Job Satisfaction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "40039267-5edb-44a3-bd3a-9533672e2891",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549430,
+              "key": "1dfcaf5f-6eda-4d96-868b-d7646bff3520",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "5359e84c-8016-4244-9a45-b4e139e1fdfb",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Job%20Satisfaction.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551769,
+          "key": "acd3222e-8c57-48eb-ae4e-31d2ee0c896f",
+          "title": "Screencast: Job Satisfaction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "acd3222e-8c57-48eb-ae4e-31d2ee0c896f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553634,
+              "key": "06744eda-073d-461e-8a3a-01876f57df8a",
+              "title": "Job Satisfaction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OjCNMhWlYh8",
+                "china_cdn_id": "OjCNMhWlYh8.mp4"
+              }
+            },
+            {
+              "id": 553654,
+              "key": "e302a8fb-0ab2-46dd-9e10-f220e1d848d3",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "84943638-fc80-4e60-b813-97c2128c16dd",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Job%20Satisfaction%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 502242,
+          "key": "4f19bbcc-036a-4514-9cbb-d308f3bab633",
+          "title": "Video: It Is Not Always About ML",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4f19bbcc-036a-4514-9cbb-d308f3bab633",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672494,
+              "key": "1930dff0-1273-44a1-b80a-dfdfa1988474",
+              "title": "It Is Not Always About ML",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ECqflypBU7M",
+                "china_cdn_id": "ECqflypBU7M.mp4"
+              }
+            },
+            {
+              "id": 550891,
+              "key": "c69e554b-c13b-4033-b07d-387caa8bc3e3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "When looking at the first two questions:\n\n1. How to break into the field?\n2. What are the placement and salaries for those who attended a coding bootcamp?\n\nwe did not need to do any predictive modeling.  We only used **descriptive** and a little **inferential** statistics to retrieve the results.\n\nTherefore, all steps of CRISP-DM were not necessary for these first two questions.  CRISP-DM states 6 steps:\n\n`1.` Business Understanding\n\n`2.` Data Understanding\n\n`3.` Prepare Data\n\n`4.` Data Modeling\n\n`5.` Evaluate the Results\n\n`6.` Deploy\n\nFor these first two questions, we did not need step `4`. In the previous notebooks, you performed steps `3` and `5` without needing step `4` at all.  A lot of the hype in data science, artificial intelligence, and deep learning is integrated into step `4`, but there are still plenty of questions to be answered not using machine learning, artificial intelligence, and deep learning.  \n\n### All Data Science Problems Involve\n\n1. Curiosity.<br><br>\n2. The **right** data.<br><br>\n3. A tool of some kind (Python, Tableau, Excel, R, etc.) used to find a solution (You could use your head, but that would be inefficient with the massive amounts of data being generated in the world today).<br><br>\n4. Well communicated or deployed solution.\n\n### Extra Useful Tools to Know But That Are NOT Necessary for ALL Projects\n\n* Deep Learning\n* Fancy machine learning algorithms\n\nWith that, you will be getting a more in depth look at these items, but it is worth mentioning (given the massive amount of hype) that they do not solve all the problems.  Deep learning cannot turn bad data into good conclusions.  Or bad questions into amazing results.\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 502241,
+          "key": "566aa474-d8f6-44b8-9359-f148df8697d5",
+          "title": "Video: The Data Science Process - Modeling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "566aa474-d8f6-44b8-9359-f148df8697d5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672496,
+              "key": "cd375bf9-6d26-401c-999a-a98e08768493",
+              "title": "The Data Science Process Modeling",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bzR6HQBn5CA",
+                "china_cdn_id": "bzR6HQBn5CA.mp4"
+              }
+            },
+            {
+              "id": 550901,
+              "key": "449d1d20-42da-4600-96ab-601646b935c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "When looking at the first two questions:\n\n1. How to break into the field?\n2. What are the placement and salaries for those who attended a coding bootcamp?\n\nwe did not need to do any predictive modeling.  We only used **descriptive** and a little **inferential** statistics to retrieve the results.\n\nTherefore, all steps of CRISP-DM were not necessary for these first two questions.  The process would look closer to the following:\n\n`1.` Business Understanding\n\n`2.` Data Understanding\n\n`3.` Prepare Data\n\n`4.` Evaluate the Results\n\n`5.` Deploy\n\nHowever, for the last two questions:\n\n1. How well can we predict an individual's salary?  What aspects correlate well to salary?\n\n2. How well can we predict an individual's job satisfaction? What aspects correlate well to job satisfaction?\n\nWe will need to use a predictive model.  We will need to pick up at step `3` to answer these two questions, so let's get started.  The process for answering these last two questions will follow the full 6 steps shown here.\n\n`1.` Business Understanding\n\n`2.` Data Understanding\n\n`3.` Prepare Data\n\n`4.` Model Data\n\n`5.` Evaluate the Results\n\n`6.` Deploy",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522165,
+          "key": "9e979b13-bafb-4bf3-9034-38f1ec55f7e3",
+          "title": "Video: Predicting Salary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e979b13-bafb-4bf3-9034-38f1ec55f7e3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672497,
+              "key": "5373749e-11c5-4d02-934d-eea3608414f1",
+              "title": "Predicting Salary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "g1ZAn02ETK4",
+                "china_cdn_id": "g1ZAn02ETK4.mp4"
+              }
+            },
+            {
+              "id": 550908,
+              "key": "21cc93ef-1c8b-481b-b95a-4119f0b6d170",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the modeling section, you will learn that step three of CRISP-DM is essential to getting the most out of your data.  In this case, we are interested in using any of the variables we can from the dataset to predict an individual's salary.\n\nThe variables we use to predict are commonly called **X** (or an **X matrix**).  The column we are interested in predicting is commonly called **y** (or the **response vector**).  \n\nIn this case **X** is all the variables in the dataset that are not salary, while **y** is the salary column in the dataset.  \n\nOn the next page, you will see what happens when we try to use sklearn to fit a model to the data, and we will do some work to get useful predictions out of our sklearn model.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522166,
+          "key": "ac12357b-677c-4706-bf60-4fc59c2c7555",
+          "title": "Screencast: Predicting Salary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ac12357b-677c-4706-bf60-4fc59c2c7555",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553635,
+              "key": "fd3ec7bb-613a-460f-b9c0-d34cc467dc6c",
+              "title": "Predicting Salary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HTp4LA1MJh8",
+                "china_cdn_id": "HTp4LA1MJh8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 549214,
+          "key": "aa0c410d-10b9-4985-b6c9-8b36cf84181c",
+          "title": "Notebook + Quiz: What Happened?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aa0c410d-10b9-4985-b6c9-8b36cf84181c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549265,
+              "key": "bd5222a0-6528-4ccb-88b5-8bac36c6c425",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "3604bc50-4d70-4b1d-85f9-46a7c01be890",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/What%20Happened%3F.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551772,
+          "key": "76c7408b-cbf6-4d4f-a209-642f80be747a",
+          "title": "Screencast: What Happened Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "76c7408b-cbf6-4d4f-a209-642f80be747a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553636,
+              "key": "c077a903-cd2c-4e85-87a8-dd1842fa0f55",
+              "title": "What Happened?",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gLn6_Z3nwcc",
+                "china_cdn_id": "gLn6_Z3nwcc.mp4"
+              }
+            },
+            {
+              "id": 553660,
+              "key": "48e46a18-bdfa-43d6-abce-0206a5d50075",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "dcb9a26a-68a7-481b-9537-eec8eb53695b",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/What%20Happened%3F%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522167,
+          "key": "46e1a5a6-9879-4ea2-a4d4-32ba8c4bf42d",
+          "title": "Video: Working With Missing Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46e1a5a6-9879-4ea2-a4d4-32ba8c4bf42d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672498,
+              "key": "5db39514-4cfe-46e2-8614-8221acaafc13",
+              "title": "Working With Missing Values",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "mbAgYicmzqE",
+                "china_cdn_id": "mbAgYicmzqE.mp4"
+              }
+            },
+            {
+              "id": 550920,
+              "key": "27f79ae5-b347-4324-8eef-2e652f1bca90",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "There are two main 'pain' points for passing data to machine learning models in sklearn:\n\n1. Missing Values\n2. Categorical Values\n\nSklearn does not know how you want to treat missing values or categorical variables, and there are lots of methods for working with each.  For this lesson, we will look at common, quick fixes.  These methods help you get your models into production quickly, but thoughtful treatment of missing values and categorical variables should be done to remove bias and improve predictions over time.  \n\nThree strategies for working with missing values include:\n\n1. We can remove (or “drop”) the rows or columns holding the missing values.\n- We can impute the missing values.\n- We can build models that work around them, and only use the information provided.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522168,
+          "key": "22709bc6-78d4-48e7-bb24-1254d82eb3e3",
+          "title": "Video: Removing Data - Why Not?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "22709bc6-78d4-48e7-bb24-1254d82eb3e3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672501,
+              "key": "0770a901-39ef-41aa-b0c0-cae5a5d35573",
+              "title": "Removing Data - Why Not?",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "w3-5Z5mEzTM",
+                "china_cdn_id": "w3-5Z5mEzTM.mp4"
+              }
+            },
+            {
+              "id": 550921,
+              "key": "000ebb12-ce5d-43ad-afd6-5ecabf04d7c5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Though dropping rows and/or columns holding missing values is quite easy to do using numpy and pandas, it is often not appropriate.\n\nUnderstanding why the data is missing is important before dropping these rows and columns.  In this video you saw a number of situations in which dropping values was not a good idea.  These included\n\n1. Dropping data values associated with the effort or time an individual put into a survey.\n2. Dropping data values associated with sensitive information.\n\nIn either of these cases, the missing values hold information.  A quick removal of the rows or columns associated with these missing values would remove missing data that could be used to better inform models.\n\nInstead of removing these values, we might keep track of the missing values using indicator values, or counts associated with how many questions an individual skipped.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522169,
+          "key": "b1db55c9-8be8-43c4-af27-a37c6c0b3430",
+          "title": "Video: Removing Data - When Is It OK?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b1db55c9-8be8-43c4-af27-a37c6c0b3430",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672502,
+              "key": "f4c70e22-a7ef-4671-bf46-423328656c5c",
+              "title": "Removing Data - When Is It OK?",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "oQhIPq5AccU",
+                "china_cdn_id": "oQhIPq5AccU.mp4"
+              }
+            },
+            {
+              "id": 550922,
+              "key": "b87afb29-5a49-4d70-838f-b0005a191aa2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the last video, you saw cases in which dropping rows or columns associated with missing values would not be a good idea.  There are other cases in which dropping rows or columns associated with missing values would be okay.\n\nA few instances in which dropping a row might be okay are:\n\n1. Dropping missing data associated with mechanical failures.\n2. The missing data is in a column that you are interested in predicting.  \n\nOther cases when you should consider dropping data that are not associated with missing data:\n\n1. Dropping columns with no variability in the data.\n2. Dropping data associated with information that you know is not correct.\n\nIn handling removing data, you should think more about why is this missing or why is this data incorrectly input to see if an alternative solution might be used than dropping the values.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 549147,
+          "key": "d225dbcd-6f18-4614-bd0d-a8a6c5e866f6",
+          "title": "Video: Removing Data - Other Considerations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d225dbcd-6f18-4614-bd0d-a8a6c5e866f6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672503,
+              "key": "3635e54d-cc74-4cb7-8688-bd0f00c6ff8e",
+              "title": "Removing Data - Other Considerations",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xrXk_Tvi0oQ",
+                "china_cdn_id": "xrXk_Tvi0oQ.mp4"
+              }
+            },
+            {
+              "id": 550924,
+              "key": "ce884e07-5fcb-40df-a856-85f28343c136",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "One common strategy for working with missing data is to understand the proportion of a column that is missing.  If a large proportion of a column is missing data, this is a reason to consider dropping it.  \n\nThere are easy ways using pandas to create dummy variables to track the missing values, so you can see if these missing values actually hold information (regardless of the proportion that are missing) before choosing to remove a full column.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 549151,
+          "key": "4e069a65-6296-477c-966d-90cd7dbffcde",
+          "title": "Quiz: Removing Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4e069a65-6296-477c-966d-90cd7dbffcde",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549436,
+              "key": "2405682a-b7b1-4807-9e87-0204983b0005",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2405682a-b7b1-4807-9e87-0204983b0005",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "For each of the scenarios described below match to the appropriate solution with regard to dropping values."
+                },
+                "concepts_label": "Scenario",
+                "answers_label": "Drop",
+                "concepts": [
+                  {
+                    "text": "An entire column has missing values.",
+                    "correct_answer": {
+                      "id": "a1518733203407",
+                      "text": "Ok to drop the column."
+                    }
+                  },
+                  {
+                    "text": "An entire row has missing values.",
+                    "correct_answer": {
+                      "id": "a1518733263555",
+                      "text": "Ok to drop the row."
+                    }
+                  },
+                  {
+                    "text": "A column has a mix of heights in feet and meters.",
+                    "correct_answer": {
+                      "id": "a1518733278338",
+                      "text": "Do not drop rows or columns."
+                    }
+                  },
+                  {
+                    "text": "For the response (the variable we want to predict), there are rows with missing values.",
+                    "correct_answer": {
+                      "id": "a1518733324342",
+                      "text": "Ok to drop the rows."
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1518733399772",
+                    "text": "Ok to drop the row."
+                  },
+                  {
+                    "id": "a1518733203407",
+                    "text": "Ok to drop the column."
+                  },
+                  {
+                    "id": "a1518733263555",
+                    "text": "Ok to drop the row."
+                  },
+                  {
+                    "id": "a1518733278338",
+                    "text": "Do not drop rows or columns."
+                  },
+                  {
+                    "id": "a1518733404616",
+                    "text": "Ok to drop the column."
+                  },
+                  {
+                    "id": "a1518733459760",
+                    "text": "Do not drop rows or columns."
+                  },
+                  {
+                    "id": "a1518733324342",
+                    "text": "Ok to drop the rows."
+                  },
+                  {
+                    "id": "a1518733336188",
+                    "text": "Ok to drop the column."
+                  }
+                ]
+              }
+            },
+            {
+              "id": 549438,
+              "key": "8aea375b-35a8-41be-8275-40bde05693fb",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8aea375b-35a8-41be-8275-40bde05693fb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "For each of the scenarios described below match to the appropriate solution with regard to dropping values."
+                },
+                "concepts_label": "Scenario",
+                "answers_label": "Drop",
+                "concepts": [
+                  {
+                    "text": "Only 2% of the values in the column exist.",
+                    "correct_answer": {
+                      "id": "a1518733740185",
+                      "text": "Might be okay to drop the column, but should see if the provided data is useful."
+                    }
+                  },
+                  {
+                    "text": "There are no missing values in the column, but all values are 1.",
+                    "correct_answer": {
+                      "id": "a1518733944171",
+                      "text": "Drop the column."
+                    }
+                  },
+                  {
+                    "text": "A column pertaining to values that should all be positive has some negative values.",
+                    "correct_answer": {
+                      "id": "a1518734013354",
+                      "text": "Consider dropping the wrong data if there is no domain related fix for why the values are negative."
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1518734158978",
+                    "text": "Bad data should always be dropped."
+                  },
+                  {
+                    "id": "a1518733740185",
+                    "text": "Might be okay to drop the column, but should see if the provided data is useful."
+                  },
+                  {
+                    "id": "a1518734013354",
+                    "text": "Consider dropping the wrong data if there is no domain related fix for why the values are negative."
+                  },
+                  {
+                    "id": "a1518734008720",
+                    "text": "Drop the row."
+                  },
+                  {
+                    "id": "a1518733944171",
+                    "text": "Drop the column."
+                  },
+                  {
+                    "id": "a1518734121499",
+                    "text": "Might be okay to drop the row, but should see if the provided data is useful."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 549216,
+          "key": "b2768632-561d-4cce-9575-90427f937803",
+          "title": "Notebook + Quiz: Removing Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b2768632-561d-4cce-9575-90427f937803",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549551,
+              "key": "c8f0d58f-6fef-4fcd-871d-27b2c506da94",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "efaac2a2-529e-4d52-8370-f2ee09655bb0",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Removing%20Values.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522170,
+          "key": "5b3d73f9-0d6e-4e80-8e27-ffd21cfef7a4",
+          "title": "ScreenCast: Removing Data Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5b3d73f9-0d6e-4e80-8e27-ffd21cfef7a4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553637,
+              "key": "86789fb1-1f0e-4fad-97b6-5dba86a05455",
+              "title": "Removing Data",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "97UTBiybYTs",
+                "china_cdn_id": "97UTBiybYTs.mp4"
+              }
+            },
+            {
+              "id": 553665,
+              "key": "09e4ea0e-bc6d-4d90-924b-0ad4c7525b6e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "e4520f91-0df7-4a45-9c99-9dd7dd8a0a2e",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Removing%20Values%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 549552,
+          "key": "7f810110-360e-4323-9cdc-fb2aa986a7a5",
+          "title": "Notebook + Quiz: Removing Data Part II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7f810110-360e-4323-9cdc-fb2aa986a7a5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 549553,
+              "key": "87301b91-fb68-498f-ba1d-46ab6fcc9a34",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "e5a7c5d0-bde7-4a94-b707-4aefaacd8908",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Removing%20Data%20Part%20II.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551775,
+          "key": "f42fb2cb-0d8c-4e78-8780-7159c32fdb51",
+          "title": "Screencast: Removing Data Part II Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f42fb2cb-0d8c-4e78-8780-7159c32fdb51",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553638,
+              "key": "39597bda-0938-425f-8441-b68b0dc3173d",
+              "title": "Removing Data Part II",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lPl6-Z098Rs",
+                "china_cdn_id": "lPl6-Z098Rs.mp4"
+              }
+            },
+            {
+              "id": 553666,
+              "key": "2f77f4bf-cc0a-4fb0-9e3a-6b2ac8ef567c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "3db9e2d7-7401-453c-ac85-476d44bc4e9c",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Removing%20Data%20Part%20II%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522172,
+          "key": "dae1515e-1299-4d49-a096-dce24db75489",
+          "title": "Video: Imputing Missing Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dae1515e-1299-4d49-a096-dce24db75489",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672504,
+              "key": "33327c9c-ab49-435f-8b1f-0da811aa2362",
+              "title": "Imputing Missing Values",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "CEWIPjz_gCE",
+                "china_cdn_id": "CEWIPjz_gCE.mp4"
+              }
+            },
+            {
+              "id": 550929,
+              "key": "69d8334c-f459-4586-ad58-495ee7d7c19b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Imputation is likely the most common method for working with missing values for any data science team.  The methods shown here included the frequently used methods of imputing the mean, median, or mode of a column into the missing values for the column.  \n\nThere are many advanced techniques for imputing missing values including using machine learning and bayesian statistical approaches.  This could be techniques as simple as using k-nearest neighbors to find the features that are most similar, and using the values those features have to fill in values that are missing or complex methods like those in the very popular [AMELIA library](https://cran.r-project.org/web/packages/Amelia/Amelia.pdf). \n\nRegardless your imputation approach, you should be very cautious of the **BIAS** you are imputing into any model that uses these imputed values. Though imputing values is very common, and often leads to better predictive power in machine learning models, it can lead to over generalizations.  In extremely advanced techniques in Data Science, this can even mean [ethical implications](https://intelligence.org/files/EthicsofAI.pdf).  Machines can only 'learn' from the data they are provided.  If you provide biased data (due to imputation, poor data collection, etc.), it should be no surprise, you will achieve results that are biased.\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522173,
+          "key": "b1e7ab00-b752-4e6e-8baa-8fb3638b8a0c",
+          "title": "Notebook + Quiz: Imputation Methods & Resources",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b1e7ab00-b752-4e6e-8baa-8fb3638b8a0c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 550418,
+              "key": "811490c3-4158-4439-9a02-47dd54d3150b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "579e0818-962f-456d-96b0-987b1e86f767",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Imputation%20Methods%20and%20Resources%20-.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522174,
+          "key": "6a1b57aa-5eb1-481c-a9b9-62e65b687d8b",
+          "title": "Screencast: Imputation Methods & Resources Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6a1b57aa-5eb1-481c-a9b9-62e65b687d8b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553647,
+              "key": "6dbd88d0-3bf1-4b18-8eab-5b249316e030",
+              "title": "Imputation Methods",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OwEWSBitF-Q",
+                "china_cdn_id": "OwEWSBitF-Q.mp4"
+              }
+            },
+            {
+              "id": 553669,
+              "key": "14b3c822-a4d9-4a3a-ae58-066dab434668",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "816c31ed-3634-43db-a309-352d785f09a0",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Imputation%20Methods%20and%20Resources%20-%20Solution%20.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522175,
+          "key": "af7f84c7-9676-4651-924c-481e59ef3792",
+          "title": "Notebook + Quiz: Imputing Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "af7f84c7-9676-4651-924c-481e59ef3792",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 550474,
+              "key": "a9be04b0-b435-48f6-b11a-f349ec6425e4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "cae6bf63-0831-4001-b476-322e7f278eec",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Imputing%20Values.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 551766,
+          "key": "d1f0d9ce-3a41-446a-ae10-ac9eff3e7c62",
+          "title": "Screencast: Imputing Values Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d1f0d9ce-3a41-446a-ae10-ac9eff3e7c62",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553649,
+              "key": "9ae6b630-0227-42bc-87ef-96f13938d5c2",
+              "title": "Imputing Values",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nTM4HiDneeE",
+                "china_cdn_id": "nTM4HiDneeE.mp4"
+              }
+            },
+            {
+              "id": 553668,
+              "key": "368961ee-0d84-4a27-af32-f8dee02e058c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "107b5ee0-337f-403f-a45d-2f0a90ea3320",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Imputing%20Values%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522176,
+          "key": "1928c382-3c79-4f13-a161-d58e4c8889c3",
+          "title": "Video: Working With Categorical Variables Refresher",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1928c382-3c79-4f13-a161-d58e4c8889c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672506,
+              "key": "fd624271-287a-44c2-851f-0ad631605c22",
+              "title": "Working With Categorical Variables",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IoQOiuxsIZg",
+                "china_cdn_id": "IoQOiuxsIZg.mp4"
+              }
+            },
+            {
+              "id": 550940,
+              "key": "27f759d5-7b43-440f-a6f6-5795f51439ee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Notice that in the earlier video in the pre-requisites, there was a mention of dropping a column to assure your **X** matrix is full rank.  This is not true using LinearRegression within sklearn, because there is a ridge (or L2 penalty used by default). However, dropping the columns would also be okay, it is just not required, as it is with OLS without a penalty.\n\nYou will see this holds true in the upcoming content.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522178,
+          "key": "da249812-ccdf-4d4e-81dd-4bb7ff3a2eb5",
+          "title": "Notebook + Quiz: Categorical Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "da249812-ccdf-4d4e-81dd-4bb7ff3a2eb5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 550590,
+              "key": "6ef00062-b323-48be-9928-d2b945e7a4db",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "081ab6ad-3490-4b62-948c-fc4d282cced6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Categorical%20Variables.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522177,
+          "key": "d67337d4-812f-4275-b1fc-03554e8f26a8",
+          "title": "Screencast: Categorical Variables Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d67337d4-812f-4275-b1fc-03554e8f26a8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553663,
+              "key": "719b48da-92fd-4ddc-af75-7655283a8cf3",
+              "title": "Categorical Variables",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "p3gDUkBD9uM",
+                "china_cdn_id": "p3gDUkBD9uM.mp4"
+              }
+            },
+            {
+              "id": 553664,
+              "key": "be88cbfc-9c3c-4fd3-a57c-52dbaef0ecfc",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "d0ca10ad-07d8-46c4-8fa6-efdce3de908d",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Categorical%20Variables%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522179,
+          "key": "94e1c317-942c-4fe4-866b-fdc94176c144",
+          "title": "Video: How to Fix This?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "94e1c317-942c-4fe4-866b-fdc94176c144",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672507,
+              "key": "21135d5f-7de4-4f19-9858-a6d6d5bbeabc",
+              "title": "How To Fix This?",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IPQZ4pfRMRA",
+                "china_cdn_id": "IPQZ4pfRMRA.mp4"
+              }
+            },
+            {
+              "id": 550942,
+              "key": "b0254827-c520-4612-9897-586c36a8e6cd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Overfitting\n\nOverfitting is a common problem when our model does not generalize to data it has not seen before.  Assuring you build models that not only work for the data the model was trained on, but also generalize to new (test) data, is key to building models that will be successful to deploy and that will become successful in production.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 522181,
+          "key": "fd452f74-86d8-4967-93b4-676eedc52758",
+          "title": "Notebook + Quiz: Putting It All Together ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fd452f74-86d8-4967-93b4-676eedc52758",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 550591,
+              "key": "9fa6e876-2f33-47d7-b201-2f9bfe850506",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "a6e2d20e-128e-490e-aac4-044bc5306166",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Putting%20It%20All%20Together.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 522180,
+          "key": "3d0d4623-8765-48a5-a31d-7b62bd7fc0a7",
+          "title": "Screencast + Notebook: Putting It All Together Solution",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3d0d4623-8765-48a5-a31d-7b62bd7fc0a7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 553652,
+              "key": "b59f6a8c-566a-4097-a7ad-9cb6985611c8",
+              "title": "Putting It All Together",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "3SX4dMZPNEI",
+                "china_cdn_id": "3SX4dMZPNEI.mp4"
+              }
+            },
+            {
+              "id": 552424,
+              "key": "d7cc854d-ccdd-40f0-b70d-9901b25e0084",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewe598ff07",
+              "pool_id": "jupyter",
+              "view_id": "f550f6a7-0f4e-4357-b9bc-af729f3fba45",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Putting%20It%20All%20Together%20-%20Solution.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 550900,
+          "key": "57a10070-b4bc-41a8-90c3-34927d62c0c8",
+          "title": "Text + Quiz: Results",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "57a10070-b4bc-41a8-90c3-34927d62c0c8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 550943,
+              "key": "be2512ec-1c06-459d-966e-5716882dda91",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### CRISP-DM\n\nIn working with missing values, categorical variables, and building out your model, it was probably easy to lose sight of the big picture of the process.  Let's take a quick second to recap that here, and pull together the results you should have arrived through your analysis.\n\n`1.` Business Understanding\n\n1. How do I break into the field?\n2. What are the placement and salaries of those who attended a coding bootcamp?\n3. How well can we predict an individual's salary?  What aspects correlate well to salary?\n4. How well can we predict an individual's job satisfaction? What aspects correlate well to job satisfaction?\n\n`2.` Data Understanding\n\nHere we used the stackoverflow data to attempt to answer our questions of interest.  We did `1.` and `2.` in tandem in this case, using the data to help us arrive at our questions of interest.  This is one of two methods that is common in practice.  The second method that is common is to have certain questions you are interested in answering, and then having to collect data related to those questions.\n\n`3.` Prepare Data\n\nThis is commonly denoted as 80% of the process.  You saw this especially when attempting to build a model to predict salary, and there was still much more you could have done.  From working with missing data to finding a way to work with categorical variables, and we didn't even look for outliers or attempt to find points we were especially poor at predicting.  There was ton more we could have done to wrangle the data, but you have to start somewhere, and then you can always iterate.\n\n`4.` Model Data\n\nWe were finally able to model the data, but we had some back and forth with step `3.` before we were able to build a model that had okay performance.  There still may be changes that could be done to improve the model we have in place.  From additional feature engineering to choosing a more advanced modeling technique, we did little to test that other approaches were better within this lesson.\n\n`5.` Results\n\nResults are the findings from our wrangling and modeling.  Below are some questions to recap the results found so far.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 552819,
+              "key": "cbd91b74-b8ec-4ec7-94e2-64de07053df0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a91e3b8_screen-shot-2018-02-24-at-2.13.15-pm/screen-shot-2018-02-24-at-2.13.15-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cbd91b74-b8ec-4ec7-94e2-64de07053df0",
+              "caption": "",
+              "alt": "",
+              "width": 706,
+              "height": 525,
+              "instructor_notes": null
+            },
+            {
+              "id": 552428,
+              "key": "3fb0f680-29c4-4b73-b3b3-f5e12822d075",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3fb0f680-29c4-4b73-b3b3-f5e12822d075",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Use the images above and below this question to assist as necessary with this question.  Select all that were results we found in the data when looking at the first question regarding breaking into the field.",
+                "answers": [
+                  {
+                    "id": "a1519336809389",
+                    "text": "The largest proportion of individuals suggests breaking into the field by taking online courses.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519337378880",
+                    "text": "There was evidence to suggest that those with higher degrees are more likely to suggest others pursue higher degrees to break into the field.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519337451149",
+                    "text": "The average salary was highest for those that suggested contributing to open source as a method to break into the field.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 552820,
+              "key": "840c634f-bfad-4691-9d5e-fd9e2c5a5ab6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a91e43a_screen-shot-2018-02-24-at-2.16.00-pm/screen-shot-2018-02-24-at-2.16.00-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/840c634f-bfad-4691-9d5e-fd9e2c5a5ab6",
+              "caption": "",
+              "alt": "",
+              "width": 1564,
+              "height": 706,
+              "instructor_notes": null
+            },
+            {
+              "id": 552821,
+              "key": "8b5ca206-d3c0-4ec3-a77e-684809b2b309",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a91e4e7_screen-shot-2018-02-24-at-2.17.54-pm/screen-shot-2018-02-24-at-2.17.54-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8b5ca206-d3c0-4ec3-a77e-684809b2b309",
+              "caption": "Salary for Bootcamp Graduates in fiat",
+              "alt": "",
+              "width": 622,
+              "height": 401,
+              "instructor_notes": null
+            },
+            {
+              "id": 552433,
+              "key": "9481b8de-551b-4afb-bd90-1f688ddd20b7",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9481b8de-551b-4afb-bd90-1f688ddd20b7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select all that were results we found in the data when looking at bootcamp graduation rates and salaries.",
+                "answers": [
+                  {
+                    "id": "a1519338325126",
+                    "text": "It was easy to see that bootcamps helped individual's earn more.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1519339069848",
+                    "text": "It was easy to see that the bootcamp was a fast track to new roles as data scientists and developers.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1519339073343",
+                    "text": "There was very little that was easily clear about statistics about bootcamp graduates.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 552822,
+              "key": "34c61058-47cf-42cd-a056-127458cff5f7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a91e52a_screen-shot-2018-02-24-at-2.18.30-pm/screen-shot-2018-02-24-at-2.18.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/34c61058-47cf-42cd-a056-127458cff5f7",
+              "caption": "",
+              "alt": "",
+              "width": 996,
+              "height": 282,
+              "instructor_notes": null
+            },
+            {
+              "id": 552823,
+              "key": "081e9ddb-f5ac-46fc-ad7c-f08482e226eb",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "081e9ddb-f5ac-46fc-ad7c-f08482e226eb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "From the results of your predictive model for predicting salary, select all that were true.",
+                "answers": [
+                  {
+                    "id": "a1519510981894",
+                    "text": "It was important to get a model that fit the data well before drawing conclusions.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519511054857",
+                    "text": "We found that where an individual lives is one of the greatest indicators of salary.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519511244500",
+                    "text": "We found that years of experience was one of the greatest indicators of salary.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 552824,
+              "key": "5a2ff64e-08a3-46bf-9ff2-d82521ee8c3d",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5a2ff64e-08a3-46bf-9ff2-d82521ee8c3d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select all that were true regarding fitting your predictive model to predict salary.",
+                "answers": [
+                  {
+                    "id": "a1519511382754",
+                    "text": "You encountered errors when working with NaN values.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519511960611",
+                    "text": "You encountered errors when working with categorical variables.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519511989280",
+                    "text": "There are times when you can drop rows or columns, as well as times when you should not.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519512029958",
+                    "text": "Imputing can assist in building models, but often it is important to consider why values are missing to improve models.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1519512075331",
+                    "text": "You normalized the features of your X matrix before fitting your model.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 502243,
+          "key": "fbb3bfec-b050-4f84-ac36-f2f9f8f24ac6",
+          "title": "Video: The Data Science Process - Evaluate & Deploy",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fbb3bfec-b050-4f84-ac36-f2f9f8f24ac6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672509,
+              "key": "27caf26e-1be6-425d-ab97-822d36d83739",
+              "title": "The Data Science Process Evaluate And Deploy",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sxT43JlH_eM",
+                "china_cdn_id": "sxT43JlH_eM.mp4"
+              }
+            },
+            {
+              "id": 551717,
+              "key": "30e53885-7706-44c3-bfd0-31432c2a788f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Two techniques for deploying your results include:\n\n1. Automated techniques built into computer systems or across the web.  You will do this later in this program! <br><br> \n2. Communicate results with text, images, slides, dashboards, or other presentation methods to company stakeholders.\n\nTo get some practice with this second technique, you will be writing a blog post for the first project and turning in a Github repository that shares your work.\n\nAs a data scientist, communication of your results to both other team members and to less technical members of a company is a critical component ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 502245,
+          "key": "b5016b84-0a83-478b-8ca1-68936e090990",
+          "title": "Text: Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b5016b84-0a83-478b-8ca1-68936e090990",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 502246,
+              "key": "cb286d51-f250-412b-94ac-4c214ec18abb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Recap\n\n#### CRISP-DM\n\nIn working with missing values, categorical variables, and building out your model, it was probably easy to lose site of the big picture of the process.  Let's take a quick second to recap that here, and pull together the results you should have arrived through your analysis.\n\n`1.` Business Understanding\n\n1. How do I break into the field?\n2. What are the placement and salaries of those who attended a coding bootcamp?\n3. How well can we predict an individual's salary?  What aspects correlate well to salary?\n4. How well can we predict an individual's job satisfaction? What aspects correlate well to job satisfaction?\n\n`2.` Data Understanding\n\nHere we used the StackOverflow data to attempt to answer our questions of interest.  We did `1.` and `2.` in tandem in this case, using the data to help us arrive at our questions of interest.  This is one of two methods that is common in practice.  The second method that is common is to have certain questions you are interested in answering, and then having to collect data related to those questions.\n\n`3.` Prepare Data\n\nThis is commonly denoted as 80% of the process.  You saw this especially when attempting to build a model to predict salary, and there was still much more you could have done.  From working with missing data to finding a way to work with categorical variables, and we didn't even look for outliers or attempt to find points we were especially poor at predicting.  There was ton more we could have done to wrangle the data, but you have to start somewhere, and then you can always iterate.\n\n`4.` Model Data\n\nWe were finally able to model the data, but we had some back and forth with step `3.` before we were able to build a model that had okay performance.  There still may be changes that could be done to improve the model we have in place.  From additional feature engineering to choosing a more advanced modeling technique, we did little to test that other approaches were better within this lesson.\n\n`5.` Results\n\nResults are the findings from our wrangling and modeling.  They are the answers you found to each of the questions.\n\n`6.` Deploy\n\nDeploying can occur by moving your approach into production or by using your results to persuade others within a company to act on the results.  Communication is such an important part of the role of a data scientist.  \n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

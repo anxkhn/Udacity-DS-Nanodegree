@@ -1,0 +1,852 @@
+{
+  "data": {
+    "lesson": {
+      "id": 551720,
+      "key": "6bcd069d-1762-416f-b752-e7e754671a35",
+      "title": "Communicating to Stakeholders",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "In this lesson, you will be creating a post to communicate your findings via Medium.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/6bcd069d-1762-416f-b752-e7e754671a35/551720/1538971447182/Communicating+to+Stakeholders+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/6bcd069d-1762-416f-b752-e7e754671a35/551720/1538971438731/Communicating+to+Stakeholders+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 553243,
+          "key": "5f1e2883-c071-4c4f-a1d2-2a0fe9651b13",
+          "title": "Video: Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5f1e2883-c071-4c4f-a1d2-2a0fe9651b13",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672511,
+              "key": "10207bcb-cfd8-4c6b-af2a-c8887711bb43",
+              "title": "Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TRw4bvZuEG8",
+                "china_cdn_id": "TRw4bvZuEG8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 553244,
+          "key": "6725da29-451a-4df5-a556-fcc4f4445667",
+          "title": "Video: First Things First",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6725da29-451a-4df5-a556-fcc4f4445667",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672516,
+              "key": "8bb24299-a075-4f27-8459-815fbea63cd5",
+              "title": "First Things First",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ehjC7JK-zMI",
+                "china_cdn_id": "ehjC7JK-zMI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 553245,
+          "key": "191e018c-5692-4946-b266-50a687117a9b",
+          "title": "Text: README Showcase",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "191e018c-5692-4946-b266-50a687117a9b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 556094,
+              "key": "711d737a-fcc0-4438-9ae3-06e33a6cb64b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### README Showcase\n\nLet's take a look at some of the qualities of good **README** files.  In the last video, you saw that a good README should have:\n\n`1.` Installations<br><br>\n`2.` Project Motivation<br><br>\n`3.` File Descriptions<br><br>\n`4.` How to Interact with your project<br><br>\n`5.` Licensing, Authors, Acknowledgements, etc.<br><br>\n\nA full Udacity course on this topic can be found [here](https://classroom.udacity.com/courses/ud777).\n\nLet's take a look at a few profiles that do this well, so you can have some model examples to follow when putting together your project profile.\n\n### Example 1: [Bootstrap](https://github.com/twbs/bootstrap)\n\nAn example a good README is shown [here](https://github.com/twbs/bootstrap).  Boostrap, as you can see from their logo, is a way to quickly build projects to deploy on the web.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560266,
+              "key": "5d350d2d-588d-467c-9a80-4c1148728bb6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5aa321ba_screen-shot-2018-03-09-at-4.07.07-pm/screen-shot-2018-03-09-at-4.07.07-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5d350d2d-588d-467c-9a80-4c1148728bb6",
+              "caption": "",
+              "alt": "",
+              "width": 982,
+              "height": 739,
+              "instructor_notes": null
+            },
+            {
+              "id": 560267,
+              "key": "a38e98de-76e2-4508-b2fd-2afdc5f58d01",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Not only does this README have all of the information of a good **README** file, it also provides a table of contents to quickly navigate!  Depending on how long your **README** file is, providing a table of contents is an excellent idea for helping others navigate your documentation.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560349,
+              "key": "f6d75f19-399d-4d29-8d55-bc03485d513d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Example 2: [Scikit-Learn](https://github.com/scikit-learn/scikit-learn)\n\nAnother example of great documentation is through the scikit-learn documentation (also known as sklearn).  Though you can get all of the information from the documentation linked in the title, the community surrounding scikit-learn has added the documentation you likely find when you Google search for particular functionality.  \n\nTherefore, the limited description of how to use this library in the README is due to the massive amount of information surrounding scikit-learn in other documentation.  You can find an example of the documentation that walks you through using this extensive library [here](http://scikit-learn.org/stable/tutorial/basic/tutorial.html).  \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560351,
+              "key": "53fb4d1f-7958-4e8a-ab7f-6dbea07670c5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5aa39bbb_screen-shot-2018-03-10-at-12.47.35-am/screen-shot-2018-03-10-at-12.47.35-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/53fb4d1f-7958-4e8a-ab7f-6dbea07670c5",
+              "caption": "",
+              "alt": "",
+              "width": 728,
+              "height": 306,
+              "instructor_notes": null
+            },
+            {
+              "id": 560350,
+              "key": "ad31b5cb-e9d5-4f06-9f81-08f56e88995f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Example 3: [Stack Overflow Blog](https://github.com/jjrunner/stackoverflow.git)\n\nNow, Example 1 and 2 above aimed at assisting others with building their own websites or machine learning models using the provided code.  In your case, you are showcasing your work and insights.  It is still important that you provide:\n\n`1.` **Installation** -  Extra libraries that are not installed with the Anaconda distribution, as well as what what version of python you are using should be noted.\n\n`2.` **Project Motivation** - Discuss what your project is about, and what interested you in pursuing the project.\n\n`3.`**File Descriptions** - Guide others through the files in your repository.  You may not talk about every file here, but you should let them know where they can find the work they might find most interesting.\n\n`4.` **How To Interact With Your Project** - When your project isn't meant to be interactive or used for other projects, you should instead talk about the technical details of your project.  What were your results?  What did you do to improve them?  What methods did you try?  What worked?  What didn't work?\n\n`5.`**Licensing, Authors, Acknowledgements** - You always want to give credit where necessary.  Acknowledge other contributors, helpful peers, data providers, etc.  \n\nYou can use this to assist as a template for your own post.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 556095,
+          "key": "05795eb0-0c03-4e22-958b-32eca66aeb20",
+          "title": "Video: Posting to Github",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05795eb0-0c03-4e22-958b-32eca66aeb20",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 562416,
+              "key": "ce2516b6-e29e-41bf-8e89-c30e52fb70bf",
+              "title": "L3 Git And Github WalkThrough V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "buMNfXkj9fg",
+                "china_cdn_id": "buMNfXkj9fg.mp4"
+              }
+            },
+            {
+              "id": 562417,
+              "key": "fde89f60-4eb8-43d5-b451-019064f056eb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Useful Commands\n\nFrom this video, you saw the use of the following commands:\n\n* `git clone` - clone a repository from any url to your local machine<br><br>\n* `git add *` - adds all the files of the repository to the staging area<br><br>\n* `git commit -m 'comment about changes made'` - commits changes and adds a message for changes made<br><br>\n* `git push` - pushes your changes to a remote repository\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 556100,
+          "key": "0f220682-a29c-4e5c-bbdb-1fddec79b66c",
+          "title": "Quiz: Github Check",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f220682-a29c-4e5c-bbdb-1fddec79b66c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560413,
+              "key": "62a3be27-f3a4-4970-80e4-5e567788c4ec",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "62a3be27-f3a4-4970-80e4-5e567788c4ec",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Fork the repository here: https://github.com/jjrunner/stackoverflow using the button in the top right.",
+                "Clone the your (the forked copy) copy of the repository using `git clone` followed by the repository name.",
+                "Make some change, any change to the files.  Save those changes.",
+                "Check the status using `git status` to show that changes were made.",
+                "Add those changes to the staging area using `git add` followed by the file(s) changed.",
+                "Check the status using `git status` to show that the files were moved to staging.",
+                "Commit your changes using `git commit -m \"something about the changes made\"` by changing the text here.",
+                "Then push your changes to the remote repository using `git push`.",
+                "Refresh your page on Github to see that your changes are on the remote copy."
+              ],
+              "positive_feedback": "Nice job!",
+              "video_feedback": null,
+              "description": "Follow the Task List to Practice With Getting Your Github Repository Set Up.  You can also use the terminal space below to practice."
+            },
+            {
+              "id": 560415,
+              "key": "6e03ac4f-27f6-43b0-97c6-a4199d6ee09d",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view3db3dbc1",
+              "pool_id": "webterminal",
+              "view_id": "3db3dbc1-9506-4a12-bc96-270a1ad3cc53",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "allowSubmit": false
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 553246,
+          "key": "ce00c489-a8ea-4eb2-a376-840ff5c3015b",
+          "title": "Video: Up And Running On Medium",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce00c489-a8ea-4eb2-a376-840ff5c3015b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672524,
+              "key": "23e3528c-ecd4-4ba5-ad35-1c649eb2ef6f",
+              "title": "Up and Running On Medium",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "Please see the next page for the text on Medium (not below as stated in the video).",
+              "video": {
+                "youtube_id": "0QzbxjAcMq0",
+                "china_cdn_id": "0QzbxjAcMq0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 556098,
+          "key": "d073ea9d-a1c8-4639-9881-025a55e1d869",
+          "title": "Text: Medium Getting Started Post and Links",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d073ea9d-a1c8-4639-9881-025a55e1d869",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 556099,
+              "key": "ec0a9522-fed8-4d8e-a11f-73288ff3e4a3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### [How To Get Started on Medium?](https://blog.hubspot.com/marketing/how-to-use-medium) \n\nIf you are brand new to Medium, [this is an excellent post](https://blog.hubspot.com/marketing/how-to-use-medium) on how to get started.  It is essentially all you need to get started and take off to create your own awesome content.\n\nAdditionally, [this post](https://blog.medium.com/tips-and-tricks-for-medium-writers-1d79498101c3) is useful for helping you stay motivated and keeping your readers connected.  We will talk more about some of these tips in the rest of this lesson, but this is a nice post to keep close by.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560441,
+              "key": "a6e7667f-c848-40d6-a9aa-aa012986fa71",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5aa46ad3_screen-shot-2018-03-10-at-3.31.18-pm/screen-shot-2018-03-10-at-3.31.18-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a6e7667f-c848-40d6-a9aa-aa012986fa71",
+              "caption": "https://medium.com/",
+              "alt": "",
+              "width": 356,
+              "height": 114,
+              "instructor_notes": null
+            },
+            {
+              "id": 560442,
+              "key": "e5362ce5-0e2d-4e01-bbb5-a82e835b3178",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### [How To Attract Users?](https://medium.com/the-mission/this-new-data-will-make-you-rethink-how-you-write-headlines-751358f6639a)\n\nThroughout the rest of this lesson, I will provide some of the tips and tricks I have pieced together through conversations with insiders at Udacity and my own experiences.  However, the post [here](https://medium.com/the-mission/this-new-data-will-make-you-rethink-how-you-write-headlines-751358f6639a) is also very useful as you get started putting together your own posts and are looking to attract new users.  \n\n### [When To Post?](https://blog.bufferapp.com/best-time-to-tweet-post-to-facebook-send-emails-publish-blogposts)\n\nThough the plots on the post [here](https://blog.bufferapp.com/best-time-to-tweet-post-to-facebook-send-emails-publish-blogposts) are mostly terrible, there is a lot of useful information about the timing of your posts in order to attract users to your posts provided.  Using other social media accounts to advertise your posts is a great way to attract more people to your post.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560443,
+              "key": "d2286c36-a05c-4e60-ace1-9f6c4d07f38c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### [Medium Posts Are About Anything And Everything, Any Specific Tips For Data Story Telling?](https://www.analyticsvidhya.com/blog/2017/10/art-story-telling-data-science/)\n\nSome additional tips about data storytelling are provided in the post [here](https://www.analyticsvidhya.com/blog/2017/10/art-story-telling-data-science/).  \n\nLooking through the posts on this page, can get you thinking about what you liked and didn't like about the posts you saw as well.  Which ones were you most motivated to finish?  Why do you think that was?  What sentences resonated with you?  What was it about the page layout that helped or hindered your understanding of the information?\n\nIn general, everyone has their own style.  However, there are still some best practices that can be followed.  You will learn more about that throughout the rest of this lesson, but hopefully these links already have thinking about how you can start putting together your own posts!\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 560445,
+              "key": "9394eaf1-e7bf-44fe-885f-3b18f3432110",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5aa4715d_business-money-pink-coins/business-money-pink-coins.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9394eaf1-e7bf-44fe-885f-3b18f3432110",
+              "caption": "",
+              "alt": "",
+              "width": 429,
+              "height": 379,
+              "instructor_notes": null
+            },
+            {
+              "id": 560444,
+              "key": "d53d2736-bd7c-4a1f-a358-597ea909035c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### [Can You Make Money by Blogging on Medium?](https://writingcooperative.com/can-you-make-money-on-medium-90565989d599)\n\nThe simple answer to this question is **\"Yes\"**.  Here are two posts to assist you if this is a goal for you.  \n\n* [Post I](https://medium.com/words-for-life/a-100-transparent-look-at-my-first-medium-paycheck-197b69483b44)\n* [Post II](https://writingcooperative.com/can-you-make-money-on-medium-90565989d599)\n\nFrom everything I can tell, this is likely to be more of a side hustle than a full time job for most individuals.  However, it is a great way to get noticed and help you stand out from other candidates in an interview process.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 553247,
+          "key": "9f679743-cbd6-43cc-aea5-d0bd26e4c0a4",
+          "title": "Video: Know Your Audience",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9f679743-cbd6-43cc-aea5-d0bd26e4c0a4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672530,
+              "key": "fd0e3647-a70c-4936-94d7-922f272a8cf0",
+              "title": "Know Your Audience",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OjmrU5HlFD8",
+                "china_cdn_id": "OjmrU5HlFD8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 553248,
+          "key": "05c9101c-3ee8-4139-b6d6-4e2f9a07663e",
+          "title": "Video: Three Steps to Captivate Your Audience",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05c9101c-3ee8-4139-b6d6-4e2f9a07663e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672531,
+              "key": "836009de-4b9d-4e09-837b-f39a91f0e182",
+              "title": "Three Steps To Captivate Your Audience",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "BWS3oQYS-c4",
+                "china_cdn_id": "BWS3oQYS-c4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 553249,
+          "key": "446cbe00-106a-48e9-86c3-8900de133855",
+          "title": "Video: First Catch Their Eye",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "446cbe00-106a-48e9-86c3-8900de133855",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672533,
+              "key": "44eb6719-1903-4990-8c03-084e87c843e5",
+              "title": "Captivate Your Audience - First Catch Their Eye",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lO8-YKgW7y0",
+                "china_cdn_id": "lO8-YKgW7y0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 560449,
+          "key": "9a691add-789c-43b9-bd98-ce4e6c3d5a27",
+          "title": "Picture First, Title Second",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9a691add-789c-43b9-bd98-ce4e6c3d5a27",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560454,
+              "key": "0ff37699-0bb6-4968-83a8-2eaed0756cdd",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0ff37699-0bb6-4968-83a8-2eaed0756cdd",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select all that are true as you begin writing your post.",
+                "answers": [
+                  {
+                    "id": "a1520728726029",
+                    "text": "You should start writing your post from the beginning and work through it sequentially.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1520728919772",
+                    "text": "You should think of captivating your audience with a great image, first.  A corresponding, catchy title, second.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1520728962924",
+                    "text": "You should always keep your audience in mind as you work through the post.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 553250,
+          "key": "614945da-7827-4e68-9a6e-5b3a2054590b",
+          "title": "Video: More Advice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "614945da-7827-4e68-9a6e-5b3a2054590b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 701922,
+              "key": "23a2dcdb-fa12-4cb7-9a64-18f5da13ced9",
+              "title": "L3 10 Captivate Your Audience Now What V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Iy08sZYuqkI",
+                "china_cdn_id": "Iy08sZYuqkI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 560456,
+          "key": "959112d6-e3e7-40f2-b524-8617aea21232",
+          "title": "More Advice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "959112d6-e3e7-40f2-b524-8617aea21232",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560459,
+              "key": "29dafdd7-8f37-4c60-9a20-fd2c1fb67cbf",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "29dafdd7-8f37-4c60-9a20-fd2c1fb67cbf",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Take another look at the article [here](https://medium.com/the-mission/this-new-data-will-make-you-rethink-how-you-write-headlines-751358f6639a).  What did this article do well?",
+                "answers": [
+                  {
+                    "id": "a1520729605479",
+                    "text": "Breaks up white space.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1520729728938",
+                    "text": "Tries to relate to a problem the reader is facing.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1520729745492",
+                    "text": "Provides call to action at the end of the article.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1520730437657",
+                    "text": "Uses an image + title on introduction.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 553251,
+          "key": "b62e8eb8-01aa-4ff0-8cf1-56d2a8981ac6",
+          "title": "Video: End With A Call To Action",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b62e8eb8-01aa-4ff0-8cf1-56d2a8981ac6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672534,
+              "key": "4d18a5c1-2014-4681-85fc-5e4f01a32981",
+              "title": "Captivate Your Audience - End With A Call To Action",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EajX2NbHJ6w",
+                "china_cdn_id": "EajX2NbHJ6w.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 560460,
+          "key": "2836ce54-c5a2-4abf-89b3-4e665d81f985",
+          "title": "End With A Call To Action",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2836ce54-c5a2-4abf-89b3-4e665d81f985",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560465,
+              "key": "8315a7ff-8205-4f20-bcb3-0be8a1cae5a1",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8315a7ff-8205-4f20-bcb3-0be8a1cae5a1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "[Here](https://medium.com/@josh_2774/how-do-you-become-a-developer-5ef1c1c68711) is an example of a post that relates to the findings from the previous lesson using the Stack Overflow survey.   Match each part I below to the appropriate part II."
+                },
+                "concepts_label": "Part I",
+                "answers_label": "Part II",
+                "concepts": [
+                  {
+                    "text": "The call to action for this article",
+                    "correct_answer": {
+                      "id": "a1520731228214",
+                      "text": "How will YOU break into the field?"
+                    }
+                  },
+                  {
+                    "text": "What was interesting about job satisfaction and salary?",
+                    "correct_answer": {
+                      "id": "a1520731309825",
+                      "text": "They tended to move together."
+                    }
+                  },
+                  {
+                    "text": "What did the majority believe about breaking into the field?",
+                    "correct_answer": {
+                      "id": "a1520731914536",
+                      "text": "Take online courses"
+                    }
+                  },
+                  {
+                    "text": "Was there evidence of bias of developers with higher degrees suggesting others do the same?",
+                    "correct_answer": {
+                      "id": "a1520731975008",
+                      "text": "Yes"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1520732015536",
+                    "text": "They tended to move in opposite directions."
+                  },
+                  {
+                    "id": "a1520731228214",
+                    "text": "How will YOU break into the field?"
+                  },
+                  {
+                    "id": "a1520731910950",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1520732050999",
+                    "text": "No"
+                  },
+                  {
+                    "id": "a1520731909606",
+                    "text": "2"
+                  },
+                  {
+                    "id": "a1520731975008",
+                    "text": "Yes"
+                  },
+                  {
+                    "id": "a1520731916033",
+                    "text": "4"
+                  },
+                  {
+                    "id": "a1520731914536",
+                    "text": "Take online courses"
+                  },
+                  {
+                    "id": "a1520731964135",
+                    "text": "Go back to school."
+                  },
+                  {
+                    "id": "a1520731309825",
+                    "text": "They tended to move together."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 553252,
+          "key": "c4d25bae-7c1c-434f-9e54-0331be0a139f",
+          "title": "Video: Other Important Information",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c4d25bae-7c1c-434f-9e54-0331be0a139f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672535,
+              "key": "3e35d94c-d606-478e-95c4-b78f1ea8d06b",
+              "title": "Other Important Information",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LF-CWF-1mX4",
+                "china_cdn_id": "LF-CWF-1mX4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 560466,
+          "key": "32946d10-056b-427e-b3ea-a6d8a173ad15",
+          "title": "Text: Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "32946d10-056b-427e-b3ea-a6d8a173ad15",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 560468,
+              "key": "3a6ac26b-3275-4d9e-8532-3e16ea5006b8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Recap\n\nYou are so ready to take on this project! I hope you are excited to create your own post! There was a lot to take away from this lesson. Here were the big points I had in mind:\n\n### Related to Marketing Yourself\n\n1. Catchy image followed by a catchy title.<br><br>\n\n2. Write in small blocks of text, as large blocks of text will exhaust and demotivate your reader.<br><br>\n\n3. Start with an engaging question or current event that your audience is likely thinking about.<br><br>\n\n4. End with a recap and a call to action.<br><br>\n\n### Related to Keeping Yourself and Your Reader Motivated\n\n1. Keep your post short and sweet. 1-2 pages per post will increase audience engagement, as well as the likelihood you complete the writing of your post.<br><br>\n\n2. Create an outline. A useful outline for your post could just be: introduction, each of your questions, and then a conclusion. This will help you stay focused when writing your post.<br><br>\n\n3. Review. Review. Review. When you think you have reviewed enough, find someone else to review. The more review you have of your work, the better it will become.\n\n**The three Text portions of this class contain A LOT of useful information.  Use them for reference as you complete your project, and as you continue to write more posts in the future!**",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 553253,
+          "key": "0c166cc7-6789-4b1c-9c83-1cd10314a5d1",
+          "title": "Video: Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0c166cc7-6789-4b1c-9c83-1cd10314a5d1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 672536,
+              "key": "3c32faf6-4f4d-4b22-a628-21c3631a3b33",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_ATzG6khLdk",
+                "china_cdn_id": "_ATzG6khLdk.mp4"
+              }
+            },
+            {
+              "id": 560467,
+              "key": "d17f24b2-0dcb-4620-aac3-da3b58a868d0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As you go into the project, you might find my post useful to remind you of the ideas in this lesson.  You can find a link to the post [here](https://medium.com/@josh_2774/how-do-you-become-a-developer-5ef1c1c68711).",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

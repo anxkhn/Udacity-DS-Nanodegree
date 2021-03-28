@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:04.652 --> 00:00:07.075
+Dado o grande número
+de indústrias e problemas
+
+00:00:07.109 --> 00:00:09.740
+que se encaixam
+na Ciência de Dados,
+
+00:00:09.774 --> 00:00:12.691
+há várias diferentes ferramentas
+e detalhes individuais
+
+00:00:12.725 --> 00:00:16.965
+que empresas e indústrias usam
+para encontrar soluções.
+
+00:00:16.999 --> 00:00:19.925
+No entanto,
+há um processo em comum
+
+00:00:19.959 --> 00:00:23.107
+usado para encontrar
+muitas soluções na Ciência de Dados.
+
+00:00:23.141 --> 00:00:24.754
+Esse processo é conhecido
+
+00:00:24.788 --> 00:00:28.060
+como "Cross Industry Standard
+Process for Data Mining",
+
+00:00:28.094 --> 00:00:29.611
+ou CRISP-DM.
+
+00:00:29.645 --> 00:00:33.525
+É o processo padrão da indústria
+para análise de dados há anos
+
+00:00:33.559 --> 00:00:35.978
+e tem 6 fases principais.
+
+00:00:36.012 --> 00:00:38.828
+Primeiro, desenvolver
+a compreensão de negócios.
+
+00:00:38.862 --> 00:00:41.588
+Segundo, desenvolver
+a compreensão de dados.
+
+00:00:41.622 --> 00:00:44.684
+Terceiro, preparar os dados
+para a análise.
+
+00:00:44.718 --> 00:00:46.940
+Quarto, criar um modelo
+dos dados.
+
+00:00:46.974 --> 00:00:51.132
+Quinto, avaliar os resultados
+para responder aos interesses.
+
+00:00:51.166 --> 00:00:55.436
+E, por fim, desenvolver mudanças
+com base no resultado da análise.
+
+00:00:55.470 --> 00:00:59.860
+Veremos cada uma dessas fases
+mais de perto nas próximas aulas.
+

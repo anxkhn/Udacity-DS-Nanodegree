@@ -1,0 +1,208 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.865
+At Airbnb, where you were before Coinbase,
+
+00:00:02.865 --> 00:00:09.870
+can you talk about maybe like chains of command in terms of we have
+
+00:00:09.869 --> 00:00:13.289
+data analysts and this is the types of problems that they work on or even
+
+00:00:13.289 --> 00:00:18.089
+like we have data scientists that do this versus we have data scientists who do this,
+
+00:00:18.089 --> 00:00:21.179
+and this is how we sort of differentiate maybe when
+
+00:00:21.179 --> 00:00:24.509
+you're hiring for them or the skill sets that we're looking for in those people.
+
+00:00:24.510 --> 00:00:27.780
+One of the things definitely I would encourage anyone who's
+
+00:00:27.780 --> 00:00:31.320
+thinking about data science role is to try to disambiguate what it means,
+
+00:00:31.320 --> 00:00:33.960
+because it can mean a dozen different things and will change with
+
+00:00:33.960 --> 00:00:37.365
+every single company that is hiring data scientists.
+
+00:00:37.365 --> 00:00:42.164
+So, I'll try to give some of the more specific ones first.
+
+00:00:42.164 --> 00:00:46.969
+So, often companies will have algorithms or machine learning data scientists.
+
+00:00:46.969 --> 00:00:48.844
+They are specifically in charge of
+
+00:00:48.844 --> 00:00:53.420
+a very valuable algorithm that the company needs in order to survive.
+
+00:00:53.420 --> 00:00:57.439
+So, that might be for example a search algorithm.
+
+00:00:57.439 --> 00:00:59.629
+At Airbnb when you type in a location,
+
+00:00:59.630 --> 00:01:03.950
+like that ordered list is extremely influential to the business.
+
+00:01:03.950 --> 00:01:06.930
+There's a team of data scientists and engineers who work on that.
+
+00:01:06.930 --> 00:01:09.640
+That's like most of what they do.
+
+00:01:09.640 --> 00:01:13.814
+So, that sort of algorithms and data science or algorithms and machine learning.
+
+00:01:13.814 --> 00:01:15.620
+There's a kind of the role that
+
+00:01:15.620 --> 00:01:18.290
+we've just been talking about in terms of experimentation,
+
+00:01:18.290 --> 00:01:21.590
+which is saying all right we're looking to make these changes,
+
+00:01:21.590 --> 00:01:23.090
+what should we measure,
+
+00:01:23.090 --> 00:01:26.515
+how do we make sure the data lands in a place where it can be measured?
+
+00:01:26.515 --> 00:01:28.939
+That sort of role which is a little bit of
+
+00:01:28.939 --> 00:01:32.405
+a generalist in terms of you need some statistics background,
+
+00:01:32.405 --> 00:01:34.010
+you need to know some data engineering,
+
+00:01:34.010 --> 00:01:38.040
+and also some of those communication skills that we're just talking about.
+
+00:01:38.040 --> 00:01:40.890
+There's maybe even a third layer,
+
+00:01:40.890 --> 00:01:45.215
+which is more concentrated on high-level business analysis.
+
+00:01:45.215 --> 00:01:49.430
+Starting to get more even towards financial planning analysis roles or
+
+00:01:49.430 --> 00:01:51.725
+business analysts and that
+
+00:01:51.724 --> 00:01:54.969
+might be termed data analyst or might be termed data scientists,
+
+00:01:54.969 --> 00:01:59.304
+but at that point you're thinking about these high level metrics,
+
+00:01:59.305 --> 00:02:01.120
+the right cuts for those metrics,
+
+00:02:01.120 --> 00:02:05.329
+the display for those metrics to executives or
+
+00:02:05.329 --> 00:02:10.664
+other business leaders and making sure that for example we know when those things change,
+
+00:02:10.664 --> 00:02:12.185
+can explain what happened,
+
+00:02:12.185 --> 00:02:13.444
+those sorts of questions.
+
+00:02:13.444 --> 00:02:15.500
+Super insightful. Can you talk
+
+00:02:15.500 --> 00:02:18.750
+about maybe the toolkits that those people have and how they're different?
+
+00:02:18.750 --> 00:02:22.025
+So, like one of the first algorithms person is that like,
+
+00:02:22.025 --> 00:02:26.504
+you need to know C++, you need to have like really strong CS skills.
+
+00:02:26.504 --> 00:02:28.590
+Then the second is maybe more Python.
+
+00:02:28.590 --> 00:02:31.460
+Then the third one almost sounds like even tools,
+
+00:02:31.460 --> 00:02:34.070
+like dashboard tools like Tableau and things like that.
+
+00:02:34.069 --> 00:02:38.354
+Is that the toolkits or are there different tools that you've seen used in those roles?
+
+00:02:38.354 --> 00:02:43.394
+For example on the machine learning side,
+
+00:02:43.395 --> 00:02:46.170
+you're going to see different tools used across the board.
+
+00:02:46.169 --> 00:02:49.479
+So, you definitely see more things like C++ in places
+
+00:02:49.479 --> 00:02:53.354
+where they need extremely good performance or maybe embedded devices.
+
+00:02:53.354 --> 00:02:57.009
+Autonomous driving being pretty clear recent example.
+
+00:02:57.009 --> 00:03:00.909
+But that might also be people using something like
+
+00:03:00.909 --> 00:03:06.504
+Scikit-learn or TensorFlow or any of those sorts of Python tools for example.
+
+00:03:06.504 --> 00:03:09.754
+The general stroll you'd assume more,
+
+00:03:09.754 --> 00:03:11.949
+I guess for both generalist and machine learning you
+
+00:03:11.949 --> 00:03:14.424
+see some of that data engineering toolkit,
+
+00:03:14.425 --> 00:03:19.330
+which are both the abstraction layers like airflow and
+
+00:03:19.330 --> 00:03:24.010
+also the sort of underlying engines which are things like distributed SQL engines,
+
+00:03:24.009 --> 00:03:27.819
+Hive, Presto, also things like Spark,
+
+00:03:27.819 --> 00:03:29.984
+Flink these sorts of jobs,
+
+00:03:29.985 --> 00:03:33.020
+so that you can get the data you need and put it where you need to be.
+
+00:03:33.020 --> 00:03:40.409
+Then you see more of the analysis and visualization layer for the high-level picture,
+
+00:03:40.409 --> 00:03:45.799
+which could be dashboarding tools like Tableau, Looker, Superset.
+
+00:03:45.800 --> 00:03:49.820
+Then data access layer is probably SQL,
+
+00:03:49.819 --> 00:03:51.364
+but there's some other options too.
+
+00:03:51.365 --> 00:03:53.080
+Cool.
+

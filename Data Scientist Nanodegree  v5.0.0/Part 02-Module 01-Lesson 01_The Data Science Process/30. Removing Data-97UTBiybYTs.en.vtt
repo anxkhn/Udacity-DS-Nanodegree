@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.830
+So, in this Notebook you looked at a couple of
+
+00:00:01.830 --> 00:00:04.589
+different ways to remove values using pandas.
+
+00:00:04.589 --> 00:00:09.705
+There are two main libraries in Python that you might use to remove missing values.
+
+00:00:09.705 --> 00:00:11.970
+One is scikit-learn and the other is
+
+00:00:11.970 --> 00:00:15.615
+pandas and in this particular Notebook you're working with pandas.
+
+00:00:15.615 --> 00:00:20.660
+So with that, here we read in a bunch of libraries again,
+
+00:00:20.660 --> 00:00:25.274
+including our tests to make sure that our answers sort of
+
+00:00:25.274 --> 00:00:30.209
+match the solutions and then here we created this dummy dataset,
+
+00:00:30.210 --> 00:00:33.719
+which basically just numbers one through 18 with
+
+00:00:33.719 --> 00:00:38.504
+some missing values in here and this is going to just be for illustration purposes,
+
+00:00:38.505 --> 00:00:43.500
+to show how we can remove different things from our dataset.
+
+00:00:43.500 --> 00:00:48.359
+So we have this thing called small dataset and in this case we want to drop any row.
+
+00:00:48.359 --> 00:00:53.234
+So, there's a drop NA and there's
+
+00:00:53.234 --> 00:00:59.460
+two main things to keep track of and one is how and the other is axis.
+
+00:00:59.460 --> 00:01:01.890
+So axis keeps track of whether you want
+
+00:01:01.890 --> 00:01:04.349
+to drop by rows or columns and a lot of times I forget,
+
+00:01:04.349 --> 00:01:08.444
+so I'll just like try something and then see if it looks the way that I want.
+
+00:01:08.444 --> 00:01:11.989
+Doing it on the small datasets can be really useful,
+
+00:01:11.989 --> 00:01:14.379
+because then you can really see what's happening before
+
+00:01:14.379 --> 00:01:18.099
+you move on to maybe your full data set of interest.
+
+00:01:18.099 --> 00:01:21.789
+So, in this case, we want to drop any row with a missing value so you can
+
+00:01:21.790 --> 00:01:26.875
+imagine we want to drop the first row and then this row and this row,
+
+00:01:26.875 --> 00:01:28.450
+so we should have one,
+
+00:01:28.450 --> 00:01:30.040
+four and five still left.
+
+00:01:30.040 --> 00:01:33.445
+I'm just going to say axis equals zero,
+
+00:01:33.444 --> 00:01:35.382
+so it should have one,
+
+00:01:35.382 --> 00:01:38.229
+four and five left and it does and then we can run it against the test,
+
+00:01:38.230 --> 00:01:40.255
+it looks like we did that right,
+
+00:01:40.254 --> 00:01:44.125
+and then the next one says drop only the rows with all missing values,
+
+00:01:44.125 --> 00:01:50.340
+so in our case that should mean that we only want to drop this row here,
+
+00:01:50.340 --> 00:01:55.439
+so only if it has all missing values and so if we use the How,
+
+00:01:55.439 --> 00:02:02.325
+small dataset.drop NA and then if we specify
+
+00:02:02.325 --> 00:02:09.284
+how equals all and axis equals zero, so what we did before.
+
+00:02:09.284 --> 00:02:11.905
+So axis equals zero is the rows,
+
+00:02:11.905 --> 00:02:15.397
+axis equals one is the columns I believe, so zero,
+
+00:02:15.397 --> 00:02:18.269
+one, three, four, five, so that looks right and then
+
+00:02:18.270 --> 00:02:21.784
+says drop only the rows with missing values in column three.
+
+00:02:21.784 --> 00:02:24.174
+So, this can be useful,
+
+00:02:24.175 --> 00:02:29.215
+small dataset and drop NA.
+
+00:02:29.215 --> 00:02:31.990
+There's also this thing called subset,
+
+00:02:31.990 --> 00:02:33.189
+which can be really useful,
+
+00:02:33.189 --> 00:02:36.280
+so subset and then basically what you do is you
+
+00:02:36.280 --> 00:02:39.564
+give it a list of the columns you want to keep track of.
+
+00:02:39.564 --> 00:02:46.090
+So in our case only column three and then only rows with missing values,
+
+00:02:46.090 --> 00:02:49.465
+so not all of them so the how is any.
+
+00:02:49.465 --> 00:02:52.090
+So, we could specify that but it's also the default
+
+00:02:52.090 --> 00:02:55.167
+and then we want to drop the row still,
+
+00:02:55.167 --> 00:03:00.024
+so we're going to say axis equals zero and yeah,
+
+00:03:00.024 --> 00:03:04.185
+so it looks like if they had missing values and three,
+
+00:03:04.185 --> 00:03:06.314
+So if we go back up.
+
+00:03:06.314 --> 00:03:10.484
+So we should have dropped to zero and we should have dropped two,
+
+00:03:10.485 --> 00:03:12.934
+so we should have one, three, four and five,
+
+00:03:12.933 --> 00:03:17.980
+because zero and two had missing values in column three,
+
+00:03:17.980 --> 00:03:20.280
+one three, four and five, so that looks like what I would
+
+00:03:20.280 --> 00:03:23.395
+expect and if we run it against the solution.
+
+00:03:23.395 --> 00:03:24.924
+So it says nice job, that looks right.
+
+00:03:24.924 --> 00:03:28.090
+And then this last one says
+
+00:03:28.090 --> 00:03:31.900
+drop only the rows with missing values in column three or column one.
+
+00:03:31.900 --> 00:03:37.375
+So, again we're going to drop the rows so that's an axis equals
+
+00:03:37.375 --> 00:03:44.754
+zero and then our subset here actually we want call one as well as call three,
+
+00:03:44.754 --> 00:03:49.120
+so if we have missing values in either column three or column one,
+
+00:03:49.120 --> 00:03:54.009
+so we give it a list of those things so if we had five columns that we wanted to
+
+00:03:54.009 --> 00:03:55.824
+look at we'd give it a list of
+
+00:03:55.824 --> 00:03:59.219
+those five column names and then if there are missing values in those,
+
+00:03:59.219 --> 00:04:00.675
+it will drop the refs.
+
+00:04:00.675 --> 00:04:02.355
+Going back up here,
+
+00:04:02.354 --> 00:04:03.959
+we can make sure the sort of looks right.
+
+00:04:03.960 --> 00:04:06.270
+So column one should suggest we drop two and three and
+
+00:04:06.270 --> 00:04:10.932
+column three suggests we drop to zero and two,
+
+00:04:10.931 --> 00:04:13.338
+so we should drop zero,
+
+00:04:13.338 --> 00:04:16.632
+two and three and be left with one,
+
+00:04:16.632 --> 00:04:19.305
+four and five according to those results.
+
+00:04:19.305 --> 00:04:24.030
+So, one, four and five looks like what I would expect and if we run our test,
+
+00:04:24.029 --> 00:04:26.069
+it says nice job.
+
+00:04:26.069 --> 00:04:28.870
+So, cool, looks like we're ready for the next thing.
+

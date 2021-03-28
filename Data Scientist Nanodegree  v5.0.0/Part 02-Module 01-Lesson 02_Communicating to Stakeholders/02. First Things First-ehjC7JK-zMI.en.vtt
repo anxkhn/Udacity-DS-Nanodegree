@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.030 --> 00:00:07.695
+Before you write up a blog post,
+
+00:00:07.695 --> 00:00:09.900
+it's useful to put your code and
+
+00:00:09.900 --> 00:00:13.054
+technical work in a place where it can be accessed by others.
+
+00:00:13.054 --> 00:00:16.925
+That place for us, and for many developers is GitHub.
+
+00:00:16.925 --> 00:00:19.880
+Each of the projects you add to GitHub should have
+
+00:00:19.879 --> 00:00:23.210
+a ReadMe file that describes the installations needed,
+
+00:00:23.210 --> 00:00:25.330
+the motivations for your project,
+
+00:00:25.329 --> 00:00:26.994
+the files for your project,
+
+00:00:26.995 --> 00:00:29.359
+and how a user should interact with them,
+
+00:00:29.359 --> 00:00:32.060
+and any licensing authors and
+
+00:00:32.060 --> 00:00:37.160
+other acknowledgments necessary should another user decide to use your code elsewhere.
+
+00:00:37.159 --> 00:00:40.250
+Potential employers and other programmers and
+
+00:00:40.250 --> 00:00:44.590
+the community will look to understand your project by looking at your ReadMe.
+
+00:00:44.590 --> 00:00:46.765
+Clear communication in your ReadMe,
+
+00:00:46.765 --> 00:00:50.539
+is therefore beneficial to you and to the community.
+
+00:00:50.539 --> 00:00:53.519
+Let's take a look at some examples.
+

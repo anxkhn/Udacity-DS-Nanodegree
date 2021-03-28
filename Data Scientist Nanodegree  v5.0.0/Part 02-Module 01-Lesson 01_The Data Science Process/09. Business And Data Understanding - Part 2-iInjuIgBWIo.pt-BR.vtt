@@ -1,0 +1,131 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.068 --> 00:00:04.484
+COMPREENSÃO
+DE NEGÓCIO E DE DADOS
+
+00:00:04.901 --> 00:00:06.840
+Agora que conhece
+os dados melhor,
+
+00:00:06.874 --> 00:00:10.631
+talvez tenha perguntas
+que queira responder.
+
+00:00:10.665 --> 00:00:15.056
+Essa estratégia é uma de duas formas
+de chegar à questão de interesse.
+
+00:00:15.090 --> 00:00:18.039
+Alternativamente, você pode
+não ter nenhum dado,
+
+00:00:18.073 --> 00:00:21.057
+mas talvez tenha perguntas
+particularmente interessantes.
+
+00:00:21.091 --> 00:00:24.511
+Nesse caso, vai querer coletar
+os dados necessários
+
+00:00:24.545 --> 00:00:26.639
+para poder responder
+às perguntas.
+
+00:00:26.673 --> 00:00:30.576
+Estas são algumas que eu criei
+ao analisar os dados.
+
+00:00:30.610 --> 00:00:33.454
+Primeira, o que aqueles
+que trabalham na indústria
+
+00:00:33.488 --> 00:00:35.944
+sugerem para ajudar outros
+a entrarem no campo?
+
+00:00:35.978 --> 00:00:39.424
+Segundo, o que os dados sugerem
+para recém-formados
+
+00:00:39.458 --> 00:00:41.951
+em relação à posição de trabalho
+e ao salário?
+
+00:00:41.985 --> 00:00:44.656
+Terceiro, quais são os aspectos
+do indivíduo
+
+00:00:44.690 --> 00:00:46.878
+que se correlacionam melhor
+com o salário?
+
+00:00:46.912 --> 00:00:50.849
+Como podemos prever o salário
+usando as outras colunas de dados?
+
+00:00:50.883 --> 00:00:53.936
+Por fim, quais fatores
+estão mais relacionados
+
+00:00:53.970 --> 00:00:55.937
+a maior satisfação
+no trabalho?
+
+00:00:55.971 --> 00:00:58.951
+Então podemos transportar
+essas perguntas até os dados.
+
+00:00:58.985 --> 00:01:00.297
+Para a primeira pergunta,
+
+00:01:00.331 --> 00:01:03.800
+precisamos olhar
+a coluna "CousinEducation".
+
+00:01:03.834 --> 00:01:07.520
+A segunda pergunta usa as colunas
+"TimeAfterBootcamp"
+
+00:01:07.554 --> 00:01:09.136
+e "Salary".
+
+00:01:09.170 --> 00:01:12.232
+Embora talvez tenhamos
+que controlar outras informações
+
+00:01:12.266 --> 00:01:14.024
+disponíveis nos dados,
+
+00:01:14.058 --> 00:01:17.136
+como anos de experiência
+ou linguagens de programação.
+
+00:01:17.170 --> 00:01:22.920
+A terceira e a última perguntas
+usam muitas ou todas as colunas.
+
+00:01:22.954 --> 00:01:25.240
+Vamos precisar encontrar
+um jeito de comparar
+
+00:01:25.274 --> 00:01:28.447
+muitas das colunas
+umas com as outras.
+
+00:01:28.481 --> 00:01:31.090
+Se pode responder
+a algumas dessas perguntas,
+
+00:01:31.124 --> 00:01:33.176
+encare-as sozinho.
+
+00:01:33.210 --> 00:01:34.623
+Eu vou mostrar como fiz
+
+00:01:34.657 --> 00:01:37.875
+usando o CRISP-DM
+nas próximas seções.
+

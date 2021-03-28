@@ -1,0 +1,89 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.770 --> 00:00:04.461
+REMOVER DADOS -
+QUANDO É ACEITÁVEL?
+
+00:00:05.485 --> 00:00:09.464
+Em outros casos, poderia
+ser aceitável eliminar dados
+
+00:00:09.498 --> 00:00:12.864
+associados a erros de entrada
+de dados, problemas mecânicos,
+
+00:00:12.898 --> 00:00:16.597
+ou porque os dados ausentes
+não são úteis para o nosso objetivo.
+
+00:00:16.631 --> 00:00:19.920
+Um exemplo disso seria
+medir o ritmo de corrida
+
+00:00:19.954 --> 00:00:22.116
+de um indivíduo
+com base no GPS,
+
+00:00:22.150 --> 00:00:25.896
+e ele passa por uma área arborizada
+sem sinal de GPS.
+
+00:00:25.930 --> 00:00:29.525
+Eliminar esses valores seria
+melhor do que imputar valores
+
+00:00:29.559 --> 00:00:31.386
+que não são reais.
+
+00:00:31.420 --> 00:00:34.318
+Imputar valores aqui
+é basicamente mentir.
+
+00:00:34.352 --> 00:00:38.309
+"Veja, mãe, corri super rápido
+hoje. Na verdade, não,
+
+00:00:38.343 --> 00:00:41.445
+mas fiz números
+que fazem parecer que corri."
+
+00:00:41.479 --> 00:00:43.856
+Eliminar esses valores
+seria razoável
+
+00:00:43.890 --> 00:00:46.165
+e, dependendo de quantos dados
+você coletar,
+
+00:00:46.199 --> 00:00:48.211
+talvez não faça diferença.
+
+00:00:48.245 --> 00:00:52.239
+Outro exemplo seria se estivéssemos
+interessados em predizer o preço
+
+00:00:52.273 --> 00:00:56.140
+que as pessoas pagam por carros.
+Mas algumas pessoas não têm carro.
+
+00:00:56.174 --> 00:00:59.285
+Podemos eliminar essas linhas
+sem problemas.
+
+00:00:59.319 --> 00:01:02.729
+Esses indivíduos não ajudam
+a responder à nossa pergunta.
+
+00:01:02.763 --> 00:01:05.704
+Nesse caso, o valor NaN é útil
+
+00:01:05.738 --> 00:01:08.492
+como indicador de pessoas
+que não têm carro.
+
+00:01:08.526 --> 00:01:12.336
+Nesses dois casos, é aceitável
+eliminar dados ausentes.
+

@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.209
+So, in this video we're going to take a quick look at how to
+
+00:00:03.209 --> 00:00:06.830
+use the workspaces in the classroom.
+
+00:00:06.830 --> 00:00:08.310
+And so, this is an example of one of
+
+00:00:08.310 --> 00:00:11.010
+the Jupyter Notebooks that you might be working with.
+
+00:00:11.009 --> 00:00:15.675
+A couple of quick things about the workspace is that
+
+00:00:15.675 --> 00:00:21.179
+I usually open up this tab so I can see exactly where I'm at in the classroom.
+
+00:00:21.179 --> 00:00:23.879
+If your workspace fails to load,
+
+00:00:23.879 --> 00:00:30.254
+it might be useful to click around and then come back to it or just refresh the page.
+
+00:00:30.254 --> 00:00:35.189
+And the other thing that you can do is reset or refresh the workspace itself,
+
+00:00:35.189 --> 00:00:37.233
+using this menubar down here.
+
+00:00:37.234 --> 00:00:42.609
+So, these are most commonly used if your workspace fails to load.
+
+00:00:42.609 --> 00:00:44.339
+But once your workspace is loaded,
+
+00:00:44.340 --> 00:00:48.394
+you should be able to use it just as if it was a notebook on your local machine.
+
+00:00:48.393 --> 00:00:51.914
+You'll notice that you have all of the tabs of a regular Jupyter Notebook.
+
+00:00:51.914 --> 00:00:54.229
+And also if you hit this Jupyter icon,
+
+00:00:54.229 --> 00:00:55.529
+up here in the top left,
+
+00:00:55.530 --> 00:00:57.090
+it'll take you behind the scenes of,
+
+00:00:57.090 --> 00:00:59.145
+like, everything that you have available.
+
+00:00:59.145 --> 00:01:01.140
+And, the case of this workspace,
+
+00:01:01.140 --> 00:01:03.094
+you can see that there is a solution.
+
+00:01:03.094 --> 00:01:05.480
+And here is what looks like an empty notebook,
+
+00:01:05.480 --> 00:01:07.045
+and then another solution notebook,
+
+00:01:07.045 --> 00:01:10.840
+and it's empty notebook, that's what we had before.
+
+00:01:10.840 --> 00:01:12.715
+And then, some other files back here,
+
+00:01:12.715 --> 00:01:15.799
+like some data files and some testing files for the code
+
+00:01:15.799 --> 00:01:19.748
+that you would write as a student.
+
+00:01:19.748 --> 00:01:21.629
+And, if we were to click through this,
+
+00:01:21.629 --> 00:01:24.314
+so I'll just click through the, to the solution one.
+
+00:01:24.314 --> 00:01:26.664
+So, a lot of times in the workspace,
+
+00:01:26.665 --> 00:01:28.580
+you'll see those in the back here,
+
+00:01:28.579 --> 00:01:31.515
+so if you get stuck you can check out the solution,
+
+00:01:31.515 --> 00:01:34.939
+but also within the individual notebook.
+
+00:01:34.939 --> 00:01:39.284
+So, if we run these, so here you can see we're just reading in some data.
+
+00:01:39.284 --> 00:01:42.484
+And, if we go to the first part it says,
+
+00:01:42.484 --> 00:01:44.554
+this should get the description.
+
+00:01:44.555 --> 00:01:47.750
+Here's the input, so it looks like we're creating this function.
+
+00:01:47.750 --> 00:01:50.555
+And there's like a way for you to test.
+
+00:01:50.555 --> 00:01:53.700
+So, I'm just going to cheat.
+
+00:01:53.700 --> 00:01:55.870
+But if we wanted to,
+
+00:01:55.870 --> 00:01:58.990
+we could look at the solution here and by
+
+00:01:58.989 --> 00:02:04.584
+running the first two cells you can see that basically it gives a description,
+
+00:02:04.584 --> 00:02:06.849
+so here's a way that you can test your code.
+
+00:02:06.849 --> 00:02:09.995
+As you go through this particular program,
+
+00:02:09.995 --> 00:02:13.150
+there are lots of tests that tell you, nice job,
+
+00:02:13.150 --> 00:02:16.685
+that you got it right or oftentimes like error.
+
+00:02:16.685 --> 00:02:21.382
+So, this first part is just to see if you're getting the thing that you expect.
+
+00:02:21.382 --> 00:02:23.219
+And then, we have a lot of.
+
+00:02:23.219 --> 00:02:25.435
+So, if you'll notice up here,
+
+00:02:25.435 --> 00:02:28.300
+we read in test1 is t. So,
+
+00:02:28.300 --> 00:02:32.500
+there are a whole bunch of tests in that file that will check
+
+00:02:32.500 --> 00:02:38.104
+your code against our solutions and make sure that they match up,
+
+00:02:38.104 --> 00:02:40.179
+and if they don't, we'll try to give you feedback as
+
+00:02:40.180 --> 00:02:43.814
+to what we think you should do differently to get them to match.
+
+00:02:43.814 --> 00:02:46.509
+Yeah, so that's the main thing,
+
+00:02:46.509 --> 00:02:50.009
+is that if you go back here,
+
+00:02:50.009 --> 00:02:51.829
+there's a whole bunch of files.
+
+00:02:51.830 --> 00:02:54.265
+In general, we'll have it so it pops up to the file
+
+00:02:54.264 --> 00:02:57.009
+that we think you should be working on at that point in the class.
+
+00:02:57.009 --> 00:03:01.719
+But it's also the case that you can upload your own files so you'll
+
+00:03:01.719 --> 00:03:04.120
+notice that there's an upload button here where you can
+
+00:03:04.120 --> 00:03:07.120
+connect your own workbooks and bring them into the classroom.
+
+00:03:07.120 --> 00:03:10.629
+Or you can create new Python or text files within
+
+00:03:10.629 --> 00:03:15.414
+here as well and save them into this particular workspace.
+
+00:03:15.414 --> 00:03:20.304
+Notice you can hit this Jupyter icon from your notebook,
+
+00:03:20.305 --> 00:03:22.629
+and select any of the files,
+
+00:03:22.629 --> 00:03:24.159
+and then choose to download them.
+
+00:03:24.159 --> 00:03:28.884
+So, you can download individual files to your machine and then run them locally.
+
+00:03:28.884 --> 00:03:32.139
+If you would prefer to do that as opposed to working in the classroom.
+
+00:03:32.139 --> 00:03:34.059
+I've also provided a link down below
+
+00:03:34.060 --> 00:03:36.990
+this video in case you don't want to download these one at a time.
+
+00:03:36.990 --> 00:03:38.680
+Again, just a quick recap,
+
+00:03:38.680 --> 00:03:40.495
+you can see that there's individual notebooks
+
+00:03:40.495 --> 00:03:42.740
+and solutions as well as the data back here.
+
+00:03:42.740 --> 00:03:45.010
+When you are in any individual notebook,
+
+00:03:45.009 --> 00:03:48.189
+you should be able to run that just like you would from your local machine.
+
+00:03:48.189 --> 00:03:50.530
+And so, with this particular example you should
+
+00:03:50.530 --> 00:03:53.020
+be able to run the cells just like you would on
+
+00:03:53.020 --> 00:03:55.450
+your own machine and we've built tests to
+
+00:03:55.449 --> 00:03:58.304
+sort of make sure that you're on the right track with your notebook.
+
+00:03:58.305 --> 00:03:59.599
+If you do get stuck,
+
+00:03:59.599 --> 00:04:02.680
+you'll notice that in the back you can take a look at
+
+00:04:02.680 --> 00:04:07.090
+the solution files or even look at the solutions that you're running up against,
+
+00:04:07.090 --> 00:04:10.330
+to see why you might be missing something or
+
+00:04:10.330 --> 00:04:13.844
+how we computed our solution in the background, great.
+
+00:04:13.843 --> 00:04:20.769
+Well, I hope this was useful as a way to see how to use the notebooks in the classroom.
+
+00:04:20.769 --> 00:04:22.539
+In general, if you're comfortable with
+
+00:04:22.540 --> 00:04:25.135
+working with IPython notebooks on your local machine,
+
+00:04:25.134 --> 00:04:28.904
+this should feel very similar to that situation.
+
+00:04:28.904 --> 00:04:31.019
+And, yeah, thanks for joining me.
+

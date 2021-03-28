@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.309 --> 00:00:08.689
+For this lesson, you will get hands-on practice with a dataset from
+
+00:00:08.689 --> 00:00:12.480
+Stack Overflow developer survey results, from 2017.
+
+00:00:12.480 --> 00:00:14.730
+The data for this example is available in
+
+00:00:14.730 --> 00:00:17.699
+the Resources tab for you to follow along on your machine,
+
+00:00:17.699 --> 00:00:19.925
+as well as in the workspaces in the classroom.
+
+00:00:19.925 --> 00:00:25.144
+The data was collected by providing a survey to developers on Stack overflow's website.
+
+00:00:25.144 --> 00:00:28.015
+A quick look at the columns in the dataset provides
+
+00:00:28.015 --> 00:00:31.120
+a number of questions that we might ask.
+
+00:00:31.120 --> 00:00:35.905
+This dataset, can provide some insight and to developers around the world,
+
+00:00:35.905 --> 00:00:38.500
+and get you an idea of their experiences.
+
+00:00:38.500 --> 00:00:41.085
+Anything from their advice to other developers,
+
+00:00:41.085 --> 00:00:42.734
+to how they learn new skills,
+
+00:00:42.734 --> 00:00:46.094
+to where they live, or what programming languages they use,
+
+00:00:46.094 --> 00:00:48.750
+can all be understood from this dataset.
+
+00:00:48.750 --> 00:00:51.670
+You will use the workspace and quizzes in
+
+00:00:51.670 --> 00:00:54.760
+the following sections to familiarize yourself with the data,
+
+00:00:54.759 --> 00:00:57.679
+and we will answer a few questions that I found interesting.
+
+00:00:57.679 --> 00:00:59.950
+But you should feel free to branch from
+
+00:00:59.950 --> 00:01:04.439
+my analysis and explore questions that you are most interested in.
+

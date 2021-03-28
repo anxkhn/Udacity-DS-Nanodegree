@@ -1,0 +1,373 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.815
+Here, we're going to be pulling together a lot of the points from throughout this lesson.
+
+00:00:04.815 --> 00:00:06.419
+In this first part,
+
+00:00:06.419 --> 00:00:10.509
+you can see that we're just reading in the libraries and the dataset used for this.
+
+00:00:10.509 --> 00:00:16.429
+I'm going to skip some of these questions that were just like fill in the blanks.
+
+00:00:16.429 --> 00:00:18.870
+But, one of the main things that I want to go through
+
+00:00:18.870 --> 00:00:22.109
+is some of the parts that we haven't seen before.
+
+00:00:22.109 --> 00:00:28.074
+So, right here, you were supposed to write a function that basically follows these steps.
+
+00:00:28.074 --> 00:00:32.539
+So, you drop the rows associated with salary,
+
+00:00:32.539 --> 00:00:36.427
+you split off the response,
+
+00:00:36.427 --> 00:00:43.619
+and then you also drop a whole bunch of things and create a new X matrix.
+
+00:00:43.619 --> 00:00:47.034
+You take the numeric variables and fill in the mean.
+
+00:00:47.034 --> 00:00:49.259
+So a lot of these things we did earlier, right.
+
+00:00:49.259 --> 00:00:52.009
+So we filled in the mean in an earlier part.
+
+00:00:52.009 --> 00:00:54.369
+In this part, you dummy the categorical variables,
+
+00:00:54.369 --> 00:00:56.534
+so you did that in an earlier part as well,
+
+00:00:56.534 --> 00:00:59.279
+and you were basically just creating this clean X and
+
+00:00:59.280 --> 00:01:04.150
+Y matrix or X matrix and Y vector response.
+
+00:01:04.150 --> 00:01:07.260
+And the last part of this was to take a look at
+
+00:01:07.260 --> 00:01:12.405
+how well the linear model fit with different cut offs for X and Y.
+
+00:01:12.405 --> 00:01:16.620
+So, you'll notice that this is pulling from a file in the back and I
+
+00:01:16.620 --> 00:01:21.359
+just want to go through sort of how that file looks.
+
+00:01:21.359 --> 00:01:25.709
+And you'll see this is the fine optimal LM function that you were running.
+
+00:01:25.709 --> 00:01:29.414
+And so, you can see these are the inputs that it takes.
+
+00:01:29.415 --> 00:01:31.080
+But essentially, right here,
+
+00:01:31.079 --> 00:01:33.390
+it's just creating a whole bunch of MD things that it's going to
+
+00:01:33.390 --> 00:01:35.768
+work with throughout this.
+
+00:01:35.768 --> 00:01:38.144
+It's going to run through a whole bunch of cut offs.
+
+00:01:38.144 --> 00:01:44.219
+So, the cut offs are basically how many missing values there were in any particular row.
+
+00:01:44.219 --> 00:01:49.935
+So, the smaller the cut offs the more features that end up in your X matrix,
+
+00:01:49.935 --> 00:01:56.045
+and the larger the cut off the fewer features end up in your X matrix.
+
+00:01:56.045 --> 00:01:59.370
+So you can see basically that's what's happening right here is,
+
+00:01:59.370 --> 00:02:02.840
+you're reducing the X matrix based on, so,
+
+00:02:02.840 --> 00:02:05.635
+X sum, and it's not the number of missing features,
+
+00:02:05.635 --> 00:02:07.675
+it's what proportion we're ones.
+
+00:02:07.674 --> 00:02:10.514
+So, if X had a whole bunch of ones in it,
+
+00:02:10.514 --> 00:02:12.599
+then that means there is
+
+00:02:12.599 --> 00:02:17.639
+hopefully enough variability to tell one group from another group.
+
+00:02:17.639 --> 00:02:19.769
+Whereas, if there was only three ones,
+
+00:02:19.770 --> 00:02:22.020
+that might suggest that it would be really hard to use
+
+00:02:22.020 --> 00:02:25.545
+that feature to predict some sort of continuous response.
+
+00:02:25.544 --> 00:02:29.554
+And that's likely that that might be a feature that helps the model overfit.
+
+00:02:29.555 --> 00:02:33.580
+Then, right here, we're just doing a train to split,
+
+00:02:33.580 --> 00:02:34.830
+we fit our model.
+
+00:02:34.830 --> 00:02:37.650
+So it's just fitting the model with the reduced X
+
+00:02:37.650 --> 00:02:41.250
+up here and then it's appending the R-squared values off of it.
+
+00:02:41.250 --> 00:02:44.729
+So, it's going to run this process for a whole bunch of
+
+00:02:44.729 --> 00:02:50.699
+different X matrices and then this is the plot that you're going to get out at the end,
+
+00:02:50.699 --> 00:02:52.414
+if you decide to plot it.
+
+00:02:52.414 --> 00:02:56.129
+So, it's going to return all of the R-squared on the training in
+
+00:02:56.129 --> 00:03:00.000
+test sets and it will return the linear model,
+
+00:03:00.000 --> 00:03:02.324
+the X train, X test, Y train,
+
+00:03:02.324 --> 00:03:05.414
+and Y test for the best model.
+
+00:03:05.414 --> 00:03:09.789
+So, these parts are only coming back for the best model
+
+00:03:09.789 --> 00:03:16.079
+in basically each of the runs through a different set of cut offs.
+
+00:03:16.080 --> 00:03:23.518
+It says, "Only choose the X where it was the best cut off".
+
+00:03:23.518 --> 00:03:29.360
+Which is basically where the R-squared value was the best on the test set.
+
+00:03:29.360 --> 00:03:32.600
+So, we care about how this extends to new data.
+
+00:03:32.599 --> 00:03:33.810
+So hopefully that makes sense.
+
+00:03:33.810 --> 00:03:37.045
+What's happening in this function back here?
+
+00:03:37.044 --> 00:03:39.069
+So, again, we're going to run that function.
+
+00:03:39.069 --> 00:03:41.799
+We're going to pass it all of the X and Y.
+
+00:03:41.800 --> 00:03:45.445
+It's going to give us back the best parts for this,
+
+00:03:45.444 --> 00:03:50.174
+and then all of the R-squared for each of these different thresholds.
+
+00:03:50.175 --> 00:03:52.395
+Again, the higher the value,
+
+00:03:52.395 --> 00:03:54.270
+it might seem sort of backwards,
+
+00:03:54.270 --> 00:03:57.330
+but this is the number of ones a column needs to have.
+
+00:03:57.330 --> 00:04:00.165
+So, the higher the value,
+
+00:04:00.164 --> 00:04:03.049
+the fewer the number of features in the model,
+
+00:04:03.050 --> 00:04:08.700
+the lower the value the more features are in your X matrix.
+
+00:04:08.699 --> 00:04:10.769
+And again, it's looping through all of those things,
+
+00:04:10.770 --> 00:04:12.135
+so it could take a little time,
+
+00:04:12.134 --> 00:04:14.579
+but you should see something that looks sort of like this.
+
+00:04:14.580 --> 00:04:17.115
+So you can see, as the number of features increases,
+
+00:04:17.115 --> 00:04:19.965
+it gets better to a point but then,
+
+00:04:19.964 --> 00:04:23.429
+once you hit too many features in
+
+00:04:23.430 --> 00:04:27.375
+your X matrix you start to overfit and your test data starts to fall.
+
+00:04:27.375 --> 00:04:30.990
+And actually, if you decrease this even a little bit more,
+
+00:04:30.990 --> 00:04:32.699
+if you changed it to like 20,
+
+00:04:32.699 --> 00:04:36.735
+what I saw were massive drop-offs in the test data.
+
+00:04:36.735 --> 00:04:42.180
+So, the training data set kept going towards one or even hit one.
+
+00:04:42.180 --> 00:04:43.280
+But in the test data,
+
+00:04:43.279 --> 00:04:47.399
+this would fall down to like negative some crazy number.
+
+00:04:47.399 --> 00:04:50.579
+But this is actually a pretty common pattern for R-squared or
+
+00:04:50.579 --> 00:04:54.134
+for mean squared error you frequently see at the opposite direction.
+
+00:04:54.134 --> 00:04:57.719
+Again, what we care about is how well were fitting on the test set.
+
+00:04:57.720 --> 00:05:03.125
+So, the best on our test sets is basically held within these parts.
+
+00:05:03.125 --> 00:05:06.814
+So, with that we could answer these questions down here.
+
+00:05:06.814 --> 00:05:09.844
+Because we're using a ridge regression model,
+
+00:05:09.845 --> 00:05:15.680
+one of the best ways to tell which X features matter in our model,
+
+00:05:15.680 --> 00:05:18.769
+is to look at the weight of their coefficients.
+
+00:05:18.769 --> 00:05:21.402
+Because our features are normalized,
+
+00:05:21.403 --> 00:05:25.040
+we can just look at how large the coefficient is.
+
+00:05:25.040 --> 00:05:29.675
+So, the negative or positive is still associated with the direction,
+
+00:05:29.675 --> 00:05:35.180
+the directional impact on the response associated with that particular variable,
+
+00:05:35.180 --> 00:05:37.189
+and the size of the coefficient is basically
+
+00:05:37.189 --> 00:05:40.295
+the impact it has even after being normalized.
+
+00:05:40.295 --> 00:05:45.020
+So, you can see, in terms of being a developer country appears to
+
+00:05:45.019 --> 00:05:49.814
+be a very influential item as well as how many years of experience.
+
+00:05:49.814 --> 00:05:54.230
+But it isn't the case that the more years of experience you have,
+
+00:05:54.230 --> 00:05:56.460
+the higher you will get paid.
+
+00:05:56.459 --> 00:05:59.479
+It looks like if you have more than 20 years of experience that's pretty
+
+00:05:59.480 --> 00:06:03.230
+high or 18 to 19 that has a higher impact.
+
+00:06:03.230 --> 00:06:09.975
+But there are the 12 to 13 make more than this 19 to 20,
+
+00:06:09.975 --> 00:06:12.080
+and more than the 13 to 14,
+
+00:06:12.079 --> 00:06:14.479
+and more than the 15 to 16.
+
+00:06:14.480 --> 00:06:18.980
+So, it's not directly related according to this model.
+
+00:06:18.980 --> 00:06:21.920
+And you'll also notice again that where you
+
+00:06:21.920 --> 00:06:25.069
+live determines how much you make as a developer.
+
+00:06:25.069 --> 00:06:27.589
+So, there are certain countries where you're
+
+00:06:27.589 --> 00:06:31.214
+better paid as a developer than in other countries.
+
+00:06:31.214 --> 00:06:34.669
+Those seem to be the two largest indicators.
+
+00:06:34.670 --> 00:06:36.500
+Yes. And with that,
+
+00:06:36.500 --> 00:06:39.964
+you can use that information to help fill in some of these parts.
+
+00:06:39.964 --> 00:06:44.224
+But the main takeaway from this last part is basically this image,
+
+00:06:44.225 --> 00:06:46.595
+and sort of the idea that's associated with it.
+
+00:06:46.595 --> 00:06:49.870
+That the more features you have doesn't necessarily mean that
+
+00:06:49.870 --> 00:06:53.757
+you'll get a model that will work better in practice, but rather,
+
+00:06:53.757 --> 00:06:57.620
+you should have a model that has features that are actually indicators
+
+00:06:57.620 --> 00:07:01.879
+of the response and indicators of how they influence the response.
+
+00:07:01.879 --> 00:07:06.305
+And if you keep throwing in more and more stuff into your model,
+
+00:07:06.305 --> 00:07:09.319
+at some point it can overfit to the extent
+
+00:07:09.319 --> 00:07:13.040
+that you won't be able to extend your model to new data very well,
+
+00:07:13.040 --> 00:07:15.170
+you'll only predict well on the training data.
+

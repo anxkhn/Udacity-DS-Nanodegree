@@ -1,0 +1,63 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.036 --> 00:00:04.332
+DADOS AUSENTES
+
+00:00:04.366 --> 00:00:06.460
+Acabamos de ver
+como dados ausentes
+
+00:00:06.494 --> 00:00:08.544
+e trabalhar
+com variáveis categóricas
+
+00:00:08.578 --> 00:00:10.438
+introduziram
+algumas complicações
+
+00:00:10.472 --> 00:00:13.637
+para ajustar modelos de aprendizado
+de máquina com scikit-learn.
+
+00:00:13.671 --> 00:00:17.731
+Vamos ver como achar uma solução.
+Não há só uma forma de trabalhar
+
+00:00:17.765 --> 00:00:20.148
+com dados ausentes
+e variáveis categóricas.
+
+00:00:20.182 --> 00:00:21.966
+Existem várias formas.
+
+00:00:22.000 --> 00:00:26.297
+O scikit-learn não quer escolher
+uma opção para você,
+
+00:00:26.331 --> 00:00:30.165
+porque pode não ser a melhor para
+os dados com que está trabalhando.
+
+00:00:30.199 --> 00:00:33.707
+Aqui estão três estratégias
+para trabalhar com dados ausentes.
+
+00:00:33.741 --> 00:00:38.179
+Primeiro, podemos remover
+ou eliminar as linhas ou colunas.
+
+00:00:38.213 --> 00:00:41.754
+Segundo, podemos optar
+por imputar valores.
+
+00:00:41.788 --> 00:00:44.459
+Terceiro, podemos driblá-los.
+
+00:00:44.493 --> 00:00:47.744
+Vamos ver a primeira das três,
+
+00:00:47.778 --> 00:00:49.155
+remover dados.
+
