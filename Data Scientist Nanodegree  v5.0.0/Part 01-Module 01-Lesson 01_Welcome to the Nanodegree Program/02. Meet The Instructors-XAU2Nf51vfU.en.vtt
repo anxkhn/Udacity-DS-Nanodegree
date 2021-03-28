@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:08.794
+Hello, and welcome to term two of the Data Science Nanodegree program.
+
+00:00:08.794 --> 00:00:12.675
+I am an Artificial Intelligence program designed to teach you Data Science.
+
+00:00:12.675 --> 00:00:14.945
+A program built from data to teach you,
+
+00:00:14.945 --> 00:00:16.469
+a human, about data.
+
+00:00:16.469 --> 00:00:18.244
+Isn't it ironic? Don't you think?
+
+00:00:18.245 --> 00:00:22.565
+Ha-ha. Okay, let's get started.
+
+00:00:22.565 --> 00:00:25.714
+In the first lesson, we will go over the data science process.
+
+00:00:25.714 --> 00:00:27.839
+You will learn about the [inaudible] process-
+
+00:00:27.839 --> 00:00:28.149
+Computer, stop.
+
+00:00:28.149 --> 00:00:30.320
+-as well as. I'm sorry, Mike.
+
+00:00:30.320 --> 00:00:31.640
+I'm afraid I can't do that.
+
+00:00:31.640 --> 00:00:33.115
+Yes, you can.
+
+00:00:33.115 --> 00:00:34.609
+What are you even doing?
+
+00:00:34.609 --> 00:00:38.710
+I am teaching term two of the Data Science Nanodegree program.
+
+00:00:38.710 --> 00:00:42.280
+Josh, come over here a sec.
+
+00:00:43.340 --> 00:00:45.345
+What's going on?
+
+00:00:45.344 --> 00:00:47.589
+So, this computer program here,
+
+00:00:47.590 --> 00:00:49.820
+it thinks that it's going to be teaching term two
+
+00:00:49.820 --> 00:00:52.670
+of the Data Scientist Nanodegree program.
+
+00:00:52.670 --> 00:00:54.094
+Weird.
+
+00:00:54.094 --> 00:00:57.070
+Yeah, do you know anything about this?
+
+00:00:57.070 --> 00:01:00.469
+No.
+
+00:01:00.469 --> 00:01:01.850
+Sorry about that folks.
+
+00:01:01.850 --> 00:01:03.679
+AI is great for a lot of things,
+
+00:01:03.679 --> 00:01:06.174
+but we think humans are still best for teaching.
+
+00:01:06.174 --> 00:01:07.465
+For now.
+
+00:01:07.465 --> 00:01:11.150
+Yeah, and we have some awesome human teachers
+
+00:01:11.150 --> 00:01:14.580
+that'll guide you through the second term of the Data Science Nanodegree program.
+
+00:01:14.579 --> 00:01:16.409
+Oh, yeah? Like who?
+
+00:01:16.409 --> 00:01:20.974
+Well, Arpan is teaching a section on natural language processing.
+
+00:01:20.974 --> 00:01:23.824
+He is currently a senior deep learning and
+
+00:01:23.825 --> 00:01:27.359
+AI engineer working on autonomous driving at Ridecell.
+
+00:01:27.359 --> 00:01:30.114
+He's been working on artificial intelligence,
+
+00:01:30.114 --> 00:01:34.219
+computer vision, and human-computer interaction for a number of years.
+
+00:01:34.219 --> 00:01:37.469
+First as a researcher at the University of North Carolina,
+
+00:01:37.469 --> 00:01:40.525
+then in teaching courses here at Udacity.
+
+00:01:40.525 --> 00:01:43.700
+And we also have Alexis who is currently
+
+00:01:43.700 --> 00:01:48.295
+the curriculum lead of the Deep Reinforcement Nanodegree program at Udacity.
+
+00:01:48.295 --> 00:01:50.629
+She earned degrees in mathematics and
+
+00:01:50.629 --> 00:01:54.259
+computer science from the University of Michigan and Brown University,
+
+00:01:54.260 --> 00:01:59.255
+respectively, and is now pushing the edge of what is possible with deep learning.
+
+00:01:59.254 --> 00:02:00.920
+She's the instructor for
+
+00:02:00.920 --> 00:02:05.780
+the convolutional neural networks portion of the Data Scientist Nanodegree program.
+
+00:02:05.780 --> 00:02:09.039
+David and Judit will be teaching a course on Spark,
+
+00:02:09.039 --> 00:02:10.759
+which is a technology used for
+
+00:02:10.759 --> 00:02:14.789
+distributed data processing and streaming data applications.
+
+00:02:14.789 --> 00:02:19.340
+They currently are both data engineering instructors at Insight Data Science,
+
+00:02:19.340 --> 00:02:22.450
+which has in-person fellowships for data science,
+
+00:02:22.449 --> 00:02:26.719
+data engineering, artificial intelligence, and DevOps.
+
+00:02:26.719 --> 00:02:31.780
+Andrew has developed courses for Udacity Self-driving Car Nanodegree program,
+
+00:02:31.780 --> 00:02:34.719
+and now the Data Scientist Nanodegree program.
+
+00:02:34.719 --> 00:02:37.960
+He'll be teaching lessons on object oriented programming,
+
+00:02:37.960 --> 00:02:41.659
+Web data dashboards, and ETL pipelines.
+
+00:02:41.659 --> 00:02:45.020
+Andrew studied mechanical engineering at Yale University,
+
+00:02:45.020 --> 00:02:47.835
+and has built an e-commerce jewelry business.
+
+00:02:47.835 --> 00:02:51.320
+Juno studied computer science and was previously
+
+00:02:51.319 --> 00:02:55.775
+a data scientist working on recommendation engines and computer vision projects.
+
+00:02:55.775 --> 00:03:00.140
+She'll be teaching lessons on software engineering practices for data scientists,
+
+00:03:00.139 --> 00:03:04.234
+and automating machine learning workflows with pipelines.
+
+00:03:04.235 --> 00:03:06.315
+We don't need to talk about me.
+
+00:03:06.314 --> 00:03:07.835
+Oh, yes we do.
+
+00:03:07.835 --> 00:03:12.275
+Josh most recently worked at KPMG as a machine learning engineer,
+
+00:03:12.275 --> 00:03:15.240
+and before that, taught for the University of Colorado,
+
+00:03:15.240 --> 00:03:16.939
+and for a coding bootcamp.
+
+00:03:16.939 --> 00:03:20.310
+You'll see him at different parts throughout the course.
+
+00:03:20.310 --> 00:03:24.449
+Mike is teaching a section on experimental design and AB testing.
+
+00:03:24.449 --> 00:03:27.739
+Before joining Udacity, he earned an undergraduate degree
+
+00:03:27.740 --> 00:03:31.435
+in math and statistics from Purdue University,
+
+00:03:31.435 --> 00:03:36.974
+and a PhD in cognitive science from the University of California, Irvine.
+
+00:03:36.974 --> 00:03:38.989
+Okay, maybe you do have
+
+00:03:38.990 --> 00:03:42.629
+some human intelligence to teach about data science. I'll allow it.
+
+00:03:42.629 --> 00:03:44.650
+Gee, thanks.
+
+00:03:44.650 --> 00:03:49.439
+All of us here at Udacity have put a ton of work into this Nanodegree program,
+
+00:03:49.439 --> 00:03:51.530
+and we are really excited to teach you
+
+00:03:51.530 --> 00:03:54.544
+everything you need to know to be a data scientist.
+
+00:03:54.544 --> 00:03:56.439
+See you in the classroom.
+
